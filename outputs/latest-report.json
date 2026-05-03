@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-03T08:00:55Z",
+  "generatedAt": "2026-05-03T09:31:34Z",
   "regime": "RISK_OFF",
   "equity": 48.89,
   "peakEquity": 100.0,
@@ -9,7 +9,8 @@
   "dailyWinRate": 0,
   "openPositions": 0,
   "alerts": [
-    "CATASTROPHIC DRAWDOWN: 51.1%"
+    "CATASTROPHIC DRAWDOWN: 51.1%",
+    "VPS SCANNERS OFFLINE since 2026-03-23"
   ],
   "deadWeight": [],
   "guardrails": {
@@ -21,9 +22,7 @@
     "maxLeverage": 10,
     "maxPositionsTotal": 3,
     "perAssetCooldownMinutes": 120,
-    "bannedAssetPrefixes": [
-      "xyz:"
-    ],
+    "bannedAssetPrefixes": ["xyz:"],
     "perTradeRiskPct": 1.0
   }
 }
