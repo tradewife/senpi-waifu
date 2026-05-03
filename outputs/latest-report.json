@@ -1,30 +1,33 @@
 {
-  "timestamp": "2026-05-03T20:03:07Z",
+  "generatedAt": "2026-05-03T22:32:08.012197+00:00",
   "regime": "RISK_OFF",
   "regimeReason": "Catastrophic DD 51.11% (limit 20.0%)",
   "equity": 48.887581,
   "peakEquity": 100.0,
   "drawdownPct": 51.11,
-  "dailyPnl": 0.0,
+  "withdrawable": 48.887581,
   "openPositions": 0,
   "openOrders": 0,
-  "withdrawable": 48.887581,
   "guardrails": {
     "catastrophicDrawdownPct": 20,
     "dailyLossLimitPct": 10,
     "maxConsecutiveStopOuts": 4,
-    "consecutiveStopOuts": 0,
-    "drawdownBreached": true,
-    "dailyLossBreached": false,
-    "stopOutBreached": false
+    "breached": [
+      "CATASTROPHIC_DRAWDOWN"
+    ],
+    "status": "RISK_OFF_ENFORCED"
   },
   "positions": [],
-  "actions": [],
-  "warnings": [
-    "VPS scanners offline since 2026-03-23 (41+ days)",
-    "Strategy idle with $48.89 in RISK_OFF since 2026-05-02",
-    "All-time PnL: -$50.08 on $100 initial budget (-50.1%)"
+  "marketPrices": {
+    "BTC": 79001.5,
+    "ETH": 2336.05,
+    "SOL": 84.4845,
+    "HYPE": 41.5115
+  },
+  "actionsTaken": [
+    "No positions to manage. RISK_OFF maintained. All state files consistent."
   ],
-  "strategyWallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
-  "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce"
+  "warnings": [
+    "VPS scanners offline since 2026-03-23 (41+ days)"
+  ]
 }
