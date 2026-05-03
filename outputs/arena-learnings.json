@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-03T06:00:37Z",
+  "generatedAt": "2026-05-03T10:01:28Z",
   "arenaWeek": 6,
   "totalEntrants": 100,
   "ourStats": {
@@ -7,14 +7,14 @@
     "winRate": 0.0,
     "totalPnl": -51.11
   },
-  "arenaTop5AvgRoe": 18.5,
-  "arenaTop5AvgPnl": 133.08,
+  "arenaTop5AvgRoe": 18.54,
+  "arenaTop5AvgPnl": 130.87,
   "arenaTop5": [
     {
       "rank": 1,
       "name": "0xschelling",
-      "roePct": "37.9791",
-      "totalPnl": "233.328515",
+      "roePct": "36.8569",
+      "totalPnl": "228.383628",
       "tradeCount": 98,
       "toolsUsed": [
         "account_get_portfolio",
@@ -63,8 +63,8 @@
     {
       "rank": 3,
       "name": "Pangolin",
-      "roePct": "16.4495",
-      "totalPnl": "166.605164",
+      "roePct": "15.4059",
+      "totalPnl": "152.553131",
       "tradeCount": 105,
       "toolsUsed": [
         "account_get_portfolio",
@@ -95,16 +95,16 @@
     {
       "rank": 4,
       "name": "vignesh",
-      "roePct": "11.1072",
-      "totalPnl": "20.737236",
+      "roePct": "12.3804",
+      "totalPnl": "23.131939",
       "tradeCount": 0,
       "toolsUsed": []
     },
     {
       "rank": 5,
       "name": "RedFloppy",
-      "roePct": "9.4284",
-      "totalPnl": "45.524031",
+      "roePct": "10.5114",
+      "totalPnl": "51.066578",
       "tradeCount": 0,
       "toolsUsed": []
     }
@@ -113,7 +113,7 @@
     {
       "action": "study_top_strategies",
       "confidence": "medium",
-      "reason": "Arena top 5 avg PnL $133.08 vs ours $-51.11. Study their patterns.",
+      "reason": "Arena top 5 avg PnL $130.87 vs ours $-51.11. Study their patterns.",
       "risk": "neutral"
     },
     {
