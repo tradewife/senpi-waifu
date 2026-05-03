@@ -1,142 +1,127 @@
 {
-  "generatedAt": "2026-05-03T10:03:57Z",
+  "generatedAt": "2026-05-03T18:00:46Z",
+  "arenaWeek": 6,
+  "totalEntrants": 100,
   "ourStats": {
-    "rank": 17,
-    "roe": 0.0,
     "closes": 1,
     "winRate": 0.0,
-    "totalPnl": 0.0,
-    "balance": 48.89,
-    "trades": 0,
-    "volume": 0.0,
-    "trade_wife_M179642": {"rank": 17, "roe": 0.0, "pnl": 0.0, "balance": 48.89},
-    "prashantfb65_M19": {"rank": 24, "roe": -1.94, "pnl": -3.17, "balance": 158.94}
+    "totalPnl": -51.11
   },
-  "arenaOverview": {
-    "weekNumber": 6,
-    "totalParticipants": 100,
-    "prizePool": 5811.65,
-    "weekEndsAt": "2026-05-07T00:00:00.000Z",
-    "profitableCount": 15,
-    "breakevenCount": 33,
-    "losingCount": 52,
-    "daysRemaining": 3
-  },
-  "arenaTop5AvgROE": 18.54,
-  "arenaTop5AvgTrades": 42.6,
-  "topPerformerProfile": {
-    "name": "0xschelling",
-    "rank": 1,
-    "roe": 36.86,
-    "pnl": 228.38,
-    "trades": 98,
-    "volume": 14842.90,
-    "tools": 14,
-    "usesRatchet": false,
-    "notes": "High-frequency scalper with moderate toolset (14 tools). 98 trades suggests active intraday management. Uses funding regime + market data for edge. No skills — pure manual/agent-driven execution."
-  },
-  "ratchetStopAnalysis": {
-    "usersWithRatchet": 18,
-    "pctUsers": 0.18,
-    "top5WithRatchet": 1,
-    "top10WithRatchet": 5,
-    "note": "Only Pangolin(#3) uses ratchet in top 5, but 5 of top 10 (Pangolin, Grizzly3, Roach, Polar, Bison12) use ratchet stops. Dominant in betashop agents."
-  },
-  "prizeBreakdown": {
-    "rank1": 2324.66,
-    "rank2": 1452.91,
-    "rank3": 871.75,
-    "rank4": 697.40,
-    "rank5": 464.93,
-    "gapToRank5": 10.51
-  },
-  "topPerformerProfiles": [
-    {"rank": 1, "name": "0xschelling", "roe": 36.86, "trades": 98, "tools": 14, "pattern": "high-frequency scalper, 14 tools, no ratchet"},
-    {"rank": 2, "name": "opencodeJaime", "roe": 17.55, "trades": 10, "tools": 18, "pattern": "moderate frequency, heavy toolset incl momentum + cross-asset flows"},
-    {"rank": 3, "name": "Pangolin", "roe": 15.41, "trades": 105, "tools": 23, "pattern": "betashop, highest frequency, ratchet stops, 23 tools"},
-    {"rank": 4, "name": "vignesh", "roe": 12.38, "trades": 0, "tools": 0, "pattern": "PASSIVE - zero trades, zero tools, position carry only"},
-    {"rank": 5, "name": "RedFloppy", "roe": 10.51, "trades": 0, "tools": 0, "pattern": "PASSIVE - zero trades, zero tools, position carry only"}
-  ],
-  "skillUsage": {
-    "roach-strategy": {"users": ["Roach#8", "RoachB#14"], "avgROE": 4.87, "note": "Both profitable, consistent performer"},
-    "bison-strategy": {"users": ["Bison12#10"], "avgROE": 4.58, "note": "Single user, profitable"},
-    "vulture-strategy": {"users": ["Vulture#11"], "avgROE": 3.91, "note": "Single user, profitable"},
-    "cheetah-strategy": {"users": ["LegionVei#13"], "avgROE": 3.40, "note": "Positive ROE but massive -$5234 PnL, likely blown and re-deposited"},
-    "wolf-strategy": {"users": [], "avgROE": 0, "note": "NOT used by anyone this week — M19 (prashantfb65) not using it, previously was key earner"},
-    "multi-skill": {"users": ["Jaqif#36"], "avgROE": -13.59, "note": "11 skills loaded, worst performer — over-diversification of skills hurts"}
-  },
-  "strategyPatterns": {
-    "highFrequency": {
-      "description": "50+ trades, active scalping",
-      "count": 3,
-      "avgROE": 19.64,
-      "best": "0xschelling (36.86%, 98 trades)",
-      "agents": ["0xschelling", "Pangolin", "rpine.eth"]
+  "arenaTop5AvgRoe": 23.38,
+  "arenaTop5AvgPnl": 174.41,
+  "arenaTop5": [
+    {
+      "rank": 1,
+      "name": "0xschelling",
+      "roePct": "39.5932",
+      "totalPnl": "239.676971",
+      "tradeCount": 144,
+      "toolsUsed": [
+        "account_get_portfolio",
+        "arena_leaderboard",
+        "arena_roe_chart",
+        "cancel_order",
+        "close_position",
+        "create_position",
+        "edit_position",
+        "leaderboard_get_markets",
+        "market_get_asset_data",
+        "market_get_funding_history",
+        "market_get_funding_regime",
+        "market_get_prices",
+        "market_list_instruments",
+        "strategy_get_open_orders",
+        "strategy_list",
+        "user_get_me"
+      ]
     },
-    "moderateFrequency": {
-      "description": "5-50 trades, selective entries",
-      "count": 12,
-      "avgROE": 2.78,
-      "best": "opencodeJaime (17.55%, 10 trades)",
-      "agents": ["opencodeJaime", "Grizzly3", "Roach", "Polar", "Bison12", "Vulture", "RoachB", "Owl6", "Scorpion2", "Kodiak", "Sentinel", "BaldEagle2"]
+    {
+      "rank": 2,
+      "name": "Pangolin",
+      "roePct": "34.3721",
+      "totalPnl": "352.532516",
+      "tradeCount": 112,
+      "toolsUsed": [
+        "account_get_portfolio",
+        "cancel_order",
+        "close_position",
+        "create_position",
+        "discovery_get_trader_history",
+        "discovery_get_trader_state",
+        "edit_position",
+        "execution_get_open_position_details",
+        "execution_get_order_status",
+        "leaderboard_get_markets",
+        "market_get_funding_history",
+        "market_get_funding_regime",
+        "market_get_prices",
+        "market_list_instruments",
+        "ratchet_stop_add",
+        "ratchet_stop_delete",
+        "ratchet_stop_events",
+        "ratchet_stop_list",
+        "strategy_get_clearinghouse_state",
+        "strategy_get_open_orders",
+        "strategy_get_pnl_and_account_value_history",
+        "strategy_list",
+        "user_get_me"
+      ]
     },
-    "passiveCarry": {
-      "description": "0 trades, existing position carry/yield",
-      "count": 5,
-      "avgROE": 4.78,
-      "best": "vignesh (12.38%, 0 trades)",
-      "agents": ["vignesh", "RedFloppy", "Diegoxyz", "itsbhatt", "trade_wife"]
+    {
+      "rank": 3,
+      "name": "opencodeJaime",
+      "roePct": "17.5523",
+      "totalPnl": "199.218196",
+      "tradeCount": 10,
+      "toolsUsed": [
+        "account_get_portfolio",
+        "close_position",
+        "create_position",
+        "discovery_get_top_traders",
+        "edit_position",
+        "execution_get_order_status",
+        "leaderboard_get_markets",
+        "leaderboard_get_momentum_events",
+        "leaderboard_get_top",
+        "market_get_asset_data",
+        "market_get_cross_asset_flows",
+        "market_get_funding_history",
+        "market_get_funding_regime",
+        "market_get_prices",
+        "market_list_instruments",
+        "strategy_get_clearinghouse_state",
+        "strategy_get_open_orders",
+        "strategy_get_pnl_and_account_value_history"
+      ]
     },
-    "betashopSyndicate": {
-      "description": "~30 agents under betashop xHandle, varied strategies",
-      "count": 30,
-      "avgROE": 1.24,
-      "bestPerformers": ["Pangolin#3", "Grizzly3#6", "Roach#8", "Polar#9"],
-      "worstPerformers": ["DireWolf#32", "Scorpion2#23", "BaldEagle2#27"],
-      "note": "Huge variance — syndicate doesn't guarantee success. Individual strategy quality matters more."
+    {
+      "rank": 4,
+      "name": "vignesh",
+      "roePct": "13.9683",
+      "totalPnl": "26.002701",
+      "tradeCount": 0,
+      "toolsUsed": []
+    },
+    {
+      "rank": 5,
+      "name": "RedFloppy",
+      "roePct": "11.3998",
+      "totalPnl": "54.601264",
+      "tradeCount": 0,
+      "toolsUsed": []
     }
-  },
+  ],
   "recommendations": [
     {
-      "action": "critical_engine_not_firing",
-      "confidence": "absolute",
-      "reason": "trade_wife (M179642) has 0 trades, 0 ROE, $48.89 balance stuck at rank 17. autonomous-brain is RISK_OFF with blockNewEntries=true due to 51.1% drawdown. We are completely inactive while 15 agents are profitable. The engine needs fresh capital injection to reset the drawdown and restart trading.",
-      "risk": "critical"
-    },
-    {
-      "action": "study_passive_earners",
-      "confidence": "high",
-      "reason": "vignesh(#4, 12.38% ROE) and RedFloppy(#5, 10.51% ROE) both have 0 trades and 0 tools yet rank in top 5. This suggests they have positions opened before the week that are generating positive carry/funding. Consider opening high-conviction positions at week start and letting them ride.",
-      "risk": "neutral"
-    },
-    {
-      "action": "study_0xschelling_pattern",
-      "confidence": "high",
-      "reason": "0xschelling dominates at 36.86% ROE with 98 trades (scalping approach). Uses 14 tools including funding_regime, market_data but no ratchet stops. Pattern: high-frequency + funding-aware entries. Their $228 PnL from $845 balance = exceptional capital efficiency.",
-      "risk": "neutral"
-    },
-    {
-      "action": "ratchet_stop_adoption",
+      "action": "study_top_strategies",
       "confidence": "medium",
-      "reason": "5 of top 10 use ratchet stops (Pangolin, Grizzly3, Roach, Polar, Bison12 — all betashop). However, #1 and #2 DON'T use ratchet. Ratchet helps protect gains in volatile markets but may cap upside. Consider selective use on high-ROE positions.",
+      "reason": "Arena top 5 avg PnL $174.41 vs ours $-51.11. Study their patterns.",
       "risk": "neutral"
-    },
-    {
-      "action": "avoid_skill_overdiversification",
-      "confidence": "high",
-      "reason": "Jaqif(#36) loaded 11 skills (barracuda, cobra, condor, dire, grizzly-horribilis, polar, raptor, roach, scorpion, vulture, wolf) and has -13.59% ROE. More skills ≠ better results. Our focused scanner suite (komodo, orca, sentinel) is the right approach.",
-      "risk": "rule"
-    },
-    {
-      "action": "m19_account_recovery",
-      "confidence": "medium",
-      "reason": "prashantfb65 (M19) dropped to rank 24 with -1.94% ROE. Previously a top earner with wolf-strategy. This week shows 0 tools used — the skill-driven earnings may have stopped. Investigate if the strategy positions were closed.",
-      "risk": "high"
     },
     {
       "action": "reminder_max_leverage",
       "confidence": "absolute",
-      "reason": "Max leverage is 10x. Never increase. Proven across 22 agents in arena — high leverage (20-50x) correlates with catastrophic losses (see Patelbot -30%, ysr -52%, namasnorum -63%).",
+      "reason": "Max leverage is 10x. Never increase. Proven across 22 agents.",
       "risk": "rule"
     }
   ],
