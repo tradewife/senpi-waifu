@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-03T22:32:08.012197+00:00",
+  "generatedAt": "2026-05-03T23:02:48.598367+00:00",
   "regime": "RISK_OFF",
   "regimeReason": "Catastrophic DD 51.11% (limit 20.0%)",
   "equity": 48.887581,
@@ -19,15 +19,16 @@
   },
   "positions": [],
   "marketPrices": {
-    "BTC": 79001.5,
-    "ETH": 2336.05,
-    "SOL": 84.4845,
-    "HYPE": 41.5115
+    "BTC": 79129.5,
+    "ETH": 2341.85,
+    "SOL": 84.6345
   },
   "actionsTaken": [
     "No positions to manage. RISK_OFF maintained. All state files consistent."
   ],
   "warnings": [
-    "VPS scanners offline since 2026-03-23 (41+ days)"
+    "VPS scanners offline since 2026-03-23 (41+ days)",
+    "All-time PnL: -$50.08 on $100 initial budget (-50.08%)",
+    "Account flat at $48.89 with zero activity for 30+ days"
   ]
 }
