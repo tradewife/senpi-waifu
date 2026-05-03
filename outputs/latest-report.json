@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-03T11:47:33.096471+00:00",
+  "generatedAt": "2026-05-03T12:16:30Z",
   "type": "jido",
   "regime": "RISK_OFF",
   "strategy": "wolf-primary",
@@ -34,9 +34,9 @@
     }
   },
   "market": {
-    "BTC": 78650.5,
-    "ETH": 2320.35,
-    "SOL": 84.0035
+    "BTC": 78778.5,
+    "ETH": 2327.85,
+    "SOL": 84.0865
   },
   "infrastructure": {
     "vpsScanners": "OFFLINE",
