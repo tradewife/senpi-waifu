@@ -1,48 +1,29 @@
 {
-  "generatedAt": "2026-05-03T12:16:30Z",
-  "type": "jido",
+  "generatedAt": "2026-05-03T20:00:58Z",
   "regime": "RISK_OFF",
-  "strategy": "wolf-primary",
-  "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
-  "equity": {
-    "current": 48.887581,
-    "peak": 100.0,
-    "drawdownPct": 51.11,
-    "withdrawable": 48.887581
-  },
-  "positions": {
-    "open": 0,
-    "details": []
-  },
-  "orders": {
-    "open": 0
-  },
+  "equity": 48.89,
+  "peakEquity": 100.0,
+  "drawdownPct": 51.11,
+  "dailyPnl": 0,
+  "dailyCloses": 0,
+  "dailyWinRate": 0,
+  "openPositions": 0,
+  "alerts": [
+    "CATASTROPHIC DRAWDOWN: 51.1%"
+  ],
+  "deadWeight": [],
   "guardrails": {
-    "catastrophicDrawdown": {
-      "threshold": 20,
-      "actual": 51.11,
-      "breached": true
-    },
-    "dailyLoss": {
-      "threshold": 10,
-      "breached": false
-    },
-    "consecutiveStopOuts": {
-      "count": 0,
-      "threshold": 4,
-      "breached": false
-    }
-  },
-  "market": {
-    "BTC": 78778.5,
-    "ETH": 2327.85,
-    "SOL": 84.0865
-  },
-  "infrastructure": {
-    "vpsScanners": "OFFLINE",
-    "lastScannerHeartbeat": "2026-03-23",
-    "hermesCronActive": true
-  },
-  "actions": [],
-  "summary": "RISK_OFF enforced. No open positions, no emergency actions needed. $48.89 idle capital. DD 51.1% >> 20% threshold. VPS scanners offline 41+ days."
+    "dailyLossLimitPct": 10,
+    "catastrophicDrawdownPct": 20,
+    "maxConsecutiveStopOuts": 4,
+    "directionalCapPct": 70,
+    "minLeverage": 7,
+    "maxLeverage": 10,
+    "maxPositionsTotal": 3,
+    "perAssetCooldownMinutes": 120,
+    "bannedAssetPrefixes": [
+      "xyz:"
+    ],
+    "perTradeRiskPct": 1.0
+  }
 }
