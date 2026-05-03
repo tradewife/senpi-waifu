@@ -2,7 +2,7 @@
   "peakEquity": 100.0,
   "dayStartEquity": 48.887581,
   "consecutiveStopOuts": 0,
-  "lastCheckAt": "2026-05-03T05:01:37Z",
+  "lastCheckAt": "2026-05-03T07:33:27Z",
   "lastEquity": 48.887581,
   "alerts": [
     {
@@ -21,7 +21,7 @@
       "type": "VPS_SCANNERS_OFFLINE",
       "severity": "MEDIUM",
       "message": "All VPS scanner heartbeats stale (last: 2026-03-23, 40+ days). Railway deployment likely offline.",
-      "timestamp": "2026-05-03T03:31:44.239406+00:00"
+      "timestamp": "2026-05-03T07:32:00Z"
     }
   ],
   "dayStartDate": "2026-05-03"

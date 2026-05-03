@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-03T05:01:37Z",
+  "generatedAt": "2026-05-03T07:33:27Z",
   "regime": "RISK_OFF",
   "regimeReason": "Catastrophic DD 51.1% (limit 20.0%)",
   "equity": {
@@ -23,14 +23,19 @@
     "consecutiveStopOutsBreached": false,
     "allClear": false
   },
-  "actionsTaken": [],
+  "actionsTaken": [
+    "JIDO check completed \u2014 RISK_OFF confirmed, entries skipped",
+    "No positions to protect (account flat)",
+    "Regime sync verified: risk-regime + autonomous-brain both RISK_OFF"
+  ],
   "marketSnapshot": {
-    "BTC": "78144.5",
-    "ETH": "2301.25",
-    "SOL": "83.7035"
+    "BTC": "78401.5",
+    "ETH": "2311.95",
+    "SOL": "83.9435"
   },
   "warnings": [
     "VPS scanners offline (all heartbeats 40+ days stale)",
-    "Account flat with $48.89 remaining (51.1% drawdown from $100 budget)"
+    "Account flat with $48.89 remaining (51.1% drawdown from $100 budget)",
+    "Leaderboard API auth failure (SERR031)"
   ]
 }
