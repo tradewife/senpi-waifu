@@ -1,38 +1,48 @@
 {
-  "timestamp": "2026-05-03T11:17:34Z",
+  "generatedAt": "2026-05-03T11:47:33.096471+00:00",
+  "type": "jido",
   "regime": "RISK_OFF",
-  "regimeReason": "Catastrophic drawdown 51.11% exceeds 20% threshold",
+  "strategy": "wolf-primary",
+  "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
   "equity": {
     "current": 48.887581,
     "peak": 100.0,
-    "dayStart": 48.887581,
+    "drawdownPct": 51.11,
     "withdrawable": 48.887581
-  },
-  "drawdown": {
-    "fromPeak": 51.11,
-    "daily": 0.0,
-    "catastrophicThreshold": 20.0,
-    "breached": true
   },
   "positions": {
     "open": 0,
     "details": []
   },
-  "guardrails": {
-    "catastrophicDD": "BREACHED",
-    "dailyLossLimit": "OK",
-    "consecutiveStopOuts": "OK"
+  "orders": {
+    "open": 0
   },
-  "actions": [
-    "RISK_OFF maintained \u2014 no new entries, no open positions"
-  ],
-  "warnings": [
-    "VPS scanners offline (41+ days stale)",
-    "SERR031 on strategy_list (auth issue, clearinghouse works)"
-  ],
+  "guardrails": {
+    "catastrophicDrawdown": {
+      "threshold": 20,
+      "actual": 51.11,
+      "breached": true
+    },
+    "dailyLoss": {
+      "threshold": 10,
+      "breached": false
+    },
+    "consecutiveStopOuts": {
+      "count": 0,
+      "threshold": 4,
+      "breached": false
+    }
+  },
   "market": {
-    "BTC": 78499.5,
-    "ETH": 2314.15,
-    "SOL": 83.8555
-  }
+    "BTC": 78650.5,
+    "ETH": 2320.35,
+    "SOL": 84.0035
+  },
+  "infrastructure": {
+    "vpsScanners": "OFFLINE",
+    "lastScannerHeartbeat": "2026-03-23",
+    "hermesCronActive": true
+  },
+  "actions": [],
+  "summary": "RISK_OFF enforced. No open positions, no emergency actions needed. $48.89 idle capital. DD 51.1% >> 20% threshold. VPS scanners offline 41+ days."
 }
