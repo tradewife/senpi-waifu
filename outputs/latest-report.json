@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-03T09:31:34Z",
+  "generatedAt": "2026-05-03T10:32:43Z",
   "regime": "RISK_OFF",
   "equity": 48.89,
   "peakEquity": 100.0,
@@ -22,7 +22,9 @@
     "maxLeverage": 10,
     "maxPositionsTotal": 3,
     "perAssetCooldownMinutes": 120,
-    "bannedAssetPrefixes": ["xyz:"],
+    "bannedAssetPrefixes": [
+      "xyz:"
+    ],
     "perTradeRiskPct": 1.0
   }
 }

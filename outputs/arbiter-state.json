@@ -2,26 +2,26 @@
   "peakEquity": 100.0,
   "dayStartEquity": 48.887581,
   "consecutiveStopOuts": 0,
-  "lastCheckAt": "2026-05-03T09:31:34Z",
+  "lastCheckAt": "2026-05-03T10:32:43Z",
   "lastEquity": 48.887581,
   "alerts": [
     {
       "type": "CATASTROPHIC_DRAWDOWN",
       "severity": "CRITICAL",
-      "message": "Drawdown 51.1% exceeds catastrophic 20% threshold. RISK_OFF activated by JIDO.",
+      "message": "Drawdown 51.11% exceeds catastrophic 20% threshold. RISK_OFF activated by JIDO.",
       "timestamp": "2026-05-02T04:47:27.501790+00:00"
     },
     {
       "type": "REGIME_OVERRIDE",
       "severity": "HIGH",
-      "message": "JIDO override #1: regime was BASELINE, forced to RISK_OFF due to 51.1% drawdown",
+      "message": "JIDO override #1: regime was BASELINE, forced to RISK_OFF due to 51.11% drawdown",
       "timestamp": "2026-05-02T04:47:27.501790+00:00"
     },
     {
       "type": "VPS_SCANNERS_OFFLINE",
       "severity": "MEDIUM",
       "message": "All VPS scanner heartbeats stale (last: 2026-03-23, 41+ days). Railway deployment likely offline.",
-      "timestamp": "2026-05-03T09:31:34Z"
+      "timestamp": "2026-05-03T10:32:43Z"
     }
   ],
   "dayStartDate": "2026-05-03"
