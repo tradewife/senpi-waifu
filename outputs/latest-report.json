@@ -1,25 +1,30 @@
 {
-  "generatedAt": "2026-05-04T20:32:14.714380+00:00",
+  "generatedAt": "2026-05-04T23:32:04.307807+00:00",
   "regime": "RISK_OFF",
+  "regimeSource": "risk-regime.json",
   "equity": 48.887581,
   "peakEquity": 100.0,
   "drawdownPct": 51.11,
-  "dailyPnl": 0,
-  "dailyCloses": 0,
-  "dailyWinRate": 0,
-  "openPositions": 0,
-  "alerts": [
-    "CATASTROPHIC DRAWDOWN: 51.1%"
-  ],
-  "deadWeight": [],
+  "dailyPnlPct": 0.0,
+  "positions": [],
+  "openOrders": [],
+  "withdrawable": 48.887581,
   "guardrails": {
-    "dailyLossLimitPct": 10,
-    "catastrophicDrawdownPct": 20,
-    "maxConsecutiveStopOuts": 4,
-    "directionalCapPct": 70,
-    "perTradeRiskPct": 1.0,
-    "minLeverage": 7,
-    "maxLeverage": 10,
-    "maxPositionsTotal": 3
-  }
+    "catastrophicDdBreached": true,
+    "dailyLossBreached": false,
+    "consecutiveStopsBreached": false
+  },
+  "marketSnapshot": {
+    "BTC": 79893.5,
+    "ETH": 2350.95,
+    "SOL": 84.1395
+  },
+  "vpsScannersOffline": true,
+  "status": "RISK_OFF_STABLE",
+  "actionsTaken": [
+    "None \u2014 RISK_OFF correctly enforced, no positions to manage"
+  ],
+  "warnings": [
+    "VPS scanners offline since 2026-03-23 (41+ days)"
+  ]
 }

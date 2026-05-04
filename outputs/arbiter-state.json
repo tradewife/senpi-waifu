@@ -2,7 +2,7 @@
   "peakEquity": 100.0,
   "dayStartEquity": 48.887581,
   "consecutiveStopOuts": 0,
-  "lastCheckAt": "2026-05-04T20:32:14.714380+00:00",
+  "lastCheckAt": "2026-05-04T23:32:04.307807+00:00",
   "lastEquity": 48.887581,
   "alerts": [
     {
@@ -24,36 +24,11 @@
       "timestamp": "2026-05-03T23:02:48.598367+00:00"
     },
     {
-      "timestamp": "2026-05-04T02:33:29.563052+00:00",
-      "type": "JIDO_HEARTBEAT",
-      "message": "JIDO check complete. RISK_OFF, no positions, equity $48.89, DD 51.11%"
-    },
-    {
-      "timestamp": "2026-05-04T04:02:31.075972+00:00",
-      "type": "JIDO_HEARTBEAT",
-      "message": "JIDO check complete. RISK_OFF, no positions, equity $48.89, DD 51.11%"
-    },
-    {
-      "timestamp": "2026-05-04T18:32:05.091092+00:00",
-      "type": "JIDO_HEARTBEAT",
-      "message": "JIDO check complete. RISK_OFF, no positions, equity $48.89, DD 51.11%"
-    },
-    {
-      "timestamp": "2026-05-04T18:49:25.145455+00:00",
-      "type": "JIDO_HEARTBEAT",
-      "message": "JIDO check complete. RISK_OFF, no positions, equity $48.89, DD 51.11%"
-    },
-    {
-      "timestamp": "2026-05-04T20:17:42.447298+00:00",
-      "type": "JIDO_HEARTBEAT",
-      "message": "JIDO check complete. RISK_OFF, no positions, equity $48.89, DD 51.11%"
-    },
-    {
-      "timestamp": "2026-05-04T20:32:14.714380+00:00",
+      "timestamp": "2026-05-04T23:32:04.307807+00:00",
       "type": "JIDO_HEARTBEAT",
       "message": "JIDO check complete. RISK_OFF, no positions, equity $48.89, DD 51.11%"
     }
   ],
   "dayStartDate": "2026-05-04",
-  "lastChecked": "2026-05-04T20:32:14.714380+00:00"
+  "lastChecked": "2026-05-04T23:32:04.307807+00:00"
 }
