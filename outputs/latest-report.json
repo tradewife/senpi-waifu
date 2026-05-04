@@ -1,8 +1,8 @@
 {
-  "timestamp": "2026-05-04T02:33:29.563052+00:00",
+  "timestamp": "2026-05-04T04:02:31.075972+00:00",
   "regime": "RISK_OFF",
   "regimeSource": "risk-regime.json",
-  "regimeUpdatedAt": "2026-05-04T02:00:28Z",
+  "regimeUpdatedAt": "2026-05-04T04:01:11Z",
   "equity": {
     "current": 48.887581,
     "peak": 100.0,
@@ -37,22 +37,22 @@
     "consistent": true
   },
   "marketSnapshot": {
-    "BTC": 79735.5,
-    "ETH": 2369.05,
-    "SOL": 85.1035
+    "BTC": 80324.5,
+    "ETH": 2384.05,
+    "SOL": 85.3855
   },
   "alerts": [
     "RISK_OFF active since 2026-05-02 \u2014 51.11% drawdown from $100 peak",
     "No open positions \u2014 portfolio in capital preservation mode",
     "Withdrawable: $48.89 (full account value)",
-    "VPS scanners offline since ~2026-03-23 (41+ days)",
-    "SERR031 on strategy_list \u2014 clearinghouse state used instead",
-    "Leaderboard API returned UNAUTHENTICATED \u2014 auth token may need refresh"
+    "VPS scanners offline since ~2026-03-23 (42+ days)",
+    "No auth issues this check \u2014 clearinghouse state retrieved successfully"
   ],
   "actionsTaken": [
     "Verified regime consistency across risk-regime.json and autonomous-brain.json",
     "Confirmed no open positions or orders",
     "RISK_OFF correctly enforced \u2014 no entries attempted",
-    "Drawdown recalculated: 51.11% (consistent)"
+    "Drawdown recalculated: 51.11% (consistent)",
+    "Market prices updated: BTC $80,324 / ETH $2,384 / SOL $85.39"
   ]
 }
