@@ -22,7 +22,13 @@
       "severity": "MEDIUM",
       "message": "All VPS scanner heartbeats stale (last: 2026-03-23, 41+ days). Railway deployment likely offline.",
       "timestamp": "2026-05-03T23:02:48.598367+00:00"
+    },
+    {
+      "timestamp": "2026-05-04T02:33:29.563052+00:00",
+      "type": "JIDO_HEARTBEAT",
+      "message": "JIDO check complete. RISK_OFF, no positions, equity $48.89, DD 51.11%"
     }
   ],
-  "dayStartDate": "2026-05-04"
+  "dayStartDate": "2026-05-04",
+  "lastChecked": "2026-05-04T02:33:29.563052+00:00"
 }
