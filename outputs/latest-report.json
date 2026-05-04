@@ -1,34 +1,30 @@
 {
-  "generatedAt": "2026-05-03T23:02:48.598367+00:00",
+  "generatedAt": "2026-05-04T02:01:50Z",
   "regime": "RISK_OFF",
-  "regimeReason": "Catastrophic DD 51.11% (limit 20.0%)",
   "equity": 48.887581,
   "peakEquity": 100.0,
   "drawdownPct": 51.11,
-  "withdrawable": 48.887581,
+  "dailyPnl": 0,
+  "dailyCloses": 0,
+  "dailyWinRate": 0,
   "openPositions": 0,
-  "openOrders": 0,
-  "guardrails": {
-    "catastrophicDrawdownPct": 20,
-    "dailyLossLimitPct": 10,
-    "maxConsecutiveStopOuts": 4,
-    "breached": [
-      "CATASTROPHIC_DRAWDOWN"
-    ],
-    "status": "RISK_OFF_ENFORCED"
-  },
-  "positions": [],
-  "marketPrices": {
-    "BTC": 79129.5,
-    "ETH": 2341.85,
-    "SOL": 84.6345
-  },
-  "actionsTaken": [
-    "No positions to manage. RISK_OFF maintained. All state files consistent."
+  "alerts": [
+    "CATASTROPHIC DRAWDOWN: 51.1%",
+    "VPS_SCANNERS_OFFLINE: All heartbeats stale (last: 2026-03-23, 42+ days)"
   ],
-  "warnings": [
-    "VPS scanners offline since 2026-03-23 (41+ days)",
-    "All-time PnL: -$50.08 on $100 initial budget (-50.08%)",
-    "Account flat at $48.89 with zero activity for 30+ days"
-  ]
+  "deadWeight": [],
+  "guardrails": {
+    "dailyLossLimitPct": 10,
+    "catastrophicDrawdownPct": 20,
+    "maxConsecutiveStopOuts": 4,
+    "directionalCapPct": 70,
+    "minLeverage": 7,
+    "maxLeverage": 10,
+    "maxPositionsTotal": 3,
+    "perAssetCooldownMinutes": 120,
+    "bannedAssetPrefixes": [
+      "xyz:"
+    ],
+    "perTradeRiskPct": 1.0
+  }
 }

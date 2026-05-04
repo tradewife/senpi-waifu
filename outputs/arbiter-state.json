@@ -2,7 +2,7 @@
   "peakEquity": 100.0,
   "dayStartEquity": 48.887581,
   "consecutiveStopOuts": 0,
-  "lastCheckAt": "2026-05-03T23:02:48.598367+00:00",
+  "lastCheckAt": "2026-05-04T02:01:50Z",
   "lastEquity": 48.887581,
   "alerts": [
     {
@@ -24,5 +24,5 @@
       "timestamp": "2026-05-03T23:02:48.598367+00:00"
     }
   ],
-  "dayStartDate": "2026-05-03"
+  "dayStartDate": "2026-05-04"
 }
