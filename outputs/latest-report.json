@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-05-04T18:32:05.091092+00:00",
+  "timestamp": "2026-05-04T18:49:25.145455+00:00",
   "regime": "RISK_OFF",
   "regimeSource": "risk-regime.json",
   "regimeUpdatedAt": "2026-05-04T04:01:11Z",
@@ -37,16 +37,16 @@
     "consistent": true
   },
   "marketSnapshot": {
-    "BTC": 80191.5,
-    "ETH": 2362.45,
-    "SOL": 84.7765
+    "BTC": 80086.5,
+    "ETH": 2359.05,
+    "SOL": 84.6225
   },
   "alerts": [
     "RISK_OFF active since 2026-05-02 \u2014 51.11% drawdown from $100 peak",
     "No open positions \u2014 portfolio in capital preservation mode",
     "Withdrawable: $48.89 (full account value)",
     "VPS scanners offline since ~2026-03-23 (42+ days)",
-    "JIDO heartbeat at 2026-05-04 18:32Z"
+    "JIDO heartbeat at 2026-05-04T18:49:25.145455+00:00"
   ],
   "actionsTaken": [
     "Verified regime consistency across risk-regime.json and autonomous-brain.json",
