@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-05-05T10:47:38.594063Z",
+  "generatedAt": "2026-05-05T11:47:17.454014+00:00",
   "type": "JIDO_PORTFOLIO_REVIEW",
   "regime": {
     "mode": "RISK_OFF",
     "source": "risk-regime.json",
     "reason": "Catastrophic DD 51.11% (limit 20.0%)",
-    "updatedAt": "2026-05-05T10:00:42Z"
+    "updatedAt": "2026-05-05T11:47:17Z"
   },
   "equity": {
     "current": 48.887581,
@@ -14,6 +14,11 @@
     "withdrawable": 48.887581,
     "dayStart": 48.887581,
     "dailyPnl": 0.0
+  },
+  "market": {
+    "BTC": 81024.5,
+    "ETH": 2380.85,
+    "SOL": 84.9495
   },
   "positions": {
     "open": 0,
@@ -36,10 +41,11 @@
     "RISK_OFF maintained \u2014 catastrophic drawdown 51.11% exceeds 20% limit",
     "No open positions \u2014 capital preserved at $48.89",
     "No emergency SL needed (no positions)",
-    "Regime consistent across risk-regime.json and autonomous-brain.json"
+    "Regime consistent across risk-regime.json and autonomous-brain.json",
+    "Live MCP clearinghouse state confirms $48.89 account value, $48.89 withdrawable"
   ],
   "warnings": [
     "Account at 51.11% drawdown from $100 peak \u2014 recovery requires significant gains",
-    "VPS scanner heartbeats unavailable \u2014 Railway deployment may be offline"
+    "VPS scanner heartbeats unavailable since March 23 \u2014 Railway deployment likely offline"
   ]
 }
