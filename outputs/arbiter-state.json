@@ -28,6 +28,13 @@
       "timestamp": "2026-05-05T10:32:04Z",
       "message": "Portfolio flat. Account value $48.89 (live confirmed). DD 51.1% from peak $100. Regime RISK_OFF active. No open positions, no open orders. All state files consistent. VPS scanners offline since March 23.",
       "severity": "INFO"
+    },
+    {
+      "timestamp": "2026-05-05T10:47:18.696949Z",
+      "type": "JIDO_CHECK",
+      "severity": "INFO",
+      "message": "JIDO portfolio check: 0 positions, RISK_OFF active, DD 51.11%, equity $48.89"
     }
-  ]
+  ],
+  "lastCheck": "2026-05-05T10:47:18.696949Z"
 }

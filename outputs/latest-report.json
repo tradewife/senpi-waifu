@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-05-05T10:32:04Z",
+  "generatedAt": "2026-05-05T10:47:38.594063Z",
   "type": "JIDO_PORTFOLIO_REVIEW",
   "regime": {
     "mode": "RISK_OFF",
     "source": "risk-regime.json",
-    "reason": "Catastrophic DD 51.1% (limit 20.0%)",
+    "reason": "Catastrophic DD 51.11% (limit 20.0%)",
     "updatedAt": "2026-05-05T10:00:42Z"
   },
   "equity": {
@@ -24,35 +24,22 @@
     "details": []
   },
   "guardrails": {
-    "catastrophicDrawdown": {
-      "threshold": 20,
-      "actual": 51.11,
-      "breached": true
-    },
-    "consecutiveStopOuts": {
-      "threshold": 4,
-      "actual": 0,
-      "breached": false
-    },
-    "dailyLoss": {
-      "threshold": 10,
-      "actual": 0.0,
-      "breached": false
-    }
+    "catastrophicDrawdownPct": 20.0,
+    "currentDrawdownPct": 51.11,
+    "status": "BREACH",
+    "maxConsecutiveStopOuts": 4,
+    "currentConsecutiveStopOuts": 0,
+    "dailyLossLimitPct": 10.0,
+    "currentDailyLossPct": 0.0
   },
-  "stateConsistency": {
-    "riskRegime": "RISK_OFF",
-    "brainRiskMode": "RISK_OFF",
-    "brainBlockEntries": true,
-    "brainAutoEntry": false,
-    "brainMaxSlots": 0,
-    "allConsistent": true
-  },
-  "vpsStatus": {
-    "scannersOnline": false,
-    "lastHeartbeat": "2026-03-23",
-    "note": "All VPS scanners offline since March 23 (43+ days). Only Hermes-managed cron jobs running."
-  },
-  "actions": [],
-  "assessment": "Portfolio flat with $48.89 remaining (live confirmed via clearinghouse state). Catastrophic drawdown of 51.1% exceeds 20% threshold. RISK_OFF properly enforced across all state files (risk-regime.json, autonomous-brain.json, arbiter-state.json). No open positions, no open orders, no naked positions requiring emergency SL. Consecutive stop-outs: 0. VPS scanners offline since March 23 \u2014 no new signals being generated. Portfolio is in capital preservation mode. No action required."
+  "actions": [
+    "RISK_OFF maintained \u2014 catastrophic drawdown 51.11% exceeds 20% limit",
+    "No open positions \u2014 capital preserved at $48.89",
+    "No emergency SL needed (no positions)",
+    "Regime consistent across risk-regime.json and autonomous-brain.json"
+  ],
+  "warnings": [
+    "Account at 51.11% drawdown from $100 peak \u2014 recovery requires significant gains",
+    "VPS scanner heartbeats unavailable \u2014 Railway deployment may be offline"
+  ]
 }
