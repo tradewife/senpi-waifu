@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-05-05T06:02:00Z",
+  "timestamp": "2026-05-05T06:17:53Z",
   "type": "jido",
   "regime": "RISK_OFF",
   "regimeReason": "Catastrophic DD 51.1% (limit 20.0%)",
@@ -38,8 +38,8 @@
     "SERR031 on strategy_list (expected \u2014 use clearinghouse state instead)"
   ],
   "market": {
-    "BTC": 80917.5,
-    "ETH": 2378.25,
-    "SOL": 84.85
+    "BTC": 80874.5,
+    "ETH": 2375.25,
+    "SOL": 84.76
   }
 }
