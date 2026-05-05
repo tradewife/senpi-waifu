@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-04T22:00:43Z",
+  "generatedAt": "2026-05-05T03:39:39Z",
   "arenaWeek": "?",
   "totalEntrants": 101,
   "ourStats": {
@@ -7,19 +7,20 @@
     "winRate": 0.0,
     "totalPnl": -51.11
   },
-  "arenaTop5AvgRoe": 15.84,
-  "arenaTop5AvgPnl": 118.45,
+  "arenaTop5AvgRoe": 16.32,
+  "arenaTop5AvgPnl": -356.26,
   "arenaTop5": [
     {
       "rank": 1,
-      "name": "aparjey.eth",
-      "roePct": "25.6767",
-      "totalPnl": "136.135626",
-      "tradeCount": 6,
+      "name": "mysterysuperboy",
+      "roePct": "24.6253",
+      "totalPnl": "143.210974",
+      "tradeCount": 14,
       "toolsUsed": [
         "account_get_portfolio",
         "close_position",
         "create_position",
+        "discovery_get_trader_history",
         "strategy_bridge_funds_from_hyperliquid_to_evm",
         "strategy_get_asset_trading_limits",
         "strategy_get_clearinghouse_state",
@@ -29,16 +30,16 @@
     {
       "rank": 2,
       "name": "RedFloppy",
-      "roePct": "17.5239",
-      "totalPnl": "83.305099",
+      "roePct": "19.2118",
+      "totalPnl": "93.494569",
       "tradeCount": 0,
       "toolsUsed": []
     },
     {
       "rank": 3,
       "name": "opencodeJaime",
-      "roePct": "14.12",
-      "totalPnl": "158.806956",
+      "roePct": "15.1633",
+      "totalPnl": "173.666604",
       "tradeCount": 15,
       "toolsUsed": [
         "account_get_portfolio",
@@ -66,17 +67,17 @@
     {
       "rank": 4,
       "name": "vignesh",
-      "roePct": "13.153",
-      "totalPnl": "24.206922",
+      "roePct": "14.1931",
+      "totalPnl": "27.362792",
       "tradeCount": 0,
       "toolsUsed": []
     },
     {
       "rank": 5,
       "name": "Diegoxyz",
-      "roePct": "8.7445",
-      "totalPnl": "189.816576",
-      "tradeCount": 2,
+      "roePct": "8.4211",
+      "totalPnl": "-2219.033141",
+      "tradeCount": 3,
       "toolsUsed": [
         "account_get_portfolio",
         "arena_leaderboard",
@@ -93,12 +94,6 @@
     }
   ],
   "recommendations": [
-    {
-      "action": "study_top_strategies",
-      "confidence": "medium",
-      "reason": "Arena top 5 avg PnL $118.45 vs ours $-51.11. Study their patterns.",
-      "risk": "neutral"
-    },
     {
       "action": "reminder_max_leverage",
       "confidence": "absolute",
