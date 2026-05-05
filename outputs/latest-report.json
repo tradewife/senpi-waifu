@@ -1,55 +1,29 @@
 {
-  "generatedAt": "2026-05-05T13:32:58Z",
+  "generatedAt": "2026-05-05T14:00:43Z",
   "regime": "RISK_OFF",
-  "regimeReason": "Catastrophic DD 51.1% (limit 20.0%)",
-  "strategy": {
-    "name": "wolf-primary",
-    "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
-    "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce"
-  },
-  "equity": {
-    "current": 48.89,
-    "peak": 100.0,
-    "drawdownPct": 51.11,
-    "withdrawable": 48.89
-  },
-  "positions": {
-    "open": 0,
-    "details": []
-  },
-  "orders": {
-    "open": 0,
-    "details": []
-  },
-  "guardrails": {
-    "catastrophicDD": {
-      "threshold": 20.0,
-      "current": 51.11,
-      "breached": true
-    },
-    "dailyLossLimit": {
-      "threshold": 10.0,
-      "current": 0.0,
-      "breached": false
-    },
-    "consecutiveStopOuts": {
-      "threshold": 4,
-      "current": 0,
-      "breached": false
-    }
-  },
-  "market": {
-    "BTC": 81494.5,
-    "ETH": 2390.35,
-    "SOL": 85.7135
-  },
-  "vpsScanners": "OFFLINE since 2026-03-23",
-  "actionsTaken": [
-    "Verified clearinghouse state via MCP \u2014 0 positions, 0 orders",
-    "Confirmed RISK_OFF consistent across risk-regime.json, autonomous-brain.json, arbiter-state.json",
-    "Confirmed drawdownPctFromPeak=51.11 in autonomous-brain.json matches actual DD",
-    "No emergency SL needed (no open positions)",
-    "Updated arbiter-state.json alert log"
+  "equity": 48.89,
+  "peakEquity": 100.0,
+  "drawdownPct": 51.11,
+  "dailyPnl": 0,
+  "dailyCloses": 0,
+  "dailyWinRate": 0,
+  "openPositions": 0,
+  "alerts": [
+    "CATASTROPHIC DRAWDOWN: 51.1%"
   ],
-  "assessment": "Portfolio remains in RISK_OFF with 51.11% drawdown from $100 peak. Account value stable at $48.89 with no open positions or orders. All state files are consistent. VPS scanners have been offline since March 23 (43+ days) \u2014 only Hermes-managed cron jobs are active. No action required until drawdown recovers below 20% threshold or manual intervention resets peak equity."
+  "deadWeight": [],
+  "guardrails": {
+    "dailyLossLimitPct": 10,
+    "catastrophicDrawdownPct": 20,
+    "maxConsecutiveStopOuts": 4,
+    "directionalCapPct": 70,
+    "minLeverage": 7,
+    "maxLeverage": 10,
+    "maxPositionsTotal": 3,
+    "perAssetCooldownMinutes": 120,
+    "bannedAssetPrefixes": [
+      "xyz:"
+    ],
+    "perTradeRiskPct": 1.0
+  }
 }
