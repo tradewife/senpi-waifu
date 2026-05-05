@@ -1,50 +1,58 @@
 {
-  "timestamp": "2026-05-05T10:01:24Z",
-  "regime": "RISK_OFF",
-  "regimeSource": "arbiter-override",
-  "regimeReason": "Catastrophic DD 51.1% (limit 20.0%)",
-  "equity": 48.887581,
-  "peakEquity": 100.0,
-  "drawdownPct": 51.11,
-  "withdrawable": 48.887581,
-  "openPositions": 0,
-  "openOrders": 0,
-  "consecutiveStopOuts": 0,
+  "generatedAt": "2026-05-05T10:17:50Z",
+  "type": "JIDO_PORTFOLIO_REVIEW",
+  "regime": {
+    "mode": "RISK_OFF",
+    "source": "risk-regime.json",
+    "reason": "Catastrophic DD 51.1% (limit 20.0%)",
+    "updatedAt": "2026-05-05T10:00:42Z"
+  },
+  "equity": {
+    "current": 48.887581,
+    "peak": 100.0,
+    "drawdownPct": 51.11,
+    "withdrawable": 48.887581,
+    "dayStart": 48.887581,
+    "dailyPnl": 0.0
+  },
+  "positions": {
+    "open": 0,
+    "details": []
+  },
+  "orders": {
+    "open": 0,
+    "details": []
+  },
   "guardrails": {
-    "catastrophicDrawdownPct": 20.0,
-    "dailyLossLimitPct": 10.0,
-    "maxConsecutiveStopOuts": 4,
-    "status": "BREACHED - DD 51.1% > 20.0% limit"
+    "catastrophicDrawdown": {
+      "threshold": 20,
+      "actual": 51.11,
+      "breached": true
+    },
+    "consecutiveStopOuts": {
+      "threshold": 4,
+      "actual": 0,
+      "breached": false
+    },
+    "dailyLoss": {
+      "threshold": 10,
+      "actual": 0.0,
+      "breached": false
+    }
   },
-  "market": {
-    "BTC": 80529.5,
-    "ETH": 2367.65,
-    "SOL": 84.4805
+  "stateConsistency": {
+    "riskRegime": "RISK_OFF",
+    "brainRiskMode": "RISK_OFF",
+    "brainBlockEntries": true,
+    "brainAutoEntry": false,
+    "brainMaxSlots": 0,
+    "allConsistent": true
   },
-  "strategy": {
-    "name": "WOLF-Primary",
-    "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
-    "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce",
-    "budget": 100,
-    "accountValue": 48.887581
+  "vpsStatus": {
+    "scannersOnline": false,
+    "lastHeartbeat": "2026-03-23",
+    "note": "All VPS scanners offline since March 23. Only Hermes-managed cron jobs running."
   },
-  "brain": {
-    "riskMode": "RISK_OFF",
-    "blockNewEntries": true,
-    "allowAutoEntry": false,
-    "maxSlotsCap": 0,
-    "drawdownPctFromPeak": 51.11
-  },
-  "vpsStatus": "OFFLINE - Last heartbeats from 2026-03-23 (43+ days stale)",
-  "actionsTaken": [
-    "Verified no open positions via clearinghouse state",
-    "Verified no open orders",
-    "Confirmed RISK_OFF regime consistent across risk-regime.json, autonomous-brain.json, arbiter-state.json",
-    "Updated arbiter-state alert timestamp"
-  ],
-  "warnings": [
-    "VPS scanners offline since 2026-03-23",
-    "Leaderboard API returned UNAUTHORIZED (auth token issue)",
-    "Account at 48.9% of original budget"
-  ]
+  "actions": [],
+  "assessment": "Portfolio flat with $48.89 remaining. Catastrophic drawdown of 51.1% exceeds 20% threshold. RISK_OFF properly enforced across all state files. No open positions or orders. VPS scanners offline since March 23 \u2014 no new signals being generated. Portfolio is in capital preservation mode. No action required."
 }
