@@ -1,45 +1,55 @@
 {
-  "generatedAt": "2026-05-05T12:47:00Z",
+  "generatedAt": "2026-05-05T13:16:58Z",
   "regime": "RISK_OFF",
-  "regimeReason": "Catastrophic DD 51.1% exceeds 20% threshold",
+  "regimeReason": "Catastrophic DD 51.1% (limit 20.0%)",
+  "strategy": {
+    "name": "wolf-primary",
+    "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
+    "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce"
+  },
   "equity": {
     "current": 48.89,
     "peak": 100.0,
     "drawdownPct": 51.11,
-    "dayStart": 48.89,
-    "dailyPnl": 0.0,
     "withdrawable": 48.89
   },
   "positions": {
     "open": 0,
-    "openOrders": 0,
+    "details": []
+  },
+  "orders": {
+    "open": 0,
     "details": []
   },
   "guardrails": {
-    "catastrophicDrawdownPct": 20,
-    "currentDrawdownPct": 51.11,
-    "breached": true,
-    "breachType": "catastrophic_drawdown",
-    "dailyLossPct": 0.0,
-    "dailyLossLimit": 10,
-    "consecutiveStopOuts": 0,
-    "maxConsecutiveStopOuts": 4
+    "catastrophicDD": {
+      "threshold": 20.0,
+      "current": 51.11,
+      "breached": true
+    },
+    "dailyLossLimit": {
+      "threshold": 10.0,
+      "current": 0.0,
+      "breached": false
+    },
+    "consecutiveStopOuts": {
+      "threshold": 4,
+      "current": 0,
+      "breached": false
+    }
   },
-  "stateConsistency": {
-    "riskRegimeRiskOff": true,
-    "brainRiskOff": true,
-    "brainBlockNewEntries": true,
-    "brainAllowAutoEntry": false,
-    "brainMaxSlotsCap": 0,
-    "allConsistent": true
+  "market": {
+    "BTC": 81512.5,
+    "ETH": 2391.65,
+    "SOL": 85.8425
   },
-  "marketSnapshot": {
-    "BTC": 81223.5,
-    "ETH": 2386.75,
-    "SOL": 85.2075
-  },
-  "warnings": [
-    "VPS scanners offline since March 23 — Railway deployment likely down"
+  "vpsScanners": "OFFLINE since 2026-03-23",
+  "actionsTaken": [
+    "Verified clearinghouse state via MCP \u2014 0 positions, 0 orders",
+    "Confirmed RISK_OFF consistent across risk-regime.json, autonomous-brain.json, arbiter-state.json",
+    "Confirmed drawdownPctFromPeak=51.11 in autonomous-brain.json matches actual DD",
+    "No emergency SL needed (no open positions)",
+    "Updated arbiter-state.json alert log"
   ],
-  "actions": []
+  "assessment": "Portfolio remains in RISK_OFF with 51.11% drawdown from $100 peak. Account value stable at $48.89 with no open positions or orders. All state files are consistent. VPS scanners have been offline since March 23 (43+ days) \u2014 only Hermes-managed cron jobs are active. No action required until drawdown recovers below 20% threshold or manual intervention resets peak equity."
 }
