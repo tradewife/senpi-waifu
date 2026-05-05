@@ -24,12 +24,7 @@
       "timestamp": "2026-05-03T23:02:48.598367+00:00"
     },
     {
-      "timestamp": "2026-05-05T01:02:48Z",
-      "type": "JIDO_HEARTBEAT",
-      "message": "JIDO check complete. RISK_OFF, no positions, equity $48.89, DD 51.11%"
-    },
-    {
-      "timestamp": "2026-05-05T05:46:32Z",
+      "timestamp": "2026-05-05T06:02:00Z",
       "type": "JIDO_HEARTBEAT",
       "message": "JIDO check complete. RISK_OFF, no positions, equity $48.89, DD 51.11%"
     }

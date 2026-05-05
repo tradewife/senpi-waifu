@@ -1,62 +1,45 @@
 {
-  "generatedAt": "2026-05-05T05:47:10.393212+00:00",
+  "timestamp": "2026-05-05T06:02:00Z",
+  "type": "jido",
   "regime": "RISK_OFF",
-  "regimeReason": "Catastrophic drawdown 51.11% exceeds 20% threshold. Market shows RISK_ON signals (BTC slope=3.03%, ATR=0.53%) but override active.",
+  "regimeReason": "Catastrophic DD 51.1% (limit 20.0%)",
   "equity": {
     "current": 48.89,
     "peak": 100.0,
-    "dayStart": 48.89,
-    "drawdownPct": 51.11
+    "drawdownPct": 51.11,
+    "withdrawable": 48.89
   },
   "positions": {
     "open": 0,
-    "openOrders": 0,
     "details": []
   },
-  "market": {
-    "BTC": 80930.5,
-    "ETH": 2377.55,
-    "SOL": 84.8575
+  "orders": {
+    "open": 0
   },
   "guardrails": {
-    "catastrophicDrawdown": {
-      "threshold": 20,
+    "catastrophicDD": {
+      "threshold": 20.0,
       "actual": 51.11,
       "breached": true
     },
-    "dailyLossLimit": {
-      "threshold": 10,
+    "dailyLoss": {
       "breached": false
     },
     "consecutiveStopOuts": {
-      "count": 0,
-      "threshold": 4,
       "breached": false
     }
   },
-  "strategy": {
-    "name": "wolf-primary",
-    "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
-    "budget": 100,
-    "withdrawable": 48.89,
-    "accountValue": 48.89
-  },
+  "actions": [
+    "Heartbeat only \u2014 RISK_OFF active, no positions to manage"
+  ],
   "alerts": [
-    {
-      "severity": "CRITICAL",
-      "type": "CATASTROPHIC_DRAWDOWN",
-      "message": "DD 51.11% exceeds 20% threshold. RISK_OFF enforced since 2026-05-02."
-    },
-    {
-      "severity": "MEDIUM",
-      "type": "VPS_SCANNERS_OFFLINE",
-      "message": "All VPS scanner heartbeats stale since 2026-03-23 (43+ days). Railway deployment likely offline."
-    }
+    "RISK_OFF active since 2026-05-02 (catastrophic DD 51.11%)",
+    "VPS scanners offline since 2026-03-23 (43+ days)",
+    "SERR031 on strategy_list (expected \u2014 use clearinghouse state instead)"
   ],
-  "actionsTaken": [
-    "Verified clearinghouse state \u2014 no open positions, no open orders",
-    "Confirmed RISK_OFF sync across risk-regime.json, autonomous-brain.json, and arbiter-state.json",
-    "Heartbeat recorded"
-  ],
-  "assessment": "System is in RISK_OFF lockdown with 51.11% drawdown from initial $100 budget. No open positions or orders. $48.89 remains withdrawable. VPS scanners have been offline since March 23 \u2014 only Hermes-managed crons are running. The account is capital-preserving with no new entries possible. Market is bullish (BTC $80.9K, regime classifier sees RISK_ON) but drawdown override keeps the system locked."
+  "market": {
+    "BTC": 80917.5,
+    "ETH": 2378.25,
+    "SOL": 84.85
+  }
 }
