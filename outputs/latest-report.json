@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-05T10:17:50Z",
+  "generatedAt": "2026-05-05T10:32:04Z",
   "type": "JIDO_PORTFOLIO_REVIEW",
   "regime": {
     "mode": "RISK_OFF",
@@ -51,8 +51,8 @@
   "vpsStatus": {
     "scannersOnline": false,
     "lastHeartbeat": "2026-03-23",
-    "note": "All VPS scanners offline since March 23. Only Hermes-managed cron jobs running."
+    "note": "All VPS scanners offline since March 23 (43+ days). Only Hermes-managed cron jobs running."
   },
   "actions": [],
-  "assessment": "Portfolio flat with $48.89 remaining. Catastrophic drawdown of 51.1% exceeds 20% threshold. RISK_OFF properly enforced across all state files. No open positions or orders. VPS scanners offline since March 23 \u2014 no new signals being generated. Portfolio is in capital preservation mode. No action required."
+  "assessment": "Portfolio flat with $48.89 remaining (live confirmed via clearinghouse state). Catastrophic drawdown of 51.1% exceeds 20% threshold. RISK_OFF properly enforced across all state files (risk-regime.json, autonomous-brain.json, arbiter-state.json). No open positions, no open orders, no naked positions requiring emergency SL. Consecutive stop-outs: 0. VPS scanners offline since March 23 \u2014 no new signals being generated. Portfolio is in capital preservation mode. No action required."
 }
