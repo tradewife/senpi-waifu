@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-05-05T09:46:49Z",
+  "timestamp": "2026-05-05T10:01:24Z",
   "regime": "RISK_OFF",
   "regimeSource": "arbiter-override",
   "regimeReason": "Catastrophic DD 51.1% (limit 20.0%)",
@@ -17,9 +17,9 @@
     "status": "BREACHED - DD 51.1% > 20.0% limit"
   },
   "market": {
-    "BTC": 80575.5,
-    "ETH": 2369.55,
-    "SOL": 84.5165
+    "BTC": 80529.5,
+    "ETH": 2367.65,
+    "SOL": 84.4805
   },
   "strategy": {
     "name": "WOLF-Primary",
@@ -37,13 +37,14 @@
   },
   "vpsStatus": "OFFLINE - Last heartbeats from 2026-03-23 (43+ days stale)",
   "actionsTaken": [
-    "Verified no open positions",
+    "Verified no open positions via clearinghouse state",
     "Verified no open orders",
-    "Confirmed RISK_OFF regime consistent across all state files"
+    "Confirmed RISK_OFF regime consistent across risk-regime.json, autonomous-brain.json, arbiter-state.json",
+    "Updated arbiter-state alert timestamp"
   ],
   "warnings": [
     "VPS scanners offline since 2026-03-23",
-    "SERR031 on strategy_list (expected)",
+    "Leaderboard API returned UNAUTHORIZED (auth token issue)",
     "Account at 48.9% of original budget"
   ]
 }
