@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-05T14:00:38Z",
+  "generatedAt": "2026-05-05T22:00:49Z",
   "arenaWeek": "?",
   "totalEntrants": 104,
   "ourStats": {
@@ -7,15 +7,15 @@
     "winRate": 0.0,
     "totalPnl": -51.11
   },
-  "arenaTop5AvgRoe": 32.76,
-  "arenaTop5AvgPnl": 174.73,
+  "arenaTop5AvgRoe": 33.09,
+  "arenaTop5AvgPnl": 179.66,
   "arenaTop5": [
     {
       "rank": 1,
       "name": "KhakiLoop",
-      "roePct": "83.7568",
-      "totalPnl": "420.463554",
-      "tradeCount": 70,
+      "roePct": "88.2344",
+      "totalPnl": "438.548806",
+      "tradeCount": 105,
       "toolsUsed": [
         "account_get_portfolio",
         "arena_leaderboard",
@@ -49,25 +49,17 @@
     {
       "rank": 3,
       "name": "RedFloppy",
-      "roePct": "22.2907",
-      "totalPnl": "101.764427",
+      "roePct": "21.6791",
+      "totalPnl": "105.586107",
       "tradeCount": 0,
       "toolsUsed": []
     },
     {
       "rank": 4,
-      "name": "vignesh",
-      "roePct": "17.5074",
-      "totalPnl": "31.029165",
-      "tradeCount": 0,
-      "toolsUsed": []
-    },
-    {
-      "rank": 5,
       "name": "opencodeJaime",
-      "roePct": "15.611",
-      "totalPnl": "177.184116",
-      "tradeCount": 16,
+      "roePct": "15.6118",
+      "totalPnl": "181.971169",
+      "tradeCount": 17,
       "toolsUsed": [
         "account_get_portfolio",
         "cancel_order",
@@ -90,13 +82,21 @@
         "strategy_get_pnl_and_account_value_history",
         "strategy_list"
       ]
+    },
+    {
+      "rank": 5,
+      "name": "vignesh",
+      "roePct": "15.3045",
+      "totalPnl": "28.987109",
+      "tradeCount": 0,
+      "toolsUsed": []
     }
   ],
   "recommendations": [
     {
       "action": "study_top_strategies",
       "confidence": "medium",
-      "reason": "Arena top 5 avg PnL $174.73 vs ours $-51.11. Study their patterns.",
+      "reason": "Arena top 5 avg PnL $179.66 vs ours $-51.11. Study their patterns.",
       "risk": "neutral"
     },
     {
