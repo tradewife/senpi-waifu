@@ -1,45 +1,35 @@
 {
-  "timestamp": "2026-05-05T06:17:53Z",
-  "type": "jido",
+  "timestamp": "2026-05-05T06:32:14Z",
   "regime": "RISK_OFF",
   "regimeReason": "Catastrophic DD 51.1% (limit 20.0%)",
-  "equity": {
-    "current": 48.89,
-    "peak": 100.0,
-    "drawdownPct": 51.11,
-    "withdrawable": 48.89
-  },
-  "positions": {
-    "open": 0,
-    "details": []
-  },
-  "orders": {
-    "open": 0
+  "equity": 48.887581,
+  "peakEquity": 100.0,
+  "drawdownPct": 51.11,
+  "dailyPnl": 0.0,
+  "openPositions": 0,
+  "withdrawable": 48.887581,
+  "positions": [],
+  "marketPrices": {
+    "BTC": 80774.5,
+    "ETH": 2371.65,
+    "SOL": 84.6255
   },
   "guardrails": {
     "catastrophicDD": {
-      "threshold": 20.0,
+      "threshold": 20,
       "actual": 51.11,
       "breached": true
     },
-    "dailyLoss": {
-      "breached": false
-    },
-    "consecutiveStopOuts": {
+    "dailyLossLimit": {
+      "threshold": 10,
+      "actual": 0,
       "breached": false
     }
   },
-  "actions": [
-    "Heartbeat only \u2014 RISK_OFF active, no positions to manage"
-  ],
-  "alerts": [
-    "RISK_OFF active since 2026-05-02 (catastrophic DD 51.11%)",
-    "VPS scanners offline since 2026-03-23 (43+ days)",
-    "SERR031 on strategy_list (expected \u2014 use clearinghouse state instead)"
-  ],
-  "market": {
-    "BTC": 80874.5,
-    "ETH": 2375.25,
-    "SOL": 84.76
-  }
+  "brainSynced": true,
+  "actionsTaken": [],
+  "warnings": [
+    "SERR031 on strategy_list (expected, clearinghouse state used instead)",
+    "VPS scanners offline since 2026-03-23 (43+ days)"
+  ]
 }
