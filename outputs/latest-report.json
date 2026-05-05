@@ -1,32 +1,29 @@
 {
-  "generatedAt": "2026-05-05T01:02:48Z",
+  "generatedAt": "2026-05-05T03:39:43Z",
   "regime": "RISK_OFF",
-  "equity": 48.887581,
+  "equity": 48.89,
   "peakEquity": 100.0,
   "drawdownPct": 51.11,
-  "dailyPnl": 0.0,
+  "dailyPnl": 0,
+  "dailyCloses": 0,
+  "dailyWinRate": 0,
   "openPositions": 0,
-  "openOrders": 0,
-  "withdrawable": 48.887581,
-  "guardrails": {
-    "catastrophicDD": true,
-    "dailyLossLimit": false,
-    "consecutiveStopOuts": false
-  },
-  "actions": [],
   "alerts": [
-    "RISK_OFF active since 2026-05-02 \u2014 DD 51.1% exceeds 20% threshold",
-    "VPS scanners offline (last heartbeat 2026-03-23, 43+ days ago)",
-    "No positions, no open orders \u2014 capital idle at $48.89"
+    "CATASTROPHIC DRAWDOWN: 51.1%"
   ],
-  "strategy": {
-    "name": "wolf-primary",
-    "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
-    "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce"
-  },
-  "marketSnapshot": {
-    "BTC": 79874.5,
-    "ETH": 2349.95,
-    "SOL": 84.1055
+  "deadWeight": [],
+  "guardrails": {
+    "dailyLossLimitPct": 10,
+    "catastrophicDrawdownPct": 20,
+    "maxConsecutiveStopOuts": 4,
+    "directionalCapPct": 70,
+    "minLeverage": 7,
+    "maxLeverage": 10,
+    "maxPositionsTotal": 3,
+    "perAssetCooldownMinutes": 120,
+    "bannedAssetPrefixes": [
+      "xyz:"
+    ],
+    "perTradeRiskPct": 1.0
   }
 }
