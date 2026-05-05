@@ -2,7 +2,7 @@
   "peakEquity": 100.0,
   "dayStartEquity": 48.887581,
   "consecutiveStopOuts": 0,
-  "lastCheckAt": "2026-05-05T00:02:41.023717+00:00",
+  "lastCheckAt": "2026-05-05T00:32:43.715953+00:00",
   "lastEquity": 48.887581,
   "alerts": [
     {
@@ -20,20 +20,15 @@
     {
       "type": "VPS_SCANNERS_OFFLINE",
       "severity": "MEDIUM",
-      "message": "All VPS scanner heartbeats stale (last: 2026-03-23, 41+ days). Railway deployment likely offline.",
+      "message": "All VPS scanner heartbeats stale (last: 2026-03-23, 43+ days). Railway deployment likely offline.",
       "timestamp": "2026-05-03T23:02:48.598367+00:00"
     },
     {
-      "timestamp": "2026-05-04T23:32:04.307807+00:00",
-      "type": "JIDO_HEARTBEAT",
-      "message": "JIDO check complete. RISK_OFF, no positions, equity $48.89, DD 51.11%"
-    },
-    {
-      "timestamp": "2026-05-05T00:02:41.023717+00:00",
+      "timestamp": "2026-05-05T00:31:42Z",
       "type": "JIDO_HEARTBEAT",
       "message": "JIDO check complete. RISK_OFF, no positions, equity $48.89, DD 51.11%"
     }
   ],
   "dayStartDate": "2026-05-05",
-  "lastChecked": "2026-05-05T00:02:41.023717+00:00"
+  "lastChecked": "2026-05-05T00:32:43.715953+00:00"
 }
