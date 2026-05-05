@@ -1,17 +1,33 @@
 {
-  "generatedAt": "2026-05-05T03:39:39Z",
+  "generatedAt": "2026-05-05T06:00:55Z",
   "arenaWeek": "?",
-  "totalEntrants": 101,
+  "totalEntrants": 102,
   "ourStats": {
     "closes": 1,
     "winRate": 0.0,
     "totalPnl": -51.11
   },
-  "arenaTop5AvgRoe": 16.32,
-  "arenaTop5AvgPnl": -356.26,
+  "arenaTop5AvgRoe": 32.35,
+  "arenaTop5AvgPnl": 174.37,
   "arenaTop5": [
     {
       "rank": 1,
+      "name": "KhakiLoop",
+      "roePct": "85.7009",
+      "totalPnl": "426.567702",
+      "tradeCount": 10,
+      "toolsUsed": [
+        "account_get_portfolio",
+        "cancel_order",
+        "create_position",
+        "strategy_create_custom_strategy",
+        "strategy_get_clearinghouse_state",
+        "strategy_list",
+        "user_get_me"
+      ]
+    },
+    {
+      "rank": 2,
       "name": "mysterysuperboy",
       "roePct": "24.6253",
       "totalPnl": "143.210974",
@@ -28,19 +44,19 @@
       ]
     },
     {
-      "rank": 2,
+      "rank": 3,
       "name": "RedFloppy",
-      "roePct": "19.2118",
-      "totalPnl": "93.494569",
+      "roePct": "20.2832",
+      "totalPnl": "96.468221",
       "tradeCount": 0,
       "toolsUsed": []
     },
     {
-      "rank": 3,
+      "rank": 4,
       "name": "opencodeJaime",
-      "roePct": "15.1633",
-      "totalPnl": "173.666604",
-      "tradeCount": 15,
+      "roePct": "15.611",
+      "totalPnl": "177.184116",
+      "tradeCount": 16,
       "toolsUsed": [
         "account_get_portfolio",
         "cancel_order",
@@ -65,35 +81,21 @@
       ]
     },
     {
-      "rank": 4,
+      "rank": 5,
       "name": "vignesh",
-      "roePct": "14.1931",
-      "totalPnl": "27.362792",
+      "roePct": "15.539",
+      "totalPnl": "28.422581",
       "tradeCount": 0,
       "toolsUsed": []
-    },
-    {
-      "rank": 5,
-      "name": "Diegoxyz",
-      "roePct": "8.4211",
-      "totalPnl": "-2219.033141",
-      "tradeCount": 3,
-      "toolsUsed": [
-        "account_get_portfolio",
-        "arena_leaderboard",
-        "discovery_get_trader_history",
-        "market_get_prices",
-        "market_list_instruments",
-        "strategy_close",
-        "strategy_create_custom_strategy",
-        "strategy_get",
-        "strategy_get_clearinghouse_state",
-        "strategy_list",
-        "user_get_me"
-      ]
     }
   ],
   "recommendations": [
+    {
+      "action": "study_top_strategies",
+      "confidence": "medium",
+      "reason": "Arena top 5 avg PnL $174.37 vs ours $-51.11. Study their patterns.",
+      "risk": "neutral"
+    },
     {
       "action": "reminder_max_leverage",
       "confidence": "absolute",
