@@ -1,34 +1,15 @@
 {
   "peakEquity": 100.0,
+  "lastEquity": 48.887581,
   "dayStartEquity": 48.887581,
   "consecutiveStopOuts": 0,
-  "lastCheckAt": "2026-05-05T09:17:16Z",
-  "lastEquity": 48.887581,
+  "lastUpdated": "2026-05-05T09:46:49Z",
   "alerts": [
     {
-      "type": "CATASTROPHIC_DRAWDOWN",
-      "severity": "CRITICAL",
-      "message": "Drawdown 51.11% exceeds catastrophic 20% threshold. RISK_OFF active.",
-      "timestamp": "2026-05-02T04:47:27.501790+00:00"
-    },
-    {
-      "type": "REGIME_OVERRIDE",
-      "severity": "HIGH",
-      "message": "JIDO override #1: regime was BASELINE, forced to RISK_OFF due to 51.11% drawdown",
-      "timestamp": "2026-05-02T04:47:27.501790+00:00"
-    },
-    {
-      "type": "VPS_SCANNERS_OFFLINE",
-      "severity": "MEDIUM",
-      "message": "All VPS scanner heartbeats stale (last: 2026-03-23, 43+ days). Railway deployment likely offline.",
-      "timestamp": "2026-05-03T23:02:48.598367+00:00"
-    },
-    {
-      "timestamp": "2026-05-05T09:17:16Z",
-      "type": "JIDO_HEARTBEAT",
-      "message": "JIDO check complete. RISK_OFF, no positions, equity $48.89, DD 51.11%"
+      "type": "JIDO_CHECK",
+      "timestamp": "2026-05-05T09:46:49Z",
+      "message": "Portfolio flat. Account value $48.89. DD 51.1% from peak $100. Regime RISK_OFF active. No open positions, no open orders.",
+      "severity": "INFO"
     }
-  ],
-  "dayStartDate": "2026-05-05",
-  "lastChecked": "2026-05-05T09:17:16Z"
+  ]
 }

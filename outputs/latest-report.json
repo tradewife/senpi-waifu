@@ -1,29 +1,49 @@
 {
-  "generatedAt": "2026-05-05T09:15:59Z",
+  "timestamp": "2026-05-05T09:46:49Z",
   "regime": "RISK_OFF",
-  "equity": 48.89,
+  "regimeSource": "arbiter-override",
+  "regimeReason": "Catastrophic DD 51.1% (limit 20.0%)",
+  "equity": 48.887581,
   "peakEquity": 100.0,
   "drawdownPct": 51.11,
-  "dailyPnl": 0,
-  "dailyCloses": 0,
-  "dailyWinRate": 0,
+  "withdrawable": 48.887581,
   "openPositions": 0,
-  "alerts": [
-    "CATASTROPHIC DRAWDOWN: 51.1%"
-  ],
-  "deadWeight": [],
+  "openOrders": 0,
+  "consecutiveStopOuts": 0,
   "guardrails": {
-    "dailyLossLimitPct": 10,
-    "catastrophicDrawdownPct": 20,
+    "catastrophicDrawdownPct": 20.0,
+    "dailyLossLimitPct": 10.0,
     "maxConsecutiveStopOuts": 4,
-    "directionalCapPct": 70,
-    "minLeverage": 7,
-    "maxLeverage": 10,
-    "maxPositionsTotal": 3,
-    "perAssetCooldownMinutes": 120,
-    "bannedAssetPrefixes": [
-      "xyz:"
-    ],
-    "perTradeRiskPct": 1.0
-  }
+    "status": "BREACHED - DD 51.1% > 20.0% limit"
+  },
+  "market": {
+    "BTC": 80575.5,
+    "ETH": 2369.55,
+    "SOL": 84.5165
+  },
+  "strategy": {
+    "name": "WOLF-Primary",
+    "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
+    "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce",
+    "budget": 100,
+    "accountValue": 48.887581
+  },
+  "brain": {
+    "riskMode": "RISK_OFF",
+    "blockNewEntries": true,
+    "allowAutoEntry": false,
+    "maxSlotsCap": 0,
+    "drawdownPctFromPeak": 51.11
+  },
+  "vpsStatus": "OFFLINE - Last heartbeats from 2026-03-23 (43+ days stale)",
+  "actionsTaken": [
+    "Verified no open positions",
+    "Verified no open orders",
+    "Confirmed RISK_OFF regime consistent across all state files"
+  ],
+  "warnings": [
+    "VPS scanners offline since 2026-03-23",
+    "SERR031 on strategy_list (expected)",
+    "Account at 48.9% of original budget"
+  ]
 }
