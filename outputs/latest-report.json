@@ -1,51 +1,45 @@
 {
-  "generatedAt": "2026-05-05T11:47:17.454014+00:00",
-  "type": "JIDO_PORTFOLIO_REVIEW",
-  "regime": {
-    "mode": "RISK_OFF",
-    "source": "risk-regime.json",
-    "reason": "Catastrophic DD 51.11% (limit 20.0%)",
-    "updatedAt": "2026-05-05T11:47:17Z"
-  },
+  "generatedAt": "2026-05-05T12:47:00Z",
+  "regime": "RISK_OFF",
+  "regimeReason": "Catastrophic DD 51.1% exceeds 20% threshold",
   "equity": {
-    "current": 48.887581,
+    "current": 48.89,
     "peak": 100.0,
     "drawdownPct": 51.11,
-    "withdrawable": 48.887581,
-    "dayStart": 48.887581,
-    "dailyPnl": 0.0
-  },
-  "market": {
-    "BTC": 81024.5,
-    "ETH": 2380.85,
-    "SOL": 84.9495
+    "dayStart": 48.89,
+    "dailyPnl": 0.0,
+    "withdrawable": 48.89
   },
   "positions": {
     "open": 0,
-    "details": []
-  },
-  "orders": {
-    "open": 0,
+    "openOrders": 0,
     "details": []
   },
   "guardrails": {
-    "catastrophicDrawdownPct": 20.0,
+    "catastrophicDrawdownPct": 20,
     "currentDrawdownPct": 51.11,
-    "status": "BREACH",
-    "maxConsecutiveStopOuts": 4,
-    "currentConsecutiveStopOuts": 0,
-    "dailyLossLimitPct": 10.0,
-    "currentDailyLossPct": 0.0
+    "breached": true,
+    "breachType": "catastrophic_drawdown",
+    "dailyLossPct": 0.0,
+    "dailyLossLimit": 10,
+    "consecutiveStopOuts": 0,
+    "maxConsecutiveStopOuts": 4
   },
-  "actions": [
-    "RISK_OFF maintained \u2014 catastrophic drawdown 51.11% exceeds 20% limit",
-    "No open positions \u2014 capital preserved at $48.89",
-    "No emergency SL needed (no positions)",
-    "Regime consistent across risk-regime.json and autonomous-brain.json",
-    "Live MCP clearinghouse state confirms $48.89 account value, $48.89 withdrawable"
-  ],
+  "stateConsistency": {
+    "riskRegimeRiskOff": true,
+    "brainRiskOff": true,
+    "brainBlockNewEntries": true,
+    "brainAllowAutoEntry": false,
+    "brainMaxSlotsCap": 0,
+    "allConsistent": true
+  },
+  "marketSnapshot": {
+    "BTC": 81223.5,
+    "ETH": 2386.75,
+    "SOL": 85.2075
+  },
   "warnings": [
-    "Account at 51.11% drawdown from $100 peak \u2014 recovery requires significant gains",
-    "VPS scanner heartbeats unavailable since March 23 \u2014 Railway deployment likely offline"
-  ]
+    "VPS scanners offline since March 23 — Railway deployment likely down"
+  ],
+  "actions": []
 }
