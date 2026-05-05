@@ -1,30 +1,27 @@
 {
-  "generatedAt": "2026-05-04T23:32:04.307807+00:00",
+  "generatedAt": "2026-05-05T00:02:41.023717+00:00",
   "regime": "RISK_OFF",
-  "regimeSource": "risk-regime.json",
   "equity": 48.887581,
   "peakEquity": 100.0,
   "drawdownPct": 51.11,
-  "dailyPnlPct": 0.0,
-  "positions": [],
-  "openOrders": [],
+  "dailyPnl": 0.0,
+  "openPositions": 0,
+  "openOrders": 0,
   "withdrawable": 48.887581,
   "guardrails": {
-    "catastrophicDdBreached": true,
-    "dailyLossBreached": false,
-    "consecutiveStopsBreached": false
+    "catastrophicDD": false,
+    "dailyLossLimit": false,
+    "consecutiveStopOuts": false
   },
-  "marketSnapshot": {
-    "BTC": 79893.5,
-    "ETH": 2350.95,
-    "SOL": 84.1395
-  },
-  "vpsScannersOffline": true,
-  "status": "RISK_OFF_STABLE",
-  "actionsTaken": [
-    "None \u2014 RISK_OFF correctly enforced, no positions to manage"
+  "actions": [],
+  "alerts": [
+    "RISK_OFF active since 2026-05-02 \u2014 DD 51.1% exceeds 20% threshold",
+    "VPS scanners offline (last heartbeat 2026-03-23, 43+ days ago)",
+    "No positions, no open orders \u2014 capital idle at $48.89"
   ],
-  "warnings": [
-    "VPS scanners offline since 2026-03-23 (41+ days)"
-  ]
+  "strategy": {
+    "name": "wolf-primary",
+    "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
+    "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce"
+  }
 }
