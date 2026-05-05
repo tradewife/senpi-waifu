@@ -2,7 +2,7 @@
   "peakEquity": 100.0,
   "dayStartEquity": 48.887581,
   "consecutiveStopOuts": 0,
-  "lastCheckAt": "2026-05-05T03:39:43Z",
+  "lastCheckAt": "2026-05-05T05:46:32Z",
   "lastEquity": 48.887581,
   "alerts": [
     {
@@ -27,8 +27,13 @@
       "timestamp": "2026-05-05T01:02:48Z",
       "type": "JIDO_HEARTBEAT",
       "message": "JIDO check complete. RISK_OFF, no positions, equity $48.89, DD 51.11%"
+    },
+    {
+      "timestamp": "2026-05-05T05:46:32Z",
+      "type": "JIDO_HEARTBEAT",
+      "message": "JIDO check complete. RISK_OFF, no positions, equity $48.89, DD 51.11%"
     }
   ],
   "dayStartDate": "2026-05-05",
-  "lastChecked": "2026-05-05T01:02:48.351685+00:00"
+  "lastChecked": "2026-05-05T05:46:32Z"
 }
