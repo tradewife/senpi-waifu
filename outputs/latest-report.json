@@ -1,35 +1,29 @@
 {
-  "timestamp": "2026-05-05T06:32:14Z",
+  "generatedAt": "2026-05-05T08:00:25Z",
   "regime": "RISK_OFF",
-  "regimeReason": "Catastrophic DD 51.1% (limit 20.0%)",
-  "equity": 48.887581,
+  "equity": 48.89,
   "peakEquity": 100.0,
   "drawdownPct": 51.11,
-  "dailyPnl": 0.0,
+  "dailyPnl": 0,
+  "dailyCloses": 0,
+  "dailyWinRate": 0,
   "openPositions": 0,
-  "withdrawable": 48.887581,
-  "positions": [],
-  "marketPrices": {
-    "BTC": 80774.5,
-    "ETH": 2371.65,
-    "SOL": 84.6255
-  },
+  "alerts": [
+    "CATASTROPHIC DRAWDOWN: 51.1%"
+  ],
+  "deadWeight": [],
   "guardrails": {
-    "catastrophicDD": {
-      "threshold": 20,
-      "actual": 51.11,
-      "breached": true
-    },
-    "dailyLossLimit": {
-      "threshold": 10,
-      "actual": 0,
-      "breached": false
-    }
-  },
-  "brainSynced": true,
-  "actionsTaken": [],
-  "warnings": [
-    "SERR031 on strategy_list (expected, clearinghouse state used instead)",
-    "VPS scanners offline since 2026-03-23 (43+ days)"
-  ]
+    "dailyLossLimitPct": 10,
+    "catastrophicDrawdownPct": 20,
+    "maxConsecutiveStopOuts": 4,
+    "directionalCapPct": 70,
+    "minLeverage": 7,
+    "maxLeverage": 10,
+    "maxPositionsTotal": 3,
+    "perAssetCooldownMinutes": 120,
+    "bannedAssetPrefixes": [
+      "xyz:"
+    ],
+    "perTradeRiskPct": 1.0
+  }
 }
