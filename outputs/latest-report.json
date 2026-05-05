@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-05T13:16:58Z",
+  "generatedAt": "2026-05-05T13:32:58Z",
   "regime": "RISK_OFF",
   "regimeReason": "Catastrophic DD 51.1% (limit 20.0%)",
   "strategy": {
@@ -39,9 +39,9 @@
     }
   },
   "market": {
-    "BTC": 81512.5,
-    "ETH": 2391.65,
-    "SOL": 85.8425
+    "BTC": 81494.5,
+    "ETH": 2390.35,
+    "SOL": 85.7135
   },
   "vpsScanners": "OFFLINE since 2026-03-23",
   "actionsTaken": [
