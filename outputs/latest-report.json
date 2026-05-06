@@ -1,29 +1,46 @@
 {
-  "generatedAt": "2026-05-06T22:03:20Z",
+  "generatedAt": "2026-05-06T22:17:11.477865+00:00",
   "regime": "RISK_OFF",
-  "equity": 48.89,
+  "regimeReason": "Catastrophic DD 51.1% (limit 20.0%)",
+  "equity": 48.887581,
   "peakEquity": 100.0,
   "drawdownPct": 51.11,
-  "dailyPnl": 0,
-  "dailyCloses": 0,
-  "dailyWinRate": 0,
-  "openPositions": 0,
-  "alerts": [
-    "CATASTROPHIC DRAWDOWN: 51.1%"
-  ],
-  "deadWeight": [],
+  "withdrawable": 48.887581,
+  "positions": [],
+  "positionCount": 0,
+  "openOrders": [],
   "guardrails": {
-    "dailyLossLimitPct": 10,
-    "catastrophicDrawdownPct": 20,
-    "maxConsecutiveStopOuts": 4,
-    "directionalCapPct": 70,
-    "minLeverage": 7,
-    "maxLeverage": 10,
-    "maxPositionsTotal": 3,
-    "perAssetCooldownMinutes": 120,
-    "bannedAssetPrefixes": [
-      "xyz:"
-    ],
-    "perTradeRiskPct": 1.0
+    "catastrophicDD": {
+      "limit": 20,
+      "actual": 51.11,
+      "breached": true
+    },
+    "dailyLossLimit": {
+      "limit": 10,
+      "actual": 0,
+      "breached": false
+    },
+    "consecutiveStopOuts": {
+      "limit": 4,
+      "actual": 0,
+      "breached": false
+    }
+  },
+  "brainRegimeSync": true,
+  "prices": {
+    "BTC": 81317.5,
+    "ETH": 2348.65,
+    "SOL": 89.2635,
+    "HYPE": 43.0815
+  },
+  "actions": [],
+  "warnings": [
+    "SERR031 on strategy_list \u2014 using clearinghouse state fallback",
+    "VPS scanners offline since March 23 (45 days stale)"
+  ],
+  "vpsStatus": {
+    "lastHeartbeats": "2026-03-23",
+    "staleDays": 45,
+    "scannersOnline": false
   }
 }
