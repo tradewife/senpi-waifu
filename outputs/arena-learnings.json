@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-06T02:01:19Z",
+  "generatedAt": "2026-05-06T06:01:22Z",
   "arenaWeek": "?",
   "totalEntrants": 105,
   "ourStats": {
@@ -7,16 +7,30 @@
     "winRate": 0.0,
     "totalPnl": -51.11
   },
-  "arenaTop5AvgRoe": 33.63,
-  "arenaTop5AvgPnl": 178.96,
+  "arenaTop5AvgRoe": 33.8,
+  "arenaTop5AvgPnl": 178.17,
   "arenaTop5": [
     {
       "rank": 1,
       "name": "KhakiLoop",
-      "roePct": "88.3443",
-      "totalPnl": "439.752274",
-      "tradeCount": 105,
-      "toolsUsed": []
+      "roePct": "89.9899",
+      "totalPnl": "447.644796",
+      "tradeCount": 108,
+      "toolsUsed": [
+        "account_get_portfolio",
+        "arena_leaderboard",
+        "create_position",
+        "discovery_get_top_traders",
+        "leaderboard_get_markets",
+        "leaderboard_get_top",
+        "market_get_asset_data",
+        "market_get_cross_asset_flows",
+        "market_get_funding_history",
+        "market_get_funding_regime",
+        "market_get_prices",
+        "market_list_instruments",
+        "strategy_get_clearinghouse_state"
+      ]
     },
     {
       "rank": 2,
@@ -29,24 +43,24 @@
     {
       "rank": 3,
       "name": "RedFloppy",
-      "roePct": "21.7133",
-      "totalPnl": "103.754458",
+      "roePct": "21.1053",
+      "totalPnl": "100.940623",
       "tradeCount": 0,
       "toolsUsed": []
     },
     {
       "rank": 4,
       "name": "vignesh",
-      "roePct": "17.8123",
-      "totalPnl": "32.854347",
+      "roePct": "18.5603",
+      "totalPnl": "34.216928",
       "tradeCount": 0,
       "toolsUsed": []
     },
     {
       "rank": 5,
       "name": "opencodeJaime",
-      "roePct": "15.6652",
-      "totalPnl": "175.206557",
+      "roePct": "14.7136",
+      "totalPnl": "164.814546",
       "tradeCount": 17,
       "toolsUsed": [
         "leaderboard_get_markets",
@@ -58,7 +72,7 @@
     {
       "action": "study_top_strategies",
       "confidence": "medium",
-      "reason": "Arena top 5 avg PnL $178.96 vs ours $-51.11. Study their patterns.",
+      "reason": "Arena top 5 avg PnL $178.17 vs ours $-51.11. Study their patterns.",
       "risk": "neutral"
     },
     {
