@@ -1,41 +1,29 @@
 {
-  "generatedAt": "2026-05-06T18:47:17.690811+00:00",
+  "generatedAt": "2026-05-06T20:01:08Z",
   "regime": "RISK_OFF",
-  "equity": 48.887581,
+  "equity": 48.89,
   "peakEquity": 100.0,
   "drawdownPct": 51.11,
-  "dayStartEquity": 48.887581,
-  "dailyPnlPct": 0.0,
+  "dailyPnl": 0,
+  "dailyCloses": 0,
+  "dailyWinRate": 0,
   "openPositions": 0,
-  "openOrders": 0,
-  "withdrawable": 48.887581,
-  "prices": {
-    "BTC": 81389.5,
-    "ETH": 2347.05,
-    "SOL": 89.0015,
-    "HYPE": 43.1595
-  },
+  "alerts": [
+    "CATASTROPHIC DRAWDOWN: 51.1%"
+  ],
+  "deadWeight": [],
   "guardrails": {
-    "catastrophic_dd": {
-      "breached": true,
-      "value": 51.11,
-      "limit": 20.0
-    },
-    "consecutive_stopouts": {
-      "breached": false,
-      "value": 0,
-      "limit": 4
-    },
-    "daily_loss": {
-      "breached": false,
-      "value": 0.0,
-      "limit": 10.0
-    }
-  },
-  "brainSyncOk": true,
-  "vpsOfflineDays": 43,
-  "consecutiveStopOuts": 0,
-  "actionsTaken": [],
-  "alerts": [],
-  "assessment": "RISK_OFF enforced \u2014 catastrophic DD 51.1% exceeds 20.0% threshold. No open positions. Brain/regime in sync. Capital preservation mode. VPS scanners offline for 43 days."
+    "dailyLossLimitPct": 10,
+    "catastrophicDrawdownPct": 20,
+    "maxConsecutiveStopOuts": 4,
+    "directionalCapPct": 70,
+    "minLeverage": 7,
+    "maxLeverage": 10,
+    "maxPositionsTotal": 3,
+    "perAssetCooldownMinutes": 120,
+    "bannedAssetPrefixes": [
+      "xyz:"
+    ],
+    "perTradeRiskPct": 1.0
+  }
 }
