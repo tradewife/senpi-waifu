@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-06T04:32:09Z",
+  "generatedAt": "2026-05-06T05:02:48Z",
   "regime": "RISK_OFF",
   "regimeReason": "Catastrophic DD 51.11% (limit 20.0%)",
   "equity": {
@@ -29,15 +29,17 @@
     }
   },
   "marketSnapshot": {
-    "BTC": "$81,320",
-    "ETH": "$2,369",
-    "SOL": "$86.93",
-    "HYPE": "$43.84"
+    "BTC": "$81,278.5",
+    "ETH": "$2,364.85",
+    "SOL": "$86.79",
+    "HYPE": "$43.96"
   },
   "actions": [],
   "warnings": [
     "VPS scanners offline since March 23 (komodo, condor, rhino, etc.)",
     "Catastrophic drawdown 51.11% \u2014 RISK_OFF remains active",
-    "Account at ~$48.89 of original $100 budget"
+    "Account at ~$48.89 of original $100 budget",
+    "SERR031 auth errors on strategy_list and leaderboard (mutations still work)",
+    "No open positions, no open orders \u2014 capital fully idle in RISK_OFF"
   ]
 }
