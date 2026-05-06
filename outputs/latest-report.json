@@ -1,45 +1,29 @@
 {
-  "generatedAt": "2026-05-06T05:02:48Z",
+  "generatedAt": "2026-05-06T05:16:14Z",
   "regime": "RISK_OFF",
-  "regimeReason": "Catastrophic DD 51.11% (limit 20.0%)",
-  "equity": {
-    "current": 48.89,
-    "peak": 100.0,
-    "drawdownPct": 51.11
-  },
-  "positions": {
-    "count": 0,
-    "open": []
-  },
+  "equity": 48.89,
+  "peakEquity": 100.0,
+  "drawdownPct": 51.11,
+  "dailyPnl": 0,
+  "dailyCloses": 0,
+  "dailyWinRate": 0,
+  "openPositions": 0,
+  "alerts": [
+    "CATASTROPHIC DRAWDOWN: 51.1%"
+  ],
+  "deadWeight": [],
   "guardrails": {
-    "catastrophicDD": {
-      "limit": 20.0,
-      "actual": 51.11,
-      "breached": true
-    },
-    "dailyLossLimit": {
-      "limit": 10.0,
-      "actual": 0.0,
-      "breached": false
-    },
-    "consecutiveStopOuts": {
-      "limit": 4,
-      "actual": 0,
-      "breached": false
-    }
-  },
-  "marketSnapshot": {
-    "BTC": "$81,278.5",
-    "ETH": "$2,364.85",
-    "SOL": "$86.79",
-    "HYPE": "$43.96"
-  },
-  "actions": [],
-  "warnings": [
-    "VPS scanners offline since March 23 (komodo, condor, rhino, etc.)",
-    "Catastrophic drawdown 51.11% \u2014 RISK_OFF remains active",
-    "Account at ~$48.89 of original $100 budget",
-    "SERR031 auth errors on strategy_list and leaderboard (mutations still work)",
-    "No open positions, no open orders \u2014 capital fully idle in RISK_OFF"
-  ]
+    "dailyLossLimitPct": 10,
+    "catastrophicDrawdownPct": 20,
+    "maxConsecutiveStopOuts": 4,
+    "directionalCapPct": 70,
+    "minLeverage": 7,
+    "maxLeverage": 10,
+    "maxPositionsTotal": 3,
+    "perAssetCooldownMinutes": 120,
+    "bannedAssetPrefixes": [
+      "xyz:"
+    ],
+    "perTradeRiskPct": 1.0
+  }
 }
