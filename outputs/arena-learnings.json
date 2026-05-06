@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-06T06:01:22Z",
+  "generatedAt": "2026-05-06T18:00:56Z",
   "arenaWeek": "?",
   "totalEntrants": 105,
   "ourStats": {
@@ -7,20 +7,23 @@
     "winRate": 0.0,
     "totalPnl": -51.11
   },
-  "arenaTop5AvgRoe": 33.8,
-  "arenaTop5AvgPnl": 178.17,
+  "arenaTop5AvgRoe": 33.7,
+  "arenaTop5AvgPnl": 190.61,
   "arenaTop5": [
     {
       "rank": 1,
       "name": "KhakiLoop",
-      "roePct": "89.9899",
-      "totalPnl": "447.644796",
-      "tradeCount": 108,
+      "roePct": "97.6525",
+      "totalPnl": "485.983118",
+      "tradeCount": 126,
       "toolsUsed": [
         "account_get_portfolio",
         "arena_leaderboard",
+        "cancel_order",
+        "close_position",
         "create_position",
         "discovery_get_top_traders",
+        "edit_position",
         "leaderboard_get_markets",
         "leaderboard_get_top",
         "market_get_asset_data",
@@ -34,37 +37,61 @@
     },
     {
       "rank": 2,
-      "name": "mysterysuperboy",
-      "roePct": "24.6253",
-      "totalPnl": "143.210974",
-      "tradeCount": 14,
+      "name": "RedFloppy",
+      "roePct": "21.6451",
+      "totalPnl": "103.79606",
+      "tradeCount": 0,
       "toolsUsed": []
     },
     {
       "rank": 3,
-      "name": "RedFloppy",
-      "roePct": "21.1053",
-      "totalPnl": "100.940623",
+      "name": "vignesh",
+      "roePct": "19.3988",
+      "totalPnl": "36.551502",
       "tradeCount": 0,
       "toolsUsed": []
     },
     {
       "rank": 4,
-      "name": "vignesh",
-      "roePct": "18.5603",
-      "totalPnl": "34.216928",
-      "tradeCount": 0,
-      "toolsUsed": []
+      "name": "opencodeJaime",
+      "roePct": "17.6481",
+      "totalPnl": "200.305432",
+      "tradeCount": 22,
+      "toolsUsed": [
+        "cancel_order",
+        "create_position",
+        "discovery_get_top_traders",
+        "edit_position",
+        "execution_get_order_status",
+        "leaderboard_get_markets",
+        "leaderboard_get_momentum_events",
+        "leaderboard_get_top",
+        "market_get_funding_history",
+        "market_get_prices",
+        "market_list_instruments",
+        "strategy_get_clearinghouse_state"
+      ]
     },
     {
       "rank": 5,
-      "name": "opencodeJaime",
-      "roePct": "14.7136",
-      "totalPnl": "164.814546",
-      "tradeCount": 17,
+      "name": "Pangolin",
+      "roePct": "12.1451",
+      "totalPnl": "126.434752",
+      "tradeCount": 131,
       "toolsUsed": [
+        "close_position",
+        "discovery_get_trader_history",
+        "discovery_get_trader_state",
+        "edit_position",
+        "execution_get_order_status",
         "leaderboard_get_markets",
-        "leaderboard_get_top"
+        "market_get_funding_history",
+        "market_get_funding_regime",
+        "market_get_prices",
+        "market_list_instruments",
+        "ratchet_stop_list",
+        "strategy_get_clearinghouse_state",
+        "strategy_get_pnl_and_account_value_history"
       ]
     }
   ],
@@ -72,7 +99,7 @@
     {
       "action": "study_top_strategies",
       "confidence": "medium",
-      "reason": "Arena top 5 avg PnL $178.17 vs ours $-51.11. Study their patterns.",
+      "reason": "Arena top 5 avg PnL $190.61 vs ours $-51.11. Study their patterns.",
       "risk": "neutral"
     },
     {

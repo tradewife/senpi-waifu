@@ -1,27 +1,72 @@
 {
-  "generatedAt": "2026-05-06T06:47:30Z",
-  "regime": "RISK_OFF",
-  "regimeReason": "Catastrophic DD 51.1% (limit 20.0%)",
-  "equity": 48.887581,
-  "peakEquity": 100.0,
-  "drawdownPct": 51.11,
-  "withdrawable": 48.887581,
-  "openPositions": 0,
-  "openOrders": 0,
+  "generatedAt": "2026-05-06T18:16:40Z",
+  "type": "JIDO_CHECK",
+  "regime": {
+    "mode": "RISK_OFF",
+    "updatedAt": "2026-05-06T18:00:54Z",
+    "updatedBy": "waifu-regime (arbiter-override)",
+    "reason": "Catastrophic DD 51.1% (limit 20.0%)"
+  },
+  "equity": {
+    "current": 48.887581,
+    "peak": 100.0,
+    "drawdownPct": 51.11,
+    "withdrawable": 48.887581,
+    "dayStart": 48.887581,
+    "dailyPnl": 0.0
+  },
+  "positions": {
+    "open": 0,
+    "details": [],
+    "nakedLosers": 0,
+    "emergencySlSet": 0
+  },
+  "orders": {
+    "open": 0,
+    "details": []
+  },
   "guardrails": {
-    "catastrophicDD": "BREACHED",
-    "consecutiveStopOuts": "OK",
-    "dailyLossLimit": "OK"
+    "catastrophicDrawdownPct": 20.0,
+    "currentDrawdownPct": 51.11,
+    "breached": true,
+    "breachType": "CATASTROPHIC_DRAWDOWN",
+    "consecutiveStopOuts": 0,
+    "maxConsecutiveStopOuts": 4,
+    "dailyLossPct": 0.0,
+    "dailyLossLimitPct": 10.0
   },
-  "positions": [],
-  "market": {
-    "BTC": 81471.5,
-    "ETH": 2368.35,
-    "SOL": 87.3595,
-    "HYPE": 44.1365
+  "brainSync": {
+    "brainRiskMode": "RISK_OFF",
+    "regimeRiskMode": "RISK_OFF",
+    "blockNewEntries": true,
+    "allowAutoEntry": false,
+    "maxSlotsCap": 0,
+    "inSync": true
   },
-  "actionsTaken": [],
-  "warnings": [
-    "VPS scanners offline since 2026-03-23 (Railway deployment likely down)"
-  ]
+  "marketSnapshot": {
+    "BTC": "81456.5",
+    "ETH": "2347.75",
+    "SOL": "88.7005",
+    "HYPE": "43.1045"
+  },
+  "vpsStatus": {
+    "scannersOnline": false,
+    "lastHeartbeat": "2026-03-23T23:57:45Z",
+    "offlineDays": 44,
+    "note": "All VPS scanner heartbeats stale since March 23. Only Hermes cron jobs operational."
+  },
+  "actionsTaken": [
+    "Verified 0 open positions — no naked losers",
+    "Confirmed RISK_OFF regime active and correct",
+    "Brain/regime sync verified",
+    "Updated arbiter-state.json with current equity"
+  ],
+  "strategy": {
+    "name": "wolf-primary",
+    "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
+    "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce",
+    "budget": 100,
+    "accountValue": 48.887581,
+    "pnlTotal": -51.11
+  }
 }
