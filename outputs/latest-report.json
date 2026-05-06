@@ -1,57 +1,29 @@
 {
-  "generatedAt": "2026-05-06T01:01:56.630277+00:00",
+  "generatedAt": "2026-05-06T02:01:09Z",
   "regime": "RISK_OFF",
-  "regimeReason": "Catastrophic DD 51.11% (limit 20.0%)",
-  "equity": {
-    "current": 48.887581,
-    "peak": 100.0,
-    "drawdownPct": 51.11,
-    "withdrawable": 48.887581
-  },
-  "positions": {
-    "open": 0,
-    "details": []
-  },
-  "orders": {
-    "open": 0
-  },
-  "guardrails": {
-    "catastrophicDrawdownPct": 20,
-    "currentDrawdownPct": 51.11,
-    "breached": true,
-    "breachType": "CATASTROPHIC_DRAWDOWN",
-    "consecutiveStopOuts": 0,
-    "maxConsecutiveStopOuts": 4,
-    "dailyLossPct": 0.0,
-    "dailyLossLimitPct": 10
-  },
-  "marketSnapshot": {
-    "BTC": 80949.5,
-    "ETH": 2361.45,
-    "SOL": 86.2695,
-    "HYPE": 43.6995
-  },
-  "brainSync": {
-    "riskRegimeMode": "RISK_OFF",
-    "brainRiskMode": "RISK_OFF",
-    "brainExecutionPolicyRiskMode": "RISK_OFF",
-    "blockNewEntries": true,
-    "allowAutoEntry": false,
-    "maxSlotsCap": 0,
-    "inSync": true
-  },
-  "actionsTaken": [],
-  "warnings": [
-    "VPS scanners offline since March 23 (44+ days) \u2014 only Hermes crons running",
-    "Catastrophic drawdown 51.11% persists \u2014 RISK_OFF enforced, no new entries allowed"
+  "equity": 48.89,
+  "peakEquity": 100.0,
+  "drawdownPct": 51.11,
+  "dailyPnl": 0,
+  "dailyCloses": 0,
+  "dailyWinRate": 0,
+  "openPositions": 0,
+  "alerts": [
+    "CATASTROPHIC DRAWDOWN: 51.1%"
   ],
-  "strategy": {
-    "name": "wolf-primary",
-    "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
-    "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce",
-    "budget": 100,
-    "currentValue": 48.887581,
-    "pnl": -51.11,
-    "pnlPct": -51.11
+  "deadWeight": [],
+  "guardrails": {
+    "dailyLossLimitPct": 10,
+    "catastrophicDrawdownPct": 20,
+    "maxConsecutiveStopOuts": 4,
+    "directionalCapPct": 70,
+    "minLeverage": 7,
+    "maxLeverage": 10,
+    "maxPositionsTotal": 3,
+    "perAssetCooldownMinutes": 120,
+    "bannedAssetPrefixes": [
+      "xyz:"
+    ],
+    "perTradeRiskPct": 1.0
   }
 }
