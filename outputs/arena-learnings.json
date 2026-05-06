@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-06T18:00:56Z",
+  "generatedAt": "2026-05-06T22:01:23Z",
   "arenaWeek": "?",
   "totalEntrants": 105,
   "ourStats": {
@@ -7,15 +7,15 @@
     "winRate": 0.0,
     "totalPnl": -51.11
   },
-  "arenaTop5AvgRoe": 33.7,
-  "arenaTop5AvgPnl": 190.61,
+  "arenaTop5AvgRoe": 34.04,
+  "arenaTop5AvgPnl": 191.7,
   "arenaTop5": [
     {
       "rank": 1,
       "name": "KhakiLoop",
-      "roePct": "97.6525",
-      "totalPnl": "485.983118",
-      "tradeCount": 126,
+      "roePct": "97.7415",
+      "totalPnl": "486.147062",
+      "tradeCount": 139,
       "toolsUsed": [
         "account_get_portfolio",
         "arena_leaderboard",
@@ -38,18 +38,20 @@
     {
       "rank": 2,
       "name": "RedFloppy",
-      "roePct": "21.6451",
-      "totalPnl": "103.79606",
+      "roePct": "22.2275",
+      "totalPnl": "107.096872",
       "tradeCount": 0,
       "toolsUsed": []
     },
     {
       "rank": 3,
       "name": "vignesh",
-      "roePct": "19.3988",
-      "totalPnl": "36.551502",
+      "roePct": "20.4461",
+      "totalPnl": "38.311549",
       "tradeCount": 0,
-      "toolsUsed": []
+      "toolsUsed": [
+        "market_get_cross_asset_flows"
+      ]
     },
     {
       "rank": 4,
@@ -75,11 +77,12 @@
     {
       "rank": 5,
       "name": "Pangolin",
-      "roePct": "12.1451",
-      "totalPnl": "126.434752",
+      "roePct": "12.1559",
+      "totalPnl": "126.654451",
       "tradeCount": 131,
       "toolsUsed": [
         "close_position",
+        "create_position",
         "discovery_get_trader_history",
         "discovery_get_trader_state",
         "edit_position",
@@ -89,6 +92,8 @@
         "market_get_funding_regime",
         "market_get_prices",
         "market_list_instruments",
+        "ratchet_stop_add",
+        "ratchet_stop_get",
         "ratchet_stop_list",
         "strategy_get_clearinghouse_state",
         "strategy_get_pnl_and_account_value_history"
@@ -99,7 +104,7 @@
     {
       "action": "study_top_strategies",
       "confidence": "medium",
-      "reason": "Arena top 5 avg PnL $190.61 vs ours $-51.11. Study their patterns.",
+      "reason": "Arena top 5 avg PnL $191.70 vs ours $-51.11. Study their patterns.",
       "risk": "neutral"
     },
     {
