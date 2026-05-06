@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-06T18:16:40Z",
+  "generatedAt": "2026-05-06T18:32:51Z",
   "type": "JIDO_CHECK",
   "regime": {
     "mode": "RISK_OFF",
@@ -44,19 +44,19 @@
     "inSync": true
   },
   "marketSnapshot": {
-    "BTC": "81456.5",
-    "ETH": "2347.75",
-    "SOL": "88.7005",
-    "HYPE": "43.1045"
+    "BTC": "81462.5",
+    "ETH": "2345.75",
+    "SOL": "88.8345",
+    "HYPE": "43.1415"
   },
   "vpsStatus": {
     "scannersOnline": false,
     "lastHeartbeat": "2026-03-23T23:57:45Z",
-    "offlineDays": 44,
+    "offlineDays": 45,
     "note": "All VPS scanner heartbeats stale since March 23. Only Hermes cron jobs operational."
   },
   "actionsTaken": [
-    "Verified 0 open positions — no naked losers",
+    "Verified 0 open positions \u2014 no naked losers",
     "Confirmed RISK_OFF regime active and correct",
     "Brain/regime sync verified",
     "Updated arbiter-state.json with current equity"
