@@ -1,20 +1,12 @@
 {
-  "generatedAt": "2026-05-05T23:02:41.718367+00:00",
-  "type": "JIDO_CHECK",
-  "regime": {
-    "mode": "RISK_OFF",
-    "reason": "Catastrophic DD 51.1% (limit 20.0%)",
-    "updatedBy": "waifu-regime (arbiter-override)",
-    "updatedAt": "2026-05-05T22:00:46Z"
-  },
-  "portfolio": {
-    "equity": 48.89,
-    "peakEquity": 100.0,
+  "generatedAt": "2026-05-06T01:01:56.630277+00:00",
+  "regime": "RISK_OFF",
+  "regimeReason": "Catastrophic DD 51.11% (limit 20.0%)",
+  "equity": {
+    "current": 48.887581,
+    "peak": 100.0,
     "drawdownPct": 51.11,
-    "withdrawable": 48.89,
-    "dailyPnl": 0.0,
-    "dailyPnlPct": 0.0,
-    "dayStartEquity": 48.89
+    "withdrawable": 48.887581
   },
   "positions": {
     "open": 0,
@@ -24,38 +16,42 @@
     "open": 0
   },
   "guardrails": {
-    "catastrophicDD": {
-      "limit": 20.0,
-      "current": 51.11,
-      "breached": true
-    },
-    "dailyLoss": {
-      "limit": 10.0,
-      "current": 0.0,
-      "breached": false
-    },
-    "consecutiveStopOuts": {
-      "limit": 4,
-      "current": 0,
-      "breached": false
-    }
+    "catastrophicDrawdownPct": 20,
+    "currentDrawdownPct": 51.11,
+    "breached": true,
+    "breachType": "CATASTROPHIC_DRAWDOWN",
+    "consecutiveStopOuts": 0,
+    "maxConsecutiveStopOuts": 4,
+    "dailyLossPct": 0.0,
+    "dailyLossLimitPct": 10
+  },
+  "marketSnapshot": {
+    "BTC": 80949.5,
+    "ETH": 2361.45,
+    "SOL": 86.2695,
+    "HYPE": 43.6995
   },
   "brainSync": {
-    "riskMode": "MATCHED (RISK_OFF)",
-    "blockNewEntries": "MATCHED (true)",
-    "allowAutoEntry": "MATCHED (false)",
-    "maxSlotsCap": "MATCHED (0)"
+    "riskRegimeMode": "RISK_OFF",
+    "brainRiskMode": "RISK_OFF",
+    "brainExecutionPolicyRiskMode": "RISK_OFF",
+    "blockNewEntries": true,
+    "allowAutoEntry": false,
+    "maxSlotsCap": 0,
+    "inSync": true
   },
-  "marketPrices": {
-    "BTC": 81040.5,
-    "ETH": 2363.85,
-    "SOL": 86.4875,
-    "HYPE": 44.1825
-  },
-  "vpsStatus": {
-    "scanners": "OFFLINE since March 23",
-    "heartbeatStale": true
-  },
-  "actions": [],
-  "assessment": "RISK_OFF correctly enforced. No open positions, no naked losers. Brain and regime fully in sync. Catastrophic DD at 51.11% remains well above 20% threshold. Account capital at $48.89 of original $100. VPS deployment offline since March 23 \u2014 only Hermes cron jobs active. No action required."
+  "actionsTaken": [],
+  "warnings": [
+    "VPS scanners offline since March 23 (44+ days) \u2014 only Hermes crons running",
+    "Catastrophic drawdown 51.11% persists \u2014 RISK_OFF enforced, no new entries allowed"
+  ],
+  "strategy": {
+    "name": "wolf-primary",
+    "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
+    "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce",
+    "budget": 100,
+    "currentValue": 48.887581,
+    "pnl": -51.11,
+    "pnlPct": -51.11
+  }
 }
