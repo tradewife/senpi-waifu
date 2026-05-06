@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-06T05:18:15.427455+00:00",
+  "generatedAt": "2026-05-06T06:01:36Z",
   "regime": "RISK_OFF",
   "equity": 48.89,
   "peakEquity": 100.0,
@@ -9,7 +9,7 @@
   "dailyWinRate": 0,
   "openPositions": 0,
   "alerts": [
-    "CATASTROPHIC DRAWWOWN: 51.1%"
+    "CATASTROPHIC DRAWDOWN: 51.1%"
   ],
   "deadWeight": [],
   "guardrails": {
