@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-05-06T02:17:38Z",
+  "generatedAt": "2026-05-06T04:32:09Z",
   "regime": "RISK_OFF",
-  "regimeReason": "Catastrophic DD 51.1% (limit 20.0%)",
+  "regimeReason": "Catastrophic DD 51.11% (limit 20.0%)",
   "equity": {
     "current": 48.89,
     "peak": 100.0,
@@ -12,20 +12,32 @@
     "open": []
   },
   "guardrails": {
-    "catastrophicDD": {"limit": 20.0, "actual": 51.11, "breached": true},
-    "dailyLossLimit": {"limit": 10.0, "actual": 0.0, "breached": false},
-    "consecutiveStopOuts": {"limit": 4, "actual": 0, "breached": false}
+    "catastrophicDD": {
+      "limit": 20.0,
+      "actual": 51.11,
+      "breached": true
+    },
+    "dailyLossLimit": {
+      "limit": 10.0,
+      "actual": 0.0,
+      "breached": false
+    },
+    "consecutiveStopOuts": {
+      "limit": 4,
+      "actual": 0,
+      "breached": false
+    }
   },
   "marketSnapshot": {
-    "BTC": "$81,230",
-    "ETH": "$2,368",
-    "SOL": "$86.69",
-    "HYPE": "$43.99"
+    "BTC": "$81,320",
+    "ETH": "$2,369",
+    "SOL": "$86.93",
+    "HYPE": "$43.84"
   },
   "actions": [],
   "warnings": [
     "VPS scanners offline since March 23 (komodo, condor, rhino, etc.)",
-    "Catastrophic drawdown 51.11% — RISK_OFF remains active",
+    "Catastrophic drawdown 51.11% \u2014 RISK_OFF remains active",
     "Account at ~$48.89 of original $100 budget"
   ]
 }
