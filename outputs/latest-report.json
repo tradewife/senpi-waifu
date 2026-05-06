@@ -1,29 +1,31 @@
 {
-  "generatedAt": "2026-05-06T02:01:09Z",
+  "generatedAt": "2026-05-06T02:17:38Z",
   "regime": "RISK_OFF",
-  "equity": 48.89,
-  "peakEquity": 100.0,
-  "drawdownPct": 51.11,
-  "dailyPnl": 0,
-  "dailyCloses": 0,
-  "dailyWinRate": 0,
-  "openPositions": 0,
-  "alerts": [
-    "CATASTROPHIC DRAWDOWN: 51.1%"
-  ],
-  "deadWeight": [],
+  "regimeReason": "Catastrophic DD 51.1% (limit 20.0%)",
+  "equity": {
+    "current": 48.89,
+    "peak": 100.0,
+    "drawdownPct": 51.11
+  },
+  "positions": {
+    "count": 0,
+    "open": []
+  },
   "guardrails": {
-    "dailyLossLimitPct": 10,
-    "catastrophicDrawdownPct": 20,
-    "maxConsecutiveStopOuts": 4,
-    "directionalCapPct": 70,
-    "minLeverage": 7,
-    "maxLeverage": 10,
-    "maxPositionsTotal": 3,
-    "perAssetCooldownMinutes": 120,
-    "bannedAssetPrefixes": [
-      "xyz:"
-    ],
-    "perTradeRiskPct": 1.0
-  }
+    "catastrophicDD": {"limit": 20.0, "actual": 51.11, "breached": true},
+    "dailyLossLimit": {"limit": 10.0, "actual": 0.0, "breached": false},
+    "consecutiveStopOuts": {"limit": 4, "actual": 0, "breached": false}
+  },
+  "marketSnapshot": {
+    "BTC": "$81,230",
+    "ETH": "$2,368",
+    "SOL": "$86.69",
+    "HYPE": "$43.99"
+  },
+  "actions": [],
+  "warnings": [
+    "VPS scanners offline since March 23 (komodo, condor, rhino, etc.)",
+    "Catastrophic drawdown 51.11% — RISK_OFF remains active",
+    "Account at ~$48.89 of original $100 budget"
+  ]
 }
