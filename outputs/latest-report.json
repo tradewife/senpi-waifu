@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-07T00:31:43Z",
+  "generatedAt": "2026-05-07T01:17:27Z",
   "regime": "RISK_OFF",
   "equity": 48.887581,
   "peakEquity": 100.0,
@@ -19,14 +19,14 @@
     "consecutiveStopOutsBreached": false
   },
   "marketPrices": {
-    "BTC": 81201.5,
-    "ETH": 2344.55,
-    "SOL": 88.6265,
-    "HYPE": 42.9975
+    "BTC": 81125.5,
+    "ETH": 2328.35,
+    "SOL": 88.3405,
+    "HYPE": 42.9515
   },
   "actions": [],
   "warnings": [
     "VPS scanners offline since 2026-03-23 (45 days)",
-    "Catastrophic drawdown 51.1% \u2014 RISK_OFF enforced"
+    "Catastrophic drawdown 51.11% \u2014 RISK_OFF enforced"
   ]
 }
