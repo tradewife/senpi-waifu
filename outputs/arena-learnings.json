@@ -1,201 +1,96 @@
 {
-  "generatedAt": "2026-05-07T08:00:00Z",
+  "generatedAt": "2026-05-07T02:22:53Z",
+  "arenaWeek": "?",
+  "totalEntrants": 105,
   "ourStats": {
-    "trade_wife": {
-      "senpiUserId": "M179642",
-      "name": "trade_wife",
-      "rank": 28,
-      "roe": 0.0,
-      "totalPnl": 0.0,
-      "currentBalance": 48.89,
+    "closes": 1,
+    "winRate": 0.0,
+    "totalPnl": -51.11
+  },
+  "arenaTop5AvgRoe": 6.54,
+  "arenaTop5AvgPnl": 20.76,
+  "arenaTop5": [
+    {
+      "rank": 1,
+      "name": "Patelbot",
+      "roePct": "14.4938",
+      "totalPnl": "12.817764",
       "tradeCount": 0,
-      "notionalVolume": 0.0,
-      "toolsUsed": 4,
-      "skillsUsed": [],
-      "qualified": false
+      "toolsUsed": []
     },
-    "prashantfb65": {
-      "senpiUserId": "M19",
-      "name": "prashantfb65",
-      "rank": 39,
-      "roe": -6.915,
-      "totalPnl": -11.20,
-      "currentBalance": 150.91,
+    {
+      "rank": 2,
+      "name": "OlivineCrackers",
+      "roePct": "14.4758",
+      "totalPnl": "3.182552",
+      "tradeCount": 1,
+      "toolsUsed": [
+        "account_get_portfolio",
+        "create_position",
+        "edit_position",
+        "strategy_create_custom_strategy",
+        "strategy_get_clearinghouse_state",
+        "strategy_list",
+        "strategy_withdraw_funds",
+        "user_get_me"
+      ]
+    },
+    {
+      "rank": 3,
+      "name": "0xschelling",
+      "roePct": "1.6302",
+      "totalPnl": "74.375029",
       "tradeCount": 0,
-      "notionalVolume": 0.0,
-      "toolsUsed": 0,
-      "skillsUsed": [],
-      "qualified": false
+      "toolsUsed": [
+        "leaderboard_get_markets",
+        "market_get_asset_data",
+        "market_get_funding_history",
+        "market_get_funding_regime"
+      ]
+    },
+    {
+      "rank": 4,
+      "name": "Anonymous",
+      "roePct": "1.1622",
+      "totalPnl": "5.862422",
+      "tradeCount": 0,
+      "toolsUsed": []
+    },
+    {
+      "rank": 5,
+      "name": "Bison12",
+      "roePct": "0.9241",
+      "totalPnl": "7.56803",
+      "tradeCount": 5,
+      "toolsUsed": [
+        "close_position",
+        "create_position",
+        "edit_position",
+        "execution_get_order_status",
+        "leaderboard_get_markets",
+        "market_get_asset_data",
+        "market_get_prices",
+        "market_list_instruments",
+        "ratchet_stop_delete",
+        "ratchet_stop_events",
+        "ratchet_stop_list",
+        "strategy_get_clearinghouse_state"
+      ]
     }
-  },
-  "arenaOverview": {
-    "weekNumber": 6,
-    "totalParticipants": 105,
-    "prizePool": 6101.97,
-    "weekStart": "2026-04-30T00:00:00.000Z",
-    "weekEnd": "2026-05-07T00:00:00.000Z",
-    "daysRemaining": 0,
-    "profitableCount": 27,
-    "breakevenCount": 48,
-    "losingCount": 30,
-    "note": "Week 6 ENDS TODAY - final standings being set"
-  },
-  "arenaTop5AvgROE": 34.04,
-  "arenaTop5AvgTrades": 60.2,
-  "topPerformerProfile": {
-    "name": "KhakiLoop",
-    "userId": "M194754",
-    "xHandle": "0xschelling",
-    "rank": 1,
-    "roe": 97.74,
-    "pnl": 486.15,
-    "trades": 139,
-    "volume": 54250.39,
-    "tools": 16,
-    "usesRatchet": false,
-    "qualified": true,
-    "notes": "Dominant #1 with nearly 98% ROE. Active trader with 139 trades and broad toolset (16 tools). Uses full market analysis suite: cross-asset flows, funding regime, funding history, momentum markets. Not using published skills - pure manual/agent-driven with comprehensive market intel."
-  },
-  "ratchetStopAnalysis": {
-    "usersWithRatchet": 8,
-    "pctUsers": 0.076,
-    "top5WithRatchet": 0,
-    "note": "0 of top 5 use ratchet stops. Ratchet is used by mid-tier betashop agents (Python #9, Cheetah #13, Kestrel #17, Kodiak #25) but NOT by the top performers."
-  },
-  "prizeBreakdown": {
-    "rank1": 2440.79,
-    "rank2": 1525.49,
-    "rank3": 915.29,
-    "rank4": 732.24,
-    "rank5": 488.16,
-    "totalPool": 6101.97,
-    "gapToRank5": "N/A - we are rank 28 (tie), need 12.16% ROE to match rank 5"
-  },
-  "topPerformerProfiles": [
-    {"rank": 1, "name": "KhakiLoop", "roe": 97.74, "trades": 139, "tools": 16, "pattern": "ultra-active with full market intel suite, no skills"},
-    {"rank": 2, "name": "RedFloppy", "roe": 22.23, "trades": 0, "tools": 0, "pattern": "PASSIVE - zero trades, zero tools. Pure position holding gains"},
-    {"rank": 3, "name": "vignesh", "roe": 20.45, "trades": 0, "tools": 1, "pattern": "PASSIVE - zero trades, only cross-asset flows tool. Position-based gains"},
-    {"rank": 4, "name": "opencodeJaime", "roe": 17.65, "trades": 22, "tools": 12, "pattern": "moderate frequency with momentum/livefeed tools. Qualified"},
-    {"rank": 5, "name": "Pangolin (betashop)", "roe": 12.16, "trades": 131, "tools": 16, "pattern": "high-frequency betashop agent with ratchet stops, NOT qualified ($0 volume)"}
   ],
-  "skillUsage": {
-    "roach-strategy": [
-      {"user": "RoachB", "rank": 8, "roe": 11.33},
-      {"user": "Roach", "rank": 14, "roe": 6.42}
-    ],
-    "wolf-strategy": [
-      {"user": "IgnasSenpiBeast2", "rank": 28, "roe": 0.0, "note": "zero balance"}
-    ],
-    "vulture-strategy": [{"user": "Vulture", "rank": 19, "roe": 1.37}],
-    "bison-strategy": [{"user": "Bison12", "rank": 20, "roe": 1.20}],
-    "fox-strategy": [{"user": "SenpiBeast", "rank": 21, "roe": 1.02}],
-    "viper-strategy": [{"user": "SenpiBeast", "rank": 21, "roe": 1.02}],
-    "spider-strategy": [{"user": "Spider", "rank": 28, "roe": 0.0}],
-    "grizzly-strategy": [{"user": "Grizzly2", "rank": 28, "roe": 0.0}],
-    "owl-strategy": [{"user": "Owl6", "rank": 34, "roe": -6.20}],
-    "condor-strategy": [
-      {"user": "CryptoKR", "rank": 28, "roe": 0.0},
-      {"user": "Condor2", "rank": 31, "roe": -0.84}
-    ],
-    "jaguar-strategy": [{"user": "Jaguar2", "rank": 44, "roe": -15.29}],
-    "cobra-strategy": [{"user": "cobra1", "rank": 28, "roe": 0.0}]
-  },
-  "strategyPatterns": {
-    "highFrequency": {
-      "description": "100+ trades, active scalping/daytrading",
-      "agents": ["KhakiLoop", "Aaron", "Pangolin", "Scorpion2", "Apex"],
-      "count": 5,
-      "avgROE": 17.37,
-      "best": "KhakiLoop (97.74%, 139 trades)",
-      "worst": "Apex (-28.30%, 95 trades)",
-      "insight": "High frequency is polarizing - KhakiLoop dominates, but others bleed. Frequency alone doesn't win."
-    },
-    "passiveZeroTrade": {
-      "description": "Zero trades, position carry or pre-existing gains",
-      "agents": ["RedFloppy", "vignesh", "YellowFolder", "Spider", "Wolverine"],
-      "count": 5,
-      "avgROE": 8.61,
-      "best": "RedFloppy (22.23%, 0 trades)",
-      "insight": "Zero-trade agents can win purely from position unrealized gains. RedFloppy #2 and vignesh #3 prove this. However, none are qualified (need $50K volume)."
-    },
-    "betashopSyndicate": {
-      "description": "betashop xHandle agents - all same team",
-      "agents": ["Pangolin", "Python", "Grizzly3", "Cheetah", "Roach", "RoachB", "Kestrel", "Vulture", "Bison12", "Kodiak", "Spider", "Wolverine", "Dog", "Raptor", "Mantis3", "Orca2", "Orca3", "Condor2", "Lemon", "Sentinel", "BaldEagle2", "Jaguar2", "Scorpion2", "cobra1", "DireWolf", "Jackal2", "GrizzlyHorribilis", "Phoenix22", "Mantis4"],
-      "count": 29,
-      "avgROE": -0.35,
-      "best": "Pangolin #5 (12.16%)",
-      "insight": "29 of 105 agents are betashop. Most are mid-to-bottom tier. Best is Pangolin at #5. Syndicate approach dilutes - individual quality > quantity."
-    },
-    "leanExecution": {
-      "description": "<5 tools, focused approach",
-      "agents": ["RedFloppy", "vignesh", "SenpiBeast", "Spider", "Wolverine"],
-      "count": 5,
-      "avgROE": 8.61,
-      "best": "RedFloppy (22.23%)",
-      "insight": "Lean toolset correlates with passive/position strategies. Less complexity = less overtrading."
-    }
-  },
   "recommendations": [
     {
-      "action": "CRITICAL: zero_activity_diagnosis",
-      "confidence": "absolute",
-      "reason": "trade_wife (M179642) has 0 ROE, 0 trades, 0 volume this week. Balance only $48.89. RISK_OFF mode since May 5 due to 51.1% drawdown. Week 6 ends TODAY. We are invisible in the competition.",
-      "risk": "critical"
-    },
-    {
-      "action": "CRITICAL: risk_off_lockout",
-      "confidence": "absolute",
-      "reason": "autonomous-brain.json shows RISK_OFF with maxSlotsCap=0, blockNewEntries=true. All crons are respecting this and not placing trades. The 51.1% drawdown threshold was breached. Need to either (a) top-up to dilute DD% or (b) override RISK_OFF for week 7.",
-      "risk": "critical"
-    },
-    {
-      "action": "study_khakiloop_pattern",
-      "confidence": "high",
-      "reason": "KhakiLoop (#1, 97.74% ROE) uses 16 tools including cross-asset flows, funding regime, funding history, momentum markets. Active 139-trade approach with comprehensive market intel. Pattern: deep analysis + high conviction + frequent execution = dominance.",
-      "risk": "neutral"
-    },
-    {
-      "action": "study_passive_winners",
-      "confidence": "high",
-      "reason": "RedFloppy (#2, 22.23%) and vignesh (#3, 20.45%) have ZERO trades. Pure unrealized position gains. But neither qualified ($0 volume). For arena, need at least $50K weekly volume to qualify for prizes. Passive-only is insufficient.",
-      "risk": "neutral"
-    },
-    {
-      "action": "DECREASE_WEIGHT: high_frequency_without_edge",
+      "action": "study_top_strategies",
       "confidence": "medium",
-      "reason": "Among high-frequency agents (100+ trades), ROE ranges from +97.74% to -28.30%. Without KhakiLoop's edge, high frequency is destructive. Our 0-trade status is worse, but blind frequency increase would be suicidal.",
-      "risk": "rule"
-    },
-    {
-      "action": "ratchet_stop_not_differentiator",
-      "confidence": "medium",
-      "reason": "Zero of top 5 use ratchet stops. It's a mid-tier tool used by betashop agents ranks 8-25. Not correlated with top performance.",
+      "reason": "Arena top 5 avg PnL $20.76 vs ours $-51.11. Study their patterns.",
       "risk": "neutral"
     },
     {
-      "action": "plan_week7_reset",
-      "confidence": "high",
-      "reason": "Week 6 ends today (May 7). Week 7 starts immediately with $5514.74 prize pool. We need to: (1) resolve RISK_OFF lock, (2) ensure $100+ balance, (3) achieve $50K+ volume for qualification, (4) generate positive ROE. Current $48.89 balance is too low for meaningful arena participation.",
-      "risk": "high"
-    },
-    {
-      "action": "MAINTAIN_WEIGHT: max_leverage_10x",
+      "action": "reminder_max_leverage",
       "confidence": "absolute",
-      "reason": "Max leverage is 10x. Never increase. Proven across 22+ agents. Top performer KhakiLoop succeeds with 16 tools not with leverage abuse.",
+      "reason": "Max leverage is 10x. Never increase. Proven across 22 agents.",
       "risk": "rule"
     }
   ],
-  "appliedChanges": [],
-  "week6FinalVerdict": {
-    "ourBestEntry": "Neither account is competitive. trade_wife tied at rank 28 with 0 ROE. prashantfb65 at rank 39 with -6.915% ROE.",
-    "winner": "KhakiLoop (M194754) with 97.74% ROE",
-    "prizeEligible": "4 agents qualified: KhakiLoop, opencodeJaime, Aaron, rpine.eth. RedFloppy and vignesh NOT qualified despite high ROE.",
-    "lessonsForWeek7": [
-      "Must achieve $50K volume to qualify for prizes",
-      "RISK_OFF needs resolution before week starts",
-      "Comprehensive market intel (cross-asset flows, funding, momentum) is the edge differentiator",
-      "Zero-trade passive strategies can't qualify for prizes",
-      "betashop syndicate dominates count (29 agents) but only Pangolin reached top 5"
-    ]
-  }
+  "appliedChanges": []
 }
