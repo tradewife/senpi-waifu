@@ -1,29 +1,45 @@
 {
-  "generatedAt": "2026-05-07T02:22:57Z",
+  "generatedAt": "2026-05-07T03:16:37Z",
   "regime": "RISK_OFF",
-  "equity": 48.89,
-  "peakEquity": 100.0,
-  "drawdownPct": 51.11,
-  "dailyPnl": 0,
-  "dailyCloses": 0,
-  "dailyWinRate": 0,
-  "openPositions": 0,
-  "alerts": [
-    "CATASTROPHIC DRAWDOWN: 51.1%"
-  ],
-  "deadWeight": [],
+  "regimeReason": "Catastrophic DD 51.1% (limit 20.0%)",
+  "strategy": "wolf-primary",
+  "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
+  "equity": {
+    "current": 48.887581,
+    "peak": 100.0,
+    "drawdownPct": 51.11,
+    "withdrawable": 48.887581
+  },
+  "positions": {
+    "main": [],
+    "xyz": [],
+    "totalOpen": 0
+  },
+  "openOrders": 0,
   "guardrails": {
-    "dailyLossLimitPct": 10,
     "catastrophicDrawdownPct": 20,
-    "maxConsecutiveStopOuts": 4,
-    "directionalCapPct": 70,
-    "minLeverage": 7,
-    "maxLeverage": 10,
-    "maxPositionsTotal": 3,
-    "perAssetCooldownMinutes": 120,
-    "bannedAssetPrefixes": [
-      "xyz:"
-    ],
-    "perTradeRiskPct": 1.0
-  }
+    "drawdownBreached": true,
+    "dailyLossLimitPct": 10,
+    "dailyLossBreached": false,
+    "consecutiveStopOuts": 0,
+    "maxConsecutiveStopOuts": 4
+  },
+  "brainSync": {
+    "riskModeMatch": true,
+    "blockNewEntriesMatch": true,
+    "allowAutoEntryMatch": true,
+    "maxSlotsCapMatch": true
+  },
+  "marketPrices": {
+    "BTC": 81026.5,
+    "ETH": 2320.65,
+    "SOL": 88.0115,
+    "HYPE": 42.4895
+  },
+  "actionsTaken": [],
+  "warnings": [
+    "VPS scanners offline since March 23 (45 days) — Railway deployment likely down",
+    "Deep drawdown 51.11% — portfolio at ~49% of original $100 budget",
+    "RISK_OFF correctly enforced — no new entries until manual reset"
+  ]
 }
