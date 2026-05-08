@@ -15,6 +15,12 @@
       "type": "JIDO_HEARTBEAT",
       "timestamp": "2026-05-08T21:46:38.514477+00:00",
       "message": "JIDO portfolio scan complete. No open positions. RISK_OFF active. DD=51.11%. Brain synced."
+    },
+    {
+      "type": "JIDO_HEARTBEAT",
+      "timestamp": "2026-05-08T22:17:43Z",
+      "message": "JIDO portfolio scan complete. No open positions. RISK_OFF active. DD=51.11%. Brain synced."
     }
-  ]
+  ],
+  "lastChecked": "2026-05-08T22:17:43Z"
 }

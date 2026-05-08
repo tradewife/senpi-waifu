@@ -1,39 +1,22 @@
 {
-  "timestamp": "2026-05-08T21:46:38.739068+00:00",
+  "timestamp": "2026-05-08T22:17:43Z",
   "regime": "RISK_OFF",
-  "regimeSource": "hermes-regime + JIDO enforcement",
-  "equity": 48.887581,
-  "withdrawable": 48.887581,
+  "equity": 48.89,
   "peakEquity": 100.0,
   "drawdownPct": 51.11,
-  "dailyPnl": 0.0,
-  "positions": [],
+  "withdrawable": 48.89,
+  "openPositions": 0,
   "openOrders": 0,
+  "positions": [],
   "guardrails": {
-    "catastrophicDrawdownPct": 20.0,
     "drawdownBreached": true,
-    "consecutiveStopOuts": 0,
-    "maxConsecutiveStopOuts": 4,
-    "dailyLossPct": 0.0,
-    "dailyLossLimitPct": 10.0
+    "catastrophicThreshold": 20.0,
+    "consecutiveStopOuts": 0
   },
-  "marketSnapshot": {
-    "BTC": 80178.5,
-    "ETH": 2312.15,
-    "SOL": 92.34,
-    "HYPE": 43.3
-  },
-  "actionsTaken": [
-    "No actions needed \u2014 0 open positions, RISK_OFF correctly enforced"
+  "actions": [
+    "No positions to manage. RISK_OFF maintained. Brain synced."
   ],
   "warnings": [
-    "VPS scanners offline since 2026-03-23 (47 days). Railway deployment likely down."
-  ],
-  "brainSync": {
-    "riskMode": "RISK_OFF",
-    "blockNewEntries": true,
-    "allowAutoEntry": false,
-    "maxSlotsCap": 0,
-    "drawdownPctFromPeak": 51.11
-  }
+    "strategy_list SERR031 auth issue (clearinghouse state used as fallback)"
+  ]
 }
