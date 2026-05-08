@@ -1,31 +1,41 @@
 {
-  "timestamp": "2026-05-08T20:31:56.955888Z",
-  "type": "jido-portfolio-review",
+  "generatedAt": "2026-05-08T21:17:51.987547+00:00",
   "regime": "RISK_OFF",
-  "accountValue": 48.887581,
+  "regimeReason": "Catastrophic DD 51.11% exceeds 20% threshold",
+  "equity": 48.887581,
   "peakEquity": 100.0,
   "drawdownPct": 51.11,
   "dailyPnl": 0.0,
-  "weeklyPnl": 0.0,
-  "allTimePnl": -50.082419,
-  "withdrawable": 48.887581,
   "openPositions": 0,
   "openOrders": 0,
+  "withdrawable": 48.887581,
   "guardrails": {
-    "catastrophicDrawdownPct": 20.0,
-    "drawdownBreached": true,
-    "consecutiveStopOuts": 0,
-    "dailyLossLimitBreached": false
+    "catastrophicDD": {
+      "threshold": 20,
+      "current": 51.11,
+      "breached": true
+    },
+    "dailyLoss": {
+      "threshold": 10,
+      "current": 0.0,
+      "breached": false
+    },
+    "consecutiveStops": {
+      "threshold": 4,
+      "current": 0,
+      "breached": false
+    }
   },
-  "vpsScanners": "OFFLINE (last heartbeat 2026-03-23)",
-  "brainSync": "OK",
-  "actionsTaken": [
-    "Verified RISK_OFF regime",
-    "Verified brain sync",
-    "No positions to protect"
-  ],
-  "alerts": [
-    "VPS scanners offline since 2026-03-23 (>45 days)",
-    "Drawdown 51.1% \u2014 RISK_OFF correctly active"
+  "positions": [],
+  "marketPrices": {
+    "BTC": 80150.5,
+    "ETH": 2306.25,
+    "SOL": 91.99,
+    "HYPE": 43.16
+  },
+  "brainSynced": true,
+  "vpsScannersOffline": true,
+  "actions": [
+    "None \u2014 flat position, RISK_OFF holding"
   ]
 }
