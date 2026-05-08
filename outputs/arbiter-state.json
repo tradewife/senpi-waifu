@@ -3,7 +3,7 @@
   "lastEquity": 48.887581,
   "dayStartEquity": 48.887581,
   "consecutiveStopOuts": 0,
-  "lastUpdated": "2026-05-08T21:46:38.514458+00:00",
+  "lastUpdated": "2026-05-08T23:47:30Z",
   "alerts": [
     {
       "type": "JIDO_CHECK",
@@ -20,7 +20,12 @@
       "type": "JIDO_HEARTBEAT",
       "timestamp": "2026-05-08T22:17:43Z",
       "message": "JIDO portfolio scan complete. No open positions. RISK_OFF active. DD=51.11%. Brain synced."
+    },
+    {
+      "type": "JIDO_HEARTBEAT",
+      "timestamp": "2026-05-08T23:47:30Z",
+      "message": "JIDO portfolio scan complete. No open positions. RISK_OFF active. DD=51.11%. Brain synced."
     }
   ],
-  "lastChecked": "2026-05-08T22:17:43Z"
+  "lastChecked": "2026-05-08T23:47:30Z"
 }
