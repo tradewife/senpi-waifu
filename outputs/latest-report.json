@@ -1,42 +1,39 @@
 {
-  "timestamp": "2026-05-08T21:32:31.292947+00:00",
-  "type": "JIDO_PORTFOLIO_REVIEW",
+  "timestamp": "2026-05-08T21:46:38.739068+00:00",
   "regime": "RISK_OFF",
-  "equity": {
-    "current": 48.887581,
-    "peak": 100.0,
-    "dayStart": 48.887581,
-    "withdrawable": 48.887581
-  },
-  "drawdown": {
-    "pctFromPeak": 51.11,
-    "catastrophicThreshold": 20.0,
-    "breached": true
-  },
-  "positions": {
-    "main": [],
-    "xyz": [],
-    "totalOpen": 0
-  },
+  "regimeSource": "hermes-regime + JIDO enforcement",
+  "equity": 48.887581,
+  "withdrawable": 48.887581,
+  "peakEquity": 100.0,
+  "drawdownPct": 51.11,
+  "dailyPnl": 0.0,
+  "positions": [],
   "openOrders": 0,
   "guardrails": {
+    "catastrophicDrawdownPct": 20.0,
     "drawdownBreached": true,
     "consecutiveStopOuts": 0,
+    "maxConsecutiveStopOuts": 4,
     "dailyLossPct": 0.0,
-    "allClear": false
+    "dailyLossLimitPct": 10.0
   },
+  "marketSnapshot": {
+    "BTC": 80178.5,
+    "ETH": 2312.15,
+    "SOL": 92.34,
+    "HYPE": 43.3
+  },
+  "actionsTaken": [
+    "No actions needed \u2014 0 open positions, RISK_OFF correctly enforced"
+  ],
+  "warnings": [
+    "VPS scanners offline since 2026-03-23 (47 days). Railway deployment likely down."
+  ],
   "brainSync": {
     "riskMode": "RISK_OFF",
     "blockNewEntries": true,
     "allowAutoEntry": false,
     "maxSlotsCap": 0,
-    "drawdownPctFromPeak": 51.11,
-    "synced": true
-  },
-  "actionsTaken": [
-    "Verified no open positions",
-    "Confirmed RISK_OFF regime active",
-    "Verified brain/regime sync"
-  ],
-  "warnings": []
+    "drawdownPctFromPeak": 51.11
+  }
 }
