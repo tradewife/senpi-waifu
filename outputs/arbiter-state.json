@@ -15,11 +15,17 @@
       "type": "JIDO_HEARTBEAT",
       "timestamp": "2026-05-08T21:17:51.987547+00:00",
       "message": "JIDO portfolio scan complete. No open positions. RISK_OFF active. DD=51.11%. Brain synced."
+    },
+    {
+      "timestamp": "2026-05-08T21:32:31.292947+00:00",
+      "type": "JIDO_CHECK",
+      "message": "No open positions. RISK_OFF maintained. DD 51.11% from peak $100. Withdrawable: $48.89.",
+      "action": "NONE_REQUIRED"
     }
   ],
   "lastCheck": "2026-05-08T21:17:51.987547+00:00",
   "lastCheckAt": "2026-05-08T21:17:51Z",
   "dayStartDate": "2026-05-08",
   "lastChecked": "2026-05-08T21:17:51.987547+00:00",
-  "lastJidoRun": "2026-05-08T21:17:51.987547+00:00"
+  "lastJidoRun": "2026-05-08T21:32:31.292947+00:00"
 }

@@ -1,41 +1,42 @@
 {
-  "generatedAt": "2026-05-08T21:17:51.987547+00:00",
+  "timestamp": "2026-05-08T21:32:31.292947+00:00",
+  "type": "JIDO_PORTFOLIO_REVIEW",
   "regime": "RISK_OFF",
-  "regimeReason": "Catastrophic DD 51.11% exceeds 20% threshold",
-  "equity": 48.887581,
-  "peakEquity": 100.0,
-  "drawdownPct": 51.11,
-  "dailyPnl": 0.0,
-  "openPositions": 0,
+  "equity": {
+    "current": 48.887581,
+    "peak": 100.0,
+    "dayStart": 48.887581,
+    "withdrawable": 48.887581
+  },
+  "drawdown": {
+    "pctFromPeak": 51.11,
+    "catastrophicThreshold": 20.0,
+    "breached": true
+  },
+  "positions": {
+    "main": [],
+    "xyz": [],
+    "totalOpen": 0
+  },
   "openOrders": 0,
-  "withdrawable": 48.887581,
   "guardrails": {
-    "catastrophicDD": {
-      "threshold": 20,
-      "current": 51.11,
-      "breached": true
-    },
-    "dailyLoss": {
-      "threshold": 10,
-      "current": 0.0,
-      "breached": false
-    },
-    "consecutiveStops": {
-      "threshold": 4,
-      "current": 0,
-      "breached": false
-    }
+    "drawdownBreached": true,
+    "consecutiveStopOuts": 0,
+    "dailyLossPct": 0.0,
+    "allClear": false
   },
-  "positions": [],
-  "marketPrices": {
-    "BTC": 80150.5,
-    "ETH": 2306.25,
-    "SOL": 91.99,
-    "HYPE": 43.16
+  "brainSync": {
+    "riskMode": "RISK_OFF",
+    "blockNewEntries": true,
+    "allowAutoEntry": false,
+    "maxSlotsCap": 0,
+    "drawdownPctFromPeak": 51.11,
+    "synced": true
   },
-  "brainSynced": true,
-  "vpsScannersOffline": true,
-  "actions": [
-    "None \u2014 flat position, RISK_OFF holding"
-  ]
+  "actionsTaken": [
+    "Verified no open positions",
+    "Confirmed RISK_OFF regime active",
+    "Verified brain/regime sync"
+  ],
+  "warnings": []
 }
