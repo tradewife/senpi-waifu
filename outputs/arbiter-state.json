@@ -3,23 +3,17 @@
   "lastEquity": 48.887581,
   "dayStartEquity": 48.887581,
   "consecutiveStopOuts": 0,
-  "lastUpdated": "2026-05-07T03:16:37.814462+00:00",
+  "lastUpdated": "2026-05-08T20:16:21.470540+00:00",
   "alerts": [
     {
       "type": "JIDO_CHECK",
-      "timestamp": "2026-05-08T18:16:34.857968+00:00",
+      "timestamp": "2026-05-08T20:16:21.470540+00:00",
       "severity": "INFO",
-      "message": "JIDO portfolio check: 0 positions, RISK_OFF active, DD 51.11%, equity $48.89 (live MCP confirmed). BTC $80145.50 | ETH $2311.65 | SOL $91.80 | HYPE $43.08. No naked positions. No open orders. Brain/regime in sync. VPS scanners offline since March 23 (46 days). No actions needed."
-    },
-    {
-      "type": "JIDO_CHECK",
-      "timestamp": "2026-05-07T03:47:40.690468+00:00",
-      "severity": "INFO",
-      "message": "JIDO portfolio check: 0 positions, RISK_OFF active, DD 51.11%, equity $48.89 (live MCP confirmed). BTC $80927.5 | ETH $2321.95 | SOL $87.92 | HYPE $42.45. No naked positions. Brain/regime in sync. VPS scanners offline since March 23 (45 days)."
+      "message": "JIDO portfolio check: 0 positions, RISK_OFF active, DD 51.11%, equity $48.89 (live MCP confirmed). BTC $80210.50 | ETH $2312.55 | SOL $92.35 | HYPE $43.11. No naked positions. No open orders. Brain/regime in sync. VPS scanners offline since March 23 (47 days). No actions needed."
     }
   ],
-  "lastCheck": "2026-05-07T03:47:40.690468+00:00",
-  "lastCheckAt": "2026-05-07T03:47:40Z",
-  "dayStartDate": "2026-05-07",
-  "lastChecked": "2026-05-08T18:16:34.857968+00:00"
+  "lastCheck": "2026-05-08T20:16:21.470540+00:00",
+  "lastCheckAt": "2026-05-08T20:16:21Z",
+  "dayStartDate": "2026-05-08",
+  "lastChecked": "2026-05-08T20:16:21.470540+00:00"
 }
