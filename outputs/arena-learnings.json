@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-07T02:22:53Z",
+  "generatedAt": "2026-05-08T22:00:24Z",
   "arenaWeek": "?",
   "totalEntrants": 105,
   "ourStats": {
@@ -7,84 +7,92 @@
     "winRate": 0.0,
     "totalPnl": -51.11
   },
-  "arenaTop5AvgRoe": 6.54,
-  "arenaTop5AvgPnl": 20.76,
+  "arenaTop5AvgRoe": 24.5,
+  "arenaTop5AvgPnl": -362.56,
   "arenaTop5": [
     {
       "rank": 1,
+      "name": "0xschelling",
+      "roePct": "39.0362",
+      "totalPnl": "-2134.759455",
+      "tradeCount": 1,
+      "toolsUsed": [
+        "account_get_portfolio",
+        "arena_leaderboard",
+        "leaderboard_get_markets",
+        "market_get_asset_data",
+        "market_get_funding_history",
+        "market_get_funding_regime",
+        "strategy_get_clearinghouse_state",
+        "strategy_list",
+        "strategy_withdraw_funds"
+      ]
+    },
+    {
+      "rank": 2,
       "name": "Patelbot",
-      "roePct": "14.4938",
-      "totalPnl": "12.817764",
+      "roePct": "34.1999",
+      "totalPnl": "30.068976",
       "tradeCount": 0,
       "toolsUsed": []
     },
     {
-      "rank": 2,
-      "name": "OlivineCrackers",
-      "roePct": "14.4758",
-      "totalPnl": "3.182552",
-      "tradeCount": 1,
-      "toolsUsed": [
-        "account_get_portfolio",
-        "create_position",
-        "edit_position",
-        "strategy_create_custom_strategy",
-        "strategy_get_clearinghouse_state",
-        "strategy_list",
-        "strategy_withdraw_funds",
-        "user_get_me"
-      ]
-    },
-    {
       "rank": 3,
-      "name": "0xschelling",
-      "roePct": "1.6302",
-      "totalPnl": "74.375029",
+      "name": "ysr",
+      "roePct": "21.5463",
+      "totalPnl": "6.574762",
       "tradeCount": 0,
       "toolsUsed": [
-        "leaderboard_get_markets",
-        "market_get_asset_data",
-        "market_get_funding_history",
-        "market_get_funding_regime"
+        "create_position",
+        "edit_position",
+        "strategy_get_clearinghouse_state",
+        "strategy_get_open_orders"
       ]
     },
     {
       "rank": 4,
-      "name": "Anonymous",
-      "roePct": "1.1622",
-      "totalPnl": "5.862422",
-      "tradeCount": 0,
-      "toolsUsed": []
+      "name": "KhakiLoop",
+      "roePct": "16.7616",
+      "totalPnl": "163.149573",
+      "tradeCount": 41,
+      "toolsUsed": [
+        "account_get_portfolio",
+        "arena_leaderboard",
+        "arena_prizes",
+        "cancel_order",
+        "close_position",
+        "create_position",
+        "discovery_get_top_strategies",
+        "discovery_get_top_traders",
+        "discovery_get_trader_history",
+        "discovery_get_trader_state",
+        "edit_position",
+        "leaderboard_get_markets",
+        "leaderboard_get_top",
+        "market_get_asset_data",
+        "market_get_cross_asset_flows",
+        "market_get_funding_history",
+        "market_get_funding_regime",
+        "market_get_prices",
+        "market_list_instruments",
+        "strategy_get_clearinghouse_state",
+        "user_get_senpi_points"
+      ]
     },
     {
       "rank": 5,
-      "name": "Bison12",
-      "roePct": "0.9241",
-      "totalPnl": "7.56803",
-      "tradeCount": 5,
+      "name": "YellowFolder",
+      "roePct": "10.9732",
+      "totalPnl": "122.174757",
+      "tradeCount": 36,
       "toolsUsed": [
-        "close_position",
+        "account_get_portfolio",
         "create_position",
-        "edit_position",
-        "execution_get_order_status",
-        "leaderboard_get_markets",
-        "market_get_asset_data",
-        "market_get_prices",
-        "market_list_instruments",
-        "ratchet_stop_delete",
-        "ratchet_stop_events",
-        "ratchet_stop_list",
-        "strategy_get_clearinghouse_state"
+        "edit_position"
       ]
     }
   ],
   "recommendations": [
-    {
-      "action": "study_top_strategies",
-      "confidence": "medium",
-      "reason": "Arena top 5 avg PnL $20.76 vs ours $-51.11. Study their patterns.",
-      "risk": "neutral"
-    },
     {
       "action": "reminder_max_leverage",
       "confidence": "absolute",
