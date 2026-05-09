@@ -438,8 +438,8 @@
   "systemHealth": {
     "health": {},
     "arbiter": {
-      "peakEquity": 0,
-      "dayStartEquity": 0,
+      "peakEquity": 100.0,
+      "dayStartEquity": 48.887581,
       "consecutiveStopOuts": 0
     }
   },
