@@ -1,31 +1,38 @@
 {
-  "generatedAt": "2026-05-09T18:32:00Z",
+  "timestamp": "2026-05-09T18:46:40Z",
   "regime": "RISK_OFF",
-  "strategy": "wolf-primary",
-  "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
-  "accountValue": 48.89,
+  "equity": 48.887581,
   "peakEquity": 100.0,
   "drawdownPct": 51.11,
   "dailyPnl": 0.0,
   "openPositions": 0,
   "openOrders": 0,
-  "withdrawable": 48.89,
-  "positions": [],
-  "marketSnapshot": {
-    "BTC": 80398.5,
-    "ETH": 2318.85,
-    "SOL": 93.9125
-  },
+  "consecutiveStopOuts": 0,
   "guardrails": {
-    "catastrophicDD breached": true,
-    "dailyLossLimit breached": false,
-    "consecutiveStopOuts breached": false
+    "catastrophicDD": false,
+    "dailyLossLimit": false,
+    "maxConsecutiveStops": false,
+    "drawdownBreached": true,
+    "ddPct": 51.11,
+    "ddLimit": 20.0
   },
-  "alerts": [
-    "RISK_OFF enforced: DD 51.11% exceeds 20% catastrophic limit",
-    "VPS scanners offline since 2026-03-23 (47 days)",
-    "Account at $48.89 of $100 budget — capital preservation mode"
+  "positions": [],
+  "market": {
+    "BTC": 80395.5,
+    "ETH": 2316.25,
+    "SOL": 93.8275
+  },
+  "actions": [
+    "No positions to manage. RISK_OFF maintained. Brain/regime synced."
   ],
-  "actionsTaken": [],
-  "brainSynced": true
+  "warnings": [
+    "VPS scanners offline since 2026-03-23 (47+ days)",
+    "Catastrophic drawdown 51.11% \u2014 capital at $48.89 of original $100"
+  ],
+  "strategy": {
+    "name": "wolf-primary",
+    "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
+    "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce",
+    "withdrawable": 48.887581
+  }
 }
