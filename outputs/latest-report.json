@@ -1,34 +1,65 @@
 {
-  "timestamp": "2026-05-09T01:18:43.040526+00:00",
-  "type": "JIDO_PORTFOLIO_REVIEW",
+  "timestamp": "2026-05-09T01:47:56.098723+00:00",
+  "source": "jido-cron",
   "regime": "RISK_OFF",
-  "regimeReason": "Catastrophic drawdown 51.11% exceeds 20% threshold",
   "equity": {
     "current": 48.887581,
     "peak": 100.0,
-    "drawdownPct": 51.11
+    "dayStart": 48.887581,
+    "withdrawable": 48.887581
+  },
+  "drawdown": {
+    "fromPeak": 51.11,
+    "fromPeakAbs": 51.112419,
+    "catastrophicLimit": 20.0,
+    "breached": true
   },
   "positions": {
-    "main": [],
-    "xyz": [],
-    "totalOpen": 0
+    "count": 0,
+    "details": []
   },
   "orders": {
-    "main": [],
-    "totalOpen": 0
+    "count": 0,
+    "details": []
   },
   "guardrails": {
-    "catastrophicDrawdownPct": 20,
-    "drawdownBreached": true,
-    "dailyLossLimitPct": 10,
-    "dailyLossBreached": false,
-    "maxConsecutiveStopOuts": 4,
-    "consecutiveStopOuts": 0,
-    "stopOutsBreached": false
+    "drawdown": {
+      "value": 51.11,
+      "limit": 20.0,
+      "breached": true
+    },
+    "consecutiveStopOuts": {
+      "value": 0,
+      "limit": 4,
+      "breached": false
+    },
+    "dailyLoss": {
+      "value": 0.0,
+      "limit": 10.0,
+      "breached": false
+    }
+  },
+  "marketPrices": {
+    "BTC": 80342.5,
+    "ETH": 2315.85,
+    "SOL": 93.2475,
+    "HYPE": 44.0005,
+    "kPEPE": 0.004359,
+    "kBONK": 0.007322,
+    "WIF": 0.227555,
+    "DOGE": 0.110475,
+    "AR": 2.7373,
+    "RENDER": 2.0633,
+    "XRP": 1.43085
   },
   "actions": [],
   "warnings": [
-    "SERR031 on strategy_list (expected, clearinghouse state used instead)",
-    "VPS scanner heartbeats stale >45 days (brain: 2026-03-23, arena: 2026-03-23, risk-arbiter: 2026-03-23) \u2014 Railway deployment likely down"
-  ]
+    "VPS scanners offline since 2026-03-23 (brain/arena/risk-arbiter heartbeats stale ~47 days)"
+  ],
+  "brainSync": {
+    "riskMode": "RISK_OFF",
+    "blockNewEntries": true,
+    "drawdownPctFromPeak": 51.11,
+    "synced": true
+  }
 }
