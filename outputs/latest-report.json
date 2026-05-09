@@ -1,41 +1,20 @@
 {
-  "generatedAt": "2026-05-09T07:32:00Z",
-  "type": "JIDO_PORTFOLIO_SCAN",
+  "generatedAt": "2026-05-09T07:46:37Z",
   "regime": "RISK_OFF",
-  "regimeReason": "Catastrophic DD 51.11% exceeds 20% threshold",
-  "strategy": {
-    "name": "wolf-primary",
-    "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
-    "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce",
-    "budget": 100.0,
-    "accountValue": 48.887581,
-    "withdrawable": 48.887581
-  },
-  "equity": {
-    "current": 48.89,
-    "peak": 100.0,
-    "dayStart": 48.89,
-    "drawdownPct": 51.11
-  },
-  "positions": {
-    "open": 0,
-    "details": []
-  },
+  "regimeReason": "DD 51.11% exceeds catastrophic 20% limit",
+  "strategy": "wolf-primary",
+  "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
+  "accountValue": 48.887581,
+  "withdrawable": 48.887581,
+  "peakEquity": 100.0,
+  "drawdownPct": 51.11,
+  "openPositions": 0,
+  "openOrders": 0,
+  "consecutiveStopOuts": 0,
   "guardrails": {
-    "catastrophicDrawdownPct": 20.0,
-    "actualDrawdownPct": 51.11,
-    "breached": true,
-    "breachType": "CATASTROPHIC_DRAWDOWN",
-    "consecutiveStopOuts": 0,
-    "maxConsecutiveStopOuts": 4,
-    "dailyLossLimitPct": 10.0
-  },
-  "actions": [],
-  "vpsStatus": {
-    "status": "OFFLINE",
-    "lastHeartbeat": "2026-03-23T23:57:45Z",
-    "offlineDays": 47,
-    "note": "All VPS scanners offline. Only Hermes cron jobs running."
+    "catastrophicDD": "BREACHED (51.11% > 20%)",
+    "dailyLossLimit": "CLEAR",
+    "consecutiveStopOuts": "CLEAR (0 < 4)"
   },
   "brainSync": {
     "riskMode": "RISK_OFF",
@@ -45,5 +24,11 @@
     "drawdownPctFromPeak": 51.11,
     "synced": true
   },
-  "summary": "RISK_OFF maintained. No open positions. Account at $48.89 (DD 51.11%). VPS offline 47 days. System stable in protective mode."
+  "vpsStatus": "OFFLINE since 2026-03-23",
+  "actions": [
+    "None \u2014 RISK_OFF enforced, no positions to protect"
+  ],
+  "nextSteps": [
+    "Await user decision on capital reset or regime override"
+  ]
 }
