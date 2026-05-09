@@ -1,22 +1,30 @@
 {
-  "timestamp": "2026-05-08T22:17:43Z",
+  "timestamp": "2026-05-09T00:03:09.056596+00:00",
   "regime": "RISK_OFF",
-  "equity": 48.89,
+  "equity": 48.887581,
   "peakEquity": 100.0,
   "drawdownPct": 51.11,
-  "withdrawable": 48.89,
+  "withdrawable": 48.887581,
   "openPositions": 0,
   "openOrders": 0,
   "positions": [],
   "guardrails": {
+    "catastrophicDrawdownPct": 20,
     "drawdownBreached": true,
-    "catastrophicThreshold": 20.0,
-    "consecutiveStopOuts": 0
+    "maxConsecutiveStopOuts": 4,
+    "consecutiveStopOuts": 0,
+    "stopOutsBreached": false,
+    "dailyLossLimitPct": 10
   },
   "actions": [
-    "No positions to manage. RISK_OFF maintained. Brain synced."
+    "No open positions \u2014 flat portfolio",
+    "RISK_OFF maintained (DD 51.11% >> 20% threshold)",
+    "Brain/regime sync verified \u2014 all consistent",
+    "No emergency SL needed \u2014 no positions"
   ],
   "warnings": [
-    "strategy_list SERR031 auth issue (clearinghouse state used as fallback)"
+    "VPS scanners OFFLINE \u2014 last heartbeat 2026-03-23 (46 days stale)",
+    "SERR031 on strategy_list \u2014 auth issue persists (expected)",
+    "Account at ~49% of peak \u2014 deep drawdown territory"
   ]
 }
