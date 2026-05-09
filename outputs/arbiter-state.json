@@ -25,6 +25,15 @@
       "openPositions": 0,
       "openOrders": 0,
       "message": "JIDO heartbeat. No positions, no orders. RISK_OFF active. DD=51.11%. Brain/regime synced. VPS scanners offline (last heartbeat 47+ days ago)."
+    },
+    {
+      "type": "JIDO_HEARTBEAT",
+      "timestamp": "2026-05-09T14:02:43.608082Z",
+      "regime": "RISK_OFF",
+      "equity": 48.887581,
+      "drawdownPct": 51.11,
+      "positions": 0,
+      "message": "No open positions. RISK_OFF active (DD 51.11%). No action needed."
     }
   ],
   "drawdownPct": 51.11,
