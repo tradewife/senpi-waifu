@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-05-09T14:18:26.683215+00:00",
+  "timestamp": "2026-05-09T15:17:00.603130Z",
   "regime": "RISK_OFF",
   "accountValue": 48.887581,
   "peakEquity": 100.0,
@@ -7,15 +7,19 @@
   "openPositions": 0,
   "openOrders": 0,
   "withdrawable": 48.887581,
+  "positions": [],
   "guardrails": {
-    "catastrophicDD": "BREACHED (51.11% > 20%)",
-    "consecutiveStopOuts": "CLEAR (0)",
-    "dailyLossLimit": "N/A (flat)"
+    "catastrophicDrawdownBreached": true,
+    "dailyLossLimitBreached": false,
+    "consecutiveStopOutsBreached": false
   },
-  "actions": "No action needed. Flat portfolio in RISK_OFF.",
-  "warnings": [
-    "VPS scanners offline since 2026-03-23 (>45 days)"
+  "actions": [
+    "No action needed \u2014 flat portfolio, RISK_OFF active"
   ],
-  "strategy": "wolf-primary",
-  "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1"
+  "market": {
+    "BTC": 80300.5,
+    "ETH": 2304.15,
+    "SOL": 92.6595,
+    "HYPE": 43.0615
+  }
 }
