@@ -4,16 +4,16 @@
   "dayStartEquity": 48.887581,
   "consecutiveStopOuts": 0,
   "regime": "RISK_OFF",
-  "lastJidoCheck": "2026-05-09T09:46:44Z",
+  "lastJidoCheck": "2026-05-09T10:16:36Z",
   "alerts": [
     {
-      "timestamp": "2026-05-09T09:46:44Z",
+      "timestamp": "2026-05-09T10:16:36Z",
       "type": "JIDO_HEARTBEAT",
-      "message": "JIDO portfolio scan. No open positions. RISK_OFF active (DD=51.11% > 20% limit). Account value $48.89. Brain synced. VPS offline since 2026-03-23. No changes."
+      "message": "JIDO portfolio scan. No open positions. RISK_OFF active (DD=51.11% > 20% limit). Account value $48.89. Brain synced. No changes."
     }
   ],
   "drawdownPct": 51.11,
-  "lastChecked": "2026-05-09T09:46:44Z",
-  "lastCheckAt": "2026-05-09T09:46:44Z",
+  "lastChecked": "2026-05-09T10:16:36Z",
+  "lastCheckAt": "2026-05-09T10:16:36Z",
   "dayStartDate": "2026-05-09"
 }
