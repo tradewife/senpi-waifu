@@ -1,41 +1,23 @@
 {
-  "timestamp": "2026-05-09T02:47:56.039975+00:00",
-  "source": "jido-cron",
+  "timestamp": "2026-05-09T03:03:23.989706+00:00",
   "regime": "RISK_OFF",
-  "equity": {
-    "current": 48.887581,
-    "peak": 100.0,
-    "dayStart": 48.887581,
-    "withdrawable": 48.887581
-  },
-  "drawdown": {
-    "fromPeak": 51.11,
-    "fromPeakAbs": 51.112419,
-    "catastrophicLimit": 20.0,
-    "breached": true
-  },
-  "positions": {
-    "count": 0,
-    "details": []
-  },
-  "orders": {
-    "count": 0,
-    "details": []
-  },
+  "equity": 48.887581,
+  "peakEquity": 100.0,
+  "drawdownPct": 51.11,
+  "accountValue": 48.887581,
+  "withdrawable": 48.887581,
+  "positions": [],
+  "openOrders": 0,
   "guardrails": {
-    "drawdown": {
-      "value": 51.11,
-      "limit": 20.0,
-      "breached": true
-    },
-    "consecutiveStopOuts": {
-      "value": 0,
-      "limit": 4,
-      "breached": false
-    }
+    "catastrophicDD": "BREACHED (51.11% > 20%)",
+    "dailyLoss": "N/A (flat)",
+    "consecutiveStopOuts": 0
   },
-  "actions": [
-    "None \u2014 flat portfolio, RISK_OFF maintained"
+  "actions": [],
+  "alerts": [
+    "RISK_OFF maintained \u2014 DD 51.11% exceeds 20% catastrophic threshold",
+    "Flat portfolio \u2014 0 positions, 0 orders",
+    "No naked positions requiring emergency SL"
   ],
-  "vpsStatus": "OFFLINE \u2014 all scanner heartbeats stale >46 days (last: 2026-03-23)"
+  "vpsScanners": "OFFLINE \u2014 heartbeats from 2026-03-23 (>47 days stale)"
 }
