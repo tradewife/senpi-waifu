@@ -1,28 +1,23 @@
 {
-  "generatedAt": "2026-05-09T22:47:04.157898+00:00",
+  "timestamp": "2026-05-09T23:01:34Z",
   "regime": "RISK_OFF",
   "accountValue": 48.89,
   "peakEquity": 100.0,
   "drawdownPct": 51.11,
-  "dayStartEquity": 48.887581,
-  "dailyPnl": 0.0,
   "openPositions": 0,
   "openOrders": 0,
-  "consecutiveStopOuts": 0,
+  "withdrawable": 48.89,
   "guardrails": {
-    "catastrophicDrawdownPct": 20.0,
-    "dailyLossLimitPct": 10.0,
-    "maxConsecutiveStopOuts": 4,
-    "breached": true,
-    "breachReason": "DD 51.11% > 20% limit"
+    "catastrophicDD": "BREACHED (51.11% > 20.0%)",
+    "consecutiveStopOuts": "CLEAR (0)",
+    "dailyLossLimit": "CLEAR"
   },
-  "actionsTaken": [
-    "None \u2014 flat portfolio, RISK_OFF already active"
-  ],
+  "actions": "No actions \u2014 flat portfolio, MCP offline, RISK_OFF maintained.",
   "warnings": [
-    "MCP server offline \u2014 report uses cached data from previous run",
-    "VPS scanner heartbeats stale (last: 2026-03-23) \u2014 deployment likely down"
+    "MCP server offline \u2014 using cached state",
+    "VPS scanners stale (last heartbeat 2026-03-23, >45 days old)",
+    "Catastrophic DD 51.11% far exceeds 20% threshold"
   ],
   "strategy": "wolf-primary",
-  "strategyWallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1"
+  "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1"
 }
