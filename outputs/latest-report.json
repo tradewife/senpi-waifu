@@ -1,25 +1,29 @@
 {
-  "timestamp": "2026-05-09T16:03:38.479960+00:00",
+  "timestamp": "2026-05-09T19:17:50Z",
+  "source": "jido-cron",
   "regime": "RISK_OFF",
-  "accountValue": 48.887581,
+  "accountValue": 48.89,
   "peakEquity": 100.0,
   "drawdownPct": 51.11,
   "openPositions": 0,
   "openOrders": 0,
-  "withdrawable": 48.887581,
-  "positions": [],
   "guardrails": {
-    "catastrophicDrawdownBreached": true,
-    "dailyLossLimitBreached": false,
-    "consecutiveStopOutsBreached": false
+    "catastrophicDrawdownPct": 20.0,
+    "currentDrawdownPct": 51.11,
+    "breached": true,
+    "breachType": "catastrophic_drawdown"
   },
+  "mcpStatus": "OFFLINE",
+  "vpsScanners": "OFFLINE \u2014 last heartbeat 2026-03-23 (47+ days stale)",
   "actions": [
-    "No action needed \u2014 flat portfolio, RISK_OFF active"
+    "Heartbeat recorded",
+    "State files synced",
+    "Brain/regime consistency verified"
   ],
-  "market": {
-    "BTC": 80300.5,
-    "ETH": 2304.15,
-    "SOL": 92.6595,
-    "HYPE": 43.0615
-  }
+  "warnings": [
+    "MCP server offline \u2014 using cached state",
+    "VPS scanners offline since 2026-03-23 \u2014 Railway deployment likely down",
+    "Account in deep drawdown (51.11%) with no open positions"
+  ],
+  "nextSteps": "No action required \u2014 RISK_OFF enforced, flat portfolio. Monitor for MCP recovery."
 }
