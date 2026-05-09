@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-09T22:32:10.881323+00:00",
+  "generatedAt": "2026-05-09T22:47:04.157898+00:00",
   "regime": "RISK_OFF",
   "accountValue": 48.89,
   "peakEquity": 100.0,
@@ -11,13 +11,17 @@
   "consecutiveStopOuts": 0,
   "guardrails": {
     "catastrophicDrawdownPct": 20.0,
-    "currentDrawdownPct": 51.11,
+    "dailyLossLimitPct": 10.0,
+    "maxConsecutiveStopOuts": 4,
     "breached": true,
-    "breachType": "catastrophic_drawdown"
+    "breachReason": "DD 51.11% > 20% limit"
   },
-  "actionsTaken": [],
+  "actionsTaken": [
+    "None \u2014 flat portfolio, RISK_OFF already active"
+  ],
   "warnings": [
-    "MCP server offline \u2014 using cached state from last known-good data"
+    "MCP server offline \u2014 report uses cached data from previous run",
+    "VPS scanner heartbeats stale (last: 2026-03-23) \u2014 deployment likely down"
   ],
   "strategy": "wolf-primary",
   "strategyWallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1"
