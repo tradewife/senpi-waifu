@@ -1,28 +1,46 @@
 {
-  "timestamp": "2026-05-09T00:48:03.094030+00:00",
-  "regime": "RISK_OFF",
-  "equity": 48.887581,
-  "peakEquity": 100.0,
-  "drawdownPct": 51.11,
-  "positions": [],
-  "openOrders": [],
-  "marketPrices": {
-    "BTC": 80177.5,
-    "ETH": 2310.05,
-    "SOL": 92.4595
+  "timestamp": "2026-05-09T01:02:53.032409+00:00",
+  "type": "JIDO_PORTFOLIO_SCAN",
+  "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
+  "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce",
+  "regime": {
+    "riskMode": "RISK_OFF",
+    "source": "jido-guardrail",
+    "reason": "Catastrophic drawdown 51.11% > 20% threshold"
   },
+  "equity": {
+    "current": 48.887581,
+    "peak": 100.0,
+    "drawdownPct": 51.11,
+    "withdrawable": 48.887581,
+    "dayStart": 48.887581
+  },
+  "positions": [],
+  "orders": [],
   "guardrails": {
     "catastrophicDrawdownPct": 20,
-    "drawdownBreached": true,
+    "actualDrawdownPct": 51.11,
+    "breached": true,
+    "dailyLossPct": 0.0,
     "dailyLossLimitPct": 10,
-    "dailyLossBreached": false,
     "consecutiveStopOuts": 0,
     "maxConsecutiveStopOuts": 4
   },
+  "market": {
+    "BTC": 80201.5,
+    "ETH": 2308.95,
+    "SOL": 92.4885
+  },
   "actions": [],
   "warnings": [
-    "strategy_list returned SERR031 (known auth issue; clearinghouse state used instead)"
+    "VPS scanners offline \u2014 last heartbeats from 2026-03-23 (>45 days stale)"
   ],
-  "strategyWallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
-  "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce"
+  "brainSync": {
+    "riskMode": "RISK_OFF",
+    "blockNewEntries": true,
+    "allowAutoEntry": false,
+    "maxSlotsCap": 0,
+    "drawdownPctFromPeak": 51.11,
+    "synced": true
+  }
 }
