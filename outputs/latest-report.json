@@ -1,46 +1,34 @@
 {
-  "timestamp": "2026-05-09T01:02:53.032409+00:00",
-  "type": "JIDO_PORTFOLIO_SCAN",
-  "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
-  "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce",
-  "regime": {
-    "riskMode": "RISK_OFF",
-    "source": "jido-guardrail",
-    "reason": "Catastrophic drawdown 51.11% > 20% threshold"
-  },
+  "timestamp": "2026-05-09T01:18:43.040526+00:00",
+  "type": "JIDO_PORTFOLIO_REVIEW",
+  "regime": "RISK_OFF",
+  "regimeReason": "Catastrophic drawdown 51.11% exceeds 20% threshold",
   "equity": {
     "current": 48.887581,
     "peak": 100.0,
-    "drawdownPct": 51.11,
-    "withdrawable": 48.887581,
-    "dayStart": 48.887581
+    "drawdownPct": 51.11
   },
-  "positions": [],
-  "orders": [],
+  "positions": {
+    "main": [],
+    "xyz": [],
+    "totalOpen": 0
+  },
+  "orders": {
+    "main": [],
+    "totalOpen": 0
+  },
   "guardrails": {
     "catastrophicDrawdownPct": 20,
-    "actualDrawdownPct": 51.11,
-    "breached": true,
-    "dailyLossPct": 0.0,
+    "drawdownBreached": true,
     "dailyLossLimitPct": 10,
+    "dailyLossBreached": false,
+    "maxConsecutiveStopOuts": 4,
     "consecutiveStopOuts": 0,
-    "maxConsecutiveStopOuts": 4
-  },
-  "market": {
-    "BTC": 80201.5,
-    "ETH": 2308.95,
-    "SOL": 92.4885
+    "stopOutsBreached": false
   },
   "actions": [],
   "warnings": [
-    "VPS scanners offline \u2014 last heartbeats from 2026-03-23 (>45 days stale)"
-  ],
-  "brainSync": {
-    "riskMode": "RISK_OFF",
-    "blockNewEntries": true,
-    "allowAutoEntry": false,
-    "maxSlotsCap": 0,
-    "drawdownPctFromPeak": 51.11,
-    "synced": true
-  }
+    "SERR031 on strategy_list (expected, clearinghouse state used instead)",
+    "VPS scanner heartbeats stale >45 days (brain: 2026-03-23, arena: 2026-03-23, risk-arbiter: 2026-03-23) \u2014 Railway deployment likely down"
+  ]
 }
