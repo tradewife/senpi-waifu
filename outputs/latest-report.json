@@ -1,29 +1,28 @@
 {
-  "generatedAt": "2026-05-09T00:17:55.570178+00:00",
+  "timestamp": "2026-05-09T00:48:03.094030+00:00",
   "regime": "RISK_OFF",
   "equity": 48.887581,
   "peakEquity": 100.0,
   "drawdownPct": 51.11,
-  "withdrawable": 48.887581,
-  "openPositions": 0,
-  "openOrders": 0,
+  "positions": [],
+  "openOrders": [],
+  "marketPrices": {
+    "BTC": 80177.5,
+    "ETH": 2310.05,
+    "SOL": 92.4595
+  },
   "guardrails": {
-    "catastrophicDD": 20.0,
-    "currentDD": 51.11,
-    "breached": true,
+    "catastrophicDrawdownPct": 20,
+    "drawdownBreached": true,
+    "dailyLossLimitPct": 10,
+    "dailyLossBreached": false,
     "consecutiveStopOuts": 0,
     "maxConsecutiveStopOuts": 4
   },
-  "positions": [],
-  "marketPrices": {
-    "BTC": 80102.5,
-    "ETH": 2306.35,
-    "SOL": 92.1385,
-    "HYPE": 43.3395
-  },
   "actions": [],
   "warnings": [
-    "VPS scanners offline since March 23 (47 days)"
+    "strategy_list returned SERR031 (known auth issue; clearinghouse state used instead)"
   ],
-  "assessment": "Flat portfolio. RISK_OFF enforced (DD 51.11% > 20% threshold). No open positions, no naked exposure. Brain and regime files in sync. No actions required."
+  "strategyWallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
+  "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce"
 }

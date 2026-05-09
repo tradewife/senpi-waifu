@@ -3,19 +3,19 @@
   "lastEquity": 48.887581,
   "dayStartEquity": 48.887581,
   "consecutiveStopOuts": 0,
-  "lastUpdated": "2026-05-09T00:17:28.057044+00:00",
+  "lastUpdated": "2026-05-09T00:48:03.094030+00:00",
   "alerts": [
     {
-      "timestamp": "2026-05-09T00:17:28.057044+00:00",
+      "timestamp": "2026-05-09T00:48:03.094030+00:00",
       "type": "JIDO_CHECK",
       "message": "JIDO: Flat portfolio, 0 positions, 0 orders. RISK_OFF maintained. Equity $48.89, DD 51.11%. No naked positions. No actions needed.",
       "severity": "INFO"
     },
     {
-      "timestamp": "2026-05-09T00:17:28.057044+00:00",
+      "timestamp": "2026-05-09T00:48:03.094030+00:00",
       "type": "JIDO_HEARTBEAT",
       "message": "JIDO portfolio scan complete. No open positions. RISK_OFF active. DD=51.11%. Brain synced."
     }
   ],
-  "lastChecked": "2026-05-09T00:17:28.057044+00:00"
+  "lastChecked": "2026-05-09T00:48:03.094030+00:00"
 }
