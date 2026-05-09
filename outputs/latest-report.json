@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-05-09T19:46:20.131610+00:00",
-  "source": "jido-cron",
+  "generatedAt": "2026-05-09T20:01:10Z",
   "regime": "RISK_OFF",
-  "accountValue": 48.89,
+  "equity": 48.89,
   "peakEquity": 100.0,
   "drawdownPct": 51.11,
+  "dailyPnl": 0,
+  "dailyCloses": 0,
+  "dailyWinRate": 0,
   "openPositions": 0,
-  "openOrders": 0,
+  "alerts": [
+    "CATASTROPHIC DRAWDOWN: 51.1%"
+  ],
+  "deadWeight": [],
   "guardrails": {
-    "catastrophicDrawdownPct": 20.0,
-    "currentDrawdownPct": 51.11,
-    "breached": true,
-    "breachType": "catastrophic_drawdown"
-  },
-  "mcpStatus": "OFFLINE",
-  "vpsScanners": "OFFLINE \u2014 last heartbeat 2026-03-23 (47+ days stale)",
-  "actions": [
-    "Heartbeat recorded",
-    "State files synced",
-    "Brain/regime consistency verified"
-  ],
-  "warnings": [
-    "MCP server offline \u2014 using cached state",
-    "VPS scanners offline since 2026-03-23 \u2014 Railway deployment likely down",
-    "Account in deep drawdown (51.11%) with no open positions"
-  ],
-  "nextSteps": "No action required \u2014 RISK_OFF enforced, flat portfolio. Monitor for MCP recovery."
+    "dailyLossLimitPct": 10,
+    "catastrophicDrawdownPct": 20,
+    "maxConsecutiveStopOuts": 4,
+    "directionalCapPct": 70,
+    "minLeverage": 7,
+    "maxLeverage": 10,
+    "maxPositionsTotal": 3,
+    "perAssetCooldownMinutes": 120,
+    "bannedAssetPrefixes": [
+      "xyz:"
+    ],
+    "perTradeRiskPct": 1.0
+  }
 }
