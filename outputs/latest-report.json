@@ -1,39 +1,50 @@
 {
-  "timestamp": "2026-05-09T11:16:51Z",
+  "timestamp": "2026-05-09T11:46:40Z",
   "regime": "RISK_OFF",
-  "regimeReason": "Catastrophic DD 51.1% (limit 20.0%)",
-  "regimeUpdatedBy": "waifu-regime (arbiter-override)",
-  "equity": 48.887581,
-  "peakEquity": 100.0,
-  "drawdownPct": 51.11,
-  "withdrawable": 48.887581,
-  "openPositions": 0,
-  "openOrders": 0,
-  "strategyWallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
-  "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce",
+  "trigger": "jido-cron",
+  "account": {
+    "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
+    "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce",
+    "accountValue": 48.887581,
+    "withdrawable": 48.887581,
+    "peakEquity": 100.0,
+    "drawdownPct": 51.11
+  },
+  "positions": {
+    "main": [],
+    "xyz": [],
+    "totalOpen": 0
+  },
+  "orders": {
+    "open": 0
+  },
   "guardrails": {
     "catastrophicDrawdownPct": 20.0,
-    "drawdownBreached": true,
-    "dailyLossLimitPct": 10.0,
-    "dailyLossBreached": false,
+    "currentDrawdownPct": 51.11,
+    "breached": true,
     "consecutiveStopOuts": 0,
     "maxConsecutiveStopOuts": 4,
-    "stopOutsBreached": false
+    "dailyLossLimitPct": 10.0
   },
-  "brainSync": {
-    "riskMode": "RISK_OFF",
-    "blockNewEntries": true,
-    "allowAutoEntry": false,
-    "maxSlotsCap": 0,
-    "drawdownPctFromPeak": 51.11,
-    "inSync": true
+  "riskRegimeSync": {
+    "risk_regime_json": "RISK_OFF",
+    "autonomous_brain_json": "RISK_OFF",
+    "brain_blockNewEntries": true,
+    "brain_allowAutoEntry": false,
+    "brain_maxSlotsCap": 0,
+    "brain_drawdownPctFromPeak": 51.11,
+    "allSynced": true
   },
-  "actions": [
-    "No positions to protect. System in RISK_OFF hibernation."
+  "vpsHeartbeats": {
+    "brain": "2026-03-23T23:57:15Z",
+    "arena": "2026-03-23T23:57:05Z",
+    "risk-arbiter": "2026-03-23T23:57:45Z",
+    "status": "STALE - all >6 weeks old, VPS scanners likely offline"
+  },
+  "actionsTaken": [
+    "Heartbeat logged, no positions to manage"
   ],
-  "vpsScanners": {
-    "status": "OFFLINE",
-    "lastHeartbeat": "2026-03-23T23:57:45Z",
-    "note": "All VPS scanner heartbeats >45 days stale. Railway deployment likely down."
-  }
+  "alerts": [
+    "RISK_OFF active since catastrophic DD breach (51.11% vs 20% limit)"
+  ]
 }

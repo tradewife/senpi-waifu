@@ -20,6 +20,16 @@
       "type": "JIDO_HEARTBEAT",
       "timestamp": "2026-05-09T11:31:23Z",
       "message": "JIDO portfolio scan. No open positions. No open orders. RISK_OFF active (DD=51.11% > 20% limit). Account value: $48.89. Withdrawable: $48.89. All state files synced. No actions needed."
+    },
+    {
+      "type": "JIDO_HEARTBEAT",
+      "timestamp": "2026-05-09T11:46:14Z",
+      "regime": "RISK_OFF",
+      "accountValue": 48.887581,
+      "drawdownPct": 51.11,
+      "openPositions": 0,
+      "openOrders": 0,
+      "message": "RISK_OFF active, no positions, no action needed"
     }
   ],
   "drawdownPct": 51.11,
