@@ -4,34 +4,16 @@
   "dayStartEquity": 48.887581,
   "consecutiveStopOuts": 0,
   "regime": "RISK_OFF",
-  "lastJidoCheck": "2026-05-09T03:02:39.740065+00:00",
+  "lastJidoCheck": "2026-05-09T03:17:58.220958+00:00",
   "alerts": [
     {
-      "timestamp": "2026-05-09T03:02:39.740065+00:00",
+      "timestamp": "2026-05-09T03:17:58.220975+00:00",
       "type": "JIDO_CHECK",
       "message": "JIDO: Flat portfolio, 0 positions, 0 orders. RISK_OFF maintained. Equity $48.89, DD 51.11%. No naked positions. No actions needed.",
       "severity": "INFO"
     },
     {
-      "timestamp": "2026-05-09T02:47:56.039975+00:00",
-      "type": "JIDO_CHECK",
-      "message": "JIDO: Flat portfolio, 0 positions, 0 orders. RISK_OFF maintained. Equity $48.89, DD 51.11%. No naked positions. No actions needed.",
-      "severity": "INFO"
-    },
-    {
-      "timestamp": "2026-05-09T02:17:40Z",
-      "type": "JIDO_CHECK",
-      "message": "JIDO: Flat portfolio, 0 positions, 0 orders. RISK_OFF maintained. Equity $48.89, DD 51.11%. No naked positions. No actions needed.",
-      "severity": "INFO"
-    },
-    {
-      "timestamp": "2026-05-09T02:17:40Z",
-      "type": "VPS_OFFLINE",
-      "message": "All VPS scanner heartbeats stale >46 days (brain, arena, risk-arbiter all 2026-03-23). Railway/VPS deployment is down. Only Hermes crons running.",
-      "severity": "WARN"
-    },
-    {
-      "timestamp": "2026-05-09T02:17:40Z",
+      "timestamp": "2026-05-09T03:17:58.220982+00:00",
       "type": "JIDO_HEARTBEAT",
       "message": "JIDO portfolio scan complete. No open positions. RISK_OFF active. DD=51.11%. Brain synced. VPS offline."
     }
