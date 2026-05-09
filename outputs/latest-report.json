@@ -1,19 +1,21 @@
 {
-  "type": "jido",
-  "timestamp": "2026-05-09T14:02:06Z",
+  "timestamp": "2026-05-09T14:18:26.683215+00:00",
   "regime": "RISK_OFF",
-  "equity": 48.887581,
+  "accountValue": 48.887581,
   "peakEquity": 100.0,
   "drawdownPct": 51.11,
-  "positions": 0,
+  "openPositions": 0,
+  "openOrders": 0,
   "withdrawable": 48.887581,
-  "alerts": [
-    "RISK_OFF active (DD 51.11%)",
-    "No open positions"
+  "guardrails": {
+    "catastrophicDD": "BREACHED (51.11% > 20%)",
+    "consecutiveStopOuts": "CLEAR (0)",
+    "dailyLossLimit": "N/A (flat)"
+  },
+  "actions": "No action needed. Flat portfolio in RISK_OFF.",
+  "warnings": [
+    "VPS scanners offline since 2026-03-23 (>45 days)"
   ],
-  "actions": [
-    "Synced brain drawdown",
-    "Appended heartbeat",
-    "Pruned alerts"
-  ]
+  "strategy": "wolf-primary",
+  "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1"
 }
