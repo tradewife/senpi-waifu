@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-09T22:16:05.353389+00:00",
+  "generatedAt": "2026-05-09T22:32:10.881323+00:00",
   "regime": "RISK_OFF",
   "accountValue": 48.89,
   "peakEquity": 100.0,
@@ -17,7 +17,7 @@
   },
   "actionsTaken": [],
   "warnings": [
-    "MCP server offline \u2014 using cached state from last known-good data (2026-05-09T22:01Z)"
+    "MCP server offline \u2014 using cached state from last known-good data"
   ],
   "strategy": "wolf-primary",
   "strategyWallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1"
