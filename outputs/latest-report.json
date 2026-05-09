@@ -1,44 +1,24 @@
 {
-  "timestamp": "2026-05-09T22:01:20.069294+00:00",
-  "generatedBy": "jido-hermes-cron",
+  "generatedAt": "2026-05-09T22:16:05.353389+00:00",
   "regime": "RISK_OFF",
-  "regimeReason": "Catastrophic DD 51.1% (limit 20.0%)",
-  "portfolio": {
-    "accountValue": 48.89,
-    "peakEquity": 100.0,
-    "drawdownPct": 51.11,
-    "dailyPnl": 0.0,
-    "openPositions": 0,
-    "pendingEntries": 0
-  },
-  "positions": [],
+  "accountValue": 48.89,
+  "peakEquity": 100.0,
+  "drawdownPct": 51.11,
+  "dayStartEquity": 48.887581,
+  "dailyPnl": 0.0,
+  "openPositions": 0,
+  "openOrders": 0,
+  "consecutiveStopOuts": 0,
   "guardrails": {
-    "catastrophicDD": {
-      "limit": 20.0,
-      "current": 51.11,
-      "breached": true
-    },
-    "consecutiveStopOuts": {
-      "limit": 4,
-      "current": 0,
-      "breached": false
-    },
-    "dailyLoss": {
-      "limit": 10.0,
-      "current": 0.0,
-      "breached": false
-    }
+    "catastrophicDrawdownPct": 20.0,
+    "currentDrawdownPct": 51.11,
+    "breached": true,
+    "breachType": "catastrophic_drawdown"
   },
-  "actionsTaken": [
-    "Heartbeat check \u2014 flat portfolio, no actions needed"
-  ],
+  "actionsTaken": [],
   "warnings": [
-    "MCP server offline \u2014 using cached data from last known-good state"
+    "MCP server offline \u2014 using cached state from last known-good data (2026-05-09T22:01Z)"
   ],
-  "systemHealth": {
-    "mcpOnline": false,
-    "vpsScannersOffline": true,
-    "lastScannerHeartbeat": "2026-03-23T23:57:45Z",
-    "staleHours": 1127.0
-  }
+  "strategy": "wolf-primary",
+  "strategyWallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1"
 }
