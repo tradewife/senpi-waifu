@@ -1,29 +1,38 @@
 {
-  "generatedAt": "2026-05-10T06:30:00Z",
+  "generatedAt": "2026-05-09T20:47:09.992740+00:00",
+  "regime": "RISK_OFF",
   "strategy": "wolf-primary",
   "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
-  "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce",
-  "regime": "RISK_OFF",
-  "positions": [],
-  "openOrders": [],
   "equity": {
     "current": 48.887581,
     "peak": 100.0,
+    "drawdownPct": 51.11,
     "dayStart": 48.887581,
-    "drawdownPct": 51.11
+    "dailyPnl": 0.0,
+    "dailyPnlPct": 0.0
+  },
+  "positions": {
+    "open": 0,
+    "entries": []
+  },
+  "orders": {
+    "open": 0,
+    "entries": []
   },
   "guardrails": {
-    "catastrophicDDPct": 20,
-    "currentDDPct": 51.11,
+    "catastrophicDrawdownPct": 20,
+    "currentDrawdownPct": 51.11,
     "breached": true,
-    "breachReason": "DD 51.11% exceeds catastrophic 20%"
+    "breachType": "catastrophic_drawdown",
+    "consecutiveStopOuts": 0,
+    "maxConsecutiveStopOuts": 4,
+    "dailyLossPct": 0.0,
+    "dailyLossLimitPct": 10
   },
-  "actions": [
-    "RISK_OFF enforced \u2014 no positions, no new entries"
-  ],
+  "actions": [],
   "warnings": [
     "MCP offline \u2014 using cached state",
-    "VPS scanners offline since 2026-03-23"
+    "Catastrophic DD (51.11%) far exceeds 20% threshold"
   ],
-  "mcpStatus": "offline"
+  "notes": "Flat portfolio. RISK_OFF correctly enforced. No positions to manage. Awaiting capital recovery or manual reset."
 }
