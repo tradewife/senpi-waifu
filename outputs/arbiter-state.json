@@ -4,16 +4,16 @@
   "dayStartEquity": 48.887581,
   "consecutiveStopOuts": 0,
   "regime": "RISK_OFF",
-  "lastJidoCheck": "2026-05-09T20:30:42Z",
+  "lastJidoCheck": "2026-05-09T20:46:38Z",
   "alerts": [
     {
-      "timestamp": "2026-05-09T20:30:42Z",
+      "timestamp": "2026-05-09T20:46:38Z",
       "type": "JIDO_HEARTBEAT",
       "message": "JIDO portfolio scan. No open positions. RISK_OFF active (DD=51.11% > 20% limit). Account value $48.89. Withdrawable $48.89. Brain synced. No changes."
     }
   ],
   "drawdownPct": 51.11,
-  "lastChecked": "2026-05-09T20:30:42Z",
-  "lastCheckAt": "2026-05-09T20:30:42Z",
+  "lastChecked": "2026-05-09T20:46:38Z",
+  "lastCheckAt": "2026-05-09T20:46:38Z",
   "dayStartDate": "2026-05-09"
 }
