@@ -4,42 +4,22 @@
   "dayStartEquity": 48.887581,
   "consecutiveStopOuts": 0,
   "regime": "RISK_OFF",
-  "lastJidoCheck": "2026-05-09T21:02:02.970413+00:00",
+  "lastJidoCheck": "2026-05-09T21:46:33.926476+00:00",
   "alerts": [
     {
       "type": "JIDO_HEARTBEAT",
-      "timestamp": "2026-05-09T20:31:45.025009+00:00",
+      "timestamp": "2026-05-09T21:46:33.926476+00:00",
       "regime": "RISK_OFF",
       "accountValue": 48.887581,
       "drawdownPct": 51.11,
       "openPositions": 0,
       "openOrders": 0,
-      "message": "JIDO scan. Flat (0 pos, 0 orders). RISK_OFF (DD=51.11%). Acct=$48.89. MCP offline \u2014 using cached state."
-    },
-    {
-      "type": "JIDO_HEARTBEAT",
-      "timestamp": "2026-05-09T20:47:09.992740+00:00",
-      "regime": "RISK_OFF",
-      "accountValue": 48.887581,
-      "drawdownPct": 51.11,
-      "openPositions": 0,
-      "openOrders": 0,
-      "message": "JIDO scan. Flat (0 pos, 0 orders). RISK_OFF (DD=51.11%). Acct=$48.89. MCP offline \u2014 using cached state."
-    },
-    {
-      "type": "JIDO_HEARTBEAT",
-      "timestamp": "2026-05-09T21:02:02.970413+00:00",
-      "regime": "RISK_OFF",
-      "accountValue": 48.887581,
-      "drawdownPct": 51.11,
-      "openPositions": 0,
-      "openOrders": 0,
-      "message": "JIDO scan. Flat (0 pos, 0 orders). RISK_OFF (DD=51.11%). Acct=$48.89. MCP offline \u2014 using cached state."
+      "message": "JIDO scan. Flat (0 pos, 0 orders). RISK_OFF (DD=51.11%). Acct=$48.89. MCP offline \u2014 using cached state. VPS scanners offline since 2026-03-23."
     }
   ],
   "drawdownPct": 51.11,
-  "lastChecked": "2026-05-09T21:02:02.970413+00:00",
-  "lastCheckAt": "2026-05-09T21:02:02Z",
+  "lastChecked": "2026-05-09T21:46:33.926476+00:00",
+  "lastCheckAt": "2026-05-09T21:46:33Z",
   "dayStartDate": "2026-05-09",
-  "lastCheck": "2026-05-09T21:02:02.970413+00:00"
+  "lastCheck": "2026-05-09T21:46:33.926476+00:00"
 }
