@@ -4,40 +4,21 @@
   "dayStartEquity": 48.887581,
   "consecutiveStopOuts": 0,
   "regime": "RISK_OFF",
-  "lastJidoCheck": "2026-05-09T14:18:26.683215+00:00",
+  "lastJidoCheck": "2026-05-10T00:31:06Z",
   "alerts": [
     {
       "type": "JIDO_HEARTBEAT",
-      "timestamp": "2026-05-09T12:16:42Z",
+      "timestamp": "2026-05-10T00:31:06Z",
       "regime": "RISK_OFF",
       "accountValue": 48.887581,
       "drawdownPct": 51.11,
       "openPositions": 0,
       "openOrders": 0,
-      "message": "JIDO heartbeat. No positions, no orders. RISK_OFF active. DD=51.11%. Brain/regime synced. VPS scanners offline (last heartbeat 47+ days ago)."
-    },
-    {
-      "type": "JIDO_HEARTBEAT",
-      "timestamp": "2026-05-09T14:02:43.608082Z",
-      "regime": "RISK_OFF",
-      "equity": 48.887581,
-      "drawdownPct": 51.11,
-      "positions": 0,
-      "message": "No open positions. RISK_OFF active (DD 51.11%). No action needed."
-    },
-    {
-      "type": "JIDO_HEARTBEAT",
-      "timestamp": "2026-05-09T14:18:26.683215+00:00",
-      "regime": "RISK_OFF",
-      "accountValue": 48.887581,
-      "drawdownPct": 51.11,
-      "openPositions": 0,
-      "openOrders": 0,
-      "message": "JIDO scan. Flat (0 pos, 0 orders). RISK_OFF (DD=51.11%). Acct=$48.89. VPS offline since 2026-03-23."
+      "message": "JIDO scan. Flat (0 pos, 0 orders). RISK_OFF (DD=51.11%). Acct=$48.89. Withdrawable=$48.89. Brain/regime synced."
     }
   ],
   "drawdownPct": 51.11,
-  "lastChecked": "2026-05-09T12:16:42Z",
-  "lastCheckAt": "2026-05-09T12:16:42Z",
-  "dayStartDate": "2026-05-09"
+  "lastChecked": "2026-05-10T00:31:06Z",
+  "lastCheckAt": "2026-05-10T00:31:06Z",
+  "dayStartDate": "2026-05-10"
 }
