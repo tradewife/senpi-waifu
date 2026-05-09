@@ -1,24 +1,38 @@
 {
-  "timestamp": "2026-05-09T03:47:30Z",
+  "generatedAt": "2026-05-09T04:17:00Z",
   "regime": "RISK_OFF",
-  "equity": 48.887581,
-  "peakEquity": 100.0,
-  "drawdownPct": 51.11,
-  "accountValue": 48.887581,
-  "withdrawable": 48.887581,
-  "positions": [],
-  "openOrders": 0,
-  "guardrails": {
-    "catastrophicDD": "BREACHED (51.11% > 20%)",
-    "dailyLoss": "N/A (flat)",
-    "consecutiveStopOuts": 0
+  "regimeReason": "DD 51.1% exceeds catastrophic limit 20.0%",
+  "equity": {
+    "current": 48.887581,
+    "peak": 100.0,
+    "dayStart": 48.887581,
+    "withdrawable": 48.887581
   },
-  "actions": [],
-  "alerts": [
-    "RISK_OFF maintained — DD 51.11% exceeds 20% catastrophic threshold",
-    "Flat portfolio — 0 positions, 0 orders",
-    "No naked positions requiring emergency SL",
-    "Brain sync verified — all fields match regime"
+  "drawdown": {
+    "pctFromPeak": 51.11,
+    "absFromPeak": 51.11
+  },
+  "positions": {
+    "open": 0,
+    "details": []
+  },
+  "orders": {
+    "open": 0,
+    "details": []
+  },
+  "guardrails": {
+    "catastrophicDD": 20.0,
+    "dailyLossLimit": 10.0,
+    "maxConsecutiveStopOuts": 4,
+    "allClear": false,
+    "breaches": [
+      "DD 51.11% > 20% catastrophic threshold"
+    ]
+  },
+  "actionsTaken": [
+    "No actions needed - flat portfolio, RISK_OFF maintained"
   ],
-  "vpsScanners": "OFFLINE — heartbeats from 2026-03-23 (>47 days stale)"
+  "warnings": [
+    "VPS scanners offline (last heartbeat 2026-03-23)"
+  ]
 }
