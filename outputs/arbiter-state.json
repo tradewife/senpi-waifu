@@ -4,7 +4,7 @@
   "dayStartEquity": 48.887581,
   "consecutiveStopOuts": 0,
   "regime": "RISK_OFF",
-  "lastJidoCheck": "2026-05-09T11:01:53Z",
+  "lastJidoCheck": "2026-05-09T11:31:23Z",
   "alerts": [
     {
       "timestamp": "2026-05-09T11:01:53Z",
@@ -12,13 +12,18 @@
       "message": "JIDO portfolio scan. No open positions. RISK_OFF active (DD=51.11% > 20% limit). Account value $48.89. Withdrawable $48.89. Brain synced. No changes."
     },
     {
-      "type": "JIDO_HEARTBEAT",
       "timestamp": "2026-05-09T11:16:51Z",
+      "type": "JIDO_HEARTBEAT",
       "message": "JIDO portfolio scan. No open positions. RISK_OFF active (DD=51.11% > 20% limit). Account value: $48.89. Withdrawable: $48.89."
+    },
+    {
+      "type": "JIDO_HEARTBEAT",
+      "timestamp": "2026-05-09T11:31:23Z",
+      "message": "JIDO portfolio scan. No open positions. No open orders. RISK_OFF active (DD=51.11% > 20% limit). Account value: $48.89. Withdrawable: $48.89. All state files synced. No actions needed."
     }
   ],
   "drawdownPct": 51.11,
-  "lastChecked": "2026-05-09T11:16:51Z",
-  "lastCheckAt": "2026-05-09T11:01:53Z",
+  "lastChecked": "2026-05-09T11:31:23Z",
+  "lastCheckAt": "2026-05-09T11:31:23Z",
   "dayStartDate": "2026-05-09"
 }
