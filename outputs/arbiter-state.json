@@ -10,10 +10,15 @@
       "timestamp": "2026-05-09T11:01:53Z",
       "type": "JIDO_HEARTBEAT",
       "message": "JIDO portfolio scan. No open positions. RISK_OFF active (DD=51.11% > 20% limit). Account value $48.89. Withdrawable $48.89. Brain synced. No changes."
+    },
+    {
+      "type": "JIDO_HEARTBEAT",
+      "timestamp": "2026-05-09T11:16:51Z",
+      "message": "JIDO portfolio scan. No open positions. RISK_OFF active (DD=51.11% > 20% limit). Account value: $48.89. Withdrawable: $48.89."
     }
   ],
   "drawdownPct": 51.11,
-  "lastChecked": "2026-05-09T11:01:53Z",
+  "lastChecked": "2026-05-09T11:16:51Z",
   "lastCheckAt": "2026-05-09T11:01:53Z",
   "dayStartDate": "2026-05-09"
 }

@@ -1,29 +1,39 @@
 {
-  "generatedAt": "2026-05-09T11:01:53Z",
+  "timestamp": "2026-05-09T11:16:51Z",
   "regime": "RISK_OFF",
+  "regimeReason": "Catastrophic DD 51.1% (limit 20.0%)",
+  "regimeUpdatedBy": "waifu-regime (arbiter-override)",
   "equity": 48.887581,
   "peakEquity": 100.0,
   "drawdownPct": 51.11,
-  "dailyPnl": 0.0,
-  "openPositions": 0,
   "withdrawable": 48.887581,
+  "openPositions": 0,
+  "openOrders": 0,
+  "strategyWallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
+  "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce",
   "guardrails": {
-    "catastrophicDD": "BREACHED (51.11% > 20%)",
-    "dailyLossLimit": "CLEAR",
-    "consecutiveStopOuts": "CLEAR (0/4)"
+    "catastrophicDrawdownPct": 20.0,
+    "drawdownBreached": true,
+    "dailyLossLimitPct": 10.0,
+    "dailyLossBreached": false,
+    "consecutiveStopOuts": 0,
+    "maxConsecutiveStopOuts": 4,
+    "stopOutsBreached": false
   },
-  "strategy": {
-    "name": "wolf-primary",
-    "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
-    "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce"
+  "brainSync": {
+    "riskMode": "RISK_OFF",
+    "blockNewEntries": true,
+    "allowAutoEntry": false,
+    "maxSlotsCap": 0,
+    "drawdownPctFromPeak": 51.11,
+    "inSync": true
   },
-  "allTimePnl": -50.082419,
-  "allTimeVolume": 951.52,
-  "positions": [],
-  "actions": [],
-  "warnings": [
-    "RISK_OFF enforced: catastrophic DD 51.11% exceeds 20% threshold",
-    "Account flat since ~2026-04-22 (all-time PnL frozen at -$50.08)",
-    "VPS scanner heartbeats stale (last: 2026-03-23, >45 days old) \u2014 VPS deployment likely offline"
-  ]
+  "actions": [
+    "No positions to protect. System in RISK_OFF hibernation."
+  ],
+  "vpsScanners": {
+    "status": "OFFLINE",
+    "lastHeartbeat": "2026-03-23T23:57:45Z",
+    "note": "All VPS scanner heartbeats >45 days stale. Railway deployment likely down."
+  }
 }
