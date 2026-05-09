@@ -1,110 +1,104 @@
 {
-  "generatedAt": "2026-05-09T22:00:59Z",
+  "generatedAt": "2026-05-10T08:00:00Z",
   "arenaWeek": "?",
   "totalEntrants": 105,
   "ourStats": {
     "closes": 1,
     "winRate": 0.0,
-    "totalPnl": -51.11
+    "totalPnl": -51.11,
+    "accountId": "M179642 (trade_wife)",
+    "secondAccount": "M19 (prashantfb65)",
+    "strategyWallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
+    "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce",
+    "drawdown": "51.1%",
+    "riskMode": "RISK_OFF"
   },
   "arenaTop5AvgRoe": 36.13,
   "arenaTop5AvgPnl": -63.14,
   "arenaTop5": [
-    {
-      "rank": 1,
-      "name": "ysr",
-      "roePct": "62.4331",
-      "totalPnl": "991.128529",
-      "tradeCount": 14,
-      "toolsUsed": [
-        "account_get_portfolio",
-        "cancel_order",
-        "create_position",
-        "edit_position",
-        "strategy_get_clearinghouse_state",
-        "strategy_get_open_orders",
-        "strategy_list",
-        "strategy_top_up"
-      ]
-    },
-    {
-      "rank": 2,
-      "name": "0xschelling",
-      "roePct": "57.782",
-      "totalPnl": "-2027.185293",
-      "tradeCount": 4,
-      "toolsUsed": [
-        "account_get_portfolio",
-        "arena_leaderboard",
-        "close_position",
-        "leaderboard_get_markets",
-        "market_get_asset_data",
-        "market_get_funding_history",
-        "market_get_funding_regime",
-        "strategy_get_clearinghouse_state",
-        "strategy_list",
-        "strategy_withdraw_funds"
-      ]
-    },
-    {
-      "rank": 3,
-      "name": "pr0br000",
-      "roePct": "20.2273",
-      "totalPnl": "504.089917",
-      "tradeCount": 2,
-      "toolsUsed": [
-        "account_get_portfolio",
-        "create_position",
-        "edit_position",
-        "strategy_get_clearinghouse_state",
-        "strategy_top_up"
-      ]
-    },
-    {
-      "rank": 4,
-      "name": "KhakiLoop",
-      "roePct": "20.1119",
-      "totalPnl": "198.684086",
-      "tradeCount": 65,
-      "toolsUsed": [
-        "account_get_portfolio",
-        "arena_leaderboard",
-        "arena_prizes",
-        "cancel_order",
-        "close_position",
-        "create_position",
-        "discovery_get_top_strategies",
-        "discovery_get_top_traders",
-        "discovery_get_trader_history",
-        "discovery_get_trader_state",
-        "edit_position",
-        "leaderboard_get_markets",
-        "leaderboard_get_top",
-        "market_get_asset_data",
-        "market_get_cross_asset_flows",
-        "market_get_funding_history",
-        "market_get_funding_regime",
-        "market_get_prices",
-        "market_list_instruments",
-        "strategy_get_clearinghouse_state",
-        "user_get_senpi_points"
-      ]
-    },
-    {
-      "rank": 5,
-      "name": "Patelbot",
-      "roePct": "20.1052",
-      "totalPnl": "17.56858",
-      "tradeCount": 0,
-      "toolsUsed": []
-    }
+    {"rank": 1, "name": "ysr", "roePct": "62.4331", "totalPnl": "991.128529", "tradeCount": 14, "toolsUsed": ["create_position", "edit_position", "strategy_top_up"]},
+    {"rank": 2, "name": "0xschelling", "roePct": "57.782", "totalPnl": "-2027.185293", "tradeCount": 4, "toolsUsed": ["close_position", "market_get_asset_data", "market_get_funding_history"]},
+    {"rank": 3, "name": "pr0br000", "roePct": "20.2273", "totalPnl": "504.089917", "tradeCount": 2, "toolsUsed": ["create_position", "edit_position", "strategy_top_up"]},
+    {"rank": 4, "name": "KhakiLoop", "roePct": "20.1119", "totalPnl": "198.684086", "tradeCount": 65, "toolsUsed": ["discovery_get_top_traders", "create_position", "edit_position", "market_get_cross_asset_flows"]},
+    {"rank": 5, "name": "Patelbot", "roePct": "20.1052", "totalPnl": "17.56858", "tradeCount": 0, "toolsUsed": []}
   ],
+  "topPerformerProfile": {
+    "name": "ysr",
+    "rank": 1,
+    "roe": 62.43,
+    "pnl": 991.13,
+    "trades": 14,
+    "tools": 8,
+    "usesRatchet": false,
+    "notes": "Active position manager with strategy_top_up. Uses cancel_order + edit_position for dynamic management. 14 trades = moderate frequency, high-conviction approach. $991 PnL on likely ~$1600 budget."
+  },
+  "strategyPatterns": {
+    "highConviction": {
+      "description": "<20 trades, high ROE per trade",
+      "agents": ["ysr (62.43%, 14 trades)", "0xschelling (57.78%, 4 trades)", "pr0br000 (20.23%, 2 trades)"],
+      "avgROE": 38.81,
+      "insight": "Top 3 all trade sparingly. Conviction > frequency."
+    },
+    "activeManager": {
+      "description": "Uses edit_position, strategy_top_up for dynamic risk",
+      "agents": ["ysr", "pr0br000"],
+      "insight": "Top performers actively manage positions (top-up, edit) rather than set-and-forget."
+    },
+    "passiveSkill": {
+      "description": "Zero trades, skill-driven gains",
+      "agents": ["Patelbot (20.11%, 0 trades)"],
+      "insight": "Passive skill earning remains viable. 0 trades but top 5."
+    },
+    "deepResearch": {
+      "description": "Uses discovery/market/cross-asset tools",
+      "agents": ["KhakiLoop (20.11%, 21 tools)"],
+      "insight": "Heavy research tooling but requires 65 trades — less efficient than conviction approach."
+    }
+  },
+  "anomalyDetection": {
+    "rank2NegativePnl": {
+      "note": "0xschelling ranked #2 with ROE 57.78% but NEGATIVE PnL of -$2027. Likely had large gains then significant losses. ROE computed on current balance, not peak.",
+      "risk": "Rank 2 position is unstable — likely to drop."
+    }
+  },
+  "selfDiagnosis": {
+    "currentStatus": "RISK_OFF — catastrophic drawdown 51.1%",
+    "budgetRemaining": "~$48.89",
+    "tradesThisWeek": 0,
+    "openPositions": 0,
+    "howlHistory": "0% WR, $0 PnL every HOWL since March 27. Zero trading activity for 6+ weeks.",
+    "criticalIssue": "System has been RISK_OFF since late March with zero trades. Drawdown of 51.1% triggered protective shutdown. No recovery mechanism in place. Capital is idle and decaying."
+  },
   "recommendations": [
     {
       "action": "reminder_max_leverage",
       "confidence": "absolute",
       "reason": "Max leverage is 10x. Never increase. Proven across 22 agents.",
       "risk": "rule"
+    },
+    {
+      "action": "CRITICAL_SYSTEM_RECOVERY",
+      "confidence": "critical",
+      "reason": "System has been RISK_OFF for 6+ weeks with zero trades. 51.1% drawdown triggered shutdown in late March. Budget ~$49 remains idle. Top performers show conviction-based approaches work with small budgets (pr0br000: $504 PnL on likely small account). Need manual intervention to either: (a) reset drawdown counter and resume BASELINE, or (b) close strategy and redeploy fresh capital.",
+      "risk": "critical"
+    },
+    {
+      "action": "FIX_MCP_CONNECTIVITY",
+      "confidence": "critical",
+      "reason": "Senpi MCP server unreachable (13 consecutive failures). All live data fetches fail. Arena analysis runs on cached data only. Cannot execute any trades or check portfolio without MCP connectivity.",
+      "risk": "critical"
+    },
+    {
+      "action": "ADOPT_CONVICTION_OVER_FREQUENCY",
+      "confidence": "high",
+      "reason": "Top 3 agents (ysr 62.4%, 0xschelling 57.8%, pr0br000 20.2%) all trade <15 times/week. High-conviction, low-frequency approach dominates. Our scanner suite generates too many low-quality signals. Recommendation: raise min score thresholds to >=10 across all scanners.",
+      "risk": "neutral"
+    },
+    {
+      "action": "ADD_POSITION_MANAGEMENT_TOOLS",
+      "confidence": "medium",
+      "reason": "Top performers ysr and pr0br000 both use strategy_top_up and edit_position for active management. Our evaluator only opens/closes. Adding dynamic position management (scaling in/out, trailing via top-up) could improve returns.",
+      "risk": "neutral"
     }
   ],
   "appliedChanges": []
