@@ -1,30 +1,31 @@
 {
-  "generatedAt": "2026-05-09T08:16:56Z",
-  "generatedBy": "jido-hermes-cron",
+  "generatedAt": "2026-05-09T18:32:00Z",
   "regime": "RISK_OFF",
-  "regimeReason": "DD 51.11% exceeds catastrophic 20% limit",
-  "accountValue": 48.887581,
-  "withdrawable": 48.887581,
+  "strategy": "wolf-primary",
+  "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
+  "accountValue": 48.89,
   "peakEquity": 100.0,
   "drawdownPct": 51.11,
+  "dailyPnl": 0.0,
+  "openPositions": 0,
+  "openOrders": 0,
+  "withdrawable": 48.89,
   "positions": [],
-  "openOrders": [],
-  "guardrails": {
-    "catastrophicDrawdownPct": 20,
-    "drawdownBreached": true,
-    "dailyLossLimitPct": 10,
-    "dailyLossBreached": false,
-    "consecutiveStopOuts": 0,
-    "maxConsecutiveStopOuts": 4,
-    "stopOutsBreached": false
+  "marketSnapshot": {
+    "BTC": 80398.5,
+    "ETH": 2318.85,
+    "SOL": 93.9125
   },
-  "vpsStatus": "OFFLINE since 2026-03-23",
-  "actionsTaken": "None. No open positions. RISK_OFF maintained.",
-  "strategy": {
-    "name": "WOLF-Primary",
-    "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
-    "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce",
-    "budget": 100,
-    "remaining": 48.89
-  }
+  "guardrails": {
+    "catastrophicDD breached": true,
+    "dailyLossLimit breached": false,
+    "consecutiveStopOuts breached": false
+  },
+  "alerts": [
+    "RISK_OFF enforced: DD 51.11% exceeds 20% catastrophic limit",
+    "VPS scanners offline since 2026-03-23 (47 days)",
+    "Account at $48.89 of $100 budget — capital preservation mode"
+  ],
+  "actionsTaken": [],
+  "brainSynced": true
 }
