@@ -4,11 +4,11 @@
   "dayStartEquity": 48.887581,
   "consecutiveStopOuts": 0,
   "regime": "RISK_OFF",
-  "lastJidoCheck": "2026-05-10T00:31:06Z",
+  "lastJidoCheck": "2026-05-09T14:46:59Z",
   "alerts": [
     {
       "type": "JIDO_HEARTBEAT",
-      "timestamp": "2026-05-10T00:31:06Z",
+      "timestamp": "2026-05-09T14:46:59Z",
       "regime": "RISK_OFF",
       "accountValue": 48.887581,
       "drawdownPct": 51.11,
@@ -18,7 +18,7 @@
     }
   ],
   "drawdownPct": 51.11,
-  "lastChecked": "2026-05-10T00:31:06Z",
-  "lastCheckAt": "2026-05-10T00:31:06Z",
-  "dayStartDate": "2026-05-10"
+  "lastChecked": "2026-05-09T14:46:59Z",
+  "lastCheckAt": "2026-05-09T14:46:59Z",
+  "dayStartDate": "2026-05-09"
 }
