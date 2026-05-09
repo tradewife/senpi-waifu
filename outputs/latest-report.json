@@ -1,29 +1,30 @@
 {
-  "generatedAt": "2026-05-09T08:00:58Z",
+  "generatedAt": "2026-05-09T08:16:56Z",
+  "generatedBy": "jido-hermes-cron",
   "regime": "RISK_OFF",
-  "equity": 48.89,
+  "regimeReason": "DD 51.11% exceeds catastrophic 20% limit",
+  "accountValue": 48.887581,
+  "withdrawable": 48.887581,
   "peakEquity": 100.0,
   "drawdownPct": 51.11,
-  "dailyPnl": 0,
-  "dailyCloses": 0,
-  "dailyWinRate": 0,
-  "openPositions": 0,
-  "alerts": [
-    "CATASTROPHIC DRAWDOWN: 51.1%"
-  ],
-  "deadWeight": [],
+  "positions": [],
+  "openOrders": [],
   "guardrails": {
-    "dailyLossLimitPct": 10,
     "catastrophicDrawdownPct": 20,
+    "drawdownBreached": true,
+    "dailyLossLimitPct": 10,
+    "dailyLossBreached": false,
+    "consecutiveStopOuts": 0,
     "maxConsecutiveStopOuts": 4,
-    "directionalCapPct": 70,
-    "minLeverage": 7,
-    "maxLeverage": 10,
-    "maxPositionsTotal": 3,
-    "perAssetCooldownMinutes": 120,
-    "bannedAssetPrefixes": [
-      "xyz:"
-    ],
-    "perTradeRiskPct": 1.0
+    "stopOutsBreached": false
+  },
+  "vpsStatus": "OFFLINE since 2026-03-23",
+  "actionsTaken": "None. No open positions. RISK_OFF maintained.",
+  "strategy": {
+    "name": "WOLF-Primary",
+    "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
+    "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce",
+    "budget": 100,
+    "remaining": 48.89
   }
 }
