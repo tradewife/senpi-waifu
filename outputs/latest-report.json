@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-05-09T23:16:34Z",
+  "timestamp": "2026-05-09T23:31:21.004840+00:00",
   "regime": "RISK_OFF",
   "accountValue": 48.887581,
   "peakEquity": 100.0,
@@ -16,7 +16,8 @@
     "None \u2014 RISK_OFF active, no open positions, MCP offline"
   ],
   "warnings": [
-    "MCP server offline \u2014 using cached equity data"
+    "MCP server offline \u2014 using cached equity data from 2026-05-09T23:16:34Z",
+    "VPS scanners offline since 2026-03-23 (48+ days) \u2014 Railway deployment likely down"
   ],
   "strategy": "wolf-primary",
   "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",

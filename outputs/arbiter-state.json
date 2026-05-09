@@ -24,7 +24,18 @@
       "openPositions": 0,
       "openOrders": 0,
       "message": "MCP offline \u2014 using cached state. RISK_OFF active. Drawdown 51.11% (>20% catastrophic). No open positions. All files consistent."
+    },
+    {
+      "type": "JIDO_HEARTBEAT",
+      "timestamp": "2026-05-09T23:31:21.004840+00:00",
+      "regime": "RISK_OFF",
+      "accountValue": 48.887581,
+      "drawdownPct": 51.11,
+      "openPositions": 0,
+      "openOrders": 0,
+      "message": "RISK_OFF active, 0 open positions. DD 51.11% from peak. MCP server offline \u2014 cached data. VPS scanners offline since 2026-03-23."
     }
   ],
-  "lastUpdated": "2026-05-09T23:16:34Z"
+  "lastUpdated": "2026-05-09T23:16:34Z",
+  "lastChecked": "2026-05-09T23:31:21.004840+00:00"
 }
