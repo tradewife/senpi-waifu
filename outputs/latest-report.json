@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-05-09T01:47:56.098723+00:00",
+  "timestamp": "2026-05-09T02:47:56.039975+00:00",
   "source": "jido-cron",
   "regime": "RISK_OFF",
   "equity": {
@@ -32,34 +32,10 @@
       "value": 0,
       "limit": 4,
       "breached": false
-    },
-    "dailyLoss": {
-      "value": 0.0,
-      "limit": 10.0,
-      "breached": false
     }
   },
-  "marketPrices": {
-    "BTC": 80342.5,
-    "ETH": 2315.85,
-    "SOL": 93.2475,
-    "HYPE": 44.0005,
-    "kPEPE": 0.004359,
-    "kBONK": 0.007322,
-    "WIF": 0.227555,
-    "DOGE": 0.110475,
-    "AR": 2.7373,
-    "RENDER": 2.0633,
-    "XRP": 1.43085
-  },
-  "actions": [],
-  "warnings": [
-    "VPS scanners offline since 2026-03-23 (brain/arena/risk-arbiter heartbeats stale ~47 days)"
+  "actions": [
+    "None \u2014 flat portfolio, RISK_OFF maintained"
   ],
-  "brainSync": {
-    "riskMode": "RISK_OFF",
-    "blockNewEntries": true,
-    "drawdownPctFromPeak": 51.11,
-    "synced": true
-  }
+  "vpsStatus": "OFFLINE \u2014 all scanner heartbeats stale >46 days (last: 2026-03-23)"
 }
