@@ -4,7 +4,7 @@
   "dayStartEquity": 48.887581,
   "consecutiveStopOuts": 0,
   "regime": "RISK_OFF",
-  "lastJidoCheck": "2026-05-09T04:17:00Z",
+  "lastJidoCheck": "2026-05-09T04:32:55.985599Z",
   "alerts": [
     {
       "timestamp": "2026-05-09T03:17:58.220975+00:00",
@@ -26,6 +26,16 @@
       "timestamp": "2026-05-09T04:17:00Z",
       "type": "JIDO_HEARTBEAT",
       "message": "JIDO portfolio scan complete. No open positions. RISK_OFF active. DD=51.11%. Brain synced. VPS offline. No changes since last check."
+    },
+    {
+      "type": "JIDO_STATUS",
+      "timestamp": "2026-05-09T04:32:55.985599Z",
+      "mode": "RISK_OFF",
+      "equity": 48.887581,
+      "drawdownPct": 51.11,
+      "positions": 0,
+      "message": "JIDO: Flat portfolio, 0 positions, 0 orders. RISK_OFF maintained. Equity $48.89, DD 51.11%. No naked positions. VPS scanners offline (>1000h stale)."
     }
-  ]
+  ],
+  "drawdownPct": 51.11
 }

@@ -1,38 +1,25 @@
 {
-  "generatedAt": "2026-05-09T04:17:00Z",
+  "timestamp": "2026-05-09T04:32:55.985599Z",
+  "source": "jido-cron",
   "regime": "RISK_OFF",
-  "regimeReason": "DD 51.1% exceeds catastrophic limit 20.0%",
-  "equity": {
-    "current": 48.887581,
-    "peak": 100.0,
-    "dayStart": 48.887581,
-    "withdrawable": 48.887581
-  },
-  "drawdown": {
-    "pctFromPeak": 51.11,
-    "absFromPeak": 51.11
-  },
-  "positions": {
-    "open": 0,
-    "details": []
-  },
-  "orders": {
-    "open": 0,
-    "details": []
-  },
+  "equity": 48.887581,
+  "peakEquity": 100.0,
+  "drawdownPct": 51.11,
+  "withdrawable": 48.887581,
+  "positions": [],
+  "orders": [],
   "guardrails": {
-    "catastrophicDD": 20.0,
-    "dailyLossLimit": 10.0,
-    "maxConsecutiveStopOuts": 4,
-    "allClear": false,
-    "breaches": [
-      "DD 51.11% > 20% catastrophic threshold"
-    ]
+    "catastrophicDrawdownBreached": true,
+    "drawdownPct": 51.11,
+    "threshold": 20
   },
-  "actionsTaken": [
-    "No actions needed - flat portfolio, RISK_OFF maintained"
+  "alerts": [
+    "VPS scanners offline (>1000h stale: brain, arena, risk-arbiter)"
   ],
-  "warnings": [
-    "VPS scanners offline (last heartbeat 2026-03-23)"
-  ]
+  "actions": [
+    "No positions to monitor",
+    "Brain/regime already consistent",
+    "Arbiter state updated"
+  ],
+  "assessment": "Fully flat. RISK_OFF active. $48.89 remaining. No action needed."
 }
