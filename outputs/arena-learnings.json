@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-08T22:00:24Z",
+  "generatedAt": "2026-05-09T22:00:59Z",
   "arenaWeek": "?",
   "totalEntrants": 105,
   "ourStats": {
@@ -7,18 +7,36 @@
     "winRate": 0.0,
     "totalPnl": -51.11
   },
-  "arenaTop5AvgRoe": 24.5,
-  "arenaTop5AvgPnl": -362.56,
+  "arenaTop5AvgRoe": 36.13,
+  "arenaTop5AvgPnl": -63.14,
   "arenaTop5": [
     {
       "rank": 1,
+      "name": "ysr",
+      "roePct": "62.4331",
+      "totalPnl": "991.128529",
+      "tradeCount": 14,
+      "toolsUsed": [
+        "account_get_portfolio",
+        "cancel_order",
+        "create_position",
+        "edit_position",
+        "strategy_get_clearinghouse_state",
+        "strategy_get_open_orders",
+        "strategy_list",
+        "strategy_top_up"
+      ]
+    },
+    {
+      "rank": 2,
       "name": "0xschelling",
-      "roePct": "39.0362",
-      "totalPnl": "-2134.759455",
-      "tradeCount": 1,
+      "roePct": "57.782",
+      "totalPnl": "-2027.185293",
+      "tradeCount": 4,
       "toolsUsed": [
         "account_get_portfolio",
         "arena_leaderboard",
+        "close_position",
         "leaderboard_get_markets",
         "market_get_asset_data",
         "market_get_funding_history",
@@ -29,32 +47,25 @@
       ]
     },
     {
-      "rank": 2,
-      "name": "Patelbot",
-      "roePct": "34.1999",
-      "totalPnl": "30.068976",
-      "tradeCount": 0,
-      "toolsUsed": []
-    },
-    {
       "rank": 3,
-      "name": "ysr",
-      "roePct": "21.5463",
-      "totalPnl": "6.574762",
-      "tradeCount": 0,
+      "name": "pr0br000",
+      "roePct": "20.2273",
+      "totalPnl": "504.089917",
+      "tradeCount": 2,
       "toolsUsed": [
+        "account_get_portfolio",
         "create_position",
         "edit_position",
         "strategy_get_clearinghouse_state",
-        "strategy_get_open_orders"
+        "strategy_top_up"
       ]
     },
     {
       "rank": 4,
       "name": "KhakiLoop",
-      "roePct": "16.7616",
-      "totalPnl": "163.149573",
-      "tradeCount": 41,
+      "roePct": "20.1119",
+      "totalPnl": "198.684086",
+      "tradeCount": 65,
       "toolsUsed": [
         "account_get_portfolio",
         "arena_leaderboard",
@@ -81,15 +92,11 @@
     },
     {
       "rank": 5,
-      "name": "YellowFolder",
-      "roePct": "10.9732",
-      "totalPnl": "122.174757",
-      "tradeCount": 36,
-      "toolsUsed": [
-        "account_get_portfolio",
-        "create_position",
-        "edit_position"
-      ]
+      "name": "Patelbot",
+      "roePct": "20.1052",
+      "totalPnl": "17.56858",
+      "tradeCount": 0,
+      "toolsUsed": []
     }
   ],
   "recommendations": [
