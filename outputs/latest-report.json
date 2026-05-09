@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-09T20:01:10Z",
+  "generatedAt": "2026-05-09T20:02:43Z",
   "regime": "RISK_OFF",
   "equity": 48.89,
   "peakEquity": 100.0,
@@ -9,7 +9,8 @@
   "dailyWinRate": 0,
   "openPositions": 0,
   "alerts": [
-    "CATASTROPHIC DRAWDOWN: 51.1%"
+    "CATASTROPHIC DRAWDOWN: 51.1%",
+    "MCP OFFLINE \u2014 using cached state"
   ],
   "deadWeight": [],
   "guardrails": {
