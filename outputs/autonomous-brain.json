@@ -440,7 +440,8 @@
     "arbiter": {
       "peakEquity": 100.0,
       "dayStartEquity": 48.887581,
-      "consecutiveStopOuts": 0
+      "consecutiveStopOuts": 0,
+      "lastJidoRun": "2026-05-09T22:01:31.264947+00:00"
     }
   },
   "pending": {
