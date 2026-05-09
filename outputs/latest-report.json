@@ -1,34 +1,29 @@
 {
-  "generatedAt": "2026-05-09T07:46:37Z",
+  "generatedAt": "2026-05-09T08:00:58Z",
   "regime": "RISK_OFF",
-  "regimeReason": "DD 51.11% exceeds catastrophic 20% limit",
-  "strategy": "wolf-primary",
-  "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
-  "accountValue": 48.887581,
-  "withdrawable": 48.887581,
+  "equity": 48.89,
   "peakEquity": 100.0,
   "drawdownPct": 51.11,
+  "dailyPnl": 0,
+  "dailyCloses": 0,
+  "dailyWinRate": 0,
   "openPositions": 0,
-  "openOrders": 0,
-  "consecutiveStopOuts": 0,
-  "guardrails": {
-    "catastrophicDD": "BREACHED (51.11% > 20%)",
-    "dailyLossLimit": "CLEAR",
-    "consecutiveStopOuts": "CLEAR (0 < 4)"
-  },
-  "brainSync": {
-    "riskMode": "RISK_OFF",
-    "blockNewEntries": true,
-    "allowAutoEntry": false,
-    "maxSlotsCap": 0,
-    "drawdownPctFromPeak": 51.11,
-    "synced": true
-  },
-  "vpsStatus": "OFFLINE since 2026-03-23",
-  "actions": [
-    "None \u2014 RISK_OFF enforced, no positions to protect"
+  "alerts": [
+    "CATASTROPHIC DRAWDOWN: 51.1%"
   ],
-  "nextSteps": [
-    "Await user decision on capital reset or regime override"
-  ]
+  "deadWeight": [],
+  "guardrails": {
+    "dailyLossLimitPct": 10,
+    "catastrophicDrawdownPct": 20,
+    "maxConsecutiveStopOuts": 4,
+    "directionalCapPct": 70,
+    "minLeverage": 7,
+    "maxLeverage": 10,
+    "maxPositionsTotal": 3,
+    "perAssetCooldownMinutes": 120,
+    "bannedAssetPrefixes": [
+      "xyz:"
+    ],
+    "perTradeRiskPct": 1.0
+  }
 }
