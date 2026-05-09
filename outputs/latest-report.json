@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-05-09T00:03:09.056596+00:00",
+  "generatedAt": "2026-05-09T00:17:55.570178+00:00",
   "regime": "RISK_OFF",
   "equity": 48.887581,
   "peakEquity": 100.0,
@@ -7,24 +7,23 @@
   "withdrawable": 48.887581,
   "openPositions": 0,
   "openOrders": 0,
-  "positions": [],
   "guardrails": {
-    "catastrophicDrawdownPct": 20,
-    "drawdownBreached": true,
-    "maxConsecutiveStopOuts": 4,
+    "catastrophicDD": 20.0,
+    "currentDD": 51.11,
+    "breached": true,
     "consecutiveStopOuts": 0,
-    "stopOutsBreached": false,
-    "dailyLossLimitPct": 10
+    "maxConsecutiveStopOuts": 4
   },
-  "actions": [
-    "No open positions \u2014 flat portfolio",
-    "RISK_OFF maintained (DD 51.11% >> 20% threshold)",
-    "Brain/regime sync verified \u2014 all consistent",
-    "No emergency SL needed \u2014 no positions"
-  ],
+  "positions": [],
+  "marketPrices": {
+    "BTC": 80102.5,
+    "ETH": 2306.35,
+    "SOL": 92.1385,
+    "HYPE": 43.3395
+  },
+  "actions": [],
   "warnings": [
-    "VPS scanners OFFLINE \u2014 last heartbeat 2026-03-23 (46 days stale)",
-    "SERR031 on strategy_list \u2014 auth issue persists (expected)",
-    "Account at ~49% of peak \u2014 deep drawdown territory"
-  ]
+    "VPS scanners offline since March 23 (47 days)"
+  ],
+  "assessment": "Flat portfolio. RISK_OFF enforced (DD 51.11% > 20% threshold). No open positions, no naked exposure. Brain and regime files in sync. No actions required."
 }

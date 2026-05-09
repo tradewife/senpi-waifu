@@ -3,35 +3,19 @@
   "lastEquity": 48.887581,
   "dayStartEquity": 48.887581,
   "consecutiveStopOuts": 0,
-  "lastUpdated": "2026-05-09T00:02:54.270756+00:00",
+  "lastUpdated": "2026-05-09T00:17:28.057044+00:00",
   "alerts": [
     {
+      "timestamp": "2026-05-09T00:17:28.057044+00:00",
       "type": "JIDO_CHECK",
-      "timestamp": "2026-05-08T21:46:38.514475+00:00",
-      "severity": "INFO",
-      "message": "JIDO portfolio check: 0 positions, RISK_OFF active, DD 51.11%, equity $48.89 (live MCP confirmed). BTC $80178.50 | ETH $2312.15 | SOL $92.34 | HYPE $43.30. No naked positions. No open orders. Brain/regime in sync. VPS scanners offline since March 23 (47 days). No actions needed."
-    },
-    {
-      "type": "JIDO_HEARTBEAT",
-      "timestamp": "2026-05-08T21:46:38.514477+00:00",
-      "message": "JIDO portfolio scan complete. No open positions. RISK_OFF active. DD=51.11%. Brain synced."
-    },
-    {
-      "type": "JIDO_HEARTBEAT",
-      "timestamp": "2026-05-08T22:17:43Z",
-      "message": "JIDO portfolio scan complete. No open positions. RISK_OFF active. DD=51.11%. Brain synced."
-    },
-    {
-      "type": "JIDO_HEARTBEAT",
-      "timestamp": "2026-05-08T23:47:30Z",
-      "message": "JIDO portfolio scan complete. No open positions. RISK_OFF active. DD=51.11%. Brain synced."
-    },
-    {
-      "timestamp": "2026-05-09T00:02:54.270756+00:00",
-      "type": "JIDO_CHECK",
-      "message": "JIDO: Flat portfolio, 0 positions, 0 orders. RISK_OFF maintained. Equity $48.89, DD 51.11%. VPS scanners offline (46d stale).",
+      "message": "JIDO: Flat portfolio, 0 positions, 0 orders. RISK_OFF maintained. Equity $48.89, DD 51.11%. No naked positions. No actions needed.",
       "severity": "INFO"
+    },
+    {
+      "timestamp": "2026-05-09T00:17:28.057044+00:00",
+      "type": "JIDO_HEARTBEAT",
+      "message": "JIDO portfolio scan complete. No open positions. RISK_OFF active. DD=51.11%. Brain synced."
     }
   ],
-  "lastChecked": "2026-05-08T23:47:30Z"
+  "lastChecked": "2026-05-09T00:17:28.057044+00:00"
 }
