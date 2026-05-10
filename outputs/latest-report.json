@@ -1,25 +1,22 @@
 {
-  "generatedAt": "2026-05-10T17:32:32.578541+00:00",
+  "generatedAt": "2026-05-10T17:46:26Z",
   "source": "cached",
   "regime": {
     "mode": "RISK_OFF",
-    "reason": "DD 51.11% > catastrophic 20%",
+    "reason": "Catastrophic drawdown 51.1% exceeds 20% threshold",
     "enforcedBy": "jido",
-    "marketSignal": "BASELINE (BTC slope=-0.44%, ATR=0.18%)"
+    "marketSignal": "BASELINE (BTC slope=-0.44%, ATR=0.18%; ETH slope=-2.16%, ATR=0.24%)"
   },
   "portfolio": {
-    "equity": {
-      "current": 48.887581,
-      "peak": 100.0,
-      "dayStart": 48.887581
-    },
-    "drawdown": {
-      "pctFromPeak": 51.11,
-      "amount": 51.112419
-    },
+    "peakEquity": 100.0,
+    "currentEquity": 48.887581,
+    "drawdownPct": 51.11,
     "openPositions": 0,
-    "openOrders": 0
+    "openOrders": 0,
+    "dailyPnl": 0.0,
+    "withdrawable": "unknown (MCP offline)"
   },
+  "positions": [],
   "guardrails": {
     "catastrophicDrawdown": {
       "threshold": 20,
@@ -28,7 +25,7 @@
     },
     "dailyLossLimit": {
       "threshold": 10,
-      "actual": 0,
+      "actual": 0.0,
       "breached": false
     },
     "consecutiveStopOuts": {
@@ -36,30 +33,24 @@
       "actual": 0,
       "breached": false
     },
-    "maxPositionsTotal": {
+    "maxPositions": {
       "threshold": 3,
       "actual": 0,
       "breached": false
     }
   },
-  "strategy": {
-    "name": "WOLF-Primary",
-    "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
-    "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce",
-    "budget": 100,
-    "remaining": 48.887581
-  },
-  "infrastructure": {
-    "mcpStatus": "offline",
-    "mcpFailures": "58+",
-    "vpsStatus": "decommissioned",
-    "vpsLastHeartbeat": "2026-03-23T23:57:45Z",
-    "vpsDaysStale": 48
-  },
   "actions": [],
   "warnings": [
-    "MCP server offline (58+ consecutive failures) \u2014 all data from cache",
-    "VPS decommissioned since 2026-03-23 (>48 days)",
-    "DD 51.11% severely exceeds catastrophic 20% threshold"
-  ]
+    "MCP offline (59+ consecutive failures) \u2014 using cached equity from 2026-05-10",
+    "VPS decommissioned since 2026-03-23 (>48 days) \u2014 all scanner crons offline",
+    "DD 51.11% is based on cached equity \u2014 actual DD may differ",
+    "Portfolio flat: no open positions or orders"
+  ],
+  "strategy": {
+    "name": "wolf-primary",
+    "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
+    "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce",
+    "budget": 100.0,
+    "remaining": 48.89
+  }
 }
