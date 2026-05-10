@@ -1,29 +1,29 @@
 {
-  "generatedAt": "2026-05-10T02:01:04Z",
+  "generatedAt": "2026-05-10T02:02:20.946823+00:00",
   "regime": "RISK_OFF",
-  "equity": 48.89,
-  "peakEquity": 100.0,
-  "drawdownPct": 51.11,
-  "dailyPnl": 0,
-  "dailyCloses": 0,
-  "dailyWinRate": 0,
-  "openPositions": 0,
-  "alerts": [
-    "CATASTROPHIC DRAWDOWN: 51.1%"
-  ],
-  "deadWeight": [],
+  "strategy": "wolf-primary",
+  "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
+  "equity": {
+    "current": 48.887581,
+    "peak": 100.0,
+    "drawdownPct": 51.11,
+    "dayStart": 48.887581
+  },
+  "positions": {
+    "open": 0,
+    "list": []
+  },
   "guardrails": {
-    "dailyLossLimitPct": 10,
     "catastrophicDrawdownPct": 20,
-    "maxConsecutiveStopOuts": 4,
-    "directionalCapPct": 70,
-    "minLeverage": 7,
-    "maxLeverage": 10,
-    "maxPositionsTotal": 3,
-    "perAssetCooldownMinutes": 120,
-    "bannedAssetPrefixes": [
-      "xyz:"
+    "dailyLossLimitPct": 10,
+    "breached": [
+      "drawdown"
     ],
-    "perTradeRiskPct": 1.0
-  }
+    "activeRegime": "RISK_OFF"
+  },
+  "actions": [],
+  "warnings": [
+    "MCP offline \u2014 using cached data"
+  ],
+  "summary": "Flat portfolio. RISK_OFF enforced (DD 51.11% exceeds 20% catastrophic). No open positions, no pending orders."
 }
