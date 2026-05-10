@@ -1,31 +1,28 @@
 {
-  "generatedAt": "2026-05-10T08:02:05Z",
+  "timestamp": "2026-05-10T08:17:02.851857Z",
   "regime": "RISK_OFF",
-  "strategy": "wolf-primary",
-  "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
-  "accountValue": 48.887581,
-  "peakEquity": 100.0,
-  "drawdownPct": 51.11,
-  "dailyPnl": 0.0,
-  "openPositions": 0,
-  "openOrders": 0,
-  "positions": [],
-  "guardrails": {
-    "catastrophicDD": 20.0,
-    "currentDD": 51.11,
-    "breached": true,
-    "reason": "Catastrophic DD 51.11% (limit 20.0%)"
+  "portfolioSnapshot": {
+    "accountValue": 48.887581,
+    "peakEquity": 100.0,
+    "drawdownPct": 51.11,
+    "openPositions": 0,
+    "openOrders": 0,
+    "withdrawable": null,
+    "source": "cached"
   },
-  "actions": [
-    "No actions \u2014 flat portfolio, RISK_OFF enforced"
-  ],
+  "guardrails": {
+    "catastrophicDrawdownPct": 20.0,
+    "drawdownBreached": true,
+    "consecutiveStopOuts": 0,
+    "maxConsecutiveStopOuts": 4,
+    "stopOutsBreached": false,
+    "status": "BREACHED"
+  },
+  "positions": [],
+  "actions": [],
   "warnings": [
-    "MCP server offline \u2014 using cached equity data"
+    "MCP server offline \u2014 using cached state",
+    "VPS scanners offline since 2026-03-23"
   ],
-  "vpsHeartbeats": "STALE \u2014 last 2026-03-23 (~48 days ago)",
-  "cronHeartbeats": {
-    "brain": "2026-03-23T23:57:15Z",
-    "arena": "2026-03-23T23:57:05Z",
-    "risk-arbiter": "2026-03-23T23:57:45Z"
-  }
+  "mcpStatus": "offline"
 }
