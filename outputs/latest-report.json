@@ -1,22 +1,36 @@
 {
-  "generatedAt": "2026-05-10T17:46:26Z",
+  "generatedAt": "2026-05-10T18:01:43Z",
   "source": "cached",
+  "warnings": [
+    "MCP offline (60+ consecutive failures) \u2014 all data from cached state",
+    "DD 51.11% based on cached equity from 2026-05-10 \u2014 actual DD may differ",
+    "VPS decommissioned since 2026-03-23 \u2014 no scanner heartbeats for 48+ days"
+  ],
   "regime": {
     "mode": "RISK_OFF",
-    "reason": "Catastrophic drawdown 51.1% exceeds 20% threshold",
-    "enforcedBy": "jido",
-    "marketSignal": "BASELINE (BTC slope=-0.44%, ATR=0.18%; ETH slope=-2.16%, ATR=0.24%)"
+    "reason": "Catastrophic DD 51.1% (limit 20.0%)",
+    "enforcedBy": "jido-emergency",
+    "marketSignal": null
   },
   "portfolio": {
-    "peakEquity": 100.0,
-    "currentEquity": 48.887581,
+    "equity": {
+      "current": 48.887581,
+      "peak": 100.0,
+      "dayStart": 48.887581
+    },
     "drawdownPct": 51.11,
+    "dailyPnl": 0.0,
     "openPositions": 0,
     "openOrders": 0,
-    "dailyPnl": 0.0,
-    "withdrawable": "unknown (MCP offline)"
+    "withdrawable": null
   },
-  "positions": [],
+  "strategy": {
+    "name": "WOLF-Primary",
+    "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
+    "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce",
+    "budget": 100,
+    "remaining": 48.887581
+  },
   "guardrails": {
     "catastrophicDrawdown": {
       "threshold": 20,
@@ -32,25 +46,16 @@
       "threshold": 4,
       "actual": 0,
       "breached": false
-    },
-    "maxPositions": {
-      "threshold": 3,
-      "actual": 0,
-      "breached": false
     }
   },
-  "actions": [],
-  "warnings": [
-    "MCP offline (59+ consecutive failures) \u2014 using cached equity from 2026-05-10",
-    "VPS decommissioned since 2026-03-23 (>48 days) \u2014 all scanner crons offline",
-    "DD 51.11% is based on cached equity \u2014 actual DD may differ",
-    "Portfolio flat: no open positions or orders"
+  "positions": [],
+  "actions": [
+    "Heartbeat only \u2014 no positions, no MCP, no actions needed"
   ],
-  "strategy": {
-    "name": "wolf-primary",
-    "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
-    "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce",
-    "budget": 100.0,
-    "remaining": 48.89
+  "vpsStatus": {
+    "status": "DECOMMISSIONED",
+    "lastHeartbeat": "2026-03-23T23:57:45Z",
+    "daysOffline": 48,
+    "severity": "CRITICAL"
   }
 }
