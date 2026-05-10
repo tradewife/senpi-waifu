@@ -1,25 +1,34 @@
 {
-  "timestamp": "2026-05-09T23:31:21.004840+00:00",
+  "timestamp": "2026-05-10T00:17:18.246172+00:00",
   "regime": "RISK_OFF",
-  "accountValue": 48.887581,
-  "peakEquity": 100.0,
-  "drawdownPct": 51.11,
-  "openPositions": 0,
-  "openOrders": 0,
-  "withdrawable": 48.89,
+  "runType": "jido-cron",
+  "portfolio": {
+    "accountValue": 48.887581,
+    "peakEquity": 100.0,
+    "drawdownPct": 51.11,
+    "openPositions": 0,
+    "openOrders": 0,
+    "withdrawable": "unknown (MCP offline)"
+  },
+  "positions": [],
   "guardrails": {
-    "catastrophicDrawdownBreached": true,
-    "consecutiveStopOutsBreached": false,
-    "dailyLossLimitBreached": false
+    "catastrophicDrawdownPct": 20,
+    "currentDrawdownPct": 51.11,
+    "breached": true,
+    "breachType": "catastrophic_drawdown",
+    "dailyLossLimitPct": 10,
+    "maxConsecutiveStopOuts": 4,
+    "consecutiveStopOuts": 0
   },
   "actions": [
-    "None \u2014 RISK_OFF active, no open positions, MCP offline"
+    "RISK_OFF already active \u2014 no new actions needed",
+    "MCP server offline \u2014 using cached data"
   ],
   "warnings": [
-    "MCP server offline \u2014 using cached equity data from 2026-05-09T23:16:34Z",
-    "VPS scanners offline since 2026-03-23 (48+ days) \u2014 Railway deployment likely down"
+    "MCP server 'senpi' is not connected \u2014 all data from cache",
+    "VPS scanners offline since 2026-03-23 (47+ days)",
+    "Catastrophic drawdown 51.11% exceeds 20% threshold"
   ],
-  "strategy": "wolf-primary",
-  "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
-  "strategyWallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1"
+  "mcpStatus": "OFFLINE",
+  "vpsStatus": "OFFLINE (last heartbeat 2026-03-23)"
 }
