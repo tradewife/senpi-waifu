@@ -1,30 +1,37 @@
 {
-  "generatedAt": "2026-05-10T03:16:31Z",
+  "generatedAt": "2026-05-10T03:46:31Z",
+  "generatedBy": "jido-cron",
   "regime": "RISK_OFF",
+  "regimeReason": "Catastrophic DD 51.11% exceeds 20% threshold",
   "equity": {
     "current": 48.887581,
     "peak": 100.0,
-    "drawdownPct": 51.11,
-    "dayStart": 48.887581
+    "dayStart": 48.887581,
+    "drawdownPct": 51.11
   },
   "positions": {
     "open": 0,
-    "details": []
+    "list": []
+  },
+  "orders": {
+    "open": 0,
+    "list": []
   },
   "guardrails": {
     "catastrophicDrawdownPct": 20,
-    "drawdownBreached": true,
+    "actualDrawdownPct": 51.11,
+    "breached": true,
+    "dailyLossLimitPct": 10,
     "consecutiveStopOuts": 0,
-    "maxConsecutiveStopOuts": 4,
-    "stopOutsBreached": false
+    "maxConsecutiveStopOuts": 4
   },
-  "actions": [],
-  "warnings": [
-    "MCP offline \u2014 using cached equity data"
+  "mcpStatus": "OFFLINE",
+  "vpsStatus": "STALE (heartbeats from 2026-03-23)",
+  "actions": [
+    "Heartbeat only \u2014 flat portfolio, no positions to manage"
   ],
-  "strategy": {
-    "name": "wolf-primary",
-    "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
-    "budget": 100
-  }
+  "alerts": [
+    "MCP server offline \u2014 using cached equity",
+    "VPS scanners offline 47+ days"
+  ]
 }
