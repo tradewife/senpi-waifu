@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-05-10T05:46:58Z",
-  "source": "jido-cron",
+  "timestamp": "2026-05-10T16:30:00Z",
   "regime": "RISK_OFF",
+  "regimeReason": "Catastrophic DD 51.1% (limit 20.0%)",
   "strategy": {
     "name": "wolf-primary",
     "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
@@ -11,28 +11,37 @@
     "accountValue": 48.887581,
     "peakEquity": 100.0,
     "drawdownPct": 51.11,
-    "dayStartEquity": 48.887581,
-    "dailyPnl": 0.0,
     "openPositions": 0,
     "openOrders": 0,
-    "withdrawable": null,
-    "withdrawableNote": "MCP offline \u2014 cannot fetch live withdrawable"
+    "withdrawable": "MCP offline \u2014 unknown"
+  },
+  "guardrails": {
+    "catastrophicDD": {
+      "threshold": 20.0,
+      "actual": 51.11,
+      "breached": true
+    },
+    "dailyLossLimit": {
+      "threshold": 10.0,
+      "actual": 0.0,
+      "breached": false
+    },
+    "consecutiveStopOuts": {
+      "threshold": 4,
+      "actual": 0,
+      "breched": false
+    }
   },
   "positions": [],
-  "guardrails": {
-    "catastrophicDrawdownPct": 20,
-    "currentDrawdownPct": 51.11,
-    "breached": true,
-    "breachReason": "DD 51.11% exceeds 20% catastrophic threshold",
-    "dailyLossLimitPct": 10,
-    "dailyLossPct": 0.0,
-    "consecutiveStopOuts": 0,
-    "maxConsecutiveStopOuts": 4
-  },
-  "actions": [],
-  "warnings": [
-    "MCP server offline \u2014 using cached equity from previous run",
-    "VPS scanners stale (all heartbeats from 2026-03-23, 48+ days ago)"
+  "actions": [
+    "None \u2014 portfolio flat, RISK_OFF active"
   ],
-  "nextSteps": "Hold RISK_OFF. No new entries. Await user decision on reset/restart."
+  "mcpStatus": "OFFLINE",
+  "vpsHeartbeats": {
+    "brain": "2026-03-23T23:57:15Z",
+    "arena": "2026-03-23T23:57:05Z",
+    "risk-arbiter": "2026-03-23T23:57:45Z",
+    "warning": "VPS scanners offline \u2014 all heartbeats >48 days stale"
+  },
+  "notes": "MCP offline, using cached equity from 2026-05-10T06:15:40Z. VPS deployment likely down. Only Hermes-managed cron jobs active."
 }
