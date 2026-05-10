@@ -1,31 +1,54 @@
 {
-  "generatedAt": "2026-05-10T09:31:28.835401+00:00",
+  "generatedAt": "2026-05-10T10:16:49Z",
   "source": "cached",
+  "mcpStatus": "OFFLINE",
   "regime": "RISK_OFF",
-  "regimeReason": "DD 51.11% from catastrophic limit 20.0%",
-  "strategy": "wolf-primary",
-  "strategyWallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
-  "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce",
-  "accountValue": 48.887581,
-  "peakEquity": 100.0,
-  "drawdownPct": 51.11,
-  "dailyPnl": 0.0,
-  "openPositions": 0,
-  "openOrders": 0,
-  "consecutiveStopOuts": 0,
+  "regimeReason": "Catastrophic DD 51.11% exceeds 20% threshold",
+  "equity": {
+    "current": 48.887581,
+    "peak": 100.0,
+    "dayStart": 48.887581,
+    "drawdownPct": 51.11
+  },
+  "positions": {
+    "open": [],
+    "count": 0
+  },
+  "orders": {
+    "open": [],
+    "count": 0
+  },
   "guardrails": {
     "catastrophicDrawdownPct": 20,
-    "drawdownBreached": true,
+    "actualDrawdownPct": 51.11,
+    "breached": true,
     "dailyLossLimitPct": 10,
-    "dailyLossBreached": false,
-    "maxConsecutiveStopOuts": 4,
-    "stopOutsBreached": false
+    "dailyLossPct": 0.0,
+    "consecutiveStopOuts": 0,
+    "maxConsecutiveStopOuts": 4
   },
   "actions": [],
   "warnings": [
     "MCP server offline \u2014 using cached state",
-    "VPS scanners stale since 2026-03-23 (>48 days) \u2014 treat as decommissioned"
+    "VPS scanners decommissioned since 2026-03-23 (48d)",
+    "Drawdown 51.11% far exceeds catastrophic limit 20%"
   ],
-  "mcpStatus": "offline",
-  "vpsStatus": "decommissioned"
+  "strategy": {
+    "name": "wolf-primary",
+    "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
+    "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce"
+  },
+  "brainSync": {
+    "riskMode": "RISK_OFF",
+    "blockNewEntries": true,
+    "allowAutoEntry": false,
+    "maxSlotsCap": 0,
+    "drawdownPctFromPeak": 51.11,
+    "consistent": true
+  },
+  "vpsStatus": {
+    "status": "DECOMMISSIONED",
+    "lastHeartbeat": "2026-03-23T23:57:45Z",
+    "daysSinceActive": 48
+  }
 }
