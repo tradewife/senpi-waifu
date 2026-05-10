@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-05-10T23:31:47.219475+00:00",
+  "generatedAt": "2026-05-10T23:46:53.188111+00:00",
   "source": "cached",
   "regime": {
     "mode": "RISK_OFF",
-    "reason": "Catastrophic DD 51.1% (limit 20.0%)",
+    "reason": "Catastrophic DD 51.11% (limit 20.0%)",
     "enforcedBy": "jido",
-    "marketSignal": "RISK_OFF (cached \u2014 MCP offline)"
+    "marketSignal": "N/A (MCP offline)"
   },
   "portfolio": {
     "peakEquity": 100.0,
@@ -41,15 +41,16 @@
   },
   "actions": [],
   "warnings": [
-    "MCP server offline \u2014 all senpi_* calls failed",
-    "VPS decommissioned since 2026-03-23 (49+ days)",
-    "DD 51.11% based on cached equity from 2026-05-10 \u2014 actual DD may differ"
+    "MCP offline (74+ consecutive failures) \u2014 all data cached",
+    "VPS decommissioned since 2026-03-23 (49 days)",
+    "DD 51.11% based on cached equity from 2026-05-10 \u2014 actual DD may differ",
+    "Flat portfolio: no positions to protect"
   ],
   "strategy": {
     "name": "wolf-primary",
     "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
     "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce",
     "budget": 100.0,
-    "remaining": 48.89
+    "remaining": 48.887581
   }
 }
