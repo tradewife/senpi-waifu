@@ -1,47 +1,38 @@
 {
-  "timestamp": "2026-05-10T06:46:35.013801+00:00",
+  "generatedAt": "2026-05-10T07:17:19.594326+00:00",
+  "source": "jido-cron",
   "regime": "RISK_OFF",
-  "regimeReason": "Catastrophic DD 51.1% (limit 20.0%)",
-  "strategy": {
-    "name": "wolf-primary",
-    "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
-    "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce"
-  },
+  "mcpStatus": "OFFLINE",
   "portfolio": {
     "accountValue": 48.887581,
     "peakEquity": 100.0,
     "drawdownPct": 51.11,
+    "dayStartEquity": 48.887581,
+    "dailyPnl": 0.0,
     "openPositions": 0,
-    "openOrders": 0,
-    "withdrawable": "MCP offline \u2014 unknown"
+    "openOrders": 0
   },
   "guardrails": {
     "catastrophicDD": {
       "threshold": 20.0,
-      "actual": 51.11,
+      "current": 51.11,
       "breached": true
     },
     "dailyLossLimit": {
       "threshold": 10.0,
-      "actual": 0.0,
+      "current": 0.0,
       "breached": false
     },
     "consecutiveStopOuts": {
       "threshold": 4,
-      "actual": 0,
+      "current": 0,
       "breached": false
     }
   },
   "positions": [],
-  "actions": [
-    "None \u2014 portfolio flat, RISK_OFF active"
+  "actions": [],
+  "warnings": [
+    "MCP server offline \u2014 using cached state from arbiter-state.json"
   ],
-  "mcpStatus": "OFFLINE",
-  "vpsHeartbeats": {
-    "brain": "2026-03-23T23:57:15Z",
-    "arena": "2026-03-23T23:57:05Z",
-    "risk-arbiter": "2026-03-23T23:57:45Z",
-    "warning": "VPS scanners offline \u2014 all heartbeats >48 days stale"
-  },
-  "notes": "MCP offline, using cached equity. VPS deployment likely down. JIDO heartbeat at 2026-05-10T06:46:35.013801+00:00."
+  "summary": "Portfolio flat. RISK_OFF active (DD 51.11% exceeds 20% threshold). MCP offline. No actions required."
 }
