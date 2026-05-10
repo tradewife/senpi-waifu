@@ -3,7 +3,7 @@
   "lastEquity": 48.887581,
   "dayStartEquity": 48.887581,
   "consecutiveStopOuts": 0,
-  "lastJidoRun": "2026-05-10T02:17:27.316040+00:00",
+  "lastJidoRun": "2026-05-10T02:31:56.214182+00:00",
   "alerts": [
     {
       "type": "JIDO_HEARTBEAT",
@@ -14,11 +14,21 @@
       "openPositions": 0,
       "openOrders": 0,
       "message": "Flat portfolio, RISK_OFF confirmed (DD 51.11% >> 20% catastrophic). MCP offline \u2014 cached data. VPS scanners offline since 2026-03-23 (48+ days). No action needed."
+    },
+    {
+      "type": "JIDO_HEARTBEAT",
+      "timestamp": "2026-05-10T02:31:56.214182+00:00",
+      "regime": "RISK_OFF",
+      "accountValue": 48.887581,
+      "drawdownPct": 51.11,
+      "openPositions": 0,
+      "openOrders": 0,
+      "message": "Flat portfolio, RISK_OFF confirmed (DD 51.11% >> 20% catastrophic). MCP offline \u2014 cached data. No action needed."
     }
   ],
-  "lastUpdated": "2026-05-10T02:17:27.316040+00:00",
-  "lastChecked": "2026-05-10T02:17:27.316040+00:00",
-  "lastCheck": "2026-05-10T02:17:27.316040+00:00",
-  "lastCheckAt": "2026-05-10T02:17:27Z",
+  "lastUpdated": "2026-05-10T02:31:56.214182+00:00",
+  "lastChecked": "2026-05-10T02:31:56.214182+00:00",
+  "lastCheck": "2026-05-10T02:31:56.214182+00:00",
+  "lastCheckAt": "2026-05-10T02:31:56Z",
   "dayStartDate": "2026-05-10"
 }
