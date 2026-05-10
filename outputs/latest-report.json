@@ -1,34 +1,37 @@
 {
-  "timestamp": "2026-05-10T00:17:18.246172+00:00",
+  "generatedAt": "2026-05-10T10:31:52.920463",
   "regime": "RISK_OFF",
-  "runType": "jido-cron",
-  "portfolio": {
-    "accountValue": 48.887581,
-    "peakEquity": 100.0,
-    "drawdownPct": 51.11,
-    "openPositions": 0,
-    "openOrders": 0,
-    "withdrawable": "unknown (MCP offline)"
-  },
-  "positions": [],
+  "regimeReason": "Catastrophic DD 51.11% exceeds 20% threshold",
+  "equity": 48.887581,
+  "peakEquity": 100.0,
+  "drawdownPct": 51.11,
+  "dailyPnl": 0.0,
+  "openPositions": 0,
+  "openOrders": 0,
   "guardrails": {
-    "catastrophicDrawdownPct": 20,
-    "currentDrawdownPct": 51.11,
-    "breached": true,
-    "breachType": "catastrophic_drawdown",
-    "dailyLossLimitPct": 10,
-    "maxConsecutiveStopOuts": 4,
-    "consecutiveStopOuts": 0
+    "catastrophicDD": {
+      "threshold": 20,
+      "actual": 51.11,
+      "breached": true
+    },
+    "dailyLossLimit": {
+      "threshold": 10,
+      "actual": 0,
+      "breached": false
+    },
+    "consecutiveStopOuts": {
+      "threshold": 4,
+      "actual": 0,
+      "breached": false
+    }
   },
   "actions": [
-    "RISK_OFF already active \u2014 no new actions needed",
-    "MCP server offline \u2014 using cached data"
+    "No positions to manage. RISK_OFF maintained."
   ],
   "warnings": [
-    "MCP server 'senpi' is not connected \u2014 all data from cache",
-    "VPS scanners offline since 2026-03-23 (47+ days)",
-    "Catastrophic drawdown 51.11% exceeds 20% threshold"
+    "MCP server offline \u2014 using cached equity data",
+    "VPS scanners offline since 2026-03-23"
   ],
-  "mcpStatus": "OFFLINE",
-  "vpsStatus": "OFFLINE (last heartbeat 2026-03-23)"
+  "strategy": "wolf-primary",
+  "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1"
 }
