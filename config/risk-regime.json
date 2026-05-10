@@ -1,8 +1,8 @@
 {
   "riskMode": "RISK_OFF",
-  "updatedAt": "2026-05-10T08:01:00Z",
-  "updatedBy": "waifu-regime (arbiter-override)",
-  "reason": "Catastrophic DD 51.1% (limit 20.0%)",
+  "updatedAt": "2026-05-10T09:01:45.969Z",
+  "updatedBy": "hermes-regime",
+  "reason": "Market=BASELINE (BTC slope=-0.44%, ATR=0.19%; ETH slope=-2.15%, ATR=0.23%) but RISK_OFF override active: DD 51.1% from catastrophic limit 20.0%",
   "regimes": {
     "RISK_ON": {
       "maxSlots": 3,
