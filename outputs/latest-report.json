@@ -1,6 +1,6 @@
 {
   "source": "cached",
-  "generatedAt": "2026-05-10T21:46:55Z",
+  "generatedAt": "2026-05-10T22:02:38Z",
   "generatedBy": "jido-cron",
   "warnings": [
     "MCP offline \u2014 using cached state",
@@ -42,7 +42,9 @@
   "strategy": {
     "name": "WOLF-Primary",
     "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
-    "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce"
+    "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce",
+    "budget": 100,
+    "remaining": 48.89
   },
   "vpsStatus": "DECOMMISSIONED",
   "vpsLastHeartbeat": "2026-03-23T23:57:45Z",
