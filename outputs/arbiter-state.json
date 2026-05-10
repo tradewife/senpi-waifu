@@ -24,6 +24,16 @@
       "openPositions": 0,
       "openOrders": 0,
       "message": "Portfolio flat, RISK_OFF active. DD 51.11%. MCP offline \u2014 using cached state. No actions needed."
+    },
+    {
+      "type": "JIDO_HEARTBEAT",
+      "timestamp": "2026-05-10T07:47:11.395595+00:00",
+      "regime": "RISK_OFF",
+      "accountValue": 48.887581,
+      "drawdownPct": 51.11,
+      "openPositions": 0,
+      "openOrders": 0,
+      "message": "JIDO heartbeat: Flat portfolio, RISK_OFF active, DD 51.11%. MCP offline \u2014 using cached state."
     }
   ],
   "lastChecked": "2026-05-10T17:30:00Z"

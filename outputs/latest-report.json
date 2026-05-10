@@ -1,23 +1,15 @@
 {
-  "timestamp": "2026-05-10T17:30:00Z",
-  "regime": "RISK_OFF",
+  "timestamp": "2026-05-10T07:47:11.395595+00:00",
   "accountValue": 48.887581,
   "peakEquity": 100.0,
   "drawdownPct": 51.11,
   "openPositions": 0,
-  "openOrders": 0,
-  "withdrawable": null,
-  "guardrails": {
-    "catastrophicDD": "BREACHED (51.11% > 20.0%)",
-    "consecutiveStopOuts": "CLEAR (0)",
-    "dailyLossLimit": "N/A (flat portfolio)"
-  },
+  "regime": "RISK_OFF",
+  "positions": [],
   "actions": "Flat-portfolio fast-path. No positions to assess. Heartbeat written. Brain synced. No emergency actions needed.",
   "warnings": [
     "MCP server offline \u2014 using cached state",
     "VPS scanners offline (last heartbeat 2026-03-23, >45 days stale)",
     "Catastrophic DD 51.11% \u2014 RISK_OFF must remain active until manual review"
-  ],
-  "strategy": "wolf-primary",
-  "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1"
+  ]
 }
