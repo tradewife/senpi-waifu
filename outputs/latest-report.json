@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-10T04:31:36Z",
+  "generatedAt": "2026-05-10T05:46:58Z",
   "source": "jido-cron",
   "regime": "RISK_OFF",
   "strategy": {
@@ -32,7 +32,7 @@
   "actions": [],
   "warnings": [
     "MCP server offline \u2014 using cached equity from previous run",
-    "VPS scanners stale (all heartbeats from 2026-03-23, 47+ days ago)"
+    "VPS scanners stale (all heartbeats from 2026-03-23, 48+ days ago)"
   ],
   "nextSteps": "Hold RISK_OFF. No new entries. Await user decision on reset/restart."
 }

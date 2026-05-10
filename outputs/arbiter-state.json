@@ -3,7 +3,7 @@
   "lastEquity": 48.887581,
   "dayStartEquity": 48.887581,
   "consecutiveStopOuts": 0,
-  "lastJidoRun": "2026-05-10T04:47:00Z",
+  "lastJidoRun": "2026-05-10T05:46:58Z",
   "alerts": [
     {
       "type": "JIDO_CHECK",
@@ -24,6 +24,16 @@
       "openPositions": 0,
       "openOrders": 0,
       "message": "Heartbeat: RISK_OFF, flat, MCP offline, VPS stale (since 2026-03-23)."
+    },
+    {
+      "type": "JIDO_HEARTBEAT",
+      "timestamp": "2026-05-10T05:46:58Z",
+      "regime": "RISK_OFF",
+      "accountValue": 48.887581,
+      "drawdownPct": 51.11,
+      "openPositions": 0,
+      "openOrders": 0,
+      "message": "Portfolio flat, RISK_OFF active. DD 51.11%. MCP offline \u2014 using cached state. No actions needed."
     }
   ]
 }
