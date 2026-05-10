@@ -14,8 +14,19 @@
       "openPositions": 0,
       "openOrders": 0,
       "message": "RISK_OFF active, 0 open positions. DD 51.11% from peak. MCP offline \u2014 cached data. VPS scanners offline since 2026-03-23. JIDO heartbeat 2026-05-10T01:16:54.215172+00:00"
+    },
+    {
+      "type": "JIDO_HEARTBEAT",
+      "timestamp": "2026-05-10T01:32:27.329959+00:00",
+      "regime": "RISK_OFF",
+      "accountValue": 48.887581,
+      "drawdownPct": 51.11,
+      "openPositions": 0,
+      "openOrders": 0,
+      "message": "MCP offline \u2014 using cached state. Flat portfolio, RISK_OFF confirmed. DD 51.11% >> 20% catastrophic threshold. VPS scanners offline since 2026-03-23. No action needed."
     }
   ],
   "lastUpdated": "2026-05-10T01:16:54.215172+00:00",
-  "lastChecked": "2026-05-10T01:16:54.215172+00:00"
+  "lastChecked": "2026-05-10T01:16:54.215172+00:00",
+  "lastCheck": "2026-05-10T01:32:27.329959+00:00"
 }

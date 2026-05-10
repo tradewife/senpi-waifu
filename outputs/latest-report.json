@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-05-10T01:16:54.215172+00:00",
+  "timestamp": "2026-05-10T01:32:27.329959+00:00",
   "regime": "RISK_OFF",
   "accountValue": 48.887581,
   "peakEquity": 100.0,
@@ -8,16 +8,22 @@
   "openOrders": 0,
   "withdrawable": 0.0,
   "guardrails": {
-    "catastrophicDD": "BREACHED (51.11% > 20%)",
-    "consecutiveStopOuts": "CLEAR (0)",
-    "dailyLossLimit": "N/A (no trades today)"
+    "catastrophicDrawdownBreached": true,
+    "consecutiveStopOutsBreached": false,
+    "dailyLossLimitBreached": false
   },
-  "actions": "No actions taken. RISK_OFF active, flat portfolio, MCP offline.",
+  "actions": [
+    "heartbeat_logged",
+    "state_files_synced"
+  ],
   "warnings": [
     "MCP server offline \u2014 using cached equity data",
     "VPS scanners offline since 2026-03-23 (>48 days)",
     "Catastrophic drawdown: 51.11% exceeds 20% limit"
   ],
   "strategy": "wolf-primary",
-  "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1"
+  "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
+  "equity": 48.887581,
+  "summary": "JIDO heartbeat (MCP offline). Flat portfolio under RISK_OFF. Drawdown 51.11% well above 20% catastrophic threshold. VPS scanners offline since 2026-03-23 (48+ days). All state files consistent. No emergency actions required.",
+  "mcpStatus": "OFFLINE"
 }
