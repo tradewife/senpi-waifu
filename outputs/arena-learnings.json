@@ -1,11 +1,17 @@
 {
-  "generatedAt": "2026-05-10T18:01:14Z",
+  "generatedAt": "2026-05-10T18:02:44Z",
   "arenaWeek": "?",
   "totalEntrants": 105,
   "ourStats": {
+    "accountId": "M179642",
+    "secondAccount": "M19",
+    "drawdown": 51.11,
+    "riskMode": "RISK_OFF",
     "closes": 1,
     "winRate": 0.0,
-    "totalPnl": -51.11
+    "totalPnl": -51.11,
+    "budgetRemaining": 48.89,
+    "tradesThisWeek": 0
   },
   "arenaTop5AvgRoe": 31.96,
   "arenaTop5AvgPnl": -141.85,
@@ -25,7 +31,8 @@
         "strategy_get_open_orders",
         "strategy_list",
         "strategy_top_up"
-      ]
+      ],
+      "pattern": "LEAN CONVICTION \u2014 8 tools, moderate frequency, strategy_top_up as key differentiator"
     },
     {
       "rank": 2,
@@ -45,7 +52,8 @@
         "strategy_get_clearinghouse_state",
         "strategy_list",
         "strategy_withdraw_funds"
-      ]
+      ],
+      "pattern": "ANOMALY \u2014 withdrawal-based ROE inflation. -$2027 PnL but 57.6% ROE. Uses strategy_withdraw_funds to shrink denominator."
     },
     {
       "rank": 3,
@@ -75,7 +83,8 @@
         "market_list_instruments",
         "strategy_get_clearinghouse_state",
         "user_get_senpi_points"
-      ]
+      ],
+      "pattern": "DEEP RESEARCH \u2014 21 tools, high frequency (66 trades), broad market analysis. Underperforms lean conviction (#1)"
     },
     {
       "rank": 4,
@@ -88,7 +97,8 @@
         "create_position",
         "edit_position",
         "strategy_get_clearinghouse_state"
-      ]
+      ],
+      "pattern": "MINIMALIST \u2014 4 tools, moderate frequency. Pure execution, no research overhead."
     },
     {
       "rank": 5,
@@ -115,10 +125,89 @@
         "strategy_get_asset_trading_limits",
         "strategy_get_clearinghouse_state",
         "strategy_list"
-      ]
+      ],
+      "pattern": "SNIPER \u2014 1 trade, $115 profit. Heavy research stack for single conviction entry. Highest PnL-per-trade efficiency."
     }
   ],
+  "topPerformerProfile": {
+    "name": "ysr",
+    "rank": 1,
+    "roePct": 62.34,
+    "totalPnl": 990.37,
+    "tradeCount": 19,
+    "toolCount": 8,
+    "notes": "Lean conviction trader. Key differentiator is strategy_top_up \u2014 adds margin to winning positions to let them run. Uses only 8 tools (vs 21 for #3). Moderate frequency (2.7 trades/day). This is the proven meta: conviction + top_up > research depth."
+  },
+  "strategyPatterns": {
+    "highConviction": {
+      "agents": [
+        "ysr (#1)",
+        "opencodeJaime (#5)",
+        "Apex (#4)"
+      ],
+      "avgROE": 27.47,
+      "insight": "Low tool count (4-18), low-moderate trade count (1-20). strategy_top_up is the key edge."
+    },
+    "deepResearch": {
+      "agents": [
+        "KhakiLoop (#3)"
+      ],
+      "avgROE": 19.77,
+      "insight": "21 tools, 66 trades. Heavy analysis but underperforms lean conviction by 3x ROE. Research overhead doesn't scale."
+    },
+    "anomalyWithdrawal": {
+      "agents": [
+        "0xschelling (#2)"
+      ],
+      "avgROE": 57.61,
+      "insight": "FAKE ROE \u2014 -$2027 PnL but high ROE via strategy_withdraw_funds shrinking denominator. Should be excluded from meta analysis."
+    }
+  },
+  "anomalyDetection": {
+    "withdrawalInflation": {
+      "agent": "0xschelling",
+      "rank": 2,
+      "roePct": 57.61,
+      "totalPnl": -2026.9,
+      "flag": "NEGATIVE_PNL_POSITIVE_ROE \u2014 uses strategy_withdraw_funds to shrink balance denominator. ROE is not earned through trading."
+    }
+  },
+  "selfDiagnosis": {
+    "currentStatus": "RISK_OFF \u2014 51.1% drawdown lock since ~Mar 24. System completely idle.",
+    "budgetRemaining": "$48.89 (started with $100)",
+    "tradesThisWeek": 0,
+    "totalTrades": 1,
+    "totalPnl": -51.11,
+    "howlHistory": "16 consecutive zero-activity HOWLs (Mar 27 \u2014 May 09). No trades, no risk-increasing changes.",
+    "criticalIssue": "RISK_OFF stuck state \u2014 48+ days idle. Single -$51 loss on $100 budget triggered permanent 51.1% drawdown lock. No auto-recovery mechanism. Budget too small for meaningful positions even if reset.",
+    "mcpStatus": "DOWN \u2014 60+ consecutive MCP failures. CLI fallback used for this run.",
+    "recoveryPath": "Requires BOTH: (1) manual drawdown reset to resume BASELINE, AND (2) capital top-up to $100+ for meaningful position sizing at 7-10x leverage."
+  },
   "recommendations": [
+    {
+      "action": "FIX_MCP_CONNECTIVITY",
+      "confidence": "CRITICAL",
+      "reason": "MCP server unreachable (60+ consecutive failures). All Senpi API calls failing. Must restore before any automated trading can resume.",
+      "risk": "critical"
+    },
+    {
+      "action": "RESET_DRAWDOWN_AND_TOP_UP",
+      "confidence": "CRITICAL",
+      "reason": "48+ days RISK_OFF from single -$51 loss. Reset drawdown counter and add $55+ capital to reach $100+ for viable 7-10x positions.",
+      "risk": "critical"
+    },
+    {
+      "action": "ADOPT_STRATEGY_TOP_UP",
+      "confidence": "HIGH",
+      "reason": "#1 ysr uses strategy_top_up as key differentiator \u2014 adds margin to winners. Our evaluator does NOT use this tool. Highest-impact feature gap.",
+      "risk": "neutral"
+    },
+    {
+      "action": "LEAN_CONVICTION_META",
+      "confidence": "HIGH",
+      "reason": "#1 (8 tools, 19 trades) beats #3 (21 tools, 66 trades) by 3x ROE. Fewer tools + fewer trades + higher conviction = better ROE. Aligns with our existing scanner priority.",
+      "risk": "neutral"
+    },
     {
       "action": "reminder_max_leverage",
       "confidence": "absolute",
