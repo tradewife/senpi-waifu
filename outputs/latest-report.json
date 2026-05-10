@@ -1,23 +1,29 @@
 {
-  "timestamp": "2026-05-10T01:46:12.830445+00:00",
+  "generatedAt": "2026-05-10T02:01:04Z",
   "regime": "RISK_OFF",
-  "accountValue": 48.887581,
+  "equity": 48.89,
   "peakEquity": 100.0,
   "drawdownPct": 51.11,
+  "dailyPnl": 0,
+  "dailyCloses": 0,
+  "dailyWinRate": 0,
   "openPositions": 0,
-  "openOrders": 0,
-  "withdrawable": 0.0,
-  "guardrails": {
-    "catastrophicDD": "BREACHED (51.11% > 20%)",
-    "consecutiveStopOuts": "CLEAR (0)",
-    "dailyLossLimit": "CLEAR"
-  },
-  "actions": "heartbeat_logged, state_files_synced, regime_consistency_verified",
-  "warnings": [
-    "MCP server offline \u2014 using cached equity data",
-    "VPS scanners offline since 2026-03-23 (>48 days)",
-    "Catastrophic drawdown: 51.11% exceeds 20% limit"
+  "alerts": [
+    "CATASTROPHIC DRAWDOWN: 51.1%"
   ],
-  "strategy": "wolf-primary",
-  "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1"
+  "deadWeight": [],
+  "guardrails": {
+    "dailyLossLimitPct": 10,
+    "catastrophicDrawdownPct": 20,
+    "maxConsecutiveStopOuts": 4,
+    "directionalCapPct": 70,
+    "minLeverage": 7,
+    "maxLeverage": 10,
+    "maxPositionsTotal": 3,
+    "perAssetCooldownMinutes": 120,
+    "bannedAssetPrefixes": [
+      "xyz:"
+    ],
+    "perTradeRiskPct": 1.0
+  }
 }
