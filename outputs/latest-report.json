@@ -1,34 +1,38 @@
 {
-  "generatedAt": "2026-05-10T22:46:57.737446+00:00",
+  "generatedAt": "2026-05-10T23:02:12.673614+00:00",
   "source": "cached",
-  "warnings": [
-    "MCP server offline \u2014 all data from cached arbiter-state",
-    "VPS decommissioned since 2026-03-23 (48+ days) \u2014 CRITICAL infrastructure degradation",
-    "DD 51.11% based on cached equity \u2014 actual DD may differ"
-  ],
   "regime": {
     "mode": "RISK_OFF",
-    "reason": "Catastrophic drawdown 51.11% exceeds 20% threshold. Market=BASELINE but RISK_OFF override active.",
-    "enforcedBy": "jido-guardrail",
-    "marketSignal": "BASELINE (BTC slope=-0.58%, ATR=0.42%)"
+    "reason": "Catastrophic DD 51.1% (limit 20.0%)",
+    "enforcedBy": "jido-emergency",
+    "marketSignal": null
   },
   "portfolio": {
-    "equity": 48.887581,
-    "peakEquity": 100.0,
-    "dayStartEquity": 48.887581,
+    "equity": {
+      "current": 48.887581,
+      "peak": 100.0,
+      "dayStart": 48.887581
+    },
     "drawdownPct": 51.11,
-    "dailyPnl": 0.0,
+    "withdrawable": null,
     "openPositions": 0,
     "openOrders": 0
   },
+  "strategy": {
+    "name": "WOLF-Primary",
+    "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
+    "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce",
+    "budget": 100,
+    "remaining": 48.887581
+  },
   "guardrails": {
     "catastrophicDrawdown": {
-      "threshold": 20.0,
+      "threshold": 20,
       "actual": 51.11,
       "breached": true
     },
-    "dailyLossLimit": {
-      "threshold": 10.0,
+    "dailyLoss": {
+      "threshold": 10,
       "actual": 0.0,
       "breached": false
     },
@@ -38,21 +42,21 @@
       "breached": false
     }
   },
-  "strategy": {
-    "name": "WOLF-Primary",
-    "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
-    "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce",
-    "budget": 100.0,
-    "remaining": 48.887581
+  "positions": [],
+  "vps": {
+    "status": "decommissioned",
+    "lastHeartbeat": "2026-03-23T23:57:45Z",
+    "stalenessDays": 47
   },
-  "actions": [],
-  "infrastructure": {
-    "mcp": "OFFLINE",
-    "vps": "DECOMMISSIONED since 2026-03-23",
-    "cronHeartbeats": {
-      "brain": "2026-03-23T23:57:15Z",
-      "arena": "2026-03-23T23:57:05Z",
-      "risk-arbiter": "2026-03-23T23:57:45Z"
-    }
-  }
+  "mcp": {
+    "status": "offline",
+    "note": "71+ consecutive failures"
+  },
+  "warnings": [
+    "MCP offline \u2014 using cached state",
+    "VPS decommissioned since 2026-03-23 (47+ days)",
+    "DD 51.11% is based on cached equity from 2026-05-10 \u2014 actual DD may differ"
+  ],
+  "actionsTaken": [],
+  "assessment": "Portfolio flat, RISK_OFF enforced. No open positions, no pending orders. Catastrophic drawdown guardrail breached (51.11% vs 20% threshold). MCP server offline \u2014 cannot verify live equity. VPS decommissioned 47+ days. No actions required at this time."
 }
