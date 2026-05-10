@@ -3,11 +3,11 @@
   "lastEquity": 48.887581,
   "dayStartEquity": 48.887581,
   "consecutiveStopOuts": 0,
-  "lastJidoRun": "2026-05-10T04:02:14Z",
+  "lastJidoRun": "2026-05-10T04:18:18Z",
   "alerts": [
     {
       "type": "JIDO_HEARTBEAT",
-      "timestamp": "2026-05-10T04:02:14Z",
+      "timestamp": "2026-05-10T04:18:18Z",
       "regime": "RISK_OFF",
       "accountValue": 48.887581,
       "drawdownPct": 51.11,

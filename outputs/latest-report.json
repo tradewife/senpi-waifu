@@ -1,37 +1,38 @@
 {
-  "generatedAt": "2026-05-10T04:02:14Z",
-  "generatedBy": "jido-cron",
+  "generatedAt": "2026-05-10T04:18:18Z",
+  "source": "jido-cron",
   "regime": "RISK_OFF",
-  "regimeReason": "Catastrophic DD 51.11% exceeds 20% threshold",
-  "equity": {
-    "current": 48.887581,
-    "peak": 100.0,
-    "dayStart": 48.887581,
-    "drawdownPct": 51.11
+  "strategy": {
+    "name": "wolf-primary",
+    "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
+    "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce"
   },
-  "positions": {
-    "open": 0,
-    "list": []
+  "portfolio": {
+    "accountValue": 48.887581,
+    "peakEquity": 100.0,
+    "drawdownPct": 51.11,
+    "dayStartEquity": 48.887581,
+    "dailyPnl": 0.0,
+    "openPositions": 0,
+    "openOrders": 0,
+    "withdrawable": null,
+    "withdrawableNote": "MCP offline \u2014 cannot fetch live withdrawable"
   },
-  "orders": {
-    "open": 0,
-    "list": []
-  },
+  "positions": [],
   "guardrails": {
     "catastrophicDrawdownPct": 20,
-    "actualDrawdownPct": 51.11,
+    "currentDrawdownPct": 51.11,
     "breached": true,
+    "breachReason": "DD 51.11% exceeds 20% catastrophic threshold",
     "dailyLossLimitPct": 10,
+    "dailyLossPct": 0.0,
     "consecutiveStopOuts": 0,
     "maxConsecutiveStopOuts": 4
   },
-  "mcpStatus": "OFFLINE",
-  "vpsStatus": "STALE (heartbeats from 2026-03-23)",
-  "actions": [
-    "Heartbeat only \u2014 flat portfolio, no positions to manage"
+  "actions": [],
+  "warnings": [
+    "MCP server offline \u2014 using cached equity from previous run",
+    "VPS scanners stale (all heartbeats from 2026-03-23, 47+ days ago)"
   ],
-  "alerts": [
-    "MCP server offline \u2014 using cached equity",
-    "VPS scanners offline 47+ days"
-  ]
+  "nextSteps": "Hold RISK_OFF. No new entries. Await user decision on reset/restart."
 }
