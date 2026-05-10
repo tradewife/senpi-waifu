@@ -1,29 +1,23 @@
 {
-  "generatedAt": "2026-05-10T02:02:20.946823+00:00",
+  "timestamp": "2026-05-10T02:18:05.068759+00:00",
   "regime": "RISK_OFF",
-  "strategy": "wolf-primary",
-  "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
-  "equity": {
-    "current": 48.887581,
-    "peak": 100.0,
-    "drawdownPct": 51.11,
-    "dayStart": 48.887581
-  },
-  "positions": {
-    "open": 0,
-    "list": []
-  },
+  "accountValue": 48.887581,
+  "peakEquity": 100.0,
+  "drawdownPct": 51.11,
+  "openPositions": 0,
+  "openOrders": 0,
+  "withdrawable": 48.887581,
   "guardrails": {
-    "catastrophicDrawdownPct": 20,
-    "dailyLossLimitPct": 10,
-    "breached": [
-      "drawdown"
-    ],
-    "activeRegime": "RISK_OFF"
+    "catastrophicDD": "BREACHED (51.11% > 20.0%)",
+    "consecutiveStopOuts": "CLEAR (0)",
+    "dailyLossLimit": "CLEAR"
   },
-  "actions": [],
+  "actions": "Heartbeat only \u2014 flat portfolio, no positions to manage. RISK_OFF maintained. State files synced.",
   "warnings": [
-    "MCP offline \u2014 using cached data"
+    "MCP server offline \u2014 using cached data",
+    "VPS scanners offline since 2026-03-23 (48+ days)",
+    "Catastrophic DD 51.11% \u2014 strategy at ~49% of initial budget"
   ],
-  "summary": "Flat portfolio. RISK_OFF enforced (DD 51.11% exceeds 20% catastrophic). No open positions, no pending orders."
+  "strategy": "wolf-primary",
+  "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1"
 }
