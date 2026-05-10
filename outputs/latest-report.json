@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-05-10T18:16:52Z",
+  "generatedAt": "2026-05-10T18:32:36Z",
   "source": "cached",
   "warnings": [
     "MCP offline \u2014 all data from cached state",
-    "DD 51.11% based on cached equity from 2026-05-10 \u2014 actual DD may differ",
-    "VPS decommissioned since 2026-03-23 \u2014 no scanner heartbeats for 49+ days"
+    "DD 51.11% based on cached equity \u2014 actual DD may differ",
+    "VPS decommissioned since 2026-03-23 \u2014 no scanner heartbeats for 47+ days"
   ],
   "regime": {
     "mode": "RISK_OFF",
-    "reason": "Catastrophic DD 51.1% (limit 20.0%)",
+    "reason": "Catastrophic DD 51.11% (limit 20.0%)",
     "enforcedBy": "jido-emergency",
     "marketSignal": null
   },
@@ -55,7 +55,7 @@
   "vpsStatus": {
     "status": "DECOMMISSIONED",
     "lastHeartbeat": "2026-03-23T23:57:45Z",
-    "daysOffline": 49,
+    "daysOffline": 47,
     "severity": "CRITICAL"
   }
 }
