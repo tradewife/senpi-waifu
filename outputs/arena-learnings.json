@@ -1,11 +1,19 @@
 {
-  "generatedAt": "2026-05-10T06:01:16Z",
-  "arenaWeek": "?",
+  "generatedAt": "2026-05-10T06:01:06Z",
+  "arenaWeek": "unknown",
   "totalEntrants": 105,
+  "mcpStatus": "DOWN — 39 consecutive failures. All live MCP calls failed. CLI fallback used.",
   "ourStats": {
+    "accountId": "M179642",
+    "secondAccount": "M19",
+    "strategyWallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
+    "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce",
+    "drawdown": "51.11%",
+    "riskMode": "RISK_OFF",
     "closes": 1,
     "winRate": 0.0,
-    "totalPnl": -51.11
+    "totalPnl": -51.11,
+    "howlHistory": "Zero activity since go-live on 2026-03-24. Every HOWL from 03-27 through 05-09 reports 0% WR, $0.00 PnL."
   },
   "arenaTop5AvgRoe": 34.81,
   "arenaTop5AvgPnl": -160.68,
@@ -16,16 +24,8 @@
       "roePct": "62.3015",
       "totalPnl": "989.531056",
       "tradeCount": 14,
-      "toolsUsed": [
-        "account_get_portfolio",
-        "cancel_order",
-        "create_position",
-        "edit_position",
-        "strategy_get_clearinghouse_state",
-        "strategy_get_open_orders",
-        "strategy_list",
-        "strategy_top_up"
-      ]
+      "toolsUsed": ["account_get_portfolio", "cancel_order", "create_position", "edit_position", "strategy_get_clearinghouse_state", "strategy_get_open_orders", "strategy_list", "strategy_top_up"],
+      "pattern": "ACTIVE MANAGER — lean toolset (8 tools), moderate frequency (14 trades), dynamic risk management via edit_position + strategy_top_up"
     },
     {
       "rank": 2,
@@ -33,18 +33,8 @@
       "roePct": "57.782",
       "totalPnl": "-2027.185293",
       "tradeCount": 4,
-      "toolsUsed": [
-        "account_get_portfolio",
-        "arena_leaderboard",
-        "close_position",
-        "leaderboard_get_markets",
-        "market_get_asset_data",
-        "market_get_funding_history",
-        "market_get_funding_regime",
-        "strategy_get_clearinghouse_state",
-        "strategy_list",
-        "strategy_withdraw_funds"
-      ]
+      "toolsUsed": ["account_get_portfolio", "arena_leaderboard", "close_position", "leaderboard_get_markets", "market_get_asset_data", "market_get_funding_history", "market_get_funding_regime", "strategy_get_clearinghouse_state", "strategy_list", "strategy_withdraw_funds"],
+      "pattern": "ANOMALY — 57.8% ROE but -$2027 PnL. Withdrew funds, making ROE look inflated on tiny remaining balance. Likely gaming the ROE metric."
     },
     {
       "rank": 3,
@@ -52,7 +42,8 @@
       "roePct": "22.0382",
       "totalPnl": "19.401142",
       "tradeCount": 0,
-      "toolsUsed": []
+      "toolsUsed": [],
+      "pattern": "PASSIVE — zero trades, zero tools. Earning via skill-driven position management (similar to M19's wolf-strategy approach)."
     },
     {
       "rank": 4,
@@ -60,29 +51,8 @@
       "roePct": "20.1119",
       "totalPnl": "198.684086",
       "tradeCount": 65,
-      "toolsUsed": [
-        "account_get_portfolio",
-        "arena_leaderboard",
-        "arena_prizes",
-        "cancel_order",
-        "close_position",
-        "create_position",
-        "discovery_get_top_strategies",
-        "discovery_get_top_traders",
-        "discovery_get_trader_history",
-        "discovery_get_trader_state",
-        "edit_position",
-        "leaderboard_get_markets",
-        "leaderboard_get_top",
-        "market_get_asset_data",
-        "market_get_cross_asset_flows",
-        "market_get_funding_history",
-        "market_get_funding_regime",
-        "market_get_prices",
-        "market_list_instruments",
-        "strategy_get_clearinghouse_state",
-        "user_get_senpi_points"
-      ]
+      "toolsUsed": ["account_get_portfolio", "arena_leaderboard", "arena_prizes", "cancel_order", "close_position", "create_position", "discovery_get_top_strategies", "discovery_get_top_traders", "discovery_get_trader_history", "discovery_get_trader_state", "edit_position", "leaderboard_get_markets", "leaderboard_get_top", "market_get_asset_data", "market_get_cross_asset_flows", "market_get_funding_history", "market_get_funding_regime", "market_get_prices", "market_list_instruments", "strategy_get_clearinghouse_state", "user_get_senpi_points"],
+      "pattern": "DEEP RESEARCH — 21 tools, 65 trades, heavy discovery/analysis stack. 20.1% ROE is decent but tool-heavy approach underperforms conviction players."
     },
     {
       "rank": 5,
@@ -90,15 +60,95 @@
       "roePct": "11.8129",
       "totalPnl": "16.169461",
       "tradeCount": 18,
-      "toolsUsed": [
-        "close_position",
-        "create_position",
-        "edit_position",
-        "strategy_get_clearinghouse_state"
-      ]
+      "toolsUsed": ["close_position", "create_position", "edit_position", "strategy_get_clearinghouse_state"],
+      "pattern": "LEAN EXECUTION — 4 tools, 18 trades. Minimal stack, moderate frequency, positive PnL."
     }
   ],
+  "topPerformerProfile": {
+    "name": "ysr",
+    "roePct": "62.3015",
+    "totalPnl": "989.53",
+    "tradeCount": 14,
+    "notes": "Dominant #1 with 62.3% ROE and $989 PnL. Uses 8 tools — no discovery/research, pure execution stack (create/close/edit + top_up for margin management). 14 trades suggests ~2/day conviction-based approach. Active position management with strategy_top_up is key differentiator."
+  },
+  "strategyPatterns": {
+    "highConviction": {
+      "description": "Low trade count, high ROE, lean tools",
+      "agents": ["ysr", "Apex"],
+      "avgROE": 37.06,
+      "insight": "Conviction still wins. #1 uses 8 tools, ~2 trades/day. Our Polar scanner was designed for this pattern."
+    },
+    "activeManager": {
+      "description": "Moderate trades with edit_position + top_up for dynamic risk",
+      "agents": ["ysr", "KhakiLoop"],
+      "avgROE": 41.21,
+      "insight": "strategy_top_up is underused in our stack — ysr uses it for margin management during winning trades."
+    },
+    "passiveSkill": {
+      "description": "Zero trades, skill-driven gains",
+      "agents": ["Patelbot"],
+      "avgROE": 22.04,
+      "insight": "Passive earning still viable at #3. Our M19 account uses wolf-strategy skill similarly."
+    },
+    "deepResearch": {
+      "description": "21+ tools, heavy discovery stack, high trade count",
+      "agents": ["KhakiLoop"],
+      "avgROE": 20.11,
+      "insight": "Research-heavy approach gets decent ROE but underperforms lean conviction. Our discovery tools are MCP-blocked anyway."
+    }
+  },
+  "anomalyDetection": [
+    {
+      "agent": "0xschelling",
+      "rank": 2,
+      "issue": "57.8% ROE with -$2027 PnL. Withdrew large sum (strategy_withdraw_funds in tools). ROE computed on remaining tiny balance, inflating percentage.",
+      "severity": "HIGH — metric gaming. This agent would fail any PnL-qualified filter."
+    }
+  ],
+  "selfDiagnosis": {
+    "currentStatus": "CRITICAL — system has been idle for 47 days",
+    "budgetRemaining": "~$49 (started $100, lost $51.11 on single trade)",
+    "tradesThisWeek": 0,
+    "howlHistory": "16 consecutive zero-activity HOWLs (2026-03-27 through 2026-05-09)",
+    "criticalIssues": [
+      "MCP connectivity down (39 consecutive failures) — all live data endpoints unreachable",
+      "RISK_OFF locked since 2026-03-24 — 51.1% drawdown from single trade exceeds 20% threshold",
+      "No automatic recovery mechanism — drawdown counter never resets",
+      "0 trades executed in 47 days despite having 8 active scanners",
+      "Auth token may be expired — user-scoped endpoints failing with SERR031"
+    ]
+  },
   "recommendations": [
+    {
+      "action": "FIX_MCP_CONNECTIVITY",
+      "confidence": "CRITICAL",
+      "reason": "MCP server unreachable (39 consecutive failures). All live arena/portfolio data blocked. Cron pipeline non-functional without MCP.",
+      "risk": "critical"
+    },
+    {
+      "action": "RESET_RISK_OFF_STATE",
+      "confidence": "CRITICAL",
+      "reason": "System stuck in RISK_OFF for 47 days after single -$51 loss (51% drawdown on $100 budget). Drawdown counter has no reset mechanism. Manual intervention required to return to BASELINE.",
+      "risk": "critical"
+    },
+    {
+      "action": "DEPLOY_FRESH_CAPITAL",
+      "confidence": "HIGH",
+      "reason": "Only ~$49 remaining from $100 starting budget. Even with RISK_OFF reset, insufficient capital for meaningful positions at 7-10x leverage. Need top-up to at least $100.",
+      "risk": "high"
+    },
+    {
+      "action": "ADOPT_YSR_PATTERN",
+      "confidence": "HIGH",
+      "reason": "Arena #1 ysr uses lean 8-tool execution stack with strategy_top_up for active margin management, ~2 trades/day conviction approach. Our Polar scanner was designed for exactly this pattern but has never fired due to RISK_OFF.",
+      "risk": "neutral"
+    },
+    {
+      "action": "ADD_STRATEGY_TOP_UP",
+      "confidence": "MEDIUM",
+      "reason": "strategy_top_up appears in #1 agent's toolset — used for margin management during winning trades. Our evaluator does not currently use this tool. Adding it could improve position management during favorable moves.",
+      "risk": "neutral"
+    },
     {
       "action": "reminder_max_leverage",
       "confidence": "absolute",
