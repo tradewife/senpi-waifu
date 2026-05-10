@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-10T22:16:53.449065+00:00",
+  "generatedAt": "2026-05-10T22:32:56.576135+00:00",
   "source": "cached",
   "warnings": [
     "MCP server offline \u2014 all data from cached arbiter-state",
@@ -8,7 +8,7 @@
   ],
   "regime": {
     "mode": "RISK_OFF",
-    "reason": "Catastrophic drawdown 51.1% exceeds 20% threshold. Market=BASELINE but RISK_OFF override active.",
+    "reason": "Catastrophic drawdown 51.11% exceeds 20% threshold. Market=BASELINE but RISK_OFF override active.",
     "enforcedBy": "jido-guardrail",
     "marketSignal": "BASELINE (BTC slope=-0.58%, ATR=0.42%)"
   },
