@@ -1,54 +1,36 @@
 {
-  "generatedAt": "2026-05-10T10:16:49Z",
+  "timestamp": "2026-05-10T10:31:55.217387+00:00",
   "source": "cached",
-  "mcpStatus": "OFFLINE",
   "regime": "RISK_OFF",
-  "regimeReason": "Catastrophic DD 51.11% exceeds 20% threshold",
+  "strategy": "wolf-primary",
+  "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
   "equity": {
     "current": 48.887581,
     "peak": 100.0,
     "dayStart": 48.887581,
     "drawdownPct": 51.11
   },
-  "positions": {
-    "open": [],
-    "count": 0
-  },
-  "orders": {
-    "open": [],
-    "count": 0
-  },
+  "positions": [],
   "guardrails": {
-    "catastrophicDrawdownPct": 20,
-    "actualDrawdownPct": 51.11,
-    "breached": true,
-    "dailyLossLimitPct": 10,
-    "dailyLossPct": 0.0,
-    "consecutiveStopOuts": 0,
-    "maxConsecutiveStopOuts": 4
+    "catastrophicDD": {
+      "threshold": 20,
+      "actual": 51.11,
+      "breached": true
+    },
+    "consecutiveStopOuts": {
+      "threshold": 4,
+      "actual": 0,
+      "breached": false
+    },
+    "dailyLoss": {
+      "threshold": 10,
+      "actual": 0.0,
+      "breached": false
+    }
   },
   "actions": [],
   "warnings": [
-    "MCP server offline \u2014 using cached state",
-    "VPS scanners decommissioned since 2026-03-23 (48d)",
-    "Drawdown 51.11% far exceeds catastrophic limit 20%"
-  ],
-  "strategy": {
-    "name": "wolf-primary",
-    "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
-    "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce"
-  },
-  "brainSync": {
-    "riskMode": "RISK_OFF",
-    "blockNewEntries": true,
-    "allowAutoEntry": false,
-    "maxSlotsCap": 0,
-    "drawdownPctFromPeak": 51.11,
-    "consistent": true
-  },
-  "vpsStatus": {
-    "status": "DECOMMISSIONED",
-    "lastHeartbeat": "2026-03-23T23:57:45Z",
-    "daysSinceActive": 48
-  }
+    "MCP offline \u2014 using cached equity data",
+    "VPS scanners decommissioned since 2026-03-23"
+  ]
 }
