@@ -1,14 +1,15 @@
 {
-  "generatedAt": "2026-05-10T19:03:54Z",
   "source": "cached",
+  "generatedAt": "2026-05-10T21:32:04Z",
+  "generatedBy": "jido-cron",
   "warnings": [
-    "MCP offline \u2014 all data from cached state",
-    "DD 51.11% based on cached equity \u2014 actual DD may differ",
-    "VPS decommissioned since 2026-03-23 \u2014 no scanner heartbeats for 47+ days"
+    "MCP server offline \u2014 all data from cached arbiter-state.json",
+    "VPS decommissioned since 2026-03-23 (48+ days)",
+    "DD 51.11% is based on cached equity \u2014 actual DD may differ"
   ],
   "regime": {
     "mode": "RISK_OFF",
-    "reason": "Catastrophic DD 51.11% (limit 20.0%)",
+    "reason": "Catastrophic DD 51.1% (limit 20.0%)",
     "enforcedBy": "jido-emergency",
     "marketSignal": null
   },
@@ -19,26 +20,19 @@
       "dayStart": 48.887581
     },
     "drawdownPct": 51.11,
-    "dailyPnl": 0.0,
+    "withdrawable": null,
     "openPositions": 0,
     "openOrders": 0,
-    "withdrawable": null
-  },
-  "strategy": {
-    "name": "WOLF-Primary",
-    "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
-    "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce",
-    "budget": 100,
-    "remaining": 48.887581
+    "dailyPnl": 0.0
   },
   "guardrails": {
     "catastrophicDrawdown": {
-      "threshold": 20,
+      "threshold": 20.0,
       "actual": 51.11,
       "breached": true
     },
     "dailyLossLimit": {
-      "threshold": 10,
+      "threshold": 10.0,
       "actual": 0.0,
       "breached": false
     },
@@ -48,14 +42,15 @@
       "breached": false
     }
   },
-  "positions": [],
-  "actions": [
-    "Heartbeat only \u2014 no positions, no MCP, no actions needed"
-  ],
-  "vpsStatus": {
-    "status": "DECOMMISSIONED",
-    "lastHeartbeat": "2026-03-23T23:57:45Z",
-    "daysOffline": 47,
-    "severity": "CRITICAL"
-  }
+  "strategy": {
+    "name": "WOLF-Primary",
+    "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
+    "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce"
+  },
+  "vpsStatus": "DECOMMISSIONED",
+  "vpsLastHeartbeat": "2026-03-23T23:57:45Z",
+  "mcpStatus": "OFFLINE",
+  "actionsTaken": [
+    "Heartbeat only \u2014 portfolio flat, RISK_OFF enforced, MCP offline"
+  ]
 }
