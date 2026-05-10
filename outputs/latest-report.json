@@ -1,28 +1,40 @@
 {
-  "timestamp": "2026-05-10T08:47:48.576610+00:00",
+  "generatedAt": "2026-05-10T09:03:14Z",
+  "source": "cached",
   "regime": "RISK_OFF",
-  "portfolioSnapshot": {
-    "accountValue": 48.887581,
-    "peakEquity": 100.0,
-    "drawdownPct": 51.11,
-    "openPositions": 0,
-    "openOrders": 0,
-    "withdrawable": null,
-    "source": "cached"
+  "regimeUpdatedAt": "2026-05-10T08:01:00Z",
+  "regimeReason": "Catastrophic DD 51.1% (limit 20.0%)",
+  "strategy": {
+    "name": "wolf-primary",
+    "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
+    "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce"
+  },
+  "equity": {
+    "current": 48.887581,
+    "peak": 100.0,
+    "dayStart": 48.887581,
+    "drawdownPct": 51.11
+  },
+  "positions": {
+    "open": 0,
+    "details": []
+  },
+  "orders": {
+    "open": 0,
+    "details": []
   },
   "guardrails": {
-    "catastrophicDrawdownPct": 20.0,
-    "drawdownBreached": true,
+    "catastrophicDrawdownPct": 20,
+    "actualDrawdownPct": 51.11,
+    "breached": true,
+    "breachType": "catastrophic_drawdown",
     "consecutiveStopOuts": 0,
-    "maxConsecutiveStopOuts": 4,
-    "stopOutsBreached": false,
-    "status": "BREACHED"
+    "maxConsecutiveStopOuts": 4
   },
-  "positions": [],
   "actions": [],
   "warnings": [
-    "MCP server offline \u2014 using cached state",
-    "VPS scanners offline since 2026-03-23"
+    "MCP server offline \u2014 all data from cached state",
+    "VPS scanners stale since 2026-03-23 (>47 days) \u2014 deployment likely down"
   ],
-  "mcpStatus": "offline"
+  "summary": "JIDO heartbeat 2026-05-10T09:03:14Z: Portfolio flat ($48.89), RISK_OFF enforced (DD 51.11% > 20% threshold). No open positions. MCP offline. VPS scanners offline since 2026-03-23."
 }
