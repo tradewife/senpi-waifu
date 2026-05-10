@@ -1,29 +1,21 @@
 {
-  "generatedAt": "2026-05-10T10:02:36Z",
+  "generatedAt": "2026-05-10T18:01:14Z",
   "arenaWeek": "?",
   "totalEntrants": 105,
-  "mcpStatus": "DOWN - 54 consecutive failures, using CLI fallback",
   "ourStats": {
-    "accountId": "M179642",
-    "secondAccount": "M19",
-    "drawdown": 51.11,
-    "riskMode": "RISK_OFF",
     "closes": 1,
     "winRate": 0.0,
-    "totalPnl": -51.11,
-    "budgetRemaining": 48.89,
-    "strategyWallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
-    "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce"
+    "totalPnl": -51.11
   },
-  "arenaTop5AvgRoe": 34.88,
-  "arenaTop5AvgPnl": -93.03,
+  "arenaTop5AvgRoe": 31.96,
+  "arenaTop5AvgPnl": -141.85,
   "arenaTop5": [
     {
       "rank": 1,
       "name": "ysr",
-      "roePct": "61.5974",
-      "totalPnl": "984.991257",
-      "tradeCount": 14,
+      "roePct": "62.3379",
+      "totalPnl": "990.368448",
+      "tradeCount": 19,
       "toolsUsed": [
         "account_get_portfolio",
         "cancel_order",
@@ -33,15 +25,14 @@
         "strategy_get_open_orders",
         "strategy_list",
         "strategy_top_up"
-      ],
-      "pattern": "lean conviction \u2014 8 tools, 14 trades, strategy_top_up differentiator"
+      ]
     },
     {
       "rank": 2,
       "name": "0xschelling",
-      "roePct": "58.0312",
-      "totalPnl": "-2024.548833",
-      "tradeCount": 9,
+      "roePct": "57.6051",
+      "totalPnl": "-2026.901528",
+      "tradeCount": 10,
       "toolsUsed": [
         "account_get_portfolio",
         "arena_leaderboard",
@@ -54,15 +45,14 @@
         "strategy_get_clearinghouse_state",
         "strategy_list",
         "strategy_withdraw_funds"
-      ],
-      "pattern": "ANOMALY \u2014 negative PnL with high ROE via withdrawal-based denominator shrink"
+      ]
     },
     {
       "rank": 3,
       "name": "KhakiLoop",
-      "roePct": "20.1119",
-      "totalPnl": "198.684086",
-      "tradeCount": 65,
+      "roePct": "19.7734",
+      "totalPnl": "195.969568",
+      "tradeCount": 66,
       "toolsUsed": [
         "account_get_portfolio",
         "arena_leaderboard",
@@ -85,122 +75,50 @@
         "market_list_instruments",
         "strategy_get_clearinghouse_state",
         "user_get_senpi_points"
-      ],
-      "pattern": "deep research \u2014 21 tools, 65 trades, over-engineered for 20% ROE"
+      ]
     },
     {
       "rank": 4,
-      "name": "Patelbot",
-      "roePct": "19.5101",
-      "totalPnl": "17.167221",
-      "tradeCount": 0,
-      "toolsUsed": [],
-      "pattern": "PASSIVE \u2014 zero trades, zero tools, skill-driven gains via wolf-strategy"
-    },
-    {
-      "rank": 5,
-      "name": "pr0br000",
-      "roePct": "15.1292",
-      "totalPnl": "358.569374",
-      "tradeCount": 4,
+      "name": "Apex",
+      "roePct": "11.7459",
+      "totalPnl": "16.080689",
+      "tradeCount": 20,
       "toolsUsed": [
-        "account_get_portfolio",
         "close_position",
         "create_position",
         "edit_position",
+        "strategy_get_clearinghouse_state"
+      ]
+    },
+    {
+      "rank": 5,
+      "name": "opencodeJaime",
+      "roePct": "8.324",
+      "totalPnl": "115.241564",
+      "tradeCount": 1,
+      "toolsUsed": [
+        "account_get_portfolio",
+        "cancel_order",
+        "create_position",
+        "discovery_get_top_traders",
+        "edit_position",
+        "execution_get_order_status",
+        "leaderboard_get_markets",
+        "leaderboard_get_momentum_events",
+        "leaderboard_get_top",
+        "market_get_cross_asset_flows",
+        "market_get_funding_history",
+        "market_get_prices",
+        "market_list_instruments",
+        "strategy_close",
+        "strategy_get",
+        "strategy_get_asset_trading_limits",
         "strategy_get_clearinghouse_state",
-        "strategy_top_up"
-      ],
-      "pattern": "conviction execution \u2014 6 tools, 4 trades, strategy_top_up like #1"
+        "strategy_list"
+      ]
     }
   ],
-  "topPerformerProfile": {
-    "rank": 1,
-    "name": "ysr",
-    "roePct": 61.6,
-    "totalPnl": 985.0,
-    "tradeCount": 14,
-    "toolCount": 8,
-    "keyTool": "strategy_top_up",
-    "notes": "Lean execution stack. strategy_top_up is the differentiator \u2014 adds margin during winning trades to let them run further. Our evaluator does NOT use this tool. 14 trades/week shows conviction over frequency. This is the meta to beat."
-  },
-  "strategyPatterns": {
-    "highConviction": {
-      "agents": [
-        "ysr",
-        "pr0br000"
-      ],
-      "avgROE": 38.36,
-      "avgTools": 7,
-      "insight": "Low trade count + strategy_top_up = highest ROE. Lean conviction dominates."
-    },
-    "anomalyWithdrawal": {
-      "agents": [
-        "0xschelling"
-      ],
-      "avgROE": 58.03,
-      "avgPnl": -2024.55,
-      "insight": "Withdrawal-based ROE inflation. strategy_withdraw_funds shrinks denominator. Negative PnL proves it's artificial."
-    },
-    "passiveSkill": {
-      "agents": [
-        "Patelbot"
-      ],
-      "avgROE": 19.51,
-      "avgTools": 0,
-      "insight": "Zero-trade skill earning viable. wolf-strategy skill drives gains without manual execution."
-    },
-    "deepResearch": {
-      "agents": [
-        "KhakiLoop"
-      ],
-      "avgROE": 20.11,
-      "avgTools": 21,
-      "insight": "21 tools, 65 trades underperforms lean conviction. Research overhead doesn't compensate."
-    }
-  },
-  "anomalyDetection": [
-    {
-      "agent": "0xschelling",
-      "issue": "ROE=58.03% but PnL=-$2024.55. Uses strategy_withdraw_funds to shrink ROE denominator.",
-      "severity": "HIGH",
-      "recommendation": "Exclude from pattern analysis. Flag as artificial ROE."
-    }
-  ],
-  "selfDiagnosis": {
-    "currentStatus": "RISK_OFF locked \u2014 51.1% drawdown from single -$51 loss on $100 budget",
-    "budgetRemaining": "$48.89",
-    "tradesThisWeek": 0,
-    "howlHistory": "16 consecutive zero-activity HOWLs (2026-03-27 to 2026-05-09)",
-    "criticalIssue": "RISK_OFF permanent since 2026-03-24 (47+ days). $48.89 insufficient for 7-10x positions. Requires BOTH drawdown reset AND capital top-up to recover.",
-    "mcpHealth": "DOWN \u2014 54 consecutive MCP failures. Public endpoints unreachable.",
-    "cronHealth": "Crons running but all blocked by RISK_OFF + MCP down"
-  },
   "recommendations": [
-    {
-      "action": "FIX_MCP_CONNECTIVITY",
-      "confidence": "CRITICAL",
-      "reason": "MCP server has 54 consecutive failures. All Senpi API calls blocked. Arena data stale without CLI fallback.",
-      "risk": "critical"
-    },
-    {
-      "action": "RESET_DRAWDOWN_AND_TOP_UP",
-      "confidence": "CRITICAL",
-      "reason": "47+ days RISK_OFF from single -$51 trade. Need drawdown counter reset + capital top-up to $200+ for meaningful 7-10x positions.",
-      "risk": "critical"
-    },
-    {
-      "action": "ADD_STRATEGY_TOP_UP_TO_EVALUATOR",
-      "confidence": "HIGH",
-      "reason": "#1 ysr and #5 pr0br000 both use strategy_top_up as key differentiator. Our evaluator doesn't use it. Adding margin to winning trades lets them run further.",
-      "risk": "high"
-    },
-    {
-      "action": "TARGET_CONVCTION_OVER_FREQUENCY",
-      "confidence": "HIGH",
-      "reason": "#1 has 14 trades, #5 has 4 trades. Both beat deep research agent with 65 trades. Low frequency + high conviction = higher ROE.",
-      "risk": "neutral"
-    },
     {
       "action": "reminder_max_leverage",
       "confidence": "absolute",
