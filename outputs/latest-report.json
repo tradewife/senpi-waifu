@@ -1,40 +1,31 @@
 {
-  "generatedAt": "2026-05-10T09:16:49Z",
+  "generatedAt": "2026-05-10T09:31:28.835401+00:00",
   "source": "cached",
   "regime": "RISK_OFF",
-  "regimeReason": "Catastrophic DD 51.11% > 20% threshold",
-  "portfolio": {
-    "equity": 48.887581,
-    "peakEquity": 100.0,
-    "drawdownPct": 51.11,
-    "dayStartEquity": 48.887581,
-    "dailyPnl": 0.0,
-    "openPositions": 0,
-    "openOrders": 0,
-    "withdrawable": "unknown (MCP offline)"
-  },
-  "positions": [],
+  "regimeReason": "DD 51.11% from catastrophic limit 20.0%",
+  "strategy": "wolf-primary",
+  "strategyWallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
+  "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce",
+  "accountValue": 48.887581,
+  "peakEquity": 100.0,
+  "drawdownPct": 51.11,
+  "dailyPnl": 0.0,
+  "openPositions": 0,
+  "openOrders": 0,
+  "consecutiveStopOuts": 0,
   "guardrails": {
-    "catastrophicDD": {
-      "threshold": 20.0,
-      "current": 51.11,
-      "breached": true
-    },
-    "dailyLossLimit": {
-      "threshold": 10.0,
-      "current": 0.0,
-      "breached": false
-    },
-    "consecutiveStopOuts": {
-      "threshold": 4,
-      "current": 0,
-      "breached": false
-    }
+    "catastrophicDrawdownPct": 20,
+    "drawdownBreached": true,
+    "dailyLossLimitPct": 10,
+    "dailyLossBreached": false,
+    "maxConsecutiveStopOuts": 4,
+    "stopOutsBreached": false
   },
   "actions": [],
   "warnings": [
-    "MCP server offline \u2014 all data from cached state",
-    "VPS scanners offline since 2026-03-23 (>47 days) \u2014 treat as decommissioned"
+    "MCP server offline \u2014 using cached state",
+    "VPS scanners stale since 2026-03-23 (>48 days) \u2014 treat as decommissioned"
   ],
-  "nextSteps": "RISK_OFF remains active. DD 51.11% far exceeds 20% catastrophic threshold. Portfolio is flat with no open positions. No action needed until user intervention to reset peakEquity or add capital."
+  "mcpStatus": "offline",
+  "vpsStatus": "decommissioned"
 }
