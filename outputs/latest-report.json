@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-05-10T16:30:00Z",
+  "timestamp": "2026-05-10T06:46:35.013801+00:00",
   "regime": "RISK_OFF",
   "regimeReason": "Catastrophic DD 51.1% (limit 20.0%)",
   "strategy": {
@@ -29,7 +29,7 @@
     "consecutiveStopOuts": {
       "threshold": 4,
       "actual": 0,
-      "breched": false
+      "breached": false
     }
   },
   "positions": [],
@@ -43,5 +43,5 @@
     "risk-arbiter": "2026-03-23T23:57:45Z",
     "warning": "VPS scanners offline \u2014 all heartbeats >48 days stale"
   },
-  "notes": "MCP offline, using cached equity from 2026-05-10T06:15:40Z. VPS deployment likely down. Only Hermes-managed cron jobs active."
+  "notes": "MCP offline, using cached equity. VPS deployment likely down. JIDO heartbeat at 2026-05-10T06:46:35.013801+00:00."
 }

@@ -441,7 +441,8 @@
       "peakEquity": 100.0,
       "dayStartEquity": 48.887581,
       "consecutiveStopOuts": 0,
-      "lastJidoRun": "2026-05-10T16:30:00Z"
+      "lastJidoRun": "2026-05-10T16:30:00Z",
+      "lastEquity": 48.887581
     }
   },
   "pending": {
