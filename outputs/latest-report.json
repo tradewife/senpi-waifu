@@ -1,15 +1,29 @@
 {
-  "timestamp": "2026-05-10T07:47:11.395595+00:00",
-  "accountValue": 48.887581,
+  "generatedAt": "2026-05-10T08:00:59Z",
+  "regime": "RISK_OFF",
+  "equity": 48.89,
   "peakEquity": 100.0,
   "drawdownPct": 51.11,
+  "dailyPnl": 0,
+  "dailyCloses": 0,
+  "dailyWinRate": 0,
   "openPositions": 0,
-  "regime": "RISK_OFF",
-  "positions": [],
-  "actions": "Flat-portfolio fast-path. No positions to assess. Heartbeat written. Brain synced. No emergency actions needed.",
-  "warnings": [
-    "MCP server offline \u2014 using cached state",
-    "VPS scanners offline (last heartbeat 2026-03-23, >45 days stale)",
-    "Catastrophic DD 51.11% \u2014 RISK_OFF must remain active until manual review"
-  ]
+  "alerts": [
+    "CATASTROPHIC DRAWDOWN: 51.1%"
+  ],
+  "deadWeight": [],
+  "guardrails": {
+    "dailyLossLimitPct": 10,
+    "catastrophicDrawdownPct": 20,
+    "maxConsecutiveStopOuts": 4,
+    "directionalCapPct": 70,
+    "minLeverage": 7,
+    "maxLeverage": 10,
+    "maxPositionsTotal": 3,
+    "perAssetCooldownMinutes": 120,
+    "bannedAssetPrefixes": [
+      "xyz:"
+    ],
+    "perTradeRiskPct": 1.0
+  }
 }

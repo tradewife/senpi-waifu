@@ -36,5 +36,7 @@
       "message": "JIDO heartbeat: Flat portfolio, RISK_OFF active, DD 51.11%. MCP offline \u2014 using cached state."
     }
   ],
-  "lastChecked": "2026-05-10T17:30:00Z"
+  "lastChecked": "2026-05-10T17:30:00Z",
+  "lastCheckAt": "2026-05-10T08:00:59Z",
+  "dayStartDate": "2026-05-10"
 }
