@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-10T23:16:47.789276+00:00",
+  "generatedAt": "2026-05-10T23:31:47.219475+00:00",
   "source": "cached",
   "regime": {
     "mode": "RISK_OFF",
@@ -41,8 +41,8 @@
   },
   "actions": [],
   "warnings": [
-    "MCP server offline (72+ consecutive failures)",
-    "VPS decommissioned since 2026-03-23 (48+ days)",
+    "MCP server offline \u2014 all senpi_* calls failed",
+    "VPS decommissioned since 2026-03-23 (49+ days)",
     "DD 51.11% based on cached equity from 2026-05-10 \u2014 actual DD may differ"
   ],
   "strategy": {
