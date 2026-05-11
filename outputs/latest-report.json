@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-05-11T08:17:08Z",
+  "generatedAt": "2026-05-11T08:32:58Z",
   "source": "live",
   "regime": {
     "mode": "RISK_OFF",
-    "reason": "Catastrophic DD 51.1% (limit 20.0%)",
+    "reason": "Catastrophic DD 51.11% (limit 20.0%)",
     "enforcedBy": "jido",
     "marketSignal": null
   },
@@ -16,23 +16,34 @@
     "openPositions": 0,
     "openOrders": 0
   },
+  "positions": [],
   "guardrails": {
     "catastrophicDrawdown": {
-      "threshold": 20.0,
+      "threshold": 20,
       "actual": 51.11,
       "breached": true
     },
     "dailyLossLimit": {
-      "threshold": 10.0,
+      "threshold": 10,
       "actual": 0.0,
       "breached": false
     },
-    "maxConsecutiveStopOuts": {
+    "consecutiveStopOuts": {
       "threshold": 4,
+      "actual": 0,
+      "breached": false
+    },
+    "maxPositions": {
+      "threshold": 3,
       "actual": 0,
       "breached": false
     }
   },
+  "actions": [],
+  "warnings": [
+    "DD 51.11% is based on live equity from 2026-05-11T08:32:58Z. RISK_OFF remains enforced.",
+    "VPS scanners offline since 2026-03-23 (48+ days) \u2014 treat as decommissioned."
+  ],
   "strategy": {
     "name": "WOLF-Primary",
     "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
@@ -40,9 +51,15 @@
     "budget": 100,
     "remaining": 48.887581
   },
-  "actions": [],
-  "warnings": [
-    "DD 51.11% is based on live equity from 2026-05-11T08:17:08Z. RISK_OFF remains enforced.",
-    "VPS scanners offline since 2026-03-23 (48+ days) \u2014 treat as decommissioned."
-  ]
+  "infrastructure": {
+    "mcpOnline": true,
+    "vpsStatus": "DECOMMISSIONED",
+    "vpsOfflineSince": "2026-03-23T23:57:15Z",
+    "vpsOfflineDays": 48,
+    "cronHeartbeats": {
+      "brain": "2026-03-23T23:57:15Z",
+      "arena": "2026-03-23T23:57:05Z",
+      "risk-arbiter": "2026-03-23T23:57:45Z"
+    }
+  }
 }
