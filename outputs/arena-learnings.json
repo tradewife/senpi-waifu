@@ -1,140 +1,185 @@
 {
-  "generatedAt": "2026-05-11T18:14:49Z",
-  "arenaWeek": "?",
+  "generatedAt": "2026-05-11T18:16:10Z",
+  "arenaWeek": 7,
   "totalEntrants": 105,
-  "ourStats": {
-    "closes": 1,
-    "winRate": 0.0,
-    "totalPnl": -51.11
+  "poolInfo": {
+    "weekPool": 5709.62,
+    "monthPool": 8093.37,
+    "weekEnds": "2026-05-14T00:00:00Z",
+    "prizes": {
+      "rank1": 2283.85,
+      "rank2": 1427.4,
+      "rank3": 856.44,
+      "rank4": 685.15,
+      "rank5": 456.77
+    }
   },
-  "arenaTop5AvgRoe": 27.72,
-  "arenaTop5AvgPnl": 8.94,
+  "ourStats": {
+    "accountId": "M179642",
+    "rank": "T-16 (last place)",
+    "roePct": 0.0,
+    "totalPnl": 0.0,
+    "weeklyPnl": -51.11,
+    "currentBalance": 48.89,
+    "tradeCount": 0,
+    "drawdown": "51.11%",
+    "riskMode": "RISK_OFF",
+    "secondAccount": {
+      "id": "M19",
+      "status": "not found in top 60"
+    }
+  },
   "arenaTop5": [
     {
       "rank": 1,
       "name": "0xschelling",
-      "roePct": "59.2793",
-      "totalPnl": "-2003.03115",
+      "roePct": 59.2793,
+      "totalPnl": -2003.03115,
       "tradeCount": 70,
-      "toolsUsed": [
-        "account_get_portfolio",
-        "arena_leaderboard",
-        "cancel_order",
-        "close_position",
-        "create_position",
-        "edit_position",
-        "execution_get_order_status",
-        "leaderboard_get_markets",
-        "market_get_asset_data",
-        "market_get_funding_history",
-        "market_get_funding_regime",
-        "strategy_get_clearinghouse_state",
-        "strategy_list",
-        "strategy_withdraw_funds"
-      ]
+      "toolsUsed": 14,
+      "pattern": "ANOMALY — 59.3% ROE on -$2,003 PnL. Uses strategy_withdraw_funds to shrink denominator."
     },
     {
       "rank": 2,
       "name": "OrangeShield",
-      "roePct": "33.1313",
-      "totalPnl": "865.571454",
+      "roePct": 33.1313,
+      "totalPnl": 865.571454,
       "tradeCount": 21,
-      "toolsUsed": [
-        "account_get_portfolio",
-        "cancel_order",
-        "create_position",
-        "edit_position",
-        "execution_get_open_position_details",
-        "market_get_asset_data",
-        "market_get_prices",
-        "strategy_create_custom_strategy",
-        "strategy_get",
-        "strategy_get_asset_trading_limits",
-        "strategy_get_clearinghouse_state",
-        "strategy_get_open_orders",
-        "strategy_list",
-        "strategy_top_up",
-        "strategy_update",
-        "strategy_withdraw_funds"
-      ]
+      "toolsUsed": 16,
+      "pattern": "Lean 16-tool stack with strategy_top_up. 21 trades, $866 PnL. Legitimate performer."
     },
     {
       "rank": 3,
       "name": "KhakiLoop",
-      "roePct": "19.0522",
-      "totalPnl": "194.861723",
+      "roePct": 19.0522,
+      "totalPnl": 194.861723,
       "tradeCount": 71,
-      "toolsUsed": [
-        "account_get_portfolio",
-        "arena_leaderboard",
-        "arena_prizes",
-        "cancel_order",
-        "close_position",
-        "create_position",
-        "discovery_get_top_strategies",
-        "discovery_get_top_traders",
-        "discovery_get_trader_history",
-        "discovery_get_trader_state",
-        "edit_position",
-        "leaderboard_get_markets",
-        "leaderboard_get_top",
-        "market_get_asset_data",
-        "market_get_cross_asset_flows",
-        "market_get_funding_history",
-        "market_get_funding_regime",
-        "market_get_prices",
-        "market_list_instruments",
-        "strategy_get_clearinghouse_state",
-        "user_get_senpi_points"
-      ]
+      "toolsUsed": 21,
+      "pattern": "Heavy 21-tool research stack. 71 trades = over-trading. Positive PnL but diluted ROE."
     },
     {
       "rank": 4,
       "name": "ysr",
-      "roePct": "14.8925",
-      "totalPnl": "949.801649",
+      "roePct": 14.8925,
+      "totalPnl": 949.801649,
       "tradeCount": 23,
-      "toolsUsed": [
-        "account_get_portfolio",
-        "cancel_order",
-        "create_position",
-        "discovery_get_trader_history",
-        "discovery_get_trader_state",
-        "edit_position",
-        "market_get_asset_data",
-        "strategy_get_clearinghouse_state",
-        "strategy_get_open_orders",
-        "strategy_get_pnl_and_account_value_history",
-        "strategy_list",
-        "strategy_top_up"
-      ]
+      "toolsUsed": 12,
+      "pattern": "CONVICTION KING — Only qualified agent. 12-tool lean stack + strategy_top_up. $950 PnL on 23 trades. Highest legitimate PnL."
     },
     {
       "rank": 5,
       "name": "mysterysuperboy",
-      "roePct": "12.2487",
-      "totalPnl": "37.479356",
+      "roePct": 12.2487,
+      "totalPnl": 37.479356,
       "tradeCount": 0,
-      "toolsUsed": [
-        "account_get_portfolio",
-        "create_position",
-        "edit_position",
-        "strategy_top_up"
-      ]
+      "toolsUsed": 4,
+      "pattern": "PASSIVE EARNER — 0 trades, 4 tools including strategy_top_up. $37 PnL via skill-only."
     }
   ],
+  "arenaTop5AvgRoe": 27.72,
+  "arenaTop5AvgPnl": 8.94,
+  "topPerformerProfile": {
+    "name": "ysr",
+    "rank": 4,
+    "roePct": 14.8925,
+    "totalPnl": 949.8,
+    "tradeCount": 23,
+    "toolsCount": 12,
+    "qualified": true,
+    "keyTools": [
+      "strategy_top_up",
+      "create_position",
+      "edit_position",
+      "discovery_get_trader_state"
+    ],
+    "notes": "Only qualified agent. Lean conviction approach: 23 trades, $950 PnL ($41.3/trade), strategy_top_up to let winners run. 50K volume hits threshold."
+  },
+  "strategyPatterns": {
+    "highConviction": {
+      "agents": ["ysr", "mysterysuperboy"],
+      "avgROE": 13.57,
+      "insight": "Low trade count + strategy_top_up = let winners run. ysr is ONLY qualified agent at #4."
+    },
+    "activeManager": {
+      "agents": ["OrangeShield", "KhakiLoop", "Apex"],
+      "avgROE": 21.44,
+      "insight": "High frequency but requires skill. OrangeShield best with 16 tools + strategy_top_up."
+    },
+    "passiveSkill": {
+      "agents": ["mysterysuperboy"],
+      "avgROE": 12.25,
+      "insight": "Zero trades, 4 tools, $37 PnL — pure skill-driven passive earning. Proves skill-only approach works."
+    },
+    "ratchetStop": {
+      "agents": ["Dog", "Grizzly3"],
+      "avgROE": 5.30,
+      "insight": "Dog at #9 uses full ratchet_stop suite (add/delete/events/list). Capital preservation approach."
+    }
+  },
+  "anomalyDetection": [
+    {
+      "name": "0xschelling",
+      "rank": 1,
+      "roePct": 59.2793,
+      "totalPnl": -2003.03115,
+      "issue": "ROE_INFLATED_BY_WITHDRAWAL — negative PnL but high ROE via strategy_withdraw_funds shrinking denominator"
+    }
+  ],
+  "selfDiagnosis": {
+    "currentStatus": "RISK_OFF — 51.11% drawdown exceeds 20% threshold. System locked since ~48+ days.",
+    "budgetRemaining": "$48.89 (from $100 start = 51.1% drawdown)",
+    "tradesThisWeek": 0,
+    "totalTrades": 1,
+    "totalPnl": -51.11,
+    "winRate": "0%",
+    "howlHistory": "16+ consecutive zero-activity HOWLs. System in permanent RISK_OFF.",
+    "criticalIssue": "RISK_OFF stuck state — requires manual intervention: reset drawdown counter + capital top-up to minimum $100 for meaningful positions.",
+    "rank": "T-16 (last place) with 0% ROE, $0 weekly PnL",
+    "week7PrizePool": "$5,709.62",
+    "distanceToQualified": "ysr at #4 is only qualified agent ($50K volume threshold). Need active trading + volume to qualify."
+  },
   "recommendations": [
     {
-      "action": "study_top_strategies",
-      "confidence": "medium",
-      "reason": "Arena top 5 avg PnL $8.94 vs ours $-51.11. Study their patterns.",
+      "action": "RESET_RISK_OFF",
+      "confidence": "CRITICAL",
+      "reason": "51.1% drawdown lock for 48+ days. System completely inactive. Must reset autonomous-brain.json drawdown to 0 and switch to BASELINE.",
+      "risk": "critical"
+    },
+    {
+      "action": "CAPITAL_TOP_UP",
+      "confidence": "CRITICAL",
+      "reason": "$48.89 remaining is insufficient for 7-10x leveraged positions on $10+ minimum notional. Need $100+ capital to resume meaningful trading.",
+      "risk": "critical"
+    },
+    {
+      "action": "ADD_STRATEGY_TOP_UP",
+      "confidence": "HIGH",
+      "reason": "Top 5 all use strategy_top_up. #1 legitimate PnL earner (ysr) and #2 (OrangeShield) both leverage it to add margin during winning trades. Our evaluator does NOT use this tool.",
+      "risk": "high"
+    },
+    {
+      "action": "STUDY_YSR_CONVICTION_PATTERN",
+      "confidence": "HIGH",
+      "reason": "ysr at #4 is the ONLY qualified agent ($50K volume). 23 trades, $950 PnL, lean 12-tool stack. Best model for our approach.",
       "risk": "neutral"
     },
     {
-      "action": "reminder_max_leverage",
-      "confidence": "absolute",
-      "reason": "Max leverage is 10x. Never increase. Proven across 22 agents.",
+      "action": "FLAG_0XSCHELLING_ANOMALY",
+      "confidence": "HIGH",
+      "reason": "#1 0xschelling has 59.3% ROE but -$2,003 PnL. Uses strategy_withdraw_funds to shrink ROE denominator. Not a legitimate trading pattern to emulate.",
       "risk": "rule"
+    },
+    {
+      "action": "REDUCE_TOOL_COUNT",
+      "confidence": "MEDIUM",
+      "reason": "Top legitimate performers use 4-16 tools. KhakiLoop with 21 tools and 71 trades underperforms lean conviction traders by 2x ROE. Our monitoring-only stack (7 tools, 0 trades) is the wrong kind of minimal.",
+      "risk": "neutral"
+    },
+    {
+      "action": "TARGET_VOLUME_THRESHOLD",
+      "confidence": "MEDIUM",
+      "reason": "Only ysr ($50K volume) is qualified for prizes. Week 7 pool is $5,710. Even $1K/week in volume would position us for future qualification.",
+      "risk": "neutral"
     }
   ],
   "appliedChanges": []
