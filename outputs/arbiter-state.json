@@ -3,18 +3,8 @@
   "lastEquity": 48.887581,
   "dayStartEquity": 48.887581,
   "consecutiveStopOuts": 0,
-  "lastJidoRun": "2026-05-11T21:47:27Z",
+  "lastJidoRun": "2026-05-11T22:01:55Z",
   "alerts": [
-    {
-      "type": "JIDO_HEARTBEAT",
-      "timestamp": "2026-05-11T21:17:22.114730+00:00",
-      "regime": "RISK_OFF",
-      "accountValue": 48.887581,
-      "drawdownPct": 51.11,
-      "openPositions": 0,
-      "openOrders": 0,
-      "message": "Flat portfolio (RISK_OFF). Equity $48.89, DD 51.11%. 0 positions, 0 orders. VPS offline since 2026-03-23. Hyperliquid wallet drained (accountValue=0)."
-    },
     {
       "type": "JIDO_HEARTBEAT",
       "timestamp": "2026-05-11T21:31:59Z",
@@ -34,13 +24,23 @@
       "openPositions": 0,
       "openOrders": 0,
       "message": "Flat portfolio (RISK_OFF). Equity $48.89, DD 51.11%. 0 positions, 0 orders. VPS offline since 2026-03-23 (49d) \u2014 decommissioned."
+    },
+    {
+      "type": "JIDO_HEARTBEAT",
+      "timestamp": "2026-05-11T22:01:55Z",
+      "regime": "RISK_OFF",
+      "accountValue": 48.887581,
+      "drawdownPct": 51.11,
+      "openPositions": 0,
+      "openOrders": 0,
+      "message": "Flat portfolio (RISK_OFF). Equity $48.89, DD 51.11%. 0 positions, 0 orders. VPS offline since 2026-03-23 (50d) \u2014 decommissioned."
     }
   ],
-  "lastChecked": "2026-05-11T21:47:27Z",
-  "lastCheckAt": "2026-05-11T21:47:27Z",
+  "lastChecked": "2026-05-11T22:01:55Z",
+  "lastCheckAt": "2026-05-11T22:01:55Z",
   "dayStartDate": "2026-05-11",
-  "lastCheck": "2026-05-11T21:47:27Z",
-  "lastUpdated": "2026-05-11T21:47:27Z",
+  "lastCheck": "2026-05-11T22:01:55Z",
+  "lastUpdated": "2026-05-11T22:01:55Z",
   "drawdownPct": 51.11,
   "withdrawable": 48.887581
 }
