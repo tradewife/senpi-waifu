@@ -1,28 +1,19 @@
 {
-  "generatedAt": "2026-05-11T01:47:50.420014+00:00",
+  "timestamp": "2026-05-11T02:03:19.690585+00:00",
   "source": "cached",
-  "warnings": [
-    "MCP offline (80+ consecutive failures) \u2014 all data from cached state",
-    "DD 51.11% based on cached equity from 2026-05-11 \u2014 actual DD may differ",
-    "VPS decommissioned since 2026-03-23 (49 days)"
-  ],
   "regime": {
     "mode": "RISK_OFF",
-    "reason": "Catastrophic drawdown 51.1% exceeds 20% threshold",
-    "enforcedBy": "jido",
-    "marketSignal": "BTC slope=-0.51%, ATR=0.63% (RISK_OFF)"
+    "reason": "Market=RISK_OFF (BTC slope=-0.51%, ATR=0.63%) but RISK_OFF override active: DD 51.1% from catastrophic limit 20%",
+    "enforcedBy": "jido-emergency",
+    "marketSignal": "MCP offline"
   },
   "portfolio": {
     "equity": {
       "current": 48.887581,
       "peak": 100.0,
-      "dayStart": 48.887581
-    },
-    "drawdownPct": 51.11,
-    "openPositions": 0,
-    "openOrders": 0,
-    "withdrawable": null,
-    "dailyPnl": 0.0
+      "dayStart": 48.887581,
+      "currency": "USD"
+    }
   },
   "guardrails": {
     "catastrophicDrawdown": {
@@ -30,24 +21,32 @@
       "actual": 51.11,
       "breached": true
     },
-    "dailyLossLimit": {
-      "threshold": 10,
-      "actual": 0.0,
-      "breached": false
-    },
     "consecutiveStopOuts": {
       "threshold": 4,
       "actual": 0,
       "breached": false
+    },
+    "dailyLossLimit": {
+      "threshold": 10,
+      "actual": 0,
+      "breached": false
     }
   },
+  "positions": [],
   "strategy": {
     "name": "WOLF-Primary",
     "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
     "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce",
     "budget": 100,
-    "remaining": 48.89
+    "remaining": 48.887581
   },
-  "actions": [],
-  "summary": "Flat portfolio. MCP offline (80+ failures). RISK_OFF correctly enforced (DD 51.11% > 20% threshold). No positions to protect. VPS decommissioned 49 days."
+  "warnings": [
+    "MCP offline (81+ consecutive failures) \u2014 using cached equity",
+    "DD 51.11% based on cached equity \u2014 actual DD may differ",
+    "VPS decommissioned since 2026-03-23 (48 days)"
+  ],
+  "actionsTaken": [
+    "Heartbeat check \u2014 flat portfolio, no actions needed"
+  ],
+  "mcpStatus": "offline"
 }
