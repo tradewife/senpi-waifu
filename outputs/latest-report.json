@@ -1,17 +1,11 @@
 {
-  "generatedAt": "2026-05-12T01:15:49Z",
+  "generatedAt": "2026-05-11T15:32:46Z",
   "source": "live",
   "regime": {
     "mode": "RISK_OFF",
-    "reason": "Catastrophic DD 51.1% (limit 20.0%)",
-    "enforcedBy": "jido",
-    "marketSignal": null
-  },
-  "portfolio": {
-    "equity": 48.887581,
-    "peakEquity": 100.0,
-    "withdrawable": 48.887581,
-    "drawdownPct": 51.11
+    "reason": "Catastrophic DD 51.11% (limit 20.0%)",
+    "enforcedBy": "jido-monitor",
+    "marketSignal": "flat"
   },
   "strategy": {
     "name": "WOLF-Primary",
@@ -20,28 +14,37 @@
     "budget": 100,
     "remaining": 48.887581
   },
-  "positions": [],
+  "portfolio": {
+    "equity": 48.887581,
+    "peakEquity": 100.0,
+    "drawdownPct": 51.11,
+    "withdrawable": 48.887581,
+    "openPositions": 0,
+    "openOrders": 0,
+    "dailyPnl": 0.0
+  },
   "guardrails": {
     "catastrophicDrawdown": {
       "threshold": 20.0,
       "actual": 51.11,
       "breached": true
     },
-    "consecutiveStopOuts": {
-      "threshold": 4,
-      "actual": 0,
-      "breached": false
-    },
     "dailyLossLimit": {
       "threshold": 10.0,
       "actual": 0.0,
       "breached": false
+    },
+    "consecutiveStopOuts": {
+      "threshold": 4,
+      "actual": 0,
+      "breached": false
     }
   },
+  "positions": [],
   "actions": [
-    "Heartbeat only \u2014 flat portfolio, no emergency actions needed."
+    "RISK_OFF maintained \u2014 no new entries allowed"
   ],
   "warnings": [
-    "VPS offline since 2026-03-23 (~50d) \u2014 decommissioned. MCP-only operation."
+    "VPS offline since 2026-03-23 (~49d \u2014 decommissioned). Hermes-only operation."
   ]
 }
