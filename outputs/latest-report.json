@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-05-11T09:18:18Z",
+  "generatedAt": "2026-05-11T09:47:34Z",
   "source": "live",
   "regime": {
     "mode": "RISK_OFF",
-    "reason": "Catastrophic DD 51.11% (limit 20.0%)",
+    "reason": "Catastrophic DD 51.11% (limit 20%)",
     "enforcedBy": "jido",
     "marketSignal": "RISK_OFF (arbiter-override)"
   },
@@ -41,7 +41,8 @@
   },
   "actions": [],
   "warnings": [
-    "VPS offline since 2026-03-23 (49 days) \u2014 treat as decommissioned"
+    "VPS DECOMMISSIONED \u2014 offline 48 days (since 2026-03-23). Treat as decommissioned.",
+    "DD 51.11% based on peak $100.00 \u2014 catastrophic drawdown locked in."
   ],
   "strategy": {
     "name": "wolf-primary",
@@ -53,8 +54,8 @@
   "infrastructure": {
     "mcpOnline": true,
     "vpsStatus": "DECOMMISSIONED",
-    "vpsOfflineSince": "2026-03-23",
-    "vpsOfflineDays": 49,
+    "vpsOfflineSince": "2026-03-23T23:57:15Z",
+    "vpsOfflineDays": 48,
     "cronHeartbeats": {
       "brain": "2026-03-23T23:57:15Z",
       "arena": "2026-03-23T23:57:05Z",
