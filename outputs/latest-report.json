@@ -1,80 +1,29 @@
 {
-  "timestamp": "2026-05-11T19:47:34Z",
-  "source": "live",
-  "regime": {
-    "mode": "RISK_OFF",
-    "reason": "Catastrophic DD 51.1% (limit 20.0%)",
-    "enforcedBy": "jido-cron",
-    "marketSignal": "defensive"
-  },
-  "portfolio": {
-    "equity": {
-      "current": 48.887581,
-      "peak": 100.0,
-      "dayStart": 48.887581,
-      "withdrawable": 0.0
-    },
-    "drawdownPct": 51.11,
-    "dailyPnlPct": 0.0
-  },
-  "strategy": {
-    "name": "wolf-primary",
-    "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
-    "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce",
-    "budget": 100,
-    "remaining": 0.0
-  },
-  "positions": [],
-  "openOrders": 0,
-  "guardrails": {
-    "catastrophicDrawdown": {
-      "threshold": 20.0,
-      "actual": 51.11,
-      "breached": true
-    },
-    "dailyLossLimit": {
-      "threshold": 10.0,
-      "actual": 0.0,
-      "breached": false
-    },
-    "consecutiveStopOuts": {
-      "threshold": 4,
-      "actual": 0,
-      "breached": false
-    }
-  },
-  "market": {
-    "BTC": 81945.5,
-    "ETH": 2340.65,
-    "SOL": 98.063,
-    "HYPE": 42.1995
-  },
-  "actions": [
-    "Heartbeat check \u2014 flat portfolio, no emergency actions needed"
-  ],
-  "warnings": [
-    "Account value is $0.0 on-chain. Cached equity $48.887581 from previous state. Wallet may be fully drained/closed."
-  ],
+  "generatedAt": "2026-05-11T20:00:47Z",
+  "regime": "RISK_OFF",
+  "equity": 48.89,
+  "peakEquity": 100.0,
+  "drawdownPct": 51.11,
+  "dailyPnl": 0,
+  "dailyCloses": 0,
+  "dailyWinRate": 0,
+  "openPositions": 0,
   "alerts": [
-    {
-      "type": "JIDO_HEARTBEAT",
-      "timestamp": "2026-05-11T19:31:09Z",
-      "regime": "RISK_OFF",
-      "accountValue": 48.887581,
-      "drawdownPct": 51.11,
-      "openPositions": 0,
-      "openOrders": 0,
-      "message": "Flat portfolio. DD 51.11% > 20.0% limit. RISK_OFF maintained. Account $48.89 / peak $100.00. MCP online (live data). VPS offline since 2026-03-23 (~50d \u2014 decommissioned)."
-    },
-    {
-      "type": "JIDO_HEARTBEAT",
-      "timestamp": "2026-05-11T19:47:34Z",
-      "regime": "RISK_OFF",
-      "accountValue": 48.887581,
-      "drawdownPct": 51.11,
-      "openPositions": 0,
-      "openOrders": 0,
-      "message": "Flat portfolio, RISK_OFF enforced. DD 51.11% from peak. Wallet drained (accountValue=0). Cached equity=$48.887581."
-    }
-  ]
+    "CATASTROPHIC DRAWDOWN: 51.1%"
+  ],
+  "deadWeight": [],
+  "guardrails": {
+    "dailyLossLimitPct": 10,
+    "catastrophicDrawdownPct": 20,
+    "maxConsecutiveStopOuts": 4,
+    "directionalCapPct": 70,
+    "minLeverage": 7,
+    "maxLeverage": 10,
+    "maxPositionsTotal": 3,
+    "perAssetCooldownMinutes": 120,
+    "bannedAssetPrefixes": [
+      "xyz:"
+    ],
+    "perTradeRiskPct": 1.0
+  }
 }
