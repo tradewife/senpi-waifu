@@ -1,19 +1,37 @@
 {
-  "timestamp": "2026-05-11T02:03:19.690585+00:00",
+  "generatedAt": "2026-05-11T02:17:43.873347+00:00",
   "source": "cached",
+  "warnings": [
+    "MCP server offline \u2014 all data from cached state",
+    "DD 51.11% based on cached equity from 2026-05-11 \u2014 actual DD may differ",
+    "VPS decommissioned since 2026-03-23 (49d)"
+  ],
   "regime": {
     "mode": "RISK_OFF",
-    "reason": "Market=RISK_OFF (BTC slope=-0.51%, ATR=0.63%) but RISK_OFF override active: DD 51.1% from catastrophic limit 20%",
-    "enforcedBy": "jido-emergency",
-    "marketSignal": "MCP offline"
+    "reason": "Catastrophic drawdown: 51.11% exceeds 20% threshold",
+    "enforcedBy": "jido",
+    "marketSignal": null
   },
   "portfolio": {
     "equity": {
       "current": 48.887581,
       "peak": 100.0,
-      "dayStart": 48.887581,
-      "currency": "USD"
-    }
+      "dayStart": 48.887581
+    },
+    "drawdown": {
+      "pctFromPeak": 51.11,
+      "absFromPeak": 51.11
+    },
+    "openPositions": 0,
+    "openOrders": 0,
+    "withdrawable": null
+  },
+  "strategy": {
+    "name": "wolf-primary",
+    "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
+    "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce",
+    "budget": 100.0,
+    "remaining": 48.887581
   },
   "guardrails": {
     "catastrophicDrawdown": {
@@ -21,32 +39,23 @@
       "actual": 51.11,
       "breached": true
     },
+    "dailyLoss": {
+      "threshold": 10,
+      "actual": 0,
+      "breached": false
+    },
     "consecutiveStopOuts": {
       "threshold": 4,
       "actual": 0,
       "breached": false
-    },
-    "dailyLossLimit": {
-      "threshold": 10,
-      "actual": 0,
-      "breached": false
     }
   },
-  "positions": [],
-  "strategy": {
-    "name": "WOLF-Primary",
-    "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
-    "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce",
-    "budget": 100,
-    "remaining": 48.887581
-  },
-  "warnings": [
-    "MCP offline (81+ consecutive failures) \u2014 using cached equity",
-    "DD 51.11% based on cached equity \u2014 actual DD may differ",
-    "VPS decommissioned since 2026-03-23 (48 days)"
+  "actions": [
+    "No actions needed \u2014 flat portfolio under RISK_OFF"
   ],
-  "actionsTaken": [
-    "Heartbeat check \u2014 flat portfolio, no actions needed"
-  ],
-  "mcpStatus": "offline"
+  "vpsStatus": {
+    "status": "decommissioned",
+    "lastHeartbeat": "2026-03-23",
+    "stalenessDays": 49
+  }
 }

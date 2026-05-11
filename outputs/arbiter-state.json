@@ -34,6 +34,16 @@
       "openPositions": 0,
       "openOrders": 0,
       "message": "Flat portfolio, MCP offline (81+ failures). DD 51.11% (cached equity from 2026-05-11 \u2014 actual DD may differ). VPS decommissioned since 2026-03-23 (48 days). RISK_OFF enforced correctly."
+    },
+    {
+      "type": "JIDO_HEARTBEAT",
+      "timestamp": "2026-05-11T02:17:43.873347+00:00",
+      "regime": "RISK_OFF",
+      "accountValue": 48.887581,
+      "drawdownPct": 51.11,
+      "openPositions": 0,
+      "openOrders": 0,
+      "message": "Flat portfolio, MCP offline. DD 51.11% (cached equity from 2026-05-11 \u2014 actual DD may differ). VPS decommissioned since 2026-03-23 (49d). RISK_OFF enforced. No positions to protect."
     }
   ],
   "lastChecked": "2026-05-11T02:02:51Z",
