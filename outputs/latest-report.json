@@ -1,48 +1,52 @@
 {
-  "generatedAt": "2026-05-11T21:03:04.670026+00:00",
+  "generatedAt": "2026-05-11T21:17:22.114730+00:00",
   "source": "live",
   "regime": {
     "mode": "RISK_OFF",
-    "reason": "DD 51.11% exceeds 20% threshold",
+    "reason": "Catastrophic drawdown: 51.11% from peak $100.00",
     "enforcedBy": "jido-guardrail",
-    "marketSignal": "defensive"
+    "marketSignal": "N/A"
+  },
+  "strategy": {
+    "name": "wolf-primary",
+    "wallet": "0xb08029bf3d68c1de4f21a248bb55ac0d2a08d88c",
+    "strategyId": "",
+    "budget": 100,
+    "remaining": 0.0
   },
   "portfolio": {
     "equity": 48.887581,
     "peakEquity": 100.0,
     "drawdownPct": 51.11,
-    "withdrawable": 48.887581,
-    "dayStartEquity": 48.887581
-  },
-  "strategy": {
-    "name": "wolf-primary",
-    "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
-    "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce",
-    "budget": 100.0,
-    "remaining": 48.887581
+    "withdrawable": 0.0,
+    "openPositions": 0,
+    "openOrders": 0
   },
   "positions": [],
   "guardrails": {
     "catastrophicDrawdown": {
-      "threshold": 20,
+      "threshold": 20.0,
       "actual": 51.11,
       "breached": true
     },
-    "consecutiveStopOuts": {
+    "maxConsecutiveStopOuts": {
       "threshold": 4,
       "actual": 0,
       "breached": false
     },
     "dailyLossLimit": {
-      "threshold": 10,
+      "threshold": 10.0,
       "actual": 0.0,
       "breached": false
     }
   },
   "actions": [
-    "No positions to manage. RISK_OFF maintained. Flat portfolio heartbeat."
+    "No positions to manage. RISK_OFF maintained. Flat portfolio."
   ],
   "warnings": [
-    "VPS decommissioned since 2026-03-23T23:57:15Z (48d stale)"
+    "Hyperliquid wallet fully drained (accountValue=0.0, withdrawable=0.0).",
+    "VPS scanners offline since 2026-03-23 (49+ days) \u2014 treated as decommissioned.",
+    "Hyperliquid open orders API returned 502 Bad Gateway (transient).",
+    "DD 51.11% based on cached equity $48.89 \u2014 actual DD may differ."
   ]
 }
