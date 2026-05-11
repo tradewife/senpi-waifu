@@ -1,6 +1,20 @@
 {
-  "generatedAt": "2026-05-11T12:47:15Z",
+  "timestamp": "2026-05-11T13:05:03Z",
   "source": "live",
+  "regime": {
+    "mode": "RISK_OFF",
+    "reason": "Drawdown 51.11% exceeds catastrophic threshold 20%",
+    "enforcedBy": "jido-cron",
+    "marketSignal": "N/A"
+  },
+  "portfolio": {
+    "equity": 48.887581,
+    "peakEquity": 100.0,
+    "dayStartEquity": 48.887581,
+    "withdrawable": 48.887581,
+    "drawdownPct": 51.11,
+    "dailyPnlPct": 0.0
+  },
   "strategy": {
     "name": "wolf-primary",
     "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
@@ -8,43 +22,29 @@
     "budget": 100,
     "remaining": 48.887581
   },
-  "regime": {
-    "mode": "RISK_OFF",
-    "reason": "Catastrophic drawdown: 51.11% exceeds 20% threshold",
-    "enforcedBy": "jido-guardrail",
-    "marketSignal": "none"
-  },
-  "portfolio": {
-    "equity": {
-      "current": 48.887581,
-      "peak": 100.0,
-      "dayStart": 48.887581,
-      "withdrawable": 48.887581
-    },
-    "openPositions": 0,
-    "openOrders": 0
-  },
+  "positions": [],
   "guardrails": {
     "catastrophicDrawdown": {
-      "threshold": 20.0,
+      "threshold": 20,
       "actual": 51.11,
       "breached": true
+    },
+    "dailyLossLimit": {
+      "threshold": 10,
+      "actual": 0,
+      "breached": false
     },
     "maxConsecutiveStopOuts": {
       "threshold": 4,
       "actual": 0,
       "breached": false
-    },
-    "dailyLossLimit": {
-      "threshold": 10.0,
-      "actual": 0.0,
-      "breached": false
     }
   },
-  "positions": [],
-  "actions": [],
+  "actions": [
+    "No positions to manage. RISK_OFF maintained. Flat portfolio heartbeat."
+  ],
   "warnings": [
-    "VPS scanners offline since 2026-03-23 (49 days) \u2014 decommissioned. MCP-only operation.",
-    "Drawdown 51.11% based on live clearinghouse data. RISK_OFF correctly enforced."
+    "VPS offline since 2026-03-23 (>49 days) \u2014 treat as decommissioned. MCP-only operation.",
+    "DD 51.11% \u2014 portfolio at $48.89 of $100 peak."
   ]
 }
