@@ -1,30 +1,28 @@
 {
+  "generatedAt": "2026-05-11T13:47:41Z",
   "source": "live",
-  "generatedAt": "2026-05-11T13:32:59Z",
+  "strategy": {
+    "name": "wolf-primary",
+    "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
+    "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce",
+    "budget": 100.0,
+    "remaining": 48.887581
+  },
   "regime": {
     "mode": "RISK_OFF",
-    "reason": "Catastrophic DD 51.11% (limit 20.0%)",
-    "enforcedBy": "jido",
-    "marketSignal": null
+    "reason": "Catastrophic drawdown 51.11% exceeds 20.0% threshold",
+    "enforcedBy": "jido-cron",
+    "marketSignal": "N/A"
   },
   "portfolio": {
-    "equity": {
-      "current": 48.887581,
-      "peak": 100.0,
-      "dayStart": 48.887581,
-      "withdrawable": 48.887581
-    },
-    "drawdown": {
-      "pct": 51.11,
-      "threshold": 20.0,
-      "breached": true
-    },
-    "dailyPnl": 0.0,
+    "accountValue": 48.887581,
+    "peakEquity": 100.0,
+    "withdrawable": 48.887581,
     "openPositions": 0,
     "openOrders": 0
   },
   "guardrails": {
-    "catastrophicDrawdown": {
+    "drawdown": {
       "threshold": 20.0,
       "actual": 51.11,
       "breached": true
@@ -40,20 +38,14 @@
       "breached": false
     }
   },
-  "strategy": {
-    "name": "WOLF-Primary",
-    "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
-    "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce",
-    "budget": 100,
-    "remaining": 48.887581
-  },
   "positions": [],
   "actions": [
-    "No positions to manage. RISK_OFF enforced. Flat portfolio."
+    "RISK_OFF enforced \u2014 no new entries allowed",
+    "Flat portfolio \u2014 0 positions, 0 orders",
+    "VPS scanners offline since 2026-03-23 (49 days) \u2014 classified CRITICAL infrastructure degradation"
   ],
   "warnings": [
-    "VPS offline since 2026-03-23 (48d) \u2014 decommissioned",
-    "DD 51.11% based on live data from clearinghouse state",
-    "Regime confirmed RISK_OFF \u2014 no new entries allowed"
+    "VPS offline since 2026-03-23 \u2014 treat as decommissioned",
+    "DD 51.11% based on peak $100.00 \u2014 account at 48.9% of original"
   ]
 }
