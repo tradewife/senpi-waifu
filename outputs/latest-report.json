@@ -1,30 +1,38 @@
 {
-  "generatedAt": "2026-05-11T08:32:58Z",
+  "timestamp": "2026-05-11T08:46:30Z",
   "source": "live",
   "regime": {
     "mode": "RISK_OFF",
-    "reason": "Catastrophic DD 51.11% (limit 20.0%)",
-    "enforcedBy": "jido",
+    "reason": "Catastrophic DD 51.1% (limit 20.0%)",
+    "enforcedBy": "jido-cron",
     "marketSignal": null
   },
   "portfolio": {
-    "equity": 48.887581,
-    "peakEquity": 100.0,
-    "drawdownPct": 51.11,
-    "withdrawable": 48.887581,
-    "dailyPnl": 0.0,
-    "openPositions": 0,
+    "equity": {
+      "current": 48.887581,
+      "peak": 100.0,
+      "dayStart": 48.887581
+    },
+    "drawdown": {
+      "pct": 51.11,
+      "threshold": 20.0,
+      "breached": true
+    },
+    "withdrawable": 48.887581
+  },
+  "positions": {
+    "open": [],
+    "count": 0,
     "openOrders": 0
   },
-  "positions": [],
   "guardrails": {
     "catastrophicDrawdown": {
-      "threshold": 20,
+      "threshold": 20.0,
       "actual": 51.11,
       "breached": true
     },
-    "dailyLossLimit": {
-      "threshold": 10,
+    "dailyLoss": {
+      "threshold": 10.0,
       "actual": 0.0,
       "breached": false
     },
@@ -32,18 +40,8 @@
       "threshold": 4,
       "actual": 0,
       "breached": false
-    },
-    "maxPositions": {
-      "threshold": 3,
-      "actual": 0,
-      "breached": false
     }
   },
-  "actions": [],
-  "warnings": [
-    "DD 51.11% is based on live equity from 2026-05-11T08:32:58Z. RISK_OFF remains enforced.",
-    "VPS scanners offline since 2026-03-23 (48+ days) \u2014 treat as decommissioned."
-  ],
   "strategy": {
     "name": "WOLF-Primary",
     "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
@@ -51,15 +49,11 @@
     "budget": 100,
     "remaining": 48.887581
   },
-  "infrastructure": {
-    "mcpOnline": true,
-    "vpsStatus": "DECOMMISSIONED",
-    "vpsOfflineSince": "2026-03-23T23:57:15Z",
-    "vpsOfflineDays": 48,
-    "cronHeartbeats": {
-      "brain": "2026-03-23T23:57:15Z",
-      "arena": "2026-03-23T23:57:05Z",
-      "risk-arbiter": "2026-03-23T23:57:45Z"
-    }
-  }
+  "warnings": [
+    "VPS offline since 2026-03-23 (~49 days) \u2014 treat as decommissioned. All cron-heartbeats stale.",
+    "DD 51.11% based on cached peak $100.00 \u2014 actual peak may differ if deposits occurred."
+  ],
+  "actionsTaken": [
+    "Heartbeat check \u2014 no positions, no emergency actions needed."
+  ]
 }

@@ -3,11 +3,11 @@
   "lastEquity": 48.887581,
   "dayStartEquity": 48.887581,
   "consecutiveStopOuts": 0,
-  "lastJidoRun": "2026-05-11T08:32:58Z",
+  "lastJidoRun": "2026-05-11T08:46:30Z",
   "alerts": [
     {
       "type": "JIDO_HEARTBEAT",
-      "timestamp": "2026-05-11T08:32:58Z",
+      "timestamp": "2026-05-11T08:46:30Z",
       "regime": "RISK_OFF",
       "accountValue": 48.887581,
       "drawdownPct": 51.11,
@@ -16,8 +16,8 @@
       "message": "Flat portfolio, MCP online (live data). DD 51.11% from peak $100.00. RISK_OFF enforced. No positions, no action needed."
     }
   ],
-  "lastChecked": "2026-05-11T08:32:58Z",
-  "lastCheckAt": "2026-05-11T08:32:58Z",
+  "lastChecked": "2026-05-11T08:46:30Z",
+  "lastCheckAt": "2026-05-11T08:46:30Z",
   "dayStartDate": "2026-05-11",
-  "lastCheck": "2026-05-11T08:32:58Z"
+  "lastCheck": "2026-05-11T08:46:30Z"
 }
