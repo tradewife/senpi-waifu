@@ -1,69 +1,77 @@
 {
-  "generatedAt": "2026-05-11T02:48:04.767484+00:00",
+  "generatedAt": "2026-05-11T03:03:15.829130+00:00",
   "source": "cached",
   "regime": {
     "mode": "RISK_OFF",
-    "reason": "Catastrophic drawdown 51.11% exceeds 20% threshold",
-    "enforcedBy": "jido-monitor",
-    "marketSignal": "N/A \u2014 MCP offline"
+    "reason": "Market=RISK_OFF (BTC slope=-0.51%, ATR=0.63%) but RISK_OFF override active: DD 51.1% from catastrophic limit 20%",
+    "enforcedBy": "jido-guardrail",
+    "marketSignal": "RISK_OFF (BTC slope=-0.51%, ATR=0.63%)"
   },
   "portfolio": {
     "equity": {
       "current": 48.887581,
       "peak": 100.0,
-      "dayStart": 48.887581,
-      "budget": 100
+      "dayStart": 48.887581
     },
     "drawdown": {
-      "pctFromPeak": 51.11,
-      "absFromPeak": 51.1124
+      "pct": 51.11,
+      "abs": 51.11,
+      "threshold": 20.0,
+      "breached": true
     },
-    "withdrawable": "unknown \u2014 MCP offline",
-    "openPositions": 0,
-    "openOrders": 0
+    "dailyPnl": {
+      "abs": 0.0,
+      "pct": 0.0
+    }
   },
-  "strategy": {
-    "name": "wolf-primary",
-    "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
-    "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce",
-    "budget": 100,
-    "remaining": 48.8876
+  "positions": {
+    "open": 0,
+    "details": []
   },
   "guardrails": {
     "catastrophicDrawdown": {
-      "threshold": 20,
+      "threshold": 20.0,
       "actual": 51.11,
       "breached": true
+    },
+    "dailyLossLimit": {
+      "threshold": 10.0,
+      "actual": 0.0,
+      "breached": false
     },
     "consecutiveStopOuts": {
       "threshold": 4,
       "actual": 0,
       "breached": false
-    },
-    "dailyLoss": {
-      "threshold": 10,
-      "actualPct": 0.0,
-      "breached": false
     }
   },
-  "vpsStatus": {
-    "status": "offline",
-    "lastHeartbeats": {
+  "strategy": {
+    "name": "WOLF-Primary",
+    "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
+    "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce",
+    "budget": 100,
+    "remaining": 48.887581
+  },
+  "infrastructure": {
+    "mcpOnline": false,
+    "vpsStatus": "DECOMMISSIONED",
+    "vpsOfflineSince": "2026-03-23T23:57:15Z",
+    "vpsOfflineDays": 49,
+    "cronHeartbeats": {
       "brain": "2026-03-23T23:57:15Z",
       "arena": "2026-03-23T23:57:05Z",
       "risk-arbiter": "2026-03-23T23:57:45Z"
-    },
-    "warning": "VPS offline since 2026-03-23 \u2014 treat as decommissioned (49+ days)"
+    }
   },
   "warnings": [
-    "MCP server offline \u2014 all data from cached arbiter-state.json",
+    "MCP server offline \u2014 all data from cached state",
     "DD 51.11% based on cached equity from 2026-05-11 \u2014 actual DD may differ",
-    "VPS scanners offline since 2026-03-23 (>49 days) \u2014 decommissioned",
-    "Flat portfolio: 0 open positions, 0 open orders"
+    "VPS decommissioned since 2026-03-23 (49d)",
+    "Regime consistency: OK (regime=RISK_OFF, brain=RISK_OFF)"
   ],
   "actions": [
-    "RISK_OFF maintained \u2014 no new entries",
-    "State files synced (arbiter-state, autonomous-brain)",
-    "No emergency actions needed \u2014 portfolio is flat"
+    "RISK_OFF maintained \u2014 catastrophic DD exceeds 20% threshold",
+    "Flat portfolio \u2014 no positions requiring emergency SL",
+    "State files synced (arbiter, brain, report)"
   ]
 }
