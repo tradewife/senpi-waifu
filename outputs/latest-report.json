@@ -1,6 +1,15 @@
 {
-  "generatedAt": "2026-05-11T18:47:19Z",
   "source": "live",
+  "generatedAt": "2026-05-12T05:15:30Z",
+  "generatedBy": "jido-cron",
+  "strategy": {
+    "name": "WOLF-Primary",
+    "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
+    "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce",
+    "budget": 100,
+    "remaining": 48.887581,
+    "withdrawable": 48.887581
+  },
   "regime": {
     "mode": "RISK_OFF",
     "reason": "Catastrophic DD 51.11% (limit 20.0%)",
@@ -8,12 +17,15 @@
     "marketSignal": null
   },
   "portfolio": {
-    "equity": 48.887581,
-    "peakEquity": 100.0,
-    "withdrawable": 48.887581,
-    "dayStartEquity": 48.887581,
-    "dailyPnl": 0.0,
-    "drawdownPct": 51.11
+    "equity": {
+      "current": 48.887581,
+      "peak": 100.0,
+      "dayStart": 48.887581,
+      "drawdownPct": 51.11
+    },
+    "openPositions": 0,
+    "openOrders": 0,
+    "totalNotional": 0
   },
   "guardrails": {
     "catastrophicDrawdown": {
@@ -33,19 +45,9 @@
     }
   },
   "positions": [],
-  "openOrders": 0,
-  "strategy": {
-    "name": "WOLF-Primary",
-    "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
-    "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce",
-    "budget": 100,
-    "remaining": 48.887581
-  },
-  "actions": [
-    "None \u2014 flat portfolio, RISK_OFF maintained"
-  ],
+  "actions": [],
   "warnings": [
-    "VPS offline since 2026-03-23 (~49d \u2014 decommissioned)",
-    "DD 51.11% is based on live clearinghouse data"
+    "VPS offline since 2026-03-23 (~50d) \u2014 decommissioned",
+    "DD 51.11% far exceeds 20% catastrophic limit \u2014 full capital recovery required before re-enabling entries"
   ]
 }
