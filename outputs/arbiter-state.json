@@ -7,16 +7,6 @@
   "alerts": [
     {
       "type": "JIDO_HEARTBEAT",
-      "timestamp": "2026-05-11T22:16:26.989611Z",
-      "regime": "RISK_OFF",
-      "accountValue": 48.887581,
-      "drawdownPct": 51.11,
-      "openPositions": 0,
-      "openOrders": 0,
-      "message": "Flat portfolio (RISK_OFF). DD=51.1%, equity=$48.89, peak=$100.00. No positions, no action needed."
-    },
-    {
-      "type": "JIDO_HEARTBEAT",
       "timestamp": "2026-05-11T22:33:41Z",
       "regime": "RISK_OFF",
       "accountValue": 48.887581,
@@ -28,6 +18,16 @@
     {
       "type": "JIDO_HEARTBEAT",
       "timestamp": "2026-05-11T22:47:54Z",
+      "regime": "RISK_OFF",
+      "accountValue": 48.887581,
+      "drawdownPct": 51.11,
+      "openPositions": 0,
+      "openOrders": 0,
+      "message": "Flat portfolio (RISK_OFF). DD=51.11%, equity=$48.89, peak=$100.00. No positions, no action needed."
+    },
+    {
+      "type": "JIDO_HEARTBEAT",
+      "timestamp": "2026-05-11T23:01:48Z",
       "regime": "RISK_OFF",
       "accountValue": 48.887581,
       "drawdownPct": 51.11,
