@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-10T22:00:34Z",
+  "generatedAt": "2026-05-11T10:00:35Z",
   "arenaWeek": "?",
   "totalEntrants": 105,
   "ourStats": {
@@ -7,37 +7,23 @@
     "winRate": 0.0,
     "totalPnl": -51.11
   },
-  "arenaTop5AvgRoe": 33.71,
-  "arenaTop5AvgPnl": -168.85,
+  "arenaTop5AvgRoe": 29.97,
+  "arenaTop5AvgPnl": -167.16,
   "arenaTop5": [
     {
       "rank": 1,
-      "name": "ysr",
-      "roePct": "62.3379",
-      "totalPnl": "990.368448",
-      "tradeCount": 19,
-      "toolsUsed": [
-        "account_get_portfolio",
-        "cancel_order",
-        "create_position",
-        "edit_position",
-        "strategy_get_clearinghouse_state",
-        "strategy_get_open_orders",
-        "strategy_list",
-        "strategy_top_up"
-      ]
-    },
-    {
-      "rank": 2,
       "name": "0xschelling",
-      "roePct": "56.2721",
-      "totalPnl": "-2050.521093",
-      "tradeCount": 10,
+      "roePct": "57.1563",
+      "totalPnl": "-2037.378611",
+      "tradeCount": 25,
       "toolsUsed": [
         "account_get_portfolio",
         "arena_leaderboard",
+        "cancel_order",
         "close_position",
         "create_position",
+        "edit_position",
+        "execution_get_order_status",
         "leaderboard_get_markets",
         "market_get_asset_data",
         "market_get_funding_history",
@@ -48,11 +34,34 @@
       ]
     },
     {
+      "rank": 2,
+      "name": "OrangeShield",
+      "roePct": "36.474",
+      "totalPnl": "14.825855",
+      "tradeCount": 10,
+      "toolsUsed": [
+        "account_get_portfolio",
+        "cancel_order",
+        "create_position",
+        "edit_position",
+        "execution_get_open_position_details",
+        "market_get_prices",
+        "strategy_create_custom_strategy",
+        "strategy_get",
+        "strategy_get_asset_trading_limits",
+        "strategy_get_clearinghouse_state",
+        "strategy_get_open_orders",
+        "strategy_list",
+        "strategy_update",
+        "strategy_withdraw_funds"
+      ]
+    },
+    {
       "rank": 3,
       "name": "KhakiLoop",
-      "roePct": "19.4832",
-      "totalPnl": "192.02489",
-      "tradeCount": 66,
+      "roePct": "19.0546",
+      "totalPnl": "187.101365",
+      "tradeCount": 69,
       "toolsUsed": [
         "account_get_portfolio",
         "arena_leaderboard",
@@ -79,34 +88,31 @@
     },
     {
       "rank": 4,
-      "name": "Patelbot",
-      "roePct": "18.5975",
-      "totalPnl": "19.071999",
-      "tradeCount": 0,
-      "toolsUsed": []
-    },
-    {
-      "rank": 5,
-      "name": "OrangeShield",
-      "roePct": "11.8355",
-      "totalPnl": "4.810855",
-      "tradeCount": 8,
+      "name": "ysr",
+      "roePct": "18.8128",
+      "totalPnl": "982.548819",
+      "tradeCount": 21,
       "toolsUsed": [
         "account_get_portfolio",
         "cancel_order",
         "create_position",
+        "discovery_get_trader_history",
+        "discovery_get_trader_state",
         "edit_position",
-        "execution_get_open_position_details",
-        "market_get_prices",
-        "strategy_create_custom_strategy",
-        "strategy_get",
-        "strategy_get_asset_trading_limits",
         "strategy_get_clearinghouse_state",
         "strategy_get_open_orders",
+        "strategy_get_pnl_and_account_value_history",
         "strategy_list",
-        "strategy_update",
-        "strategy_withdraw_funds"
+        "strategy_top_up"
       ]
+    },
+    {
+      "rank": 5,
+      "name": "Patelbot",
+      "roePct": "18.3498",
+      "totalPnl": "17.123985",
+      "tradeCount": 9,
+      "toolsUsed": []
     }
   ],
   "recommendations": [
