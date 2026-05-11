@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-05-11T03:48:32.551172+00:00",
+  "generatedAt": "2026-05-11T05:48:12.648398+00:00",
   "source": "cached",
   "warnings": [
-    "MCP server offline (88+ consecutive failures) \u2014 using cached equity",
+    "MCP server offline (89+ consecutive failures) \u2014 using cached equity",
     "DD 51.11% is based on cached equity from 2026-05-11 \u2014 actual DD may differ",
     "VPS scanners offline since 2026-03-23 (49d) \u2014 treat as decommissioned"
   ],
@@ -13,12 +13,15 @@
     "marketSignal": "RISK_OFF"
   },
   "portfolio": {
-    "equity": 48.887581,
     "peakEquity": 100.0,
+    "currentEquity": 48.887581,
     "drawdownPct": 51.11,
-    "dayStartEquity": 48.887581,
-    "dailyPnl": 0.0
+    "openPositions": 0,
+    "openOrders": 0,
+    "dailyPnl": 0.0,
+    "withdrawable": "unknown (MCP offline)"
   },
+  "positions": [],
   "guardrails": {
     "catastrophicDrawdown": {
       "threshold": 20,
@@ -34,10 +37,16 @@
       "threshold": 4,
       "actual": 0,
       "breached": false
+    },
+    "maxPositions": {
+      "threshold": 3,
+      "actual": 0,
+      "breached": false
     }
   },
-  "positions": [],
-  "openOrders": 0,
+  "actions": [
+    "No positions to protect. RISK_OFF maintained. Flat portfolio."
+  ],
   "strategy": {
     "name": "WOLF-Primary",
     "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
@@ -45,16 +54,15 @@
     "budget": 100,
     "remaining": 48.89
   },
-  "actions": [
-    "No positions to protect. RISK_OFF maintained. Flat portfolio."
-  ],
-  "vpsStatus": {
-    "status": "DECOMMISSIONED",
-    "lastHeartbeats": {
+  "infrastructure": {
+    "mcpOnline": false,
+    "vpsStatus": "DECOMMISSIONED",
+    "vpsOfflineSince": "2026-03-23T23:57:45Z",
+    "vpsOfflineDays": 49,
+    "cronHeartbeats": {
       "brain": "2026-03-23T23:57:15Z",
       "arena": "2026-03-23T23:57:05Z",
       "risk-arbiter": "2026-03-23T23:57:45Z"
-    },
-    "offlineDays": 49
+    }
   }
 }
