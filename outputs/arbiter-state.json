@@ -7,16 +7,6 @@
   "alerts": [
     {
       "type": "JIDO_HEARTBEAT",
-      "timestamp": "2026-05-11T12:32:55Z",
-      "regime": "RISK_OFF",
-      "accountValue": 48.887581,
-      "drawdownPct": 51.11,
-      "openPositions": 0,
-      "openOrders": 0,
-      "message": "Flat portfolio, RISK_OFF enforced. DD 51.11% > 20% threshold. VPS offline since 2026-03-23 (decommissioned). MCP live."
-    },
-    {
-      "type": "JIDO_HEARTBEAT",
       "timestamp": "2026-05-11T13:32:59Z",
       "regime": "RISK_OFF",
       "accountValue": 48.887581,
@@ -34,6 +24,16 @@
       "openPositions": 0,
       "openOrders": 0,
       "message": "Flat portfolio. RISK_OFF enforced. DD 51.11% from peak $100.00. Account $48.89. VPS offline since 2026-03-23."
+    },
+    {
+      "type": "JIDO_HEARTBEAT",
+      "timestamp": "2026-05-11T14:19:21Z",
+      "regime": "RISK_OFF",
+      "accountValue": 48.887581,
+      "drawdownPct": 51.11,
+      "openPositions": 0,
+      "openOrders": 0,
+      "message": "Flat portfolio. DD 51.11% > 20.0% limit. RISK_OFF maintained. Account $48.89 / peak $100.00."
     }
   ],
   "lastChecked": "2026-05-11T13:32:59Z",
