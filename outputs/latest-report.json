@@ -1,26 +1,26 @@
 {
-  "generatedAt": "2026-05-11T20:02:06Z",
+  "generatedAt": "2026-05-11T20:16:51Z",
   "source": "live",
-  "strategy": {
-    "name": "wolf-primary",
-    "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
-    "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce",
-    "budget": 100.0,
-    "remaining": 48.887581
-  },
   "regime": {
     "mode": "RISK_OFF",
-    "reason": "Catastrophic DD 51.11% (limit 20.0%)",
+    "reason": "Catastrophic DD 51.1% (limit 20.0%)",
     "enforcedBy": "jido-monitor",
     "marketSignal": null
   },
   "portfolio": {
-    "equity": 48.887581,
-    "peakEquity": 100.0,
-    "drawdownPct": 51.11,
-    "withdrawable": 48.887581,
-    "dayStartEquity": 48.887581,
-    "dailyPnl": 0.0
+    "equity": {
+      "current": 48.887581,
+      "peak": 100.0,
+      "dayStart": 48.887581,
+      "withdrawable": 48.887581
+    }
+  },
+  "strategy": {
+    "name": "WOLF-Primary",
+    "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
+    "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce",
+    "budget": 100,
+    "remaining": 48.887581
   },
   "guardrails": {
     "catastrophicDrawdown": {
@@ -28,27 +28,23 @@
       "actual": 51.11,
       "breached": true
     },
-    "maxConsecutiveStopOuts": {
-      "threshold": 4,
-      "actual": 0,
-      "breached": false
-    },
-    "dailyLoss": {
+    "dailyLossLimit": {
       "threshold": 10.0,
       "actual": 0.0,
+      "breached": false
+    },
+    "consecutiveStopOuts": {
+      "threshold": 4,
+      "actual": 0,
       "breached": false
     }
   },
   "positions": [],
-  "market": {
-    "BTC": 81953.5,
-    "ETH": 2342.35,
-    "SOL": 98.2305
-  },
   "actions": [
-    "Heartbeat check \u2014 no positions, RISK_OFF maintained"
+    "No actions \u2014 flat portfolio, RISK_OFF maintained"
   ],
   "warnings": [
-    "VPS scanners offline since 2026-03-23 (~50d \u2014 decommissioned)"
+    "VPS offline since 2026-03-23 (~49d \u2014 decommissioned)",
+    "DD 51.11% exceeds 20% catastrophic threshold \u2014 RISK_OFF indefinite"
   ]
 }
