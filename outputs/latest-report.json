@@ -1,57 +1,52 @@
 {
-  "generatedAt": "2026-05-11T21:31:59Z",
+  "generatedAt": "2026-05-11T21:47:42Z",
   "source": "live",
-  "regime": {
-    "mode": "RISK_OFF",
-    "reason": "Market=BASELINE (BTC slope=+0.04%, ATR=0.50%; ETH slope=-0.25%, ATR=0.55%) but RISK_OFF override active: DD 51.1% from catastrophic limit 20.0%",
-    "enforcedBy": "jido-cron",
-    "marketSignal": "N/A"
-  },
   "strategy": {
-    "name": "wolf-primary",
+    "name": "WOLF-Primary",
     "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
     "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce",
-    "budget": 100.0,
-    "remaining": 48.887581,
+    "budget": 100,
+    "accountValue": 48.887581,
     "withdrawable": 48.887581
+  },
+  "regime": {
+    "mode": "RISK_OFF",
+    "reason": "Catastrophic drawdown 51.11% exceeds 20% threshold",
+    "enforcedBy": "jido-monitor",
+    "marketSignal": "BASELINE (BTC slope=+0.04%, ATR=0.50%)"
   },
   "portfolio": {
     "equity": 48.887581,
     "peakEquity": 100.0,
     "drawdownPct": 51.11,
     "dayStartEquity": 48.887581,
+    "dailyPnl": 0.0,
     "openPositions": 0,
     "openOrders": 0
   },
-  "positions": [],
   "guardrails": {
     "catastrophicDrawdown": {
-      "threshold": 20.0,
+      "threshold": 20,
       "actual": 51.11,
       "breached": true
     },
-    "maxConsecutiveStopOuts": {
+    "dailyLossLimit": {
+      "threshold": 10,
+      "actual": 0.0,
+      "breached": false
+    },
+    "consecutiveStopOuts": {
       "threshold": 4,
       "actual": 0,
       "breached": false
-    },
-    "dailyLossLimit": {
-      "threshold": 10.0,
-      "actual": 0.0,
-      "breached": false
     }
   },
+  "positions": [],
   "actions": [
-    "JIDO_HEARTBEAT: Flat portfolio confirmed, RISK_OFF maintained"
+    "RISK_OFF maintained \u2014 no new entries allowed"
   ],
   "warnings": [
-    "Account drawdown 51.11% exceeds 20% catastrophic threshold \u2014 RISK_OFF enforced",
-    "Equity at $48.89 vs peak $100.00",
-    "VPS scanner 'brain' stale: 48d since last heartbeat (2026-03-23T23:57:15Z)",
-    "CRITICAL: 'brain' offline since 2026-03-23T23:57:15Z \u2014 treat as decommissioned",
-    "VPS scanner 'arena' stale: 48d since last heartbeat (2026-03-23T23:57:05Z)",
-    "CRITICAL: 'arena' offline since 2026-03-23T23:57:05Z \u2014 treat as decommissioned",
-    "VPS scanner 'risk-arbiter' stale: 48d since last heartbeat (2026-03-23T23:57:45Z)",
-    "CRITICAL: 'risk-arbiter' offline since 2026-03-23T23:57:45Z \u2014 treat as decommissioned"
+    "VPS offline since 2026-03-23 (49d) \u2014 treat as decommissioned",
+    "DD 51.11% is based on live equity \u2014 account has lost over half of initial budget"
   ]
 }
