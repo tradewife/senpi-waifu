@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-05-11T20:16:51Z",
+  "generatedAt": "2026-05-11T20:31:59Z",
   "source": "live",
   "regime": {
     "mode": "RISK_OFF",
-    "reason": "Catastrophic DD 51.1% (limit 20.0%)",
-    "enforcedBy": "jido-monitor",
+    "reason": "Drawdown 51.11% exceeds catastrophicDrawdownPct (20%)",
+    "enforcedBy": "jido-guardrail",
     "marketSignal": null
   },
   "portfolio": {
@@ -13,14 +13,11 @@
       "peak": 100.0,
       "dayStart": 48.887581,
       "withdrawable": 48.887581
-    }
-  },
-  "strategy": {
-    "name": "WOLF-Primary",
-    "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
-    "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce",
-    "budget": 100,
-    "remaining": 48.887581
+    },
+    "drawdownPct": 51.11,
+    "dailyPnl": 0.0,
+    "openPositions": 0,
+    "openOrders": 0
   },
   "guardrails": {
     "catastrophicDrawdown": {
@@ -28,23 +25,32 @@
       "actual": 51.11,
       "breached": true
     },
+    "maxConsecutiveStopOuts": {
+      "threshold": 4,
+      "actual": 0,
+      "breached": false
+    },
     "dailyLossLimit": {
       "threshold": 10.0,
       "actual": 0.0,
       "breached": false
-    },
-    "consecutiveStopOuts": {
-      "threshold": 4,
-      "actual": 0,
-      "breached": false
     }
   },
   "positions": [],
+  "strategy": {
+    "name": "wolf-primary",
+    "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
+    "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce",
+    "budget": 100,
+    "remaining": 48.887581
+  },
   "actions": [
-    "No actions \u2014 flat portfolio, RISK_OFF maintained"
+    "Flat portfolio fast-path \u2014 no positions to manage",
+    "RISK_OFF enforced (DD 51.11% > 20% threshold)",
+    "State files synced: arbiter-state.json, autonomous-brain.json"
   ],
   "warnings": [
-    "VPS offline since 2026-03-23 (~49d \u2014 decommissioned)",
-    "DD 51.11% exceeds 20% catastrophic threshold \u2014 RISK_OFF indefinite"
+    "VPS scanners offline since 2026-03-23 (49 days) \u2014 treat as decommissioned",
+    "Drawdown 51.11% based on live data \u2014 well past catastrophic threshold"
   ]
 }
