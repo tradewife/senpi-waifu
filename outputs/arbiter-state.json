@@ -24,11 +24,22 @@
       "openPositions": 0,
       "openOrders": 0,
       "message": "Flat portfolio, RISK_OFF enforced. DD 51.11% from peak. Wallet drained (accountValue=0). Cached equity=$48.887581."
+    },
+    {
+      "type": "JIDO_HEARTBEAT",
+      "timestamp": "2026-05-11T20:02:06Z",
+      "regime": "RISK_OFF",
+      "accountValue": 48.887581,
+      "drawdownPct": 51.11,
+      "openPositions": 0,
+      "openOrders": 0,
+      "message": "Flat portfolio. DD 51.11% > 20.0% limit. RISK_OFF maintained. Account $48.89 / peak $100.00. MCP online (live data). VPS offline since 2026-03-23 (~50d \u2014 decommissioned)."
     }
   ],
   "lastChecked": "2026-05-11T19:31:09Z",
   "lastCheckAt": "2026-05-11T20:00:47Z",
   "dayStartDate": "2026-05-11",
   "lastCheck": "2026-05-11T19:31:09Z",
-  "lastUpdated": "2026-05-11T19:31:09Z"
+  "lastUpdated": "2026-05-11T19:31:09Z",
+  "drawdownPct": 51.11
 }
