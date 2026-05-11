@@ -1,36 +1,33 @@
 {
-  "generatedAt": "2026-05-11T02:17:43.873347+00:00",
   "source": "cached",
-  "warnings": [
-    "MCP server offline \u2014 all data from cached state",
-    "DD 51.11% based on cached equity from 2026-05-11 \u2014 actual DD may differ",
-    "VPS decommissioned since 2026-03-23 (49d)"
-  ],
+  "generatedAt": "2026-05-11T02:33:41.582262+00:00",
+  "jidoRun": "2026-05-11T02:33:41.582262+00:00",
   "regime": {
     "mode": "RISK_OFF",
-    "reason": "Catastrophic drawdown: 51.11% exceeds 20% threshold",
+    "reason": "Catastrophic DD 51.11% exceeds 20% threshold. MCP offline.",
     "enforcedBy": "jido",
-    "marketSignal": null
+    "marketSignal": "RISK_OFF (BTC slope=-0.51%, ATR=0.63%)"
   },
   "portfolio": {
     "equity": {
       "current": 48.887581,
       "peak": 100.0,
-      "dayStart": 48.887581
+      "dayStart": 48.887581,
+      "unit": "USD"
     },
     "drawdown": {
       "pctFromPeak": 51.11,
-      "absFromPeak": 51.11
+      "isAboveCatastrophic": true,
+      "catastrophicThreshold": 20
     },
     "openPositions": 0,
-    "openOrders": 0,
-    "withdrawable": null
+    "openOrders": 0
   },
   "strategy": {
-    "name": "wolf-primary",
+    "name": "WOLF-Primary",
     "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
     "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce",
-    "budget": 100.0,
+    "budget": 100,
     "remaining": 48.887581
   },
   "guardrails": {
@@ -41,7 +38,7 @@
     },
     "dailyLoss": {
       "threshold": 10,
-      "actual": 0,
+      "actual": 0.0,
       "breached": false
     },
     "consecutiveStopOuts": {
@@ -51,11 +48,17 @@
     }
   },
   "actions": [
-    "No actions needed \u2014 flat portfolio under RISK_OFF"
+    "RISK_OFF maintained \u2014 no new entries"
   ],
-  "vpsStatus": {
-    "status": "decommissioned",
-    "lastHeartbeat": "2026-03-23",
-    "stalenessDays": 49
+  "warnings": [
+    "MCP offline (83+ consecutive failures) \u2014 using cached equity",
+    "VPS decommissioned since 2026-03-23 (49 days)",
+    "DD 51.11% based on cached equity \u2014 actual DD may differ"
+  ],
+  "cronHeartbeats": {
+    "brain": "2026-03-23T23:57:15Z",
+    "arena": "2026-03-23T23:57:05Z",
+    "risk-arbiter": "2026-03-23T23:57:45Z",
+    "status": "VPS offline since 2026-03-23 (49 days) \u2014 treat as decommissioned"
   }
 }

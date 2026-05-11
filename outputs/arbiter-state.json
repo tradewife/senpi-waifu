@@ -3,28 +3,8 @@
   "lastEquity": 48.887581,
   "dayStartEquity": 48.887581,
   "consecutiveStopOuts": 0,
-  "lastJidoRun": "2026-05-11T02:02:51.995740+00:00",
+  "lastJidoRun": "2026-05-11T02:33:41.582262+00:00",
   "alerts": [
-    {
-      "type": "JIDO_CHECK",
-      "timestamp": "2026-05-11T01:31:29.948420+00:00",
-      "regime": "RISK_OFF",
-      "accountValue": 48.887581,
-      "drawdownPct": 51.11,
-      "openPositions": 0,
-      "openOrders": 0,
-      "message": "MCP offline \u2014 using cached equity from 48.888. DD 51.11% based on cached equity from 2026-05-11T00:17:07Z \u2014 actual DD may differ. VPS decommissioned since 2026-03-23 (49 days). Flat portfolio, RISK_OFF enforced."
-    },
-    {
-      "type": "JIDO_HEARTBEAT",
-      "timestamp": "2026-05-11T01:17:12Z",
-      "regime": "RISK_OFF",
-      "accountValue": 48.887581,
-      "drawdownPct": 51.11,
-      "openPositions": 0,
-      "openOrders": 0,
-      "message": "Flat portfolio, MCP offline, RISK_OFF enforced. DD 51.11% (cached equity from 2026-05-11T01:17:12Z). VPS decommissioned since 2026-03-23 (49d). No positions to protect."
-    },
     {
       "type": "JIDO_HEARTBEAT",
       "timestamp": "2026-05-11T02:02:51.995740+00:00",
@@ -44,9 +24,19 @@
       "openPositions": 0,
       "openOrders": 0,
       "message": "Flat portfolio, MCP offline. DD 51.11% (cached equity from 2026-05-11 \u2014 actual DD may differ). VPS decommissioned since 2026-03-23 (49d). RISK_OFF enforced. No positions to protect."
+    },
+    {
+      "type": "JIDO_HEARTBEAT",
+      "timestamp": "2026-05-11T02:33:41.582262+00:00",
+      "regime": "RISK_OFF",
+      "accountValue": 48.887581,
+      "drawdownPct": 51.11,
+      "openPositions": 0,
+      "openOrders": 0,
+      "message": "Flat portfolio, MCP offline (83+ failures). DD 51.11% (cached equity from 2026-05-11T02:33:41.582262+00:00 \u2014 actual DD may differ). VPS decommissioned since 2026-03-23 (49d). RISK_OFF enforced. No positions to protect."
     }
   ],
-  "lastChecked": "2026-05-11T02:02:51Z",
-  "lastCheckAt": "2026-05-11T02:02:51Z",
+  "lastChecked": "2026-05-11T02:33:41Z",
+  "lastCheckAt": "2026-05-11T02:33:41Z",
   "dayStartDate": "2026-05-11"
 }
