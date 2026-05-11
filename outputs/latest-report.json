@@ -1,11 +1,18 @@
 {
-  "generatedAt": "2026-05-11T21:47:30Z",
+  "generatedAt": "2026-05-11T12:33:23Z",
   "source": "live",
+  "strategy": {
+    "name": "wolf-primary",
+    "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
+    "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce",
+    "budget": 100,
+    "remaining": 48.887581
+  },
   "regime": {
     "mode": "RISK_OFF",
-    "reason": "Catastrophic DD 51.11% (limit 20.0%)",
-    "enforcedBy": "jido",
-    "marketSignal": null
+    "reason": "Catastrophic drawdown: 51.11% exceeds 20% threshold",
+    "enforcedBy": "jido-guardrail",
+    "marketSignal": "none"
   },
   "portfolio": {
     "equity": {
@@ -14,46 +21,30 @@
       "dayStart": 48.887581,
       "withdrawable": 48.887581
     },
-    "drawdownPct": 51.11,
     "openPositions": 0,
-    "openOrders": 0,
-    "dailyPnl": 0.0,
-    "dailyCloses": 0
+    "openOrders": 0
   },
   "guardrails": {
     "catastrophicDrawdown": {
-      "threshold": 20,
+      "threshold": 20.0,
       "actual": 51.11,
       "breached": true
     },
-    "dailyLossLimit": {
-      "threshold": 10,
-      "actual": 0.0,
-      "breached": false
-    },
-    "consecutiveStopOuts": {
+    "maxConsecutiveStopOuts": {
       "threshold": 4,
       "actual": 0,
       "breached": false
+    },
+    "dailyLossLimit": {
+      "threshold": 10.0,
+      "actual": 0.0,
+      "breached": false
     }
-  },
-  "strategy": {
-    "name": "WOLF-Primary",
-    "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
-    "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce",
-    "budget": 100,
-    "remaining": 48.887581
   },
   "positions": [],
   "actions": [],
   "warnings": [
-    "DD 51.11% is based on live equity from 2026-05-11T21:47:30Z.",
-    "VPS offline since 2026-03-23 (49 days) \u2014 treat as decommissioned."
-  ],
-  "vpsHeartbeats": {
-    "brain": "2026-03-23T23:57:15Z",
-    "arena": "2026-03-23T23:57:05Z",
-    "risk-arbiter": "2026-03-23T23:57:45Z",
-    "status": "OFFLINE (49+ days)"
-  }
+    "VPS scanners offline since 2026-03-23 (49 days) \u2014 decommissioned. MCP-only operation.",
+    "Drawdown 51.11% based on live clearinghouse data. RISK_OFF correctly enforced."
+  ]
 }
