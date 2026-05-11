@@ -1,22 +1,20 @@
 {
-  "generatedAt": "2026-05-11T08:03:04Z",
+  "generatedAt": "2026-05-11T08:17:08Z",
   "source": "live",
   "regime": {
     "mode": "RISK_OFF",
-    "reason": "Catastrophic DD 51.11% (limit 20.0%)",
-    "enforcedBy": "jido-monitor",
-    "marketSignal": "flat"
+    "reason": "Catastrophic DD 51.1% (limit 20.0%)",
+    "enforcedBy": "jido",
+    "marketSignal": null
   },
   "portfolio": {
     "equity": 48.887581,
     "peakEquity": 100.0,
-    "withdrawable": 48.887581,
     "drawdownPct": 51.11,
-    "dailyPnl": 0.0
-  },
-  "positions": {
-    "open": 0,
-    "details": []
+    "withdrawable": 48.887581,
+    "dailyPnl": 0.0,
+    "openPositions": 0,
+    "openOrders": 0
   },
   "guardrails": {
     "catastrophicDrawdown": {
@@ -29,7 +27,7 @@
       "actual": 0.0,
       "breached": false
     },
-    "consecutiveStopOuts": {
+    "maxConsecutiveStopOuts": {
       "threshold": 4,
       "actual": 0,
       "breached": false
@@ -42,11 +40,9 @@
     "budget": 100,
     "remaining": 48.887581
   },
-  "actionsTaken": [
-    "Heartbeat check \u2014 no positions, no emergency actions"
-  ],
+  "actions": [],
   "warnings": [
-    "VPS scanners offline since 2026-03-23 (~49 days) \u2014 treat as decommissioned",
-    "DD 51.11% far exceeds 20% threshold \u2014 RISK_OFF remains enforced until manual reset"
+    "DD 51.11% is based on live equity from 2026-05-11T08:17:08Z. RISK_OFF remains enforced.",
+    "VPS scanners offline since 2026-03-23 (48+ days) \u2014 treat as decommissioned."
   ]
 }
