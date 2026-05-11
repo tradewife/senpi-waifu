@@ -1,48 +1,51 @@
 {
-  "generatedAt": "2026-05-11T23:01:48Z",
+  "timestamp": "2026-05-11T23:17:03Z",
   "source": "live",
-  "regime": {
-    "mode": "RISK_OFF",
-    "reason": "Drawdown 51.11% exceeds catastrophic threshold 20%",
-    "enforcedBy": "jido",
-    "marketSignal": "N/A"
-  },
   "strategy": {
-    "name": "WOLF-Primary",
+    "name": "wolf-primary",
     "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
     "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce",
-    "budget": 100,
+    "budget": 100.0,
     "remaining": 48.887581
+  },
+  "regime": {
+    "mode": "RISK_OFF",
+    "reason": "Market=BASELINE (BTC slope=0.04%; ETH slope=-0.24%; BTC ATR=0.50%; ETH ATR=0.54%; BTC FR=-0.0004%; ETH FR=0.0013%) but RISK_OFF override active: DD 51.1% from catastrophic limit 20.0%",
+    "enforcedBy": "hermes-regime",
+    "marketSignal": null
   },
   "portfolio": {
     "equity": 48.887581,
     "peakEquity": 100.0,
-    "drawdownPct": 51.11,
     "withdrawable": 48.887581,
-    "dayStartEquity": 48.887581
+    "drawdownPct": 51.11,
+    "dailyPnl": 0.0,
+    "dailyPnlPct": 0.0
   },
+  "positions": [],
+  "openOrders": 0,
   "guardrails": {
     "catastrophicDrawdown": {
       "threshold": 20,
       "actual": 51.11,
       "breached": true
     },
+    "maxConsecutiveStopOuts": {
+      "threshold": 4,
+      "actual": 0,
+      "breached": false
+    },
     "dailyLossLimit": {
       "threshold": 10,
       "actual": 0.0,
       "breached": false
-    },
-    "consecutiveStopOuts": {
-      "threshold": 4,
-      "actual": 0,
-      "breached": false
     }
   },
-  "positions": [],
   "actions": [
-    "JIDO heartbeat \u2014 flat portfolio, RISK_OFF maintained"
+    "No open positions. RISK_OFF maintained. Portfolio flat."
   ],
   "warnings": [
-    "VPS scanners offline since 2026-03-23 (brain/arena/risk-arbiter) \u2014 49+ days. Treat as decommissioned."
+    "VPS scanners offline since 2026-03-23 (49 days) \u2014 treat as decommissioned.",
+    "DD 51.11% is above catastrophic 20% threshold \u2014 RISK_OFF enforced."
   ]
 }
