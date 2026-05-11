@@ -1,30 +1,31 @@
 {
-  "generatedAt": "2026-05-11T07:48:34Z",
+  "generatedAt": "2026-05-11T08:03:04Z",
   "source": "live",
   "regime": {
     "mode": "RISK_OFF",
-    "reason": "DD 51.11% from catastrophic limit 20%",
-    "enforcedBy": "jido",
-    "marketSignal": "BASELINE (BTC slope=-0.49%, ATR=0.69%; ETH slope=-1.34%, ATR=0.91%)"
+    "reason": "Catastrophic DD 51.11% (limit 20.0%)",
+    "enforcedBy": "jido-monitor",
+    "marketSignal": "flat"
   },
   "portfolio": {
+    "equity": 48.887581,
     "peakEquity": 100.0,
-    "currentEquity": 48.887581,
+    "withdrawable": 48.887581,
     "drawdownPct": 51.11,
-    "openPositions": 0,
-    "openOrders": 0,
-    "dailyPnl": 0.0,
-    "withdrawable": 48.887581
+    "dailyPnl": 0.0
   },
-  "positions": [],
+  "positions": {
+    "open": 0,
+    "details": []
+  },
   "guardrails": {
     "catastrophicDrawdown": {
-      "threshold": 20,
+      "threshold": 20.0,
       "actual": 51.11,
       "breached": true
     },
     "dailyLossLimit": {
-      "threshold": 10,
+      "threshold": 10.0,
       "actual": 0.0,
       "breached": false
     },
@@ -32,31 +33,20 @@
       "threshold": 4,
       "actual": 0,
       "breached": false
-    },
-    "maxPositions": {
-      "threshold": 3,
-      "actual": 0,
-      "breached": false
     }
   },
-  "actions": [],
-  "warnings": [],
   "strategy": {
-    "name": "wolf-primary",
+    "name": "WOLF-Primary",
     "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
     "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce",
-    "budget": 100.0,
+    "budget": 100,
     "remaining": 48.887581
   },
-  "infrastructure": {
-    "mcpOnline": true,
-    "vpsStatus": "DECOMMISSIONED",
-    "vpsOfflineSince": "2026-03-23T23:57:45Z",
-    "vpsOfflineDays": 49,
-    "cronHeartbeats": {
-      "brain": "2026-03-23T23:57:15Z",
-      "arena": "2026-03-23T23:57:05Z",
-      "risk-arbiter": "2026-03-23T23:57:45Z"
-    }
-  }
+  "actionsTaken": [
+    "Heartbeat check \u2014 no positions, no emergency actions"
+  ],
+  "warnings": [
+    "VPS scanners offline since 2026-03-23 (~49 days) \u2014 treat as decommissioned",
+    "DD 51.11% far exceeds 20% threshold \u2014 RISK_OFF remains enforced until manual reset"
+  ]
 }
