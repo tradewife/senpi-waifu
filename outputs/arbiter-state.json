@@ -3,18 +3,8 @@
   "lastEquity": 48.887581,
   "dayStartEquity": 48.887581,
   "consecutiveStopOuts": 0,
-  "lastJidoRun": "2026-05-11T23:32:20Z",
+  "lastJidoRun": "2026-05-11T23:46:08Z",
   "alerts": [
-    {
-      "type": "JIDO_HEARTBEAT",
-      "timestamp": "2026-05-11T23:01:48Z",
-      "regime": "RISK_OFF",
-      "accountValue": 48.887581,
-      "drawdownPct": 51.11,
-      "openPositions": 0,
-      "openOrders": 0,
-      "message": "Flat portfolio (RISK_OFF). DD=51.11%, equity=$48.89, peak=$100.00. No positions, no action needed."
-    },
     {
       "type": "JIDO_HEARTBEAT",
       "timestamp": "2026-05-11T23:17:03Z",
@@ -34,13 +24,23 @@
       "openPositions": 0,
       "openOrders": 0,
       "message": "Flat portfolio (RISK_OFF). DD=51.11%, equity=$48.89, peak=$100.00. No positions, no action needed. VPS offline since 2026-03-23."
+    },
+    {
+      "type": "JIDO_HEARTBEAT",
+      "timestamp": "2026-05-11T23:46:08Z",
+      "regime": "RISK_OFF",
+      "accountValue": 48.887581,
+      "drawdownPct": 51.11,
+      "openPositions": 0,
+      "openOrders": 0,
+      "message": "Flat portfolio (RISK_OFF). DD=51.11%, equity=$48.89, peak=$100.00. No positions, no action needed. VPS offline since 2026-03-23."
     }
   ],
-  "lastChecked": "2026-05-11T23:32:20Z",
-  "lastCheckAt": "2026-05-11T23:32:20Z",
+  "lastChecked": "2026-05-11T23:46:08Z",
+  "lastCheckAt": "2026-05-11T23:46:08Z",
   "dayStartDate": "2026-05-11",
-  "lastCheck": "2026-05-11T23:32:20Z",
-  "lastUpdated": "2026-05-11T23:32:20Z",
+  "lastCheck": "2026-05-11T23:46:08Z",
+  "lastUpdated": "2026-05-11T23:46:08Z",
   "drawdownPct": 51.11,
   "withdrawable": 48.887581
 }

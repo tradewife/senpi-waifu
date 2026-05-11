@@ -1,6 +1,20 @@
 {
-  "generatedAt": "2026-05-11T23:32:20Z",
+  "generatedAt": "2026-05-11T23:46:08Z",
   "source": "live",
+  "regime": {
+    "mode": "RISK_OFF",
+    "reason": "Catastrophic drawdown 51.11% exceeds 20% threshold",
+    "enforcedBy": "jido",
+    "marketSignal": "BASELINE (BTC slope=0.04%, ATR=0.50%)"
+  },
+  "portfolio": {
+    "equity": 48.887581,
+    "peakEquity": 100.0,
+    "withdrawable": 48.887581,
+    "drawdownPct": 51.11,
+    "dayStartEquity": 48.887581,
+    "dailyPnl": 0.0
+  },
   "strategy": {
     "name": "WOLF-Primary",
     "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
@@ -8,21 +22,7 @@
     "budget": 100,
     "remaining": 48.887581
   },
-  "regime": {
-    "mode": "RISK_OFF",
-    "reason": "DD 51.1% exceeds catastrophic 20% limit",
-    "enforcedBy": "jido-guardrail",
-    "marketSignal": "BASELINE (BTC slope=0.04%, ATR=0.50%)"
-  },
-  "portfolio": {
-    "equity": 48.887581,
-    "peak": 100.0,
-    "withdrawable": 48.887581,
-    "dayStartEquity": 48.887581,
-    "drawdownPct": 51.11
-  },
   "positions": [],
-  "openOrders": 0,
   "guardrails": {
     "catastrophicDrawdown": {
       "threshold": 20,
@@ -31,21 +31,20 @@
     },
     "dailyLossLimit": {
       "threshold": 10,
-      "actual": 0,
+      "actual": 0.0,
       "breached": false
     },
-    "maxConsecutiveStopOuts": {
+    "consecutiveStopOuts": {
       "threshold": 4,
       "actual": 0,
       "breached": false
     }
   },
   "actions": [
-    "Heartbeat check \u2014 flat portfolio, no action needed"
+    "No emergency actions needed \u2014 flat portfolio"
   ],
   "warnings": [
-    "VPS scanners offline since 2026-03-23 (49+ days) \u2014 treat as decommissioned",
-    "DD 51.11% based on live equity \u2014 RISK_OFF correctly enforced",
-    "Regime-classifier may override to BASELINE hourly \u2014 JIDO re-enforces RISK_OFF"
+    "DD 51.11% from catastrophic limit 20% \u2014 RISK_OFF enforced",
+    "VPS offline since 2026-03-23 (49+ days) \u2014 treat as decommissioned"
   ]
 }
