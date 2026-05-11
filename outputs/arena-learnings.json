@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-11T10:00:35Z",
+  "generatedAt": "2026-05-11T18:14:49Z",
   "arenaWeek": "?",
   "totalEntrants": 105,
   "ourStats": {
@@ -7,15 +7,15 @@
     "winRate": 0.0,
     "totalPnl": -51.11
   },
-  "arenaTop5AvgRoe": 29.97,
-  "arenaTop5AvgPnl": -167.16,
+  "arenaTop5AvgRoe": 27.72,
+  "arenaTop5AvgPnl": 8.94,
   "arenaTop5": [
     {
       "rank": 1,
       "name": "0xschelling",
-      "roePct": "57.1563",
-      "totalPnl": "-2037.378611",
-      "tradeCount": 25,
+      "roePct": "59.2793",
+      "totalPnl": "-2003.03115",
+      "tradeCount": 70,
       "toolsUsed": [
         "account_get_portfolio",
         "arena_leaderboard",
@@ -36,15 +36,16 @@
     {
       "rank": 2,
       "name": "OrangeShield",
-      "roePct": "36.474",
-      "totalPnl": "14.825855",
-      "tradeCount": 10,
+      "roePct": "33.1313",
+      "totalPnl": "865.571454",
+      "tradeCount": 21,
       "toolsUsed": [
         "account_get_portfolio",
         "cancel_order",
         "create_position",
         "edit_position",
         "execution_get_open_position_details",
+        "market_get_asset_data",
         "market_get_prices",
         "strategy_create_custom_strategy",
         "strategy_get",
@@ -52,6 +53,7 @@
         "strategy_get_clearinghouse_state",
         "strategy_get_open_orders",
         "strategy_list",
+        "strategy_top_up",
         "strategy_update",
         "strategy_withdraw_funds"
       ]
@@ -59,9 +61,9 @@
     {
       "rank": 3,
       "name": "KhakiLoop",
-      "roePct": "19.0546",
-      "totalPnl": "187.101365",
-      "tradeCount": 69,
+      "roePct": "19.0522",
+      "totalPnl": "194.861723",
+      "tradeCount": 71,
       "toolsUsed": [
         "account_get_portfolio",
         "arena_leaderboard",
@@ -89,9 +91,9 @@
     {
       "rank": 4,
       "name": "ysr",
-      "roePct": "18.8128",
-      "totalPnl": "982.548819",
-      "tradeCount": 21,
+      "roePct": "14.8925",
+      "totalPnl": "949.801649",
+      "tradeCount": 23,
       "toolsUsed": [
         "account_get_portfolio",
         "cancel_order",
@@ -99,6 +101,7 @@
         "discovery_get_trader_history",
         "discovery_get_trader_state",
         "edit_position",
+        "market_get_asset_data",
         "strategy_get_clearinghouse_state",
         "strategy_get_open_orders",
         "strategy_get_pnl_and_account_value_history",
@@ -108,14 +111,25 @@
     },
     {
       "rank": 5,
-      "name": "Patelbot",
-      "roePct": "18.3498",
-      "totalPnl": "17.123985",
-      "tradeCount": 9,
-      "toolsUsed": []
+      "name": "mysterysuperboy",
+      "roePct": "12.2487",
+      "totalPnl": "37.479356",
+      "tradeCount": 0,
+      "toolsUsed": [
+        "account_get_portfolio",
+        "create_position",
+        "edit_position",
+        "strategy_top_up"
+      ]
     }
   ],
   "recommendations": [
+    {
+      "action": "study_top_strategies",
+      "confidence": "medium",
+      "reason": "Arena top 5 avg PnL $8.94 vs ours $-51.11. Study their patterns.",
+      "risk": "neutral"
+    },
     {
       "action": "reminder_max_leverage",
       "confidence": "absolute",
