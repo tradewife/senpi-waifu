@@ -1,35 +1,33 @@
 {
-  "generatedAt": "2026-05-11T11:17:55Z",
+  "generatedAt": "2026-05-11T21:47:30Z",
   "source": "live",
   "regime": {
     "mode": "RISK_OFF",
     "reason": "Catastrophic DD 51.11% (limit 20.0%)",
-    "enforcedBy": "jido-monitor",
+    "enforcedBy": "jido",
     "marketSignal": null
   },
-  "strategy": {
-    "name": "WOLF-Primary",
-    "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
-    "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce",
-    "budget": 100,
-    "remaining": 48.887581
-  },
   "portfolio": {
-    "equity": 48.887581,
-    "peak": 100.0,
+    "equity": {
+      "current": 48.887581,
+      "peak": 100.0,
+      "dayStart": 48.887581,
+      "withdrawable": 48.887581
+    },
     "drawdownPct": 51.11,
-    "withdrawable": 48.887581,
     "openPositions": 0,
-    "openOrders": 0
+    "openOrders": 0,
+    "dailyPnl": 0.0,
+    "dailyCloses": 0
   },
   "guardrails": {
     "catastrophicDrawdown": {
-      "threshold": 20.0,
+      "threshold": 20,
       "actual": 51.11,
       "breached": true
     },
     "dailyLossLimit": {
-      "threshold": 10.0,
+      "threshold": 10,
       "actual": 0.0,
       "breached": false
     },
@@ -39,11 +37,23 @@
       "breached": false
     }
   },
+  "strategy": {
+    "name": "WOLF-Primary",
+    "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
+    "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce",
+    "budget": 100,
+    "remaining": 48.887581
+  },
   "positions": [],
   "actions": [],
   "warnings": [
-    "VPS offline since 2026-03-23 \u2014 49 days. Treat as decommissioned.",
-    "DD 51.11% based on live equity. RISK_OFF remains enforced."
+    "DD 51.11% is based on live equity from 2026-05-11T21:47:30Z.",
+    "VPS offline since 2026-03-23 (49 days) \u2014 treat as decommissioned."
   ],
-  "assessment": "Flat portfolio under RISK_OFF. No open positions, no emergency actions needed. Catastrophic drawdown of 51.11% remains well above 20% threshold. Account value unchanged at $48.89. VPS deployment offline 49 days \u2014 permanent MCP-only operation mode."
+  "vpsHeartbeats": {
+    "brain": "2026-03-23T23:57:15Z",
+    "arena": "2026-03-23T23:57:05Z",
+    "risk-arbiter": "2026-03-23T23:57:45Z",
+    "status": "OFFLINE (49+ days)"
+  }
 }
