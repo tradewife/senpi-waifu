@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-05-11T06:32:57Z",
+  "generatedAt": "2026-05-11T06:48:55Z",
   "source": "cached",
   "regime": {
     "mode": "RISK_OFF",
-    "reason": "DD 51.1% from catastrophic limit 20% \u2014 override active (market=BASELINE BTC slope=-0.49% ATR=0.69%)",
+    "reason": "Catastrophic drawdown 51.11% exceeds 20% threshold. MCP offline \u2014 stale cached equity from ~2026-03-24.",
     "enforcedBy": "jido",
-    "marketSignal": "BASELINE (BTC slope=-0.49%, ATR=0.69%)"
+    "marketSignal": "N/A (MCP offline)"
   },
   "portfolio": {
     "peakEquity": 100.0,
@@ -39,12 +39,14 @@
       "breached": false
     }
   },
-  "actions": [],
+  "actions": [
+    "Heartbeat only \u2014 flat portfolio, no positions to protect."
+  ],
   "warnings": [
-    "MCP offline (91+ consecutive failures) \u2014 all data from cached state",
-    "DD 51.11% based on cached equity from 2026-05-11 \u2014 actual DD may differ",
-    "VPS decommissioned since 2026-03-23 (49d) \u2014 treat as permanently offline",
-    "Flat portfolio: no positions to protect"
+    "MCP server offline (92+ consecutive failures) \u2014 all data is cached from ~2026-03-24.",
+    "DD 51.11% is based on cached equity \u2014 actual DD may differ.",
+    "VPS offline since 2026-03-23 (48 days) \u2014 treat as DECOMMISSIONED.",
+    "RISK_OFF correctly enforced in both risk-regime.json and autonomous-brain.json."
   ],
   "strategy": {
     "name": "wolf-primary",
@@ -57,7 +59,7 @@
     "mcpOnline": false,
     "vpsStatus": "DECOMMISSIONED",
     "vpsOfflineSince": "2026-03-23T23:57:15Z",
-    "vpsOfflineDays": 49,
+    "vpsOfflineDays": 48,
     "cronHeartbeats": {
       "brain": "2026-03-23T23:57:15Z",
       "arena": "2026-03-23T23:57:05Z",
