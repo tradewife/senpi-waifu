@@ -1,27 +1,31 @@
 {
-  "generatedAt": "2026-05-11T20:31:59Z",
+  "generatedAt": "2026-05-11T20:48:34.794399Z",
   "source": "live",
   "regime": {
     "mode": "RISK_OFF",
-    "reason": "Drawdown 51.11% exceeds catastrophicDrawdownPct (20%)",
-    "enforcedBy": "jido-guardrail",
-    "marketSignal": null
+    "reason": "Drawdown 51.11% exceeds catastrophic threshold 20%",
+    "enforcedBy": "jido-monitor",
+    "marketSignal": "VPS offline \u2014 no classifier signal"
   },
   "portfolio": {
-    "equity": {
-      "current": 48.887581,
-      "peak": 100.0,
-      "dayStart": 48.887581,
-      "withdrawable": 48.887581
-    },
+    "equity": 48.887581,
+    "peakEquity": 100.0,
+    "dayStartEquity": 48.887581,
+    "withdrawable": 48.887581,
     "drawdownPct": 51.11,
-    "dailyPnl": 0.0,
-    "openPositions": 0,
-    "openOrders": 0
+    "dailyLossPct": 0.0
   },
+  "strategy": {
+    "name": "wolf-primary",
+    "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
+    "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce",
+    "budget": 100,
+    "remaining": 48.89
+  },
+  "positions": [],
   "guardrails": {
     "catastrophicDrawdown": {
-      "threshold": 20.0,
+      "threshold": 20,
       "actual": 51.11,
       "breached": true
     },
@@ -31,26 +35,22 @@
       "breached": false
     },
     "dailyLossLimit": {
-      "threshold": 10.0,
+      "threshold": 10,
       "actual": 0.0,
       "breached": false
     }
   },
-  "positions": [],
-  "strategy": {
-    "name": "wolf-primary",
-    "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
-    "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce",
-    "budget": 100,
-    "remaining": 48.887581
-  },
   "actions": [
-    "Flat portfolio fast-path \u2014 no positions to manage",
-    "RISK_OFF enforced (DD 51.11% > 20% threshold)",
-    "State files synced: arbiter-state.json, autonomous-brain.json"
+    "No new actions \u2014 flat portfolio, RISK_OFF maintained"
   ],
   "warnings": [
-    "VPS scanners offline since 2026-03-23 (49 days) \u2014 treat as decommissioned",
-    "Drawdown 51.11% based on live data \u2014 well past catastrophic threshold"
-  ]
+    "VPS offline since 2026-03-23 (49+ days) \u2014 treat as decommissioned",
+    "DD 51.11% is from live data \u2014 confirmed via clearinghouse state"
+  ],
+  "market": {
+    "BTC": 81798.5,
+    "ETH": 2337.65,
+    "SOL": 97.8365,
+    "HYPE": 41.9365
+  }
 }

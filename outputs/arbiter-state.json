@@ -14,6 +14,16 @@
       "openPositions": 0,
       "openOrders": 0,
       "message": "Flat portfolio fast-path. DD 51.11% from peak $100.0. RISK_OFF enforced. No positions, no action needed."
+    },
+    {
+      "type": "JIDO_HEARTBEAT",
+      "timestamp": "2026-05-11T20:48:34.794399Z",
+      "regime": "RISK_OFF",
+      "accountValue": 48.887581,
+      "drawdownPct": 51.11,
+      "openPositions": 0,
+      "openOrders": 0,
+      "message": "Flat portfolio. RISK_OFF enforced. DD 51.11% from peak $100.0. Equity $48.89. VPS offline since 2026-03-23 (49+ days \u2014 decommissioned). MCP live."
     }
   ],
   "lastChecked": "2026-05-11T20:16:51Z",
