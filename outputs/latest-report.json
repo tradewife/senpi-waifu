@@ -1,6 +1,12 @@
 {
-  "generatedAt": "2026-05-11T11:03:21Z",
+  "generatedAt": "2026-05-11T11:17:55Z",
   "source": "live",
+  "regime": {
+    "mode": "RISK_OFF",
+    "reason": "Catastrophic DD 51.11% (limit 20.0%)",
+    "enforcedBy": "jido-monitor",
+    "marketSignal": null
+  },
   "strategy": {
     "name": "WOLF-Primary",
     "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
@@ -8,35 +14,23 @@
     "budget": 100,
     "remaining": 48.887581
   },
-  "regime": {
-    "mode": "RISK_OFF",
-    "reason": "Catastrophic DD 51.1% (limit 20.0%)",
-    "enforcedBy": "jido-monitor",
-    "marketSignal": "flat"
-  },
   "portfolio": {
-    "equity": {
-      "current": 48.887581,
-      "peak": 100.0,
-      "dayStart": 48.887581
-    },
-    "drawdown": {
-      "pct": 51.11,
-      "abs": 51.11
-    },
+    "equity": 48.887581,
+    "peak": 100.0,
+    "drawdownPct": 51.11,
     "withdrawable": 48.887581,
     "openPositions": 0,
     "openOrders": 0
   },
   "guardrails": {
     "catastrophicDrawdown": {
-      "threshold": 20,
+      "threshold": 20.0,
       "actual": 51.11,
       "breached": true
     },
-    "dailyLoss": {
-      "threshold": 10,
-      "actual": 0,
+    "dailyLossLimit": {
+      "threshold": 10.0,
+      "actual": 0.0,
       "breached": false
     },
     "consecutiveStopOuts": {
@@ -48,8 +42,8 @@
   "positions": [],
   "actions": [],
   "warnings": [
-    "VPS scanners offline since 2026-03-23 (49d) \u2014 treat as decommissioned",
-    "DD 51.11% far exceeds 20% catastrophic threshold \u2014 account in deep drawdown"
+    "VPS offline since 2026-03-23 \u2014 49 days. Treat as decommissioned.",
+    "DD 51.11% based on live equity. RISK_OFF remains enforced."
   ],
-  "summary": "Flat portfolio. Account value $48.89 (DD 51.11% from $100.00 peak). RISK_OFF enforced. No open positions. No action needed."
+  "assessment": "Flat portfolio under RISK_OFF. No open positions, no emergency actions needed. Catastrophic drawdown of 51.11% remains well above 20% threshold. Account value unchanged at $48.89. VPS deployment offline 49 days \u2014 permanent MCP-only operation mode."
 }
