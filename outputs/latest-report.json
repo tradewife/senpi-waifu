@@ -1,25 +1,27 @@
 {
-  "timestamp": "2026-05-11T14:32:28Z",
+  "generatedAt": "2026-05-11T14:46:50Z",
   "source": "live",
   "regime": {
     "mode": "RISK_OFF",
-    "reason": "Catastrophic drawdown 51.11% exceeds 20% threshold",
+    "reason": "Catastrophic DD 51.11% (limit 20.0%)",
     "enforcedBy": "jido",
-    "marketSignal": "Catastrophic DD 51.1% (limit 20.0%)"
+    "marketSignal": null
+  },
+  "strategy": {
+    "name": "WOLF-Primary",
+    "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
+    "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce",
+    "budget": 100,
+    "remaining": 48.887581
   },
   "portfolio": {
     "equity": 48.887581,
     "peakEquity": 100.0,
-    "dayStartEquity": 48.887581,
     "withdrawable": 48.887581,
-    "drawdownPct": 51.11
-  },
-  "strategy": {
-    "name": "wolf-primary",
-    "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
-    "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce",
-    "budget": 100.0,
-    "remaining": 48.887581
+    "drawdownPct": 51.11,
+    "dailyPnl": 0.0,
+    "openPositions": 0,
+    "openOrders": 0
   },
   "guardrails": {
     "catastrophicDrawdown": {
@@ -32,7 +34,7 @@
       "actual": 0.0,
       "breached": false
     },
-    "maxConsecutiveStopOuts": {
+    "consecutiveStopOuts": {
       "threshold": 4,
       "actual": 0,
       "breached": false
@@ -43,7 +45,7 @@
     "No positions to manage. RISK_OFF maintained."
   ],
   "warnings": [
-    "VPS scanners offline since 2026-03-23 \u2014 treat as decommissioned (49+ days)",
-    "DD 51.11% is based on live equity \u2014 account at $48.89 of $100.00"
+    "VPS offline since 2026-03-23 (~49 days) \u2014 treat as decommissioned",
+    "Account at $48.89 / $100.00 peak \u2014 51.11% drawdown"
   ]
 }
