@@ -1,33 +1,20 @@
 {
-  "generatedAt": "2026-05-11T03:03:15.829130+00:00",
+  "generatedAt": "2026-05-11T03:18:13.287238+00:00",
   "source": "cached",
   "regime": {
     "mode": "RISK_OFF",
     "reason": "Market=RISK_OFF (BTC slope=-0.51%, ATR=0.63%) but RISK_OFF override active: DD 51.1% from catastrophic limit 20%",
-    "enforcedBy": "jido-guardrail",
-    "marketSignal": "RISK_OFF (BTC slope=-0.51%, ATR=0.63%)"
+    "enforcedBy": "jido",
+    "marketSignal": "RISK_OFF"
   },
   "portfolio": {
-    "equity": {
-      "current": 48.887581,
-      "peak": 100.0,
-      "dayStart": 48.887581
-    },
-    "drawdown": {
-      "pct": 51.11,
-      "abs": 51.11,
-      "threshold": 20.0,
-      "breached": true
-    },
-    "dailyPnl": {
-      "abs": 0.0,
-      "pct": 0.0
-    }
+    "equity": 48.887581,
+    "peakEquity": 100.0,
+    "drawdownPct": 51.11,
+    "dayStartEquity": 48.887581,
+    "source": "cached"
   },
-  "positions": {
-    "open": 0,
-    "details": []
-  },
+  "positions": [],
   "guardrails": {
     "catastrophicDrawdown": {
       "threshold": 20.0,
@@ -46,7 +33,7 @@
     }
   },
   "strategy": {
-    "name": "WOLF-Primary",
+    "name": "wolf-primary",
     "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
     "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce",
     "budget": 100,
@@ -64,14 +51,14 @@
     }
   },
   "warnings": [
-    "MCP server offline \u2014 all data from cached state",
-    "DD 51.11% based on cached equity from 2026-05-11 \u2014 actual DD may differ",
-    "VPS decommissioned since 2026-03-23 (49d)",
-    "Regime consistency: OK (regime=RISK_OFF, brain=RISK_OFF)"
+    "MCP offline (86+ failures) \u2014 all data from cached state",
+    "VPS scanners offline since 2026-03-23 (decommissioned)",
+    "DD 51.11% based on cached equity from 2026-05-11 \u2014 actual DD may differ"
   ],
   "actions": [
     "RISK_OFF maintained \u2014 catastrophic DD exceeds 20% threshold",
     "Flat portfolio \u2014 no positions requiring emergency SL",
     "State files synced (arbiter, brain, report)"
-  ]
+  ],
+  "openOrders": 0
 }
