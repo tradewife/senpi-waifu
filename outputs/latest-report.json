@@ -1,22 +1,11 @@
 {
-  "generatedAt": "2026-05-12T06:19:14Z",
+  "generatedAt": "2026-05-12T06:32:36Z",
   "source": "cached",
   "regime": {
     "mode": "RISK_OFF",
     "reason": "Arbiter RISK_OFF override: DD 51.1% exceeds catastrophic limit 20.0%",
-    "enforcedBy": "jido",
-    "marketSignal": "N/A (MCP offline)"
-  },
-  "portfolio": {
-    "equity": {
-      "current": 48.887581,
-      "peak": 100.0,
-      "dayStart": 48.887581
-    },
-    "drawdownPct": 51.11,
-    "withdrawable": 48.887581,
-    "openPositions": 0,
-    "openOrders": 0
+    "enforcedBy": "jido-guardrail",
+    "marketSignal": "MCP offline \u2014 cached"
   },
   "strategy": {
     "name": "WOLF-Primary",
@@ -25,6 +14,20 @@
     "budget": 100,
     "remaining": 48.887581
   },
+  "portfolio": {
+    "equity": {
+      "current": 48.887581,
+      "peak": 100.0,
+      "dayStart": 48.887581
+    },
+    "drawdown": {
+      "pctFromPeak": 51.11,
+      "absolute": 51.11
+    },
+    "withdrawable": 48.887581
+  },
+  "positions": [],
+  "openOrders": 0,
   "guardrails": {
     "catastrophicDrawdown": {
       "threshold": 20,
@@ -42,12 +45,13 @@
       "breached": false
     }
   },
-  "positions": [],
   "actions": [
-    "No actions \u2014 flat portfolio, RISK_OFF enforced"
+    "RISK_OFF enforced (DD 51.11% > 20% threshold)",
+    "Flat portfolio \u2014 no positions to manage",
+    "MCP offline \u2014 heartbeat only, using cached equity"
   ],
   "warnings": [
-    "MCP server offline \u2014 using cached state",
+    "MCP server offline \u2014 cannot fetch live position data",
     "DD 51.11% based on cached equity \u2014 actual DD may differ",
     "VPS offline since 2026-03-23 (50+ days \u2014 decommissioned)"
   ]
