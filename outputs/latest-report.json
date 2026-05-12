@@ -1,36 +1,35 @@
 {
-  "generatedAt": "2026-05-12T03:32:39Z",
   "source": "live",
-  "regime": {
-    "mode": "RISK_OFF",
-    "reason": "Catastrophic drawdown 51.11% exceeds 20% threshold",
-    "enforcedBy": "jido",
-    "marketSignal": "N/A"
-  },
-  "portfolio": {
-    "equity": 48.887581,
-    "peakEquity": 100.0,
-    "drawdownPct": 51.11,
-    "withdrawable": 48.887581,
-    "dayStartEquity": 48.887581,
-    "dailyPnl": 0.0
-  },
+  "generatedAt": "2026-05-12T04:03:01Z",
   "strategy": {
     "name": "wolf-primary",
     "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
     "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce",
-    "budget": 100.0,
+    "budget": 100,
     "remaining": 48.887581
   },
-  "positions": [],
-  "openOrders": 0,
+  "regime": {
+    "mode": "RISK_OFF",
+    "reason": "Catastrophic drawdown: 51.11% exceeds 20% threshold",
+    "enforcedBy": "jido-monitor",
+    "marketSignal": "none"
+  },
+  "portfolio": {
+    "equity": 48.887581,
+    "peakEquity": 100.0,
+    "withdrawable": 48.887581,
+    "drawdownPct": 51.11,
+    "dailyLossPct": 0.0,
+    "openPositions": 0,
+    "openOrders": 0
+  },
   "guardrails": {
     "catastrophicDrawdown": {
       "threshold": 20,
       "actual": 51.11,
       "breached": true
     },
-    "maxConsecutiveStopOuts": {
+    "consecutiveStopOuts": {
       "threshold": 4,
       "actual": 0,
       "breached": false
@@ -41,13 +40,11 @@
       "breached": false
     }
   },
-  "market": {
-    "BTC": 81128.5,
-    "ETH": 2311.25,
-    "SOL": 96.2415
-  },
+  "positions": [],
   "actions": [],
   "warnings": [
-    "RISK_OFF enforced: drawdown 51.11% exceeds 20% catastrophic threshold"
+    "VPS scanners offline since 2026-03-23 (50+ days) \u2014 treat as decommissioned",
+    "Drawdown 51.11% well exceeds catastrophic 20% threshold \u2014 RISK_OFF remains enforced",
+    "Flat portfolio \u2014 no positions, no orders"
   ]
 }
