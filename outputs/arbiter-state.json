@@ -24,6 +24,16 @@
       "openPositions": 0,
       "openOrders": 0,
       "message": "Flat portfolio, RISK_OFF enforced. Equity $48.89, DD 51.11%. No positions, no actions. VPS offline since 2026-03-23 (50+ days \u2014 decommissioned)."
+    },
+    {
+      "type": "JIDO_HEARTBEAT",
+      "timestamp": "2026-05-12T04:47:29Z",
+      "regime": "RISK_OFF",
+      "accountValue": 48.887581,
+      "drawdownPct": 51.11,
+      "openPositions": 0,
+      "openOrders": 0,
+      "message": "Flat portfolio | RISK_OFF | Equity $48.89 | DD 51.1% | 0 positions | 0 orders"
     }
   ],
   "lastChecked": "2026-05-12T04:32:55.193978Z",

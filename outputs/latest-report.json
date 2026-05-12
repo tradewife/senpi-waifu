@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-05-12T04:32:55.193978Z",
+  "generatedAt": "2026-05-12T04:47:29Z",
   "source": "live",
   "regime": {
     "mode": "RISK_OFF",
     "reason": "Catastrophic DD 51.1% (limit 20.0%)",
-    "enforcedBy": "jido",
-    "marketSignal": null
+    "enforcedBy": "jido-cron",
+    "marketSignal": "bearish"
   },
   "strategy": {
-    "name": "WOLF-Primary",
+    "name": "wolf-primary",
     "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
     "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce",
     "budget": 100,
@@ -17,6 +17,7 @@
   "portfolio": {
     "equity": 48.887581,
     "peakEquity": 100.0,
+    "dayStartEquity": 48.887581,
     "withdrawable": 48.887581,
     "drawdownPct": 51.11
   },
@@ -24,29 +25,23 @@
   "openOrders": 0,
   "guardrails": {
     "catastrophicDrawdown": {
-      "threshold": 20.0,
+      "threshold": 20,
       "actual": 51.11,
       "breached": true
-    },
-    "dailyLossLimit": {
-      "threshold": 10.0,
-      "actual": 0.0,
-      "breached": false
     },
     "consecutiveStopOuts": {
       "threshold": 4,
       "actual": 0,
       "breached": false
+    },
+    "dailyLoss": {
+      "threshold": 10,
+      "actual": 0.0,
+      "breached": false
     }
   },
   "actions": [],
   "warnings": [
-    "VPS offline since 2026-03-23 (50+ days \u2014 decommissioned). MCP-only operation."
-  ],
-  "vpsHeartbeats": {
-    "brain": "2026-03-23T23:57:15Z",
-    "arena": "2026-03-23T23:57:05Z",
-    "risk-arbiter": "2026-03-23T23:57:45Z",
-    "staleDays": 50
-  }
+    "RISK_OFF enforced \u2014 DD 51.1% exceeds 20% limit. Portfolio is flat."
+  ]
 }
