@@ -1,27 +1,32 @@
 {
-  "generatedAt": "2026-05-12T18:47:36.637485Z",
+  "generatedAt": "2026-05-12T19:33:20.408400+00:00",
   "source": "live",
   "strategy": {
-    "name": "WOLF-Primary",
+    "name": "wolf-primary",
     "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
     "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce",
-    "budget": 100,
+    "budget": 100.0,
     "remaining": 48.887581
   },
   "regime": {
     "mode": "RISK_OFF",
     "reason": "Catastrophic drawdown 51.11% exceeds 20% threshold",
-    "enforcedBy": "jido",
-    "marketSignal": "BASELINE"
+    "enforcedBy": "jido-guardrail",
+    "marketSignal": null
   },
   "portfolio": {
-    "equity": 48.887581,
-    "peakEquity": 100.0,
-    "withdrawable": 48.887581,
+    "equity": {
+      "current": 48.887581,
+      "peak": 100.0,
+      "dayStart": 48.887581,
+      "withdrawable": 48.887581
+    },
     "drawdownPct": 51.11,
+    "dailyPnl": 0.0,
     "openPositions": 0,
     "openOrders": 0
   },
+  "positions": [],
   "guardrails": {
     "catastrophicDrawdown": {
       "threshold": 20,
@@ -39,10 +44,20 @@
       "breached": false
     }
   },
-  "positions": [],
-  "actions": [],
+  "actions": [
+    "Flat portfolio confirmed \u2014 0 positions, 0 orders",
+    "RISK_OFF enforced (DD 51.11% >> 20% threshold)",
+    "No emergency SL needed (no open positions)",
+    "Brain synced with regime state"
+  ],
   "warnings": [
-    "DD 51.11% based on live equity \u2014 exceeds 20% catastrophic threshold",
-    "VPS offline since 2026-03-23 (50+ days \u2014 decommissioned)"
-  ]
+    "VPS offline since 2026-03-23 \u2014 cron-heartbeats stale (brain, arena, risk-arbiter)",
+    "Drawdown 51.11% from $100 peak \u2014 account severely degraded",
+    "VPS deployment decommissioned for 50+ days \u2014 Hermes-only operation"
+  ],
+  "infrastructure": {
+    "mcpStatus": "online",
+    "vpsStatus": "offline_since_2026-03-23",
+    "cronHeartbeatsStale": true
+  }
 }
