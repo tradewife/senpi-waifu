@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-05-12T20:32:19Z",
+  "generatedAt": "2026-05-12T20:47:22.504648Z",
   "codebaseIndexAt": "2026-03-23T23:57:15Z",
   "riskMode": "RISK_OFF",
   "executionPolicy": {
-    "generatedAt": "2026-05-12T20:32:19Z",
+    "generatedAt": "2026-05-12T20:47:22.504648Z",
     "mode": "ACTIVE",
     "blockNewEntries": true,
     "allowAutoEntry": false,
@@ -19,7 +19,7 @@
       "JIDO: RISK_OFF enforced - catastrophic drawdown 51.11% exceeds 20% threshold"
     ],
     "risk": {
-      "drawdownPctFromPeak": 51.11,
+      "drawdownPctFromPeak": 51.1124,
       "recentLossStreak": 0,
       "pendingSignals": 0,
       "staleCrons": [],
@@ -55,7 +55,8 @@
       "lastEquity": 48.887581,
       "lastJidoCheck": "2026-05-12T20:32:19Z",
       "lastChecked": "2026-05-12T20:32:19Z",
-      "lastCheck": "2026-05-12T20:32:19Z"
+      "lastCheck": "2026-05-12T20:32:19Z",
+      "lastUpdated": "2026-05-12T20:47:22.504648Z"
     }
   },
   "pending": {

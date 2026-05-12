@@ -1,52 +1,58 @@
 {
-  "generatedAt": "2026-05-12T20:32:19Z",
+  "generatedAt": "2026-05-12T20:47:51.647391Z",
   "source": "live",
-  "strategy": {
-    "name": "WOLF-Primary",
-    "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
-    "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce",
-    "budget": 100,
-    "remaining": 48.89
-  },
   "regime": {
     "mode": "RISK_OFF",
     "reason": "Market indicators: BTC slope=0.04%, ATR=0.44%; ETH slope=-0.67%, ATR=0.58% \u2014 RISK_OFF override active: DD 51.1% exceeds catastrophic limit 20.0%",
-    "enforcedBy": "jido",
-    "marketSignal": "flat-portfolio"
+    "enforcedBy": "hermes-regime",
+    "marketSignal": "N/A"
   },
   "portfolio": {
-    "equity": 48.887581,
-    "peakEquity": 100.0,
-    "withdrawable": 48.887581,
-    "drawdownPct": 51.11,
+    "equity": {
+      "current": 48.887581,
+      "peak": 100.0,
+      "dayStart": 48.887581,
+      "withdrawable": 48.887581
+    },
+    "drawdownPct": 51.1124,
     "openPositions": 0,
     "openOrders": 0,
     "dailyPnl": 0.0,
     "dailyPnlPct": 0.0
   },
+  "strategy": {
+    "name": "wolf-primary",
+    "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
+    "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce",
+    "budget": 100,
+    "remaining": 48.887581
+  },
   "guardrails": {
     "catastrophicDrawdown": {
-      "threshold": 20.0,
-      "actual": 51.11,
+      "threshold": 20,
+      "actual": 51.1124,
       "breached": true
     },
-    "dailyLossLimit": {
-      "threshold": 10.0,
-      "actual": 0.0,
-      "breached": false
-    },
-    "consecutiveStopOuts": {
+    "maxConsecutiveStopOuts": {
       "threshold": 4,
       "actual": 0,
+      "breached": false
+    },
+    "dailyLossLimit": {
+      "threshold": 10,
+      "actual": 0.0,
       "breached": false
     }
   },
   "positions": [],
   "actions": [
-    "Flat portfolio confirmed. RISK_OFF maintained. No emergency actions needed."
+    "Flat portfolio \u2014 no positions to manage",
+    "RISK_OFF enforced \u2014 drawdown 51.1% exceeds 20% threshold",
+    "All state files synced (arbiter, brain, regime)"
   ],
   "warnings": [
-    "VPS offline since 2026-03-23 (50+ days \u2014 decommissioned). All VPS heartbeats stale.",
-    "Catastrophic drawdown 51.11% exceeds 20% threshold. Strategy remains in RISK_OFF until manually reset."
+    "CRITICAL: VPS 'brain' offline since 2026-03-23T23:57:15Z (49d ago) \u2014 decommissioned",
+    "CRITICAL: VPS 'arena' offline since 2026-03-23T23:57:05Z (49d ago) \u2014 decommissioned",
+    "CRITICAL: VPS 'risk-arbiter' offline since 2026-03-23T23:57:45Z (49d ago) \u2014 decommissioned"
   ]
 }
