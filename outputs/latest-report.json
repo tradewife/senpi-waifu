@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-05-12T06:32:36Z",
+  "generatedAt": "2026-05-12T06:48:50Z",
   "source": "cached",
   "regime": {
     "mode": "RISK_OFF",
-    "reason": "Arbiter RISK_OFF override: DD 51.1% exceeds catastrophic limit 20.0%",
-    "enforcedBy": "jido-guardrail",
-    "marketSignal": "MCP offline \u2014 cached"
+    "reason": "Catastrophic drawdown 51.11% exceeds 20% threshold",
+    "enforcedBy": "jido",
+    "marketSignal": "unknown"
   },
   "strategy": {
-    "name": "WOLF-Primary",
+    "name": "wolf-primary",
     "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
     "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce",
     "budget": 100,
@@ -18,25 +18,22 @@
     "equity": {
       "current": 48.887581,
       "peak": 100.0,
-      "dayStart": 48.887581
+      "dayStart": 48.887581,
+      "drawdownPct": 51.11
     },
-    "drawdown": {
-      "pctFromPeak": 51.11,
-      "absolute": 51.11
-    },
-    "withdrawable": 48.887581
+    "openPositions": 0,
+    "openOrders": 0,
+    "withdrawable": null
   },
-  "positions": [],
-  "openOrders": 0,
   "guardrails": {
-    "catastrophicDrawdown": {
+    "drawdown": {
       "threshold": 20,
       "actual": 51.11,
       "breached": true
     },
-    "dailyLossLimit": {
+    "dailyLoss": {
       "threshold": 10,
-      "actual": 0,
+      "actual": 0.0,
       "breached": false
     },
     "consecutiveStopOuts": {
@@ -45,14 +42,14 @@
       "breached": false
     }
   },
+  "positions": [],
   "actions": [
-    "RISK_OFF enforced (DD 51.11% > 20% threshold)",
-    "Flat portfolio \u2014 no positions to manage",
-    "MCP offline \u2014 heartbeat only, using cached equity"
+    "No positions to manage. RISK_OFF maintained. State files updated."
   ],
   "warnings": [
-    "MCP server offline \u2014 cannot fetch live position data",
+    "MCP server offline \u2014 all data from cached state",
     "DD 51.11% based on cached equity \u2014 actual DD may differ",
-    "VPS offline since 2026-03-23 (50+ days \u2014 decommissioned)"
-  ]
+    "VPS scanners offline since 2026-03-23 (50+ days) \u2014 treat as decommissioned"
+  ],
+  "nextSteps": "Wait for regime change signal. No entries allowed under RISK_OFF."
 }
