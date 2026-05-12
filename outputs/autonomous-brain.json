@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-05-12T23:31:34Z",
+  "generatedAt": "2026-05-12T23:46:50Z",
   "codebaseIndexAt": "2026-03-23T23:57:15Z",
   "riskMode": "RISK_OFF",
   "executionPolicy": {
-    "generatedAt": "2026-05-12T23:31:34Z",
+    "generatedAt": "2026-05-12T23:46:50Z",
     "mode": "ACTIVE",
     "blockNewEntries": true,
     "allowAutoEntry": false,
@@ -19,7 +19,7 @@
       "JIDO: RISK_OFF enforced - catastrophic drawdown 51.11% exceeds 20% threshold"
     ],
     "risk": {
-      "drawdownPctFromPeak": 51.1124,
+      "drawdownPctFromPeak": 51.11,
       "recentLossStreak": 0,
       "pendingSignals": 0,
       "staleCrons": [],
