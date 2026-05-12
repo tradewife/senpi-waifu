@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-12T21:02:06.814165Z",
+  "generatedAt": "2026-05-12T21:16:56.452063Z",
   "source": "live",
   "strategy": {
     "name": "WOLF-Primary",
@@ -10,45 +10,42 @@
   },
   "regime": {
     "mode": "RISK_OFF",
-    "reason": "Catastrophic DD 51.11% exceeds 20% limit. BTC slope=0.04%, ATR=0.44%; ETH slope=-0.67%, ATR=0.58%",
+    "reason": "Catastrophic drawdown 51.11% exceeds 20% threshold",
     "enforcedBy": "jido",
-    "marketSignal": "low-vol chop"
+    "marketSignal": "RISK_OFF"
   },
   "portfolio": {
     "equity": 48.887581,
     "peakEquity": 100.0,
-    "drawdownPct": 51.11,
     "withdrawable": 48.887581,
-    "dayStartEquity": 48.887581,
+    "drawdownPct": 51.1124,
+    "openPositions": 0,
+    "openOrders": 0,
     "dailyPnl": 0.0
   },
-  "positions": [],
-  "openOrders": 0,
   "guardrails": {
     "catastrophicDrawdown": {
       "threshold": 20,
-      "actual": 51.11,
+      "actual": 51.1124,
       "breached": true
     },
-    "dailyLossLimit": {
+    "dailyLoss": {
       "threshold": 10,
-      "actual": 0.0,
+      "actual": 0,
       "breached": false
     },
     "consecutiveStopOuts": {
       "threshold": 4,
       "actual": 0,
       "breached": false
-    },
-    "maxPositions": {
-      "threshold": 3,
-      "actual": 0,
-      "breached": false
     }
   },
-  "actions": [],
+  "positions": [],
+  "actions": [
+    "No actions \u2014 flat portfolio, RISK_OFF maintained."
+  ],
   "warnings": [
-    "VPS offline since 2026-03-23 (50+ days \u2014 decommissioned)",
-    "DD 51.11% based on live clearinghouse state \u2014 account at ~49% of peak"
+    "VPS offline since 2026-03-23 (50+ days) \u2014 decommissioned",
+    "DD 51.11% far exceeds 20% catastrophic threshold \u2014 no new entries until recovery"
   ]
 }
