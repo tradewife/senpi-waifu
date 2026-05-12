@@ -1,18 +1,20 @@
 {
-  "generatedAt": "2026-05-12T01:17:05Z",
+  "generatedAt": "2026-05-12T01:33:08Z",
   "source": "live",
   "regime": {
     "mode": "RISK_OFF",
-    "reason": "DD 51.1% from catastrophic limit 20%",
+    "reason": "Catastrophic drawdown 51.11% exceeds 20% threshold",
     "enforcedBy": "jido",
     "marketSignal": "BASELINE (BTC slope=0.18%, ATR=0.50%)"
   },
   "portfolio": {
     "equity": 48.887581,
     "peakEquity": 100.0,
-    "drawdownPct": 51.11,
     "withdrawable": 48.887581,
-    "dailyPnl": 0.0
+    "drawdownPct": 51.11,
+    "dailyPnl": 0.0,
+    "openPositions": 0,
+    "openOrders": 0
   },
   "strategy": {
     "name": "WOLF-Primary",
@@ -21,8 +23,6 @@
     "budget": 100,
     "remaining": 48.887581
   },
-  "positions": [],
-  "openOrders": 0,
   "guardrails": {
     "catastrophicDrawdown": {
       "threshold": 20,
@@ -31,7 +31,7 @@
     },
     "dailyLossLimit": {
       "threshold": 10,
-      "actual": 0.0,
+      "actual": 0,
       "breached": false
     },
     "consecutiveStopOuts": {
@@ -40,9 +40,12 @@
       "breached": false
     }
   },
-  "actions": [],
+  "positions": [],
+  "actions": [
+    "Heartbeat \u2014 no positions to manage"
+  ],
   "warnings": [
     "VPS offline since 2026-03-23 \u2014 treat as decommissioned",
-    "DD 51.11% is catastrophic; RISK_OFF enforced, no new entries allowed"
+    "DD 51.11% is catastrophic \u2014 RISK_OFF enforced indefinitely"
   ]
 }
