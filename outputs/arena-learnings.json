@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-12T02:01:04Z",
+  "generatedAt": "2026-05-12T22:01:45Z",
   "arenaWeek": "?",
   "totalEntrants": 105,
   "ourStats": {
@@ -7,16 +7,17 @@
     "winRate": 0.0,
     "totalPnl": -51.11
   },
-  "arenaTop5AvgRoe": 27.29,
-  "arenaTop5AvgPnl": 1.81,
+  "arenaTop5AvgRoe": 26.91,
+  "arenaTop5AvgPnl": 19.07,
   "arenaTop5": [
     {
       "rank": 1,
       "name": "0xschelling",
-      "roePct": "59.6265",
-      "totalPnl": "-1999.914147",
-      "tradeCount": 74,
+      "roePct": "61.3497",
+      "totalPnl": "-1974.435045",
+      "tradeCount": 128,
       "toolsUsed": [
+        "account_get_historical_info",
         "account_get_portfolio",
         "arena_leaderboard",
         "cancel_order",
@@ -28,6 +29,7 @@
         "market_get_asset_data",
         "market_get_funding_history",
         "market_get_funding_regime",
+        "market_list_instruments",
         "strategy_get_clearinghouse_state",
         "strategy_list",
         "strategy_withdraw_funds"
@@ -36,9 +38,9 @@
     {
       "rank": 2,
       "name": "OrangeShield",
-      "roePct": "32.7755",
-      "totalPnl": "857.931342",
-      "tradeCount": 21,
+      "roePct": "28.0299",
+      "totalPnl": "830.508604",
+      "tradeCount": 26,
       "toolsUsed": [
         "account_get_portfolio",
         "cancel_order",
@@ -61,9 +63,9 @@
     {
       "rank": 3,
       "name": "KhakiLoop",
-      "roePct": "18.7877",
-      "totalPnl": "187.308978",
-      "tradeCount": 71,
+      "roePct": "21.256",
+      "totalPnl": "209.986799",
+      "tradeCount": 104,
       "toolsUsed": [
         "account_get_portfolio",
         "arena_leaderboard",
@@ -111,15 +113,30 @@
     },
     {
       "rank": 5,
-      "name": "Apex",
-      "roePct": "10.384",
-      "totalPnl": "13.924363",
-      "tradeCount": 33,
+      "name": "Dog",
+      "roePct": "9.0004",
+      "totalPnl": "79.492695",
+      "tradeCount": 3,
       "toolsUsed": [
-        "close_position",
-        "create_position",
+        "account_get_portfolio",
         "edit_position",
-        "strategy_get_clearinghouse_state"
+        "execution_get_order_status",
+        "leaderboard_get_markets",
+        "leaderboard_get_momentum_events",
+        "market_get_asset_data",
+        "market_get_funding_history",
+        "market_get_funding_regime",
+        "market_get_prices",
+        "market_list_instruments",
+        "ratchet_stop_add",
+        "ratchet_stop_delete",
+        "ratchet_stop_events",
+        "ratchet_stop_list",
+        "strategy_get_clearinghouse_state",
+        "strategy_get_open_orders",
+        "strategy_get_pnl_and_account_value_history",
+        "strategy_list",
+        "user_get_me"
       ]
     }
   ],
@@ -127,7 +144,7 @@
     {
       "action": "study_top_strategies",
       "confidence": "medium",
-      "reason": "Arena top 5 avg PnL $1.81 vs ours $-51.11. Study their patterns.",
+      "reason": "Arena top 5 avg PnL $19.07 vs ours $-51.11. Study their patterns.",
       "risk": "neutral"
     },
     {
