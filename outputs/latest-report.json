@@ -1,6 +1,19 @@
 {
-  "generatedAt": "2026-05-12T22:17:41.157071Z",
+  "generatedAt": "2026-05-12T22:32:17.887614+00:00",
   "source": "live",
+  "regime": {
+    "mode": "RISK_OFF",
+    "reason": "Catastrophic DD 51.11% (limit 20.0%)",
+    "enforcedBy": "jido-emergency",
+    "marketSignal": null
+  },
+  "portfolio": {
+    "equity": 48.887581,
+    "peakEquity": 100.0,
+    "withdrawable": 48.887581,
+    "drawdownPct": 51.1124,
+    "dailyPnl": 0.0
+  },
   "strategy": {
     "name": "WOLF-Primary",
     "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
@@ -8,28 +21,15 @@
     "budget": 100,
     "remaining": 48.887581
   },
-  "regime": {
-    "mode": "RISK_OFF",
-    "reason": "Catastrophic DD 51.1% (limit 20.0%)",
-    "enforcedBy": "jido-monitor",
-    "marketSignal": "flat_portfolio"
-  },
-  "portfolio": {
-    "equity": 48.887581,
-    "withdrawable": 48.887581,
-    "openPositions": 0,
-    "openOrders": 0,
-    "peakEquity": 100.0,
-    "dayStartEquity": 48.887581
-  },
+  "positions": [],
   "guardrails": {
     "catastrophicDrawdown": {
-      "threshold": 20.0,
+      "threshold": 20,
       "actual": 51.1124,
       "breached": true
     },
-    "dailyLoss": {
-      "threshold": 10.0,
+    "dailyLossLimit": {
+      "threshold": 10,
       "actual": 0.0,
       "breached": false
     },
@@ -39,12 +39,9 @@
       "breached": false
     }
   },
-  "positions": [],
-  "actions": [
-    "Heartbeat check \u2014 no positions to manage. RISK_OFF maintained."
-  ],
+  "actions": [],
   "warnings": [
     "VPS offline since 2026-03-23 (50+ days \u2014 decommissioned)",
-    "Catastrophic DD 51.11% exceeds 20% limit \u2014 RISK_OFF indefinite"
+    "DD 51.11% based on live equity \u2014 catastrophic drawdown persists"
   ]
 }
