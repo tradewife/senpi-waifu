@@ -7,16 +7,6 @@
   "alerts": [
     {
       "type": "JIDO_HEARTBEAT",
-      "timestamp": "2026-05-12T02:33:20Z",
-      "regime": "RISK_OFF",
-      "accountValue": 48.887581,
-      "drawdownPct": 51.11,
-      "openPositions": 0,
-      "openOrders": 0,
-      "message": "RISK_OFF flat portfolio. Equity $48.89, DD 51.11% from peak $100.00. Zero positions, zero orders. VPS scanners offline since 2026-03-23 (50+ days) \u2014 treat as decommissioned. DD 51.11% exceeds catastrophic 20% limit \u2014 RISK_OFF correctly enforced."
-    },
-    {
-      "type": "JIDO_HEARTBEAT",
       "timestamp": "2026-05-12T02:49:08Z",
       "regime": "RISK_OFF",
       "accountValue": 48.887581,
@@ -34,6 +24,16 @@
       "openPositions": 0,
       "openOrders": 0,
       "message": "RISK_OFF flat portfolio heartbeat. Equity $48.89, DD 51.11% from $100.00 peak. No positions, no actions needed."
+    },
+    {
+      "type": "JIDO_HEARTBEAT",
+      "timestamp": "2026-05-12T03:32:39Z",
+      "regime": "RISK_OFF",
+      "accountValue": 48.887581,
+      "drawdownPct": 51.11,
+      "openPositions": 0,
+      "openOrders": 0,
+      "message": "Flat portfolio, RISK_OFF. Equity $48.89, DD 51.11%. No positions, no action needed."
     }
   ],
   "lastChecked": "2026-05-12T03:17:41.213194Z",
