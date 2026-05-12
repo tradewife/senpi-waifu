@@ -1,51 +1,54 @@
 {
-  "generatedAt": "2026-05-12T00:31:36Z",
+  "generatedAt": "2026-05-12T00:46:52Z",
   "source": "live",
+  "regime": {
+    "mode": "RISK_OFF",
+    "reason": "Catastrophic DD 51.11% exceeds 20% threshold",
+    "enforcedBy": "jido-cron",
+    "marketSignal": "BASELINE (BTC slope=0.04%, ATR=0.50%)"
+  },
+  "portfolio": {
+    "equity": {
+      "current": 48.887581,
+      "peak": 100.0,
+      "dayStart": 48.887581,
+      "withdrawable": 48.887581
+    },
+    "drawdownPct": 51.11,
+    "dailyPnl": 0.0,
+    "openPositions": 0,
+    "openOrders": 0
+  },
   "strategy": {
-    "name": "wolf-primary",
+    "name": "WOLF-Primary",
     "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
     "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce",
     "budget": 100,
     "remaining": 48.887581
   },
-  "regime": {
-    "mode": "RISK_OFF",
-    "reason": "Catastrophic drawdown 51.11% exceeds 20% threshold. Market signals BASELINE but override active.",
-    "enforcedBy": "jido-emergency",
-    "marketSignal": "BASELINE"
-  },
-  "portfolio": {
-    "equity": 48.887581,
-    "peakEquity": 100.0,
-    "withdrawable": 48.887581,
-    "drawdownPct": 51.11,
-    "dailyPnl": 0.0,
-    "dailyLossPct": 0
-  },
-  "positions": [],
   "guardrails": {
     "catastrophicDrawdown": {
       "threshold": 20,
       "actual": 51.11,
       "breached": true
     },
-    "maxConsecutiveStopOuts": {
-      "threshold": 4,
-      "actual": 0,
-      "breached": false
-    },
     "dailyLossLimit": {
       "threshold": 10,
+      "actual": 0.0,
+      "breached": false
+    },
+    "consecutiveStopOuts": {
+      "threshold": 4,
       "actual": 0,
       "breached": false
     }
   },
+  "positions": [],
   "actions": [
-    "JIDO heartbeat: flat portfolio confirmed, RISK_OFF enforced, DD 51.11%"
+    "Heartbeat check \u2014 no positions to manage, RISK_OFF maintained"
   ],
   "warnings": [
-    "VPS scanners offline since 2026-03-23 (50+ days) \u2014 treat as decommissioned",
-    "Account equity $48.89 is 51.11% below peak $100.00",
-    "Catastrophic drawdown threshold breached \u2014 RISK_OFF remains in effect"
+    "VPS offline since 2026-03-23 (50+ days) \u2014 treat as decommissioned",
+    "DD 51.11% based on live clearinghouse data \u2014 equity at $48.89 of $100.00 peak"
   ]
 }
