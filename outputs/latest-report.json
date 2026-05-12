@@ -1,18 +1,17 @@
 {
-  "generatedAt": "2026-05-12T01:47:45.479812Z",
+  "generatedAt": "2026-05-12T02:03:24.467002Z",
   "source": "live",
   "regime": {
     "mode": "RISK_OFF",
     "reason": "Catastrophic drawdown 51.11% exceeds 20% threshold",
-    "enforcedBy": "jido",
+    "enforcedBy": "jido-cron",
     "marketSignal": "BASELINE (BTC slope=0.18%, ATR=0.50%)"
   },
   "portfolio": {
     "equity": 48.887581,
     "peakEquity": 100.0,
-    "withdrawable": 48.887581,
     "drawdownPct": 51.11,
-    "dailyPnl": 0.0,
+    "withdrawable": 48.887581,
     "openPositions": 0,
     "openOrders": 0
   },
@@ -23,29 +22,34 @@
     "budget": 100,
     "remaining": 48.887581
   },
-  "guardrails": {
-    "catastrophicDrawdown": {
+  "guardrails": [
+    {
+      "name": "catastrophicDrawdown",
       "threshold": 20,
       "actual": 51.11,
       "breached": true
     },
-    "dailyLossLimit": {
+    {
+      "name": "dailyLossLimit",
       "threshold": 10,
       "actual": 0,
       "breached": false
     },
-    "consecutiveStopOuts": {
+    {
+      "name": "maxConsecutiveStopOuts",
       "threshold": 4,
       "actual": 0,
       "breached": false
     }
-  },
+  ],
   "positions": [],
   "actions": [
-    "Heartbeat \u2014 no positions to manage"
+    "RISK_OFF maintained \u2014 catastrophic DD 51.11% exceeds 20% limit",
+    "No positions to manage \u2014 flat portfolio",
+    "No emergency SL needed"
   ],
   "warnings": [
     "VPS offline since 2026-03-23 \u2014 treat as decommissioned",
-    "DD 51.11% is catastrophic \u2014 RISK_OFF enforced indefinitely"
+    "DD 51.11% is based on cached equity \u2014 actual DD may differ"
   ]
 }
