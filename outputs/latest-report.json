@@ -1,35 +1,37 @@
 {
-  "timestamp": "2026-05-12T23:02:35Z",
   "source": "live",
+  "generatedAt": "2026-05-12T23:16:50Z",
+  "generatedBy": "jido-cron",
   "strategy": {
-    "name": "WOLF-Primary",
+    "name": "wolf-primary",
     "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
     "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce",
-    "budget": 100,
+    "budget": 100.0,
     "remaining": 48.887581
   },
   "regime": {
     "mode": "RISK_OFF",
-    "reason": "Catastrophic DD 51.11% (limit 20.0%)",
-    "enforcedBy": "jido-monitor",
+    "reason": "DD 51.11% exceeds catastrophic 20% threshold",
+    "enforcedBy": "jido",
     "marketSignal": null
   },
   "portfolio": {
     "equity": 48.887581,
     "peakEquity": 100.0,
     "withdrawable": 48.887581,
-    "drawdownPct": 51.1124
+    "drawdownPct": 51.1124,
+    "openPositions": 0,
+    "openOrders": 0
   },
-  "positions": [],
   "guardrails": {
     "catastrophicDrawdown": {
-      "threshold": 20.0,
-      "actual": 51.1124,
+      "threshold": 20,
+      "actual": 51.11,
       "breached": true
     },
     "dailyLossLimit": {
-      "threshold": 10.0,
-      "actual": 0.0,
+      "threshold": 10,
+      "actual": 0,
       "breached": false
     },
     "consecutiveStopOuts": {
@@ -38,9 +40,16 @@
       "breached": false
     }
   },
-  "actions": [],
+  "positions": [],
+  "actions": [
+    {
+      "type": "JIDO_HEARTBEAT",
+      "timestamp": "2026-05-12T23:16:50Z",
+      "detail": "Flat portfolio confirmed via live MCP. RISK_OFF maintained. No positions to manage."
+    }
+  ],
   "warnings": [
-    "VPS offline since 2026-03-23 (51+ days \u2014 decommissioned)",
-    "Catastrophic drawdown 51.11% exceeds 20% threshold \u2014 RISK_OFF indefinite"
+    "DD 51.11% is based on cached peak of $100 \u2014 actual starting equity may differ",
+    "VPS offline since 2026-03-23 (51+ days \u2014 decommissioned). Only Hermes cron active."
   ]
 }
