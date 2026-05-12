@@ -1,57 +1,45 @@
 {
-  "timestamp": "2026-05-12T02:33:20Z",
+  "timestamp": "2026-05-12T02:49:08Z",
   "source": "live",
   "regime": {
     "mode": "RISK_OFF",
-    "reason": "DD 51.11% from catastrophic limit 20%",
+    "reason": "Market=BASELINE (BTC slope=0.18%, ETH slope=-0.07%, ATR: BTC=0.50%, ETH=0.54%) but RISK_OFF override: DD 51.1% from catastrophic limit 20%",
     "enforcedBy": "jido",
-    "marketSignal": "BASELINE"
+    "marketSignal": "N/A"
   },
   "portfolio": {
-    "equity": {
-      "current": 48.887581,
-      "peak": 100.0,
-      "dayStart": 48.887581
-    },
-    "drawdown": {
-      "pctFromPeak": 51.11,
-      "amountFromPeak": 51.11
-    },
+    "equity": 48.887581,
+    "peakEquity": 100.0,
     "withdrawable": 48.887581,
-    "openPositions": 0,
-    "openOrders": 0
+    "drawdownPct": 51.11,
+    "dayStartEquity": 48.887581
   },
+  "strategy": {
+    "name": "wolf-primary",
+    "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
+    "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce",
+    "budget": 100.0,
+    "remaining": 48.887581
+  },
+  "positions": [],
   "guardrails": {
     "catastrophicDrawdown": {
-      "threshold": 20,
+      "threshold": 20.0,
       "actual": 51.11,
       "breached": true
-    },
-    "dailyLossLimit": {
-      "threshold": 10,
-      "actual": 0,
-      "breached": false
     },
     "consecutiveStopOuts": {
       "threshold": 4,
       "actual": 0,
       "breached": false
+    },
+    "dailyLoss": {
+      "threshold": 10.0,
+      "actual": 0.0,
+      "breached": false
     }
   },
-  "positions": [],
-  "strategy": {
-    "name": "wolf-primary",
-    "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
-    "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce",
-    "budget": 100,
-    "remaining": 48.887581
-  },
-  "actions": [
-    "heartbeat: no positions, RISK_OFF maintained"
-  ],
-  "warnings": [
-    "VPS scanners offline since 2026-03-23 (50+ days) \u2014 treat as decommissioned",
-    "DD 51.11% is based on live clearinghouse equity",
-    "Regime-classifier cron may overwrite RISK_OFF to BASELINE hourly \u2014 JIDO re-enforces each run"
-  ]
+  "actions": [],
+  "warnings": [],
+  "summary": "RISK_OFF enforced. Flat portfolio: $48.89 equity, 51.11% DD from $100 peak. No positions, no open orders. All guardrails consistent across arbiter-state, autonomous-brain, and risk-regime configs."
 }
