@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-05-12T05:47:24Z",
+  "generatedAt": "2026-05-12T06:19:14Z",
   "source": "cached",
   "regime": {
     "mode": "RISK_OFF",
     "reason": "Arbiter RISK_OFF override: DD 51.1% exceeds catastrophic limit 20.0%",
     "enforcedBy": "jido",
-    "marketSignal": null
+    "marketSignal": "N/A (MCP offline)"
   },
   "portfolio": {
     "equity": {
@@ -19,7 +19,7 @@
     "openOrders": 0
   },
   "strategy": {
-    "name": "wolf-primary",
+    "name": "WOLF-Primary",
     "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
     "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce",
     "budget": 100,
@@ -36,7 +36,7 @@
       "actual": 0,
       "breached": false
     },
-    "maxConsecutiveStopOuts": {
+    "consecutiveStopOuts": {
       "threshold": 4,
       "actual": 0,
       "breached": false
@@ -44,11 +44,11 @@
   },
   "positions": [],
   "actions": [
-    "Heartbeat check \u2014 no positions, no emergency actions needed"
+    "No actions \u2014 flat portfolio, RISK_OFF enforced"
   ],
   "warnings": [
-    "MCP server 'senpi' is not connected \u2014 using cached equity data",
-    "DD 51.11% is based on cached equity from last known-good state \u2014 actual DD may differ",
+    "MCP server offline \u2014 using cached state",
+    "DD 51.11% based on cached equity \u2014 actual DD may differ",
     "VPS offline since 2026-03-23 (50+ days \u2014 decommissioned)"
   ]
 }
