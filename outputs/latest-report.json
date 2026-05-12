@@ -1,11 +1,11 @@
 {
-  "timestamp": "2026-05-12T02:17:14Z",
+  "timestamp": "2026-05-12T02:33:20Z",
   "source": "live",
   "regime": {
     "mode": "RISK_OFF",
-    "reason": "Drawdown 51.11% exceeds catastrophic threshold 20%",
-    "enforcedBy": "jido-cron",
-    "marketSignal": "Market=BASELINE (BTC slope=0.18%, ETH slope=-0.07%, ATR: BTC=0.50%, ETH=0.54%) but RISK_OFF override: DD 51.1% from catastrophic limit 20%"
+    "reason": "DD 51.11% from catastrophic limit 20%",
+    "enforcedBy": "jido",
+    "marketSignal": "BASELINE"
   },
   "portfolio": {
     "equity": {
@@ -13,8 +13,10 @@
       "peak": 100.0,
       "dayStart": 48.887581
     },
-    "drawdownPct": 51.11,
-    "dailyPnlPct": 0.0,
+    "drawdown": {
+      "pctFromPeak": 51.11,
+      "amountFromPeak": 51.11
+    },
     "withdrawable": 48.887581,
     "openPositions": 0,
     "openOrders": 0
@@ -27,7 +29,7 @@
     },
     "dailyLossLimit": {
       "threshold": 10,
-      "actual": 0.0,
+      "actual": 0,
       "breached": false
     },
     "consecutiveStopOuts": {
@@ -45,10 +47,11 @@
     "remaining": 48.887581
   },
   "actions": [
-    "Heartbeat check \u2014 no positions to manage"
+    "heartbeat: no positions, RISK_OFF maintained"
   ],
   "warnings": [
     "VPS scanners offline since 2026-03-23 (50+ days) \u2014 treat as decommissioned",
-    "DD 51.11% based on peak $100.00, account depleted from initial budget"
+    "DD 51.11% is based on live clearinghouse equity",
+    "Regime-classifier cron may overwrite RISK_OFF to BASELINE hourly \u2014 JIDO re-enforces each run"
   ]
 }
