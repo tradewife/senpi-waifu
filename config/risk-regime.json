@@ -1,8 +1,8 @@
 {
   "riskMode": "RISK_OFF",
-  "updatedAt": "2026-05-12T05:01:59.321640+00:00",
+  "updatedAt": "2026-05-12T07:02:33.505197+00:00",
   "updatedBy": "hermes-regime",
-  "reason": "Arbiter RISK_OFF override: DD 51.1% exceeds catastrophic limit 20.0%",
+  "reason": "Market=BASELINE (BTC slope=0.28%, ATR=0.37%) but RISK_OFF override active: DD 51.1% from catastrophic limit 20.0%",
   "regimes": {
     "RISK_ON": {
       "maxSlots": 3,
