@@ -1,12 +1,6 @@
 {
-  "generatedAt": "2026-05-12T22:01:58.648Z",
+  "generatedAt": "2026-05-12T22:17:41.157071Z",
   "source": "live",
-  "regime": {
-    "mode": "RISK_OFF",
-    "reason": "Catastrophic DD 51.11% (limit 20.0%)",
-    "enforcedBy": "jido",
-    "marketSignal": "RISK_OFF"
-  },
   "strategy": {
     "name": "WOLF-Primary",
     "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
@@ -14,22 +8,28 @@
     "budget": 100,
     "remaining": 48.887581
   },
+  "regime": {
+    "mode": "RISK_OFF",
+    "reason": "Catastrophic DD 51.1% (limit 20.0%)",
+    "enforcedBy": "jido-monitor",
+    "marketSignal": "flat_portfolio"
+  },
   "portfolio": {
     "equity": 48.887581,
-    "peakEquity": 100.0,
     "withdrawable": 48.887581,
     "openPositions": 0,
     "openOrders": 0,
-    "dailyPnl": 0.0
+    "peakEquity": 100.0,
+    "dayStartEquity": 48.887581
   },
   "guardrails": {
     "catastrophicDrawdown": {
-      "threshold": 20,
+      "threshold": 20.0,
       "actual": 51.1124,
       "breached": true
     },
-    "dailyLossLimit": {
-      "threshold": 10,
+    "dailyLoss": {
+      "threshold": 10.0,
       "actual": 0.0,
       "breached": false
     },
@@ -41,10 +41,10 @@
   },
   "positions": [],
   "actions": [
-    "No actions needed \u2014 flat portfolio, RISK_OFF correctly enforced."
+    "Heartbeat check \u2014 no positions to manage. RISK_OFF maintained."
   ],
   "warnings": [
-    "VPS offline since 2026-03-23 (50+ days \u2014 treat as decommissioned).",
-    "Account at 51.1% drawdown from $100 peak. Recovery requires 104.6% gain to break even."
+    "VPS offline since 2026-03-23 (50+ days \u2014 decommissioned)",
+    "Catastrophic DD 51.11% exceeds 20% limit \u2014 RISK_OFF indefinite"
   ]
 }
