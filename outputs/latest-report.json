@@ -1,52 +1,55 @@
 {
-  "generatedAt": "2026-05-13T06:19:40Z",
+  "generatedAt": "2026-05-13T06:35:31Z",
   "source": "cached",
+  "warnings": [
+    "MCP server offline \u2014 using cached arbiter-state data",
+    "DD 51.11% based on cached equity from 2026-05-13T06:35:31Z \u2014 actual DD may differ",
+    "VPS scanners offline since 2026-03-23 (>51 days \u2014 decommissioned)"
+  ],
   "regime": {
     "mode": "RISK_OFF",
-    "reason": "Catastrophic drawdown 51.11% exceeds 20% threshold",
-    "enforcedBy": "jido-monitor",
-    "marketSignal": "MCP offline \u2014 cached data"
+    "reason": "BTC slope=0.80%, ETH slope=0.27%, BTC ATR=0.39%, ETH ATR=0.44% | RISK_OFF override: DD 51.1% from catastrophic limit 20.0%",
+    "enforcedBy": "jido-emergency",
+    "marketSignal": null
   },
   "strategy": {
-    "name": "wolf-primary",
+    "name": "WOLF-Primary",
     "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
     "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce",
-    "budget": 0,
-    "remaining": 48.887581
+    "budget": 100,
+    "remaining": 48.89
   },
   "portfolio": {
-    "equity": 48.887581,
+    "equity": 48.89,
     "peakEquity": 100.0,
     "drawdownPct": 51.11,
-    "withdrawable": 48.887581,
-    "openPositions": 0,
-    "openOrders": 0
+    "withdrawable": 48.89
   },
   "guardrails": {
     "catastrophicDrawdown": {
-      "threshold": 20,
+      "threshold": 20.0,
       "actual": 51.11,
       "breached": true
-    },
-    "dailyLossLimit": {
-      "threshold": 10,
-      "actual": 0,
-      "breached": false
     },
     "consecutiveStopOuts": {
       "threshold": 4,
       "actual": 0,
       "breached": false
+    },
+    "dailyLoss": {
+      "threshold": 10.0,
+      "actual": 0.0,
+      "breached": false
     }
   },
   "positions": [],
   "actions": [
-    "RISK_OFF maintained \u2014 DD 51.11% >> 20% threshold"
+    "RISK_OFF maintained \u2014 no entries, no position management"
   ],
-  "warnings": [
-    "MCP server offline \u2014 all data from cached state",
-    "DD 51.11% is based on cached equity from unknown date \u2014 actual DD may differ",
-    "VPS scanners offline since 2026-03-23 (>51 days \u2014 decommissioned)",
-    "Last heartbeat: brain=2026-03-23, arena=2026-03-23, risk-arbiter=2026-03-23"
-  ]
+  "heartbeatStaleness": {
+    "brain": "2026-03-23T23:57:15Z",
+    "arena": "2026-03-23T23:57:05Z",
+    "risk-arbiter": "2026-03-23T23:57:45Z",
+    "status": "CRITICAL \u2014 VPS offline >51 days, decommissioned"
+  }
 }
