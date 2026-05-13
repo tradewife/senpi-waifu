@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-13T22:47:21.922147+00:00",
+  "generatedAt": "2026-05-13T23:02:43.207327+00:00",
   "source": "cached",
   "strategy": {
     "name": "wolf-primary",
@@ -39,16 +39,16 @@
   },
   "positions": [],
   "actions": [
-    "[2026-05-13T22:47:21.922147+00:00] JIDO heartbeat \u2014 flat portfolio, RISK_OFF enforced, MCP offline"
+    "[2026-05-13T23:02:43.207327+00:00] JIDO heartbeat \u2014 flat portfolio, RISK_OFF enforced, MCP offline (44+ failures)"
   ],
   "infrastructure": {
     "vpsStatus": "decommissioned",
     "vpsOfflineSince": "2026-03-23T23:57:45Z",
     "mcpStatus": "offline",
-    "mcpConsecutiveFailures": "43+"
+    "mcpConsecutiveFailures": "44+"
   },
   "warnings": [
-    "MCP server offline (43+ consecutive failures) \u2014 all data from cached state",
+    "MCP server offline (44+ consecutive failures) \u2014 all data from cached state",
     "DD 51.11% based on cached equity \u2014 actual DD may differ",
     "VPS decommissioned since 2026-03-23 \u2014 Railway deployment inactive",
     "All cron-heartbeats stale (last: 2026-03-23, >52 days ago)"
