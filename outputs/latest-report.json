@@ -5,54 +5,55 @@
     "name": "wolf-primary",
     "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
     "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce",
-    "budget": 100,
+    "budget": 100.0,
     "remaining": 48.887581
   },
   "regime": {
     "mode": "RISK_OFF",
-    "reason": "Catastrophic drawdown 51.11% exceeds 20% threshold",
-    "enforcedBy": "jido-cached",
-    "marketSignal": "N/A (MCP offline)"
+    "reason": "Catastrophic drawdown: 51.11% exceeds 20% threshold",
+    "enforcedBy": "jido-cron",
+    "marketSignal": null
   },
   "portfolio": {
     "equity": 48.887581,
     "peak": 100.0,
     "drawdownPct": 51.11,
-    "dayStartEquity": 48.887581,
+    "withdrawable": "unknown (MCP offline)",
     "dailyPnl": 0.0,
-    "withdrawable": "unknown (MCP offline)"
+    "dailyPnlPct": 0.0
   },
   "positions": [],
   "openOrders": [],
   "guardrails": {
     "catastrophicDrawdown": {
-      "threshold": 20,
+      "threshold": 20.0,
       "actual": 51.11,
       "breached": true
     },
-    "consecutiveStopOuts": {
+    "maxConsecutiveStopOuts": {
       "threshold": 4,
       "actual": 0,
       "breached": false
     },
     "dailyLossLimit": {
-      "threshold": 10,
+      "threshold": 10.0,
       "actual": 0.0,
       "breached": false
     }
   },
   "infrastructure": {
     "vpsStatus": "decommissioned",
-    "vpsOfflineSince": "2026-03-23",
+    "vpsOfflineSince": "2026-03-23T23:57:45Z",
     "mcpStatus": "offline",
-    "mcpConsecutiveFailures": "46+"
+    "mcpConsecutiveFailures": "47"
   },
   "actions": [
-    "No actions \u2014 flat portfolio, RISK_OFF enforced, MCP offline"
+    "JIDO heartbeat \u2014 flat portfolio, no actions needed"
   ],
   "warnings": [
-    "MCP server offline (46+ consecutive failures) \u2014 all data from cache",
-    "VPS decommissioned since 2026-03-23 (51 days) \u2014 only Hermes cron jobs active",
-    "DD 51.11% based on cached equity from last known-good state \u2014 actual DD may differ"
-  ]
+    "MCP server offline (47+ consecutive failures) \u2014 using cached state",
+    "DD 51.11% based on cached equity from 2026-05-13 \u2014 actual DD may differ",
+    "VPS offline since 2026-03-23 (51+ days) \u2014 decommissioned"
+  ],
+  "generatedAt": "2026-05-13T23:47:28.052161+00:00"
 }
