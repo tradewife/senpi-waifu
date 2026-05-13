@@ -1,49 +1,57 @@
 {
-  "generatedAt": "2026-05-13T04:16:28Z",
+  "timestamp": "2026-05-13T04:32:04Z",
   "source": "cached",
-  "regime": {
-    "mode": "RISK_OFF",
-    "reason": "Catastrophic DD 51.1% (limit 20.0%)",
-    "enforcedBy": "jido-monitor",
-    "marketSignal": "unknown (MCP offline)"
-  },
-  "portfolio": {
-    "equity": 48.887581,
-    "peakEquity": 100.0,
-    "drawdownPct": 51.11,
-    "dayStartEquity": 48.887581,
-    "withdrawable": 48.887581,
-    "dailyPnl": 0.0
-  },
+  "jidoRun": "2026-05-13T04:32:04Z",
   "strategy": {
     "name": "WOLF-Primary",
     "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
     "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce",
     "budget": 100,
-    "remaining": 48.89
+    "remaining": 48.887581
+  },
+  "regime": {
+    "mode": "RISK_OFF",
+    "reason": "Catastrophic DD 51.1% (limit 20.0%)",
+    "enforcedBy": "jido-monitor",
+    "marketSignal": "N/A \u2014 MCP offline"
+  },
+  "portfolio": {
+    "equity": {
+      "current": 48.887581,
+      "peak": 100.0,
+      "dayStart": 48.887581
+    },
+    "drawdown": {
+      "fromPeakPct": 51.11,
+      "fromPeakAbs": 51.112419,
+      "source": "cached \u2014 MCP offline"
+    },
+    "withdrawable": 48.887581,
+    "openPositions": 0,
+    "openOrders": 0
   },
   "positions": [],
   "guardrails": {
     "catastrophicDrawdown": {
-      "threshold": 20,
+      "threshold": 20.0,
       "actual": 51.11,
       "breached": true
-    },
-    "dailyLossLimit": {
-      "threshold": 10,
-      "actual": 0.0,
-      "breached": false
     },
     "consecutiveStopOuts": {
       "threshold": 4,
       "actual": 0,
       "breached": false
+    },
+    "dailyLossLimit": {
+      "threshold": 10.0,
+      "actual": 0.0,
+      "breached": false
     }
   },
   "actions": [],
   "warnings": [
-    "MCP server offline \u2014 all data from cached arbiter-state.json",
-    "DD 51.11% based on cached equity \u2014 actual DD may differ",
+    "MCP server 'senpi' is not connected \u2014 all data from cached state",
+    "DD 51.11% is based on cached equity \u2014 actual DD may differ",
     "VPS scanners offline since 2026-03-23 (>51 days \u2014 decommissioned)",
     "Flat portfolio: 0 open positions, 0 open orders"
   ]
