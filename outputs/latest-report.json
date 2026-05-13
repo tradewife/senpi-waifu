@@ -1,29 +1,57 @@
 {
-  "generatedAt": "2026-05-13T20:00:41Z",
-  "regime": "RISK_OFF",
-  "equity": 48.89,
-  "peakEquity": 100.0,
-  "drawdownPct": 51.11,
-  "dailyPnl": 0,
-  "dailyCloses": 0,
-  "dailyWinRate": 0,
-  "openPositions": 0,
-  "alerts": [
-    "CATASTROPHIC DRAWDOWN: 51.1%"
-  ],
-  "deadWeight": [],
+  "timestamp": "2026-05-13T20:02:32.191393Z",
+  "source": "cached",
+  "strategy": {
+    "name": "wolf-primary",
+    "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
+    "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce",
+    "budget": 100,
+    "remaining": 48.887581
+  },
+  "regime": {
+    "mode": "RISK_OFF",
+    "reason": "Drawdown 51.11% exceeds 20% catastrophic threshold",
+    "enforcedBy": "jido-guardrail",
+    "marketSignal": "N/A \u2014 MCP offline"
+  },
+  "portfolio": {
+    "equity": 48.887581,
+    "peak": 100.0,
+    "drawdownPct": 51.11,
+    "withdrawable": "N/A \u2014 MCP offline",
+    "openPositions": 0,
+    "dailyPnlPct": 0.0
+  },
+  "positions": [],
   "guardrails": {
-    "dailyLossLimitPct": 10,
-    "catastrophicDrawdownPct": 20,
-    "maxConsecutiveStopOuts": 4,
-    "directionalCapPct": 70,
-    "minLeverage": 7,
-    "maxLeverage": 10,
-    "maxPositionsTotal": 3,
-    "perAssetCooldownMinutes": 120,
-    "bannedAssetPrefixes": [
-      "xyz:"
-    ],
-    "perTradeRiskPct": 1.0
-  }
+    "catastrophicDrawdown": {
+      "threshold": 20,
+      "actual": 51.11,
+      "breached": true
+    },
+    "consecutiveStopOuts": {
+      "threshold": 4,
+      "actual": 0,
+      "breached": false
+    },
+    "dailyLossLimit": {
+      "threshold": 10,
+      "actual": 0.0,
+      "breached": false
+    }
+  },
+  "actions": [
+    "No positions \u2014 monitoring only. RISK_OFF enforced."
+  ],
+  "infrastructure": {
+    "vpsStatus": "decommissioned",
+    "vpsOfflineSince": "2026-03-23T23:57:05Z",
+    "mcpStatus": "offline",
+    "mcpConsecutiveFailures": "34+"
+  },
+  "warnings": [
+    "MCP server offline \u2014 34+ consecutive failures. All data from local cache.",
+    "DD 51.11% is based on cached equity from previous runs \u2014 actual DD may differ.",
+    "VPS decommissioned since 2026-03-23 (50+ days). Railway deployment inactive."
+  ]
 }
