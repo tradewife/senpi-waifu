@@ -8,7 +8,7 @@
     "Cron heartbeats last updated 2026-03-23 (VPS crons dead)"
   ],
   "strategy": {
-    "name": "WOLF-Primary",
+    "name": "wolf-primary",
     "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
     "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce",
     "budget": 100,
@@ -16,16 +16,16 @@
   },
   "regime": {
     "mode": "RISK_OFF",
-    "reason": "JIDO: RISK_OFF enforced - catastrophic drawdown 51.11% exceeds 20% threshold (MCP offline, cached equity)",
+    "reason": "DD 51.11% exceeds 20% catastrophic threshold",
     "enforcedBy": "jido-cron",
-    "marketSignal": "BASELINE (overridden by DD)"
+    "marketSignal": "unknown (MCP offline)"
   },
   "portfolio": {
     "equity": 48.887581,
     "peak": 100.0,
     "drawdownPct": 51.11,
     "dayStart": 48.887581,
-    "withdrawable": 48.887581,
+    "withdrawable": null,
     "openPositions": 0,
     "openOrders": 0
   },
@@ -35,25 +35,26 @@
       "actual": 51.11,
       "breached": true
     },
-    "dailyLossLimit": {
-      "threshold": 10,
+    "maxConsecutiveStopOuts": {
+      "threshold": 4,
       "actual": 0,
       "breached": false
     },
-    "consecutiveStopOuts": {
-      "threshold": 4,
+    "dailyLossLimit": {
+      "threshold": 10,
       "actual": 0,
       "breached": false
     }
   },
   "positions": [],
   "actions": [
-    "Heartbeat check \u2014 no positions, no MCP access, regime RISK_OFF maintained"
+    "[2026-05-13T18:46:57.860781Z] JIDO heartbeat \u2014 flat portfolio, RISK_OFF, MCP offline, no action needed"
   ],
   "infrastructure": {
     "vpsStatus": "decommissioned",
     "vpsOfflineSince": "2026-03-23T23:57:45Z",
     "mcpStatus": "offline",
-    "mcpConsecutiveFailures": "29+"
-  }
+    "mcpConsecutiveFailures": "30+"
+  },
+  "timestamp": "2026-05-13T18:46:57.860781Z"
 }
