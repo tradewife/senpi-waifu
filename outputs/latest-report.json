@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-05-13T21:47:01Z",
+  "timestamp": "2026-05-13T22:01:58Z",
   "source": "cached",
   "strategy": {
     "name": "wolf-primary",
@@ -48,8 +48,8 @@
   "warnings": [
     "MCP server offline \u2014 all data from cached state",
     "DD 51.11% based on cached equity \u2014 actual DD may differ",
-    "VPS offline since 2026-03-23 \u2014 treated as decommissioned (54+ days)"
+    "VPS offline since 2026-03-23 \u2014 treated as decommissioned (52+ days)"
   ],
-  "generatedAt": "2026-05-13T21:47:01Z",
+  "generatedAt": "2026-05-13T22:01:58Z",
   "openOrders": 0
 }
