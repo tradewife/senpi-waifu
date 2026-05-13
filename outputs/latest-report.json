@@ -1,35 +1,36 @@
 {
-  "generatedAt": "2026-05-12T23:46:50Z",
+  "timestamp": "2026-05-13T00:17:54Z",
   "source": "live",
-  "regime": {
-    "mode": "RISK_OFF",
-    "reason": "Catastrophic drawdown",
-    "enforcedBy": "jido-monitor",
-    "marketSignal": "N/A"
-  },
-  "portfolio": {
-    "equity": 48.887581,
-    "peakEquity": 100.0,
-    "dayStartEquity": 48.887581,
-    "withdrawable": 48.887581,
-    "drawdownPct": 51.11
-  },
   "strategy": {
     "name": "wolf-primary",
     "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
     "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce",
-    "budget": 100,
-    "remaining": 48.89
+    "budget": 100.0,
+    "remaining": 48.887581
+  },
+  "regime": {
+    "mode": "RISK_OFF",
+    "reason": "DD 51.11% exceeds 20% catastrophic threshold",
+    "enforcedBy": "jido",
+    "marketSignal": "flat_portfolio"
+  },
+  "portfolio": {
+    "equity": 48.887581,
+    "peakEquity": 100.0,
+    "drawdownPct": 51.11,
+    "withdrawable": 48.887581,
+    "dayStartEquity": 48.887581,
+    "dailyPnl": 0.0
   },
   "positions": [],
   "guardrails": {
     "catastrophicDrawdown": {
-      "threshold": 20.0,
+      "threshold": 20,
       "actual": 51.11,
       "breached": true
     },
     "dailyLoss": {
-      "threshold": 10.0,
+      "threshold": 10,
       "actual": 0.0,
       "breached": false
     },
@@ -39,10 +40,11 @@
       "breached": false
     }
   },
-  "actions": [],
+  "actions": [
+    "Heartbeat check \u2014 no action required"
+  ],
   "warnings": [
-    "VPS offline since 2026-03-23 (50+ days) \u2014 treat as decommissioned",
-    "Drawdown 51.11% exceeds 20% catastrophic threshold \u2014 RISK_OFF maintained",
-    "Flat portfolio: 0 open positions, 0 open orders"
+    "VPS offline since 2026-03-23 (51+ days \u2014 treat as decommissioned)",
+    "DD 51.11% based on peak $100.00 \u2014 equity at $48.89"
   ]
 }
