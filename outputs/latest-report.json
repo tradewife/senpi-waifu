@@ -1,59 +1,56 @@
 {
-  "generatedAt": "2026-05-13T22:17:40.270320Z",
+  "generatedAt": "2026-05-13T22:32:40.027543+00:00",
   "source": "cached",
   "strategy": {
     "name": "wolf-primary",
     "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
     "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce",
-    "budget": 100,
+    "budget": 100.0,
     "remaining": 48.887581
   },
   "regime": {
     "mode": "RISK_OFF",
-    "reason": "Catastrophic drawdown 51.11% exceeds 20% threshold",
-    "enforcedBy": "jido-portfolio-monitor",
-    "marketSignal": "N/A \u2014 MCP offline"
+    "reason": "Market=BASELINE (4H slope: BTC=0.54%, ETH=-0.25%; ATR: BTC=0.55%, ETH=0.72%) but RISK_OFF override active: DD 51.1% from catastrophic limit 20.0%",
+    "enforcedBy": "jido-monitor",
+    "marketSignal": "offline"
   },
   "portfolio": {
     "equity": 48.887581,
     "peak": 100.0,
     "drawdownPct": 51.11,
-    "dayStartEquity": 48.887581,
-    "dailyPnlPct": 0.0
+    "dayStartEquity": 48.887581
   },
   "guardrails": {
     "catastrophicDrawdown": {
-      "threshold": 20.0,
+      "threshold": 20,
       "actual": 51.11,
       "breached": true
     },
-    "maxConsecutiveStopOuts": {
+    "consecutiveStopOuts": {
       "threshold": 4,
       "actual": 0,
       "breached": false
     },
     "dailyLossLimit": {
-      "threshold": 10.0,
-      "actual": 0.0,
+      "threshold": 10,
+      "actual": 0,
       "breached": false
     }
   },
   "positions": [],
   "actions": [
-    "JIDO heartbeat \u2014 flat portfolio, RISK_OFF maintained",
-    "DD 51.11% based on cached equity \u2014 actual DD may differ",
-    "MCP server offline (41+ consecutive failures)",
-    "VPS decommissioned since 2026-03-23 (51 days)"
+    "[2026-05-13T22:32:40.027543+00:00] JIDO heartbeat \u2014 flat portfolio, RISK_OFF enforced, MCP offline"
   ],
   "infrastructure": {
     "vpsStatus": "decommissioned",
-    "vpsOfflineSince": "2026-03-23",
+    "vpsOfflineSince": "2026-03-23T23:57:45Z",
     "mcpStatus": "offline",
-    "mcpConsecutiveFailures": "41+"
+    "mcpConsecutiveFailures": "42+"
   },
   "warnings": [
-    "MCP server unreachable \u2014 all data from local cache",
-    "VPS scanners offline since 2026-03-23 (51 days) \u2014 decommissioned",
-    "DD 51.11% is based on cached equity from 2026-05-13T22:17:06.647559Z \u2014 actual DD may differ"
+    "MCP server offline (42+ consecutive failures) \u2014 all data from cached state",
+    "DD 51.11% based on cached equity \u2014 actual DD may differ",
+    "VPS decommissioned since 2026-03-23 \u2014 Railway deployment inactive",
+    "All cron-heartbeats stale (last: 2026-03-23, >50 days ago)"
   ]
 }
