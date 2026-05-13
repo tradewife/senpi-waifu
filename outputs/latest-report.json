@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-05-13T20:02:32.191393Z",
+  "timestamp": "2026-05-13T20:31:59.910753+00:00",
   "source": "cached",
   "strategy": {
     "name": "wolf-primary",
@@ -47,11 +47,11 @@
     "vpsStatus": "decommissioned",
     "vpsOfflineSince": "2026-03-23T23:57:05Z",
     "mcpStatus": "offline",
-    "mcpConsecutiveFailures": "34+"
+    "mcpConsecutiveFailures": "35+"
   },
   "warnings": [
-    "MCP server offline \u2014 34+ consecutive failures. All data from local cache.",
+    "MCP server offline \u2014 35+ consecutive failures. All data from local cache.",
     "DD 51.11% is based on cached equity from previous runs \u2014 actual DD may differ.",
-    "VPS decommissioned since 2026-03-23 (50+ days). Railway deployment inactive."
+    "VPS decommissioned since 2026-03-23 (52+ days). Railway deployment inactive."
   ]
 }
