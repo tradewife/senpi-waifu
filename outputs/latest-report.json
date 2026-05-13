@@ -1,56 +1,51 @@
 {
-  "generatedAt": "2026-05-13T08:48:00Z",
+  "generatedAt": "2026-05-13T09:03:21Z",
   "source": "cached",
   "regime": {
     "mode": "RISK_OFF",
-    "reason": "Market=BASELINE (BTC slope=+0.04%, ATR=0.31%; ETH slope=+0.02%, ATR=0.40%) but RISK_OFF override active: DD 51.1% from catastrophic limit 20%",
+    "reason": "DD 51.11% > 20.0% catastrophic limit",
     "enforcedBy": "jido",
-    "marketSignal": "BASELINE (BTC slope=+0.04%, ATR=0.31%)"
-  },
-  "portfolio": {
-    "equity": 48.887581,
-    "peakEquity": 100.0,
-    "drawdownPct": 51.11,
-    "dayStartEquity": 48.887581,
-    "withdrawable": 48.887581,
-    "dailyPnl": 0.0
+    "marketSignal": "MCP offline"
   },
   "strategy": {
     "name": "WOLF-Primary",
     "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
     "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce",
     "budget": 100,
-    "remaining": 48.887581
+    "remaining": 48.89
+  },
+  "portfolio": {
+    "equity": 48.89,
+    "peakEquity": 100.0,
+    "drawdownPct": 51.11,
+    "dayStartEquity": 48.89,
+    "withdrawable": 48.89
   },
   "positions": [],
+  "orders": [],
   "guardrails": {
     "catastrophicDrawdown": {
-      "threshold": 20,
+      "threshold": 20.0,
       "actual": 51.11,
       "breached": true
+    },
+    "dailyLossLimit": {
+      "threshold": 10,
+      "actual": 0,
+      "breached": false
     },
     "consecutiveStopOuts": {
       "threshold": 4,
       "actual": 0,
       "breached": false
-    },
-    "dailyLossLimit": {
-      "threshold": 10,
-      "actual": 0.0,
-      "breached": false
     }
   },
-  "actions": [],
-  "warnings": [
-    "MCP server offline (17+ consecutive failures) \u2014 all data is cached",
-    "VPS scanners offline since 2026-03-23 (50+ days) \u2014 treat as decommissioned",
-    "DD 51.11% based on cached equity \u2014 actual DD may differ",
-    "Flat portfolio (0 open positions)"
+  "actions": [
+    "No actions taken \u2014 flat portfolio, RISK_OFF enforced"
   ],
-  "cronHeartbeats": {
-    "brain": "2026-03-23T23:57:15Z",
-    "arena": "2026-03-23T23:57:05Z",
-    "risk-arbiter": "2026-03-23T23:57:45Z",
-    "staleness": "50+ days \u2014 CRITICAL infrastructure degradation"
-  }
+  "warnings": [
+    "MCP server offline (18+ consecutive failures) \u2014 using cached equity",
+    "DD 51.11% based on cached equity from 2026-05-13T09:03:21Z \u2014 actual DD may differ",
+    "VPS offline since 2026-03-23 (>50 days) \u2014 treat as decommissioned"
+  ]
 }
