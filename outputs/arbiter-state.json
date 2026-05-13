@@ -3,27 +3,17 @@
   "lastEquity": 48.887581,
   "dayStartEquity": 48.887581,
   "consecutiveStopOuts": 0,
-  "lastJidoRun": "2026-05-13T07:33:08Z",
+  "lastJidoRun": "2026-05-13T08:17:34Z",
   "alerts": [
     {
       "type": "JIDO_HEARTBEAT",
-      "timestamp": "2026-05-13T06:48:34.880250+00:00",
+      "timestamp": "2026-05-13T08:17:34Z",
       "regime": "RISK_OFF",
       "accountValue": 48.887581,
       "drawdownPct": 51.11,
       "openPositions": 0,
       "openOrders": 0,
-      "message": "JIDO heartbeat (cached). DD 51.11% from peak $100.0. MCP offline 13+ failures. VPS offline since 2026-03-23. Flat portfolio, RISK_OFF enforced."
-    },
-    {
-      "type": "JIDO_HEARTBEAT",
-      "timestamp": "2026-05-13T07:23:57Z",
-      "regime": "RISK_OFF",
-      "accountValue": 48.887581,
-      "drawdownPct": 51.11,
-      "openPositions": 0,
-      "openOrders": 0,
-      "message": "JIDO heartbeat: RISK_OFF, flat portfolio, MCP offline (cached equity $48.89, DD 51.11% from peak $100.00)"
+      "message": "JIDO heartbeat (cached). DD 51.11% from peak $100.0. MCP offline 16+ failures. VPS offline since 2026-03-23. Flat portfolio, RISK_OFF enforced."
     },
     {
       "type": "JIDO_HEARTBEAT",
@@ -34,13 +24,23 @@
       "openPositions": 0,
       "openOrders": 0,
       "message": "JIDO heartbeat: RISK_OFF, flat portfolio, MCP offline (cached equity $48.89, DD 51.11% from peak $100.00)"
+    },
+    {
+      "type": "JIDO_HEARTBEAT",
+      "timestamp": "2026-05-13T07:23:57Z",
+      "regime": "RISK_OFF",
+      "accountValue": 48.887581,
+      "drawdownPct": 51.11,
+      "openPositions": 0,
+      "openOrders": 0,
+      "message": "JIDO heartbeat: RISK_OFF, flat portfolio, MCP offline (cached equity $48.89, DD 51.11% from peak $100.00)"
     }
   ],
-  "lastChecked": "2026-05-13T07:33:08Z",
-  "lastCheckAt": "2026-05-13T08:01:18Z",
+  "lastChecked": "2026-05-13T08:17:34Z",
+  "lastCheckAt": "2026-05-13T08:17:34Z",
   "dayStartDate": "2026-05-13",
-  "lastCheck": "2026-05-13T07:33:08Z",
-  "lastUpdated": "2026-05-13T07:33:08Z",
+  "lastCheck": "2026-05-13T08:17:34Z",
+  "lastUpdated": "2026-05-13T08:17:34Z",
   "drawdownPct": 51.11,
   "withdrawable": 48.887581,
   "regimeOverrideCount": 0,

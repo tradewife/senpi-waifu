@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-05-13T07:33:08Z",
+  "generatedAt": "2026-05-13T08:17:34Z",
   "codebaseIndexAt": "2026-03-23T23:57:15Z",
   "riskMode": "RISK_OFF",
   "executionPolicy": {
-    "generatedAt": "2026-05-13T07:33:08Z",
+    "generatedAt": "2026-05-13T08:17:34Z",
     "mode": "ACTIVE",
     "blockNewEntries": true,
     "allowAutoEntry": false,
@@ -16,7 +16,7 @@
       }
     },
     "reasons": [
-      "JIDO: RISK_OFF enforced - catastrophic drawdown 51.11% exceeds 20% threshold"
+      "JIDO: RISK_OFF enforced - catastrophic drawdown 51.11% exceeds 20% threshold (MCP offline, cached equity)"
     ],
     "risk": {
       "drawdownPctFromPeak": 51.11,
@@ -51,11 +51,11 @@
       "peakEquity": 100.0,
       "dayStartEquity": 48.887581,
       "consecutiveStopOuts": 0,
-      "lastJidoRun": "2026-05-13T07:33:08Z",
+      "lastJidoRun": "2026-05-13T08:17:34Z",
       "lastJidoCheck": "2026-05-13T05:18:13Z",
-      "lastChecked": "2026-05-13T07:33:08Z",
-      "lastCheck": "2026-05-13T07:33:08Z",
-      "lastUpdated": "2026-05-13T07:33:08Z",
+      "lastChecked": "2026-05-13T08:17:34Z",
+      "lastCheck": "2026-05-13T08:17:34Z",
+      "lastUpdated": "2026-05-13T08:17:34Z",
       "drawdownPct": 51.11,
       "lastEquity": 48.887581
     }

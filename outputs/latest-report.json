@@ -1,29 +1,55 @@
 {
-  "generatedAt": "2026-05-13T08:01:18Z",
-  "regime": "RISK_OFF",
-  "equity": 48.89,
-  "peakEquity": 100.0,
-  "drawdownPct": 51.11,
-  "dailyPnl": 0,
-  "dailyCloses": 0,
-  "dailyWinRate": 0,
-  "openPositions": 0,
-  "alerts": [
-    "CATASTROPHIC DRAWDOWN: 51.1%"
+  "generatedAt": "2026-05-13T08:17:34Z",
+  "source": "cached",
+  "warnings": [
+    "MCP server offline (16+ consecutive failures) \u2014 using cached equity data",
+    "DD 51.11% is based on cached equity from multiple prior runs \u2014 actual DD may differ",
+    "VPS offline since 2026-03-23 (51+ days) \u2014 treat as decommissioned"
   ],
-  "deadWeight": [],
+  "regime": {
+    "mode": "RISK_OFF",
+    "reason": "Market=BASELINE (BTC slope=+0.04%, ATR=0.31%; ETH slope=+0.02%, ATR=0.40%) but RISK_OFF override active: DD 51.1% from catastrophic limit 20%",
+    "enforcedBy": "jido-cron",
+    "marketSignal": "BASELINE",
+    "updatedAt": "2026-05-13T08:02:43.289Z"
+  },
+  "portfolio": {
+    "equity": 48.887581,
+    "peakEquity": 100.0,
+    "drawdownPct": 51.11,
+    "withdrawable": 48.887581,
+    "dayStartEquity": 48.887581,
+    "dailyPnl": 0.0
+  },
+  "strategy": {
+    "name": "WOLF-Primary",
+    "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
+    "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce",
+    "budget": 100,
+    "remaining": 48.887581
+  },
   "guardrails": {
-    "dailyLossLimitPct": 10,
-    "catastrophicDrawdownPct": 20,
-    "maxConsecutiveStopOuts": 4,
-    "directionalCapPct": 70,
-    "minLeverage": 7,
-    "maxLeverage": 10,
-    "maxPositionsTotal": 3,
-    "perAssetCooldownMinutes": 120,
-    "bannedAssetPrefixes": [
-      "xyz:"
-    ],
-    "perTradeRiskPct": 1.0
-  }
+    "catastrophicDrawdown": {
+      "threshold": 20.0,
+      "actual": 51.11,
+      "breached": true
+    },
+    "dailyLoss": {
+      "threshold": 10.0,
+      "actual": 0.0,
+      "breached": false
+    },
+    "consecutiveStopOuts": {
+      "threshold": 4,
+      "actual": 0,
+      "breached": false
+    }
+  },
+  "positions": [],
+  "openOrders": [],
+  "actions": [
+    "No actions \u2014 flat portfolio, RISK_OFF, MCP offline"
+  ],
+  "mcpStatus": "OFFLINE (16+ failures)",
+  "vpsStatus": "OFFLINE since 2026-03-23 (51+ days \u2014 decommissioned)"
 }
