@@ -1,25 +1,29 @@
 {
-  "generatedAt": "2026-05-13T23:02:43.207327+00:00",
+  "timestamp": "2026-05-13T23:17:20.217887+00:00",
   "source": "cached",
   "strategy": {
     "name": "wolf-primary",
     "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
     "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce",
-    "budget": 100.0,
+    "budget": 100,
     "remaining": 48.887581
   },
   "regime": {
     "mode": "RISK_OFF",
-    "reason": "Market=BASELINE (4H slope: BTC=0.54%, ETH=-0.25%; ATR: BTC=0.55%, ETH=0.72%) but RISK_OFF override active: DD 51.1% from catastrophic limit 20.0%",
-    "enforcedBy": "jido-monitor",
-    "marketSignal": "offline"
+    "reason": "Catastrophic drawdown 51.11% exceeds 20% threshold",
+    "enforcedBy": "jido-cached",
+    "marketSignal": "N/A (MCP offline)"
   },
   "portfolio": {
     "equity": 48.887581,
     "peak": 100.0,
     "drawdownPct": 51.11,
-    "dayStartEquity": 48.887581
+    "dayStartEquity": 48.887581,
+    "dailyPnl": 0.0,
+    "withdrawable": "unknown (MCP offline)"
   },
+  "positions": [],
+  "openOrders": [],
   "guardrails": {
     "catastrophicDrawdown": {
       "threshold": 20,
@@ -33,24 +37,22 @@
     },
     "dailyLossLimit": {
       "threshold": 10,
-      "actual": 0,
+      "actual": 0.0,
       "breached": false
     }
   },
-  "positions": [],
-  "actions": [
-    "[2026-05-13T23:02:43.207327+00:00] JIDO heartbeat \u2014 flat portfolio, RISK_OFF enforced, MCP offline (44+ failures)"
-  ],
   "infrastructure": {
     "vpsStatus": "decommissioned",
-    "vpsOfflineSince": "2026-03-23T23:57:45Z",
+    "vpsOfflineSince": "2026-03-23",
     "mcpStatus": "offline",
-    "mcpConsecutiveFailures": "44+"
+    "mcpConsecutiveFailures": "45+"
   },
+  "actions": [
+    "No actions \u2014 flat portfolio, RISK_OFF enforced, MCP offline"
+  ],
   "warnings": [
-    "MCP server offline (44+ consecutive failures) \u2014 all data from cached state",
-    "DD 51.11% based on cached equity \u2014 actual DD may differ",
-    "VPS decommissioned since 2026-03-23 \u2014 Railway deployment inactive",
-    "All cron-heartbeats stale (last: 2026-03-23, >52 days ago)"
+    "MCP server offline (45+ consecutive failures) \u2014 all data from cache",
+    "VPS decommissioned since 2026-03-23 (50 days) \u2014 only Hermes cron jobs active",
+    "DD 51.11% based on cached equity from last known-good state \u2014 actual DD may differ"
   ]
 }
