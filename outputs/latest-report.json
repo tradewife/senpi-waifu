@@ -1,29 +1,24 @@
 {
-  "generatedAt": "2026-05-13T05:48:21Z",
+  "generatedAt": "2026-05-13T06:19:40Z",
   "source": "cached",
-  "warnings": [
-    "MCP server offline \u2014 all data from cached arbiter-state.json",
-    "DD 51.11% based on cached equity from unknown date \u2014 actual DD may differ",
-    "VPS offline since 2026-03-23 (51 days) \u2014 treat as decommissioned"
-  ],
+  "regime": {
+    "mode": "RISK_OFF",
+    "reason": "Catastrophic drawdown 51.11% exceeds 20% threshold",
+    "enforcedBy": "jido-monitor",
+    "marketSignal": "MCP offline \u2014 cached data"
+  },
   "strategy": {
     "name": "wolf-primary",
     "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
     "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce",
-    "budget": 100.0,
-    "remaining": 48.89
-  },
-  "regime": {
-    "mode": "RISK_OFF",
-    "reason": "BTC slope=0.80%, ETH slope=0.27%, BTC ATR=0.39%, ETH ATR=0.44% | RISK_OFF override: DD 51.1% from catastrophic limit 20.0%",
-    "enforcedBy": "jido",
-    "marketSignal": "RISK_OFF"
+    "budget": 0,
+    "remaining": 48.887581
   },
   "portfolio": {
-    "equity": 48.89,
+    "equity": 48.887581,
     "peakEquity": 100.0,
     "drawdownPct": 51.11,
-    "dayStartEquity": 48.89,
+    "withdrawable": 48.887581,
     "openPositions": 0,
     "openOrders": 0
   },
@@ -46,10 +41,12 @@
   },
   "positions": [],
   "actions": [
-    {
-      "type": "JIDO_HEARTBEAT",
-      "timestamp": "2026-05-13T05:48:21Z",
-      "detail": "No positions, RISK_OFF maintained, MCP offline"
-    }
+    "RISK_OFF maintained \u2014 DD 51.11% >> 20% threshold"
+  ],
+  "warnings": [
+    "MCP server offline \u2014 all data from cached state",
+    "DD 51.11% is based on cached equity from unknown date \u2014 actual DD may differ",
+    "VPS scanners offline since 2026-03-23 (>51 days \u2014 decommissioned)",
+    "Last heartbeat: brain=2026-03-23, arena=2026-03-23, risk-arbiter=2026-03-23"
   ]
 }
