@@ -1,60 +1,29 @@
 {
-  "timestamp": "2026-05-13T19:47:30Z",
-  "source": "cached",
-  "regime": {
-    "mode": "RISK_OFF",
-    "reason": "Catastrophic drawdown 51.11% exceeds 20% threshold. VPS decommissioned, MCP offline.",
-    "enforcedBy": "jido",
-    "marketSignal": "N/A (MCP offline)"
-  },
-  "portfolio": {
-    "equity": 48.887581,
-    "peak": 100.0,
-    "drawdownPct": 51.11,
-    "dayStartEquity": 48.887581,
-    "budget": 100,
-    "remaining": 51.112419
-  },
-  "strategy": {
-    "name": "wolf-primary",
-    "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
-    "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce",
-    "budget": 100,
-    "remaining": 51.112419
-  },
-  "guardrails": {
-    "catastrophicDrawdown": {
-      "threshold": 20.0,
-      "actual": 51.11,
-      "breached": true
-    },
-    "dailyLossLimit": {
-      "threshold": 10.0,
-      "actual": 0.0,
-      "breached": false
-    },
-    "consecutiveStopOuts": {
-      "threshold": 4,
-      "actual": 0,
-      "breached": false
-    }
-  },
-  "positions": [],
-  "actions": [
-    "JIDO heartbeat \u2014 flat portfolio, RISK_OFF maintained",
-    "DD 51.11% based on cached equity from 2026-05-13T19:47:30Z \u2014 actual DD may differ (MCP offline)",
-    "VPS decommissioned since 2026-03-23 \u2014 MCP-only operation"
+  "generatedAt": "2026-05-13T20:00:41Z",
+  "regime": "RISK_OFF",
+  "equity": 48.89,
+  "peakEquity": 100.0,
+  "drawdownPct": 51.11,
+  "dailyPnl": 0,
+  "dailyCloses": 0,
+  "dailyWinRate": 0,
+  "openPositions": 0,
+  "alerts": [
+    "CATASTROPHIC DRAWDOWN: 51.1%"
   ],
-  "infrastructure": {
-    "vpsStatus": "decommissioned",
-    "vpsOfflineSince": "2026-03-23T23:57:45Z",
-    "mcpStatus": "offline",
-    "mcpConsecutiveFailures": "33+"
-  },
-  "warnings": [
-    "MCP server offline \u2014 all data from cached state",
-    "DD 51.11% based on cached equity \u2014 actual DD may differ",
-    "VPS decommissioned since 2026-03-23 (52+ days)",
-    "Flat portfolio: 0 open positions, 0 open orders"
-  ]
+  "deadWeight": [],
+  "guardrails": {
+    "dailyLossLimitPct": 10,
+    "catastrophicDrawdownPct": 20,
+    "maxConsecutiveStopOuts": 4,
+    "directionalCapPct": 70,
+    "minLeverage": 7,
+    "maxLeverage": 10,
+    "maxPositionsTotal": 3,
+    "perAssetCooldownMinutes": 120,
+    "bannedAssetPrefixes": [
+      "xyz:"
+    ],
+    "perTradeRiskPct": 1.0
+  }
 }
