@@ -1,12 +1,7 @@
 {
-  "generatedAt": "2026-05-13T09:32:44Z",
+  "generatedAt": "2026-05-13T09:47:16Z",
   "source": "cached",
-  "regime": {
-    "mode": "RISK_OFF",
-    "reason": "DD 51.11% > 20.0% catastrophic limit",
-    "enforcedBy": "jido",
-    "marketSignal": "MCP offline"
-  },
+  "jidoVersion": "1.0.0",
   "strategy": {
     "name": "WOLF-Primary",
     "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
@@ -14,24 +9,34 @@
     "budget": 100,
     "remaining": 48.89
   },
-  "portfolio": {
-    "equity": 48.887581,
-    "peakEquity": 100.0,
-    "drawdownPct": 51.11,
-    "dayStartEquity": 48.887581,
-    "withdrawable": 48.887581
+  "regime": {
+    "mode": "RISK_OFF",
+    "reason": "Catastrophic drawdown 51.11% exceeds 20% threshold",
+    "enforcedBy": "jido-guardrail",
+    "marketSignal": "BASELINE",
+    "updatedAt": "2026-05-13T08:02:43Z"
   },
-  "positions": [],
-  "orders": [],
+  "portfolio": {
+    "equity": {
+      "current": 48.89,
+      "peak": 100.0,
+      "dayStart": 48.89
+    },
+    "drawdownPct": 51.11,
+    "withdrawable": 48.89,
+    "openPositions": 0,
+    "openOrders": 0,
+    "dailyPnl": 0.0
+  },
   "guardrails": {
     "catastrophicDrawdown": {
-      "threshold": 20.0,
+      "threshold": 20,
       "actual": 51.11,
       "breached": true
     },
     "dailyLossLimit": {
       "threshold": 10,
-      "actual": 0,
+      "actual": 0.0,
       "breached": false
     },
     "consecutiveStopOuts": {
@@ -40,12 +45,16 @@
       "breached": false
     }
   },
+  "positions": [],
   "actions": [
-    "No actions taken \u2014 flat portfolio, RISK_OFF enforced"
+    "No positions to manage \u2014 flat portfolio",
+    "RISK_OFF regime maintained",
+    "MCP server offline \u2014 using cached equity data",
+    "VPS scanners offline since 2026-03-23 (51+ days, decommissioned)"
   ],
   "warnings": [
-    "MCP server offline \u2014 using cached equity",
-    "DD 51.11% based on cached equity \u2014 actual DD may differ",
-    "VPS offline since 2026-03-23 (>50 days) \u2014 treat as decommissioned"
+    "MCP server 'senpi' is not connected \u2014 all data from cached arbiter-state.json",
+    "DD 51.11% is based on cached equity from 2026-05-13 \u2014 actual DD may differ",
+    "VPS offline since 2026-03-23 (51+ days) \u2014 treat as decommissioned"
   ]
 }
