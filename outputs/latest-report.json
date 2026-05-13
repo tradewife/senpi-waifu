@@ -1,50 +1,55 @@
 {
-  "generatedAt": "2026-05-13T05:32:23Z",
+  "generatedAt": "2026-05-13T05:48:21Z",
   "source": "cached",
-  "regime": {
-    "mode": "RISK_OFF",
-    "reason": "DD 51.11% from catastrophic limit 20.0%",
-    "enforcedBy": "jido-cached",
-    "marketSignal": "BTC slope=0.80%, ETH slope=0.27%, ATR low"
-  },
+  "warnings": [
+    "MCP server offline \u2014 all data from cached arbiter-state.json",
+    "DD 51.11% based on cached equity from unknown date \u2014 actual DD may differ",
+    "VPS offline since 2026-03-23 (51 days) \u2014 treat as decommissioned"
+  ],
   "strategy": {
     "name": "wolf-primary",
     "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
     "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce",
-    "budget": 100,
-    "remaining": 48.887581
+    "budget": 100.0,
+    "remaining": 48.89
+  },
+  "regime": {
+    "mode": "RISK_OFF",
+    "reason": "BTC slope=0.80%, ETH slope=0.27%, BTC ATR=0.39%, ETH ATR=0.44% | RISK_OFF override: DD 51.1% from catastrophic limit 20.0%",
+    "enforcedBy": "jido",
+    "marketSignal": "RISK_OFF"
   },
   "portfolio": {
-    "equity": 48.887581,
+    "equity": 48.89,
     "peakEquity": 100.0,
     "drawdownPct": 51.11,
-    "dayStartEquity": 48.887581
+    "dayStartEquity": 48.89,
+    "openPositions": 0,
+    "openOrders": 0
   },
-  "positions": [],
-  "openOrders": 0,
   "guardrails": {
     "catastrophicDrawdown": {
-      "threshold": 20.0,
+      "threshold": 20,
       "actual": 51.11,
       "breached": true
     },
-    "maxConsecutiveStopOuts": {
-      "threshold": 4,
+    "dailyLossLimit": {
+      "threshold": 10,
       "actual": 0,
       "breached": false
     },
-    "dailyLossLimit": {
-      "threshold": 10.0,
-      "actual": 0.0,
+    "consecutiveStopOuts": {
+      "threshold": 4,
+      "actual": 0,
       "breached": false
     }
   },
+  "positions": [],
   "actions": [
-    "No actions \u2014 flat portfolio, RISK_OFF maintained"
-  ],
-  "warnings": [
-    "MCP server offline \u2014 all data cached",
-    "DD 51.11% based on cached equity \u2014 actual DD may differ",
-    "VPS scanners offline since 2026-03-23 (>51 days \u2014 decommissioned)"
+    {
+      "type": "JIDO_HEARTBEAT",
+      "timestamp": "2026-05-13T05:48:21Z",
+      "detail": "No positions, RISK_OFF maintained, MCP offline"
+    }
   ]
 }
