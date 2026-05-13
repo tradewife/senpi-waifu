@@ -3,45 +3,26 @@
   "lastEquity": 48.887581,
   "dayStartEquity": 48.887581,
   "consecutiveStopOuts": 0,
-  "lastJidoRun": "2026-05-13T00:46:44.905202+00:00",
+  "lastJidoRun": "2026-05-13T03:03:45.316281+00:00",
   "alerts": [
     {
       "type": "JIDO_HEARTBEAT",
-      "timestamp": "2026-05-13T00:17:54Z",
+      "timestamp": "2026-05-13T03:03:45Z",
       "regime": "RISK_OFF",
       "accountValue": 48.887581,
       "drawdownPct": 51.11,
       "openPositions": 0,
       "openOrders": 0,
-      "message": "Flat portfolio, RISK_OFF. Equity $48.89, DD 51.11%. VPS offline since 2026-03-23 (51+ days \u2014 decommissioned)."
-    },
-    {
-      "type": "JIDO_HEARTBEAT",
-      "timestamp": "2026-05-13T00:32:09.104194Z",
-      "regime": "RISK_OFF",
-      "accountValue": 48.887581,
-      "drawdownPct": 51.11,
-      "openPositions": 0,
-      "openOrders": 0,
-      "message": "Flat portfolio, RISK_OFF enforced (DD 51.11%). VPS offline 50+ days. No action needed."
-    },
-    {
-      "type": "JIDO_HEARTBEAT",
-      "timestamp": "2026-05-13T00:46:44.905202+00:00",
-      "regime": "RISK_OFF",
-      "accountValue": 48.887581,
-      "drawdownPct": 51.11,
-      "openPositions": 0,
-      "openOrders": 0,
-      "message": "Flat portfolio, RISK_OFF enforced (DD 51.11%). Equity $48.89. VPS offline 51+ days \u2014 decommissioned. No action needed."
+      "message": "Flat portfolio, RISK_OFF enforced (DD 51.11%). Equity $48.89. MCP offline \u2014 cached state. VPS offline 51+ days \u2014 decommissioned. No action needed."
     }
   ],
-  "lastChecked": "2026-05-13T00:46:44.905202+00:00",
-  "lastCheckAt": "2026-05-13T00:46:44.905202+00:00",
+  "lastChecked": "2026-05-13T03:03:45.316281+00:00",
+  "lastCheckAt": "2026-05-13T03:03:45.316281+00:00",
   "dayStartDate": "2026-05-13",
-  "lastCheck": "2026-05-13T00:46:44.905202+00:00",
-  "lastUpdated": "2026-05-13T00:46:44.905202+00:00",
+  "lastCheck": "2026-05-13T03:03:45.316281+00:00",
+  "lastUpdated": "2026-05-13T03:03:45.316281+00:00",
   "drawdownPct": 51.11,
   "withdrawable": 48.887581,
-  "regimeOverrideCount": 0
+  "regimeOverrideCount": 0,
+  "openPositions": 0
 }

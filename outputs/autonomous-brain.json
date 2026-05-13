@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-05-13T00:46:44.905202+00:00",
+  "generatedAt": "2026-05-13T03:03:45Z",
   "codebaseIndexAt": "2026-03-23T23:57:15Z",
   "riskMode": "RISK_OFF",
   "executionPolicy": {
-    "generatedAt": "2026-05-13T00:46:44.905202+00:00",
+    "generatedAt": "2026-05-13T03:03:45Z",
     "mode": "ACTIVE",
     "blockNewEntries": true,
     "allowAutoEntry": false,
@@ -56,7 +56,8 @@
       "lastJidoCheck": "2026-05-13T00:46:44.905202+00:00",
       "lastChecked": "2026-05-13T00:46:44.905202+00:00",
       "lastCheck": "2026-05-13T00:46:44.905202+00:00",
-      "lastUpdated": "2026-05-13T00:46:44.905202+00:00"
+      "lastUpdated": "2026-05-13T00:46:44.905202+00:00",
+      "drawdownPct": 51.11
     }
   },
   "pending": {
