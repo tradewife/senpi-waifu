@@ -1,24 +1,18 @@
 {
-  "generatedAt": "2026-05-13T08:17:34Z",
+  "generatedAt": "2026-05-13T08:48:00Z",
   "source": "cached",
-  "warnings": [
-    "MCP server offline (16+ consecutive failures) \u2014 using cached equity data",
-    "DD 51.11% is based on cached equity from multiple prior runs \u2014 actual DD may differ",
-    "VPS offline since 2026-03-23 (51+ days) \u2014 treat as decommissioned"
-  ],
   "regime": {
     "mode": "RISK_OFF",
     "reason": "Market=BASELINE (BTC slope=+0.04%, ATR=0.31%; ETH slope=+0.02%, ATR=0.40%) but RISK_OFF override active: DD 51.1% from catastrophic limit 20%",
-    "enforcedBy": "jido-cron",
-    "marketSignal": "BASELINE",
-    "updatedAt": "2026-05-13T08:02:43.289Z"
+    "enforcedBy": "jido",
+    "marketSignal": "BASELINE (BTC slope=+0.04%, ATR=0.31%)"
   },
   "portfolio": {
     "equity": 48.887581,
     "peakEquity": 100.0,
     "drawdownPct": 51.11,
-    "withdrawable": 48.887581,
     "dayStartEquity": 48.887581,
+    "withdrawable": 48.887581,
     "dailyPnl": 0.0
   },
   "strategy": {
@@ -28,28 +22,35 @@
     "budget": 100,
     "remaining": 48.887581
   },
+  "positions": [],
   "guardrails": {
     "catastrophicDrawdown": {
-      "threshold": 20.0,
+      "threshold": 20,
       "actual": 51.11,
       "breached": true
-    },
-    "dailyLoss": {
-      "threshold": 10.0,
-      "actual": 0.0,
-      "breached": false
     },
     "consecutiveStopOuts": {
       "threshold": 4,
       "actual": 0,
       "breached": false
+    },
+    "dailyLossLimit": {
+      "threshold": 10,
+      "actual": 0.0,
+      "breached": false
     }
   },
-  "positions": [],
-  "openOrders": [],
-  "actions": [
-    "No actions \u2014 flat portfolio, RISK_OFF, MCP offline"
+  "actions": [],
+  "warnings": [
+    "MCP server offline (17+ consecutive failures) \u2014 all data is cached",
+    "VPS scanners offline since 2026-03-23 (50+ days) \u2014 treat as decommissioned",
+    "DD 51.11% based on cached equity \u2014 actual DD may differ",
+    "Flat portfolio (0 open positions)"
   ],
-  "mcpStatus": "OFFLINE (16+ failures)",
-  "vpsStatus": "OFFLINE since 2026-03-23 (51+ days \u2014 decommissioned)"
+  "cronHeartbeats": {
+    "brain": "2026-03-23T23:57:15Z",
+    "arena": "2026-03-23T23:57:05Z",
+    "risk-arbiter": "2026-03-23T23:57:45Z",
+    "staleness": "50+ days \u2014 CRITICAL infrastructure degradation"
+  }
 }
