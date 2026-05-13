@@ -1,51 +1,53 @@
 {
-  "timestamp": "2026-05-13T06:48:34.880250+00:00",
+  "generatedAt": "2026-05-13T07:24:41Z",
   "source": "cached",
-  "warnings": [
-    "MCP offline \u2014 using cached state (13+ consecutive failures)",
-    "VPS scanners offline since 2026-03-23 \u2014 treat as decommissioned",
-    "DD 51.11% is based on cached equity from 2026-05-13T06:48:34.880250+00:00 \u2014 actual DD may differ"
-  ],
   "regime": {
     "mode": "RISK_OFF",
     "reason": "BTC slope=0.80%, ETH slope=0.27%, BTC ATR=0.39%, ETH ATR=0.44% | RISK_OFF override: DD 51.1% from catastrophic limit 20.0%",
-    "enforcedBy": "jido",
-    "marketSignal": "unknown"
+    "enforcedBy": "jido-guardrails",
+    "marketSignal": null
+  },
+  "strategy": {
+    "name": "wolf-primary",
+    "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
+    "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce",
+    "budget": 100,
+    "remaining": 48.89
   },
   "portfolio": {
     "equity": 48.887581,
     "peakEquity": 100.0,
     "drawdownPct": 51.11,
     "dayStartEquity": 48.887581,
-    "dailyPnl": 0.0,
     "withdrawable": null,
-    "source": "cached"
-  },
-  "strategy": {
-    "name": "wolf-primary",
-    "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
-    "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce",
-    "budget": 100.0,
-    "remaining": 48.887581
+    "openPositions": 0,
+    "openOrders": 0
   },
   "guardrails": {
-    "catastrophicDD": {
-      "threshold": 20,
+    "catastrophicDrawdown": {
+      "threshold": 20.0,
       "actual": 51.11,
       "breached": true
     },
-    "consecutiveStops": {
+    "maxConsecutiveStopOuts": {
       "threshold": 4,
       "actual": 0,
       "breached": false
     },
-    "dailyLoss": {
-      "threshold": 10,
+    "dailyLossLimit": {
+      "threshold": 10.0,
       "actual": 0.0,
       "breached": false
     }
   },
   "positions": [],
-  "actions": [],
-  "vpsStatus": "OFFLINE since 2026-03-23 (51+ days decommissioned)"
+  "actions": [
+    "heartbeat-confirmed-risk-off",
+    "flat-portfolio-fast-path"
+  ],
+  "warnings": [
+    "MCP server offline \u2014 using cached equity",
+    "DD 51.11% based on cached equity from 2026-05-13T07:23:57Z \u2014 actual DD may differ",
+    "VPS scanners offline since 2026-03-23T23:57:15Z \u2014 treat as decommissioned (>50 days)"
+  ]
 }
