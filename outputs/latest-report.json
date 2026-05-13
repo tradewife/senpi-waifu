@@ -1,43 +1,43 @@
 {
-  "generatedAt": "2026-05-13T11:47:07.359179Z",
+  "generatedAt": "2026-05-13T18:32:29.198726+00:00",
   "source": "cached",
   "warnings": [
-    "MCP server offline \u2014 all data from cached arbiter-state.json",
-    "DD 51.11% based on cached equity from previous run \u2014 actual DD may differ",
-    "VPS decommissioned since 2026-03-23 \u2014 no live scanner data"
+    "MCP server offline \u2014 all data from cached state",
+    "DD 51.11% is based on cached equity from 48.887581 \u2014 actual DD may differ",
+    "VPS offline since 2026-03-23 (52+ days \u2014 decommissioned)",
+    "Cron heartbeats last updated 2026-03-23 (VPS crons dead)"
   ],
-  "regime": {
-    "mode": "RISK_OFF",
-    "reason": "DD 51.11% from catastrophic limit 20.0%",
-    "enforcedBy": "jido",
-    "marketSignal": "BASELINE (BTC slope=0.49%, ATR=0.34%)"
-  },
   "strategy": {
-    "name": "wolf-primary",
+    "name": "WOLF-Primary",
     "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
     "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce",
-    "budget": 100.0,
+    "budget": 100,
     "remaining": 48.887581
   },
+  "regime": {
+    "mode": "RISK_OFF",
+    "reason": "JIDO: RISK_OFF enforced - catastrophic drawdown 51.11% exceeds 20% threshold (MCP offline, cached equity)",
+    "enforcedBy": "jido-cron",
+    "marketSignal": "BASELINE (overridden by DD)"
+  },
   "portfolio": {
-    "equity": {
-      "current": 48.887581,
-      "peak": 100.0,
-      "dayStart": 48.887581
-    },
+    "equity": 48.887581,
+    "peak": 100.0,
     "drawdownPct": 51.11,
+    "dayStart": 48.887581,
+    "withdrawable": 48.887581,
     "openPositions": 0,
     "openOrders": 0
   },
   "guardrails": {
     "catastrophicDrawdown": {
-      "threshold": 20.0,
+      "threshold": 20,
       "actual": 51.11,
       "breached": true
     },
     "dailyLossLimit": {
-      "threshold": 10.0,
-      "actual": 0.0,
+      "threshold": 10,
+      "actual": 0,
       "breached": false
     },
     "consecutiveStopOuts": {
@@ -48,14 +48,12 @@
   },
   "positions": [],
   "actions": [
-    "RISK_OFF maintained \u2014 DD 51.11% exceeds 20% catastrophic threshold",
-    "No open positions to manage",
-    "MCP offline \u2014 no live data available"
+    "Heartbeat check \u2014 no positions, no MCP access, regime RISK_OFF maintained"
   ],
   "infrastructure": {
     "vpsStatus": "decommissioned",
     "vpsOfflineSince": "2026-03-23T23:57:45Z",
     "mcpStatus": "offline",
-    "mcpConsecutiveFailures": "28+"
+    "mcpConsecutiveFailures": "29+"
   }
 }
