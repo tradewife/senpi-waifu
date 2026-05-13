@@ -3,18 +3,8 @@
   "lastEquity": 48.887581,
   "dayStartEquity": 48.887581,
   "consecutiveStopOuts": 0,
-  "lastJidoRun": "2026-05-13T04:03:39.196378+00:00",
+  "lastJidoRun": "2026-05-13T04:16:28.186882+00:00",
   "alerts": [
-    {
-      "type": "JIDO_HEARTBEAT",
-      "timestamp": "2026-05-13T03:34:06Z",
-      "regime": "RISK_OFF",
-      "accountValue": 48.887581,
-      "drawdownPct": 51.11,
-      "openPositions": 0,
-      "openOrders": 0,
-      "message": "MCP offline \u2014 flat portfolio (cached equity $48.89). DD 51.11% (stale, last verified live unknown). RISK_OFF maintained. VPS scanners offline since 2026-03-23 (>50 days \u2014 decommissioned)."
-    },
     {
       "type": "JIDO_HEARTBEAT",
       "timestamp": "2026-05-13T03:49:13Z",
@@ -34,13 +24,23 @@
       "openPositions": 0,
       "openOrders": 0,
       "message": "MCP offline \u2014 flat portfolio (cached equity $48.89). DD 51.11% (stale, last verified live unknown). RISK_OFF maintained. VPS scanners offline since 2026-03-23 (>51 days \u2014 decommissioned)."
+    },
+    {
+      "type": "JIDO_HEARTBEAT",
+      "timestamp": "2026-05-13T04:16:28Z",
+      "regime": "RISK_OFF",
+      "accountValue": 48.887581,
+      "drawdownPct": 51.11,
+      "openPositions": 0,
+      "openOrders": 0,
+      "message": "MCP offline \u2014 flat portfolio (cached equity $48.89). DD 51.11% (stale, last verified live unknown). RISK_OFF maintained. VPS scanners offline since 2026-03-23 (>51 days \u2014 decommissioned)."
     }
   ],
-  "lastChecked": "2026-05-13T04:03:39.196378+00:00",
-  "lastCheckAt": "2026-05-13T04:03:39.196378+00:00",
+  "lastChecked": "2026-05-13T04:16:28.186882+00:00",
+  "lastCheckAt": "2026-05-13T04:16:28.186882+00:00",
   "dayStartDate": "2026-05-13",
-  "lastCheck": "2026-05-13T04:03:39.196378+00:00",
-  "lastUpdated": "2026-05-13T04:03:39.196378+00:00",
+  "lastCheck": "2026-05-13T04:16:28.186882+00:00",
+  "lastUpdated": "2026-05-13T04:16:28.186882+00:00",
   "drawdownPct": 51.11,
   "withdrawable": 48.887581,
   "regimeOverrideCount": 0,
