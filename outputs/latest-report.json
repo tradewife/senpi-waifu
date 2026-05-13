@@ -1,35 +1,35 @@
 {
-  "generatedAt": "2026-05-13T00:32:44.341790Z",
+  "generatedAt": "2026-05-13T00:46:44.905202+00:00",
   "source": "live",
   "strategy": {
-    "name": "wolf-primary",
+    "name": "WOLF-Primary",
     "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
     "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce",
-    "budget": 100.0,
+    "budget": 100,
     "remaining": 48.887581
   },
   "regime": {
     "mode": "RISK_OFF",
-    "reason": "DD 51.11% exceeds catastrophicDrawdownPct (20%)",
+    "reason": "Catastrophic DD 51.11% > 20% threshold",
     "enforcedBy": "jido",
-    "marketSignal": "flat"
+    "marketSignal": "BASELINE (4H slopes: BTC=-0.27%, ETH=-2.07%)"
   },
   "portfolio": {
     "equity": 48.887581,
     "peakEquity": 100.0,
-    "dayStartEquity": 48.887581,
     "withdrawable": 48.887581,
     "drawdownPct": 51.11,
+    "openPositions": 0,
+    "openOrders": 0,
     "dailyPnl": 0.0
   },
-  "positions": [],
   "guardrails": {
     "catastrophicDrawdown": {
       "threshold": 20.0,
       "actual": 51.11,
       "breached": true
     },
-    "dailyLossLimit": {
+    "dailyLoss": {
       "threshold": 10.0,
       "actual": 0.0,
       "breached": false
@@ -40,10 +40,12 @@
       "breached": false
     }
   },
-  "actions": [],
+  "positions": [],
+  "actions": [
+    "Heartbeat check \u2014 no action needed. Flat portfolio."
+  ],
   "warnings": [
-    "VPS offline since 2026-03-23 (50 days) \u2014 treat as decommissioned",
-    "Flat portfolio \u2014 no positions to manage",
-    "DD 51.11% is based on live clearinghouse data (source: live)"
+    "VPS offline since 2026-03-23 (51+ days) \u2014 treat as decommissioned",
+    "DD 51.11% based on cached peak equity \u2014 actual DD may differ"
   ]
 }
