@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-05-13T20:31:59.910753+00:00",
+  "timestamp": "2026-05-13T21:01:57Z",
   "source": "cached",
   "strategy": {
     "name": "wolf-primary",
@@ -10,7 +10,7 @@
   },
   "regime": {
     "mode": "RISK_OFF",
-    "reason": "Market=BASELINE (BTC slope=-1.23%, ATR=0.54%; ETH slope=-2.52%, ATR=0.73%) RISK_OFF override: DD 51.1% from catastrophic limit 20%",
+    "reason": "RISK_OFF override: DD 51.11% from catastrophic limit 20%",
     "enforcedBy": "jido-monitor",
     "marketSignal": "N/A"
   },
@@ -43,13 +43,13 @@
     "vpsStatus": "decommissioned",
     "vpsOfflineSince": "2026-03-23",
     "mcpStatus": "offline",
-    "mcpConsecutiveFailures": "58+"
+    "mcpConsecutiveFailures": "60+"
   },
   "warnings": [
     "MCP server offline \u2014 all data from cached state",
-    "DD 51.11% based on cached equity from 2026-05-13T20:46:59Z \u2014 actual DD may differ",
-    "VPS offline since 2026-03-23 \u2014 treated as decommissioned (30+ days)"
+    "DD 51.11% based on cached equity from 2026-05-13T21:01:57Z \u2014 actual DD may differ",
+    "VPS offline since 2026-03-23 \u2014 treated as decommissioned (52+ days)"
   ],
-  "generatedAt": "2026-05-13T20:46:59Z",
+  "generatedAt": "2026-05-13T21:01:57Z",
   "openOrders": 0
 }
