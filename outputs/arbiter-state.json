@@ -7,16 +7,6 @@
   "alerts": [
     {
       "type": "JIDO_HEARTBEAT",
-      "timestamp": "2026-05-13T10:47:02Z",
-      "regime": "RISK_OFF",
-      "accountValue": 48.887581,
-      "drawdownPct": 51.11,
-      "openPositions": 0,
-      "openOrders": 0,
-      "message": "RISK_OFF | equity $48.89 | DD 51.1% | flat portfolio | MCP offline \u2014 using cached state"
-    },
-    {
-      "type": "JIDO_HEARTBEAT",
       "timestamp": "2026-05-13T11:16:38Z",
       "regime": "RISK_OFF",
       "accountValue": 48.887581,
@@ -34,6 +24,16 @@
       "openPositions": 0,
       "openOrders": 0,
       "message": "RISK_OFF | equity $48.89 | DD 51.1% | flat portfolio | MCP offline \u2014 using cached data | VPS offline since 2026-03-23 (51+ days \u2014 decommissioned)"
+    },
+    {
+      "type": "JIDO_HEARTBEAT",
+      "timestamp": "2026-05-13T11:46:39.616753Z",
+      "regime": "RISK_OFF",
+      "accountValue": 48.887581,
+      "drawdownPct": 51.11,
+      "openPositions": 0,
+      "openOrders": 0,
+      "message": "RISK_OFF | DD 51.11% from peak $100.0 | MCP offline (cached equity $48.887581) | VPS decommissioned since 2026-03-23"
     }
   ],
   "lastChecked": "2026-05-13T11:16:38Z",

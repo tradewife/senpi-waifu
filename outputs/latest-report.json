@@ -1,56 +1,61 @@
 {
-  "generatedAt": "2026-05-13T11:32:25.204835+00:00",
+  "generatedAt": "2026-05-13T11:47:07.359179Z",
   "source": "cached",
+  "warnings": [
+    "MCP server offline \u2014 all data from cached arbiter-state.json",
+    "DD 51.11% based on cached equity from previous run \u2014 actual DD may differ",
+    "VPS decommissioned since 2026-03-23 \u2014 no live scanner data"
+  ],
   "regime": {
     "mode": "RISK_OFF",
-    "reason": "DD 51.1% exceeds catastrophic threshold 20%",
-    "enforcedBy": "jido-cron",
-    "marketSignal": "offline"
+    "reason": "DD 51.11% from catastrophic limit 20.0%",
+    "enforcedBy": "jido",
+    "marketSignal": "BASELINE (BTC slope=0.49%, ATR=0.34%)"
   },
   "strategy": {
     "name": "wolf-primary",
     "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
     "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce",
-    "budget": 100,
+    "budget": 100.0,
     "remaining": 48.887581
   },
   "portfolio": {
-    "equity": 48.887581,
-    "peakEquity": 100.0,
+    "equity": {
+      "current": 48.887581,
+      "peak": 100.0,
+      "dayStart": 48.887581
+    },
     "drawdownPct": 51.11,
-    "dayStartEquity": 48.887581,
-    "dailyPnlPct": 0.0,
     "openPositions": 0,
-    "openOrders": 0,
-    "withdrawable": "unknown (MCP offline)"
+    "openOrders": 0
   },
   "guardrails": {
     "catastrophicDrawdown": {
-      "threshold": 20,
+      "threshold": 20.0,
       "actual": 51.11,
       "breached": true
     },
-    "maxConsecutiveStopOuts": {
-      "threshold": 4,
-      "actual": 0,
+    "dailyLossLimit": {
+      "threshold": 10.0,
+      "actual": 0.0,
       "breached": false
     },
-    "dailyLossLimit": {
-      "threshold": 10,
-      "actual": 0.0,
+    "consecutiveStopOuts": {
+      "threshold": 4,
+      "actual": 0,
       "breached": false
     }
   },
   "positions": [],
   "actions": [
-    "Flat portfolio \u2014 no emergency actions needed",
-    "DD 51.1% is based on cached equity from last known-good data \u2014 actual DD may differ",
-    "VPS offline since 2026-03-23 (51+ days) \u2014 treat as decommissioned"
+    "RISK_OFF maintained \u2014 DD 51.11% exceeds 20% catastrophic threshold",
+    "No open positions to manage",
+    "MCP offline \u2014 no live data available"
   ],
-  "warnings": [
-    "MCP server offline \u2014 all data from local cache",
-    "VPS scanners offline since 2026-03-23 \u2014 infrastructure CRITICAL (51+ days)",
-    "Cached equity $48.89 may not reflect current Hyperliquid state",
-    "Regime-classifier may overwrite RISK_OFF \u2192 BASELINE (known race condition)"
-  ]
+  "infrastructure": {
+    "vpsStatus": "decommissioned",
+    "vpsOfflineSince": "2026-03-23T23:57:45Z",
+    "mcpStatus": "offline",
+    "mcpConsecutiveFailures": "28+"
+  }
 }
