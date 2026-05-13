@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-13T09:03:21Z",
+  "generatedAt": "2026-05-13T09:19:44Z",
   "source": "cached",
   "regime": {
     "mode": "RISK_OFF",
@@ -15,11 +15,11 @@
     "remaining": 48.89
   },
   "portfolio": {
-    "equity": 48.89,
+    "equity": 48.887581,
     "peakEquity": 100.0,
     "drawdownPct": 51.11,
-    "dayStartEquity": 48.89,
-    "withdrawable": 48.89
+    "dayStartEquity": 48.887581,
+    "withdrawable": 48.887581
   },
   "positions": [],
   "orders": [],
@@ -44,8 +44,8 @@
     "No actions taken \u2014 flat portfolio, RISK_OFF enforced"
   ],
   "warnings": [
-    "MCP server offline (18+ consecutive failures) \u2014 using cached equity",
-    "DD 51.11% based on cached equity from 2026-05-13T09:03:21Z \u2014 actual DD may differ",
+    "MCP server offline \u2014 using cached equity",
+    "DD 51.11% based on cached equity \u2014 actual DD may differ",
     "VPS offline since 2026-03-23 (>50 days) \u2014 treat as decommissioned"
   ]
 }
