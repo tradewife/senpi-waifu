@@ -1,19 +1,20 @@
 {
-  "generatedAt": "2026-05-13T10:32:36.946978+00:00",
+  "generatedAt": "2026-05-13T10:47:02Z",
   "source": "cached",
   "regime": {
     "mode": "RISK_OFF",
-    "reason": "Catastrophic DD 51.11% (limit 20.0%)",
-    "enforcedBy": "jido-monitor",
-    "marketSignal": "N/A \u2014 MCP offline"
+    "reason": "DD 51.1% exceeds catastrophicDrawdownPct threshold",
+    "enforcedBy": "jido",
+    "marketSignal": null
   },
   "portfolio": {
     "equity": 48.887581,
     "peakEquity": 100.0,
     "dayStartEquity": 48.887581,
-    "withdrawable": "unknown \u2014 MCP offline",
     "drawdownPct": 51.11,
-    "dailyPnlPct": 0.0
+    "withdrawable": null,
+    "openPositions": 0,
+    "openOrders": 0
   },
   "strategy": {
     "name": "wolf-primary",
@@ -22,14 +23,13 @@
     "budget": 100.0,
     "remaining": 48.887581
   },
-  "positions": [],
   "guardrails": {
     "catastrophicDrawdown": {
       "threshold": 20.0,
       "actual": 51.11,
       "breached": true
     },
-    "maxConsecutiveStopOuts": {
+    "consecutiveStopOuts": {
       "threshold": 4,
       "actual": 0,
       "breached": false
@@ -40,12 +40,13 @@
       "breached": false
     }
   },
+  "positions": [],
   "actions": [
-    "RISK_OFF enforced \u2014 no new entries allowed"
+    "No positions to manage \u2014 flat portfolio under RISK_OFF"
   ],
   "warnings": [
-    "MCP server offline \u2014 using cached equity data",
-    "DD 51.11% based on cached equity \u2014 actual DD may differ",
-    "VPS scanners offline since 2026-03-23 (51+ days) \u2014 effectively decommissioned"
+    "MCP server offline \u2014 all data from cached state",
+    "DD 51.1% is based on cached equity \u2014 actual DD may differ",
+    "VPS scanners offline since 2026-03-23 (51+ days) \u2014 treat as decommissioned"
   ]
 }
