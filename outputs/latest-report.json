@@ -10,17 +10,15 @@
   },
   "regime": {
     "mode": "RISK_OFF",
-    "reason": "Drawdown 51.11% exceeds 20% catastrophic threshold",
-    "enforcedBy": "jido-guardrail",
-    "marketSignal": "N/A \u2014 MCP offline"
+    "reason": "Market=BASELINE (BTC slope=-1.23%, ATR=0.54%; ETH slope=-2.52%, ATR=0.73%) RISK_OFF override: DD 51.1% from catastrophic limit 20%",
+    "enforcedBy": "jido-monitor",
+    "marketSignal": "N/A"
   },
   "portfolio": {
     "equity": 48.887581,
     "peak": 100.0,
     "drawdownPct": 51.11,
-    "withdrawable": "N/A \u2014 MCP offline",
-    "openPositions": 0,
-    "dailyPnlPct": 0.0
+    "dayStartEquity": 48.887581
   },
   "positions": [],
   "guardrails": {
@@ -29,29 +27,29 @@
       "actual": 51.11,
       "breached": true
     },
-    "consecutiveStopOuts": {
-      "threshold": 4,
+    "dailyLossLimit": {
+      "threshold": 10,
       "actual": 0,
       "breached": false
     },
-    "dailyLossLimit": {
-      "threshold": 10,
-      "actual": 0.0,
+    "maxConsecutiveStopOuts": {
+      "threshold": 4,
+      "actual": 0,
       "breached": false
     }
   },
-  "actions": [
-    "No positions \u2014 monitoring only. RISK_OFF enforced."
-  ],
+  "actions": [],
   "infrastructure": {
     "vpsStatus": "decommissioned",
-    "vpsOfflineSince": "2026-03-23T23:57:05Z",
+    "vpsOfflineSince": "2026-03-23",
     "mcpStatus": "offline",
-    "mcpConsecutiveFailures": "35+"
+    "mcpConsecutiveFailures": "58+"
   },
   "warnings": [
-    "MCP server offline \u2014 35+ consecutive failures. All data from local cache.",
-    "DD 51.11% is based on cached equity from previous runs \u2014 actual DD may differ.",
-    "VPS decommissioned since 2026-03-23 (52+ days). Railway deployment inactive."
-  ]
+    "MCP server offline \u2014 all data from cached state",
+    "DD 51.11% based on cached equity from 2026-05-13T20:46:59Z \u2014 actual DD may differ",
+    "VPS offline since 2026-03-23 \u2014 treated as decommissioned (30+ days)"
+  ],
+  "generatedAt": "2026-05-13T20:46:59Z",
+  "openOrders": 0
 }
