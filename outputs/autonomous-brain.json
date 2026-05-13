@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-05-13T18:46:41.576638+00:00",
+  "generatedAt": "2026-05-13T19:17:20.478246Z",
   "codebaseIndexAt": "2026-03-23T23:57:15Z",
   "riskMode": "RISK_OFF",
   "executionPolicy": {
-    "generatedAt": "2026-05-13T18:46:41.576638+00:00",
+    "generatedAt": "2026-05-13T19:17:20.478246Z",
     "mode": "ACTIVE",
     "blockNewEntries": true,
     "allowAutoEntry": false,
@@ -51,11 +51,11 @@
       "peakEquity": 100.0,
       "dayStartEquity": 48.887581,
       "consecutiveStopOuts": 0,
-      "lastJidoRun": "2026-05-13T18:32:29.198726+00:00",
-      "lastJidoCheck": "2026-05-13T18:32:29.198726+00:00",
-      "lastChecked": "2026-05-13T18:32:29.198726+00:00",
+      "lastJidoRun": "2026-05-13T19:17:20.478246Z",
+      "lastJidoCheck": "2026-05-13T19:17:20.478246Z",
+      "lastChecked": "2026-05-13T19:17:20.478246Z",
       "lastCheck": "2026-05-13T10:17:18.897945Z",
-      "lastUpdated": "2026-05-13T18:32:29.198726+00:00",
+      "lastUpdated": "2026-05-13T19:17:20.478246Z",
       "drawdownPct": 51.11,
       "lastEquity": 48.887581
     }
