@@ -6,11 +6,11 @@
   "drawdownPct": 100.0,
   "consecutiveStopOuts": 0,
   "riskMode": "RISK_OFF",
-  "lastJidoRun": "2026-05-14T23:34:20Z",
-  "lastChecked": "2026-05-14T23:34:20Z",
-  "lastCheckAt": "2026-05-14T23:34:20Z",
-  "lastCheck": "2026-05-14T23:34:20Z",
-  "lastUpdated": "2026-05-14T23:34:20Z",
+  "lastJidoRun": "2026-05-14T23:46:06Z",
+  "lastChecked": "2026-05-14T23:46:06Z",
+  "lastCheckAt": "2026-05-14T23:46:06Z",
+  "lastCheck": "2026-05-14T23:46:06Z",
+  "lastUpdated": "2026-05-14T23:46:06Z",
   "alerts": [
     {
       "type": "JIDO_HEARTBEAT",
@@ -31,6 +31,16 @@
       "openPositions": 0,
       "openOrders": 0,
       "message": "RISK_OFF | flat portfolio (equity=0) | MCP offline (fail_str=8+) | VPS decommissioned since 2026-03-23 | regime override #7"
+    },
+    {
+      "type": "JIDO_HEARTBEAT",
+      "timestamp": "2026-05-14T23:46:06Z",
+      "regime": "RISK_OFF",
+      "accountValue": 0.0,
+      "drawdownPct": 100.0,
+      "openPositions": 0,
+      "openOrders": 0,
+      "message": "dead-strategy run #1 | equity=$0 | DD=100% | MCP offline (9+) | RISK_OFF | VPS decommissioned since 2026-03-23"
     }
   ]
 }
