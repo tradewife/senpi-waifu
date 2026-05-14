@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-05-14T08:18:01.509511+00:00",
+  "generatedAt": "2026-05-14T08:32:04.569112+00:00",
   "source": "cached",
   "warnings": [
-    "MCP server offline (59+ consecutive failures) \u2014 all data from cached state",
+    "MCP server offline (60+ consecutive failures) \u2014 all data from cached state",
     "DD 51.11% based on cached equity from last known-good update \u2014 actual DD may differ",
     "VPS scanners offline since 2026-03-23 \u2014 decommissioned status"
   ],
@@ -53,6 +53,6 @@
     "vpsStatus": "decommissioned",
     "vpsOfflineSince": "2026-03-23T23:57:45Z",
     "mcpStatus": "offline",
-    "mcpConsecutiveFailures": "59+"
+    "mcpConsecutiveFailures": "60+"
   }
 }
