@@ -1,6 +1,6 @@
 {
   "source": "cached",
-  "generatedAt": "2026-05-14T21:17:48Z",
+  "generatedAt": "2026-05-14T21:31:40Z",
   "regime": {
     "mode": "RISK_OFF",
     "reason": "DD 100.0% exceeds 20% threshold. Account depleted (lastEquity=0.0).",
@@ -41,31 +41,22 @@
   "actions": [
     "MCP offline - using cached state",
     "Flat portfolio confirmed (0 positions)",
-    "RISK_OFF maintained - DD 100% exceeds 20% threshold"
+    "RISK_OFF maintained - DD 100% exceeds 20% threshold",
+    "MCP consecutive failures: 2+"
   ],
   "infrastructure": {
     "vpsStatus": "decommissioned",
     "vpsOfflineSince": "2026-03-23T23:57:15Z",
     "mcpStatus": "offline",
-    "mcpConsecutiveFailures": "1+"
+    "mcpConsecutiveFailures": "2+"
   },
   "warnings": [
     "MCP server offline - all data from cache",
     "DD 100.0% based on cached equity from 2026-05-14T20:32:48Z \u2014 actual DD may differ",
-    "VPS decommissioned since 2026-03-23 (51+ days offline)",
-    "MCP has been offline for 1+ consecutive JIDO runs"
+    "VPS decommissioned since 2026-03-23 (53+ days offline)",
+    "MCP has been offline for 2+ consecutive JIDO runs"
   ],
   "alerts": [
-    {
-      "type": "JIDO_HEARTBEAT",
-      "timestamp": "2026-05-14T20:17:15Z",
-      "regime": "RISK_OFF",
-      "accountValue": 0.0,
-      "drawdownPct": 100.0,
-      "openPositions": 0,
-      "openOrders": 0,
-      "message": "JIDO heartbeat \u2014 MCP offline (2+ failures), flat portfolio, DD 100.0% based on cached equity. Account fully depleted. RISK_OFF enforced. VPS decommissioned since 2026-03-23."
-    },
     {
       "type": "JIDO_HEARTBEAT",
       "timestamp": "2026-05-14T20:32:48Z",
@@ -85,6 +76,16 @@
       "openPositions": 0,
       "openOrders": 0,
       "message": "Flat portfolio, MCP offline (fail_str=1+). DD 100.0% (cached, stale since 2026-05-14T20:32:48Z). VPS decommissioned since 2026-03-23."
+    },
+    {
+      "type": "JIDO_HEARTBEAT",
+      "timestamp": "2026-05-14T21:31:40Z",
+      "regime": "RISK_OFF",
+      "accountValue": 0.0,
+      "drawdownPct": 100.0,
+      "openPositions": 0,
+      "openOrders": 0,
+      "message": "Flat portfolio, MCP offline (fail_str=2+). DD 100.0% (cached, stale since 2026-05-14T20:32:48Z). VPS decommissioned since 2026-03-23."
     }
   ]
 }
