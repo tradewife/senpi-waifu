@@ -1,59 +1,60 @@
 {
-  "timestamp": "2026-05-13T23:31:59.011056+00:00",
+  "generatedAt": "2026-05-14T00:02:53.114453+00:00",
   "source": "cached",
-  "strategy": {
-    "name": "wolf-primary",
-    "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
-    "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce",
-    "budget": 100.0,
-    "remaining": 48.887581
-  },
+  "warnings": [
+    "MCP server offline \u2014 all data from cached state. Last known equity: $48.89",
+    "VPS decommissioned since 2026-03-23 (51 days). Scanner cron jobs not running.",
+    "DD 51.11% is based on cached equity from 2026-05-13 \u2014 actual DD may differ"
+  ],
   "regime": {
     "mode": "RISK_OFF",
-    "reason": "Catastrophic drawdown: 51.11% exceeds 20% threshold",
+    "reason": "Catastrophic drawdown: 51.11% exceeds 20.0% threshold",
     "enforcedBy": "jido-cron",
-    "marketSignal": null
+    "marketSignal": "N/A (MCP offline)"
   },
   "portfolio": {
     "equity": 48.887581,
     "peak": 100.0,
     "drawdownPct": 51.11,
-    "withdrawable": "unknown (MCP offline)",
+    "withdrawable": null,
     "dailyPnl": 0.0,
     "dailyPnlPct": 0.0
   },
-  "positions": [],
-  "openOrders": [],
   "guardrails": {
     "catastrophicDrawdown": {
       "threshold": 20.0,
       "actual": 51.11,
       "breached": true
     },
-    "maxConsecutiveStopOuts": {
+    "consecutiveStopOuts": {
       "threshold": 4,
       "actual": 0,
       "breached": false
     },
-    "dailyLossLimit": {
+    "dailyLoss": {
       "threshold": 10.0,
       "actual": 0.0,
       "breached": false
     }
   },
+  "positions": [],
+  "actions": [
+    "Flat portfolio \u2014 no positions to manage",
+    "RISK_OFF enforced (DD 51.11% >> 20% threshold)",
+    "No emergency SL placement needed (no open positions)",
+    "All state files synced and committed"
+  ],
+  "strategy": {
+    "name": "wolf-primary",
+    "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
+    "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce",
+    "budget": 100,
+    "remaining": 48.887581
+  },
   "infrastructure": {
     "vpsStatus": "decommissioned",
-    "vpsOfflineSince": "2026-03-23T23:57:45Z",
+    "vpsOfflineSince": "2026-03-23T23:57:15Z",
     "mcpStatus": "offline",
-    "mcpConsecutiveFailures": "47"
-  },
-  "actions": [
-    "JIDO heartbeat \u2014 flat portfolio, no actions needed"
-  ],
-  "warnings": [
-    "MCP server offline (47+ consecutive failures) \u2014 using cached state",
-    "DD 51.11% based on cached equity from 2026-05-13 \u2014 actual DD may differ",
-    "VPS offline since 2026-03-23 (51+ days) \u2014 decommissioned"
-  ],
-  "generatedAt": "2026-05-13T23:47:28.052161+00:00"
+    "mcpConsecutiveFailures": "58+"
+  }
 }
