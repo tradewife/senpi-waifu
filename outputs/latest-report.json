@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-14T16:24:07Z",
+  "generatedAt": "2026-05-14T16:32:16Z",
   "source": "live",
   "regime": {
     "mode": "RISK_OFF",
@@ -19,7 +19,7 @@
     "peak": 100.0,
     "drawdownPct": 100.0,
     "withdrawable": 0.0,
-    "dayStartEquity": 48.887581,
+    "dayStartEquity": 0.0,
     "dailyPnl": 0.0
   },
   "positions": [],
@@ -48,7 +48,7 @@
     "mcpConsecutiveFailures": "0"
   },
   "warnings": [
-    "VPS decommissioned since 2026-03-23 (>50 days). All scanners offline. Hermes-managed crons only.",
+    "VPS decommissioned since 2026-03-23 (>52 days). All scanners offline. Hermes-managed crons only.",
     "Portfolio fully depleted \u2014 accountValue=$0.00. No capital available for new positions."
   ],
   "actions": [
@@ -58,5 +58,5 @@
     "CATASTROPHIC DRAWDOWN: 100.0% (wallet depleted)"
   ],
   "deadWeight": [],
-  "timestamp": "2026-05-14T16:24:07Z"
+  "timestamp": "2026-05-14T16:32:16Z"
 }
