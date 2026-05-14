@@ -1,17 +1,17 @@
 {
-  "generatedAt": "2026-05-14T15:16:13Z",
+  "generatedAt": "2026-05-14T15:32:28.297797Z",
   "source": "live",
   "regime": {
     "mode": "RISK_OFF",
-    "reason": "Catastrophic drawdown 51.11% exceeds 20.0% threshold",
-    "enforcedBy": "jido",
-    "marketSignal": "BASELINE"
+    "reason": "100% drawdown \u2014 account fully depleted. Flat portfolio since 2026-05-14.",
+    "enforcedBy": "jido-cron",
+    "marketSignal": "N/A"
   },
   "strategy": {
-    "name": "WOLF-Primary",
+    "name": "wolf-primary",
     "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
     "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce",
-    "budget": 100,
+    "budget": 100.0,
     "remaining": 0.0
   },
   "portfolio": {
@@ -38,24 +38,21 @@
       "threshold": 4,
       "actual": 0,
       "breached": false
-    },
-    "maxPositions": {
-      "threshold": 3,
-      "actual": 0,
-      "breached": false
     }
   },
   "infrastructure": {
     "vpsStatus": "decommissioned",
-    "vpsOfflineSince": "2026-03-23T23:57:15Z",
+    "vpsOfflineSince": "2026-03-23T23:57:05Z",
     "mcpStatus": "online",
     "mcpConsecutiveFailures": "0"
   },
   "warnings": [
-    "VPS decommissioned since 2026-03-23 \u2014 all cron jobs Hermes-only",
-    "Strategy wallet balance is $0.00 \u2014 funds fully depleted"
+    "VPS decommissioned since 2026-03-23 (>52 days). Railway deployment inactive.",
+    "Account fully depleted (DD=100%). No capital available for trading."
   ],
-  "actions": [],
+  "actions": [
+    "JIDO heartbeat \u2014 flat portfolio, RISK_OFF enforced, no action needed."
+  ],
   "alerts": [
     "CATASTROPHIC DRAWDOWN: 100.0% (wallet depleted)"
   ],
