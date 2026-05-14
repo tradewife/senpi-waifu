@@ -3,7 +3,7 @@
   "lastEquity": 0.0,
   "dayStartEquity": 0.0,
   "consecutiveStopOuts": 0,
-  "lastJidoRun": "2026-05-14T19:32:45Z",
+  "lastJidoRun": "2026-05-14T20:03:58Z",
   "alerts": [
     {
       "type": "JIDO_HEARTBEAT",
@@ -14,15 +14,25 @@
       "openPositions": 0,
       "openOrders": 0,
       "message": "Flat portfolio. RISK_OFF enforced. DD=100.0% (100% depleted). MCP offline (10+ failures). VPS decommissioned since 2026-03-23 (51+ days). Source: cached."
+    },
+    {
+      "type": "JIDO_HEARTBEAT",
+      "timestamp": "2026-05-14T20:03:58Z",
+      "regime": "RISK_OFF",
+      "accountValue": 0.0,
+      "drawdownPct": 100.0,
+      "openPositions": 0,
+      "openOrders": 0,
+      "message": "Flat portfolio. RISK_OFF enforced (override #1). DD=100.0% (fully depleted: $0.00/$100.00). MCP offline (1+ failures). VPS decommissioned since 2026-03-23 (52+ days). Source: cached."
     }
   ],
-  "lastChecked": "2026-05-14T19:32:45Z",
-  "lastCheckAt": "2026-05-14T20:00:58Z",
+  "lastChecked": "2026-05-14T20:03:58Z",
+  "lastCheckAt": "2026-05-14T20:03:58Z",
   "dayStartDate": "2026-05-14",
-  "lastCheck": "2026-05-14T19:32:45Z",
-  "lastUpdated": "2026-05-14T19:32:45Z",
+  "lastCheck": "2026-05-14T20:03:58Z",
+  "lastUpdated": "2026-05-14T20:03:58Z",
   "drawdownPct": 100.0,
   "withdrawable": 0.0,
-  "regimeOverrideCount": 0,
+  "regimeOverrideCount": 1,
   "openPositions": 0
 }

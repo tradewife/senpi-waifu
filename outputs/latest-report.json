@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-14T20:00:58Z",
+  "generatedAt": "2026-05-14T20:03:58Z",
   "regime": "RISK_OFF",
   "equity": 0.0,
   "peakEquity": 100.0,
@@ -9,7 +9,10 @@
   "dailyWinRate": 0,
   "openPositions": 0,
   "alerts": [
-    "CATASTROPHIC DRAWDOWN: 100.0%"
+    "CATASTROPHIC DRAWDOWN: 100.0%",
+    "REGIME_OVERRIDE #1: regime-classifier set BASELINE but DD=100.0% requires RISK_OFF",
+    "MCP OFFLINE: 1+ consecutive failures",
+    "VPS DECOMMISSIONED since 2026-03-23 (52+ days)"
   ],
   "deadWeight": [],
   "guardrails": {
@@ -25,5 +28,24 @@
       "xyz:"
     ],
     "perTradeRiskPct": 1.0
-  }
+  },
+  "source": "cached",
+  "strategy": {
+    "name": "WOLF-Primary",
+    "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
+    "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce",
+    "budget": 100,
+    "remaining": 0.0
+  },
+  "infrastructure": {
+    "vpsStatus": "decommissioned",
+    "vpsOfflineSince": "2026-03-23T23:57:15Z",
+    "mcpStatus": "offline",
+    "mcpConsecutiveFailures": "1+"
+  },
+  "warnings": [
+    "MCP offline (1+ failures) \u2014 all data from cached state",
+    "VPS decommissioned since 2026-03-23 (52+ days)",
+    "DD 100.0% based on cached equity \u2014 wallet likely fully depleted"
+  ]
 }

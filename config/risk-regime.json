@@ -1,8 +1,8 @@
 {
   "riskMode": "RISK_OFF",
-  "updatedAt": "2026-05-14T18:02:40Z",
+  "updatedAt": "2026-05-14T20:03:58Z",
   "updatedBy": "jido-emergency",
-  "reason": "Drawdown 100.0% exceeds catastrophic threshold 20%",
+  "reason": "REGIME_OVERRIDE: DD=100.0% exceeds catastrophic 20% threshold. Wallet fully depleted ($0.00 / $100.00 budget). MCP offline. Override #1 (regime-classifier race condition).",
   "regimes": {
     "RISK_ON": {
       "maxSlots": 3,
