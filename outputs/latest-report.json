@@ -1,11 +1,11 @@
 {
-  "source": "live",
+  "source": "cached",
   "generatedAt": "2026-05-14T16:47:33Z",
   "generatedBy": "jido-cron",
   "regime": {
     "mode": "RISK_OFF",
-    "reason": "Market=BASELINE (BTC slope=-0.31%, ATR=0.45%; ETH slope=-1.60%, ATR=0.52%) but RISK_OFF override active: DD 51.1% from catastrophic limit 20.0%",
-    "enforcedBy": "jido",
+    "reason": "Wallet fully depleted (DD 100%). MCP offline.",
+    "enforcedBy": "jido-cron",
     "marketSignal": "N/A"
   },
   "strategy": {
@@ -31,28 +31,31 @@
       "actual": 100.0,
       "breached": true
     },
-    "consecutiveStopOuts": {
-      "threshold": 4,
-      "actual": 0,
-      "breached": false
-    },
     "dailyLossLimit": {
       "threshold": 10,
       "actual": 0.0,
       "breached": false
+    },
+    "consecutiveStopOuts": {
+      "threshold": 4,
+      "actual": 0,
+      "breached": false
     }
   },
   "actions": [
-    "No positions to manage. RISK_OFF enforced. Flat portfolio heartbeat."
+    "JIDO heartbeat: flat portfolio, MCP offline, RISK_OFF enforced"
   ],
   "warnings": [
-    "Account fully depleted (equity=$0.00, DD=100%). Peak was $100.00.",
-    "VPS decommissioned since 2026-03-23T23:57:45Z. Only Hermes cron jobs active."
+    "MCP offline \u2014 1+ consecutive failures. Using cached state.",
+    "DD 100% confirmed from cached equity. Wallet fully depleted.",
+    "VPS decommissioned since 2026-03-23. Scanners offline.",
+    "Flat portfolio fast-path: no positions to manage."
   ],
   "infrastructure": {
     "vpsStatus": "decommissioned",
     "vpsOfflineSince": "2026-03-23T23:57:45Z",
-    "mcpStatus": "online",
-    "mcpConsecutiveFailures": "0"
-  }
+    "mcpStatus": "offline",
+    "mcpConsecutiveFailures": "1+"
+  },
+  "timestamp": "2026-05-14T17:32:20.176154Z"
 }
