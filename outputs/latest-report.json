@@ -1,6 +1,6 @@
 {
   "source": "cached",
-  "generatedAt": "2026-05-14T18:02:40Z",
+  "generatedAt": "2026-05-14T18:17:29Z",
   "generatedBy": "jido-cron",
   "regime": {
     "mode": "RISK_OFF",
@@ -43,26 +43,21 @@
   },
   "actions": [
     {
-      "type": "REGIME_SYNC",
-      "detail": "risk-regime.json synced to RISK_OFF (was BASELINE)",
-      "timestamp": "2026-05-14T18:02:40Z"
-    },
-    {
-      "type": "BRAIN_SYNC",
-      "detail": "autonomous-brain.json synced with RISK_OFF regime",
-      "timestamp": "2026-05-14T18:02:40Z"
+      "type": "HEARTBEAT",
+      "detail": "JIDO heartbeat \u2014 flat portfolio, RISK_OFF, MCP offline",
+      "timestamp": "2026-05-14T18:17:29Z"
     }
   ],
   "warnings": [
     "MCP server offline \u2014 all data from cached state",
     "DD 100.0% based on cached equity \u2014 actual DD may differ",
-    "VPS offline since 2026-03-23 (>50 days) \u2014 effectively decommissioned"
+    "VPS offline since 2026-03-23 (>53 days) \u2014 effectively decommissioned"
   ],
   "infrastructure": {
     "vpsStatus": "decommissioned",
     "vpsOfflineSince": "2026-03-23T23:57:45Z",
     "mcpStatus": "offline",
-    "mcpConsecutiveFailures": "3+"
+    "mcpConsecutiveFailures": "5+"
   },
-  "timestamp": "2026-05-14T17:32:20.176154Z"
+  "timestamp": "2026-05-14T18:17:29Z"
 }
