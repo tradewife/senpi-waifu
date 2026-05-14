@@ -1,8 +1,8 @@
 {
-  "riskMode": "RISK_OFF",
-  "updatedAt": "2026-05-14T21:02:56.599930+00:00",
-  "updatedBy": "hermes-regime",
-  "reason": "Arbiter override: DD 100.0% exceeds catastrophic limit 20%",
+  "riskMode": "BASELINE",
+  "updatedAt": "2026-05-14T23:01:19Z",
+  "updatedBy": "waifu-regime",
+  "reason": "Mixed signals (slope=1.3%, ATR=1.5%)",
   "regimes": {
     "RISK_ON": {
       "maxSlots": 3,
