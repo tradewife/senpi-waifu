@@ -1,6 +1,6 @@
 {
   "source": "cached",
-  "generatedAt": "2026-05-14T22:17:00Z",
+  "generatedAt": "2026-05-14T22:32:20Z",
   "regime": {
     "mode": "RISK_OFF",
     "reason": "DD 100% \u2014 equity fully depleted",
@@ -39,13 +39,13 @@
   },
   "positions": [],
   "actions": [
-    "JIDO heartbeat \u2014 no positions, no action needed"
+    "JIDO heartbeat \u2014 no positions, MCP offline (fail_str=4+)"
   ],
   "infrastructure": {
     "vpsStatus": "decommissioned",
     "vpsOfflineSince": "2026-03-23T23:57:15Z",
     "mcpStatus": "offline",
-    "mcpConsecutiveFailures": "3+"
+    "mcpConsecutiveFailures": "4+"
   },
   "warnings": [
     "MCP offline \u2014 using cached state",
@@ -53,16 +53,6 @@
     "DD 100% based on cached equity from previous sessions \u2014 account fully depleted"
   ],
   "alerts": [
-    {
-      "type": "JIDO_HEARTBEAT",
-      "timestamp": "2026-05-14T20:32:48Z",
-      "regime": "RISK_OFF",
-      "accountValue": 0.0,
-      "drawdownPct": 100.0,
-      "openPositions": 0,
-      "openOrders": 0,
-      "message": "Flat portfolio confirmed (MCP live). Equity $0.00, DD 100.0%. RISK_OFF enforced. 0 positions, 0 open orders."
-    },
     {
       "type": "JIDO_HEARTBEAT",
       "timestamp": "2026-05-14T21:17:48Z",
@@ -82,6 +72,16 @@
       "openPositions": 0,
       "openOrders": 0,
       "message": "Flat portfolio, MCP offline (fail_str=2+). DD 100.0% (cached, stale since 2026-05-14T20:32:48Z). VPS decommissioned since 2026-03-23."
+    },
+    {
+      "type": "JIDO_HEARTBEAT",
+      "timestamp": "2026-05-14T22:32:20Z",
+      "regime": "RISK_OFF",
+      "accountValue": 0.0,
+      "drawdownPct": 100.0,
+      "openPositions": 0,
+      "openOrders": 0,
+      "message": "RISK_OFF | flat portfolio (equity=0) | MCP offline (fail_str=4+) | VPS decommissioned since 2026-03-23"
     }
   ]
 }
