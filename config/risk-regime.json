@@ -1,6 +1,6 @@
 {
   "riskMode": "RISK_OFF",
-  "updatedAt": "2026-05-14T23:03:09Z",
+  "updatedAt": "2026-05-14T23:16:34Z",
   "updatedBy": "jido-emergency",
   "reason": "JIDO OVERRIDE: DD 100% exceeds 20% threshold \u2014 regime classifier set BASELINE but account is fully depleted",
   "regimes": {

@@ -1,9 +1,9 @@
 {
   "source": "cached",
-  "generatedAt": "2026-05-14T23:03:09Z",
+  "generatedAt": "2026-05-14T23:16:34Z",
   "regime": {
     "mode": "RISK_OFF",
-    "reason": "DD 100% \u2014 equity fully depleted (regime override #6, classifier set BASELINE)",
+    "reason": "DD 100% \u2014 equity fully depleted (regime override #7, classifier set BASELINE)",
     "enforcedBy": "jido-monitor",
     "marketSignal": null
   },
@@ -43,50 +43,30 @@
   },
   "positions": [],
   "actions": [
-    "JIDO heartbeat \u2014 no positions, MCP offline (fail_str=6+), regime override #6"
+    "JIDO heartbeat \u2014 no positions, MCP offline (fail_str=7+), regime override #7"
   ],
   "infrastructure": {
     "vpsStatus": "decommissioned",
     "vpsOfflineSince": "2026-03-23T23:57:15Z",
     "mcpStatus": "offline",
-    "mcpConsecutiveFailures": "6+"
+    "mcpConsecutiveFailures": "7+"
   },
   "warnings": [
     "MCP offline \u2014 using cached state",
     "VPS decommissioned since 2026-03-23",
     "DD 100% based on cached equity \u2014 account fully depleted",
-    "Regime classifier overrode RISK_OFF\u2192BASELINE at 23:01Z \u2014 JIDO override #6 applied"
+    "Regime classifier may override RISK_OFF\u2192BASELINE \u2014 JIDO override #7 applied at 2026-05-14T23:16:34Z"
   ],
   "alerts": [
     {
       "type": "JIDO_HEARTBEAT",
-      "timestamp": "2026-05-14T22:17:00Z",
+      "timestamp": "2026-05-14T23:16:34Z",
       "regime": "RISK_OFF",
       "accountValue": 0.0,
       "drawdownPct": 100.0,
       "openPositions": 0,
       "openOrders": 0,
-      "message": "RISK_OFF | flat portfolio (equity=0) | MCP offline | VPS decommissioned since 2026-03-23"
-    },
-    {
-      "type": "JIDO_HEARTBEAT",
-      "timestamp": "2026-05-14T22:32:20Z",
-      "regime": "RISK_OFF",
-      "accountValue": 0.0,
-      "drawdownPct": 100.0,
-      "openPositions": 0,
-      "openOrders": 0,
-      "message": "RISK_OFF | flat portfolio (equity=0) | MCP offline (fail_str=4+) | VPS decommissioned since 2026-03-23"
-    },
-    {
-      "type": "JIDO_HEARTBEAT",
-      "timestamp": "2026-05-14T22:47:05Z",
-      "regime": "RISK_OFF",
-      "accountValue": 0.0,
-      "drawdownPct": 100.0,
-      "openPositions": 0,
-      "openOrders": 0,
-      "message": "RISK_OFF | flat portfolio (equity=0) | MCP offline (fail_str=5+) | VPS decommissioned since 2026-03-23"
+      "message": "RISK_OFF | flat portfolio (equity=0) | MCP offline (fail_str=7+) | VPS decommissioned since 2026-03-23 | regime override #7"
     }
   ]
 }
