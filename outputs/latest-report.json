@@ -1,56 +1,29 @@
 {
-  "generatedAt": "2026-05-14T11:47:15Z",
-  "source": "cached",
-  "strategy": {
-    "name": "wolf-primary",
-    "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
-    "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce",
-    "budget": 100,
-    "remaining": 48.887581
-  },
-  "regime": {
-    "mode": "RISK_OFF",
-    "reason": "RISK_OFF override active: DD 51.11% from catastrophic limit 20.0%",
-    "enforcedBy": "jido",
-    "marketSignal": "cached"
-  },
-  "portfolio": {
-    "equity": 48.887581,
-    "peak": 100.0,
-    "drawdownPct": 51.11,
-    "dayStartEquity": 48.887581,
-    "dailyPnl": 0.0
-  },
-  "positions": [],
-  "guardrails": {
-    "catastrophicDrawdown": {
-      "threshold": 20,
-      "actual": 51.11,
-      "breached": true
-    },
-    "consecutiveStopOuts": {
-      "threshold": 4,
-      "actual": 0,
-      "breached": false
-    },
-    "dailyLoss": {
-      "threshold": 10,
-      "actual": 0.0,
-      "breached": false
-    }
-  },
-  "infrastructure": {
-    "vpsStatus": "decommissioned",
-    "vpsOfflineSince": "2026-03-23T23:57:45Z",
-    "mcpStatus": "offline",
-    "mcpConsecutiveFailures": "71+"
-  },
-  "actions": [
-    "JIDO heartbeat \u2014 no positions, no MCP access, RISK_OFF maintained"
+  "generatedAt": "2026-05-14T14:16:27Z",
+  "regime": "RISK_OFF",
+  "equity": 48.89,
+  "peakEquity": 100.0,
+  "drawdownPct": 51.11,
+  "dailyPnl": 0,
+  "dailyCloses": 0,
+  "dailyWinRate": 0,
+  "openPositions": 0,
+  "alerts": [
+    "CATASTROPHIC DRAWDOWN: 51.1%"
   ],
-  "warnings": [
-    "MCP offline (71+ consecutive failures) \u2014 using cached state",
-    "VPS decommissioned since 2026-03-23 (52+ days)",
-    "DD 51.11% is based on cached equity \u2014 actual DD may differ"
-  ]
+  "deadWeight": [],
+  "guardrails": {
+    "dailyLossLimitPct": 10,
+    "catastrophicDrawdownPct": 20,
+    "maxConsecutiveStopOuts": 4,
+    "directionalCapPct": 70,
+    "minLeverage": 7,
+    "maxLeverage": 10,
+    "maxPositionsTotal": 3,
+    "perAssetCooldownMinutes": 120,
+    "bannedAssetPrefixes": [
+      "xyz:"
+    ],
+    "perTradeRiskPct": 1.0
+  }
 }
