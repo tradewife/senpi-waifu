@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-05-14T16:32:16Z",
+  "generatedAt": "2026-05-14T16:47:33Z",
   "codebaseIndexAt": "2026-03-23T23:57:15Z",
   "riskMode": "RISK_OFF",
   "executionPolicy": {
-    "generatedAt": "2026-05-14T16:32:16Z",
+    "generatedAt": "2026-05-14T16:47:33Z",
     "mode": "ACTIVE",
     "blockNewEntries": true,
     "allowAutoEntry": false,
@@ -54,7 +54,7 @@
       "lastJidoRun": "2026-05-14T16:32:16Z",
       "lastJidoCheck": "2026-05-14T16:32:16Z",
       "lastChecked": "2026-05-14T16:32:16Z",
-      "lastCheck": "2026-05-14T16:32:16Z",
+      "lastCheck": "2026-05-14T16:47:33Z",
       "lastUpdated": "2026-05-14T16:32:16Z",
       "drawdownPct": 100.0,
       "lastEquity": 0.0

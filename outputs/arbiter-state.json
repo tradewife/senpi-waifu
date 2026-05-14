@@ -7,19 +7,19 @@
   "alerts": [
     {
       "type": "JIDO_HEARTBEAT",
-      "timestamp": "2026-05-14T16:32:16.990846+00:00",
+      "timestamp": "2026-05-14T16:47:33Z",
       "regime": "RISK_OFF",
       "accountValue": 0.0,
       "drawdownPct": 100.0,
       "openPositions": 0,
       "openOrders": 0,
-      "message": "Flat portfolio confirmed (MCP live). accountValue=$0.00, withdrawable=$0.00. RISK_OFF enforced. DD=100.00%. VPS decommissioned since 2026-03-23. No positions to manage."
+      "message": "Flat portfolio. Equity=$0.00, DD=100.0%, RISK_OFF. VPS decommissioned."
     }
   ],
   "lastChecked": "2026-05-14T16:32:16Z",
   "lastCheckAt": "2026-05-14T16:32:16Z",
   "dayStartDate": "2026-05-14",
-  "lastCheck": "2026-05-14T16:32:16Z",
+  "lastCheck": "2026-05-14T16:47:33Z",
   "lastUpdated": "2026-05-14T16:32:16Z",
   "drawdownPct": 100.0,
   "withdrawable": 0.0,

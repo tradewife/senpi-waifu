@@ -1,17 +1,18 @@
 {
-  "generatedAt": "2026-05-14T16:32:16Z",
   "source": "live",
+  "generatedAt": "2026-05-14T16:47:33Z",
+  "generatedBy": "jido-cron",
   "regime": {
     "mode": "RISK_OFF",
-    "reason": "Portfolio fully depleted (DD=100%). VPS decommissioned since 2026-03-23.",
-    "enforcedBy": "jido-monitor",
+    "reason": "Market=BASELINE (BTC slope=-0.31%, ATR=0.45%; ETH slope=-1.60%, ATR=0.52%) but RISK_OFF override active: DD 51.1% from catastrophic limit 20.0%",
+    "enforcedBy": "jido",
     "marketSignal": "N/A"
   },
   "strategy": {
     "name": "wolf-primary",
     "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
     "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce",
-    "budget": 100.0,
+    "budget": 100,
     "remaining": 0.0
   },
   "portfolio": {
@@ -23,40 +24,35 @@
     "dailyPnl": 0.0
   },
   "positions": [],
-  "orders": [],
+  "openOrders": 0,
   "guardrails": {
     "catastrophicDrawdown": {
       "threshold": 20,
       "actual": 100.0,
       "breached": true
     },
-    "dailyLossLimit": {
-      "threshold": 10,
-      "actual": 0.0,
-      "breached": false
-    },
     "consecutiveStopOuts": {
       "threshold": 4,
       "actual": 0,
       "breached": false
+    },
+    "dailyLossLimit": {
+      "threshold": 10,
+      "actual": 0.0,
+      "breached": false
     }
   },
+  "actions": [
+    "No positions to manage. RISK_OFF enforced. Flat portfolio heartbeat."
+  ],
+  "warnings": [
+    "Account fully depleted (equity=$0.00, DD=100%). Peak was $100.00.",
+    "VPS decommissioned since 2026-03-23T23:57:45Z. Only Hermes cron jobs active."
+  ],
   "infrastructure": {
     "vpsStatus": "decommissioned",
-    "vpsOfflineSince": "2026-03-23T23:57:05Z",
+    "vpsOfflineSince": "2026-03-23T23:57:45Z",
     "mcpStatus": "online",
     "mcpConsecutiveFailures": "0"
-  },
-  "warnings": [
-    "VPS decommissioned since 2026-03-23 (>52 days). All scanners offline. Hermes-managed crons only.",
-    "Portfolio fully depleted \u2014 accountValue=$0.00. No capital available for new positions."
-  ],
-  "actions": [
-    "JIDO heartbeat: flat portfolio confirmed via live MCP. RISK_OFF maintained. No positions to manage."
-  ],
-  "alerts": [
-    "CATASTROPHIC DRAWDOWN: 100.0% (wallet depleted)"
-  ],
-  "deadWeight": [],
-  "timestamp": "2026-05-14T16:32:16Z"
+  }
 }
