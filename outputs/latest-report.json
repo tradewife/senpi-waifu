@@ -1,24 +1,23 @@
 {
-  "generatedAt": "2026-05-14T00:16:52.320075+00:00",
+  "generatedAt": "2026-05-14T00:32:14Z",
   "source": "cached",
   "warnings": [
     "MCP server offline \u2014 all data from cached state. Last known equity: $48.89",
     "VPS decommissioned since 2026-03-23 (52 days). Scanner cron jobs not running.",
-    "DD 51.11% is based on cached equity from 2026-05-13 \u2014 actual DD may differ"
+    "DD 51.11% is based on cached equity \u2014 actual DD may differ"
   ],
   "regime": {
     "mode": "RISK_OFF",
     "reason": "Catastrophic drawdown: 51.11% exceeds 20.0% threshold",
-    "enforcedBy": "jido-cron",
+    "enforcedBy": "jido-guardrail",
     "marketSignal": "N/A (MCP offline)"
   },
   "portfolio": {
     "equity": 48.887581,
     "peak": 100.0,
     "drawdownPct": 51.11,
-    "withdrawable": null,
-    "dailyPnl": 0.0,
-    "dailyPnlPct": 0.0
+    "dayStartEquity": 48.887581,
+    "dailyPnl": 0.0
   },
   "guardrails": {
     "catastrophicDrawdown": {
@@ -26,35 +25,36 @@
       "actual": 51.11,
       "breached": true
     },
-    "consecutiveStopOuts": {
-      "threshold": 4,
-      "actual": 0,
-      "breached": false
-    },
-    "dailyLoss": {
+    "dailyLossLimit": {
       "threshold": 10.0,
       "actual": 0.0,
+      "breached": false
+    },
+    "maxConsecutiveStopOuts": {
+      "threshold": 4,
+      "actual": 0,
       "breached": false
     }
   },
   "positions": [],
   "actions": [
-    "Flat portfolio \u2014 no positions to manage",
-    "RISK_OFF enforced (DD 51.11% >> 20% threshold)",
-    "No emergency SL placement needed (no open positions)",
-    "All state files synced and committed"
+    {
+      "type": "JIDO_HEARTBEAT",
+      "timestamp": "2026-05-14T00:32:14Z",
+      "detail": "Flat portfolio, RISK_OFF, no action needed"
+    }
   ],
   "strategy": {
     "name": "wolf-primary",
     "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
     "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce",
-    "budget": 100,
+    "budget": 100.0,
     "remaining": 48.887581
   },
   "infrastructure": {
     "vpsStatus": "decommissioned",
-    "vpsOfflineSince": "2026-03-23T23:57:15Z",
+    "vpsOfflineSince": "2026-03-23T23:57:45Z",
     "mcpStatus": "offline",
-    "mcpConsecutiveFailures": "49+"
+    "mcpConsecutiveFailures": "58+"
   }
 }
