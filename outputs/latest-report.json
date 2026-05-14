@@ -1,12 +1,12 @@
 {
   "source": "cached",
-  "generatedAt": "2026-05-14T17:47:12Z",
+  "generatedAt": "2026-05-14T18:02:40Z",
   "generatedBy": "jido-cron",
   "regime": {
     "mode": "RISK_OFF",
-    "reason": "Portfolio depleted (DD 100%). MCP offline.",
-    "enforcedBy": "jido-cron",
-    "marketSignal": "N/A"
+    "reason": "Drawdown 100.0% exceeds catastrophic threshold 20%",
+    "enforcedBy": "jido-monitor",
+    "marketSignal": "N/A (MCP offline)"
   },
   "strategy": {
     "name": "wolf-primary",
@@ -19,41 +19,50 @@
     "equity": 0.0,
     "peak": 100.0,
     "drawdownPct": 100.0,
-    "dayStartEquity": 0.0
+    "dailyPnl": 0.0,
+    "withdrawable": 0.0
   },
   "positions": [],
   "openOrders": 0,
   "guardrails": {
     "catastrophicDrawdown": {
-      "threshold": 20.0,
+      "threshold": 20,
       "actual": 100.0,
       "breached": true
     },
-    "dailyLossLimit": {
-      "threshold": 10.0,
-      "actual": 0.0,
-      "breached": false
-    },
-    "maxConsecutiveStopOuts": {
+    "consecutiveStopOuts": {
       "threshold": 4,
       "actual": 0,
       "breached": false
+    },
+    "dailyLossLimit": {
+      "threshold": 10.0,
+      "actual": 100.0,
+      "breached": true
     }
   },
   "actions": [
-    "Heartbeat check \u2014 flat portfolio, no positions to manage"
+    {
+      "type": "REGIME_SYNC",
+      "detail": "risk-regime.json synced to RISK_OFF (was BASELINE)",
+      "timestamp": "2026-05-14T18:02:40Z"
+    },
+    {
+      "type": "BRAIN_SYNC",
+      "detail": "autonomous-brain.json synced with RISK_OFF regime",
+      "timestamp": "2026-05-14T18:02:40Z"
+    }
   ],
   "warnings": [
-    "MCP offline \u2014 2+ consecutive failures. Using cached state.",
-    "DD 100.0% confirmed from cached equity. Wallet fully depleted.",
-    "VPS decommissioned since 2026-03-23. Scanners offline.",
-    "Flat portfolio fast-path: no positions to manage."
+    "MCP server offline \u2014 all data from cached state",
+    "DD 100.0% based on cached equity \u2014 actual DD may differ",
+    "VPS offline since 2026-03-23 (>50 days) \u2014 effectively decommissioned"
   ],
   "infrastructure": {
     "vpsStatus": "decommissioned",
     "vpsOfflineSince": "2026-03-23T23:57:45Z",
     "mcpStatus": "offline",
-    "mcpConsecutiveFailures": "2+"
+    "mcpConsecutiveFailures": "3+"
   },
   "timestamp": "2026-05-14T17:32:20.176154Z"
 }

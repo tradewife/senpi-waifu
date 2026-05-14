@@ -7,16 +7,6 @@
   "alerts": [
     {
       "type": "JIDO_HEARTBEAT",
-      "timestamp": "2026-05-14T16:47:33Z",
-      "regime": "RISK_OFF",
-      "accountValue": 0.0,
-      "drawdownPct": 100.0,
-      "openPositions": 0,
-      "openOrders": 0,
-      "message": "Flat portfolio. Equity=$0.00, DD=100.0%, RISK_OFF. VPS decommissioned."
-    },
-    {
-      "type": "JIDO_HEARTBEAT",
       "timestamp": "2026-05-14T17:32:20.176154Z",
       "regime": "RISK_OFF",
       "accountValue": 0.0,
@@ -34,6 +24,16 @@
       "openPositions": 0,
       "openOrders": 0,
       "message": "Flat portfolio fast-path. MCP offline (2+ failures). Equity 0.0, DD 100.0%. VPS decommissioned since 2026-03-23."
+    },
+    {
+      "type": "JIDO_HEARTBEAT",
+      "timestamp": "2026-05-14T18:02:40Z",
+      "regime": "RISK_OFF",
+      "accountValue": 0.0,
+      "drawdownPct": 100.0,
+      "openPositions": 0,
+      "openOrders": 0,
+      "message": "MCP offline \u2014 flat portfolio (0 positions), DD 100.0% cached. VPS offline since 2026-03-23 (>50 days). Regime synced to RISK_OFF."
     }
   ],
   "lastChecked": "2026-05-14T16:32:16Z",

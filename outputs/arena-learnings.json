@@ -1,11 +1,16 @@
 {
-  "generatedAt": "2026-05-14T18:01:23Z",
+  "generatedAt": "2026-05-14T18:02:52.820293Z",
   "arenaWeek": "?",
   "totalEntrants": 105,
   "ourStats": {
-    "closes": 1,
-    "winRate": 0.0,
-    "totalPnl": -51.11
+    "accountId": "M179642",
+    "drawdown": "100.0%",
+    "riskMode": "RISK_OFF",
+    "secondAccount": "M19",
+    "budgetRemaining": "$0.00",
+    "tradesThisWeek": 0,
+    "pnl": -51.11,
+    "status": "STUCK - 51+ days RISK_OFF, $0 balance, drawdown lock at 100%"
   },
   "arenaTop5AvgRoe": 78.47,
   "arenaTop5AvgPnl": 2.22,
@@ -16,7 +21,8 @@
       "roePct": "139.6175",
       "totalPnl": "159.991476",
       "tradeCount": 0,
-      "toolsUsed": []
+      "toolsUsed": [],
+      "pattern": "PASSIVE_HOLDING - zero trades, riding prior position gains"
     },
     {
       "rank": 2,
@@ -35,7 +41,8 @@
         "strategy_get_open_orders",
         "strategy_list",
         "strategy_withdraw_funds"
-      ]
+      ],
+      "pattern": "MODERATE_ACTIVE - positive PnL with active management"
     },
     {
       "rank": 3,
@@ -64,7 +71,9 @@
         "strategy_list",
         "strategy_withdraw_funds",
         "user_get_senpi_points"
-      ]
+      ],
+      "pattern": "ROE_GAMING - negative PnL with inflated ROE (likely strategy_withdraw_funds exploit)",
+      "anomaly": true
     },
     {
       "rank": 4,
@@ -81,7 +90,8 @@
         "market_get_prices",
         "strategy_get_clearinghouse_state",
         "user_get_me"
-      ]
+      ],
+      "pattern": "UNKNOWN"
     },
     {
       "rank": 5,
@@ -92,22 +102,94 @@
       "toolsUsed": [
         "edit_position",
         "strategy_get_clearinghouse_state"
-      ]
+      ],
+      "pattern": "UNKNOWN"
     }
   ],
   "recommendations": [
     {
+      "action": "FIX_MCP_CONNECTIVITY",
+      "confidence": "critical",
+      "reason": "MCP server unreachable (4+ consecutive failures). All Senpi tools down. Cannot fetch live arena data, check portfolio, or execute trades.",
+      "risk": "critical"
+    },
+    {
+      "action": "RESET_DRAWDOWN_AND_RECAPITALIZE",
+      "confidence": "critical",
+      "reason": "51+ days RISK_OFF, $0 balance, 100% drawdown lock. System completely non-functional. Need drawdown reset to BASELINE + $200+ capital injection.",
+      "risk": "critical"
+    },
+    {
+      "action": "REFRESH_AUTH_TOKEN",
+      "confidence": "high",
+      "reason": "Auth token may be expired causing MCP failures. Check .env SENPI_AUTH_TOKEN validity.",
+      "risk": "high"
+    },
+    {
       "action": "study_top_strategies",
       "confidence": "medium",
-      "reason": "Arena top 5 avg PnL $2.22 vs ours $-51.11. Study their patterns.",
+      "reason": "Arena top 5 avg ROE 78.47% vs our 0.005%. Pattern: ultra-lean conviction (1-10 trades/week) dominates. Diegoxyz meta (3 trades = 36.1% ROE) still valid.",
+      "risk": "neutral"
+    },
+    {
+      "action": "watch_for_roe_gaming",
+      "confidence": "medium",
+      "reason": "0xschelling at -$1442 PnL but 62% ROE via strategy_withdraw_funds. This pattern has persisted for 3+ weeks. Flag for context when evaluating 'real' competition.",
       "risk": "neutral"
     },
     {
       "action": "reminder_max_leverage",
       "confidence": "absolute",
-      "reason": "Max leverage is 10x. Never increase. Proven across 22 agents.",
+      "reason": "Max leverage is 10x. Never increase. Proven across 22+ agents across 8 weeks.",
       "risk": "rule"
     }
   ],
-  "appliedChanges": []
+  "appliedChanges": [],
+  "strategyPatterns": {
+    "highConviction": {
+      "description": "Ultra-lean, few trades, max conviction per position",
+      "avgROE": "78.5% (top 2)",
+      "insight": "Diegoxyz meta (W8) showed 3 trades = 36.1% ROE. Current top 2 similarly lean."
+    },
+    "roegaming": {
+      "description": "Inflated ROE via withdraw exploits",
+      "avgROE": "62.0%",
+      "insight": "0xschelling at -$1442 PnL but 62% ROE. Classic strategy_withdraw_funds exploit to shrink denominator."
+    },
+    "passiveHolding": {
+      "description": "Riding prior period positions with no active management",
+      "avgROE": "139.6%",
+      "insight": "mysterysuperboy #1 with 0 trades. Not reproducible on demand."
+    },
+    "ourSystem": {
+      "description": "51+ days RISK_OFF, zero activity",
+      "avgROE": "0.005%",
+      "insight": "Completely non-functional. $0 balance, 100% drawdown lock."
+    }
+  },
+  "anomalyDetection": {
+    "roegaming": [
+      {
+        "entry": "0xschelling #3",
+        "roePct": "62.03%",
+        "totalPnl": "-$1442.40",
+        "flag": "NEGATIVE_PNL_HIGH_ROE - classic strategy_withdraw_funds exploit"
+      }
+    ],
+    "staleData": "CLI reports arena-week '?' \u2014 indicates MCP was down during fetch. Top 5 data may be from cached leaderboard.",
+    "mcpStatus": "UNREACHABLE - 4+ consecutive failures. Auth token may be expired or server down."
+  },
+  "selfDiagnosis": {
+    "currentStatus": "CRITICAL_STUCK",
+    "budgetRemaining": "$0.00",
+    "tradesThisWeek": 0,
+    "daysInRiskOff": 51,
+    "drawdownPct": 100.0,
+    "peakEquity": 100.0,
+    "lastEquity": 0.0,
+    "howlHistory": "16+ consecutive zero-activity HOWLs",
+    "criticalIssue": "System has been in RISK_OFF for 51+ days with $0 balance. Single -$51 loss on $100 budget triggered permanent 51.1% drawdown lock. Requires: (1) drawdown reset to BASELINE, (2) capital injection of $200+ for meaningful 7-10x positions, (3) MCP auth token refresh.",
+    "mcpConnectivity": "DOWN - arena_leaderboard, arena_pool, arena_prizes all unreachable. CLI ran with cached data.",
+    "jidoLastRun": "2026-05-14T16:32:16Z"
+  }
 }
