@@ -1,10 +1,10 @@
 {
   "source": "cached",
-  "generatedAt": "2026-05-14T16:47:33Z",
+  "generatedAt": "2026-05-14T17:47:12Z",
   "generatedBy": "jido-cron",
   "regime": {
     "mode": "RISK_OFF",
-    "reason": "Wallet fully depleted (DD 100%). MCP offline.",
+    "reason": "Portfolio depleted (DD 100%). MCP offline.",
     "enforcedBy": "jido-cron",
     "marketSignal": "N/A"
   },
@@ -12,42 +12,40 @@
     "name": "wolf-primary",
     "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
     "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce",
-    "budget": 100,
+    "budget": 100.0,
     "remaining": 0.0
   },
   "portfolio": {
     "equity": 0.0,
     "peak": 100.0,
     "drawdownPct": 100.0,
-    "withdrawable": 0.0,
-    "dayStartEquity": 0.0,
-    "dailyPnl": 0.0
+    "dayStartEquity": 0.0
   },
   "positions": [],
   "openOrders": 0,
   "guardrails": {
     "catastrophicDrawdown": {
-      "threshold": 20,
+      "threshold": 20.0,
       "actual": 100.0,
       "breached": true
     },
     "dailyLossLimit": {
-      "threshold": 10,
+      "threshold": 10.0,
       "actual": 0.0,
       "breached": false
     },
-    "consecutiveStopOuts": {
+    "maxConsecutiveStopOuts": {
       "threshold": 4,
       "actual": 0,
       "breached": false
     }
   },
   "actions": [
-    "JIDO heartbeat: flat portfolio, MCP offline, RISK_OFF enforced"
+    "Heartbeat check \u2014 flat portfolio, no positions to manage"
   ],
   "warnings": [
-    "MCP offline \u2014 1+ consecutive failures. Using cached state.",
-    "DD 100% confirmed from cached equity. Wallet fully depleted.",
+    "MCP offline \u2014 2+ consecutive failures. Using cached state.",
+    "DD 100.0% confirmed from cached equity. Wallet fully depleted.",
     "VPS decommissioned since 2026-03-23. Scanners offline.",
     "Flat portfolio fast-path: no positions to manage."
   ],
@@ -55,7 +53,7 @@
     "vpsStatus": "decommissioned",
     "vpsOfflineSince": "2026-03-23T23:57:45Z",
     "mcpStatus": "offline",
-    "mcpConsecutiveFailures": "1+"
+    "mcpConsecutiveFailures": "2+"
   },
   "timestamp": "2026-05-14T17:32:20.176154Z"
 }
