@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-05-14T06:33:09.300302Z",
+  "generatedAt": "2026-05-14T06:47:15.162555Z",
   "source": "cached",
   "warnings": [
-    "MCP server offline (53+ consecutive failures) \u2014 all data from cached state",
+    "MCP server offline (54+ consecutive failures) \u2014 all data from cached state",
     "DD 51.1% based on cached equity from last known-good update \u2014 actual DD may differ",
     "VPS scanners offline since 2026-03-23 \u2014 decommissioned status"
   ],
@@ -40,8 +40,8 @@
   "actions": [
     {
       "type": "JIDO_HEARTBEAT",
-      "timestamp": "2026-05-14T06:33:09.300302Z",
-      "detail": "Flat portfolio, RISK_OFF enforced, no positions to manage"
+      "timestamp": "2026-05-14T06:47:15.162555Z",
+      "detail": "Flat portfolio, RISK_OFF enforced, MCP offline \u2014 cached fast-path"
     }
   ],
   "strategy": {
@@ -55,6 +55,6 @@
     "vpsStatus": "decommissioned",
     "vpsOfflineSince": "2026-03-23T23:57:45Z",
     "mcpStatus": "offline",
-    "mcpConsecutiveFailures": "53+"
+    "mcpConsecutiveFailures": "54+"
   }
 }
