@@ -1,9 +1,9 @@
 {
   "source": "cached",
-  "generatedAt": "2026-05-14T22:47:05Z",
+  "generatedAt": "2026-05-14T23:03:09Z",
   "regime": {
     "mode": "RISK_OFF",
-    "reason": "DD 100% \u2014 equity fully depleted",
+    "reason": "DD 100% \u2014 equity fully depleted (regime override #6, classifier set BASELINE)",
     "enforcedBy": "jido-monitor",
     "marketSignal": null
   },
@@ -11,7 +11,11 @@
     "equity": 0.0,
     "peak": 100.0,
     "drawdownPct": 100.0,
-    "dailyPnl": 0.0
+    "withdrawable": 0.0,
+    "dayStartEquity": 0.0,
+    "dailyPnl": 0.0,
+    "openPositions": 0,
+    "openOrders": 0
   },
   "strategy": {
     "name": "wolf-primary",
@@ -26,31 +30,32 @@
       "actual": 100.0,
       "breached": true
     },
+    "consecutiveStopOuts": {
+      "threshold": 4,
+      "actual": 0,
+      "breached": false
+    },
     "dailyLossLimit": {
       "threshold": 10,
       "actual": 0.0,
-      "breached": false
-    },
-    "maxConsecutiveStopOuts": {
-      "threshold": 4,
-      "actual": 0,
       "breached": false
     }
   },
   "positions": [],
   "actions": [
-    "JIDO heartbeat \u2014 no positions, MCP offline (fail_str=5+)"
+    "JIDO heartbeat \u2014 no positions, MCP offline (fail_str=6+), regime override #6"
   ],
   "infrastructure": {
     "vpsStatus": "decommissioned",
     "vpsOfflineSince": "2026-03-23T23:57:15Z",
     "mcpStatus": "offline",
-    "mcpConsecutiveFailures": "5+"
+    "mcpConsecutiveFailures": "6+"
   },
   "warnings": [
     "MCP offline \u2014 using cached state",
     "VPS decommissioned since 2026-03-23",
-    "DD 100% based on cached equity from previous sessions \u2014 account fully depleted"
+    "DD 100% based on cached equity \u2014 account fully depleted",
+    "Regime classifier overrode RISK_OFF\u2192BASELINE at 23:01Z \u2014 JIDO override #6 applied"
   ],
   "alerts": [
     {

@@ -1,8 +1,8 @@
 {
-  "riskMode": "BASELINE",
-  "updatedAt": "2026-05-14T23:01:19Z",
-  "updatedBy": "waifu-regime",
-  "reason": "Mixed signals (slope=1.3%, ATR=1.5%)",
+  "riskMode": "RISK_OFF",
+  "updatedAt": "2026-05-14T23:03:09Z",
+  "updatedBy": "jido-emergency",
+  "reason": "JIDO OVERRIDE: DD 100% exceeds 20% threshold \u2014 regime classifier set BASELINE but account is fully depleted",
   "regimes": {
     "RISK_ON": {
       "maxSlots": 3,
