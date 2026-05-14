@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-05-14T08:32:04.569112+00:00",
+  "generatedAt": "2026-05-14T09:17:39Z",
   "codebaseIndexAt": "2026-03-23T23:57:15Z",
   "riskMode": "RISK_OFF",
   "executionPolicy": {
-    "generatedAt": "2026-05-14T08:32:04.569112+00:00",
+    "generatedAt": "2026-05-14T09:17:39Z",
     "mode": "ACTIVE",
     "blockNewEntries": true,
     "allowAutoEntry": false,
