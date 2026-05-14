@@ -1,43 +1,18 @@
 {
-  "source": "live",
-  "generatedAt": "2026-05-14T20:32:48Z",
+  "source": "cached",
+  "generatedAt": "2026-05-14T21:17:48Z",
   "regime": {
     "mode": "RISK_OFF",
-    "reason": "Portfolio depleted (100% DD). Account value $0.00.",
-    "enforcedBy": "jido-guardrail",
-    "marketSignal": "REGIME_OVERRIDE: DD=100.0% exceeds catastrophic 20% threshold. Wallet fully depleted ($0.00 / $100.00 budget). MCP offline. Override #1 (regime-classifier race condition)."
+    "reason": "DD 100.0% exceeds 20% threshold. Account depleted (lastEquity=0.0).",
+    "enforcedBy": "jido-monitor",
+    "marketSignal": "N/A"
   },
   "portfolio": {
     "equity": 0.0,
     "peak": 100.0,
     "drawdownPct": 100.0,
-    "dailyPnl": 0.0,
-    "withdrawable": 0.0,
-    "dayStartEquity": 0.0
+    "dailyPnl": 0.0
   },
-  "guardrails": {
-    "catastrophicDrawdown": {
-      "threshold": 20,
-      "actual": 100.0,
-      "breached": true
-    },
-    "dailyLossLimit": {
-      "threshold": 10,
-      "actual": 0.0,
-      "breached": false
-    },
-    "consecutiveStopOuts": {
-      "threshold": 4,
-      "actual": 0,
-      "breached": false
-    }
-  },
-  "positions": [],
-  "actions": [
-    "RISK_OFF enforced \u2014 account depleted at $0.00",
-    "No positions to manage",
-    "No emergency actions needed (flat portfolio)"
-  ],
   "strategy": {
     "name": "wolf-primary",
     "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
@@ -45,15 +20,71 @@
     "budget": 100,
     "remaining": 0.0
   },
+  "guardrails": {
+    "catastrophicDrawdown": {
+      "threshold": 20,
+      "actual": 100.0,
+      "breached": true
+    },
+    "consecutiveStopOuts": {
+      "threshold": 4,
+      "actual": 0,
+      "breached": false
+    },
+    "dailyLossLimit": {
+      "threshold": 10,
+      "actual": 0.0,
+      "breached": false
+    }
+  },
+  "positions": [],
+  "actions": [
+    "MCP offline - using cached state",
+    "Flat portfolio confirmed (0 positions)",
+    "RISK_OFF maintained - DD 100% exceeds 20% threshold"
+  ],
   "infrastructure": {
     "vpsStatus": "decommissioned",
-    "vpsOfflineSince": "2026-03-23T23:57:05Z",
-    "mcpStatus": "online",
-    "mcpConsecutiveFailures": "0"
+    "vpsOfflineSince": "2026-03-23T23:57:15Z",
+    "mcpStatus": "offline",
+    "mcpConsecutiveFailures": "1+"
   },
   "warnings": [
-    "Account fully depleted ($0.00 equity, 100% drawdown from $100 peak)",
-    "VPS decommissioned since 2026-03-23 \u2014 all cron jobs Hermes-only",
-    "No capital available for trading until new funds deposited"
+    "MCP server offline - all data from cache",
+    "DD 100.0% based on cached equity from 2026-05-14T20:32:48Z \u2014 actual DD may differ",
+    "VPS decommissioned since 2026-03-23 (51+ days offline)",
+    "MCP has been offline for 1+ consecutive JIDO runs"
+  ],
+  "alerts": [
+    {
+      "type": "JIDO_HEARTBEAT",
+      "timestamp": "2026-05-14T20:17:15Z",
+      "regime": "RISK_OFF",
+      "accountValue": 0.0,
+      "drawdownPct": 100.0,
+      "openPositions": 0,
+      "openOrders": 0,
+      "message": "JIDO heartbeat \u2014 MCP offline (2+ failures), flat portfolio, DD 100.0% based on cached equity. Account fully depleted. RISK_OFF enforced. VPS decommissioned since 2026-03-23."
+    },
+    {
+      "type": "JIDO_HEARTBEAT",
+      "timestamp": "2026-05-14T20:32:48Z",
+      "regime": "RISK_OFF",
+      "accountValue": 0.0,
+      "drawdownPct": 100.0,
+      "openPositions": 0,
+      "openOrders": 0,
+      "message": "Flat portfolio confirmed (MCP live). Equity $0.00, DD 100.0%. RISK_OFF enforced. 0 positions, 0 open orders."
+    },
+    {
+      "type": "JIDO_HEARTBEAT",
+      "timestamp": "2026-05-14T21:17:48Z",
+      "regime": "RISK_OFF",
+      "accountValue": 0.0,
+      "drawdownPct": 100.0,
+      "openPositions": 0,
+      "openOrders": 0,
+      "message": "Flat portfolio, MCP offline (fail_str=1+). DD 100.0% (cached, stale since 2026-05-14T20:32:48Z). VPS decommissioned since 2026-03-23."
+    }
   ]
 }
