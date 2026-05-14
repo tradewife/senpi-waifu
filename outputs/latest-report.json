@@ -1,60 +1,55 @@
 {
-  "generatedAt": "2026-05-14T00:32:14Z",
+  "generatedAt": "2026-05-14T00:47:25.478257+00:00",
   "source": "cached",
   "warnings": [
-    "MCP server offline \u2014 all data from cached state. Last known equity: $48.89",
-    "VPS decommissioned since 2026-03-23 (52 days). Scanner cron jobs not running.",
-    "DD 51.11% is based on cached equity \u2014 actual DD may differ"
+    "MCP server offline \u2014 all data from local cache",
+    "DD 51.11% based on cached equity \u2014 actual DD may differ",
+    "VPS scanners offline since 2026-03-23 (52 days) \u2014 treat as decommissioned"
   ],
   "regime": {
     "mode": "RISK_OFF",
-    "reason": "Catastrophic drawdown: 51.11% exceeds 20.0% threshold",
-    "enforcedBy": "jido-guardrail",
-    "marketSignal": "N/A (MCP offline)"
+    "reason": "DD 51.11% exceeds 20% catastrophic threshold",
+    "enforcedBy": "jido-cron",
+    "marketSignal": "N/A"
   },
   "portfolio": {
     "equity": 48.887581,
     "peak": 100.0,
     "drawdownPct": 51.11,
-    "dayStartEquity": 48.887581,
-    "dailyPnl": 0.0
+    "dayStartEquity": 48.887581
   },
   "guardrails": {
     "catastrophicDrawdown": {
-      "threshold": 20.0,
+      "threshold": 20,
       "actual": 51.11,
       "breached": true
     },
-    "dailyLossLimit": {
-      "threshold": 10.0,
-      "actual": 0.0,
+    "consecutiveStopOuts": {
+      "threshold": 4,
+      "actual": 0,
       "breached": false
     },
-    "maxConsecutiveStopOuts": {
-      "threshold": 4,
+    "dailyLossLimit": {
+      "threshold": 10,
       "actual": 0,
       "breached": false
     }
   },
   "positions": [],
   "actions": [
-    {
-      "type": "JIDO_HEARTBEAT",
-      "timestamp": "2026-05-14T00:32:14Z",
-      "detail": "Flat portfolio, RISK_OFF, no action needed"
-    }
+    "JIDO heartbeat \u2014 flat portfolio, RISK_OFF enforced, MCP offline"
   ],
   "strategy": {
     "name": "wolf-primary",
     "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
     "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce",
-    "budget": 100.0,
+    "budget": 100,
     "remaining": 48.887581
   },
   "infrastructure": {
     "vpsStatus": "decommissioned",
     "vpsOfflineSince": "2026-03-23T23:57:45Z",
     "mcpStatus": "offline",
-    "mcpConsecutiveFailures": "58+"
+    "mcpConsecutiveFailures": "unknown"
   }
 }
