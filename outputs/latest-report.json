@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-14T14:32:04Z",
+  "generatedAt": "2026-05-14T15:16:13Z",
   "source": "live",
   "regime": {
     "mode": "RISK_OFF",
@@ -57,7 +57,7 @@
   ],
   "actions": [],
   "alerts": [
-    "CATASTROPHIC DRAWDOWN: 51.1%"
+    "CATASTROPHIC DRAWDOWN: 100.0% (wallet depleted)"
   ],
   "deadWeight": []
 }
