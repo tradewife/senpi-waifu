@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-05-14T00:02:53.114453+00:00",
+  "generatedAt": "2026-05-14T00:16:52.320075+00:00",
   "source": "cached",
   "warnings": [
     "MCP server offline \u2014 all data from cached state. Last known equity: $48.89",
-    "VPS decommissioned since 2026-03-23 (51 days). Scanner cron jobs not running.",
+    "VPS decommissioned since 2026-03-23 (52 days). Scanner cron jobs not running.",
     "DD 51.11% is based on cached equity from 2026-05-13 \u2014 actual DD may differ"
   ],
   "regime": {
@@ -55,6 +55,6 @@
     "vpsStatus": "decommissioned",
     "vpsOfflineSince": "2026-03-23T23:57:15Z",
     "mcpStatus": "offline",
-    "mcpConsecutiveFailures": "58+"
+    "mcpConsecutiveFailures": "49+"
   }
 }
