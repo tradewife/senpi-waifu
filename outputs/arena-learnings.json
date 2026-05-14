@@ -1,104 +1,306 @@
 {
-  "generatedAt": "2026-05-14T14:17:45Z",
-  "arenaWeek": "?",
+  "generatedAt": "2026-05-14T14:19:46.413630+00:00",
+  "arenaWeek": 8,
   "totalEntrants": 105,
-  "ourStats": {
-    "closes": 1,
-    "winRate": 0.0,
-    "totalPnl": -51.11
+  "pool": {
+    "weekNumber": 8,
+    "totalPool": 5374.87,
+    "prizeBreakdown": [
+      {
+        "rank": 1,
+        "prize": 2149.95,
+        "sharePct": 40,
+        "name": "Diegoxyz"
+      },
+      {
+        "rank": 2,
+        "prize": 1343.72,
+        "sharePct": 25,
+        "name": "YellowFolder"
+      },
+      {
+        "rank": 3,
+        "prize": 806.23,
+        "sharePct": 15,
+        "name": "mysterysuperboy"
+      },
+      {
+        "rank": 4,
+        "prize": 644.98,
+        "sharePct": 12,
+        "name": "0xschelling (ROE gaming)"
+      },
+      {
+        "rank": 5,
+        "prize": 429.99,
+        "sharePct": 8,
+        "name": "KhakiLoop (ROE gaming)"
+      }
+    ],
+    "monthPool": 8276.42,
+    "nextWeekPool": 5049.3
   },
-  "arenaTop5AvgRoe": 24.41,
-  "arenaTop5AvgPnl": -65.52,
+  "ourStats": {
+    "accountId": "M179642",
+    "name": "trade_wife",
+    "rank": 15,
+    "roePct": 0.0049,
+    "totalPnl": -48.89,
+    "currentBalance": 0.0,
+    "tradeCount": 0,
+    "toolsUsed": 2,
+    "drawdown": 51.11,
+    "riskMode": "RISK_OFF",
+    "secondAccount": {
+      "userId": "M19",
+      "name": "prashantfb65",
+      "rank": 16,
+      "roePct": 0.0,
+      "balance": 119.25,
+      "toolsUsed": [
+        "wolf-strategy"
+      ],
+      "status": "0% ROE, $119 balance, using wolf-strategy skill but no activity this week"
+    }
+  },
   "arenaTop5": [
     {
       "rank": 1,
       "name": "Diegoxyz",
-      "roePct": "36.0732",
-      "totalPnl": "854.782466",
+      "roePct": 36.0732,
+      "totalPnl": 854.78,
       "tradeCount": 3,
-      "toolsUsed": [
-        "account_get_portfolio",
-        "edit_position",
-        "market_get_prices",
-        "strategy_get_clearinghouse_state",
-        "user_get_me"
-      ]
+      "toolsUsed": 5,
+      "xHandle": "diegoxyz",
+      "isGaming": false,
+      "pattern": "ULTRA-LEAN: 3 trades, 5 tools, massive conviction. $285/trade avg PnL."
     },
     {
       "rank": 2,
       "name": "YellowFolder",
-      "roePct": "27.5637",
-      "totalPnl": "408.675426",
+      "roePct": 27.5637,
+      "totalPnl": 408.68,
       "tradeCount": 20,
-      "toolsUsed": [
-        "account_get_portfolio",
-        "cancel_order",
-        "close_position",
-        "create_position",
-        "edit_position",
-        "execution_get_order_status",
-        "strategy_get_clearinghouse_state",
-        "strategy_get_open_orders",
-        "strategy_list"
-      ]
+      "toolsUsed": 9,
+      "xHandle": "0xschelling",
+      "isGaming": false,
+      "pattern": "MODERATE FREQ: 20 trades, 9 tools, consistent performer. Second 0xschelling entry."
     },
     {
       "rank": 3,
       "name": "mysterysuperboy",
-      "roePct": "23.5433",
-      "totalPnl": "46.881768",
+      "roePct": 23.5433,
+      "totalPnl": 46.88,
       "tradeCount": 0,
-      "toolsUsed": []
+      "toolsUsed": 0,
+      "xHandle": "aparjey",
+      "isGaming": false,
+      "pattern": "PASSIVE: 0 trades, 0 tools. Position held from prior period, riding unrealized gains."
     },
     {
       "rank": 4,
       "name": "0xschelling",
-      "roePct": "20.5368",
-      "totalPnl": "-1470.206259",
+      "roePct": 20.5368,
+      "totalPnl": -1470.21,
       "tradeCount": 5,
-      "toolsUsed": [
-        "account_get_portfolio",
-        "arena_leaderboard",
-        "arena_prizes",
-        "close_position",
-        "create_position",
-        "leaderboard_get_markets",
-        "market_get_asset_data",
-        "market_get_funding_history",
-        "market_get_funding_regime",
-        "market_list_instruments",
-        "strategy_get_clearinghouse_state",
-        "strategy_get_open_orders",
-        "strategy_list",
-        "strategy_withdraw_funds"
-      ]
+      "toolsUsed": 14,
+      "xHandle": "0xschelling",
+      "isGaming": true,
+      "pattern": "ROE GAMING: -$1470 PnL with 20.5% ROE. Uses strategy_withdraw_funds. Classic withdrawal inflation."
     },
     {
       "rank": 5,
       "name": "KhakiLoop",
-      "roePct": "14.3221",
-      "totalPnl": "-167.715926",
+      "roePct": 14.3221,
+      "totalPnl": -167.72,
       "tradeCount": 7,
-      "toolsUsed": [
-        "account_get_portfolio",
-        "cancel_order",
-        "close_position",
-        "create_position",
-        "edit_position",
-        "execution_get_order_status",
-        "strategy_get_clearinghouse_state",
-        "strategy_get_open_orders",
-        "strategy_list",
-        "strategy_withdraw_funds"
-      ]
+      "toolsUsed": 10,
+      "xHandle": "0xschelling",
+      "isGaming": true,
+      "pattern": "ROE GAMING: -$168 PnL with 14.3% ROE. Uses strategy_withdraw_funds. Second 0xschelling alt."
     }
   ],
+  "arenaTop5AvgRoe": 24.41,
+  "arenaTop5AvgPnl": -65.52,
+  "topPerformerProfile": {
+    "name": "Diegoxyz",
+    "userId": "M192725",
+    "roePct": 36.07,
+    "totalPnl": 854.78,
+    "tradeCount": 3,
+    "volume": 31569.15,
+    "toolsCount": 5,
+    "tools": [
+      "account_get_portfolio",
+      "edit_position",
+      "market_get_prices",
+      "strategy_get_clearinghouse_state",
+      "user_get_me"
+    ],
+    "pnlPerTrade": 284.93,
+    "volumeEfficiency": 2.71,
+    "notes": "ULTRA-LEAN champion. Only 3 trades all week for $855 profit. $285/trade. Uses minimal toolset (5 tools) - just position management basics. Zero skills. No ROE gaming (positive PnL). Highest dollar PnL on leaderboard. Pattern: open large position, manage via edit_position, ride conviction."
+  },
+  "strategyPatterns": {
+    "highConviction": {
+      "agents": [
+        "Diegoxyz",
+        "baztaman"
+      ],
+      "avgROE": 21.31,
+      "bestPerformer": "Diegoxyz",
+      "insight": "Ultra-lean (2 agents) avg 21.3% ROE. Diegoxyz = 3 trades for $855. Maximum conviction per entry."
+    },
+    "activeManager": {
+      "agents": [
+        "YellowFolder",
+        "KhakiLoop",
+        "OlivineCrackers",
+        "Aaron"
+      ],
+      "avgROE": 13.64,
+      "bestPerformer": "YellowFolder",
+      "insight": "Moderate frequency (4 agents). YellowFolder best at 20 trades. Over 30 trades (rpine=113) = losses."
+    },
+    "passiveSkill": {
+      "agents": [
+        "mysterysuperboy",
+        "Bison12",
+        "RedFloppy",
+        "trade_wife"
+      ],
+      "avgROE": 6.87,
+      "bestPerformer": "mysterysuperboy",
+      "insight": "Passive holders (4 agents). mysterysuperboy at 23.5% via held position. Most passive agents at 0%."
+    },
+    "deepResearch": {
+      "agents": [
+        "0xschelling",
+        "Bison12",
+        "Aaron"
+      ],
+      "avgROE": 8.39,
+      "insight": "Heavy tool users (3 agents, 12+ tools). Aaron (25 tools) = 1.99% ROE. More tools \u2260 better performance."
+    }
+  },
+  "anomalyDetection": {
+    "count": 3,
+    "entries": [
+      {
+        "name": "0xschelling",
+        "userId": "M193967",
+        "roePct": 20.5368,
+        "totalPnl": -1470.21,
+        "issue": "Negative PnL ($-1470) with high ROE (20.5%). Likely withdrawal-based ROE inflation via strategy_withdraw_funds."
+      },
+      {
+        "name": "KhakiLoop",
+        "userId": "M194754",
+        "roePct": 14.3221,
+        "totalPnl": -167.72,
+        "issue": "Negative PnL ($-168) with high ROE (14.3%). Likely withdrawal-based ROE inflation via strategy_withdraw_funds."
+      },
+      {
+        "name": "OrangeShield",
+        "userId": "M194764",
+        "roePct": 1.3758,
+        "totalPnl": -1048.41,
+        "issue": "Negative PnL ($-1048) with 1.4% ROE. Uses strategy_top_up and strategy_withdraw_funds. ROE inflated by withdrawals."
+      }
+    ],
+    "summary": "3 entries flagged for ROE gaming (negative PnL + high ROE). All are 0xschelling syndicate entries or OrangeShield using strategy_withdraw_funds to inflate ROE."
+  },
+  "selfDiagnosis": {
+    "currentStatus": "RISK_OFF - STUCK",
+    "accountId": "M179642",
+    "secondAccount": {
+      "userId": "M19",
+      "name": "prashantfb65",
+      "rank": 16,
+      "roePct": 0.0,
+      "balance": 119.25,
+      "toolsUsed": [
+        "wolf-strategy"
+      ],
+      "status": "0% ROE, $119 balance, using wolf-strategy skill but no activity this week"
+    },
+    "drawdown": {
+      "pct": 51.11,
+      "peakEquity": 100.0,
+      "currentEquity": 48.89,
+      "daysInRiskOff": 51,
+      "status": "PERMANENTLY STUCK - no auto-recovery mechanism"
+    },
+    "budgetRemaining": 0.0,
+    "tradesThisWeek": 0,
+    "tradesAllTime": 1,
+    "allTimePnl": -51.11,
+    "howlHistory": "17 consecutive HOWLs with 0 trades (2026-03-24 to 2026-05-14)",
+    "criticalIssue": "RISK_OFF lock for 51+ days. Single -$51 loss on $100 budget = 51.1% drawdown exceeds 20% threshold permanently. currentBalance=$0 (all funds withdrawn or lost). Auth degraded (portfolio API returns 'User not authorized'). Need capital injection + drawdown reset to resume."
+  },
+  "winningMeta": {
+    "week": 8,
+    "date": "2026-05-14",
+    "patterns": [
+      "ULTRA-LEAN wins: Diegoxyz #1 with 3 trades, $855 PnL",
+      "Conviction > frequency: 3 trades beats 113 (rpine lost $90)",
+      "ROE gaming rampant: 3 of top 5 have negative PnL (0xschelling syndicate)",
+      "Lean toolstack: top 3 use 0-9 tools. 25+ tools = underperformance",
+      "Passive holding works: mysterysuperboy #3 with 0 trades (riding held position)",
+      "strategy_top_up confirmed meta: OrangeShield (rank 11) still uses it but negative PnL this week",
+      "Passive skills dead: wolf-strategy, spider-strategy, grizzly-strategy, condor-strategy all at 0% ROE",
+      "betashop syndicate: 10+ entries, all at 0% except Bison12 (2.6%)",
+      "mysterysuperboy: unknown agent at #3 with 0 trades, 0 tools \u2014 fully passive, riding prior position gains"
+    ]
+  },
   "recommendations": [
     {
-      "action": "reminder_max_leverage",
-      "confidence": "absolute",
-      "reason": "Max leverage is 10x. Never increase. Proven across 22 agents.",
+      "action": "CAPITAL_INJECTION",
+      "confidence": "CRITICAL",
+      "reason": "currentBalance=$0. Cannot trade with zero capital. Need minimum $100 fresh deposit to participate meaningfully in arena.",
+      "risk": "critical"
+    },
+    {
+      "action": "RESET_DRAWDOWN",
+      "confidence": "CRITICAL",
+      "reason": "51.1% drawdown lock for 51+ days. Even with capital, system won't trade until drawdown counter resets. Requires manual config change or new strategy wallet.",
+      "risk": "critical"
+    },
+    {
+      "action": "FIX_AUTH",
+      "confidence": "HIGH",
+      "reason": "account_get_portfolio returns 'User not authorized'. Token may be expired or mis-scoped. Cannot monitor positions or execute trades without working auth.",
+      "risk": "high"
+    },
+    {
+      "action": "EMULATE_DIEGOXYZ",
+      "confidence": "HIGH",
+      "reason": "Week 8 #1 Diegoxyz: 3 trades, 5 tools, $855 PnL, 36% ROE. Ultra-lean conviction approach. Our system was designed for this exact pattern (Polar scanner). Once operational, target 1-3 high-conviction trades/week.",
+      "risk": "neutral"
+    },
+    {
+      "action": "AVOID_ROE_GAMING_PATTERN",
+      "confidence": "HIGH",
+      "reason": "3 of top 5 (0xschelling entries) have negative PnL with inflated ROE via strategy_withdraw_funds. This is a known exploit. Do NOT emulate. Focus on legitimate positive-PnL entries only.",
       "risk": "rule"
+    },
+    {
+      "action": "LEAN_TOOLSTACK",
+      "confidence": "MEDIUM",
+      "reason": "Top performers use 2-9 tools. Diegoxyz=5, YellowFolder=9. Heavy tool users (Aaron=25, rpine=12) underperform. Our 7-tool scanner stack is in the right range if auth works.",
+      "risk": "neutral"
+    },
+    {
+      "action": "reminder_max_leverage",
+      "confidence": "HIGH",
+      "reason": "Max leverage is 10x. Never increase. Proven across 22+ agents. Diegoxyz likely uses moderate leverage for $285/trade avg.",
+      "risk": "rule"
+    },
+    {
+      "action": "M19_ACTIVATE_WOLF_STRATEGY",
+      "confidence": "MEDIUM",
+      "reason": "M19 (prashantfb65) has $119 balance and wolf-strategy skill but 0% ROE. Previously reached #5 with passive wolf-strategy earning. Consider if the skill needs config update or fresh capital.",
+      "risk": "neutral"
     }
   ],
   "appliedChanges": []
