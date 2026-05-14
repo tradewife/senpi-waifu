@@ -1,11 +1,11 @@
 {
   "source": "cached",
-  "generatedAt": "2026-05-14T21:31:40Z",
+  "generatedAt": "2026-05-14T22:17:00Z",
   "regime": {
     "mode": "RISK_OFF",
-    "reason": "DD 100.0% exceeds 20% threshold. Account depleted (lastEquity=0.0).",
+    "reason": "DD 100% \u2014 equity fully depleted",
     "enforcedBy": "jido-monitor",
-    "marketSignal": "N/A"
+    "marketSignal": null
   },
   "portfolio": {
     "equity": 0.0,
@@ -26,35 +26,31 @@
       "actual": 100.0,
       "breached": true
     },
-    "consecutiveStopOuts": {
-      "threshold": 4,
-      "actual": 0,
-      "breached": false
-    },
     "dailyLossLimit": {
       "threshold": 10,
       "actual": 0.0,
+      "breached": false
+    },
+    "maxConsecutiveStopOuts": {
+      "threshold": 4,
+      "actual": 0,
       "breached": false
     }
   },
   "positions": [],
   "actions": [
-    "MCP offline - using cached state",
-    "Flat portfolio confirmed (0 positions)",
-    "RISK_OFF maintained - DD 100% exceeds 20% threshold",
-    "MCP consecutive failures: 2+"
+    "JIDO heartbeat \u2014 no positions, no action needed"
   ],
   "infrastructure": {
     "vpsStatus": "decommissioned",
     "vpsOfflineSince": "2026-03-23T23:57:15Z",
     "mcpStatus": "offline",
-    "mcpConsecutiveFailures": "2+"
+    "mcpConsecutiveFailures": "3+"
   },
   "warnings": [
-    "MCP server offline - all data from cache",
-    "DD 100.0% based on cached equity from 2026-05-14T20:32:48Z \u2014 actual DD may differ",
-    "VPS decommissioned since 2026-03-23 (53+ days offline)",
-    "MCP has been offline for 2+ consecutive JIDO runs"
+    "MCP offline \u2014 using cached state",
+    "VPS decommissioned since 2026-03-23",
+    "DD 100% based on cached equity from previous sessions \u2014 account fully depleted"
   ],
   "alerts": [
     {
