@@ -3,8 +3,8 @@
   "source": "live",
   "regime": {
     "mode": "RISK_OFF",
-    "reason": "100% drawdown \u2014 account fully depleted. Flat portfolio since 2026-05-14.",
-    "enforcedBy": "jido-cron",
+    "reason": "Portfolio fully depleted (DD=100%). VPS decommissioned since 2026-03-23.",
+    "enforcedBy": "jido-monitor",
     "marketSignal": "N/A"
   },
   "strategy": {
@@ -19,6 +19,7 @@
     "peak": 100.0,
     "drawdownPct": 100.0,
     "withdrawable": 0.0,
+    "dayStartEquity": 48.887581,
     "dailyPnl": 0.0
   },
   "positions": [],
@@ -47,14 +48,15 @@
     "mcpConsecutiveFailures": "0"
   },
   "warnings": [
-    "VPS decommissioned since 2026-03-23 (>52 days). Railway deployment inactive.",
-    "Account fully depleted (DD=100%). No capital available for trading."
+    "VPS decommissioned since 2026-03-23 (>50 days). All scanners offline. Hermes-managed crons only.",
+    "Portfolio fully depleted \u2014 accountValue=$0.00. No capital available for new positions."
   ],
   "actions": [
-    "JIDO heartbeat \u2014 flat portfolio, RISK_OFF enforced, no action needed."
+    "JIDO heartbeat: flat portfolio confirmed via live MCP. RISK_OFF maintained. No positions to manage."
   ],
   "alerts": [
     "CATASTROPHIC DRAWDOWN: 100.0% (wallet depleted)"
   ],
-  "deadWeight": []
+  "deadWeight": [],
+  "timestamp": "2026-05-14T15:46:38Z"
 }
