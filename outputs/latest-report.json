@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-14T10:17:17Z",
+  "generatedAt": "2026-05-14T10:33:06Z",
   "source": "cached",
   "strategy": {
     "name": "wolf-primary",
@@ -43,14 +43,14 @@
     "vpsStatus": "decommissioned",
     "vpsOfflineSince": "2026-03-23T23:57:45Z",
     "mcpStatus": "offline",
-    "mcpConsecutiveFailures": "65+"
+    "mcpConsecutiveFailures": "66+"
   },
   "actions": [
     "JIDO heartbeat \u2014 no positions, no MCP access, RISK_OFF maintained"
   ],
   "warnings": [
-    "MCP offline (65+ consecutive failures) \u2014 using cached state",
-    "VPS decommissioned since 2026-03-23 (52 days)",
+    "MCP offline (66+ consecutive failures) \u2014 using cached state",
+    "VPS decommissioned since 2026-03-23 (52+ days)",
     "DD 51.11% is based on cached equity \u2014 actual DD may differ"
   ]
 }
