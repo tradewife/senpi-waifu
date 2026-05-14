@@ -24,9 +24,19 @@
       "openPositions": 0,
       "openOrders": 0,
       "message": "Flat portfolio fast-path. MCP offline (6+ failures). Equity 0.0, DD 100.0%. VPS decommissioned since 2026-03-23. Source: cached."
+    },
+    {
+      "type": "JIDO_HEARTBEAT",
+      "timestamp": "2026-05-14T18:46:26Z",
+      "regime": "RISK_OFF",
+      "accountValue": 0.0,
+      "drawdownPct": 100.0,
+      "openPositions": 0,
+      "openOrders": 0,
+      "message": "MCP offline (7+ failures) \u2014 flat portfolio confirmed from cache. Equity 0.0, DD 100%. RISK_OFF enforced. Source: cached."
     }
   ],
-  "lastChecked": "2026-05-14T18:31:36Z",
+  "lastChecked": "2026-05-14T18:46:26Z",
   "lastCheckAt": "2026-05-14T18:31:36Z",
   "dayStartDate": "2026-05-14",
   "lastCheck": "2026-05-14T18:31:36Z",
