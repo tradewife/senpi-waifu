@@ -1,26 +1,26 @@
 {
   "source": "cached",
-  "generatedAt": "2026-05-14T18:46:49Z",
+  "generatedAt": "2026-05-14T19:02:22Z",
   "generatedBy": "jido-cron",
   "regime": {
     "mode": "RISK_OFF",
-    "reason": "Portfolio depleted (DD 100%). MCP offline \u2014 cached state.",
-    "enforcedBy": "jido-cron",
-    "marketSignal": "N/A \u2014 MCP offline"
+    "reason": "Drawdown 100.0% exceeds catastrophic threshold 20%",
+    "enforcedBy": "jido",
+    "marketSignal": "N/A"
   },
   "strategy": {
     "name": "wolf-primary",
     "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
     "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce",
-    "budget": 100,
+    "budget": 100.0,
     "remaining": 0.0
   },
   "portfolio": {
     "equity": 0.0,
     "peak": 100.0,
     "drawdownPct": 100.0,
-    "withdrawable": 0.0,
-    "dailyPnl": 0.0
+    "dayStartEquity": 0.0,
+    "withdrawable": 0.0
   },
   "positions": [],
   "openOrders": 0,
@@ -43,21 +43,22 @@
   },
   "actions": [
     {
-      "timestamp": "2026-05-14T18:46:49Z",
       "action": "JIDO_HEARTBEAT",
-      "detail": "Flat portfolio, RISK_OFF enforced, MCP offline"
+      "timestamp": "2026-05-14T19:02:22Z",
+      "details": "Flat portfolio confirmed. RISK_OFF enforced. No positions to manage."
     }
   ],
   "warnings": [
-    "MCP server offline (7+ consecutive failures) \u2014 all data from cached state",
-    "DD 100% is based on cached equity \u2014 wallet appears fully depleted",
-    "VPS scanners offline since 2026-03-23 \u2014 treat as decommissioned"
+    "MCP offline (8+ consecutive failures) \u2014 report based on cached state",
+    "VPS decommissioned since 2026-03-23 (53+ days) \u2014 scanners offline",
+    "Cached DD 100.0% based on equity $0.0 \u2014 account fully depleted",
+    "No emergency actions needed: flat portfolio, no open positions"
   ],
   "infrastructure": {
     "vpsStatus": "decommissioned",
     "vpsOfflineSince": "2026-03-23T23:57:45Z",
     "mcpStatus": "offline",
-    "mcpConsecutiveFailures": "7+"
+    "mcpConsecutiveFailures": "8+"
   },
   "timestamp": "2026-05-14T18:31:36Z"
 }
