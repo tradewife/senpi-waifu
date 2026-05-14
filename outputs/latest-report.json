@@ -1,19 +1,19 @@
 {
-  "generatedAt": "2026-05-14T20:17:41Z",
-  "source": "cached",
+  "source": "live",
+  "generatedAt": "2026-05-14T20:32:48Z",
   "regime": {
     "mode": "RISK_OFF",
-    "reason": "Account fully depleted (DD 100%). MCP offline \u2014 cached data.",
-    "enforcedBy": "jido-monitor",
-    "marketSignal": "N/A"
+    "reason": "Portfolio depleted (100% DD). Account value $0.00.",
+    "enforcedBy": "jido-guardrail",
+    "marketSignal": "REGIME_OVERRIDE: DD=100.0% exceeds catastrophic 20% threshold. Wallet fully depleted ($0.00 / $100.00 budget). MCP offline. Override #1 (regime-classifier race condition)."
   },
   "portfolio": {
     "equity": 0.0,
     "peak": 100.0,
     "drawdownPct": 100.0,
-    "dayStartEquity": 0.0,
     "dailyPnl": 0.0,
-    "withdrawable": 0.0
+    "withdrawable": 0.0,
+    "dayStartEquity": 0.0
   },
   "guardrails": {
     "catastrophicDrawdown": {
@@ -21,21 +21,22 @@
       "actual": 100.0,
       "breached": true
     },
+    "dailyLossLimit": {
+      "threshold": 10,
+      "actual": 0.0,
+      "breached": false
+    },
     "consecutiveStopOuts": {
       "threshold": 4,
       "actual": 0,
-      "breached": false
-    },
-    "dailyLoss": {
-      "threshold": 10,
-      "actual": 0.0,
       "breached": false
     }
   },
   "positions": [],
   "actions": [
-    "[2026-05-14T20:17:41Z] JIDO heartbeat \u2014 flat portfolio, no actions needed",
-    "[2026-05-14T20:17:41Z] MCP offline \u2014 all data from cached state (stale)"
+    "RISK_OFF enforced \u2014 account depleted at $0.00",
+    "No positions to manage",
+    "No emergency actions needed (flat portfolio)"
   ],
   "strategy": {
     "name": "wolf-primary",
@@ -47,13 +48,12 @@
   "infrastructure": {
     "vpsStatus": "decommissioned",
     "vpsOfflineSince": "2026-03-23T23:57:05Z",
-    "mcpStatus": "offline",
-    "mcpConsecutiveFailures": "2+"
+    "mcpStatus": "online",
+    "mcpConsecutiveFailures": "0"
   },
   "warnings": [
-    "MCP server offline \u2014 all data from cached arbiter-state",
-    "VPS decommissioned since 2026-03-23 (52 days offline)",
-    "DD 100.0% based on cached equity \u2014 account fully depleted",
-    "Flat portfolio, no open positions or orders"
+    "Account fully depleted ($0.00 equity, 100% drawdown from $100 peak)",
+    "VPS decommissioned since 2026-03-23 \u2014 all cron jobs Hermes-only",
+    "No capital available for trading until new funds deposited"
   ]
 }
