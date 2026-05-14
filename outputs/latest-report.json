@@ -1,23 +1,22 @@
 {
-  "generatedAt": "2026-05-14T07:48:04.113992+00:00",
+  "generatedAt": "2026-05-14T08:18:01.509511+00:00",
   "source": "cached",
   "warnings": [
-    "MCP server offline (58+ consecutive failures) \u2014 all data from cached state",
+    "MCP server offline (59+ consecutive failures) \u2014 all data from cached state",
     "DD 51.11% based on cached equity from last known-good update \u2014 actual DD may differ",
     "VPS scanners offline since 2026-03-23 \u2014 decommissioned status"
   ],
   "regime": {
     "mode": "RISK_OFF",
-    "reason": "Catastrophic DD 51.11% (limit 20.0%)",
-    "enforcedBy": "jido-cron",
-    "marketSignal": "N/A (MCP offline)"
+    "reason": "Catastrophic DD 51.1% (limit 20.0%)",
+    "enforcedBy": "jido",
+    "marketSignal": "offline"
   },
   "portfolio": {
     "equity": 48.887581,
     "peak": 100.0,
     "drawdownPct": 51.11,
-    "dayStartEquity": 48.887581,
-    "dailyPnlPct": 0.0
+    "dayStartEquity": 48.887581
   },
   "guardrails": {
     "catastrophicDrawdown": {
@@ -39,22 +38,21 @@
   "positions": [],
   "actions": [
     {
-      "type": "JIDO_HEARTBEAT",
-      "timestamp": "2026-05-14T07:48:04.113992+00:00",
-      "detail": "Flat portfolio, RISK_OFF enforced, MCP offline (58+ failures) \u2014 cached fast-path"
+      "action": "heartbeat",
+      "detail": "JIDO heartbeat \u2014 flat portfolio, RISK_OFF, DD 51.11%"
     }
   ],
   "strategy": {
-    "name": "wolf-primary",
+    "name": "WOLF-Primary",
     "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
     "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce",
-    "budget": 100.0,
+    "budget": 100,
     "remaining": 48.887581
   },
   "infrastructure": {
     "vpsStatus": "decommissioned",
     "vpsOfflineSince": "2026-03-23T23:57:45Z",
     "mcpStatus": "offline",
-    "mcpConsecutiveFailures": "58+"
+    "mcpConsecutiveFailures": "59+"
   }
 }
