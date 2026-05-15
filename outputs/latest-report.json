@@ -1,21 +1,17 @@
 {
-  "generatedAt": "2026-05-15T14:47:07Z",
+  "generatedAt": "2026-05-15T15:02:38Z",
   "source": "cached",
   "regime": {
     "mode": "RISK_OFF",
-    "reason": "JIDO override #27: dead-strategy equity=$0, DD=100.00%",
+    "reason": "dead-strategy override #28",
     "enforcedBy": "jido-emergency",
-    "marketSignal": "JIDO override #27: dead-strategy equity=$0, DD=100.00%, MCP offline"
+    "marketSignal": null
   },
   "portfolio": {
     "equity": 0.0,
-    "peakEquity": 100.0,
+    "peak": 100.0,
     "drawdownPct": 100.0,
-    "dailyPnl": 0,
-    "dailyCloses": 0,
-    "dailyWinRate": 0,
-    "openPositions": 0,
-    "deadWeight": []
+    "dailyPnl": 0.0
   },
   "guardrails": {
     "catastrophicDrawdown": {
@@ -36,7 +32,7 @@
   },
   "positions": [],
   "strategy": {
-    "name": "WOLF-Primary",
+    "name": "wolf-primary",
     "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
     "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce",
     "budget": 100,
@@ -46,14 +42,18 @@
     "vpsStatus": "decommissioned",
     "vpsOfflineSince": "2026-03-23T23:57:15Z",
     "mcpStatus": "offline",
-    "mcpConsecutiveFailures": "49+"
+    "mcpConsecutiveFailures": "50+"
   },
   "warnings": [
-    "MCP offline \u2014 49+ consecutive failures, using cached state",
-    "VPS decommissioned since 2026-03-23 (53 days offline)",
-    "DD 100.00% is based on cached equity \u2014 wallet fully depleted (confirmed live 2026-05-14)",
-    "Dead-strategy run #49: equity=$0 for 49 consecutive JIDO runs"
+    "MCP offline \u2014 using cached state (50+ consecutive failures)",
+    "VPS decommissioned since 2026-03-23 (54 days offline)",
+    "Regime drift corrected: risk-regime.json was BASELINE, forced to RISK_OFF (override #28)",
+    "DD 100.00% is based on cached equity \u2014 wallet confirmed $0 on 2026-05-14"
   ],
-  "actions": [],
+  "actions": [
+    "RISK_OFF enforced via override #28",
+    "Dead-strategy run #50",
+    "No positions to manage"
+  ],
   "alerts": []
 }
