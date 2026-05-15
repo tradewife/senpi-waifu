@@ -6,43 +6,23 @@
   "drawdownPct": 100.0,
   "consecutiveStopOuts": 0,
   "riskMode": "RISK_OFF",
-  "overrideCount": 11,
-  "deadStrategyRunCount": 32,
-  "lastJidoRun": "2026-05-15T08:46:56Z",
-  "lastChecked": "2026-05-15T08:46:56Z",
-  "lastCheckAt": "2026-05-15T08:46:56Z",
-  "lastCheck": "2026-05-15T08:46:56Z",
-  "lastUpdated": "2026-05-15T08:46:56Z",
+  "overrideCount": 12,
+  "deadStrategyRunCount": 33,
+  "lastJidoRun": "2026-05-15T09:17:21Z",
+  "lastChecked": "2026-05-15T09:17:21Z",
+  "lastCheckAt": "2026-05-15T09:17:21Z",
+  "lastCheck": "2026-05-15T09:17:21Z",
+  "lastUpdated": "2026-05-15T09:17:21Z",
   "alerts": [
     {
       "type": "JIDO_HEARTBEAT",
-      "timestamp": "2026-05-15T08:17:31.565973+00:00",
+      "timestamp": "2026-05-15T09:17:21Z",
       "regime": "RISK_OFF",
       "accountValue": 0.0,
       "drawdownPct": 100.0,
       "openPositions": 0,
       "openOrders": 0,
-      "message": "dead-strategy run #30 \u2014 MCP offline (30+), equity=$0, DD 100% (cached, override #10)"
-    },
-    {
-      "type": "JIDO_HEARTBEAT",
-      "timestamp": "2026-05-15T08:32:05.500562+00:00",
-      "regime": "RISK_OFF",
-      "accountValue": 0.0,
-      "drawdownPct": 100.0,
-      "openPositions": 0,
-      "openOrders": 0,
-      "message": "dead-strategy run #31 \u2014 MCP offline (31+), equity=$0, DD 100% (cached, override #10)"
-    },
-    {
-      "type": "JIDO_HEARTBEAT",
-      "timestamp": "2026-05-15T08:46:56Z",
-      "regime": "RISK_OFF",
-      "accountValue": 0.0,
-      "drawdownPct": 100.0,
-      "openPositions": 0,
-      "openOrders": 0,
-      "message": "MCP offline \u2014 using cached state (dead-strategy run #32), override #11"
+      "message": "dead-strategy run #33, override #12, MCP offline (33+ failures), equity=$0"
     }
   ]
 }
