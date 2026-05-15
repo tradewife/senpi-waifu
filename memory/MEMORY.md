@@ -122,3 +122,6 @@
 
 ### HOWL 2026-05-14
 0% WR, $0.00 PnL. 0 auto-applied, 0 pending review.
+
+### HOWL 2026-05-15
+0% WR, $0.00 PnL. 0 auto-applied, 0 pending review.
