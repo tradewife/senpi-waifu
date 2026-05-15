@@ -1,9 +1,9 @@
 {
   "source": "cached",
-  "generatedAt": "2026-05-15T22:46:41Z",
+  "generatedAt": "2026-05-15T23:01:19Z",
   "regime": {
     "mode": "RISK_OFF",
-    "reason": "equity=$0 dead-strategy run #62",
+    "reason": "equity=$0 dead-strategy run #63",
     "enforcedBy": "jido-emergency",
     "marketSignal": "dead-strategy"
   },
@@ -42,22 +42,22 @@
     "vpsStatus": "decommissioned",
     "vpsOfflineSince": "2026-03-23T23:57:15Z",
     "mcpStatus": "offline",
-    "mcpConsecutiveFailures": "62+"
+    "mcpConsecutiveFailures": "63+"
   },
   "warnings": [
     {
       "level": "critical",
-      "message": "Dead-strategy run #62: equity=$0 since 2026-05-14, MCP offline 62+ failures",
-      "timestamp": "2026-05-15T22:46:41Z"
+      "message": "Dead-strategy run #63: equity=$0 since 2026-05-14, MCP offline 63+ failures",
+      "timestamp": "2026-05-15T23:01:19Z"
     },
     {
       "level": "info",
       "message": "DD 100% based on live clearinghouse reading from 2026-05-14 (MCP now offline, using cached)",
-      "timestamp": "2026-05-15T22:46:41Z"
+      "timestamp": "2026-05-15T23:01:19Z"
     }
   ],
   "actions": [
-    "dead-strategy heartbeat run #62"
+    "dead-strategy heartbeat run #63"
   ],
   "alerts": []
 }
