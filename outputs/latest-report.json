@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-05-15T14:17:41Z",
+  "generatedAt": "2026-05-15T14:32:19Z",
   "source": "cached",
   "regime": {
     "mode": "RISK_OFF",
-    "reason": "JIDO override #25: dead-strategy equity=$0, DD=100.00%",
+    "reason": "JIDO override #26: dead-strategy equity=$0, DD=100.00%",
     "enforcedBy": "jido-emergency",
     "marketSignal": "BASELINE (waifu-regime slope=-0.7%, ATR=1.3%)"
   },
@@ -41,7 +41,7 @@
   ],
   "alerts": [
     "CATASTROPHIC DRAWDOWN: 100.0%",
-    "MCP offline 47+ consecutive failures"
+    "MCP offline 48+ consecutive failures"
   ],
   "strategy": {
     "name": "WOLF-Primary",
@@ -54,7 +54,7 @@
     "vpsStatus": "decommissioned",
     "vpsOfflineSince": "2026-03-23T23:57:15Z",
     "mcpStatus": "offline",
-    "mcpConsecutiveFailures": "47+"
+    "mcpConsecutiveFailures": "48+"
   },
   "warnings": [
     "MCP offline \u2014 using cached state (stale since 2026-05-14)",
