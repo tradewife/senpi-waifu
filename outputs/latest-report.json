@@ -1,6 +1,6 @@
 {
   "source": "cached",
-  "generatedAt": "2026-05-15T09:17:21Z",
+  "generatedAt": "2026-05-15T09:33:26Z",
   "regime": "RISK_OFF",
   "portfolio": {
     "equity": 0.0,
@@ -38,27 +38,27 @@
     "heartbeat only \u2014 no positions to manage"
   ],
   "warnings": [
-    "MCP offline (33+ consecutive failures) \u2014 using cached state",
+    "MCP offline (34+ consecutive failures) \u2014 using cached state",
     "VPS decommissioned since 2026-03-23 (53 days)",
-    "Dead-strategy run #33: equity=$0 for 33 consecutive checks",
+    "Dead-strategy run #34: equity=$0 for 34 consecutive checks",
     "DD 100% is based on cached equity \u2014 wallet fully depleted since 2026-05-14"
   ],
   "infrastructure": {
     "vpsStatus": "decommissioned",
     "vpsOfflineSince": "2026-03-23T23:57:45Z",
     "mcpStatus": "offline",
-    "mcpConsecutiveFailures": "33+"
+    "mcpConsecutiveFailures": "34+"
   },
   "alerts": [
     {
       "type": "JIDO_HEARTBEAT",
-      "timestamp": "2026-05-15T09:17:21Z",
+      "timestamp": "2026-05-15T09:33:26Z",
       "regime": "RISK_OFF",
       "accountValue": 0.0,
       "drawdownPct": 100.0,
       "openPositions": 0,
       "openOrders": 0,
-      "message": "dead-strategy run #33, override #12, MCP offline (33+ failures), equity=$0"
+      "message": "dead-strategy run #34, override #13, MCP offline (34+ failures), equity=$0"
     }
   ],
   "equity": 0.0,
