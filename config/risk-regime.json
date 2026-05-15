@@ -1,8 +1,8 @@
 {
-  "riskMode": "RISK_OFF",
-  "updatedAt": "2026-05-15T13:46:59Z",
-  "updatedBy": "jido-emergency",
-  "reason": "RISK_OFF override active: DD 100.0% exceeds catastrophic limit 20.0%",
+  "riskMode": "BASELINE",
+  "updatedAt": "2026-05-15T14:01:20Z",
+  "updatedBy": "waifu-regime",
+  "reason": "Mixed signals (slope=-0.7%, ATR=1.3%)",
   "regimes": {
     "RISK_ON": {
       "maxSlots": 3,
