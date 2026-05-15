@@ -3,17 +3,14 @@
   "source": "cached",
   "regime": {
     "mode": "RISK_OFF",
-    "reason": "catastrophic drawdown 100.0% exceeds 20% threshold",
+    "reason": "DD 100% \u2014 strategy fully depleted",
     "enforcedBy": "jido-emergency",
-    "marketSignal": null,
-    "overrideCount": 10
+    "marketSignal": null
   },
   "portfolio": {
     "equity": 0.0,
     "peak": 100.0,
-    "drawdownPct": 100.0,
-    "dailyPnl": 0.0,
-    "dayStartEquity": 0.0
+    "drawdownPct": 100.0
   },
   "guardrails": {
     "catastrophicDrawdown": {
@@ -42,9 +39,9 @@
   },
   "infrastructure": {
     "vpsStatus": "decommissioned",
-    "vpsOfflineSince": "2026-03-23",
+    "vpsOfflineSince": "2026-03-23T23:57:15Z",
     "mcpStatus": "offline",
-    "mcpConsecutiveFailures": "17+"
+    "mcpConsecutiveFailures": "18+"
   },
   "alerts": [
     {
@@ -59,14 +56,13 @@
     }
   ],
   "warnings": [
-    "MCP offline (17+ consecutive failures) \u2014 all data from cached state",
-    "VPS decommissioned since 2026-03-23 (53 days)",
-    "DD 100% based on cached equity \u2014 strategy wallet depleted",
-    "Dead-strategy run #17: no positions, no MCP, no recovery possible"
+    "MCP offline \u2014 using cached state",
+    "DD 100% is based on cached equity \u2014 strategy fully depleted",
+    "VPS decommissioned since 2026-03-23",
+    "Override #10: regime-classifier race"
   ],
   "actions": [
-    "RISK_OFF maintained \u2014 catastrophic drawdown 100.0%",
-    "No positions to manage \u2014 flat portfolio",
-    "Strategy is dead capital ($0 equity, $100 budget fully lost)"
-  ]
+    "dead-strategy run #18 \u2014 no positions to manage"
+  ],
+  "timestamp": "2026-05-15T02:47:15.190288+00:00"
 }
