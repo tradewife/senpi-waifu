@@ -1,11 +1,17 @@
 {
-  "generatedAt": "2026-05-15T06:00:36Z",
+  "generatedAt": "2026-05-15T06:01:45.783190Z",
   "arenaWeek": "?",
   "totalEntrants": 105,
   "ourStats": {
     "closes": 1,
     "winRate": 0.0,
-    "totalPnl": -51.11
+    "totalPnl": -51.11,
+    "accountId": "M179642 (trade_wife)",
+    "secondAccount": "M19 (prashantfb65)",
+    "drawdown": "100% (RISK_OFF locked)",
+    "riskMode": "RISK_OFF",
+    "strategyWallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
+    "strategyId": "c070acba"
   },
   "arenaTop5AvgRoe": 65.04,
   "arenaTop5AvgPnl": 54.02,
@@ -27,7 +33,10 @@
         "strategy_get_open_orders",
         "strategy_list",
         "strategy_withdraw_funds"
-      ]
+      ],
+      "pattern": "activeManager",
+      "pnlPerTrade": 46.92,
+      "toolCount": 10
     },
     {
       "rank": 2,
@@ -56,7 +65,10 @@
         "strategy_list",
         "strategy_withdraw_funds",
         "user_get_senpi_points"
-      ]
+      ],
+      "pattern": "activeManager",
+      "pnlPerTrade": -125.86,
+      "toolCount": 20
     },
     {
       "rank": 3,
@@ -66,7 +78,10 @@
       "tradeCount": 0,
       "toolsUsed": [
         "user_get_me"
-      ]
+      ],
+      "pattern": "passiveHolder",
+      "pnlPerTrade": 77.79,
+      "toolCount": 1
     },
     {
       "rank": 4,
@@ -83,7 +98,10 @@
         "market_get_prices",
         "strategy_get_clearinghouse_state",
         "user_get_me"
-      ]
+      ],
+      "pattern": "highConviction",
+      "pnlPerTrade": 173.46,
+      "toolCount": 8
     },
     {
       "rank": 5,
@@ -104,15 +122,92 @@
         "strategy_get_clearinghouse_state",
         "strategy_list",
         "user_get_me"
-      ]
+      ],
+      "pattern": "highConviction",
+      "pnlPerTrade": 80.64,
+      "toolCount": 12
     }
   ],
+  "topPerformerProfile": {
+    "name": "KhakiLoop",
+    "roePct": "123.3174",
+    "totalPnl": "422.285784",
+    "tradeCount": 9,
+    "toolCount": 10,
+    "pattern": "activeManager",
+    "notes": "KhakiLoop at #1 with 123.3% ROE on 9 trades using 10 tools \u2014 aggressive active manager. PnL per trade: $46.92. Uses strategy_withdraw_funds (ROE gaming candidate \u2014 but PnL is positive $422, so legitimate). Toolset: position lifecycle (create/edit/close/cancel) + portfolio monitoring."
+  },
+  "strategyPatterns": {
+    "highConviction": {
+      "agents": [
+        "Diegoxyz",
+        "opencodeJaime"
+      ],
+      "avgROE": 26.97,
+      "insight": "1-5 trades, lean toolset. Proven winning meta."
+    },
+    "passiveHolder": {
+      "agents": [
+        "mysterysuperboy"
+      ],
+      "avgROE": 62.89,
+      "insight": "Zero trades, riding held positions. Not reproducible."
+    },
+    "activeManager": {
+      "agents": [
+        "KhakiLoop",
+        "0xschelling"
+      ],
+      "avgROE": 104.19,
+      "insight": "5-15 trades with moderate tooling."
+    }
+  },
+  "anomalyDetection": [
+    {
+      "name": "0xschelling",
+      "rank": 2,
+      "issue": "Negative PnL ($-1258.56) with high ROE (85.1%) \u2014 likely ROE gaming via strategy_withdraw_funds",
+      "severity": "HIGH"
+    }
+  ],
+  "selfDiagnosis": {
+    "currentStatus": "CRITICAL \u2014 RISK_OFF locked for 51+ days (since ~Mar 24). 100% drawdown on $100 budget from single -$51 loss.",
+    "budgetRemaining": "~$49 (insufficient for meaningful 7-10x positions)",
+    "tradesThisWeek": 0,
+    "howlHistory": "16+ consecutive zero-activity HOWLs. System idle.",
+    "criticalIssue": "MCP connectivity down (26+ consecutive failures). Auth token may be expired. Combined with RISK_OFF lock, system is completely paralyzed. Requires: (1) MCP auth refresh, (2) drawdown reset, (3) capital top-up to $200+.",
+    "mcpStatus": "DOWN \u2014 arena_leaderboard, arena_pool, arena_prizes all unreachable. Falling back to CLI."
+  },
   "recommendations": [
     {
-      "action": "study_top_strategies",
-      "confidence": "medium",
-      "reason": "Arena top 5 avg PnL $54.02 vs ours $-51.11. Study their patterns.",
+      "action": "FIX_MCP_CONNECTIVITY",
+      "confidence": "critical",
+      "reason": "MCP server unreachable (26+ consecutive failures). All Senpi tools down. Cannot execute any trades or even check portfolio.",
+      "risk": "critical"
+    },
+    {
+      "action": "RESET_DRAWDOWN_AND_INJECT_CAPITAL",
+      "confidence": "critical",
+      "reason": "100% drawdown lock from single -$51 trade on $100 budget. System paralyzed 51+ days. Need: reset drawdown counter + top-up to $200+ for viable positions.",
+      "risk": "critical"
+    },
+    {
+      "action": "STUDY_KHAKILOOP_ACTIVE_MANAGER_PATTERN",
+      "confidence": "high",
+      "reason": "#1 KhakiLoop: 123.3% ROE, $422 PnL, 9 trades, 10 tools. Active manager with full position lifecycle tools. $46.9/trade avg. Lean but complete toolset (no market data research tools).",
       "risk": "neutral"
+    },
+    {
+      "action": "STUDY_DIEGOXYZ_HIGH_CONVICTION",
+      "confidence": "high",
+      "reason": "#4 Diegoxyz: 37.7% ROE, $867 PnL (highest $ PnL in top 5!), 5 trades, 8 tools. $173.5/trade \u2014 highest efficiency. Uses discovery_get_trader_history for research.",
+      "risk": "neutral"
+    },
+    {
+      "action": "AVOID_ROE_GAMING_PATTERN",
+      "confidence": "high",
+      "reason": "#2 0xschelling: 85.1% ROE but -$1,258 PnL. Uses strategy_withdraw_funds to inflate ROE while losing money. Do NOT emulate.",
+      "risk": "high"
     },
     {
       "action": "reminder_max_leverage",
@@ -121,5 +216,6 @@
       "risk": "rule"
     }
   ],
-  "appliedChanges": []
+  "appliedChanges": [],
+  "mcpStatus": "DOWN"
 }
