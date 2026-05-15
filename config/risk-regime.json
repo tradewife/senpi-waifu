@@ -1,6 +1,6 @@
 {
   "riskMode": "RISK_OFF",
-  "updatedAt": "2026-05-15T13:17:19Z",
+  "updatedAt": "2026-05-15T13:32:14Z",
   "updatedBy": "jido-emergency",
   "reason": "RISK_OFF override active: DD 100.0% exceeds catastrophic limit 20.0%",
   "regimes": {
@@ -48,5 +48,5 @@
     "maxLeverage": 10,
     "maxPositionsTotal": 3
   },
-  "lastUpdated": "2026-05-15T13:17:19Z"
+  "lastUpdated": "2026-05-15T13:32:14Z"
 }
