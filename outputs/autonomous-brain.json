@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-05-15T22:16:02Z",
+  "generatedAt": "2026-05-15T22:31:37Z",
   "codebaseIndexAt": "2026-03-23T23:57:15Z",
   "riskMode": "RISK_OFF",
   "executionPolicy": {
-    "generatedAt": "2026-05-15T22:16:02Z",
+    "generatedAt": "2026-05-15T22:31:37Z",
     "mode": "ACTIVE",
     "blockNewEntries": true,
     "allowAutoEntry": false,
@@ -16,7 +16,7 @@
       }
     },
     "reasons": [
-      "override #38: RISK_OFF enforced by JIDO \u2014 dead-strategy, equity=$0, MCP offline"
+      "override #39: equity=$0 dead-strategy, MCP offline 61+ failures, RISK_OFF enforced by jido"
     ],
     "risk": {
       "drawdownPctFromPeak": 100.0,
