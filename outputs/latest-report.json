@@ -1,6 +1,6 @@
 {
   "source": "cached",
-  "generatedAt": "2026-05-15T09:33:26Z",
+  "generatedAt": "2026-05-15T10:17:32.727694Z",
   "regime": "RISK_OFF",
   "portfolio": {
     "equity": 0.0,
@@ -38,16 +38,16 @@
     "heartbeat only \u2014 no positions to manage"
   ],
   "warnings": [
-    "MCP offline (34+ consecutive failures) \u2014 using cached state",
-    "VPS decommissioned since 2026-03-23 (53 days)",
-    "Dead-strategy run #34: equity=$0 for 34 consecutive checks",
-    "DD 100% is based on cached equity \u2014 wallet fully depleted since 2026-05-14"
+    "MCP offline \u2014 using cached state from 2026-05-15T10:17:32.727694Z",
+    "VPS decommissioned since 2026-03-23 (53+ days)",
+    "DD 100% based on cached equity \u2014 strategy fully depleted",
+    "Regime-classifier drift corrected: BASELINE -> RISK_OFF (override #14)"
   ],
   "infrastructure": {
     "vpsStatus": "decommissioned",
     "vpsOfflineSince": "2026-03-23T23:57:45Z",
     "mcpStatus": "offline",
-    "mcpConsecutiveFailures": "34+"
+    "mcpConsecutiveFailures": "35+"
   },
   "alerts": [
     {
