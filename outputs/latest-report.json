@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-15T07:33:04.700180+00:00",
+  "generatedAt": "2026-05-15T07:47:01.386537+00:00",
   "source": "cached",
   "regime": {
     "mode": "RISK_OFF",
@@ -42,18 +42,18 @@
     "vpsStatus": "decommissioned",
     "vpsOfflineSince": "2026-03-23T23:57:45Z",
     "mcpStatus": "offline",
-    "mcpConsecutiveFailures": "28+"
+    "mcpConsecutiveFailures": "29+"
   },
   "alerts": [
     {
       "type": "JIDO_HEARTBEAT",
-      "timestamp": "2026-05-15T07:33:04.700180+00:00",
+      "timestamp": "2026-05-15T07:47:01.386537+00:00",
       "regime": "RISK_OFF",
       "accountValue": 0.0,
       "drawdownPct": 100.0,
       "openPositions": 0,
       "openOrders": 0,
-      "message": "dead-strategy run #28 \u2014 MCP offline (28+), equity=$0, DD 100% (cached, override #10)"
+      "message": "dead-strategy run #29 \u2014 MCP offline (29+), equity=$0, DD 100% (cached, override #10)"
     }
   ],
   "warnings": [
@@ -63,7 +63,7 @@
     "DD 100.0% is based on cached equity \u2014 actual state cannot be verified"
   ],
   "actions": [
-    "Heartbeat #28 \u2014 no actions possible, MCP offline"
+    "Heartbeat #29 \u2014 no actions possible, MCP offline"
   ],
-  "timestamp": "2026-05-15T07:33:04.700180+00:00"
+  "timestamp": "2026-05-15T07:47:01.386537+00:00"
 }
