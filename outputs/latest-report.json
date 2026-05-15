@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-05-15T06:32:40.968363+00:00",
+  "generatedAt": "2026-05-15T06:46:30.409446+00:00",
   "source": "cached",
   "regime": {
     "mode": "RISK_OFF",
-    "reason": "DD 100% \u2014 strategy fully depleted (dead-strategy run #25)",
+    "reason": "DD 100% \u2014 strategy fully depleted (dead-strategy run #26)",
     "enforcedBy": "jido-emergency",
     "marketSignal": null
   },
@@ -44,18 +44,18 @@
     "vpsStatus": "decommissioned",
     "vpsOfflineSince": "2026-03-23T23:57:15Z",
     "mcpStatus": "offline",
-    "mcpConsecutiveFailures": "25+"
+    "mcpConsecutiveFailures": "26+"
   },
   "alerts": [
     {
       "type": "JIDO_HEARTBEAT",
-      "timestamp": "2026-05-15T06:32:40.968363+00:00",
+      "timestamp": "2026-05-15T06:46:30.409446+00:00",
       "regime": "RISK_OFF",
       "accountValue": 0.0,
       "drawdownPct": 100.0,
       "openPositions": 0,
       "openOrders": 0,
-      "message": "dead-strategy run #25 \u2014 MCP offline (25+), equity=$0, DD 100% (cached, override #10)"
+      "message": "dead-strategy run #26 \u2014 MCP offline (26+), equity=$0, DD 100% (cached, override #10)"
     }
   ],
   "warnings": [
@@ -67,9 +67,9 @@
   "actions": [
     {
       "type": "HEARTBEAT",
-      "timestamp": "2026-05-15T06:32:40.968363+00:00",
-      "detail": "dead-strategy run #25, MCP offline (25+)"
+      "timestamp": "2026-05-15T06:46:30.409446+00:00",
+      "detail": "dead-strategy run #26, MCP offline (26+)"
     }
   ],
-  "timestamp": "2026-05-15T06:32:40.968363+00:00"
+  "timestamp": "2026-05-15T06:46:30.409446+00:00"
 }
