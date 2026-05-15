@@ -1,8 +1,8 @@
 {
   "riskMode": "RISK_OFF",
-  "updatedAt": "2026-05-15T11:47:06Z",
-  "updatedBy": "jido-emergency",
-  "reason": "dead-strategy equity=$0, DD=100%, override #19",
+  "updatedAt": "2026-05-15T12:01:57Z",
+  "updatedBy": "hermes-regime",
+  "reason": "RISK_OFF override: DD 100.0% exceeds catastrophic limit 20.0%. Market: BTC slope=-0.76%, ATR=0.50%, ETH slope=-2.46%, ATR=0.64%",
   "regimes": {
     "RISK_ON": {
       "maxSlots": 3,
@@ -48,5 +48,5 @@
     "maxLeverage": 10,
     "maxPositionsTotal": 3
   },
-  "lastUpdated": "2026-05-15T11:47:06Z"
+  "lastUpdated": "2026-05-15T12:01:57Z"
 }
