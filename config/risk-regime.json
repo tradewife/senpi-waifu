@@ -1,8 +1,8 @@
 {
   "riskMode": "RISK_OFF",
-  "updatedAt": "2026-05-14T23:16:34Z",
-  "updatedBy": "jido-emergency",
-  "reason": "JIDO OVERRIDE: DD 100% exceeds 20% threshold \u2014 regime classifier set BASELINE but account is fully depleted",
+  "updatedAt": "2026-05-15T07:01:17.997377+00:00",
+  "updatedBy": "hermes-regime",
+  "reason": "Market=BASELINE (BTC slope=-0.17%, ATR=0.50%; ETH slope=-1.82%, ATR=0.64%) but RISK_OFF override active: DD 100.0% from catastrophic limit 20%",
   "regimes": {
     "RISK_ON": {
       "maxSlots": 3,
