@@ -1,26 +1,18 @@
 {
   "source": "cached",
-  "generatedAt": "2026-05-15T01:47:37.260844+00:00",
+  "generatedAt": "2026-05-15T02:18:55.572057Z",
   "regime": {
     "mode": "RISK_OFF",
-    "reason": "equity=$0 dead strategy, DD=100%",
-    "enforcedBy": "jido",
-    "marketSignal": "none"
+    "reason": "catastrophic drawdown 100% (override #9)",
+    "enforcedBy": "jido-emergency",
+    "marketSignal": "offline"
   },
   "portfolio": {
     "equity": 0.0,
     "peak": 100.0,
     "drawdownPct": 100.0,
     "dailyPnl": 0.0,
-    "dayStartEquity": 0.0,
-    "peakEquity": 100.0
-  },
-  "strategy": {
-    "name": "wolf-primary",
-    "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
-    "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce",
-    "budget": 100.0,
-    "remaining": 0.0
+    "deadWeight": []
   },
   "guardrails": {
     "catastrophicDrawdown": {
@@ -28,34 +20,39 @@
       "actual": 100.0,
       "breached": true
     },
+    "consecutiveStopOuts": {
+      "threshold": 4,
+      "actual": 0,
+      "breached": false
+    },
     "dailyLossLimit": {
       "threshold": 10,
       "actual": 0.0,
-      "breached": false
-    },
-    "maxConsecutiveStopOuts": {
-      "threshold": 4,
-      "actual": 0,
       "breached": false
     }
   },
   "positions": [],
   "actions": [
-    "heartbeat-only: dead-strategy run #14, no positions"
+    "heartbeat only \u2014 MCP offline, dead-strategy run"
   ],
+  "alerts": [],
+  "strategy": {
+    "name": "wolf-primary",
+    "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
+    "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce",
+    "budget": 100,
+    "remaining": 0.0
+  },
   "infrastructure": {
     "vpsStatus": "decommissioned",
-    "vpsOfflineSince": "2026-03-23T23:57:15Z",
+    "vpsOfflineSince": "2026-03-23",
     "mcpStatus": "offline",
-    "mcpConsecutiveFailures": "15+"
+    "mcpConsecutiveFailures": "16+"
   },
   "warnings": [
-    "MCP offline \u2014 using cached state",
-    "DD 100.0% based on cached equity from 2026-05-15T01:47:37.260844+00:00 \u2014 actual DD may differ",
-    "Dead strategy: equity=$0 for 15 consecutive runs",
-    "VPS decommissioned since 2026-03-23 \u2014 treat as permanently offline"
-  ],
-  "equity": 0.0,
-  "peakEquity": 100.0,
-  "drawdownPct": 100.0
+    "MCP offline \u2014 using cached state (16+ consecutive failures)",
+    "Dead-strategy run #16 \u2014 equity=$0 since 2026-05-14",
+    "VPS decommissioned since 2026-03-23",
+    "DD 100% is based on cached equity \u2014 actual DD confirmed at 100% (wallet depleted)"
+  ]
 }
