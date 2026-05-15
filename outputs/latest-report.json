@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-05-15T14:32:19Z",
+  "generatedAt": "2026-05-15T14:47:07Z",
   "source": "cached",
   "regime": {
     "mode": "RISK_OFF",
-    "reason": "JIDO override #26: dead-strategy equity=$0, DD=100.00%",
+    "reason": "JIDO override #27: dead-strategy equity=$0, DD=100.00%",
     "enforcedBy": "jido-emergency",
-    "marketSignal": "BASELINE (waifu-regime slope=-0.7%, ATR=1.3%)"
+    "marketSignal": "JIDO override #27: dead-strategy equity=$0, DD=100.00%, MCP offline"
   },
   "portfolio": {
     "equity": 0.0,
@@ -23,26 +23,18 @@
       "actual": 100.0,
       "breached": true
     },
-    "dailyLoss": {
-      "threshold": 10,
-      "actual": 0.0,
-      "breached": false
-    },
-    "consecutiveStopOuts": {
+    "maxConsecutiveStopOuts": {
       "threshold": 4,
       "actual": 0,
+      "breached": false
+    },
+    "dailyLossLimit": {
+      "threshold": 10,
+      "actual": 0.0,
       "breached": false
     }
   },
   "positions": [],
-  "actions": [
-    "RISK_OFF enforced (regime drift corrected from BASELINE)",
-    "dead-strategy heartbeat"
-  ],
-  "alerts": [
-    "CATASTROPHIC DRAWDOWN: 100.0%",
-    "MCP offline 48+ consecutive failures"
-  ],
   "strategy": {
     "name": "WOLF-Primary",
     "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
@@ -54,11 +46,14 @@
     "vpsStatus": "decommissioned",
     "vpsOfflineSince": "2026-03-23T23:57:15Z",
     "mcpStatus": "offline",
-    "mcpConsecutiveFailures": "48+"
+    "mcpConsecutiveFailures": "49+"
   },
   "warnings": [
-    "MCP offline \u2014 using cached state (stale since 2026-05-14)",
-    "DD 100.0% based on cached equity \u2014 wallet fully depleted",
-    "Regime drift corrected: risk-regime.json was BASELINE, overridden to RISK_OFF"
-  ]
+    "MCP offline \u2014 49+ consecutive failures, using cached state",
+    "VPS decommissioned since 2026-03-23 (53 days offline)",
+    "DD 100.00% is based on cached equity \u2014 wallet fully depleted (confirmed live 2026-05-14)",
+    "Dead-strategy run #49: equity=$0 for 49 consecutive JIDO runs"
+  ],
+  "actions": [],
+  "alerts": []
 }

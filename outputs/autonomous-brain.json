@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-05-15T14:32:19Z",
+  "generatedAt": "2026-05-15T14:47:07Z",
   "codebaseIndexAt": "2026-03-23T23:57:15Z",
   "riskMode": "RISK_OFF",
   "executionPolicy": {
-    "generatedAt": "2026-05-15T14:32:19Z",
+    "generatedAt": "2026-05-15T14:47:07Z",
     "mode": "ACTIVE",
     "blockNewEntries": true,
     "allowAutoEntry": false,
@@ -16,7 +16,7 @@
       }
     },
     "reasons": [
-      "override #26: dead-strategy equity=$0, drawdown=100.00%, MCP offline 48+ failures"
+      "override #27: dead-strategy equity=$0, drawdown=100.00%, MCP offline 49+ failures"
     ],
     "risk": {
       "drawdownPctFromPeak": 100.0,
