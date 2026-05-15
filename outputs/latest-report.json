@@ -1,5 +1,6 @@
 {
-  "generatedAt": "2026-05-15T08:00:57Z",
+  "generatedAt": "2026-05-15T08:17:31.565973+00:00",
+  "source": "cached",
   "regime": "RISK_OFF",
   "equity": 0.0,
   "peakEquity": 100.0,
@@ -25,5 +26,24 @@
       "xyz:"
     ],
     "perTradeRiskPct": 1.0
-  }
+  },
+  "positions": [],
+  "strategy": {
+    "name": "WOLF-Primary",
+    "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
+    "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce",
+    "budget": 100,
+    "remaining": 0.0
+  },
+  "infrastructure": {
+    "vpsStatus": "decommissioned",
+    "vpsOfflineSince": "2026-03-23T23:57:45Z",
+    "mcpStatus": "offline",
+    "mcpConsecutiveFailures": "30+"
+  },
+  "warnings": [
+    "MCP offline \u2014 using cached state (dead-strategy run #30)",
+    "VPS offline since 2026-03-23 (>50 days) \u2014 treat as decommissioned",
+    "DD 100% based on cached equity \u2014 actual DD confirmed at $0 via last live clearinghouse check"
+  ]
 }
