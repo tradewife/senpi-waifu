@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-15T02:32:41.519436+00:00",
+  "generatedAt": "2026-05-15T03:02:39.662255+00:00",
   "source": "cached",
   "regime": {
     "mode": "RISK_OFF",
@@ -41,18 +41,18 @@
     "vpsStatus": "decommissioned",
     "vpsOfflineSince": "2026-03-23T23:57:15Z",
     "mcpStatus": "offline",
-    "mcpConsecutiveFailures": "18+"
+    "mcpConsecutiveFailures": "19+"
   },
   "alerts": [
     {
       "type": "JIDO_HEARTBEAT",
-      "timestamp": "2026-05-15T02:32:41.519436+00:00",
+      "timestamp": "2026-05-15T03:02:39.662255+00:00",
       "regime": "RISK_OFF",
       "accountValue": 0.0,
       "drawdownPct": 100.0,
       "openPositions": 0,
       "openOrders": 0,
-      "message": "dead-strategy run #17 \u2014 MCP offline (17+ failures), equity=$0, DD 100% (cached, override #10)"
+      "message": "dead-strategy run #19 \u2014 MCP offline (19+ failures), equity=$0, DD 100% (cached, override #10)"
     }
   ],
   "warnings": [
@@ -62,7 +62,7 @@
     "Override #10: regime-classifier race"
   ],
   "actions": [
-    "dead-strategy run #18 \u2014 no positions to manage"
+    "dead-strategy run #19 \u2014 no positions to manage"
   ],
-  "timestamp": "2026-05-15T02:47:15.190288+00:00"
+  "timestamp": "2026-05-15T03:02:39.662255+00:00"
 }
