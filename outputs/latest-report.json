@@ -1,9 +1,9 @@
 {
   "source": "cached",
-  "generatedAt": "2026-05-15T21:46:53.583369+00:00",
+  "generatedAt": "2026-05-15T22:01:40Z",
   "regime": {
     "mode": "RISK_OFF",
-    "reason": "Dead-strategy override #36: equity=$0, MCP offline",
+    "reason": "dead-strategy, equity=$0, override #37",
     "enforcedBy": "jido-emergency",
     "marketSignal": null
   },
@@ -11,17 +11,8 @@
     "equity": 0.0,
     "peak": 100.0,
     "drawdownPct": 100.0,
-    "dailyPnl": 0.0,
-    "deadWeight": []
+    "dailyPnl": 0.0
   },
-  "strategy": {
-    "name": "wolf-primary",
-    "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
-    "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce",
-    "budget": 100,
-    "remaining": 0.0
-  },
-  "positions": [],
   "guardrails": {
     "catastrophicDrawdown": {
       "threshold": 20,
@@ -39,22 +30,28 @@
       "breached": false
     }
   },
-  "alerts": [],
-  "actions": [
-    "RISK_OFF maintained \u2014 override #36",
-    "MCP offline \u2014 58+ consecutive failures",
-    "Dead-strategy run #58"
-  ],
+  "positions": [],
+  "strategy": {
+    "name": "wolf-primary",
+    "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
+    "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce",
+    "budget": 100.0,
+    "remaining": 0.0
+  },
   "infrastructure": {
     "vpsStatus": "decommissioned",
     "vpsOfflineSince": "2026-03-23T23:57:15Z",
     "mcpStatus": "offline",
-    "mcpConsecutiveFailures": "58+"
+    "mcpConsecutiveFailures": "59+"
   },
   "warnings": [
-    "MCP server offline \u2014 all data from cached state",
-    "DD 100% based on confirmed depleted wallet (live MCP reading 2026-05-14)",
-    "VPS decommissioned since 2026-03-23 \u2014 infrastructure abandoned",
-    "Regime-classifier may overwrite risk-regime.json to BASELINE before next JIDO run"
-  ]
+    "MCP offline \u2014 using cached state (59+ consecutive failures)",
+    "VPS decommissioned since 2026-03-23 \u2014 treat as permanently offline",
+    "DD 100% based on cached equity \u2014 strategy fully depleted",
+    "Dead-strategy run #59, override #37"
+  ],
+  "actions": [
+    "No actions \u2014 dead-strategy, equity=$0, MCP offline"
+  ],
+  "alerts": []
 }

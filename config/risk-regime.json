@@ -1,8 +1,8 @@
 {
-  "riskMode": "BASELINE",
+  "riskMode": "RISK_OFF",
   "updatedAt": "2026-05-15T22:01:03.442Z",
-  "updatedBy": "hermes-regime",
-  "reason": "BTC slope=-1.06%, ATR=0.51%; ETH slope=-2.59%, ATR=0.55%",
+  "updatedBy": "jido-emergency",
+  "reason": "dead-strategy, equity=$0, override #37",
   "regimes": {
     "RISK_ON": {
       "maxSlots": 3,
@@ -48,5 +48,5 @@
     "maxLeverage": 10,
     "maxPositionsTotal": 3
   },
-  "lastUpdated": "2026-05-15T21:46:53.583369+00:00"
+  "lastUpdated": "2026-05-15T22:01:40Z"
 }
