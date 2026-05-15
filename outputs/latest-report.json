@@ -1,9 +1,9 @@
 {
   "source": "cached",
-  "generatedAt": "2026-05-15T21:32:21.132326Z",
+  "generatedAt": "2026-05-15T21:46:53.583369+00:00",
   "regime": {
     "mode": "RISK_OFF",
-    "reason": "Dead-strategy override #35: equity=$0, MCP offline",
+    "reason": "Dead-strategy override #36: equity=$0, MCP offline",
     "enforcedBy": "jido-emergency",
     "marketSignal": null
   },
@@ -41,15 +41,15 @@
   },
   "alerts": [],
   "actions": [
-    "RISK_OFF maintained \u2014 override #35",
-    "MCP offline \u2014 57+ consecutive failures",
-    "Dead-strategy run #57"
+    "RISK_OFF maintained \u2014 override #36",
+    "MCP offline \u2014 58+ consecutive failures",
+    "Dead-strategy run #58"
   ],
   "infrastructure": {
     "vpsStatus": "decommissioned",
     "vpsOfflineSince": "2026-03-23T23:57:15Z",
     "mcpStatus": "offline",
-    "mcpConsecutiveFailures": "57+"
+    "mcpConsecutiveFailures": "58+"
   },
   "warnings": [
     "MCP server offline \u2014 all data from cached state",
