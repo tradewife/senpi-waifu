@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-15T10:00:58Z",
+  "generatedAt": "2026-05-15T22:00:26Z",
   "arenaWeek": "?",
   "totalEntrants": 105,
   "ourStats": {
@@ -7,8 +7,8 @@
     "winRate": 0.0,
     "totalPnl": -51.11
   },
-  "arenaTop5AvgRoe": 57.24,
-  "arenaTop5AvgPnl": 35.58,
+  "arenaTop5AvgRoe": 36.4,
+  "arenaTop5AvgPnl": 391.28,
   "arenaTop5": [
     {
       "rank": 1,
@@ -31,46 +31,6 @@
     },
     {
       "rank": 2,
-      "name": "mysterysuperboy",
-      "roePct": "58.2622",
-      "totalPnl": "77.166376",
-      "tradeCount": 0,
-      "toolsUsed": [
-        "user_get_me"
-      ]
-    },
-    {
-      "rank": 3,
-      "name": "0xschelling",
-      "roePct": "56.4217",
-      "totalPnl": "-1317.013943",
-      "tradeCount": 11,
-      "toolsUsed": [
-        "account_get_portfolio",
-        "arena_leaderboard",
-        "arena_prizes",
-        "arena_roe_chart",
-        "cancel_order",
-        "close_position",
-        "create_position",
-        "discovery_get_top_strategies",
-        "discovery_get_trader_history",
-        "discovery_get_trader_state",
-        "edit_position",
-        "leaderboard_get_markets",
-        "market_get_asset_data",
-        "market_get_funding_history",
-        "market_get_funding_regime",
-        "market_list_instruments",
-        "strategy_get_clearinghouse_state",
-        "strategy_get_open_orders",
-        "strategy_list",
-        "strategy_withdraw_funds",
-        "user_get_senpi_points"
-      ]
-    },
-    {
-      "rank": 4,
       "name": "Diegoxyz",
       "roePct": "37.6706",
       "totalPnl": "867.285029",
@@ -87,24 +47,50 @@
       ]
     },
     {
+      "rank": 3,
+      "name": "Anonymous",
+      "roePct": "10.0892",
+      "totalPnl": "56.023439",
+      "tradeCount": 0,
+      "toolsUsed": []
+    },
+    {
+      "rank": 4,
+      "name": "Bison12",
+      "roePct": "6.2529",
+      "totalPnl": "589.819539",
+      "tradeCount": 17,
+      "toolsUsed": [
+        "close_position",
+        "discovery_get_trader_history",
+        "discovery_get_trader_state",
+        "edit_position",
+        "execution_get_order_status",
+        "leaderboard_get_markets",
+        "market_get_asset_data",
+        "market_get_prices",
+        "market_list_instruments",
+        "ratchet_stop_add",
+        "ratchet_stop_delete",
+        "ratchet_stop_events",
+        "ratchet_stop_list",
+        "strategy_get_clearinghouse_state",
+        "strategy_get_pnl_and_account_value_history",
+        "strategy_list",
+        "strategy_top_up"
+      ]
+    },
+    {
       "rank": 5,
-      "name": "opencodeJaime",
-      "roePct": "10.5062",
-      "totalPnl": "128.156651",
+      "name": "baztaman",
+      "roePct": "4.6787",
+      "totalPnl": "20.983012",
       "tradeCount": 3,
       "toolsUsed": [
-        "create_position",
-        "edit_position",
-        "execution_get_open_position_details",
-        "leaderboard_get_markets",
-        "leaderboard_get_momentum_events",
-        "leaderboard_get_top",
-        "market_get_funding_history",
-        "market_get_funding_regime",
+        "market_get_asset_data",
         "market_get_prices",
-        "strategy_get_clearinghouse_state",
-        "strategy_list",
-        "user_get_me"
+        "market_list_instruments",
+        "strategy_get_clearinghouse_state"
       ]
     }
   ],
@@ -112,7 +98,7 @@
     {
       "action": "study_top_strategies",
       "confidence": "medium",
-      "reason": "Arena top 5 avg PnL $35.58 vs ours $-51.11. Study their patterns.",
+      "reason": "Arena top 5 avg PnL $391.28 vs ours $-51.11. Study their patterns.",
       "risk": "neutral"
     },
     {
