@@ -1,16 +1,18 @@
 {
-  "generatedAt": "2026-05-15T05:46:34.820996+00:00",
+  "generatedAt": "2026-05-15T06:32:40.968363+00:00",
   "source": "cached",
   "regime": {
     "mode": "RISK_OFF",
-    "reason": "DD 100% \u2014 strategy fully depleted",
+    "reason": "DD 100% \u2014 strategy fully depleted (dead-strategy run #25)",
     "enforcedBy": "jido-emergency",
     "marketSignal": null
   },
   "portfolio": {
     "equity": 0.0,
     "peak": 100.0,
-    "drawdownPct": 100.0
+    "drawdownPct": 100.0,
+    "dayStartEquity": 0.0,
+    "dailyPnl": 0.0
   },
   "guardrails": {
     "catastrophicDrawdown": {
@@ -35,24 +37,25 @@
     "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
     "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce",
     "budget": 100,
-    "remaining": 0.0
+    "remaining": 0.0,
+    "status": "depleted"
   },
   "infrastructure": {
     "vpsStatus": "decommissioned",
     "vpsOfflineSince": "2026-03-23T23:57:15Z",
     "mcpStatus": "offline",
-    "mcpConsecutiveFailures": "24+"
+    "mcpConsecutiveFailures": "25+"
   },
   "alerts": [
     {
       "type": "JIDO_HEARTBEAT",
-      "timestamp": "2026-05-15T05:46:34.820996+00:00",
+      "timestamp": "2026-05-15T06:32:40.968363+00:00",
       "regime": "RISK_OFF",
       "accountValue": 0.0,
       "drawdownPct": 100.0,
       "openPositions": 0,
       "openOrders": 0,
-      "message": "dead-strategy run #24 \u2014 MCP offline (24+), equity=$0, DD 100% (cached, override #10)"
+      "message": "dead-strategy run #25 \u2014 MCP offline (25+), equity=$0, DD 100% (cached, override #10)"
     }
   ],
   "warnings": [
@@ -62,7 +65,11 @@
     "Override #10: regime-classifier race"
   ],
   "actions": [
-    "dead-strategy run #24 \u2014 no positions to manage"
+    {
+      "type": "HEARTBEAT",
+      "timestamp": "2026-05-15T06:32:40.968363+00:00",
+      "detail": "dead-strategy run #25, MCP offline (25+)"
+    }
   ],
-  "timestamp": "2026-05-15T05:46:34.820996+00:00"
+  "timestamp": "2026-05-15T06:32:40.968363+00:00"
 }
