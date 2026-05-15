@@ -1,11 +1,11 @@
 {
   "source": "cached",
-  "generatedAt": "2026-05-15T23:01:19Z",
+  "generatedAt": "2026-05-15T23:31:46Z",
   "regime": {
     "mode": "RISK_OFF",
-    "reason": "equity=$0 dead-strategy run #63",
+    "reason": "equity=$0 dead-strategy, MCP offline 64+ failures",
     "enforcedBy": "jido-emergency",
-    "marketSignal": "dead-strategy"
+    "marketSignal": null
   },
   "portfolio": {
     "equity": 0.0,
@@ -13,51 +13,44 @@
     "drawdownPct": 100.0,
     "dailyPnl": 0.0
   },
+  "strategy": {
+    "name": "wolf-primary",
+    "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
+    "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce",
+    "budget": 100,
+    "remaining": 0.0
+  },
   "guardrails": {
     "catastrophicDrawdown": {
       "threshold": 20,
       "actual": 100.0,
       "breached": true
     },
-    "dailyLoss": {
+    "dailyLossLimit": {
       "threshold": 10,
       "actual": 0.0,
       "breached": false
     },
-    "consecutiveStopOuts": {
+    "maxConsecutiveStopOuts": {
       "threshold": 4,
       "actual": 0,
       "breached": false
     }
   },
   "positions": [],
-  "strategy": {
-    "name": "wolf-primary",
-    "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
-    "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce",
-    "budget": 100.0,
-    "remaining": 0.0
-  },
+  "actions": [
+    "dead-strategy heartbeat run #64, override #42"
+  ],
   "infrastructure": {
     "vpsStatus": "decommissioned",
     "vpsOfflineSince": "2026-03-23T23:57:15Z",
     "mcpStatus": "offline",
-    "mcpConsecutiveFailures": "63+"
+    "mcpConsecutiveFailures": "64+"
   },
   "warnings": [
-    {
-      "level": "critical",
-      "message": "Dead-strategy run #63: equity=$0 since 2026-05-14, MCP offline 63+ failures",
-      "timestamp": "2026-05-15T23:01:19Z"
-    },
-    {
-      "level": "info",
-      "message": "DD 100% based on live clearinghouse reading from 2026-05-14 (MCP now offline, using cached)",
-      "timestamp": "2026-05-15T23:01:19Z"
-    }
-  ],
-  "actions": [
-    "dead-strategy heartbeat run #63"
-  ],
-  "alerts": []
+    "MCP offline \u2014 64+ consecutive failures, using cached state",
+    "DD 100.0% based on cached equity from stale data \u2014 actual DD may differ",
+    "VPS decommissioned since 2026-03-23 \u2014 treat as permanently offline",
+    "Regime-drift correction applied: regime-classifier may overwrite to BASELINE before next JIDO run (override #42)"
+  ]
 }
