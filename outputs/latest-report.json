@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-05-15T15:16:41Z",
+  "generatedAt": "2026-05-15T15:31:45Z",
   "source": "cached",
   "regime": {
     "mode": "RISK_OFF",
-    "reason": "dead-strategy override #28",
+    "reason": "dead-strategy override #30",
     "enforcedBy": "jido-emergency",
     "marketSignal": null
   },
@@ -42,27 +42,27 @@
     "vpsStatus": "decommissioned",
     "vpsOfflineSince": "2026-03-23T23:57:15Z",
     "mcpStatus": "offline",
-    "mcpConsecutiveFailures": "51+"
+    "mcpConsecutiveFailures": "52+"
   },
   "warnings": [
     {
       "level": "CRITICAL",
-      "message": "MCP offline \u2014 51+ consecutive failures, using cached state",
-      "timestamp": "2026-05-15T15:16:41Z"
+      "message": "MCP offline \u2014 52+ consecutive failures, using cached state",
+      "timestamp": "2026-05-15T15:31:45Z"
     },
     {
       "level": "WARNING",
-      "message": "Dead-strategy state: equity=$0.0 for 51 consecutive runs",
-      "timestamp": "2026-05-15T15:16:41Z"
+      "message": "Dead-strategy state: equity=$0.0 for 52 consecutive runs",
+      "timestamp": "2026-05-15T15:31:45Z"
     },
     {
       "level": "INFO",
-      "message": "Regime-drift correction: enforced RISK_OFF (override #29)",
-      "timestamp": "2026-05-15T15:16:41Z"
+      "message": "Regime-drift correction: enforced RISK_OFF (override #30)",
+      "timestamp": "2026-05-15T15:31:45Z"
     }
   ],
   "actions": [
-    "JIDO dead-strategy heartbeat #51"
+    "JIDO dead-strategy heartbeat #52"
   ],
   "alerts": []
 }
