@@ -1,8 +1,8 @@
 {
   "riskMode": "RISK_OFF",
-  "updatedAt": "2026-05-15T10:17:32.727694Z",
+  "updatedAt": "2026-05-15T11:01:44Z",
   "updatedBy": "jido-emergency",
-  "reason": "dead-strategy run #37, equity=$0, drawdown=100.00%, override #16",
+  "reason": "dead-strategy equity=$0, drawdown=100.00%, override #17",
   "regimes": {
     "RISK_ON": {
       "maxSlots": 3,

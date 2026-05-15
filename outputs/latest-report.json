@@ -1,6 +1,6 @@
 {
   "source": "cached",
-  "generatedAt": "2026-05-15T10:46:45.668712Z",
+  "generatedAt": "2026-05-15T11:04:08Z",
   "regime": {
     "mode": "RISK_OFF",
     "reason": "dead-strategy run #37, equity=$0, drawdown=100.00%, override #16",
@@ -42,12 +42,19 @@
     "vpsStatus": "decommissioned",
     "vpsOfflineSince": "2026-03-23T23:57:45Z",
     "mcpStatus": "offline",
-    "mcpConsecutiveFailures": "37+"
+    "mcpConsecutiveFailures": "38+"
   },
   "warnings": [
-    "MCP offline for 37+ consecutive checks \u2014 all data is cached",
-    "Dead-strategy state: equity=$0 for 37 consecutive runs",
-    "VPS decommissioned since 2026-03-23 \u2014 treat as permanently offline"
+    {
+      "level": "info",
+      "message": "RISK_OFF enforced by jido-emergency (override #17). Regime-classifier may overwrite to BASELINE before next JIDO run.",
+      "timestamp": "2026-05-15T11:04:08Z"
+    },
+    {
+      "level": "warning",
+      "message": "MCP server offline \u2014 38+ consecutive failures. All data from cached state. DD 100.00% based on stale equity.",
+      "timestamp": "2026-05-15T11:04:08Z"
+    }
   ],
   "actions": [
     "RISK_OFF enforced",
