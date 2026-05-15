@@ -1,9 +1,9 @@
 {
   "source": "cached",
-  "generatedAt": "2026-05-15T11:04:08Z",
+  "generatedAt": "2026-05-15T11:16:58Z",
   "regime": {
     "mode": "RISK_OFF",
-    "reason": "dead-strategy run #37, equity=$0, drawdown=100.00%, override #16",
+    "reason": "dead-strategy run #39, equity=$0, drawdown=100.00%, override #18",
     "enforcedBy": "jido-emergency",
     "marketSignal": null
   },
@@ -42,23 +42,23 @@
     "vpsStatus": "decommissioned",
     "vpsOfflineSince": "2026-03-23T23:57:45Z",
     "mcpStatus": "offline",
-    "mcpConsecutiveFailures": "38+"
+    "mcpConsecutiveFailures": "39+"
   },
   "warnings": [
     {
       "level": "info",
-      "message": "RISK_OFF enforced by jido-emergency (override #17). Regime-classifier may overwrite to BASELINE before next JIDO run.",
-      "timestamp": "2026-05-15T11:04:08Z"
+      "message": "RISK_OFF enforced by jido-emergency (override #18). Regime-classifier may overwrite to BASELINE before next JIDO run.",
+      "timestamp": "2026-05-15T11:16:58Z"
     },
     {
       "level": "warning",
-      "message": "MCP server offline \u2014 38+ consecutive failures. All data from cached state. DD 100.00% based on stale equity.",
-      "timestamp": "2026-05-15T11:04:08Z"
+      "message": "MCP server offline \u2014 39+ consecutive failures. All data from cached state. DD 100.00% based on stale equity.",
+      "timestamp": "2026-05-15T11:16:58Z"
     }
   ],
   "actions": [
     "RISK_OFF enforced",
-    "override #16 applied"
+    "override #18 applied"
   ],
   "deadWeight": 0
 }
