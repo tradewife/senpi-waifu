@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-15T15:02:38Z",
+  "generatedAt": "2026-05-15T15:16:41Z",
   "source": "cached",
   "regime": {
     "mode": "RISK_OFF",
@@ -32,7 +32,7 @@
   },
   "positions": [],
   "strategy": {
-    "name": "wolf-primary",
+    "name": "WOLF-Primary",
     "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
     "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce",
     "budget": 100,
@@ -42,18 +42,27 @@
     "vpsStatus": "decommissioned",
     "vpsOfflineSince": "2026-03-23T23:57:15Z",
     "mcpStatus": "offline",
-    "mcpConsecutiveFailures": "50+"
+    "mcpConsecutiveFailures": "51+"
   },
   "warnings": [
-    "MCP offline \u2014 using cached state (50+ consecutive failures)",
-    "VPS decommissioned since 2026-03-23 (54 days offline)",
-    "Regime drift corrected: risk-regime.json was BASELINE, forced to RISK_OFF (override #28)",
-    "DD 100.00% is based on cached equity \u2014 wallet confirmed $0 on 2026-05-14"
+    {
+      "level": "CRITICAL",
+      "message": "MCP offline \u2014 51+ consecutive failures, using cached state",
+      "timestamp": "2026-05-15T15:16:41Z"
+    },
+    {
+      "level": "WARNING",
+      "message": "Dead-strategy state: equity=$0.0 for 51 consecutive runs",
+      "timestamp": "2026-05-15T15:16:41Z"
+    },
+    {
+      "level": "INFO",
+      "message": "Regime-drift correction: enforced RISK_OFF (override #29)",
+      "timestamp": "2026-05-15T15:16:41Z"
+    }
   ],
   "actions": [
-    "RISK_OFF enforced via override #28",
-    "Dead-strategy run #50",
-    "No positions to manage"
+    "JIDO dead-strategy heartbeat #51"
   ],
   "alerts": []
 }
