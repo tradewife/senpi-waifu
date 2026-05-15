@@ -1,18 +1,17 @@
 {
   "source": "cached",
-  "timestamp": "2026-05-15T10:31:34Z",
+  "generatedAt": "2026-05-15T10:46:45.668712Z",
   "regime": {
     "mode": "RISK_OFF",
-    "reason": "dead-strategy run #36, equity=$0",
+    "reason": "dead-strategy run #37, equity=$0, drawdown=100.00%, override #16",
     "enforcedBy": "jido-emergency",
-    "marketSignal": "N/A"
+    "marketSignal": null
   },
   "portfolio": {
     "equity": 0.0,
-    "peak": 100.0,
+    "peakEquity": 100.0,
     "drawdownPct": 100.0,
-    "dailyPnl": 0.0,
-    "deadWeight": 0.0
+    "dailyPnl": 0.0
   },
   "guardrails": {
     "catastrophicDrawdown": {
@@ -20,17 +19,18 @@
       "actual": 100.0,
       "breached": true
     },
-    "maxConsecutiveStopOuts": {
+    "consecutiveStopOuts": {
       "threshold": 4,
       "actual": 0,
       "breached": false
     },
-    "dailyLossLimit": {
+    "dailyLoss": {
       "threshold": 10,
       "actual": 0.0,
       "breached": false
     }
   },
+  "positions": [],
   "strategy": {
     "name": "wolf-primary",
     "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
@@ -38,31 +38,20 @@
     "budget": 100,
     "remaining": 0.0
   },
-  "positions": [],
   "infrastructure": {
     "vpsStatus": "decommissioned",
-    "vpsOfflineSince": "2026-03-23T00:00:00Z",
+    "vpsOfflineSince": "2026-03-23T23:57:45Z",
     "mcpStatus": "offline",
-    "mcpConsecutiveFailures": "36+"
+    "mcpConsecutiveFailures": "37+"
   },
-  "actions": [
-    "dead-strategy heartbeat run #36, override #15, no positions to manage"
-  ],
   "warnings": [
-    "MCP offline \u2014 using cached state",
-    "VPS decommissioned since 2026-03-23 \u2014 36 consecutive dead-strategy runs",
-    "DD 100.00% based on cached equity from prior sessions \u2014 actual DD is 100% (wallet depleted)"
+    "MCP offline for 37+ consecutive checks \u2014 all data is cached",
+    "Dead-strategy state: equity=$0 for 37 consecutive runs",
+    "VPS decommissioned since 2026-03-23 \u2014 treat as permanently offline"
   ],
-  "alerts": [
-    {
-      "type": "JIDO_HEARTBEAT",
-      "timestamp": "2026-05-15T10:31:34Z",
-      "regime": "RISK_OFF",
-      "accountValue": 0.0,
-      "drawdownPct": 100.0,
-      "openPositions": 0,
-      "openOrders": 0,
-      "message": "dead-strategy run #36, override #15, equity=$0, MCP offline 36+ failures, RISK_OFF enforced"
-    }
-  ]
+  "actions": [
+    "RISK_OFF enforced",
+    "override #16 applied"
+  ],
+  "deadWeight": 0
 }

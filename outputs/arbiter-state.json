@@ -5,23 +5,23 @@
   "dayStartEquity": 0.0,
   "dayStartDate": "2026-05-15",
   "consecutiveStopOuts": 0,
-  "overrideCount": 15,
-  "deadStrategyRunCount": 36,
-  "lastJidoRun": "2026-05-15T10:31:34Z",
-  "lastChecked": "2026-05-15T10:31:34Z",
-  "lastCheckAt": "2026-05-15T10:31:34Z",
-  "lastCheck": "2026-05-15T10:31:34Z",
-  "lastUpdated": "2026-05-15T10:31:34Z",
+  "overrideCount": 16,
+  "deadStrategyRunCount": 37,
+  "lastJidoRun": "2026-05-15T10:46:45.668712Z",
+  "lastChecked": "2026-05-15T10:46:45.668712Z",
+  "lastCheckAt": "2026-05-15T10:46:45.668712Z",
+  "lastCheck": "2026-05-15T10:46:45.668712Z",
+  "lastUpdated": "2026-05-15T10:46:45.668712Z",
   "alerts": [
     {
       "type": "JIDO_HEARTBEAT",
-      "timestamp": "2026-05-15T10:31:34Z",
+      "timestamp": "2026-05-15T10:46:45.668712Z",
       "regime": "RISK_OFF",
       "accountValue": 0.0,
       "drawdownPct": 100.0,
       "openPositions": 0,
       "openOrders": 0,
-      "message": "dead-strategy run #36, override #15, equity=$0, MCP offline 36+ failures, RISK_OFF enforced"
+      "message": "dead-strategy run #37, equity=$0, drawdown=100.00%, override #16"
     }
   ]
 }
