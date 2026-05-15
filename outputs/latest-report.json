@@ -1,22 +1,19 @@
 {
   "source": "cached",
-  "generatedAt": "2026-05-15T10:17:32.727694Z",
-  "regime": "RISK_OFF",
+  "timestamp": "2026-05-15T10:31:34Z",
+  "regime": {
+    "mode": "RISK_OFF",
+    "reason": "dead-strategy run #36, equity=$0",
+    "enforcedBy": "jido-emergency",
+    "marketSignal": "N/A"
+  },
   "portfolio": {
     "equity": 0.0,
     "peak": 100.0,
     "drawdownPct": 100.0,
-    "dailyPnl": 0.0
+    "dailyPnl": 0.0,
+    "deadWeight": 0.0
   },
-  "strategy": {
-    "name": "wolf-primary",
-    "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
-    "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce",
-    "budget": 100,
-    "remaining": 0.0,
-    "status": "dead"
-  },
-  "positions": [],
   "guardrails": {
     "catastrophicDrawdown": {
       "threshold": 20,
@@ -34,36 +31,38 @@
       "breached": false
     }
   },
-  "actions": [
-    "heartbeat only \u2014 no positions to manage"
-  ],
-  "warnings": [
-    "MCP offline \u2014 using cached state from 2026-05-15T10:17:32.727694Z",
-    "VPS decommissioned since 2026-03-23 (53+ days)",
-    "DD 100% based on cached equity \u2014 strategy fully depleted",
-    "Regime-classifier drift corrected: BASELINE -> RISK_OFF (override #14)"
-  ],
+  "strategy": {
+    "name": "wolf-primary",
+    "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
+    "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce",
+    "budget": 100,
+    "remaining": 0.0
+  },
+  "positions": [],
   "infrastructure": {
     "vpsStatus": "decommissioned",
-    "vpsOfflineSince": "2026-03-23T23:57:45Z",
+    "vpsOfflineSince": "2026-03-23T00:00:00Z",
     "mcpStatus": "offline",
-    "mcpConsecutiveFailures": "35+"
+    "mcpConsecutiveFailures": "36+"
   },
+  "actions": [
+    "dead-strategy heartbeat run #36, override #15, no positions to manage"
+  ],
+  "warnings": [
+    "MCP offline \u2014 using cached state",
+    "VPS decommissioned since 2026-03-23 \u2014 36 consecutive dead-strategy runs",
+    "DD 100.00% based on cached equity from prior sessions \u2014 actual DD is 100% (wallet depleted)"
+  ],
   "alerts": [
     {
       "type": "JIDO_HEARTBEAT",
-      "timestamp": "2026-05-15T09:33:26Z",
+      "timestamp": "2026-05-15T10:31:34Z",
       "regime": "RISK_OFF",
       "accountValue": 0.0,
       "drawdownPct": 100.0,
       "openPositions": 0,
       "openOrders": 0,
-      "message": "dead-strategy run #34, override #13, MCP offline (34+ failures), equity=$0"
+      "message": "dead-strategy run #36, override #15, equity=$0, MCP offline 36+ failures, RISK_OFF enforced"
     }
-  ],
-  "equity": 0.0,
-  "peakEquity": 100.0,
-  "drawdownPct": 100.0,
-  "dailyPnl": 0.0,
-  "deadWeight": 0
+  ]
 }
