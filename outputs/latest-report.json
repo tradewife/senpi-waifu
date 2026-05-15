@@ -1,9 +1,9 @@
 {
   "source": "cached",
-  "generatedAt": "2026-05-15T11:16:58Z",
+  "generatedAt": "2026-05-15T11:32:05Z",
   "regime": {
     "mode": "RISK_OFF",
-    "reason": "dead-strategy run #39, equity=$0, drawdown=100.00%, override #18",
+    "reason": "dead-strategy equity=$0, DD=100%, override #19",
     "enforcedBy": "jido-emergency",
     "marketSignal": null
   },
@@ -11,20 +11,21 @@
     "equity": 0.0,
     "peakEquity": 100.0,
     "drawdownPct": 100.0,
-    "dailyPnl": 0.0
+    "dailyPnl": 0.0,
+    "dayStartEquity": 0.0
   },
   "guardrails": {
-    "catastrophicDrawdown": {
+    "catastrophicDrawdownPct": {
       "threshold": 20,
       "actual": 100.0,
       "breached": true
     },
-    "consecutiveStopOuts": {
+    "maxConsecutiveStopOuts": {
       "threshold": 4,
       "actual": 0,
       "breached": false
     },
-    "dailyLoss": {
+    "dailyLossLimitPct": {
       "threshold": 10,
       "actual": 0.0,
       "breached": false
@@ -36,29 +37,39 @@
     "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
     "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce",
     "budget": 100,
-    "remaining": 0.0
+    "remaining": 0.0,
+    "status": "dead"
   },
   "infrastructure": {
     "vpsStatus": "decommissioned",
-    "vpsOfflineSince": "2026-03-23T23:57:45Z",
+    "vpsOfflineSince": "2026-03-23T23:57:15Z",
     "mcpStatus": "offline",
-    "mcpConsecutiveFailures": "39+"
+    "mcpConsecutiveFailures": "40+"
   },
   "warnings": [
     {
-      "level": "info",
-      "message": "RISK_OFF enforced by jido-emergency (override #18). Regime-classifier may overwrite to BASELINE before next JIDO run.",
-      "timestamp": "2026-05-15T11:16:58Z"
+      "level": "CRITICAL",
+      "message": "Strategy equity $0 for 40+ consecutive runs \u2014 capital fully depleted",
+      "timestamp": "2026-05-15T11:32:05Z"
     },
     {
-      "level": "warning",
-      "message": "MCP server offline \u2014 39+ consecutive failures. All data from cached state. DD 100.00% based on stale equity.",
-      "timestamp": "2026-05-15T11:16:58Z"
+      "level": "CRITICAL",
+      "message": "VPS decommissioned since 2026-03-23 \u2014 no scanner coverage",
+      "timestamp": "2026-05-15T11:32:05Z"
+    },
+    {
+      "level": "WARNING",
+      "message": "MCP offline 40+ consecutive failures \u2014 all data from cache",
+      "timestamp": "2026-05-15T11:32:05Z"
+    },
+    {
+      "level": "INFO",
+      "message": "Regime-classifier race: enforcing RISK_OFF (regime may drift to BASELINE before next JIDO run)",
+      "timestamp": "2026-05-15T11:32:05Z"
     }
   ],
   "actions": [
-    "RISK_OFF enforced",
-    "override #18 applied"
+    "dead-strategy heartbeat run #40"
   ],
   "deadWeight": 0
 }
