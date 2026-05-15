@@ -1,6 +1,6 @@
 {
   "source": "cached",
-  "generatedAt": "2026-05-15T00:03:19Z",
+  "generatedAt": "2026-05-15T00:17:08Z",
   "regime": {
     "mode": "RISK_OFF",
     "reason": "equity=0, DD=100%, dead strategy",
@@ -42,40 +42,40 @@
   "actions": [
     "RISK_OFF enforced (DD=100%)",
     "No positions to manage",
-    "MCP offline \u2014 no mutations possible"
+    "MCP offline - no mutations possible"
   ],
   "infrastructure": {
     "vpsStatus": "decommissioned",
     "vpsOfflineSince": "2026-03-23T23:57:15Z",
     "mcpStatus": "offline",
-    "mcpConsecutiveFailures": "10+"
+    "mcpConsecutiveFailures": "11+"
   },
   "warnings": [
-    "MCP offline \u2014 using cached state",
+    "MCP offline - using cached state",
     "VPS decommissioned since 2026-03-23 (53 days)",
-    "Dead strategy: equity=$0 for 2+ consecutive runs",
-    "DD 100% is based on cached equity from 2026-05-14 \u2014 confirmed $0 by last live reading"
+    "Dead strategy: equity=$0 for 3+ consecutive runs",
+    "DD 100% is based on cached equity from 2026-05-14 - confirmed $0 by last live reading"
   ],
   "alerts": [
     {
       "type": "JIDO_HEARTBEAT",
-      "timestamp": "2026-05-14T23:16:34Z",
+      "timestamp": "2026-05-15T00:02:33Z",
       "regime": "RISK_OFF",
       "accountValue": 0.0,
       "drawdownPct": 100.0,
       "openPositions": 0,
       "openOrders": 0,
-      "message": "RISK_OFF | flat portfolio (equity=0) | MCP offline (fail_str=7+) | VPS decommissioned since 2026-03-23 | regime override #7"
+      "message": "dead-strategy run #2 | equity=$0 | DD=100% | MCP offline (10+) | RISK_OFF | VPS decommissioned since 2026-03-23"
     },
     {
       "type": "JIDO_HEARTBEAT",
-      "timestamp": "2026-05-14T23:34:20Z",
+      "timestamp": "2026-05-15T00:17:08Z",
       "regime": "RISK_OFF",
       "accountValue": 0.0,
       "drawdownPct": 100.0,
       "openPositions": 0,
       "openOrders": 0,
-      "message": "RISK_OFF | flat portfolio (equity=0) | MCP offline (fail_str=8+) | VPS decommissioned since 2026-03-23 | regime override #7"
+      "message": "dead-strategy run #3 | equity=$0 | DD=100% | MCP offline (11+) | RISK_OFF | VPS decommissioned since 2026-03-23"
     }
   ],
   "equity": 0.0,
