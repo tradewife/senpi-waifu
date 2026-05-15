@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-15T08:17:31.565973+00:00",
+  "generatedAt": "2026-05-15T08:32:05.500562+00:00",
   "source": "cached",
   "regime": "RISK_OFF",
   "equity": 0.0,
@@ -39,10 +39,10 @@
     "vpsStatus": "decommissioned",
     "vpsOfflineSince": "2026-03-23T23:57:45Z",
     "mcpStatus": "offline",
-    "mcpConsecutiveFailures": "30+"
+    "mcpConsecutiveFailures": "31+"
   },
   "warnings": [
-    "MCP offline \u2014 using cached state (dead-strategy run #30)",
+    "MCP offline \u2014 using cached state (dead-strategy run #31)",
     "VPS offline since 2026-03-23 (>50 days) \u2014 treat as decommissioned",
     "DD 100% based on cached equity \u2014 actual DD confirmed at $0 via last live clearinghouse check"
   ]
