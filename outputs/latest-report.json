@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-15T07:17:18.492401+00:00",
+  "generatedAt": "2026-05-15T07:33:04.700180+00:00",
   "source": "cached",
   "regime": {
     "mode": "RISK_OFF",
@@ -42,28 +42,28 @@
     "vpsStatus": "decommissioned",
     "vpsOfflineSince": "2026-03-23T23:57:45Z",
     "mcpStatus": "offline",
-    "mcpConsecutiveFailures": "27+"
+    "mcpConsecutiveFailures": "28+"
   },
   "alerts": [
     {
       "type": "JIDO_HEARTBEAT",
-      "timestamp": "2026-05-15T06:46:30.409446+00:00",
+      "timestamp": "2026-05-15T07:33:04.700180+00:00",
       "regime": "RISK_OFF",
       "accountValue": 0.0,
       "drawdownPct": 100.0,
       "openPositions": 0,
       "openOrders": 0,
-      "message": "dead-strategy run #26 \u2014 MCP offline (26+), equity=$0, DD 100% (cached, override #10)"
+      "message": "dead-strategy run #28 \u2014 MCP offline (28+), equity=$0, DD 100% (cached, override #10)"
     }
   ],
   "warnings": [
-    "MCP offline for 27+ consecutive JIDO runs \u2014 all data is cached/stale",
-    "VPS decommissioned since 2026-03-23 (53 days ago)",
+    "MCP offline for 28+ consecutive JIDO runs \u2014 all data is cached/stale",
+    "VPS decommissioned since 2026-03-23 (52 days ago)",
     "Strategy wallet depleted (equity=$0, budget was $100)",
     "DD 100.0% is based on cached equity \u2014 actual state cannot be verified"
   ],
   "actions": [
-    "Heartbeat #27 \u2014 no actions possible, MCP offline"
+    "Heartbeat #28 \u2014 no actions possible, MCP offline"
   ],
-  "timestamp": "2026-05-15T06:46:30.409446+00:00"
+  "timestamp": "2026-05-15T07:33:04.700180+00:00"
 }
