@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-05-15T16:02:41Z",
+  "generatedAt": "2026-05-15T16:17:00Z",
   "source": "cached",
   "regime": {
     "mode": "RISK_OFF",
-    "reason": "Dead strategy: equity=$0, DD 100%, override #32",
+    "reason": "override #33: dead-strategy, equity=$0",
     "enforcedBy": "jido-emergency",
     "marketSignal": null
   },
@@ -32,26 +32,38 @@
   },
   "positions": [],
   "strategy": {
-    "name": "wolf-primary",
+    "name": "WOLF-Primary",
     "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
     "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce",
-    "budget": 100.0,
+    "budget": 100,
     "remaining": 0.0
   },
   "infrastructure": {
     "vpsStatus": "decommissioned",
     "vpsOfflineSince": "2026-03-23T23:57:15Z",
     "mcpStatus": "offline",
-    "mcpConsecutiveFailures": "54+"
+    "mcpConsecutiveFailures": "55+"
   },
   "warnings": [
-    "MCP server offline \u2014 all data is cached",
-    "DD 100.0% based on cached equity since 2026-05-14 \u2014 wallet fully depleted",
-    "VPS decommissioned since 2026-03-23",
-    "Dead-strategy run #54: equity=$0 for 54 consecutive runs"
+    {
+      "level": "CRITICAL",
+      "message": "MCP offline \u2014 55+ consecutive failures, using cached state",
+      "timestamp": "2026-05-15T16:17:00Z"
+    },
+    {
+      "level": "CRITICAL",
+      "message": "Dead-strategy run #55: equity=$0, VPS decommissioned since 2026-03-23",
+      "timestamp": "2026-05-15T16:17:00Z"
+    },
+    {
+      "level": "WARNING",
+      "message": "Regime override #33: regime-classifier may overwrite to BASELINE before next JIDO run",
+      "timestamp": "2026-05-15T16:17:00Z"
+    }
   ],
   "actions": [
-    "JIDO heartbeat: dead-strategy run #54, override #32"
+    "RISK_OFF enforced",
+    "dead-strategy heartbeat"
   ],
   "alerts": []
 }
