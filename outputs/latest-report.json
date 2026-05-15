@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-05-15T15:31:45Z",
+  "generatedAt": "2026-05-15T15:47:07Z",
   "source": "cached",
   "regime": {
     "mode": "RISK_OFF",
-    "reason": "dead-strategy override #30",
+    "reason": "Dead strategy: equity=$0, DD 100%, override #31",
     "enforcedBy": "jido-emergency",
     "marketSignal": null
   },
@@ -14,8 +14,8 @@
     "dailyPnl": 0.0
   },
   "guardrails": {
-    "catastrophicDrawdown": {
-      "threshold": 20,
+    "catastrophicDrawdownPct": {
+      "threshold": 20.0,
       "actual": 100.0,
       "breached": true
     },
@@ -24,45 +24,34 @@
       "actual": 0,
       "breached": false
     },
-    "dailyLossLimit": {
-      "threshold": 10,
+    "dailyLossLimitPct": {
+      "threshold": 10.0,
       "actual": 0.0,
       "breached": false
     }
   },
   "positions": [],
   "strategy": {
-    "name": "WOLF-Primary",
+    "name": "wolf-primary",
     "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
     "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce",
-    "budget": 100,
+    "budget": 100.0,
     "remaining": 0.0
   },
   "infrastructure": {
     "vpsStatus": "decommissioned",
     "vpsOfflineSince": "2026-03-23T23:57:15Z",
     "mcpStatus": "offline",
-    "mcpConsecutiveFailures": "52+"
+    "mcpConsecutiveFailures": "53+"
   },
   "warnings": [
-    {
-      "level": "CRITICAL",
-      "message": "MCP offline \u2014 52+ consecutive failures, using cached state",
-      "timestamp": "2026-05-15T15:31:45Z"
-    },
-    {
-      "level": "WARNING",
-      "message": "Dead-strategy state: equity=$0.0 for 52 consecutive runs",
-      "timestamp": "2026-05-15T15:31:45Z"
-    },
-    {
-      "level": "INFO",
-      "message": "Regime-drift correction: enforced RISK_OFF (override #30)",
-      "timestamp": "2026-05-15T15:31:45Z"
-    }
+    "MCP server offline \u2014 all data is cached",
+    "DD 100.0% based on cached equity since 2026-05-14 \u2014 wallet fully depleted",
+    "VPS decommissioned since 2026-03-23",
+    "Dead-strategy run #53: equity=$0 for 53 consecutive runs"
   ],
   "actions": [
-    "JIDO dead-strategy heartbeat #52"
+    "JIDO heartbeat: dead-strategy run #53, override #31"
   ],
   "alerts": []
 }
