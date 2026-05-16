@@ -1,10 +1,10 @@
 {
   "source": "cached",
-  "generatedAt": "2026-05-16T03:48:09Z",
+  "generatedAt": "2026-05-16T04:02:23Z",
   "generatedBy": "jido-dead-strategy-fastpath",
   "regime": {
     "mode": "RISK_OFF",
-    "reason": "JIDO override #56: dead strategy, equity=$0",
+    "reason": "JIDO override #57: dead strategy, equity=$0",
     "enforcedBy": "jido-emergency",
     "marketSignal": "N/A (MCP offline)"
   },
@@ -44,7 +44,7 @@
     "vpsStatus": "decommissioned",
     "vpsOfflineSince": "2026-03-23T00:00:00Z",
     "mcpStatus": "offline",
-    "mcpConsecutiveFailures": "78+"
+    "mcpConsecutiveFailures": "79+"
   },
   "actions": [
     "heartbeat-only: dead-strategy fast-path, no live data available"
@@ -52,23 +52,23 @@
   "warnings": [
     {
       "level": "CRITICAL",
-      "message": "MCP offline 78+ consecutive failures \u2014 all data is cached",
-      "timestamp": "2026-05-16T03:48:09Z"
+      "message": "MCP offline 79+ consecutive failures \u2014 all data is cached",
+      "timestamp": "2026-05-16T04:02:23Z"
     },
     {
       "level": "CRITICAL",
-      "message": "Strategy equity=$0 since 2026-05-14 (dead-strategy run #78)",
-      "timestamp": "2026-05-16T03:48:09Z"
+      "message": "Strategy equity=$0 since 2026-05-14 (dead-strategy run #79)",
+      "timestamp": "2026-05-16T04:02:23Z"
     },
     {
       "level": "WARNING",
       "message": "DD 100.0% based on cached equity from 2026-05-14 \u2014 actual DD may be 100% (pitfall #1c)",
-      "timestamp": "2026-05-16T03:48:09Z"
+      "timestamp": "2026-05-16T04:02:23Z"
     },
     {
       "level": "INFO",
       "message": "Regime-classifier may overwrite risk-regime.json to BASELINE before next JIDO run (pitfall #7)",
-      "timestamp": "2026-05-16T03:48:09Z"
+      "timestamp": "2026-05-16T04:02:23Z"
     }
   ]
 }
