@@ -1,8 +1,8 @@
 {
   "riskMode": "RISK_OFF",
-  "updatedAt": "2026-05-15T23:46:31Z",
-  "updatedBy": "jido-emergency",
-  "reason": "equity=$0 dead-strategy run #65, override #43",
+  "updatedAt": "2026-05-16T00:01:36.452249+00:00",
+  "updatedBy": "hermes-regime",
+  "reason": "Market=BASELINE (BTC slope=-1.20%, ETH slope=-2.64%, BTC ATR=0.47%, ETH ATR=0.52%, DD 100.0% > catastrophic limit 20%) but RISK_OFF override active",
   "regimes": {
     "RISK_ON": {
       "maxSlots": 3,
