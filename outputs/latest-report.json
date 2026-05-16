@@ -1,6 +1,6 @@
 {
   "source": "cached",
-  "generatedAt": "2026-05-16T04:16:17Z",
+  "generatedAt": "2026-05-16T04:46:14Z",
   "generatedBy": "jido-dead-strategy-fastpath",
   "regime": "RISK_OFF",
   "portfolio": {
@@ -39,34 +39,34 @@
     "vpsStatus": "decommissioned",
     "vpsOfflineSince": "2026-03-23T23:57:45Z",
     "mcpStatus": "offline",
-    "mcpConsecutiveFailures": "81+"
+    "mcpConsecutiveFailures": "82+"
   },
   "actions": [
-    "dead-strategy heartbeat run #81"
+    "dead-strategy heartbeat run #82"
   ],
   "warnings": [
     {
       "level": "CRITICAL",
-      "message": "MCP offline 81+ consecutive failures \u2014 all data cached",
-      "timestamp": "2026-05-16T04:31:44Z"
+      "message": "MCP offline 82+ consecutive failures \u2014 all data cached",
+      "timestamp": "2026-05-16T04:46:14Z"
     },
     {
       "level": "CRITICAL",
-      "message": "VPS decommissioned since 2026-03-23 \u2014 dead-strategy run #81",
-      "timestamp": "2026-05-16T04:31:44Z"
+      "message": "VPS decommissioned since 2026-03-23 \u2014 dead-strategy run #82",
+      "timestamp": "2026-05-16T04:46:14Z"
     },
     {
       "level": "WARNING",
       "message": "DD 100% based on cached equity \u2014 actual DD confirmed $0 on 2026-05-14",
-      "timestamp": "2026-05-16T04:31:44Z"
+      "timestamp": "2026-05-16T04:46:14Z"
     },
     {
       "level": "INFO",
-      "message": "Regime-drift correction: risk-regime.json enforced RISK_OFF (override #59)",
-      "timestamp": "2026-05-16T04:31:44Z"
+      "message": "Regime-drift correction: risk-regime.json enforced RISK_OFF (override #60)",
+      "timestamp": "2026-05-16T04:46:14Z"
     }
   ],
-  "timestamp": "2026-05-16T04:31:44Z",
+  "timestamp": "2026-05-16T04:46:14Z",
   "equity": 0.0,
   "peakEquity": 100.0,
   "drawdownPct": 100.0,
