@@ -1,8 +1,8 @@
 {
   "riskMode": "RISK_OFF",
-  "updatedAt": "2026-05-16T04:02:23Z",
+  "updatedAt": "2026-05-16T04:16:17Z",
   "updatedBy": "jido-emergency",
-  "reason": "JIDO override #57: dead strategy, equity=$0, MCP offline 79+ failures",
+  "reason": "JIDO override #58: dead strategy, equity=$0, MCP offline 80+ failures",
   "regimes": {
     "RISK_ON": {
       "maxSlots": 3,
@@ -48,5 +48,5 @@
     "maxLeverage": 10,
     "maxPositionsTotal": 3
   },
-  "lastUpdated": "2026-05-16T04:02:23Z"
+  "lastUpdated": "2026-05-16T04:16:17Z"
 }
