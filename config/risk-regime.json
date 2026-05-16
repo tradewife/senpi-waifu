@@ -1,8 +1,8 @@
 {
   "riskMode": "RISK_OFF",
-  "updatedAt": "2026-05-16T01:47:11Z",
-  "updatedBy": "jido-emergency",
-  "reason": "equity=$0 dead-strategy, MCP offline 71+ failures, override #49",
+  "updatedAt": "2026-05-16T02:01:37.854Z",
+  "updatedBy": "hermes-regime",
+  "reason": "Market indicators: BTC slope=-1.19%, ATR=0.46%; ETH slope=-2.63%, ATR=0.52%. RISK_OFF override: DD 100.0% exceeds catastrophic limit 20.0%",
   "regimes": {
     "RISK_ON": {
       "maxSlots": 3,
