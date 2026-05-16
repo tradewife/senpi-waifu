@@ -2,12 +2,7 @@
   "source": "cached",
   "generatedAt": "2026-05-16T04:16:17Z",
   "generatedBy": "jido-dead-strategy-fastpath",
-  "regime": {
-    "mode": "RISK_OFF",
-    "reason": "JIDO override #58: dead strategy, equity=$0",
-    "enforcedBy": "jido-emergency",
-    "marketSignal": "N/A (MCP offline)"
-  },
+  "regime": "RISK_OFF",
   "portfolio": {
     "equity": 0.0,
     "peakEquity": 100.0,
@@ -17,12 +12,12 @@
   },
   "guardrails": {
     "catastrophicDrawdown": {
-      "threshold": 20.0,
+      "threshold": 20,
       "actual": 100.0,
       "breached": true
     },
     "dailyLossLimit": {
-      "threshold": 10.0,
+      "threshold": 10,
       "actual": 0.0,
       "breached": false
     },
@@ -42,33 +37,39 @@
   },
   "infrastructure": {
     "vpsStatus": "decommissioned",
-    "vpsOfflineSince": "2026-03-23T00:00:00Z",
+    "vpsOfflineSince": "2026-03-23T23:57:45Z",
     "mcpStatus": "offline",
-    "mcpConsecutiveFailures": "80+"
+    "mcpConsecutiveFailures": "81+"
   },
   "actions": [
-    "heartbeat-only: dead-strategy fast-path, no live data available"
+    "dead-strategy heartbeat run #81"
   ],
   "warnings": [
     {
       "level": "CRITICAL",
-      "message": "MCP offline 80+ consecutive failures \u2014 all data is cached",
-      "timestamp": "2026-05-16T04:16:17Z"
+      "message": "MCP offline 81+ consecutive failures \u2014 all data cached",
+      "timestamp": "2026-05-16T04:31:44Z"
     },
     {
       "level": "CRITICAL",
-      "message": "Strategy equity=$0 since 2026-05-14 (dead-strategy run #80)",
-      "timestamp": "2026-05-16T04:16:17Z"
+      "message": "VPS decommissioned since 2026-03-23 \u2014 dead-strategy run #81",
+      "timestamp": "2026-05-16T04:31:44Z"
     },
     {
       "level": "WARNING",
-      "message": "DD 100.0% based on cached equity from 2026-05-14 \u2014 actual DD may be 100% (pitfall #1c)",
-      "timestamp": "2026-05-16T04:16:17Z"
+      "message": "DD 100% based on cached equity \u2014 actual DD confirmed $0 on 2026-05-14",
+      "timestamp": "2026-05-16T04:31:44Z"
     },
     {
       "level": "INFO",
-      "message": "Regime-classifier may overwrite risk-regime.json to BASELINE before next JIDO run (pitfall #7)",
-      "timestamp": "2026-05-16T04:16:17Z"
+      "message": "Regime-drift correction: risk-regime.json enforced RISK_OFF (override #59)",
+      "timestamp": "2026-05-16T04:31:44Z"
     }
-  ]
+  ],
+  "timestamp": "2026-05-16T04:31:44Z",
+  "equity": 0.0,
+  "peakEquity": 100.0,
+  "drawdownPct": 100.0,
+  "dailyPnl": 0.0,
+  "deadWeight": []
 }
