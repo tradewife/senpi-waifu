@@ -1,14 +1,17 @@
 {
   "source": "cached",
-  "generatedAt": "2026-05-16T04:46:14Z",
-  "generatedBy": "jido-dead-strategy-fastpath",
-  "regime": "RISK_OFF",
+  "generatedAt": "2026-05-16T05:31:39Z",
+  "regime": {
+    "mode": "RISK_OFF",
+    "reason": "dead-strategy equity=$0, override #61",
+    "enforcedBy": "jido-emergency",
+    "marketSignal": "unknown"
+  },
   "portfolio": {
     "equity": 0.0,
-    "peakEquity": 100.0,
+    "peak": 100.0,
     "drawdownPct": 100.0,
-    "dailyPnl": 0.0,
-    "withdrawable": 0.0
+    "dailyPnl": 0.0
   },
   "guardrails": {
     "catastrophicDrawdown": {
@@ -16,14 +19,14 @@
       "actual": 100.0,
       "breached": true
     },
-    "dailyLossLimit": {
-      "threshold": 10,
-      "actual": 0.0,
-      "breached": false
-    },
     "maxConsecutiveStopOuts": {
       "threshold": 4,
       "actual": 0,
+      "breached": false
+    },
+    "dailyLossLimit": {
+      "threshold": 10,
+      "actual": 0.0,
       "breached": false
     }
   },
@@ -33,43 +36,39 @@
     "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
     "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce",
     "budget": 100,
-    "remaining": 0.0
+    "remaining": 0.0,
+    "status": "dead"
   },
   "infrastructure": {
     "vpsStatus": "decommissioned",
-    "vpsOfflineSince": "2026-03-23T23:57:45Z",
+    "vpsOfflineSince": "2026-03-23T00:00:00Z",
     "mcpStatus": "offline",
-    "mcpConsecutiveFailures": "82+"
+    "mcpConsecutiveFailures": "83+"
   },
-  "actions": [
-    "dead-strategy heartbeat run #82"
-  ],
   "warnings": [
     {
       "level": "CRITICAL",
-      "message": "MCP offline 82+ consecutive failures \u2014 all data cached",
-      "timestamp": "2026-05-16T04:46:14Z"
+      "message": "MCP offline \u2014 83+ consecutive failures, using cached state",
+      "timestamp": "2026-05-16T05:31:39Z"
     },
     {
       "level": "CRITICAL",
-      "message": "VPS decommissioned since 2026-03-23 \u2014 dead-strategy run #82",
-      "timestamp": "2026-05-16T04:46:14Z"
+      "message": "VPS decommissioned since 2026-03-23 \u2014 strategy equity=$0, dead-strategy run #83",
+      "timestamp": "2026-05-16T05:31:39Z"
     },
     {
       "level": "WARNING",
-      "message": "DD 100% based on cached equity \u2014 actual DD confirmed $0 on 2026-05-14",
-      "timestamp": "2026-05-16T04:46:14Z"
+      "message": "DD 100.0% based on cached equity \u2014 actual DD confirmed $0 via last live reading (2026-05-14)",
+      "timestamp": "2026-05-16T05:31:39Z"
     },
     {
       "level": "INFO",
-      "message": "Regime-drift correction: risk-regime.json enforced RISK_OFF (override #60)",
-      "timestamp": "2026-05-16T04:46:14Z"
+      "message": "Regime-drift correction: risk-regime.json enforced to RISK_OFF (override #61)",
+      "timestamp": "2026-05-16T05:31:39Z"
     }
   ],
-  "timestamp": "2026-05-16T04:46:14Z",
-  "equity": 0.0,
-  "peakEquity": 100.0,
-  "drawdownPct": 100.0,
-  "dailyPnl": 0.0,
-  "deadWeight": []
+  "actions": [
+    "RISK_OFF enforced (override #61)",
+    "dead-strategy run #83 \u2014 no positions to manage"
+  ]
 }
