@@ -1,9 +1,9 @@
 {
   "source": "cached",
-  "generatedAt": "2026-05-16T00:31:57Z",
+  "generatedAt": "2026-05-16T00:47:04Z",
   "regime": {
     "mode": "RISK_OFF",
-    "reason": "equity=$0 dead-strategy, MCP offline 67+ failures",
+    "reason": "equity=$0 dead-strategy, MCP offline 68+ failures",
     "enforcedBy": "jido-emergency",
     "marketSignal": null
   },
@@ -39,18 +39,18 @@
   },
   "positions": [],
   "actions": [
-    "dead-strategy heartbeat run #67, override #45"
+    "dead-strategy heartbeat run #68, override #46"
   ],
   "infrastructure": {
     "vpsStatus": "decommissioned",
     "vpsOfflineSince": "2026-03-23T23:57:15Z",
     "mcpStatus": "offline",
-    "mcpConsecutiveFailures": "67+"
+    "mcpConsecutiveFailures": "68+"
   },
   "warnings": [
-    "MCP offline \u2014 67+ consecutive failures, using cached state",
+    "MCP offline \u2014 68+ consecutive failures, using cached state",
     "DD 100.0% based on cached equity from stale data \u2014 actual DD may differ",
     "VPS decommissioned since 2026-03-23 \u2014 treat as permanently offline",
-    "Regime-drift correction applied: regime-classifier may overwrite to BASELINE before next JIDO run (override #45)"
+    "Regime-drift correction applied: regime-classifier may overwrite to BASELINE before next JIDO run (override #46)"
   ]
 }
