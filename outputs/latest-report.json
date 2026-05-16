@@ -3,9 +3,9 @@
   "generatedAt": "2026-05-16T02:46:19Z",
   "regime": {
     "mode": "RISK_OFF",
-    "reason": "equity=$0 dead-strategy, MCP offline 74+ failures",
+    "reason": "dead-strategy run #75: equity=$0.0, DD 100.0%, MCP offline 75+ failures",
     "enforcedBy": "jido-emergency",
-    "marketSignal": null
+    "marketSignal": "dead-strategy"
   },
   "portfolio": {
     "equity": 0.0,
@@ -28,7 +28,7 @@
     },
     "dailyLossLimit": {
       "threshold": 10,
-      "actual": 0.0,
+      "actual": 0,
       "breached": false
     },
     "maxConsecutiveStopOuts": {
@@ -39,18 +39,20 @@
   },
   "positions": [],
   "actions": [
-    "dead-strategy heartbeat run #74, override #52"
+    "RISK_OFF enforced (jido-emergency)",
+    "dead-strategy run #75"
   ],
   "infrastructure": {
     "vpsStatus": "decommissioned",
-    "vpsOfflineSince": "2026-03-23T23:57:15Z",
+    "vpsOfflineSince": "2026-03-23",
     "mcpStatus": "offline",
-    "mcpConsecutiveFailures": "74+"
+    "mcpConsecutiveFailures": "75+"
   },
   "warnings": [
-    "MCP offline \u2014 74+ consecutive failures, using cached state",
-    "DD 100.0% based on cached equity from stale data \u2014 actual DD may differ",
-    "VPS decommissioned since 2026-03-23 \u2014 treat as permanently offline",
-    "Regime-drift correction applied: regime-classifier may overwrite to BASELINE before next JIDO run (override #52)"
-  ]
+    "MCP offline \u2014 75+ consecutive failures, using cached state",
+    "VPS decommissioned since 2026-03-23 \u2014 treat as permanent",
+    "DD 100.0% based on cached equity \u2014 actual DD may be 100%",
+    "Regime-drift correction: was BASELINE, corrected to RISK_OFF"
+  ],
+  "timestamp": "2026-05-16T03:02:04Z"
 }
