@@ -1,9 +1,9 @@
 {
   "source": "cached",
-  "generatedAt": "2026-05-16T03:17:20Z",
+  "generatedAt": "2026-05-16T03:31:22Z",
   "regime": {
     "mode": "RISK_OFF",
-    "reason": "dead-strategy run #76: equity=$0.0, DD 100.0%, MCP offline 76+ failures",
+    "reason": "dead-strategy run #77: equity=$0.0, DD 100.0%, MCP offline 77+ failures",
     "enforcedBy": "jido-emergency",
     "marketSignal": "dead-strategy"
   },
@@ -40,19 +40,19 @@
   "positions": [],
   "actions": [
     "RISK_OFF enforced (jido-emergency)",
-    "dead-strategy run #76"
+    "dead-strategy run #77"
   ],
   "infrastructure": {
     "vpsStatus": "decommissioned",
     "vpsOfflineSince": "2026-03-23",
     "mcpStatus": "offline",
-    "mcpConsecutiveFailures": "76+"
+    "mcpConsecutiveFailures": "77+"
   },
   "warnings": [
-    "MCP offline \u2014 76+ consecutive failures, using cached state",
+    "MCP offline \u2014 77+ consecutive failures, using cached state",
     "VPS decommissioned since 2026-03-23 \u2014 treat as permanent",
     "DD 100.0% based on cached equity \u2014 actual DD confirmed 100%",
-    "Regime-drift correction: ensuring RISK_OFF (override #54)"
+    "Regime-drift correction: ensuring RISK_OFF (override #55)"
   ],
-  "timestamp": "2026-05-16T03:17:20Z"
+  "timestamp": "2026-05-16T03:31:22Z"
 }
