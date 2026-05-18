@@ -1,8 +1,8 @@
 {
-  "riskMode": "BASELINE",
-  "updatedAt": "2026-05-18T13:01:03Z",
-  "updatedBy": "waifu-regime",
-  "reason": "Mixed signals (slope=-0.2%, ATR=0.8%)",
+  "riskMode": "RISK_OFF",
+  "updatedAt": "2026-05-18T13:02:41.334993+00:00",
+  "updatedBy": "jido-emergency",
+  "reason": "dead-strategy equity=$0, DD=100%, MCP offline 91+ failures",
   "regimes": {
     "RISK_ON": {
       "maxSlots": 3,
@@ -48,5 +48,5 @@
     "maxLeverage": 10,
     "maxPositionsTotal": 3
   },
-  "lastUpdated": "2026-05-18T12:47:03.365167Z"
+  "lastUpdated": "2026-05-18T13:02:41.334993+00:00"
 }
