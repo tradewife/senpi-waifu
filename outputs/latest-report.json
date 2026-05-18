@@ -1,9 +1,9 @@
 {
   "source": "cached",
-  "generatedAt": "2026-05-18T13:02:41.334993+00:00",
+  "generatedAt": "2026-05-18T13:17:51.681426+00:00",
   "regime": {
     "mode": "RISK_OFF",
-    "reason": "dead-strategy equity=$0, MCP offline 91+ failures",
+    "reason": "dead-strategy run #92, equity=$0, DD=100%",
     "enforcedBy": "jido-emergency",
     "marketSignal": null
   },
@@ -22,9 +22,9 @@
     "dailyLossLimit": {
       "threshold": 10,
       "actual": 0.0,
-      "breached": false
+      "breached": true
     },
-    "maxConsecutiveStopOuts": {
+    "consecutiveStopOuts": {
       "threshold": 4,
       "actual": 0,
       "breached": false
@@ -32,7 +32,7 @@
   },
   "positions": [],
   "actions": [
-    "dead-strategy run #91: no actions taken (equity=$0, MCP offline)"
+    "dead-strategy heartbeat \u2014 no positions to manage"
   ],
   "strategy": {
     "name": "wolf-primary",
@@ -45,28 +45,28 @@
     "vpsStatus": "decommissioned",
     "vpsOfflineSince": "2026-03-23T23:57:15Z",
     "mcpStatus": "offline",
-    "mcpConsecutiveFailures": "91+"
+    "mcpConsecutiveFailures": "92+"
   },
   "warnings": [
     {
       "level": "CRITICAL",
-      "message": "MCP offline 91+ consecutive failures \u2014 all data cached",
-      "timestamp": "2026-05-18T13:02:41.334993+00:00"
+      "message": "MCP offline 92+ consecutive failures \u2014 all data cached",
+      "timestamp": "2026-05-18T13:17:51.681426+00:00"
     },
     {
       "level": "CRITICAL",
       "message": "VPS decommissioned since 2026-03-23 (55 days) \u2014 treat as permanently offline",
-      "timestamp": "2026-05-18T13:02:41.334993+00:00"
+      "timestamp": "2026-05-18T13:17:51.681426+00:00"
     },
     {
       "level": "INFO",
       "message": "DD 100% based on cached equity \u2014 wallet confirmed depleted on 2026-05-14",
-      "timestamp": "2026-05-18T13:02:41.334993+00:00"
+      "timestamp": "2026-05-18T13:17:51.681426+00:00"
     },
     {
       "level": "WARN",
-      "message": "regime-classifier set BASELINE at 13:01Z \u2014 JIDO corrected to RISK_OFF (override #69)",
-      "timestamp": "2026-05-18T13:02:41.334993+00:00"
+      "message": "regime-classifier may set BASELINE hourly \u2014 JIDO corrected to RISK_OFF (override #70)",
+      "timestamp": "2026-05-18T13:17:51.681426+00:00"
     }
   ]
 }
