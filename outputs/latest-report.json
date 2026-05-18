@@ -1,11 +1,11 @@
 {
   "source": "cached",
-  "generatedAt": "2026-05-18T12:33:26.186071+00:00",
+  "generatedAt": "2026-05-18T12:47:03.365167Z",
   "regime": {
     "mode": "RISK_OFF",
-    "reason": "dead-strategy equity=$0, DD 100.0%, override #67",
+    "reason": "dead-strategy equity=$0, MCP offline 90+ failures",
     "enforcedBy": "jido-emergency",
-    "marketSignal": "N/A (MCP offline)"
+    "marketSignal": null
   },
   "portfolio": {
     "equity": 0.0,
@@ -21,46 +21,47 @@
     },
     "dailyLossLimit": {
       "threshold": 10,
-      "actual": 0,
+      "actual": 0.0,
       "breached": false
     },
-    "consecutiveStopOuts": {
+    "maxConsecutiveStopOuts": {
       "threshold": 4,
       "actual": 0,
       "breached": false
     }
   },
   "positions": [],
+  "actions": [
+    "dead-strategy run #90: no actions taken (equity=$0, MCP offline)"
+  ],
   "strategy": {
     "name": "wolf-primary",
     "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
     "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce",
-    "budget": 100,
+    "budget": 100.0,
     "remaining": 0.0
   },
   "infrastructure": {
     "vpsStatus": "decommissioned",
     "vpsOfflineSince": "2026-03-23T23:57:15Z",
     "mcpStatus": "offline",
-    "mcpConsecutiveFailures": "89+"
+    "mcpConsecutiveFailures": "90+"
   },
-  "actions": [],
   "warnings": [
-    "MCP offline \u2014 89+ consecutive failures, using cached state",
-    "VPS decommissioned since 2026-03-23 (56+ days)",
-    "Dead-strategy run #89: equity=$0, drawdown 100.0% (cached \u2014 actual DD may differ)",
-    "Regime-drift correction: enforced RISK_OFF via jido-emergency (override #67)"
-  ],
-  "alerts": [
     {
-      "type": "JIDO_HEARTBEAT",
-      "timestamp": "2026-05-18T12:33:26.186071+00:00",
-      "regime": "RISK_OFF",
-      "accountValue": 0.0,
-      "drawdownPct": 100.0,
-      "openPositions": 0,
-      "openOrders": 0,
-      "message": "dead-strategy run #89, override #67, equity=$0, MCP offline 89+ failures"
+      "level": "CRITICAL",
+      "message": "MCP offline 90+ consecutive failures \u2014 all data cached",
+      "timestamp": "2026-05-18T12:47:03.365167Z"
+    },
+    {
+      "level": "CRITICAL",
+      "message": "VPS decommissioned since 2026-03-23 (55 days) \u2014 treat as permanently offline",
+      "timestamp": "2026-05-18T12:47:03.365167Z"
+    },
+    {
+      "level": "INFO",
+      "message": "DD 100% based on cached equity \u2014 wallet confirmed depleted on 2026-05-14",
+      "timestamp": "2026-05-18T12:47:03.365167Z"
     }
   ]
 }
