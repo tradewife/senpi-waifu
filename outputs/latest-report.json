@@ -1,39 +1,19 @@
 {
   "source": "cached",
-  "generatedAt": "2026-05-18T13:17:51.681426+00:00",
+  "generatedAt": "2026-05-18T13:32:24.304725+00:00",
   "regime": {
     "mode": "RISK_OFF",
-    "reason": "dead-strategy run #92, equity=$0, DD=100%",
+    "reason": "dead-strategy #93, equity=$0, DD=100%",
     "enforcedBy": "jido-emergency",
-    "marketSignal": null
+    "marketSignal": "N/A"
   },
   "portfolio": {
     "equity": 0.0,
-    "peak": 100.0,
+    "peakEquity": 100.0,
     "drawdownPct": 100.0,
-    "dailyPnl": 0.0
+    "dailyPnl": 0.0,
+    "dailyPnlPct": 0.0
   },
-  "guardrails": {
-    "catastrophicDrawdown": {
-      "threshold": 20,
-      "actual": 100.0,
-      "breached": true
-    },
-    "dailyLossLimit": {
-      "threshold": 10,
-      "actual": 0.0,
-      "breached": true
-    },
-    "consecutiveStopOuts": {
-      "threshold": 4,
-      "actual": 0,
-      "breached": false
-    }
-  },
-  "positions": [],
-  "actions": [
-    "dead-strategy heartbeat \u2014 no positions to manage"
-  ],
   "strategy": {
     "name": "wolf-primary",
     "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
@@ -41,32 +21,57 @@
     "budget": 100.0,
     "remaining": 0.0
   },
+  "guardrails": {
+    "catastrophicDrawdown": {
+      "threshold": 20,
+      "actual": 100.0,
+      "breached": true
+    },
+    "maxConsecutiveStopOuts": {
+      "threshold": 4,
+      "actual": 0,
+      "breached": false
+    },
+    "dailyLossLimit": {
+      "threshold": 10,
+      "actual": 0.0,
+      "breached": false
+    }
+  },
+  "positions": [],
+  "actions": [
+    "dead-strategy heartbeat #93",
+    "RISK_OFF override #71 enforced",
+    "MCP offline 93+ failures \u2014 all data cached"
+  ],
   "infrastructure": {
     "vpsStatus": "decommissioned",
     "vpsOfflineSince": "2026-03-23T23:57:15Z",
     "mcpStatus": "offline",
-    "mcpConsecutiveFailures": "92+"
+    "mcpConsecutiveFailures": "93+"
   },
   "warnings": [
     {
       "level": "CRITICAL",
-      "message": "MCP offline 92+ consecutive failures \u2014 all data cached",
-      "timestamp": "2026-05-18T13:17:51.681426+00:00"
+      "message": "MCP server offline \u2014 93+ consecutive failures",
+      "timestamp": "2026-05-18T13:32:24.304725+00:00"
     },
     {
       "level": "CRITICAL",
-      "message": "VPS decommissioned since 2026-03-23 (55 days) \u2014 treat as permanently offline",
-      "timestamp": "2026-05-18T13:17:51.681426+00:00"
+      "message": "VPS decommissioned since 2026-03-23T23:57:15Z (56+ days offline)",
+      "timestamp": "2026-05-18T13:32:24.304725+00:00"
+    },
+    {
+      "level": "WARNING",
+      "message": "DD 100% based on cached equity \u2014 strategy fully depleted since 2026-05-14",
+      "timestamp": "2026-05-18T13:32:24.304725+00:00"
     },
     {
       "level": "INFO",
-      "message": "DD 100% based on cached equity \u2014 wallet confirmed depleted on 2026-05-14",
-      "timestamp": "2026-05-18T13:17:51.681426+00:00"
-    },
-    {
-      "level": "WARN",
-      "message": "regime-classifier may set BASELINE hourly \u2014 JIDO corrected to RISK_OFF (override #70)",
-      "timestamp": "2026-05-18T13:17:51.681426+00:00"
+      "message": "Regime drift correction: enforced RISK_OFF (regime-classifier may overwrite to BASELINE before next JIDO run)",
+      "timestamp": "2026-05-18T13:32:24.304725+00:00"
     }
-  ]
+  ],
+  "alerts": [],
+  "deadWeight": 0.0
 }
