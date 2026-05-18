@@ -1,9 +1,10 @@
 {
   "source": "cached",
-  "generatedAt": "2026-05-18T10:47:30.444215+00:00",
+  "generatedAt": "2026-05-18T11:17:55.611347+00:00",
+  "generatedBy": "jido-cron",
   "regime": {
     "mode": "RISK_OFF",
-    "reason": "dead-strategy override #62",
+    "reason": "dead-strategy #85, MCP offline 85+",
     "enforcedBy": "jido-emergency",
     "marketSignal": null
   },
@@ -13,13 +14,21 @@
     "drawdownPct": 100.0,
     "dailyPnl": 0.0
   },
+  "strategy": {
+    "name": "wolf-primary",
+    "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
+    "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce",
+    "budget": 100.0,
+    "remaining": 0.0
+  },
+  "positions": [],
   "guardrails": {
     "catastrophicDrawdown": {
       "threshold": 20,
       "actual": 100.0,
       "breached": true
     },
-    "maxConsecutiveStopOuts": {
+    "consecutiveStopOuts": {
       "threshold": 4,
       "actual": 0,
       "breached": false
@@ -30,38 +39,29 @@
       "breached": false
     }
   },
-  "positions": [],
-  "strategy": {
-    "name": "wolf-primary",
-    "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
-    "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce",
-    "budget": 100.0,
-    "remaining": 0.0
-  },
   "infrastructure": {
     "vpsStatus": "decommissioned",
     "vpsOfflineSince": "2026-03-23T23:57:15Z",
     "mcpStatus": "offline",
-    "mcpConsecutiveFailures": "84+"
+    "mcpConsecutiveFailures": "85+"
   },
-  "warnings": [
+  "alerts": [
     {
-      "level": "CRITICAL",
-      "message": "Strategy equity=$0 since 2026-05-14, VPS decommissioned since 2026-03-23, dead-strategy run #84",
-      "timestamp": "2026-05-18T10:47:30.444215+00:00"
-    },
-    {
-      "level": "WARNING",
-      "message": "MCP server offline \u2014 84+ consecutive failures, all data is cached/stale",
-      "timestamp": "2026-05-18T10:47:30.444215+00:00"
-    },
-    {
-      "level": "INFO",
-      "message": "Regime-classifier cron overwrites risk-regime.json to BASELINE hourly \u2014 JIDO re-enforces RISK_OFF each run",
-      "timestamp": "2026-05-18T10:47:30.444215+00:00"
+      "type": "JIDO_HEARTBEAT",
+      "timestamp": "2026-05-18T11:17:55.611347+00:00",
+      "regime": "RISK_OFF",
+      "accountValue": 0.0,
+      "drawdownPct": 100.0,
+      "openPositions": 0,
+      "openOrders": 0,
+      "message": "dead-strategy run #85, override #63"
     }
   ],
-  "actions": [
-    "dead-strategy heartbeat run #84"
+  "actions": [],
+  "warnings": [
+    "MCP offline \u2014 85+ consecutive failures, using cached state",
+    "VPS decommissioned since 2026-03-23 (55 days offline)",
+    "DD 100% based on cached equity from 2026-05-14 \u2014 actual DD confirmed $0 equity",
+    "Regime-classifier may overwrite RISK_OFF to BASELINE (override #63)"
   ]
 }
