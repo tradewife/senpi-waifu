@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-05-18T11:17:55.611347+00:00",
+  "generatedAt": "2026-05-18T11:32:37.593181Z",
   "codebaseIndexAt": "2026-03-23T23:57:15Z",
   "riskMode": "RISK_OFF",
   "executionPolicy": {
-    "generatedAt": "2026-05-18T11:17:55.611347+00:00",
+    "generatedAt": "2026-05-18T11:32:37.593181Z",
     "mode": "ACTIVE",
     "blockNewEntries": true,
     "allowAutoEntry": false,
@@ -16,7 +16,7 @@
       }
     },
     "reasons": [
-      "override #63"
+      "override #64: dead-strategy equity=$0, MCP offline 86+ failures"
     ],
     "risk": {
       "drawdownPctFromPeak": 100.0,
@@ -51,7 +51,7 @@
       "peakEquity": 100.0,
       "dayStartEquity": 0.0,
       "consecutiveStopOuts": 0,
-      "lastJidoRun": "2026-05-18T10:47:30.444215+00:00",
+      "lastJidoRun": "2026-05-18T11:32:37.593181Z",
       "lastJidoCheck": "2026-05-16T04:46:14Z",
       "lastChecked": "2026-05-16T04:46:14Z",
       "lastCheck": "2026-05-16T04:46:14Z",
