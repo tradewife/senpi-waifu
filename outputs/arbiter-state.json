@@ -5,24 +5,24 @@
   "dayStartDate": "2026-05-18",
   "drawdownPct": 100.0,
   "consecutiveStopOuts": 0,
-  "deadStrategyRunCount": 94,
-  "overrideCount": 72,
-  "mcpConsecutiveFailures": 94,
-  "lastJidoRun": "2026-05-18T13:46:48Z",
-  "lastChecked": "2026-05-18T13:46:48Z",
-  "lastCheckAt": "2026-05-18T13:46:48Z",
-  "lastCheck": "2026-05-18T13:46:48Z",
-  "lastUpdated": "2026-05-18T13:46:48Z",
+  "deadStrategyRunCount": 95,
+  "overrideCount": 73,
+  "mcpConsecutiveFailures": 0,
+  "lastJidoRun": "2026-05-18T23:47:11Z",
+  "lastChecked": "2026-05-18T23:47:11Z",
+  "lastCheckAt": "2026-05-18T23:47:11Z",
+  "lastCheck": "2026-05-18T23:47:11Z",
+  "lastUpdated": "2026-05-18T23:47:11Z",
   "alerts": [
     {
       "type": "JIDO_HEARTBEAT",
-      "timestamp": "2026-05-18T13:46:48Z",
+      "timestamp": "2026-05-18T23:47:11Z",
       "regime": "RISK_OFF",
       "accountValue": 0.0,
       "drawdownPct": 100.0,
       "openPositions": 0,
       "openOrders": 0,
-      "message": "dead-strategy run #94, override #72, MCP offline 94+ failures, equity=$0, VPS decommissioned 55d ago"
+      "message": "dead-strategy run #95, override #73, MCP reconnected (was 94+ failures), equity=$0 (live), VPS decommissioned 55d ago"
     }
   ]
 }
