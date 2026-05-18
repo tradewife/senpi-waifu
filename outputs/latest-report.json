@@ -1,9 +1,9 @@
 {
   "source": "cached",
-  "generatedAt": "2026-05-18T12:19:57.334812+00:00",
+  "generatedAt": "2026-05-18T12:33:26.186071+00:00",
   "regime": {
     "mode": "RISK_OFF",
-    "reason": "dead-strategy equity=$0, DD 100.0%, override #66",
+    "reason": "dead-strategy equity=$0, DD 100.0%, override #67",
     "enforcedBy": "jido-emergency",
     "marketSignal": "N/A (MCP offline)"
   },
@@ -42,25 +42,25 @@
     "vpsStatus": "decommissioned",
     "vpsOfflineSince": "2026-03-23T23:57:15Z",
     "mcpStatus": "offline",
-    "mcpConsecutiveFailures": "88+"
+    "mcpConsecutiveFailures": "89+"
   },
   "actions": [],
   "warnings": [
-    "MCP offline \u2014 88+ consecutive failures, using cached state",
-    "VPS decommissioned since 2026-03-23 (55+ days)",
-    "Dead-strategy run #88: equity=$0, drawdown 100.0% (cached \u2014 actual DD may differ)",
-    "Regime-drift correction: enforced RISK_OFF via jido-emergency (override #66)"
+    "MCP offline \u2014 89+ consecutive failures, using cached state",
+    "VPS decommissioned since 2026-03-23 (56+ days)",
+    "Dead-strategy run #89: equity=$0, drawdown 100.0% (cached \u2014 actual DD may differ)",
+    "Regime-drift correction: enforced RISK_OFF via jido-emergency (override #67)"
   ],
   "alerts": [
     {
       "type": "JIDO_HEARTBEAT",
-      "timestamp": "2026-05-18T12:19:57.334812+00:00",
+      "timestamp": "2026-05-18T12:33:26.186071+00:00",
       "regime": "RISK_OFF",
       "accountValue": 0.0,
       "drawdownPct": 100.0,
       "openPositions": 0,
       "openOrders": 0,
-      "message": "dead-strategy run #88, override #66, equity=$0, MCP offline 88+ failures"
+      "message": "dead-strategy run #89, override #67, equity=$0, MCP offline 89+ failures"
     }
   ]
 }
