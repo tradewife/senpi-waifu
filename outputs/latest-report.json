@@ -1,15 +1,15 @@
 {
   "source": "cached",
-  "generatedAt": "2026-05-16T05:31:39Z",
+  "generatedAt": "2026-05-18T10:47:30.444215+00:00",
   "regime": {
     "mode": "RISK_OFF",
-    "reason": "dead-strategy equity=$0, override #61",
+    "reason": "dead-strategy override #62",
     "enforcedBy": "jido-emergency",
-    "marketSignal": "unknown"
+    "marketSignal": null
   },
   "portfolio": {
     "equity": 0.0,
-    "peak": 100.0,
+    "peakEquity": 100.0,
     "drawdownPct": 100.0,
     "dailyPnl": 0.0
   },
@@ -35,40 +35,33 @@
     "name": "wolf-primary",
     "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
     "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce",
-    "budget": 100,
-    "remaining": 0.0,
-    "status": "dead"
+    "budget": 100.0,
+    "remaining": 0.0
   },
   "infrastructure": {
     "vpsStatus": "decommissioned",
-    "vpsOfflineSince": "2026-03-23T00:00:00Z",
+    "vpsOfflineSince": "2026-03-23T23:57:15Z",
     "mcpStatus": "offline",
-    "mcpConsecutiveFailures": "83+"
+    "mcpConsecutiveFailures": "84+"
   },
   "warnings": [
     {
       "level": "CRITICAL",
-      "message": "MCP offline \u2014 83+ consecutive failures, using cached state",
-      "timestamp": "2026-05-16T05:31:39Z"
-    },
-    {
-      "level": "CRITICAL",
-      "message": "VPS decommissioned since 2026-03-23 \u2014 strategy equity=$0, dead-strategy run #83",
-      "timestamp": "2026-05-16T05:31:39Z"
+      "message": "Strategy equity=$0 since 2026-05-14, VPS decommissioned since 2026-03-23, dead-strategy run #84",
+      "timestamp": "2026-05-18T10:47:30.444215+00:00"
     },
     {
       "level": "WARNING",
-      "message": "DD 100.0% based on cached equity \u2014 actual DD confirmed $0 via last live reading (2026-05-14)",
-      "timestamp": "2026-05-16T05:31:39Z"
+      "message": "MCP server offline \u2014 84+ consecutive failures, all data is cached/stale",
+      "timestamp": "2026-05-18T10:47:30.444215+00:00"
     },
     {
       "level": "INFO",
-      "message": "Regime-drift correction: risk-regime.json enforced to RISK_OFF (override #61)",
-      "timestamp": "2026-05-16T05:31:39Z"
+      "message": "Regime-classifier cron overwrites risk-regime.json to BASELINE hourly \u2014 JIDO re-enforces RISK_OFF each run",
+      "timestamp": "2026-05-18T10:47:30.444215+00:00"
     }
   ],
   "actions": [
-    "RISK_OFF enforced (override #61)",
-    "dead-strategy run #83 \u2014 no positions to manage"
+    "dead-strategy heartbeat run #84"
   ]
 }
