@@ -1,9 +1,9 @@
 {
   "source": "cached",
-  "generatedAt": "2026-05-18T13:32:24.304725+00:00",
+  "generatedAt": "2026-05-18T13:46:48Z",
   "regime": {
     "mode": "RISK_OFF",
-    "reason": "dead-strategy #93, equity=$0, DD=100%",
+    "reason": "Dead strategy equity=$0 DD=100%, override #72",
     "enforcedBy": "jido-emergency",
     "marketSignal": "N/A"
   },
@@ -11,8 +11,7 @@
     "equity": 0.0,
     "peakEquity": 100.0,
     "drawdownPct": 100.0,
-    "dailyPnl": 0.0,
-    "dailyPnlPct": 0.0
+    "dailyPnl": 0.0
   },
   "strategy": {
     "name": "wolf-primary",
@@ -27,49 +26,42 @@
       "actual": 100.0,
       "breached": true
     },
-    "maxConsecutiveStopOuts": {
-      "threshold": 4,
-      "actual": 0,
-      "breached": false
-    },
     "dailyLossLimit": {
       "threshold": 10,
       "actual": 0.0,
+      "breached": true
+    },
+    "consecutiveStopOuts": {
+      "threshold": 4,
+      "actual": 0,
       "breached": false
     }
   },
   "positions": [],
   "actions": [
-    "dead-strategy heartbeat #93",
-    "RISK_OFF override #71 enforced",
-    "MCP offline 93+ failures \u2014 all data cached"
+    "dead-strategy heartbeat run #94"
   ],
   "infrastructure": {
     "vpsStatus": "decommissioned",
     "vpsOfflineSince": "2026-03-23T23:57:15Z",
     "mcpStatus": "offline",
-    "mcpConsecutiveFailures": "93+"
+    "mcpConsecutiveFailures": "94+"
   },
   "warnings": [
     {
-      "level": "CRITICAL",
-      "message": "MCP server offline \u2014 93+ consecutive failures",
-      "timestamp": "2026-05-18T13:32:24.304725+00:00"
+      "level": "critical",
+      "message": "MCP server offline \u2014 94+ consecutive failures, using cached state",
+      "timestamp": "2026-05-18T13:46:48Z"
     },
     {
-      "level": "CRITICAL",
-      "message": "VPS decommissioned since 2026-03-23T23:57:15Z (56+ days offline)",
-      "timestamp": "2026-05-18T13:32:24.304725+00:00"
+      "level": "critical",
+      "message": "VPS decommissioned 55+ days ago since 2026-03-23",
+      "timestamp": "2026-05-18T13:46:48Z"
     },
     {
-      "level": "WARNING",
-      "message": "DD 100% based on cached equity \u2014 strategy fully depleted since 2026-05-14",
-      "timestamp": "2026-05-18T13:32:24.304725+00:00"
-    },
-    {
-      "level": "INFO",
-      "message": "Regime drift correction: enforced RISK_OFF (regime-classifier may overwrite to BASELINE before next JIDO run)",
-      "timestamp": "2026-05-18T13:32:24.304725+00:00"
+      "level": "info",
+      "message": "DD 100.0% based on cached equity \u2014 actual DD confirmed $0 via last live clearinghouse check",
+      "timestamp": "2026-05-18T13:46:48Z"
     }
   ],
   "alerts": [],
