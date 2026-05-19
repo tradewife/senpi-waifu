@@ -1,9 +1,9 @@
 {
   "source": "live",
-  "generatedAt": "2026-05-19T21:17:05Z",
+  "generatedAt": "2026-05-19T22:04:56Z",
   "regime": {
     "mode": "RISK_OFF",
-    "reason": "dead-strategy equity=$0, override #110",
+    "reason": "dead-strategy equity=$0, override #111",
     "enforcedBy": "jido-emergency",
     "marketSignal": "flat"
   },
@@ -46,23 +46,23 @@
     "mcpConsecutiveFailures": "0"
   },
   "warnings": [
-    "Dead strategy \u2014 equity=$0 for 132 consecutive runs, VPS offline 56d since 2026-03-23"
+    "Dead strategy \u2014 equity=$0 for 133 consecutive runs, VPS offline 56d since 2026-03-23"
   ],
   "actions": [
-    "RISK_OFF enforced (override #110)",
+    "RISK_OFF enforced (override #111)",
     "No positions to manage",
     "MCP connectivity confirmed live \u2014 account confirmed empty"
   ],
   "alerts": [
     {
       "type": "JIDO_HEARTBEAT",
-      "timestamp": "2026-05-19T21:17:05Z",
+      "timestamp": "2026-05-19T22:04:56Z",
       "regime": "RISK_OFF",
       "accountValue": 0.0,
       "drawdownPct": 100.0,
       "openPositions": 0,
       "openOrders": 0,
-      "message": "dead-strategy run #132, override #110, equity=$0 (MCP live confirmed), VPS offline 56d"
+      "message": "dead-strategy run #133, override #111, equity=$0 (MCP live confirmed), VPS offline 56d"
     }
   ]
 }
