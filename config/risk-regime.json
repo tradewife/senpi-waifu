@@ -1,8 +1,8 @@
 {
-  "riskMode": "RISK_OFF",
-  "updatedAt": "2026-05-19T21:17:05Z",
-  "updatedBy": "jido-emergency",
-  "reason": "dead-strategy equity=$0, override #110, VPS offline 56d",
+  "riskMode": "BASELINE",
+  "updatedAt": "2026-05-19T22:01:45Z",
+  "updatedBy": "waifu-regime",
+  "reason": "Mixed signals (slope=-0.1%, ATR=0.8%)",
   "regimes": {
     "RISK_ON": {
       "maxSlots": 3,
