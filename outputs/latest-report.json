@@ -1,29 +1,61 @@
 {
-  "generatedAt": "2026-05-19T02:01:17Z",
-  "regime": "RISK_OFF",
-  "equity": 0.0,
-  "peakEquity": 100.0,
-  "drawdownPct": 100.0,
-  "dailyPnl": 0,
-  "dailyCloses": 0,
-  "dailyWinRate": 0,
-  "openPositions": 0,
-  "alerts": [
-    "CATASTROPHIC DRAWDOWN: 100.0%"
-  ],
-  "deadWeight": [],
+  "source": "live",
+  "generatedAt": "2026-05-19T02:17:52.150630+00:00",
+  "regime": {
+    "mode": "RISK_OFF",
+    "reason": "dead-strategy override #81: equity=$0, DD 100%",
+    "enforcedBy": "jido-emergency",
+    "marketSignal": null
+  },
+  "portfolio": {
+    "equity": 0.0,
+    "peak": 100.0,
+    "drawdownPct": 100.0,
+    "dailyPnl": 0.0
+  },
+  "strategy": {
+    "name": "wolf-primary",
+    "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
+    "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce",
+    "budget": 100,
+    "remaining": 0.0
+  },
   "guardrails": {
-    "dailyLossLimitPct": 10,
-    "catastrophicDrawdownPct": 20,
-    "maxConsecutiveStopOuts": 4,
-    "directionalCapPct": 70,
-    "minLeverage": 7,
-    "maxLeverage": 10,
-    "maxPositionsTotal": 3,
-    "perAssetCooldownMinutes": 120,
-    "bannedAssetPrefixes": [
-      "xyz:"
-    ],
-    "perTradeRiskPct": 1.0
-  }
+    "catastrophicDrawdown": {
+      "threshold": 20,
+      "actual": 100.0,
+      "breached": true
+    },
+    "maxConsecutiveStopOuts": {
+      "threshold": 4,
+      "actual": 0,
+      "breached": false
+    },
+    "dailyLossLimit": {
+      "threshold": 10,
+      "actual": 100.0,
+      "breached": true
+    }
+  },
+  "positions": [],
+  "actions": [
+    "dead-strategy run #103, MCP live confirmed equity=$0, RISK_OFF maintained"
+  ],
+  "infrastructure": {
+    "vpsStatus": "decommissioned",
+    "vpsOfflineSince": "2026-03-23T23:57:15Z",
+    "mcpStatus": "online",
+    "mcpConsecutiveFailures": "0"
+  },
+  "warnings": [
+    "VPS offline 56+ days \u2014 treat as decommissioned",
+    "Dead-strategy run #103: equity has been $0 for 103 consecutive JIDO runs",
+    {
+      "level": "info",
+      "message": "MCP reconnected live \u2014 clearinghouse confirms equity=$0, 0 positions",
+      "timestamp": "2026-05-19T02:17:52.150630+00:00"
+    }
+  ],
+  "deadWeight": null,
+  "alerts": []
 }
