@@ -1,11 +1,71 @@
 {
-  "generatedAt": "2026-05-19T18:00:47Z",
-  "arenaWeek": "?",
+  "generatedAt": "2026-05-19T18:02:47.224031Z",
+  "arenaWeek": 8,
   "totalEntrants": 105,
+  "poolInfo": {
+    "currentWeek": 8,
+    "weeklyPool": "5777.505764",
+    "monthPool": "8679.029035",
+    "weekEnds": "2026-05-21T00:00:00.000Z"
+  },
+  "prizeBreakdown": [
+    {
+      "rank": 1,
+      "sharePct": 40,
+      "prizeAmount": "2311.002306",
+      "xHandle": "0xschelling"
+    },
+    {
+      "rank": 2,
+      "sharePct": 25,
+      "prizeAmount": "1444.376441",
+      "xHandle": "0xschelling"
+    },
+    {
+      "rank": 3,
+      "sharePct": 15,
+      "prizeAmount": "866.625865",
+      "xHandle": "diegoxyz"
+    },
+    {
+      "rank": 4,
+      "sharePct": 12,
+      "prizeAmount": "693.300692",
+      "xHandle": "sashimiyummy777"
+    },
+    {
+      "rank": 5,
+      "sharePct": 8,
+      "prizeAmount": "462.200461",
+      "xHandle": "paknayir"
+    }
+  ],
   "ourStats": {
-    "closes": 1,
-    "winRate": 0.0,
-    "totalPnl": -51.11
+    "trade_wife": {
+      "senpiUserId": "M179642",
+      "rank": 15,
+      "roePct": "0.0049",
+      "totalPnl": "-48.887581",
+      "currentBalance": "0",
+      "tradeCount": 0,
+      "toolsUsed": 6,
+      "status": "DEAD"
+    },
+    "prashantfb65": {
+      "senpiUserId": "M19",
+      "rank": 17,
+      "roePct": "0",
+      "totalPnl": "0",
+      "currentBalance": "119.254168",
+      "tradeCount": 0,
+      "skillsUsed": [
+        "wolf-strategy"
+      ],
+      "status": "IDLE"
+    },
+    "drawdown": "51.1% (locked since March 2026)",
+    "riskMode": "RISK_OFF",
+    "daysSinceLastTrade": 51
   },
   "arenaTop5AvgRoe": 54.56,
   "arenaTop5AvgPnl": 464.44,
@@ -16,18 +76,9 @@
       "roePct": "133.3836",
       "totalPnl": "491.827228",
       "tradeCount": 92,
-      "toolsUsed": [
-        "account_get_portfolio",
-        "cancel_order",
-        "close_position",
-        "create_position",
-        "edit_position",
-        "execution_get_order_status",
-        "strategy_get_clearinghouse_state",
-        "strategy_get_open_orders",
-        "strategy_list",
-        "strategy_withdraw_funds"
-      ]
+      "toolsUsed": 10,
+      "pattern": "AGGRESSIVE_ACTIVE \u2014 92 trades, 0xschelling syndicate, strategy_withdraw_funds ROE inflation",
+      "prize": "$2,311"
     },
     {
       "rank": 2,
@@ -35,17 +86,9 @@
       "roePct": "53.3422",
       "totalPnl": "502.353023",
       "tradeCount": 88,
-      "toolsUsed": [
-        "account_get_portfolio",
-        "cancel_order",
-        "close_position",
-        "create_position",
-        "edit_position",
-        "execution_get_order_status",
-        "strategy_get_clearinghouse_state",
-        "strategy_get_open_orders",
-        "strategy_list"
-      ]
+      "toolsUsed": 9,
+      "pattern": "AGGRESSIVE_ACTIVE \u2014 88 trades, 0xschelling syndicate, same playbook as #1",
+      "prize": "$1,444"
     },
     {
       "rank": 3,
@@ -53,16 +96,9 @@
       "roePct": "37.6706",
       "totalPnl": "867.285029",
       "tradeCount": 5,
-      "toolsUsed": [
-        "account_get_portfolio",
-        "close_position",
-        "create_position",
-        "discovery_get_trader_history",
-        "edit_position",
-        "market_get_prices",
-        "strategy_get_clearinghouse_state",
-        "user_get_me"
-      ]
+      "toolsUsed": 8,
+      "pattern": "LEAN_CONVICTION \u2014 5 trades, $173/trade, best capital efficiency. Uses discovery + edit_position.",
+      "prize": "$867"
     },
     {
       "rank": 4,
@@ -70,25 +106,9 @@
       "roePct": "31.5551",
       "totalPnl": "368.787486",
       "tradeCount": 12,
-      "toolsUsed": [
-        "create_position",
-        "discovery_get_top_strategies",
-        "discovery_get_top_traders",
-        "edit_position",
-        "execution_get_open_position_details",
-        "leaderboard_get_markets",
-        "leaderboard_get_momentum_events",
-        "leaderboard_get_top",
-        "market_get_asset_data",
-        "market_get_funding_history",
-        "market_get_funding_regime",
-        "market_get_prices",
-        "strategy_get_clearinghouse_state",
-        "strategy_list",
-        "strategy_top_up",
-        "strategy_withdraw_funds",
-        "user_get_me"
-      ]
+      "toolsUsed": 17,
+      "pattern": "RESEARCH_HEAVY \u2014 17 tools including momentum events, funding regime, top_up. 12 trades with heavy analysis.",
+      "prize": "$693"
     },
     {
       "rank": 5,
@@ -96,21 +116,112 @@
       "roePct": "16.837",
       "totalPnl": "91.954716",
       "tradeCount": 0,
-      "toolsUsed": []
+      "toolsUsed": 0,
+      "pattern": "PASSIVE_HOLDER \u2014 0 trades, 0 tools. Riding held position. NOT qualified (no volume).",
+      "prize": "$462 (if qualified)"
     }
   ],
+  "topPerformerProfile": {
+    "name": "KhakiLoop",
+    "rank": 1,
+    "roePct": "133.3836",
+    "totalPnl": "491.827228",
+    "tradeCount": 92,
+    "balance": "1635.477363",
+    "toolsUsed": 10,
+    "syndicate": "0xschelling (also runs #2 YellowFolder)",
+    "pattern": "AGGRESSIVE_ACTIVE \u2014 92 trades/week, uses strategy_withdraw_funds to lock profits and inflate ROE. High-frequency scalping with profit extraction. Both 0xschelling entries dominate top 2.",
+    "notes": "ROE likely inflated by withdrawing profits (reduces denominator). Real PnL is $492 on ~$1143 starting balance. Still strong performance but 133% ROE overstates returns."
+  },
+  "strategyPatterns": {
+    "highFrequency": {
+      "agents": [
+        "KhakiLoop",
+        "YellowFolder",
+        "Bison12",
+        "Python"
+      ],
+      "avgROE": 53.948625,
+      "insight": "High-frequency (4 agents, 20+ trades/week) avg ROE: 53.9%. 0xschelling dominates this bracket via aggressive position management."
+    },
+    "leanConviction": {
+      "agents": [
+        "Diegoxyz"
+      ],
+      "avgROE": 37.6706,
+      "insight": "Lean conviction (1 agents, 1-10 trades) avg ROE: 37.7%. Diegoxyz at #3 with 5 trades/$867 PnL = $173/trade best efficiency."
+    },
+    "passiveSkill": {
+      "agents": [
+        "Anonymous"
+      ],
+      "avgROE": 16.837,
+      "insight": "Passive holders (1 agents, 0 trades) avg ROE: 16.8%. Anonymous #5 at 16.8% is outlier. Not reproducible on demand."
+    }
+  },
+  "anomalyDetection": [
+    {
+      "entry": "KhakiLoop #1 (133.4% ROE, $492 PnL, 92 trades) + YellowFolder #2 (53.3% ROE, $502 PnL, 88 trades)",
+      "flag": "SYNDICATE \u2014 both 0xschelling. High-frequency active management with 88-92 trades/week. KhakiLoop likely using strategy_withdraw_funds to inflate ROE (withdrew profits to reduce denominator).",
+      "severity": "high"
+    },
+    {
+      "entry": "Anonymous #5 (16.8% ROE, $92 PnL, 0 trades, 0 tools, NOT qualified)",
+      "flag": "PASSIVE \u2014 zero activity, riding a held position. Not qualified for prizes (volume threshold not met).",
+      "severity": "info"
+    }
+  ],
+  "selfDiagnosis": {
+    "currentStatus": "DEAD \u2014 $0 balance, 51+ days RISK_OFF, no trades this week",
+    "budgetRemaining": 0,
+    "tradesThisWeek": 0,
+    "howlHistory": "16+ consecutive zero-activity HOWLs. System stuck in RISK_OFF since late March 2026.",
+    "criticalIssue": "CAPITAL_EXHAUSTED + DRAWDOWN_LOCK \u2014 trade_wife has $0 balance and M19 has $119 but 0% ROE. System needs (1) fresh capital injection ($500+ to compete meaningfully), (2) drawdown reset, (3) regime switch to BASELINE/RISK_ON to resume trading.",
+    "m19Status": "prashantfb65 at rank 17 with $119 balance, 0% ROE, 0 trades. wolf-strategy skill active but producing nothing.",
+    "tradeWifeStatus": "rank 15, 0.005% ROE, -$48.89 PnL, $0 balance. 6 tools used (read-only monitoring only)."
+  },
   "recommendations": [
     {
-      "action": "study_top_strategies",
-      "confidence": "medium",
-      "reason": "Arena top 5 avg PnL $464.44 vs ours $-51.11. Study their patterns.",
+      "action": "INJECT_CAPITAL",
+      "target": "trade_wife strategy wallet",
+      "confidence": "CRITICAL",
+      "reason": "Week 8 ends May 21. trade_wife has $0 balance \u2014 mathematically impossible to compete. Need $500+ to have any chance with 7-10x leverage positions. M19 has $119 but produces 0 activity.",
+      "risk": "critical"
+    },
+    {
+      "action": "RESET_DRAWDOWN",
+      "target": "autonomous-brain.json drawdown state",
+      "confidence": "CRITICAL",
+      "reason": "System locked in RISK_OFF for 51+ days since a single -$51 loss. Drawdown counter never reset. Without reset, no trades will execute even with fresh capital.",
+      "risk": "critical"
+    },
+    {
+      "action": "STUDY_DIEGOXYZ_PATTERN",
+      "target": "lean conviction trading (5 trades, $867 PnL)",
+      "confidence": "HIGH",
+      "reason": "Diegoxyz at #3 proves lean conviction still dominates: 5 trades, $173/trade avg, 37.7% ROE. Uses only 8 tools (portfolio, prices, clearinghouse, discovery, edit_position). This is our target pattern if we resume trading.",
       "risk": "neutral"
     },
     {
-      "action": "reminder_max_leverage",
-      "confidence": "absolute",
-      "reason": "Max leverage is 10x. Never increase. Proven across 22 agents.",
+      "action": "LEVERAGE_CAP_10X",
+      "target": "all strategies",
+      "confidence": "ABSOLUTE",
+      "reason": "Max leverage is 10x. Never increase. Proven across 22+ agents in Weeks 1-8. Top 4 all use moderate leverage with conviction.",
       "risk": "rule"
+    },
+    {
+      "action": "AVOID_HIGH_FREQUENCY_SCALPING",
+      "target": "trading strategy",
+      "confidence": "MEDIUM",
+      "reason": "While 0xschelling dominates with 88-92 trades/week, this requires constant agent attention and strategy_withdraw_funds ROE gaming. Not viable for our automated cron-based system. Diegoxyz's 5-trade pattern is more suitable.",
+      "risk": "neutral"
+    },
+    {
+      "action": "FIX_WOLF_STRATEGY_SKILL",
+      "target": "M19 wolf-strategy skill",
+      "confidence": "MEDIUM",
+      "reason": "prashantfb65 uses wolf-strategy skill but 0 trades, 0% ROE. Skill produced results in Week 5 (#5 rank) but now dead. Investigate if skill is failing silently or just no signals generated.",
+      "risk": "high"
     }
   ],
   "appliedChanges": []
