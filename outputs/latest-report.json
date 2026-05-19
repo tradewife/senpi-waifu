@@ -1,29 +1,28 @@
 {
   "source": "live",
-  "generatedAt": "2026-05-19T16:32:30Z",
+  "generatedAt": "2026-05-19T16:47:43.651934Z",
   "regime": {
     "mode": "RISK_OFF",
-    "reason": "dead-strategy equity=$0, DD 100%, override #93",
+    "reason": "Dead strategy: equity=$0, override #94",
     "enforcedBy": "jido-emergency",
-    "marketSignal": null
+    "marketSignal": "N/A"
   },
   "portfolio": {
     "equity": 0.0,
     "peakEquity": 100.0,
     "drawdownPct": 100.0,
-    "dayStartEquity": 0.0,
-    "dailyPnl": 0.0
+    "dailyPnl": 0.0,
+    "positions": []
   },
   "strategy": {
-    "name": "wolf-primary",
+    "name": "WOLF-Primary",
     "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
     "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce",
     "budget": 100,
     "remaining": 0.0
   },
-  "positions": [],
   "guardrails": {
-    "catastrophicDrawdownPct": {
+    "catastrophicDrawdown": {
       "threshold": 20.0,
       "actual": 100.0,
       "breached": true
@@ -33,7 +32,7 @@
       "actual": 0,
       "breached": false
     },
-    "dailyLossLimitPct": {
+    "dailyLossLimit": {
       "threshold": 10.0,
       "actual": 0.0,
       "breached": false
@@ -46,24 +45,11 @@
     "mcpStatus": "online",
     "mcpConsecutiveFailures": "0"
   },
-  "actions": [
-    "heartbeat: dead-strategy run #115"
-  ],
+  "actions": [],
   "warnings": [
-    "Strategy equity is $0 \u2014 wallet fully depleted",
-    "VPS decommissioned 56+ days (since 2026-03-23)",
-    "MCP online this run \u2014 clearinghouse confirmed 0 positions, 0 withdrawable"
+    "Strategy dead: equity=$0 for 116 consecutive runs",
+    "VPS decommissioned since 2026-03-23 (56+ days offline)",
+    "Regime drift corrected: RISK_OFF enforced (override #94)"
   ],
-  "alerts": [
-    {
-      "type": "JIDO_HEARTBEAT",
-      "timestamp": "2026-05-19T16:32:30Z",
-      "regime": "RISK_OFF",
-      "accountValue": 0.0,
-      "drawdownPct": 100.0,
-      "openPositions": 0,
-      "openOrders": 0,
-      "message": "dead-strategy run #115, override #93, equity=$0, DD 100%, MCP online, VPS offline 56d"
-    }
-  ]
+  "alerts": []
 }
