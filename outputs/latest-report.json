@@ -1,19 +1,17 @@
 {
   "source": "live",
-  "generatedAt": "2026-05-19T01:17:20Z",
+  "generatedAt": "2026-05-19T01:32:47.855410+00:00",
   "regime": {
     "mode": "RISK_OFF",
-    "reason": "Dead-strategy run #100, equity=$0, DD 100%",
+    "reason": "dead-strategy run #101: equity=$0",
     "enforcedBy": "jido-emergency",
-    "marketSignal": null
+    "marketSignal": "none"
   },
   "portfolio": {
     "equity": 0.0,
     "peak": 100.0,
     "drawdownPct": 100.0,
-    "dailyPnl": 0.0,
-    "openPositions": 0,
-    "openOrders": 0
+    "dailyPnl": 0.0
   },
   "guardrails": {
     "catastrophicDrawdown": {
@@ -37,21 +35,25 @@
     "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
     "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce",
     "budget": 100,
-    "remaining": 0.0
+    "remaining": 0.0,
+    "status": "dead"
   },
   "positions": [],
-  "actions": [],
+  "actions": [
+    "dead-strategy heartbeat #101, override #79"
+  ],
   "infrastructure": {
     "vpsStatus": "decommissioned",
     "vpsOfflineSince": "2026-03-23T23:57:15Z",
-    "vpsOfflineDays": 56,
     "mcpStatus": "online",
     "mcpConsecutiveFailures": "0"
   },
   "warnings": [
-    "VPS decommissioned since 2026-03-23 \u2014 56 days offline",
-    "Dead-strategy run #100: equity=$0, 100% drawdown, no recovery possible without external deposit",
-    "RISK_OFF override #78 enforced by JIDO \u2014 regime-classifier may revert to BASELINE"
+    {
+      "level": "CRITICAL",
+      "message": "Strategy dead: equity=$0, VPS decommissioned 56d, dead-strategy run #101",
+      "timestamp": "2026-05-19T01:32:47.855410+00:00"
+    }
   ],
   "alerts": []
 }

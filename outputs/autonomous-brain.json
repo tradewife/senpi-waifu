@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-05-19T01:17:20Z",
+  "generatedAt": "2026-05-19T01:32:47.855410+00:00",
   "codebaseIndexAt": "2026-03-23T23:57:15Z",
   "riskMode": "RISK_OFF",
   "executionPolicy": {
-    "generatedAt": "2026-05-19T01:17:20Z",
+    "generatedAt": "2026-05-19T01:32:47.855410+00:00",
     "mode": "ACTIVE",
     "blockNewEntries": true,
     "allowAutoEntry": false,
@@ -16,7 +16,7 @@
       }
     },
     "reasons": [
-      "override #78: JIDO enforced RISK_OFF \u2014 equity=$0, dead-strategy run #100, DD 100%"
+      "override #79: equity=$0, dead-strategy run #101, VPS offline 56d"
     ],
     "risk": {
       "drawdownPctFromPeak": 100.0,
