@@ -1,9 +1,9 @@
 {
   "source": "live",
-  "generatedAt": "2026-05-19T20:02:21.765633Z",
+  "generatedAt": "2026-05-19T20:17:02.869715+00:00",
   "regime": {
     "mode": "RISK_OFF",
-    "reason": "dead-strategy override #106",
+    "reason": "dead-strategy override #107",
     "enforcedBy": "jido-emergency",
     "marketSignal": null
   },
@@ -33,7 +33,7 @@
   },
   "positions": [],
   "actions": [
-    "dead-strategy run #128, no positions, no action needed"
+    "dead-strategy run #129, no positions, no action needed"
   ],
   "strategy": {
     "name": "wolf-primary",
@@ -50,20 +50,20 @@
   },
   "warnings": [
     "VPS decommissioned 56+ days since 2026-03-23 \u2014 treat as permanently offline",
-    "Strategy dead: equity=$0 for 128 consecutive runs",
+    "Strategy dead: equity=$0 for 129 consecutive runs",
     "DD 100% based on live clearinghouse data \u2014 wallet fully depleted"
   ],
   "deadWeight": 0,
   "alerts": [
     {
       "type": "JIDO_HEARTBEAT",
-      "timestamp": "2026-05-19T20:02:21.765633Z",
+      "timestamp": "2026-05-19T20:17:02.869715+00:00",
       "regime": "RISK_OFF",
       "accountValue": 0.0,
       "drawdownPct": 100.0,
       "openPositions": 0,
       "openOrders": 0,
-      "message": "dead-strategy run #128, override #106"
+      "message": "dead-strategy run #129, override #107"
     }
   ]
 }
