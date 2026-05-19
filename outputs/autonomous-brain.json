@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-05-19T16:47:43.651934Z",
+  "generatedAt": "2026-05-19T17:02:22.497819+00:00",
   "codebaseIndexAt": "2026-03-23T23:57:15Z",
   "riskMode": "RISK_OFF",
   "executionPolicy": {
-    "generatedAt": "2026-05-19T16:47:43.651934Z",
+    "generatedAt": "2026-05-19T17:02:22.497819+00:00",
     "mode": "ACTIVE",
     "blockNewEntries": true,
     "allowAutoEntry": false,
@@ -16,7 +16,7 @@
       }
     },
     "reasons": [
-      "override #94"
+      "override #95 \u2014 equity=$0, 100% DD, dead-strategy run #117"
     ],
     "risk": {
       "drawdownPctFromPeak": 100.0,
