@@ -1,24 +1,19 @@
 {
   "source": "live",
-  "generatedAt": "2026-05-19T00:17:34Z",
+  "generatedAt": "2026-05-19T00:32:01Z",
   "regime": {
     "mode": "RISK_OFF",
-    "reason": "Dead strategy equity=$0 (live MCP), DD=100%, override #75",
+    "reason": "Dead-strategy run #98, equity=$0, DD 100%",
     "enforcedBy": "jido-emergency",
-    "marketSignal": "N/A"
+    "marketSignal": null
   },
   "portfolio": {
     "equity": 0.0,
-    "peakEquity": 100.0,
+    "peak": 100.0,
     "drawdownPct": 100.0,
-    "dailyPnl": 0.0
-  },
-  "strategy": {
-    "name": "wolf-primary",
-    "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
-    "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce",
-    "budget": 100.0,
-    "remaining": 0.0
+    "dailyPnl": 0.0,
+    "openPositions": 0,
+    "openOrders": 0
   },
   "guardrails": {
     "catastrophicDrawdown": {
@@ -29,7 +24,7 @@
     "dailyLossLimit": {
       "threshold": 10,
       "actual": 0.0,
-      "breached": true
+      "breached": false
     },
     "consecutiveStopOuts": {
       "threshold": 4,
@@ -37,38 +32,26 @@
       "breached": false
     }
   },
+  "strategy": {
+    "name": "wolf-primary",
+    "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
+    "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce",
+    "budget": 100.0,
+    "remaining": 0.0
+  },
   "positions": [],
-  "actions": [
-    "dead-strategy heartbeat run #97 (MCP online)"
-  ],
+  "actions": [],
   "infrastructure": {
     "vpsStatus": "decommissioned",
     "vpsOfflineSince": "2026-03-23T23:57:15Z",
+    "vpsOfflineDays": 56,
     "mcpStatus": "online",
     "mcpConsecutiveFailures": "0"
   },
   "warnings": [
-    {
-      "level": "info",
-      "message": "MCP online \u2014 live clearinghouse confirmed equity=$0, withdrawable=$0",
-      "timestamp": "2026-05-19T00:17:34Z"
-    },
-    {
-      "level": "critical",
-      "message": "VPS decommissioned 56 days ago since 2026-03-23",
-      "timestamp": "2026-05-19T00:17:34Z"
-    },
-    {
-      "level": "info",
-      "message": "DD 100.0% confirmed via live clearinghouse \u2014 wallet fully depleted",
-      "timestamp": "2026-05-19T00:17:34Z"
-    },
-    {
-      "level": "info",
-      "message": "Regime-classifier may set BASELINE at next hourly run \u2014 overridden to RISK_OFF by JIDO (override #75)",
-      "timestamp": "2026-05-19T00:17:34Z"
-    }
+    "VPS decommissioned since 2026-03-23 \u2014 56 days offline",
+    "Dead-strategy run #98: equity=$0, 100% drawdown, no recovery possible without external deposit",
+    "RISK_OFF override #76 enforced by JIDO \u2014 regime-classifier may revert to BASELINE"
   ],
-  "alerts": [],
-  "deadWeight": 0.0
+  "alerts": []
 }
