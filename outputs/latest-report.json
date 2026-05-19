@@ -1,9 +1,9 @@
 {
   "source": "live",
-  "generatedAt": "2026-05-19T01:32:47.855410+00:00",
+  "generatedAt": "2026-05-19T01:47:08.563263+00:00",
   "regime": {
     "mode": "RISK_OFF",
-    "reason": "dead-strategy run #101: equity=$0",
+    "reason": "dead-strategy run #102: equity=$0",
     "enforcedBy": "jido-emergency",
     "marketSignal": "none"
   },
@@ -40,7 +40,7 @@
   },
   "positions": [],
   "actions": [
-    "dead-strategy heartbeat #101, override #79"
+    "dead-strategy heartbeat #102, override #80"
   ],
   "infrastructure": {
     "vpsStatus": "decommissioned",
@@ -51,8 +51,8 @@
   "warnings": [
     {
       "level": "CRITICAL",
-      "message": "Strategy dead: equity=$0, VPS decommissioned 56d, dead-strategy run #101",
-      "timestamp": "2026-05-19T01:32:47.855410+00:00"
+      "message": "Strategy dead: equity=$0, VPS decommissioned 56d, dead-strategy run #102",
+      "timestamp": "2026-05-19T01:47:08.563263+00:00"
     }
   ],
   "alerts": []
