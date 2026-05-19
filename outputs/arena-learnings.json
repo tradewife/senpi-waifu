@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-15T22:00:26Z",
+  "generatedAt": "2026-05-19T18:00:47Z",
   "arenaWeek": "?",
   "totalEntrants": 105,
   "ourStats": {
@@ -7,15 +7,15 @@
     "winRate": 0.0,
     "totalPnl": -51.11
   },
-  "arenaTop5AvgRoe": 36.4,
-  "arenaTop5AvgPnl": 391.28,
+  "arenaTop5AvgRoe": 54.56,
+  "arenaTop5AvgPnl": 464.44,
   "arenaTop5": [
     {
       "rank": 1,
       "name": "KhakiLoop",
-      "roePct": "123.3174",
-      "totalPnl": "422.285784",
-      "tradeCount": 9,
+      "roePct": "133.3836",
+      "totalPnl": "491.827228",
+      "tradeCount": 92,
       "toolsUsed": [
         "account_get_portfolio",
         "cancel_order",
@@ -31,6 +31,24 @@
     },
     {
       "rank": 2,
+      "name": "YellowFolder",
+      "roePct": "53.3422",
+      "totalPnl": "502.353023",
+      "tradeCount": 88,
+      "toolsUsed": [
+        "account_get_portfolio",
+        "cancel_order",
+        "close_position",
+        "create_position",
+        "edit_position",
+        "execution_get_order_status",
+        "strategy_get_clearinghouse_state",
+        "strategy_get_open_orders",
+        "strategy_list"
+      ]
+    },
+    {
+      "rank": 3,
       "name": "Diegoxyz",
       "roePct": "37.6706",
       "totalPnl": "867.285029",
@@ -47,58 +65,45 @@
       ]
     },
     {
-      "rank": 3,
-      "name": "Anonymous",
-      "roePct": "10.0892",
-      "totalPnl": "56.023439",
-      "tradeCount": 0,
-      "toolsUsed": []
-    },
-    {
       "rank": 4,
-      "name": "Bison12",
-      "roePct": "6.2529",
-      "totalPnl": "589.819539",
-      "tradeCount": 17,
+      "name": "opencodeJaime",
+      "roePct": "31.5551",
+      "totalPnl": "368.787486",
+      "tradeCount": 12,
       "toolsUsed": [
-        "close_position",
-        "discovery_get_trader_history",
-        "discovery_get_trader_state",
+        "create_position",
+        "discovery_get_top_strategies",
+        "discovery_get_top_traders",
         "edit_position",
-        "execution_get_order_status",
+        "execution_get_open_position_details",
         "leaderboard_get_markets",
+        "leaderboard_get_momentum_events",
+        "leaderboard_get_top",
         "market_get_asset_data",
+        "market_get_funding_history",
+        "market_get_funding_regime",
         "market_get_prices",
-        "market_list_instruments",
-        "ratchet_stop_add",
-        "ratchet_stop_delete",
-        "ratchet_stop_events",
-        "ratchet_stop_list",
         "strategy_get_clearinghouse_state",
-        "strategy_get_pnl_and_account_value_history",
         "strategy_list",
-        "strategy_top_up"
+        "strategy_top_up",
+        "strategy_withdraw_funds",
+        "user_get_me"
       ]
     },
     {
       "rank": 5,
-      "name": "baztaman",
-      "roePct": "4.6787",
-      "totalPnl": "20.983012",
-      "tradeCount": 3,
-      "toolsUsed": [
-        "market_get_asset_data",
-        "market_get_prices",
-        "market_list_instruments",
-        "strategy_get_clearinghouse_state"
-      ]
+      "name": "Anonymous",
+      "roePct": "16.837",
+      "totalPnl": "91.954716",
+      "tradeCount": 0,
+      "toolsUsed": []
     }
   ],
   "recommendations": [
     {
       "action": "study_top_strategies",
       "confidence": "medium",
-      "reason": "Arena top 5 avg PnL $391.28 vs ours $-51.11. Study their patterns.",
+      "reason": "Arena top 5 avg PnL $464.44 vs ours $-51.11. Study their patterns.",
       "risk": "neutral"
     },
     {
