@@ -1,9 +1,9 @@
 {
   "source": "live",
-  "generatedAt": "2026-05-19T03:03:08.299401+00:00",
+  "generatedAt": "2026-05-19T03:35:00.878379+00:00",
   "regime": {
     "mode": "RISK_OFF",
-    "reason": "dead-strategy override #84: equity=$0, DD 100%",
+    "reason": "dead-strategy override #85: equity=$0, DD 100%",
     "enforcedBy": "jido-emergency",
     "marketSignal": null
   },
@@ -20,6 +20,7 @@
     "budget": 100,
     "remaining": 0.0
   },
+  "positions": [],
   "guardrails": {
     "catastrophicDrawdown": {
       "threshold": 20,
@@ -32,30 +33,34 @@
       "breached": false
     },
     "dailyLossLimit": {
-      "threshold": 10,
-      "actual": 100.0,
-      "breached": true
+      "threshold": 10.0,
+      "actual": 0.0,
+      "breached": false
     }
   },
-  "positions": [],
-  "actions": [
-    "dead-strategy run #106, MCP live confirmed equity=$0, RISK_OFF maintained"
-  ],
+  "actions": [],
   "infrastructure": {
     "vpsStatus": "decommissioned",
     "vpsOfflineSince": "2026-03-23T23:57:15Z",
+    "vpsOfflineDays": 56,
     "mcpStatus": "online",
     "mcpConsecutiveFailures": "0"
   },
   "warnings": [
-    "VPS offline 56+ days \u2014 treat as decommissioned",
-    "Dead-strategy run #106: equity has been $0 for 106 consecutive JIDO runs",
-    {
-      "level": "info",
-      "message": "MCP reconnected live \u2014 clearinghouse confirms equity=$0, 0 positions",
-      "timestamp": "2026-05-19T03:03:08.299401+00:00"
-    }
+    "VPS decommissioned since 2026-03-23 (56+ days offline) \u2014 treat as permanently offline",
+    "Dead strategy: equity=$0, 100% drawdown. No positions to manage.",
+    "Regime-classifier race: override #85 to maintain RISK_OFF (pitfall #7)"
   ],
-  "deadWeight": null,
-  "alerts": []
+  "alerts": [
+    {
+      "type": "JIDO_HEARTBEAT",
+      "timestamp": "2026-05-19T03:35:00.878379+00:00",
+      "regime": "RISK_OFF",
+      "accountValue": 0.0,
+      "drawdownPct": 100.0,
+      "openPositions": 0,
+      "openOrders": 0,
+      "message": "dead-strategy run #107, override #85, MCP online, equity=$0, DD 100%"
+    }
+  ]
 }
