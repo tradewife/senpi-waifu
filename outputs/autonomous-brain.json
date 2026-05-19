@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-05-19T20:46:37.947106Z",
+  "generatedAt": "2026-05-19T21:17:05Z",
   "codebaseIndexAt": "2026-03-23T23:57:15Z",
   "riskMode": "RISK_OFF",
   "executionPolicy": {
-    "generatedAt": "2026-05-19T20:46:37.947106Z",
+    "generatedAt": "2026-05-19T21:17:05Z",
     "mode": "ACTIVE",
     "blockNewEntries": true,
     "allowAutoEntry": false,
@@ -16,7 +16,7 @@
       }
     },
     "reasons": [
-      "override #109"
+      "override #110"
     ],
     "risk": {
       "drawdownPctFromPeak": 100.0,
