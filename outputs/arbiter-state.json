@@ -1,33 +1,31 @@
 {
+  "strategyName": "wolf-primary",
+  "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
+  "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce",
   "peakEquity": 100.0,
   "lastEquity": 0.0,
   "dayStartEquity": 0.0,
   "dayStartDate": "2026-05-19",
   "drawdownPct": 100.0,
   "consecutiveStopOuts": 0,
-  "deadStrategyRunCount": 133,
-  "overrideCount": 111,
-  "mcpConsecutiveFailures": 0,
-  "lastJidoRun": "2026-05-19T22:04:56Z",
-  "lastChecked": "2026-05-19T22:04:56Z",
-  "lastCheckAt": "2026-05-19T22:04:56Z",
-  "lastCheck": "2026-05-19T22:04:56Z",
-  "lastUpdated": "2026-05-19T22:04:56Z",
+  "lastJidoRun": "2026-05-19T22:31:59Z",
+  "lastChecked": "2026-05-19T22:31:59Z",
+  "lastCheckAt": "2026-05-19T22:31:59Z",
+  "lastCheck": "2026-05-19T22:31:59Z",
+  "lastUpdated": "2026-05-19T22:31:59Z",
+  "deadStrategyRunCount": 134,
+  "overrideCount": 112,
+  "mcpConsecutiveFailures": 1,
   "alerts": [
     {
       "type": "JIDO_HEARTBEAT",
-      "timestamp": "2026-05-19T22:04:56Z",
+      "timestamp": "2026-05-19T22:31:59Z",
       "regime": "RISK_OFF",
       "accountValue": 0.0,
       "drawdownPct": 100.0,
       "openPositions": 0,
       "openOrders": 0,
-      "message": "dead-strategy run #133, override #111, equity=$0 (MCP live confirmed), VPS offline 56d"
+      "message": "dead-strategy run #134, override #112, MCP offline 1+ failures, VPS offline 56+ days"
     }
-  ],
-  "riskMode": "RISK_OFF",
-  "openPositions": 0,
-  "openOrders": 0,
-  "accountValue": 0.0,
-  "mcpStatus": "online"
+  ]
 }
