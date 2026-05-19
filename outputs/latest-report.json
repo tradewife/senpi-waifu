@@ -1,9 +1,9 @@
 {
   "source": "live",
-  "generatedAt": "2026-05-19T18:32:41Z",
+  "generatedAt": "2026-05-19T18:46:40Z",
   "regime": {
     "mode": "RISK_OFF",
-    "reason": "dead-strategy run #123, equity=$0, 100% DD",
+    "reason": "dead-strategy run #124, equity=$0, 100% DD",
     "enforcedBy": "jido-emergency",
     "marketSignal": null
   },
@@ -32,12 +32,12 @@
   },
   "positions": [],
   "actions": [
-    "RISK_OFF enforced \u2014 dead-strategy run #123, override #101"
+    "RISK_OFF enforced \u2014 dead-strategy run #124, override #102"
   ],
   "warnings": [
     "VPS decommissioned since 2026-03-23 (56+ days offline) \u2014 treat as decommissioned",
     "Strategy equity=$0 confirmed via live MCP clearinghouse call",
-    "Dead-strategy state: run #123, override #101"
+    "Dead-strategy state: run #124, override #102"
   ],
   "strategy": {
     "name": "wolf-primary",
