@@ -1,9 +1,9 @@
 {
   "source": "live",
-  "generatedAt": "2026-05-19T02:32:37.043198+00:00",
+  "generatedAt": "2026-05-19T02:47:31.603411+00:00",
   "regime": {
     "mode": "RISK_OFF",
-    "reason": "dead-strategy override #82: equity=$0, DD 100%",
+    "reason": "dead-strategy override #83: equity=$0, DD 100%",
     "enforcedBy": "jido-emergency",
     "marketSignal": null
   },
@@ -39,7 +39,7 @@
   },
   "positions": [],
   "actions": [
-    "dead-strategy run #104, MCP live confirmed equity=$0, RISK_OFF maintained"
+    "dead-strategy run #105, MCP live confirmed equity=$0, RISK_OFF maintained"
   ],
   "infrastructure": {
     "vpsStatus": "decommissioned",
@@ -49,11 +49,11 @@
   },
   "warnings": [
     "VPS offline 56+ days \u2014 treat as decommissioned",
-    "Dead-strategy run #104: equity has been $0 for 104 consecutive JIDO runs",
+    "Dead-strategy run #105: equity has been $0 for 105 consecutive JIDO runs",
     {
       "level": "info",
       "message": "MCP reconnected live \u2014 clearinghouse confirms equity=$0, 0 positions",
-      "timestamp": "2026-05-19T02:32:37.043198+00:00"
+      "timestamp": "2026-05-19T02:47:31.603411+00:00"
     }
   ],
   "deadWeight": null,
