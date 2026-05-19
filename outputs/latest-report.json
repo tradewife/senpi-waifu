@@ -1,9 +1,9 @@
 {
   "source": "live",
-  "generatedAt": "2026-05-19T16:16:48Z",
+  "generatedAt": "2026-05-19T16:32:30Z",
   "regime": {
     "mode": "RISK_OFF",
-    "reason": "dead-strategy equity=$0, DD 100%, override #92",
+    "reason": "dead-strategy equity=$0, DD 100%, override #93",
     "enforcedBy": "jido-emergency",
     "marketSignal": null
   },
@@ -47,7 +47,7 @@
     "mcpConsecutiveFailures": "0"
   },
   "actions": [
-    "heartbeat: dead-strategy run #114"
+    "heartbeat: dead-strategy run #115"
   ],
   "warnings": [
     "Strategy equity is $0 \u2014 wallet fully depleted",
@@ -57,13 +57,13 @@
   "alerts": [
     {
       "type": "JIDO_HEARTBEAT",
-      "timestamp": "2026-05-19T16:16:48Z",
+      "timestamp": "2026-05-19T16:32:30Z",
       "regime": "RISK_OFF",
       "accountValue": 0.0,
       "drawdownPct": 100.0,
       "openPositions": 0,
       "openOrders": 0,
-      "message": "dead-strategy run #114, override #92, equity=$0, DD 100%, MCP online, VPS offline 56d"
+      "message": "dead-strategy run #115, override #93, equity=$0, DD 100%, MCP online, VPS offline 56d"
     }
   ]
 }

@@ -1,6 +1,6 @@
 {
   "riskMode": "RISK_OFF",
-  "updatedAt": "2026-05-19T16:16:48Z",
+  "updatedAt": "2026-05-19T16:32:30Z",
   "updatedBy": "jido-emergency",
   "reason": "Arbiter override: DD 100.0% exceeds catastrophic limit 20%",
   "regimes": {
@@ -48,5 +48,5 @@
     "maxLeverage": 10,
     "maxPositionsTotal": 3
   },
-  "lastUpdated": "2026-05-19T16:16:48Z"
+  "lastUpdated": "2026-05-19T16:32:30Z"
 }
