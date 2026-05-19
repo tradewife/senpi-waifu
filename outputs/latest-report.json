@@ -1,9 +1,9 @@
 {
   "source": "live",
-  "generatedAt": "2026-05-19T17:16:37Z",
+  "generatedAt": "2026-05-19T17:31:43Z",
   "regime": {
     "mode": "RISK_OFF",
-    "reason": "dead-strategy run #118: equity=$0, 100% DD",
+    "reason": "dead-strategy run #119: equity=$0, 100% DD",
     "enforcedBy": "jido-emergency",
     "marketSignal": "N/A"
   },
@@ -47,19 +47,19 @@
   },
   "warnings": [
     "VPS decommissioned \u2014 56+ days offline since 2026-03-23",
-    "Dead strategy: equity=$0 for 118 consecutive runs",
+    "Dead strategy: equity=$0 for 119 consecutive runs",
     "MCP online this run \u2014 live clearinghouse confirmed $0 equity, 0 positions"
   ],
   "alerts": [
     {
       "type": "JIDO_HEARTBEAT",
-      "timestamp": "2026-05-19T17:16:37Z",
+      "timestamp": "2026-05-19T17:31:43Z",
       "regime": "RISK_OFF",
       "accountValue": 0.0,
       "drawdownPct": 100.0,
       "openPositions": 0,
       "openOrders": 0,
-      "message": "dead-strategy run #118, override #96"
+      "message": "dead-strategy run #119, override #97"
     }
   ],
   "actions": []
