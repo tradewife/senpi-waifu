@@ -1,11 +1,11 @@
 {
   "source": "cached",
-  "generatedAt": "2026-05-19T22:31:59Z",
+  "generatedAt": "2026-05-19T22:47:03Z",
   "regime": {
     "mode": "RISK_OFF",
-    "reason": "Dead strategy equity=$0, override #112",
+    "reason": "Dead strategy equity=$0, override #113",
     "enforcedBy": "jido-emergency",
-    "marketSignal": "Dead strategy (equity=$0, DD=100%), override #112, VPS decommissioned 56+ days"
+    "marketSignal": "Dead strategy (equity=$0, DD=100%), override #113, VPS decommissioned 56+ days"
   },
   "portfolio": {
     "equity": 0.0,
@@ -33,7 +33,7 @@
   },
   "positions": [],
   "actions": [
-    "Dead-strategy run #134: no positions, no MCP, enforced RISK_OFF override #112"
+    "Dead-strategy run #135: no positions, no MCP, enforced RISK_OFF override #113"
   ],
   "strategy": {
     "name": "wolf-primary",
@@ -47,12 +47,12 @@
     "vpsOfflineSince": "2026-03-23T23:57:15Z",
     "vpsOfflineDays": 56,
     "mcpStatus": "offline",
-    "mcpConsecutiveFailures": "1+"
+    "mcpConsecutiveFailures": "2+"
   },
   "warnings": [
-    "DD 100% based on cached equity \u2014 MCP offline, 1+ consecutive failures",
+    "DD 100% based on cached equity \u2014 MCP offline, 2+ consecutive failures",
     "VPS offline since 2026-03-23 \u2014 56+ days, treat as decommissioned",
-    "Dead-strategy run #134, override #112"
+    "Dead-strategy run #135, override #113"
   ],
   "alerts": []
 }

@@ -1,8 +1,8 @@
 {
   "riskMode": "RISK_OFF",
-  "updatedAt": "2026-05-19T22:31:59Z",
+  "updatedAt": "2026-05-19T22:47:03Z",
   "updatedBy": "jido-emergency",
-  "reason": "Dead strategy (equity=$0, DD=100%), override #112, VPS decommissioned 56+ days",
+  "reason": "Dead strategy (equity=$0, DD=100%), override #113, VPS decommissioned 56+ days",
   "regimes": {
     "RISK_ON": {
       "maxSlots": 3,
@@ -48,5 +48,5 @@
     "maxLeverage": 10,
     "maxPositionsTotal": 3
   },
-  "lastUpdated": "2026-05-19T19:46:13Z"
+  "lastUpdated": "2026-05-19T22:47:03Z"
 }
