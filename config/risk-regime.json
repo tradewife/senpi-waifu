@@ -1,7 +1,7 @@
 {
   "riskMode": "RISK_OFF",
-  "updatedAt": "2026-05-19T01:02:14.399679+00:00",
-  "updatedBy": "hermes-regime",
+  "updatedAt": "2026-05-19T01:17:20Z",
+  "updatedBy": "jido-emergency",
   "reason": "RISK_OFF override active: DD 100.0% exceeds catastrophic limit 20.0%",
   "regimes": {
     "RISK_ON": {
@@ -48,5 +48,5 @@
     "maxLeverage": 10,
     "maxPositionsTotal": 3
   },
-  "lastUpdated": "2026-05-19T00:47:06Z"
+  "lastUpdated": "2026-05-19T01:17:20Z"
 }
