@@ -1,9 +1,9 @@
 {
   "source": "live",
-  "generatedAt": "2026-05-18T23:47:11Z",
+  "generatedAt": "2026-05-19T00:03:07Z",
   "regime": {
     "mode": "RISK_OFF",
-    "reason": "Dead strategy equity=$0 (live MCP), DD=100%, override #73",
+    "reason": "Dead strategy equity=$0 (live MCP), DD=100%, override #74",
     "enforcedBy": "jido-emergency",
     "marketSignal": "N/A"
   },
@@ -39,7 +39,7 @@
   },
   "positions": [],
   "actions": [
-    "dead-strategy heartbeat run #95 (MCP reconnected)"
+    "dead-strategy heartbeat run #96 (MCP online)"
   ],
   "infrastructure": {
     "vpsStatus": "decommissioned",
@@ -50,18 +50,23 @@
   "warnings": [
     {
       "level": "info",
-      "message": "MCP reconnected after 94+ consecutive failures \u2014 live clearinghouse confirmed equity=$0, withdrawable=$0",
-      "timestamp": "2026-05-18T23:47:11Z"
+      "message": "MCP online \u2014 live clearinghouse confirmed equity=$0, withdrawable=$0",
+      "timestamp": "2026-05-19T00:03:07Z"
     },
     {
       "level": "critical",
-      "message": "VPS decommissioned 55+ days ago since 2026-03-23",
-      "timestamp": "2026-05-18T23:47:11Z"
+      "message": "VPS decommissioned 56 days ago since 2026-03-23",
+      "timestamp": "2026-05-19T00:03:07Z"
     },
     {
       "level": "info",
       "message": "DD 100.0% confirmed via live clearinghouse \u2014 wallet fully depleted",
-      "timestamp": "2026-05-18T23:47:11Z"
+      "timestamp": "2026-05-19T00:03:07Z"
+    },
+    {
+      "level": "info",
+      "message": "Regime-classifier set BASELINE at 00:01Z \u2014 overridden to RISK_OFF by JIDO (override #74)",
+      "timestamp": "2026-05-19T00:03:07Z"
     }
   ],
   "alerts": [],
