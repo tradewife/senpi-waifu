@@ -1,9 +1,9 @@
 {
   "source": "cached",
-  "generatedAt": "2026-05-20T13:32:26Z",
+  "generatedAt": "2026-05-20T13:46:44Z",
   "regime": {
     "mode": "RISK_OFF",
-    "reason": "Dead-strategy run #166: equity=$0, DD=100%",
+    "reason": "Dead-strategy run #167: equity=$0, DD=100%",
     "enforcedBy": "jido-emergency",
     "marketSignal": "N/A \u2014 dead strategy"
   },
@@ -43,20 +43,20 @@
   "alerts": [
     {
       "type": "JIDO_HEARTBEAT",
-      "timestamp": "2026-05-20T13:17:29Z",
+      "timestamp": "2026-05-20T13:46:44Z",
       "regime": "RISK_OFF",
       "accountValue": 0.0,
       "drawdownPct": 100.0,
       "openPositions": 0,
       "openOrders": 0,
-      "message": "dead-strategy run #165, override #143, MCP offline 32+ failures, VPS offline 57d, equity=$0"
+      "message": "dead-strategy run #167, override #145, MCP offline 34+ failures, VPS offline 58d, equity=$0"
     }
   ],
   "infrastructure": {
     "vpsStatus": "decommissioned",
     "vpsOfflineSince": "2026-03-23T00:00:00Z",
     "mcpStatus": "offline",
-    "mcpConsecutiveFailures": "33+"
+    "mcpConsecutiveFailures": "34+"
   },
   "strategy": {
     "name": "wolf-primary",
@@ -66,9 +66,9 @@
     "remaining": 0.0
   },
   "warnings": [
-    "MCP offline \u2014 33+ consecutive failures, using cached state",
+    "MCP offline \u2014 34+ consecutive failures, using cached state",
     "VPS decommissioned since 2026-03-23 (58d offline)",
-    "Dead-strategy run #166, equity=$0, DD=100%",
+    "Dead-strategy run #167, equity=$0, DD=100%",
     "DD 100% is based on cached equity \u2014 actual DD confirmed via live MCP on 2026-05-14 (accountValue=0.0)"
   ],
   "roiThreshold": 0.16,

@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-05-20T13:32:26Z",
+  "generatedAt": "2026-05-20T13:46:44Z",
   "codebaseIndexAt": "2026-03-23T23:57:15Z",
   "riskMode": "RISK_OFF",
   "executionPolicy": {
-    "generatedAt": "2026-05-20T13:32:26Z",
+    "generatedAt": "2026-05-20T13:46:44Z",
     "mode": "ACTIVE",
     "blockNewEntries": true,
     "allowAutoEntry": false,
@@ -16,7 +16,7 @@
       }
     },
     "reasons": [
-      "override #144: RISK_OFF enforced by jido (equity=$0.0, DD=100.0%, dead-strategy run #166)"
+      "override #145: RISK_OFF enforced by jido (equity=$0.0, DD=100.0%, dead-strategy run #167)"
     ],
     "risk": {
       "drawdownPctFromPeak": 100.0,
@@ -51,12 +51,12 @@
       "peakEquity": 100.0,
       "dayStartEquity": 0.0,
       "consecutiveStopOuts": 0,
-      "lastSync": "2026-05-20T13:17:29Z",
+      "lastSync": "2026-05-20T13:46:44Z",
       "lastUpdated": "2026-05-20T11:31:56.295329+00:00",
       "lastEquity": 0.0,
-      "lastJidoRun": "2026-05-20T13:17:29Z",
-      "deadStrategyRunCount": 165,
-      "lastChecked": "2026-05-20T13:32:26Z"
+      "lastJidoRun": "2026-05-20T13:46:44Z",
+      "deadStrategyRunCount": 167,
+      "lastChecked": "2026-05-20T13:46:44Z"
     }
   },
   "pending": {
