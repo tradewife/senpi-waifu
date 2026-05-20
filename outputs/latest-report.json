@@ -1,11 +1,11 @@
 {
   "source": "cached",
-  "generatedAt": "2026-05-20T05:32:45Z",
+  "generatedAt": "2026-05-20T05:48:34Z",
   "regime": {
     "mode": "RISK_OFF",
-    "reason": "dead-strategy override #124: equity=$0, DD=100%",
+    "reason": "dead-strategy override #125: equity=$0, DD=100%, MCP offline",
     "enforcedBy": "jido-emergency",
-    "marketSignal": null
+    "marketSignal": "N/A"
   },
   "portfolio": {
     "equity": 0.0,
@@ -19,21 +19,20 @@
       "actual": 100.0,
       "breached": true
     },
-    "maxConsecutiveStopOuts": {
-      "threshold": 4,
-      "actual": 0,
-      "breached": false
-    },
     "dailyLossLimit": {
       "threshold": 10,
       "actual": 0.0,
+      "breached": false
+    },
+    "consecutiveStopOuts": {
+      "threshold": 4,
+      "actual": 0,
       "breached": false
     }
   },
   "positions": [],
   "actions": [
-    "dead-strategy run #146: no positions, no action needed",
-    "override #124: RISK_OFF enforced (regime was BASELINE from classifier)"
+    "No actions \u2014 dead-strategy fast-path (equity=$0, 0 positions)"
   ],
   "strategy": {
     "name": "wolf-primary",
@@ -45,29 +44,30 @@
   "infrastructure": {
     "vpsStatus": "decommissioned",
     "vpsOfflineSince": "2026-03-23T23:57:15Z",
+    "vpsOfflineDays": 57,
     "mcpStatus": "offline",
-    "mcpConsecutiveFailures": "13+"
+    "mcpConsecutiveFailures": "14+"
   },
   "warnings": [
     {
       "level": "CRITICAL",
-      "message": "VPS decommissioned 57 days \u2014 treat as permanent offline",
-      "timestamp": "2026-05-20T05:32:45Z"
+      "message": "MCP offline \u2014 14+ consecutive failures, using cached state",
+      "timestamp": "2026-05-20T05:48:34Z"
     },
     {
-      "level": "WARNING",
-      "message": "MCP server offline \u2014 13+ consecutive failures, using cached state",
-      "timestamp": "2026-05-20T05:32:45Z"
-    },
-    {
-      "level": "WARNING",
-      "message": "DD 100.0% is based on cached equity (ground truth from last live check 2026-05-14)",
-      "timestamp": "2026-05-20T05:32:45Z"
+      "level": "CRITICAL",
+      "message": "VPS decommissioned 57d (since 2026-03-23)",
+      "timestamp": "2026-05-20T05:48:34Z"
     },
     {
       "level": "INFO",
-      "message": "Regime corrected: BASELINE \u2192 RISK_OFF (classifier race condition, override #124)",
-      "timestamp": "2026-05-20T05:32:45Z"
+      "message": "DD 100.0% based on cached equity \u2014 wallet fully depleted",
+      "timestamp": "2026-05-20T05:48:34Z"
+    },
+    {
+      "level": "INFO",
+      "message": "Regime-drift correction applied (regime-classifier race condition, pitfall #7), override #125",
+      "timestamp": "2026-05-20T05:48:34Z"
     }
   ],
   "alerts": [
