@@ -1,11 +1,11 @@
 {
   "source": "cached",
-  "generatedAt": "2026-05-20T04:47:15Z",
+  "generatedAt": "2026-05-20T05:02:52Z",
   "regime": {
     "mode": "RISK_OFF",
-    "reason": "Dead strategy, override #121",
+    "reason": "dead-strategy override #122: equity=$0, DD=100%",
     "enforcedBy": "jido-emergency",
-    "marketSignal": "N/A"
+    "marketSignal": null
   },
   "portfolio": {
     "equity": 0.0,
@@ -19,23 +19,24 @@
       "actual": 100.0,
       "breached": true
     },
-    "consecutiveStopOuts": {
+    "maxConsecutiveStopOuts": {
       "threshold": 4,
       "actual": 0,
       "breached": false
     },
     "dailyLossLimit": {
       "threshold": 10,
-      "actual": 0,
+      "actual": 0.0,
       "breached": false
     }
   },
   "positions": [],
   "actions": [
-    "Dead-strategy run #143, override #121, RISK_OFF enforced, MCP offline (10+ failures)"
+    "dead-strategy run #144: no positions, no action needed",
+    "override #122: RISK_OFF enforced (regime was BASELINE from classifier)"
   ],
   "strategy": {
-    "name": "WOLF-Primary",
+    "name": "wolf-primary",
     "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
     "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce",
     "budget": 100,
@@ -45,14 +46,40 @@
     "vpsStatus": "decommissioned",
     "vpsOfflineSince": "2026-03-23T23:57:15Z",
     "mcpStatus": "offline",
-    "mcpConsecutiveFailures": "10+"
+    "mcpConsecutiveFailures": "11+"
   },
   "warnings": [
-    "VPS decommissioned 57+ days \u2014 treat as permanently offline",
-    "MCP server offline \u2014 10+ consecutive failures, using cached state",
-    "DD 100.0% is based on cached equity from stale data \u2014 actual DD may differ",
-    "Regime-drift correction: jido enforced RISK_OFF (regime-classifier may overwrite to BASELINE)"
+    {
+      "level": "CRITICAL",
+      "message": "VPS decommissioned 57 days \u2014 treat as permanent offline",
+      "timestamp": "2026-05-20T05:02:52Z"
+    },
+    {
+      "level": "WARNING",
+      "message": "MCP server offline \u2014 11+ consecutive failures, using cached state",
+      "timestamp": "2026-05-20T05:02:52Z"
+    },
+    {
+      "level": "WARNING",
+      "message": "DD 100.0% is based on cached equity (ground truth from last live check 2026-05-14)",
+      "timestamp": "2026-05-20T05:02:52Z"
+    },
+    {
+      "level": "INFO",
+      "message": "Regime corrected: BASELINE \u2192 RISK_OFF (classifier race condition, override #122)",
+      "timestamp": "2026-05-20T05:02:52Z"
+    }
   ],
-  "alerts": [],
-  "timestamp": "2026-05-20T04:47:15Z"
+  "alerts": [
+    {
+      "type": "JIDO_HEARTBEAT",
+      "timestamp": "2026-05-20T05:02:52Z",
+      "regime": "RISK_OFF",
+      "accountValue": 0.0,
+      "drawdownPct": 100.0,
+      "openPositions": 0,
+      "openOrders": 0,
+      "message": "dead-strategy run #144, MCP offline 11+ failures, override #122"
+    }
+  ]
 }
