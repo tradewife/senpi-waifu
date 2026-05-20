@@ -5,27 +5,27 @@
   "peakEquity": 100.0,
   "lastEquity": 0.0,
   "dayStartEquity": 0.0,
-  "dayStartDate": "2026-05-19",
+  "dayStartDate": "2026-05-20",
   "drawdownPct": 100.0,
   "consecutiveStopOuts": 0,
-  "lastJidoRun": "2026-05-19T22:47:03Z",
-  "lastChecked": "2026-05-19T22:47:03Z",
-  "lastCheckAt": "2026-05-19T22:47:03Z",
-  "lastCheck": "2026-05-19T22:47:03Z",
-  "lastUpdated": "2026-05-19T22:47:03Z",
-  "deadStrategyRunCount": 135,
-  "overrideCount": 113,
-  "mcpConsecutiveFailures": 2,
+  "lastJidoRun": "2026-05-20T02:03:16Z",
+  "lastChecked": "2026-05-20T02:03:16Z",
+  "lastCheckAt": "2026-05-20T02:03:16Z",
+  "lastCheck": "2026-05-20T02:03:16Z",
+  "lastUpdated": "2026-05-20T02:03:16Z",
+  "deadStrategyRunCount": 136,
+  "overrideCount": 114,
+  "mcpConsecutiveFailures": 3,
   "alerts": [
     {
       "type": "JIDO_HEARTBEAT",
-      "timestamp": "2026-05-19T22:47:03Z",
+      "timestamp": "2026-05-20T02:03:16Z",
       "regime": "RISK_OFF",
       "accountValue": 0.0,
       "drawdownPct": 100.0,
       "openPositions": 0,
       "openOrders": 0,
-      "message": "dead-strategy run #135, override #113, MCP offline 2+ failures, VPS offline 56+ days"
+      "message": "dead-strategy run #136, override #114, MCP offline 3+ failures, VPS offline 57+ days"
     }
   ]
 }
