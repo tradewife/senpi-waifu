@@ -1,18 +1,17 @@
 {
   "source": "cached",
-  "generatedAt": "2026-05-20T08:04:38.869181Z",
+  "generatedAt": "2026-05-20T10:17:02Z",
   "regime": {
     "mode": "RISK_OFF",
-    "reason": "dead-strategy equity=$0, override #133",
+    "reason": "dead-strategy equity=$0, override #134",
     "enforcedBy": "jido-emergency",
-    "marketSignal": null
+    "marketSignal": "N/A"
   },
   "portfolio": {
     "equity": 0.0,
     "peak": 100.0,
     "drawdownPct": 100.0,
-    "dailyPnl": 0.0,
-    "deadWeight": 0.0
+    "dailyPnl": 0.0
   },
   "guardrails": {
     "catastrophicDrawdown": {
@@ -32,7 +31,12 @@
     }
   },
   "positions": [],
-  "actions": [],
+  "actions": [
+    "dead-strategy heartbeat run #156",
+    "RISK_OFF override #134 applied",
+    "regime synced across arbiter/brain/risk-regime",
+    "MCP failure counter: 23+"
+  ],
   "strategy": {
     "name": "wolf-primary",
     "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
@@ -45,13 +49,29 @@
     "vpsOfflineSince": "2026-03-23T23:57:15Z",
     "vpsOfflineDays": 57,
     "mcpStatus": "offline",
-    "mcpConsecutiveFailures": "22+"
+    "mcpConsecutiveFailures": "23+"
   },
   "warnings": [
-    "VPS decommissioned 57+ days \u2014 treat as permanently offline",
-    "MCP offline 22+ consecutive failures \u2014 using cached state",
-    "DD 100% based on cached equity \u2014 confirmed dead strategy since 2026-05-14",
-    "Regime drift corrected: BASELINE \u2192 RISK_OFF (override #133)"
+    {
+      "level": "critical",
+      "message": "MCP offline \u2014 23+ consecutive failures, using cached state",
+      "timestamp": "2026-05-20T10:17:02Z"
+    },
+    {
+      "level": "critical",
+      "message": "VPS decommissioned since 2026-03-23 (57 days offline)",
+      "timestamp": "2026-05-20T10:17:02Z"
+    },
+    {
+      "level": "warning",
+      "message": "DD 100.0% based on cached equity \u2014 actual DD may differ",
+      "timestamp": "2026-05-20T10:17:02Z"
+    },
+    {
+      "level": "info",
+      "message": "Regime drift corrected: RISK_OFF enforced (regime-classifier race, override #134)",
+      "timestamp": "2026-05-20T10:17:02Z"
+    }
   ],
   "alerts": [
     {
