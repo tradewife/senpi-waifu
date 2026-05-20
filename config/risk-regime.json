@@ -1,8 +1,8 @@
 {
   "riskMode": "RISK_OFF",
-  "updatedAt": "2026-05-20T11:31:56.295329+00:00",
-  "updatedBy": "jido-emergency",
-  "reason": "dead-strategy override #139, equity=$0, DD 100%",
+  "updatedAt": "2026-05-20T12:01:36.704676+00:00",
+  "updatedBy": "hermes-regime",
+  "reason": "Market fetch SKIPPED \u2014 dead strategy (equity=$0, DD=100.0%). RISK_OFF override locked: override #139, MCP offline 28+ failures, VPS decommissioned 57d",
   "regimes": {
     "RISK_ON": {
       "maxSlots": 3,
