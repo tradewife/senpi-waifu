@@ -1,11 +1,11 @@
 {
   "source": "cached",
-  "generatedAt": "2026-05-20T15:48:45.323760+00:00",
+  "generatedAt": "2026-05-20T16:16:51Z",
   "regime": {
     "mode": "RISK_OFF",
-    "reason": "Dead-strategy run #169: equity=$0, DD=100%, MCP offline (36 failures)",
+    "reason": "Dead-strategy run #170",
     "enforcedBy": "jido-emergency",
-    "marketSignal": null
+    "marketSignal": "none"
   },
   "portfolio": {
     "equity": {
@@ -13,26 +13,25 @@
       "peak": 100.0,
       "dayStart": 0.0
     },
-    "drawdown": {
-      "pct": 100.0,
-      "abs": 100.0
-    },
+    "drawdownPct": 100.0,
+    "openPositions": 0,
+    "openOrders": 0,
     "withdrawable": 0.0
   },
   "guardrails": {
-    "catastrophicDrawdown": {
+    "drawdown": {
       "threshold": 20,
       "actual": 100.0,
       "breached": true
     },
-    "dailyLoss": {
-      "threshold": 10,
-      "actual": 0.0,
-      "breached": false
-    },
     "consecutiveStopOuts": {
       "threshold": 4,
       "actual": 0,
+      "breached": false
+    },
+    "dailyLoss": {
+      "threshold": 10,
+      "actual": 0.0,
       "breached": false
     }
   },
@@ -55,20 +54,21 @@
   ],
   "infrastructure": {
     "vpsStatus": "decommissioned",
-    "vpsOfflineSince": "2026-03-23T23:57:15Z",
+    "vpsOfflineSince": "2026-03-23T00:00:00Z",
     "mcpStatus": "offline",
-    "mcpConsecutiveFailures": "36+"
+    "mcpConsecutiveFailures": "37+"
   },
   "strategy": {
-    "name": "WOLF-Primary",
+    "name": "wolf-primary",
     "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
     "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce",
     "budget": 100,
-    "remaining": 0.0
+    "remaining": 0.0,
+    "status": "dead"
   },
   "warnings": [
-    "MCP offline (36 consecutive failures) \u2014 data is cached",
-    "Strategy dead since 2026-05-14, run #169",
+    "MCP offline \u2014 37 consecutive failures, using cached data",
+    "Dead-strategy run #170: equity=$0 since 2026-05-14",
     "VPS decommissioned since 2026-03-23"
   ],
   "roiThreshold": 0.16,

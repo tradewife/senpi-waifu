@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-05-20T15:48:45.323760+00:00",
+  "generatedAt": "2026-05-20T16:16:51Z",
   "codebaseIndexAt": "2026-03-23T23:57:15Z",
   "riskMode": "RISK_OFF",
   "executionPolicy": {
-    "generatedAt": "2026-05-20T15:48:45.323760+00:00",
+    "generatedAt": "2026-05-20T16:16:51Z",
     "mode": "ACTIVE",
     "blockNewEntries": true,
     "allowAutoEntry": false,
@@ -16,7 +16,7 @@
       }
     },
     "reasons": [
-      "Dead-strategy override #147: equity=$0, DD=100%, MCP offline (36 failures)"
+      "override #148: dead-strategy equity=$0, RISK_OFF enforced"
     ],
     "risk": {
       "drawdownPctFromPeak": 100.0,
@@ -56,7 +56,8 @@
       "lastEquity": 0.0,
       "lastJidoRun": "2026-05-20T15:32:11Z",
       "deadStrategyRunCount": 168,
-      "lastChecked": "2026-05-20T15:32:11Z"
+      "lastChecked": "2026-05-20T15:32:11Z",
+      "lastCheck": "2026-05-20T16:16:51Z"
     }
   },
   "pending": {
