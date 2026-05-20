@@ -1,8 +1,8 @@
 {
-  "riskMode": "RISK_OFF",
-  "updatedAt": "2026-05-20T07:47:21Z",
-  "updatedBy": "jido-emergency",
-  "reason": "dead-strategy run #154, equity=$0, 57+ days VPS decommissioned",
+  "riskMode": "BASELINE",
+  "updatedAt": "2026-05-20T08:01:45Z",
+  "updatedBy": "waifu-regime",
+  "reason": "Mixed signals (slope=0.2%, ATR=0.5%)",
   "regimes": {
     "RISK_ON": {
       "maxSlots": 3,
