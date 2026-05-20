@@ -1,9 +1,9 @@
 {
   "source": "cached",
-  "generatedAt": "2026-05-20T10:32:24Z",
+  "generatedAt": "2026-05-20T10:48:06Z",
   "regime": {
     "mode": "RISK_OFF",
-    "reason": "dead-strategy equity=$0, override #135",
+    "reason": "dead-strategy equity=$0, override #136",
     "enforcedBy": "jido-emergency",
     "marketSignal": "N/A"
   },
@@ -32,10 +32,10 @@
   },
   "positions": [],
   "actions": [
-    "dead-strategy heartbeat run #157",
-    "RISK_OFF override #135 applied",
+    "dead-strategy heartbeat run #158",
+    "RISK_OFF override #136 applied",
     "regime synced across arbiter/brain/risk-regime",
-    "MCP failure counter: 24+"
+    "MCP failure counter: 25+"
   ],
   "strategy": {
     "name": "wolf-primary",
@@ -49,40 +49,40 @@
     "vpsOfflineSince": "2026-03-23T23:57:15Z",
     "vpsOfflineDays": 57,
     "mcpStatus": "offline",
-    "mcpConsecutiveFailures": "24+"
+    "mcpConsecutiveFailures": "25+"
   },
   "warnings": [
     {
       "level": "critical",
-      "message": "MCP offline \u2014 24+ consecutive failures, using cached state",
-      "timestamp": "2026-05-20T10:32:24Z"
+      "message": "MCP offline \u2014 25+ consecutive failures, using cached state",
+      "timestamp": "2026-05-20T10:48:06Z"
     },
     {
       "level": "critical",
       "message": "VPS decommissioned since 2026-03-23 (57 days offline)",
-      "timestamp": "2026-05-20T10:32:24Z"
+      "timestamp": "2026-05-20T10:48:06Z"
     },
     {
       "level": "warning",
       "message": "DD 100.0% based on cached equity \u2014 actual DD may differ",
-      "timestamp": "2026-05-20T10:32:24Z"
+      "timestamp": "2026-05-20T10:48:06Z"
     },
     {
       "level": "info",
-      "message": "Regime drift corrected: RISK_OFF enforced (regime-classifier race, override #135)",
-      "timestamp": "2026-05-20T10:32:24Z"
+      "message": "Regime drift corrected: RISK_OFF enforced (regime-classifier race, override #136)",
+      "timestamp": "2026-05-20T10:48:06Z"
     }
   ],
   "alerts": [
     {
       "type": "JIDO_HEARTBEAT",
-      "timestamp": "2026-05-20T10:32:24Z",
+      "timestamp": "2026-05-20T10:48:06Z",
       "regime": "RISK_OFF",
       "accountValue": 0.0,
       "drawdownPct": 100.0,
       "openPositions": 0,
       "openOrders": 0,
-      "message": "dead-strategy run #157, override #135"
+      "message": "dead-strategy run #158, override #136"
     }
   ]
 }
