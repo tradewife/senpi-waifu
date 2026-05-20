@@ -1,8 +1,8 @@
 {
   "riskMode": "RISK_OFF",
-  "updatedAt": "2026-05-20T02:47:47Z",
-  "updatedBy": "jido-emergency",
-  "reason": "Dead strategy equity=$0, override #116",
+  "updatedAt": "2026-05-20T03:01:41.158Z",
+  "updatedBy": "hermes-regime",
+  "reason": "Short-circuit: equity=$0, DD=100.0% from catastrophic limit 20.0%. Dead strategy override #116 active. No market data fetched.",
   "regimes": {
     "RISK_ON": {
       "maxSlots": 3,
