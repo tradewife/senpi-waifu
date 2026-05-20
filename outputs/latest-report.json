@@ -1,9 +1,9 @@
 {
   "source": "cached",
-  "generatedAt": "2026-05-20T05:17:10Z",
+  "generatedAt": "2026-05-20T05:32:45Z",
   "regime": {
     "mode": "RISK_OFF",
-    "reason": "dead-strategy override #123: equity=$0, DD=100%",
+    "reason": "dead-strategy override #124: equity=$0, DD=100%",
     "enforcedBy": "jido-emergency",
     "marketSignal": null
   },
@@ -32,8 +32,8 @@
   },
   "positions": [],
   "actions": [
-    "dead-strategy run #145: no positions, no action needed",
-    "override #123: RISK_OFF enforced (regime was BASELINE from classifier)"
+    "dead-strategy run #146: no positions, no action needed",
+    "override #124: RISK_OFF enforced (regime was BASELINE from classifier)"
   ],
   "strategy": {
     "name": "wolf-primary",
@@ -46,40 +46,40 @@
     "vpsStatus": "decommissioned",
     "vpsOfflineSince": "2026-03-23T23:57:15Z",
     "mcpStatus": "offline",
-    "mcpConsecutiveFailures": "12+"
+    "mcpConsecutiveFailures": "13+"
   },
   "warnings": [
     {
       "level": "CRITICAL",
       "message": "VPS decommissioned 57 days \u2014 treat as permanent offline",
-      "timestamp": "2026-05-20T05:17:10Z"
+      "timestamp": "2026-05-20T05:32:45Z"
     },
     {
       "level": "WARNING",
-      "message": "MCP server offline \u2014 12+ consecutive failures, using cached state",
-      "timestamp": "2026-05-20T05:17:10Z"
+      "message": "MCP server offline \u2014 13+ consecutive failures, using cached state",
+      "timestamp": "2026-05-20T05:32:45Z"
     },
     {
       "level": "WARNING",
       "message": "DD 100.0% is based on cached equity (ground truth from last live check 2026-05-14)",
-      "timestamp": "2026-05-20T05:17:10Z"
+      "timestamp": "2026-05-20T05:32:45Z"
     },
     {
       "level": "INFO",
-      "message": "Regime corrected: BASELINE \u2192 RISK_OFF (classifier race condition, override #123)",
-      "timestamp": "2026-05-20T05:17:10Z"
+      "message": "Regime corrected: BASELINE \u2192 RISK_OFF (classifier race condition, override #124)",
+      "timestamp": "2026-05-20T05:32:45Z"
     }
   ],
   "alerts": [
     {
       "type": "JIDO_HEARTBEAT",
-      "timestamp": "2026-05-20T05:17:10Z",
+      "timestamp": "2026-05-20T05:32:45Z",
       "regime": "RISK_OFF",
       "accountValue": 0.0,
       "drawdownPct": 100.0,
       "openPositions": 0,
       "openOrders": 0,
-      "message": "dead-strategy run #145, MCP offline 12+ failures, override #123"
+      "message": "dead-strategy run #146, MCP offline 13+ failures, override #124"
     }
   ]
 }
