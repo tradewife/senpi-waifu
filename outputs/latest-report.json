@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-05-20T06:17:15Z",
   "source": "cached",
+  "generatedAt": "2026-05-20T06:33:05Z",
   "regime": {
     "mode": "RISK_OFF",
-    "reason": "dead-strategy run #148, equity=$0",
+    "reason": "dead-strategy override #127",
     "enforcedBy": "jido-emergency",
-    "marketSignal": "N/A"
+    "marketSignal": "override #126: dead-strategy run #148, equity=$0, DD=100.0%, VPS offline 57d"
   },
   "portfolio": {
     "equity": 0.0,
@@ -19,36 +19,40 @@
       "actual": 100.0,
       "breached": true
     },
-    "maxConsecutiveStopOuts": {
-      "threshold": 4,
+    "dailyLossLimit": {
+      "threshold": 10,
       "actual": 0,
       "breached": false
     },
-    "dailyLossLimit": {
-      "threshold": 10,
+    "consecutiveStopOuts": {
+      "threshold": 4,
       "actual": 0,
       "breached": false
     }
   },
   "positions": [],
-  "actions": [],
+  "actions": [
+    "RISK_OFF enforced",
+    "override #127",
+    "no positions to manage"
+  ],
   "strategy": {
     "name": "wolf-primary",
     "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
     "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce",
-    "budget": 100,
+    "budget": 100.0,
     "remaining": 0.0
   },
   "infrastructure": {
     "vpsStatus": "decommissioned",
-    "vpsOfflineSince": "2026-03-23T23:57:15Z",
+    "vpsOfflineSince": "2026-03-23T23:57:15+00:00",
     "mcpStatus": "offline",
-    "mcpConsecutiveFailures": "15+"
+    "mcpConsecutiveFailures": "16+"
   },
   "warnings": [
-    "MCP server offline \u2014 15+ consecutive failures, using cached state",
-    "VPS decommissioned 57 days ago (since 2026-03-23)",
-    "Dead-strategy run #148: equity=$0 for 147+ consecutive runs",
-    "DD 100.0% based on cached equity \u2014 actual DD is 100% (wallet depleted)"
+    "MCP offline \u2014 16+ consecutive failures, using cached state",
+    "VPS offline since 2026-03-23 (57 days) \u2014 treat as decommissioned",
+    "Strategy dead since 2026-05-14 \u2014 equity=$0, 100% drawdown",
+    "DD 100.0% based on cached equity \u2014 actual DD confirmed 100% via live MCP on 2026-05-14"
   ]
 }
