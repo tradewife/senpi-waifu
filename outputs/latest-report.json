@@ -3,79 +3,73 @@
   "generatedAt": "2026-05-20T07:02:59.995005+00:00",
   "regime": {
     "mode": "RISK_OFF",
-    "reason": "dead-strategy run #151, equity=$0, DD=100%",
+    "reason": "override #130: dead-strategy run #152",
     "enforcedBy": "jido-emergency",
-    "marketSignal": "N/A"
+    "marketSignal": "override #130: dead-strategy run #152, equity=$0.0, DD 100.0%"
   },
   "portfolio": {
     "equity": 0.0,
-    "peak": 100.0,
+    "peakEquity": 100.0,
     "drawdownPct": 100.0,
     "dailyPnl": 0.0,
-    "deadWeight": []
+    "openPositions": 0,
+    "openOrders": 0
   },
   "guardrails": {
     "catastrophicDrawdown": {
-      "threshold": 20,
+      "threshold": 20.0,
       "actual": 100.0,
       "breached": true
     },
-    "maxConsecutiveStopOuts": {
-      "threshold": 4,
-      "actual": 0,
+    "dailyLossLimit": {
+      "threshold": 10.0,
+      "actual": 0.0,
       "breached": false
     },
-    "dailyLossLimit": {
-      "threshold": 10,
-      "actual": 0.0,
+    "consecutiveStopOuts": {
+      "threshold": 4,
+      "actual": 0,
       "breached": false
     }
   },
   "positions": [],
   "actions": [
-    "dead-strategy run #151: no positions, no SL needed",
-    "override #129: RISK_OFF enforced (regime drift corrected)",
-    "MCP failure #18: incrementing counter"
+    "Dead-strategy heartbeat run #152 \u2014 no positions to manage"
   ],
   "strategy": {
     "name": "wolf-primary",
     "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
     "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce",
-    "budget": 100.0,
+    "budget": 100,
     "remaining": 0.0
   },
   "infrastructure": {
     "vpsStatus": "decommissioned",
     "vpsOfflineSince": "2026-03-23T23:57:15Z",
-    "vpsOfflineDays": 57,
     "mcpStatus": "offline",
-    "mcpConsecutiveFailures": "18+"
+    "mcpConsecutiveFailures": "19+"
   },
   "warnings": [
     {
       "level": "CRITICAL",
-      "message": "Strategy dead: equity=$0 for 151 consecutive runs, DD=100%",
-      "timestamp": "2026-05-20T07:02:59.995005+00:00"
-    },
-    {
-      "level": "CRITICAL",
-      "message": "VPS decommissioned 57 days (since 2026-03-23)",
-      "timestamp": "2026-05-20T07:02:59.995005+00:00"
+      "message": "VPS decommissioned since 2026-03-23 (57+ days offline) \u2014 treat as permanent",
+      "timestamp": "2026-05-20T07:17:26.457183Z"
     },
     {
       "level": "WARNING",
-      "message": "MCP offline: 18+ consecutive failures \u2014 using cached data",
-      "timestamp": "2026-05-20T07:02:59.995005+00:00"
+      "message": "MCP server offline \u2014 19+ consecutive failures, using cached state",
+      "timestamp": "2026-05-20T07:17:26.457183Z"
     },
     {
       "level": "WARNING",
-      "message": "DD 100% based on cached equity \u2014 actual DD confirmed $0 via last live check",
-      "timestamp": "2026-05-20T07:02:59.995005+00:00"
+      "message": "DD 100.0% based on cached equity \u2014 actual DD may differ (pitfall #1c)",
+      "timestamp": "2026-05-20T07:17:26.457183Z"
     },
     {
       "level": "INFO",
-      "message": "Regime override #129 applied (regime-classifier race, pitfall #7)",
-      "timestamp": "2026-05-20T07:02:59.995005+00:00"
+      "message": "Regime-classifier race condition corrected: RISK_OFF override #130",
+      "timestamp": "2026-05-20T07:17:26.457183Z"
     }
-  ]
+  ],
+  "lastUpdated": "2026-05-20T07:17:26.457183Z"
 }
