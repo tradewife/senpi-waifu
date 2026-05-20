@@ -1,37 +1,36 @@
 {
   "source": "cached",
-  "generatedAt": "2026-05-20T16:16:51Z",
+  "generatedAt": "2026-05-20T16:32:41.907542+00:00",
   "regime": {
     "mode": "RISK_OFF",
-    "reason": "Dead-strategy run #170",
+    "reason": "Dead-strategy run #171, equity=$0",
     "enforcedBy": "jido-emergency",
-    "marketSignal": "none"
+    "marketSignal": null
   },
   "portfolio": {
     "equity": {
-      "current": 0.0,
-      "peak": 100.0,
-      "dayStart": 0.0
+      "total": 0.0,
+      "perps": 0.0,
+      "spot": 0.0
     },
+    "peakEquity": 100.0,
     "drawdownPct": 100.0,
-    "openPositions": 0,
-    "openOrders": 0,
-    "withdrawable": 0.0
+    "dailyPnl": 0.0
   },
   "guardrails": {
-    "drawdown": {
+    "catastrophicDrawdown": {
       "threshold": 20,
       "actual": 100.0,
       "breached": true
     },
-    "consecutiveStopOuts": {
-      "threshold": 4,
-      "actual": 0,
-      "breached": false
-    },
-    "dailyLoss": {
+    "dailyLossLimit": {
       "threshold": 10,
       "actual": 0.0,
+      "breached": false
+    },
+    "maxConsecutiveStopOuts": {
+      "threshold": 4,
+      "actual": 0,
       "breached": false
     }
   },
@@ -56,21 +55,24 @@
     "vpsStatus": "decommissioned",
     "vpsOfflineSince": "2026-03-23T00:00:00Z",
     "mcpStatus": "offline",
-    "mcpConsecutiveFailures": "37+"
+    "mcpConsecutiveFailures": "38+"
   },
   "strategy": {
     "name": "wolf-primary",
     "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
     "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce",
-    "budget": 100,
-    "remaining": 0.0,
-    "status": "dead"
+    "budget": 100.0,
+    "remaining": 0.0
   },
   "warnings": [
-    "MCP offline \u2014 37 consecutive failures, using cached data",
-    "Dead-strategy run #170: equity=$0 since 2026-05-14",
-    "VPS decommissioned since 2026-03-23"
+    "MCP offline \u2014 data is cached (consecutive failures: 38)",
+    "Dead-strategy run #171, equity=$0 since 2026-05-14",
+    "VPS decommissioned since 2026-03-23",
+    "Regime drift corrected: risk-regime.json enforced RISK_OFF"
   ],
   "roiThreshold": 0.16,
-  "autoExecute": true
+  "autoExecute": true,
+  "actionsTaken": [
+    "jido-heartbeat-dead-strategy-run-171"
+  ]
 }
