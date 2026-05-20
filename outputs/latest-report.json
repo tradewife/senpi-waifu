@@ -1,9 +1,9 @@
 {
   "source": "cached",
-  "generatedAt": "2026-05-20T12:47:34Z",
+  "generatedAt": "2026-05-20T13:17:29Z",
   "regime": {
     "mode": "RISK_OFF",
-    "reason": "override #142: equity=$0, DD=100%, dead-strategy",
+    "reason": "override #143: equity=$0, DD=100%, dead-strategy",
     "enforcedBy": "jido-emergency",
     "marketSignal": null
   },
@@ -31,15 +31,28 @@
     }
   },
   "positions": [],
+  "market": {},
   "actions": [
     "heartbeat-only: dead-strategy, no positions to manage"
+  ],
+  "alerts": [
+    {
+      "type": "JIDO_HEARTBEAT",
+      "timestamp": "2026-05-20T13:17:29Z",
+      "regime": "RISK_OFF",
+      "accountValue": 0.0,
+      "drawdownPct": 100.0,
+      "openPositions": 0,
+      "openOrders": 0,
+      "message": "dead-strategy run #165, override #143, MCP offline 32+ failures, VPS offline 57d, equity=$0"
+    }
   ],
   "infrastructure": {
     "vpsStatus": "decommissioned",
     "vpsOfflineSince": "2026-03-23T23:57:15Z",
     "vpsOfflineDays": 57,
     "mcpStatus": "offline",
-    "mcpConsecutiveFailures": "31+"
+    "mcpConsecutiveFailures": "32+"
   },
   "strategy": {
     "name": "wolf-primary",
@@ -49,22 +62,10 @@
     "remaining": 0.0
   },
   "warnings": [
-    "MCP offline \u2014 31+ consecutive failures, using cached state",
+    "MCP offline \u2014 32+ consecutive failures, using cached state",
     "VPS decommissioned since 2026-03-23 (57d offline)",
-    "Dead-strategy run #164, equity=$0, DD=100%",
+    "Dead-strategy run #165, equity=$0, DD=100%",
     "DD 100% is based on cached equity \u2014 actual DD confirmed via live MCP on 2026-05-14 (accountValue=0.0)"
-  ],
-  "alerts": [
-    {
-      "type": "JIDO_HEARTBEAT",
-      "timestamp": "2026-05-20T12:47:34Z",
-      "regime": "RISK_OFF",
-      "accountValue": 0.0,
-      "drawdownPct": 100.0,
-      "openPositions": 0,
-      "openOrders": 0,
-      "message": "dead-strategy run #164, override #142, MCP offline 31+ failures, VPS offline 57d, equity=$0"
-    }
   ],
   "roiThreshold": 0.16,
   "autoExecute": true
