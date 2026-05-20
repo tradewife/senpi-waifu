@@ -3,16 +3,15 @@
   "generatedAt": "2026-05-20T04:16:43Z",
   "regime": {
     "mode": "RISK_OFF",
-    "reason": "Dead strategy equity=$0, override #119",
+    "reason": "Dead strategy, override #120",
     "enforcedBy": "jido-emergency",
-    "marketSignal": "Dead strategy (equity=$0, DD=100%), override #119, VPS decommissioned 57+ days"
+    "marketSignal": "N/A"
   },
   "portfolio": {
     "equity": 0.0,
     "peak": 100.0,
     "drawdownPct": 100.0,
-    "dailyPnl": 0.0,
-    "deadWeight": 0
+    "dailyPnl": 0.0
   },
   "guardrails": {
     "catastrophicDrawdown": {
@@ -20,23 +19,23 @@
       "actual": 100.0,
       "breached": true
     },
-    "dailyLossLimit": {
-      "threshold": 10,
-      "actual": 0.0,
+    "consecutiveStopOuts": {
+      "threshold": 4,
+      "actual": 0,
       "breached": false
     },
-    "maxConsecutiveStopOuts": {
-      "threshold": 4,
+    "dailyLossLimit": {
+      "threshold": 10,
       "actual": 0,
       "breached": false
     }
   },
   "positions": [],
   "actions": [
-    "Dead-strategy run #141: no positions, no MCP, enforced RISK_OFF override #119"
+    "Dead-strategy run #142, override #120, RISK_OFF enforced, MCP offline (9+ failures)"
   ],
   "strategy": {
-    "name": "wolf-primary",
+    "name": "WOLF-Primary",
     "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
     "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce",
     "budget": 100,
@@ -45,14 +44,15 @@
   "infrastructure": {
     "vpsStatus": "decommissioned",
     "vpsOfflineSince": "2026-03-23T23:57:15Z",
-    "vpsOfflineDays": 57,
     "mcpStatus": "offline",
-    "mcpConsecutiveFailures": "8+"
+    "mcpConsecutiveFailures": "9+"
   },
   "warnings": [
-    "DD 100% based on cached equity \u2014 MCP offline, 8+ consecutive failures",
-    "VPS offline since 2026-03-23 \u2014 57+ days, treat as decommissioned",
-    "Dead-strategy run #141, override #119"
+    "VPS decommissioned 57+ days \u2014 treat as permanently offline",
+    "MCP server offline \u2014 9+ consecutive failures, using cached state",
+    "DD 100.0% is based on cached equity from stale data \u2014 actual DD may differ",
+    "Regime-drift correction: jido enforced RISK_OFF (regime-classifier may overwrite to BASELINE)"
   ],
-  "alerts": []
+  "alerts": [],
+  "timestamp": "2026-05-20T04:31:55Z"
 }
