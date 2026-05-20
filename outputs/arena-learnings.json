@@ -1,213 +1,71 @@
 {
-  "generatedAt": "2026-05-19T22:06:24Z",
-  "arenaWeek": 8,
+  "generatedAt": "2026-05-20T02:01:10Z",
+  "arenaWeek": "?",
   "totalEntrants": 105,
-  "qualifiedEntrants": 4,
-  "poolData": {
-    "weekNumber": 8,
-    "weeklyPool": 5781.31,
-    "monthNumber": 1,
-    "monthlyPool": 8682.87,
-    "weekEnds": "2026-05-21T00:00:00Z",
-    "prizes": {
-      "rank1": "$2,312.52 (40%)",
-      "rank2": "$1,445.33 (25%)",
-      "rank3": "$867.20 (15%)",
-      "rank4": "$693.76 (12%)",
-      "rank5": "$462.50 (8%)"
-    }
-  },
   "ourStats": {
-    "trade_wife": {
-      "accountId": "M179642",
-      "rank": 15,
-      "roePct": 0.0049,
-      "totalPnl": -48.89,
-      "currentBalance": 0,
-      "tradeCount": 0,
-      "drawdown": "100%",
-      "riskMode": "RISK_OFF",
-      "daysSinceLastTrade": 57
-    },
-    "prashantfb65": {
-      "accountId": "M19",
-      "rank": 17,
-      "roePct": 0.0,
-      "totalPnl": 0.0,
-      "currentBalance": 119.25,
-      "tradeCount": 0,
-      "skillsUsed": ["wolf-strategy"],
-      "status": "idle"
-    }
+    "closes": 1,
+    "winRate": 0.0,
+    "totalPnl": -51.11
   },
+  "arenaTop5AvgRoe": 54.24,
+  "arenaTop5AvgPnl": 462.65,
   "arenaTop5": [
     {
       "rank": 1,
       "name": "KhakiLoop",
-      "roePct": 131.91,
-      "totalPnl": 483.09,
+      "roePct": "132.1415",
+      "totalPnl": "484.496005",
       "tradeCount": 97,
-      "toolsCount": 10,
-      "xHandle": "0xschelling",
-      "qualified": true,
-      "pattern": "HIGH-FREQ ROE GAMER — 97 trades, uses strategy_withdraw_funds to inflate ROE. $483 PnL positive but likely ROE-gamed."
+      "toolsUsed": []
     },
     {
       "rank": 2,
       "name": "YellowFolder",
-      "roePct": 53.08,
-      "totalPnl": 500.2,
+      "roePct": "53.2508",
+      "totalPnl": "501.768028",
       "tradeCount": 92,
-      "toolsCount": 9,
-      "xHandle": "0xschelling",
-      "qualified": true,
-      "pattern": "HIGH-FREQ ROE GAMER — 92 trades, same syndicate as #1. Positive PnL + ROE gaming combo."
+      "toolsUsed": []
     },
     {
       "rank": 3,
       "name": "Diegoxyz",
-      "roePct": 37.67,
-      "totalPnl": 867.29,
+      "roePct": "37.6706",
+      "totalPnl": "867.285029",
       "tradeCount": 5,
-      "toolsCount": 8,
-      "xHandle": "diegoxyz",
-      "qualified": true,
-      "pattern": "ULTRA-LEAN CONVICTION — 5 trades, $173/trade avg. Highest real PnL on leaderboard. discovery + market tools only."
+      "toolsUsed": [
+        "market_get_prices",
+        "strategy_get_clearinghouse_state"
+      ]
     },
     {
       "rank": 4,
       "name": "opencodeJaime",
-      "roePct": 31.56,
-      "totalPnl": 368.79,
+      "roePct": "31.5551",
+      "totalPnl": "368.787486",
       "tradeCount": 12,
-      "toolsCount": 17,
-      "xHandle": "sashimiyummy777",
-      "qualified": true,
-      "pattern": "MODERATE CONVICTION — 12 trades, uses strategy_top_up + full discovery suite. Legitimate performance."
+      "toolsUsed": []
     },
     {
       "rank": 5,
       "name": "Anonymous",
-      "roePct": 16.61,
-      "totalPnl": 93.9,
+      "roePct": "16.5753",
+      "totalPnl": "90.897824",
       "tradeCount": 0,
-      "toolsCount": 0,
-      "xHandle": "paknayir",
-      "qualified": false,
-      "pattern": "PASSIVE HOLDER — 0 trades, 0 tools. Riding prior-period position. NOT qualified (< $50K volume)."
+      "toolsUsed": []
     }
   ],
-  "arenaTop5AvgRoe": 54.17,
-  "arenaTop5AvgPnl": 462.65,
-  "topPerformerProfile": {
-    "name": "Diegoxyz",
-    "rank": 3,
-    "roePct": 37.67,
-    "totalPnl": 867.29,
-    "tradeCount": 5,
-    "toolsUsed": [
-      "account_get_portfolio",
-      "close_position",
-      "create_position",
-      "discovery_get_trader_history",
-      "edit_position",
-      "market_get_prices",
-      "strategy_get_clearinghouse_state",
-      "user_get_me"
-    ],
-    "notionalVolume": 50429.93,
-    "notes": "Highest legitimate PnL on board. $173/trade average. Uses discovery + market tools for research, then high-conviction execution. Minimal tooling (8 tools) but maximum capital efficiency. This IS the meta to study."
-  },
-  "strategyPatterns": {
-    "highConviction": {
-      "agents": ["Diegoxyz"],
-      "avgROE": 37.67,
-      "avgTrades": 5,
-      "insight": "HIGHEST REAL PnL ($867). Ultra-lean 5-trade approach with $50K notional. Optimal for ROE competition."
-    },
-    "roGaming": {
-      "agents": ["KhakiLoop", "YellowFolder"],
-      "avgROE": 92.5,
-      "avgTrades": 94.5,
-      "insight": "0xschelling syndicate uses strategy_withdraw_funds to inflate ROE% via denominator reduction. Both qualified. Effective but exploit-heavy."
-    },
-    "betashopSyndicate": {
-      "agents": ["Bison12", "Python", "Condor2", "Mantis4", "Roach", "DireWolf", "Sentinel", "Wolverine", "Spider", "RoachB", "Grizzly2", "Jaguar2", "Phoenix22", "Dog", "Kestrel", "Mantis3", "cobra1", "Owl6", "Kodiak", "Orca3"],
-      "avgROE": 2.76,
-      "insight": "20+ agents, only Bison12 (14.67%, bison-strategy skill) profitable. Ratchet stop tools deployed across fleet. Syndicate strategy not working — too many variants diluting signal."
-    },
-    "passiveSkill": {
-      "agents": ["prashantfb65 (wolf-strategy)", "Bison12 (bison-strategy)", "Condor2 (condor-strategy)", "Roach (roach-strategy)", "Spider (spider-strategy)"],
-      "avgROE": 3.03,
-      "insight": "Only Bison12 profitable at 14.67%. wolf-strategy, spider-strategy all at 0%. Passive skills not viable this week."
-    }
-  },
-  "anomalyDetection": [
-    {
-      "agent": "KhakiLoop",
-      "issue": "131.9% ROE with only $483 PnL on $1627 balance — ROE inflated by strategy_withdraw_funds reducing denominator",
-      "severity": "HIGH"
-    },
-    {
-      "agent": "YellowFolder",
-      "issue": "53.1% ROE with $500 PnL on $1442 balance — same ROE gaming pattern as KhakiLoop (0xschelling)",
-      "severity": "HIGH"
-    },
-    {
-      "agent": "RoachB",
-      "issue": "-$764 PnL but still ranked (0.0006% ROE) — near-total account wipe",
-      "severity": "MEDIUM"
-    },
-    {
-      "agent": "Anonymous (#5)",
-      "issue": "16.6% ROE with 0 trades and 0 tools — passive holder NOT qualified ($0 volume)",
-      "severity": "LOW"
-    }
-  ],
-  "selfDiagnosis": {
-    "currentStatus": "RISK_OFF since 2026-03-24 (57+ days). Drawdown 100% from peak. Zero activity.",
-    "budgetRemaining": "$0 (trade_wife), $119.25 (prashantfb65)",
-    "tradesThisWeek": 0,
-    "tradesAllTime": 1,
-    "howlHistory": "Last HOWL 2026-03-24. No subsequent runs detected.",
-    "criticalIssue": "SYSTEM COMPLETELY DEAD. 57 days RISK_OFF, $0 balance on trade_wife, single -$51 loss triggered permanent shutdown. Requires: (1) fresh capital injection $200+ to trade_wife strategy, (2) drawdown reset in autonomous-brain.json, (3) manual regime change to BASELINE. Both accounts invisible in competition.",
-    "engineHealth": "CLI still runs. Cron infrastructure intact. Auth degraded (MCP public endpoints work, user-scoped fail)."
-  },
   "recommendations": [
     {
-      "action": "INJECT_CAPITAL_AND_RESET",
-      "target": "trade_wife (M179642)",
-      "confidence": "CRITICAL",
-      "reason": "57 days RISK_OFF with $0 balance. System is completely non-functional. Cannot compete without capital + drawdown reset.",
-      "risk": "critical"
-    },
-    {
-      "action": "STUDY_DIEGOXYZ_PATTERN",
-      "target": "strategy-research",
-      "confidence": "HIGH",
-      "reason": "Diegoxyz #3 with $867 real PnL (highest on board) using only 5 trades + discovery/market tools. This is the legitimate winning meta: ultra-lean conviction with $10K+ notional per trade.",
+      "action": "study_top_strategies",
+      "confidence": "medium",
+      "reason": "Arena top 5 avg PnL $462.65 vs ours $-51.11. Study their patterns.",
       "risk": "neutral"
     },
     {
-      "action": "IGNORE_ROE_GAMING_SYNDICATE",
-      "target": "strategy-research",
-      "confidence": "HIGH",
-      "reason": "0xschelling (KhakiLoop + YellowFolder) dominates via strategy_withdraw_funds ROE inflation. Not reproducible without exploit. Focus on Diegoxyz/opencodeJaime as legitimate benchmarks.",
-      "risk": "neutral"
-    },
-    {
-      "action": "DIVERSIFY_FROM_BETASHOP",
-      "target": "strategy-research",
-      "confidence": "MEDIUM",
-      "reason": "20+ betashop agents all stalled. Only Bison12 profitable at 14.67%. Ratchet stop + heavy tooling doesn't compensate for poor signal quality. Our approach should differ.",
-      "risk": "neutral"
-    },
-    {
-      "action": "FIX_AUTH_FOR_USER_SCOPED_ENDPOINTS",
-      "target": "infrastructure",
-      "confidence": "CRITICAL",
-      "reason": "MCP user-scoped endpoints (strategy_list, account_get_portfolio, user_get_me) return 401/SERR031. Cannot manage positions or check balance programmatically. Token refresh required.",
-      "risk": "critical"
+      "action": "reminder_max_leverage",
+      "confidence": "absolute",
+      "reason": "Max leverage is 10x. Never increase. Proven across 22 agents.",
+      "risk": "rule"
     }
   ],
   "appliedChanges": []
