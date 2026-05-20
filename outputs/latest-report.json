@@ -3,9 +3,9 @@
   "generatedAt": "2026-05-20T11:01:42Z",
   "regime": {
     "mode": "RISK_OFF",
-    "reason": "dead-strategy equity=$0, override #137",
+    "reason": "Dead strategy #160: equity=$0.00, DD=100.00%, MCP offline 27+ failures",
     "enforcedBy": "jido-emergency",
-    "marketSignal": "N/A"
+    "marketSignal": null
   },
   "portfolio": {
     "equity": 0.0,
@@ -24,7 +24,7 @@
       "actual": 0.0,
       "breached": false
     },
-    "consecutiveStopOuts": {
+    "maxConsecutiveStopOuts": {
       "threshold": 4,
       "actual": 0,
       "breached": false
@@ -32,10 +32,7 @@
   },
   "positions": [],
   "actions": [
-    "dead-strategy heartbeat run #159",
-    "RISK_OFF override #137 applied",
-    "regime synced across arbiter/brain/risk-regime",
-    "MCP failure counter: 26+"
+    "Dead-strategy heartbeat #160, override #138"
   ],
   "strategy": {
     "name": "wolf-primary",
@@ -47,31 +44,14 @@
   "infrastructure": {
     "vpsStatus": "decommissioned",
     "vpsOfflineSince": "2026-03-23T23:57:15Z",
-    "vpsOfflineDays": 57,
     "mcpStatus": "offline",
-    "mcpConsecutiveFailures": "26+"
+    "mcpConsecutiveFailures": "27+"
   },
   "warnings": [
-    {
-      "level": "critical",
-      "message": "MCP offline \u2014 26+ consecutive failures, using cached state",
-      "timestamp": "2026-05-20T11:01:42Z"
-    },
-    {
-      "level": "critical",
-      "message": "VPS decommissioned since 2026-03-23 (57 days offline)",
-      "timestamp": "2026-05-20T11:01:42Z"
-    },
-    {
-      "level": "warning",
-      "message": "DD 100.0% based on cached equity \u2014 actual DD may differ",
-      "timestamp": "2026-05-20T11:01:42Z"
-    },
-    {
-      "level": "info",
-      "message": "Regime drift corrected: RISK_OFF enforced (regime-classifier race, override #137)",
-      "timestamp": "2026-05-20T11:01:42Z"
-    }
+    "MCP offline \u2014 27+ consecutive failures, using cached state",
+    "VPS decommissioned since 2026-03-23 (57+ days offline)",
+    "DD 100.00% based on cached equity from previous run \u2014 actual DD may differ",
+    "Regime drift corrected: RISK_OFF enforced (override #138)"
   ],
   "alerts": [
     {
@@ -84,5 +64,6 @@
       "openOrders": 0,
       "message": "dead-strategy run #159, override #137"
     }
-  ]
+  ],
+  "timestamp": "2026-05-20T11:16:46Z"
 }
