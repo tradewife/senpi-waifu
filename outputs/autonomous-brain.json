@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-05-20T03:46:26Z",
+  "generatedAt": "2026-05-20T04:16:43Z",
   "codebaseIndexAt": "2026-03-23T23:57:15Z",
   "riskMode": "RISK_OFF",
   "executionPolicy": {
-    "generatedAt": "2026-05-20T03:46:26Z",
+    "generatedAt": "2026-05-20T04:16:43Z",
     "mode": "ACTIVE",
     "blockNewEntries": true,
     "allowAutoEntry": false,
@@ -16,7 +16,7 @@
       }
     },
     "reasons": [
-      "override #118"
+      "override #119"
     ],
     "risk": {
       "drawdownPctFromPeak": 100.0,
@@ -51,15 +51,15 @@
       "peakEquity": 100.0,
       "dayStartEquity": 0.0,
       "consecutiveStopOuts": 0,
-      "lastJidoRun": "2026-05-20T03:46:26Z",
-      "lastJidoCheck": "2026-05-20T03:46:26Z",
-      "lastChecked": "2026-05-20T03:46:26Z",
-      "lastCheck": "2026-05-20T03:46:26Z",
-      "lastUpdated": "2026-05-20T03:46:26Z",
+      "lastJidoRun": "2026-05-20T04:16:43Z",
+      "lastJidoCheck": "2026-05-20T04:16:43Z",
+      "lastChecked": "2026-05-20T04:16:43Z",
+      "lastCheck": "2026-05-20T04:16:43Z",
+      "lastUpdated": "2026-05-20T04:16:43Z",
       "drawdownPct": 100.0,
       "lastEquity": 0.0,
-      "lastSync": "2026-05-20T03:46:26Z",
-      "mcpConsecutiveFailures": 7
+      "lastSync": "2026-05-20T04:16:43Z",
+      "mcpConsecutiveFailures": 8
     }
   },
   "pending": {
