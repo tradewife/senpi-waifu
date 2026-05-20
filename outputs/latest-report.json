@@ -1,11 +1,11 @@
 {
   "source": "cached",
-  "generatedAt": "2026-05-20T11:31:56.295329+00:00",
+  "generatedAt": "2026-05-20T12:18:27.584340Z",
   "regime": {
     "mode": "RISK_OFF",
-    "reason": "dead-strategy override #139",
+    "reason": "override #140: 100% drawdown, dead-strategy",
     "enforcedBy": "jido-emergency",
-    "marketSignal": null
+    "marketSignal": "N/A"
   },
   "portfolio": {
     "equity": 0.0,
@@ -45,28 +45,23 @@
     "vpsStatus": "decommissioned",
     "vpsOfflineSince": "2026-03-23T23:57:15Z",
     "mcpStatus": "offline",
-    "mcpConsecutiveFailures": "28+"
+    "mcpConsecutiveFailures": "29+"
   },
   "warnings": [
     {
       "level": "CRITICAL",
-      "message": "MCP offline \u2014 28+ consecutive failures, using cached state",
-      "timestamp": "2026-05-20T11:31:56.295329+00:00"
+      "message": "MCP offline \u2014 29+ consecutive failures, using cached state",
+      "timestamp": "2026-05-20T12:18:27.584340Z"
     },
     {
       "level": "CRITICAL",
-      "message": "VPS decommissioned 57+ days \u2014 treat as permanent",
-      "timestamp": "2026-05-20T11:31:56.295329+00:00"
+      "message": "VPS decommissioned 57+ days \u2014 treat as permanently offline",
+      "timestamp": "2026-05-20T12:18:27.584340Z"
     },
     {
-      "level": "INFO",
-      "message": "DD 100.0% based on cached equity from 2026-05-14 \u2014 actual confirmed $0 on last live check",
-      "timestamp": "2026-05-20T11:31:56.295329+00:00"
-    },
-    {
-      "level": "INFO",
-      "message": "Regime-classifier race: JIDO re-enforced RISK_OFF (override #139)",
-      "timestamp": "2026-05-20T11:31:56.295329+00:00"
+      "level": "WARNING",
+      "message": "DD 100.0% based on cached equity \u2014 strategy fully depleted",
+      "timestamp": "2026-05-20T12:18:27.584340Z"
     }
   ],
   "alerts": [
