@@ -1,9 +1,9 @@
 {
   "source": "cached",
-  "generatedAt": "2026-05-20T04:16:43Z",
+  "generatedAt": "2026-05-20T04:47:15Z",
   "regime": {
     "mode": "RISK_OFF",
-    "reason": "Dead strategy, override #120",
+    "reason": "Dead strategy, override #121",
     "enforcedBy": "jido-emergency",
     "marketSignal": "N/A"
   },
@@ -32,7 +32,7 @@
   },
   "positions": [],
   "actions": [
-    "Dead-strategy run #142, override #120, RISK_OFF enforced, MCP offline (9+ failures)"
+    "Dead-strategy run #143, override #121, RISK_OFF enforced, MCP offline (10+ failures)"
   ],
   "strategy": {
     "name": "WOLF-Primary",
@@ -45,14 +45,14 @@
     "vpsStatus": "decommissioned",
     "vpsOfflineSince": "2026-03-23T23:57:15Z",
     "mcpStatus": "offline",
-    "mcpConsecutiveFailures": "9+"
+    "mcpConsecutiveFailures": "10+"
   },
   "warnings": [
     "VPS decommissioned 57+ days \u2014 treat as permanently offline",
-    "MCP server offline \u2014 9+ consecutive failures, using cached state",
+    "MCP server offline \u2014 10+ consecutive failures, using cached state",
     "DD 100.0% is based on cached equity from stale data \u2014 actual DD may differ",
     "Regime-drift correction: jido enforced RISK_OFF (regime-classifier may overwrite to BASELINE)"
   ],
   "alerts": [],
-  "timestamp": "2026-05-20T04:31:55Z"
+  "timestamp": "2026-05-20T04:47:15Z"
 }
