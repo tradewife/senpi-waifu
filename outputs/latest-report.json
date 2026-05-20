@@ -1,11 +1,11 @@
 {
   "source": "cached",
-  "generatedAt": "2026-05-21T03:30:47Z",
+  "generatedAt": "2026-05-20T17:47:31Z",
   "regime": {
     "mode": "RISK_OFF",
-    "reason": "Dead strategy equity=$0, run #175, MCP offline (42 consecutive failures)",
+    "reason": "Dead strategy: equity=$0, run #176, MCP offline",
     "enforcedBy": "jido-emergency",
-    "marketSignal": null
+    "marketSignal": "N/A"
   },
   "portfolio": {
     "equity": {
@@ -15,11 +15,15 @@
     },
     "drawdown": {
       "pct": 100.0,
-      "abs": 100.0
+      "breached": true,
+      "threshold": 20.0
+    },
+    "dailyPnl": {
+      "amount": 0.0,
+      "pct": 0.0
     },
     "openPositions": 0,
-    "openOrders": 0,
-    "dailyPnl": 0.0
+    "openOrders": 0
   },
   "guardrails": {
     "catastrophicDrawdown": {
@@ -27,7 +31,7 @@
       "actual": 100.0,
       "breached": true
     },
-    "dailyLossLimit": {
+    "dailyLoss": {
       "threshold": 10.0,
       "actual": 0.0,
       "breached": false
@@ -41,7 +45,7 @@
   "positions": [],
   "market": {},
   "actions": [
-    "RISK_OFF enforced \u2014 no positions to manage"
+    "No actions \u2014 dead strategy, no positions, MCP offline."
   ],
   "alerts": [
     {
@@ -59,20 +63,19 @@
     "vpsStatus": "decommissioned",
     "vpsOfflineSince": "2026-03-23T00:00:00Z",
     "mcpStatus": "offline",
-    "mcpConsecutiveFailures": "42+"
+    "mcpConsecutiveFailures": "43+"
   },
   "strategy": {
-    "name": "wolf-primary",
+    "name": "WOLF-Primary",
     "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
     "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce",
     "budget": 100,
     "remaining": 0.0
   },
   "warnings": [
-    "MCP server offline \u2014 all data from cached state files",
-    "Dead strategy: equity=$0 for 175 consecutive runs",
-    "VPS decommissioned since 2026-03-23",
-    "Regime-classifier may overwrite risk-regime.json to BASELINE (pitfall #7)"
+    "MCP offline (consecutive failures: 43). All data from local cache.",
+    "Dead strategy run #176. Equity=$0 since 2026-05-14.",
+    "Regime-drift correction applied (RISK_OFF enforced, regime-classifier may overwrite to BASELINE)."
   ],
   "roiThreshold": 0.16,
   "autoExecute": true,
