@@ -1,9 +1,9 @@
 {
   "source": "cached",
-  "generatedAt": "2026-05-20T16:46:45.218122+00:00",
+  "generatedAt": "2026-05-20T17:01:36.331229+00:00",
   "regime": {
     "mode": "RISK_OFF",
-    "reason": "Dead-strategy run #172: equity=$0, MCP offline (39 consecutive failures)",
+    "reason": "Dead-strategy run #173: equity=$0, MCP offline (40 consecutive failures), RISK_OFF enforced",
     "enforcedBy": "jido-emergency",
     "marketSignal": null
   },
@@ -46,36 +46,37 @@
   "alerts": [
     {
       "type": "JIDO_HEARTBEAT",
-      "timestamp": "2026-05-20T15:48:45.323760+00:00",
+      "timestamp": "2026-05-20T17:01:36.331229+00:00",
       "regime": "RISK_OFF",
       "accountValue": 0.0,
       "drawdownPct": 100.0,
       "openPositions": 0,
       "openOrders": 0,
-      "message": "Dead-strategy run #169, equity=$0, MCP offline (36 failures), override #147"
+      "message": "Dead-strategy run #173: equity=$0, MCP offline (40 consecutive failures), RISK_OFF enforced"
     }
   ],
   "infrastructure": {
     "vpsStatus": "decommissioned",
     "vpsOfflineSince": "2026-03-23T00:00:00Z",
     "mcpStatus": "offline",
-    "mcpConsecutiveFailures": "39+"
+    "mcpConsecutiveFailures": "40+"
   },
   "strategy": {
-    "name": "wolf-primary",
+    "name": "WOLF-Primary",
     "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
     "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce",
     "budget": 100,
     "remaining": 0.0
   },
   "warnings": [
-    "MCP offline \u2014 data is cached (consecutive failures: 39)",
-    "Dead-strategy run #172, equity=$0 since 2026-05-14",
-    "VPS decommissioned since 2026-03-23"
+    "MCP offline \u2014 data is cached (consecutive failures: 40)",
+    "Dead-strategy run #173, equity=$0 since 2026-05-14",
+    "VPS decommissioned since 2026-03-23",
+    "Regime-drift correction: risk-regime.json synced to RISK_OFF"
   ],
   "roiThreshold": 0.16,
   "autoExecute": true,
   "actionsTaken": [
-    "jido-heartbeat-dead-strategy-run-171"
+    "jido-heartbeat-dead-strategy-run-173"
   ]
 }
