@@ -1,18 +1,18 @@
 {
   "source": "cached",
-  "generatedAt": "2026-05-20T07:47:21Z",
+  "generatedAt": "2026-05-20T08:04:38.869181Z",
   "regime": {
     "mode": "RISK_OFF",
-    "reason": "dead-strategy run #154, equity=$0, MCP offline 21+",
+    "reason": "dead-strategy equity=$0, override #133",
     "enforcedBy": "jido-emergency",
-    "marketSignal": "dead-strategy run #154, equity=$0, 57+ days VPS decommissioned"
+    "marketSignal": null
   },
   "portfolio": {
     "equity": 0.0,
     "peak": 100.0,
     "drawdownPct": 100.0,
     "dailyPnl": 0.0,
-    "deadWeight": []
+    "deadWeight": 0.0
   },
   "guardrails": {
     "catastrophicDrawdown": {
@@ -32,10 +32,7 @@
     }
   },
   "positions": [],
-  "actions": [
-    "RISK_OFF enforced (override #132)",
-    "dead-strategy run #154, no positions to manage"
-  ],
+  "actions": [],
   "strategy": {
     "name": "wolf-primary",
     "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
@@ -46,25 +43,26 @@
   "infrastructure": {
     "vpsStatus": "decommissioned",
     "vpsOfflineSince": "2026-03-23T23:57:15Z",
+    "vpsOfflineDays": 57,
     "mcpStatus": "offline",
-    "mcpConsecutiveFailures": "21+"
+    "mcpConsecutiveFailures": "22+"
   },
   "warnings": [
-    "MCP offline \u2014 21+ consecutive failures, using cached state",
-    "VPS decommissioned 57+ days (since 2026-03-23)",
-    "DD 100% based on live clearinghouse (equity=$0 confirmed on prior MCP reconnect)",
-    "Regime-classifier race: JIDO corrected risk-regime.json to RISK_OFF (override #132)"
+    "VPS decommissioned 57+ days \u2014 treat as permanently offline",
+    "MCP offline 22+ consecutive failures \u2014 using cached state",
+    "DD 100% based on cached equity \u2014 confirmed dead strategy since 2026-05-14",
+    "Regime drift corrected: BASELINE \u2192 RISK_OFF (override #133)"
   ],
   "alerts": [
     {
       "type": "JIDO_HEARTBEAT",
-      "timestamp": "2026-05-20T07:47:21Z",
+      "timestamp": "2026-05-20T08:04:38.869181Z",
       "regime": "RISK_OFF",
       "accountValue": 0.0,
       "drawdownPct": 100.0,
       "openPositions": 0,
       "openOrders": 0,
-      "message": "dead-strategy run #154, override #132, MCP offline 21+ failures, equity=$0"
+      "message": "dead-strategy run #155, override #133"
     }
   ]
 }
