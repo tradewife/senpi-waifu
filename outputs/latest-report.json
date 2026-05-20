@@ -1,9 +1,9 @@
 {
   "source": "cached",
-  "generatedAt": "2026-05-20T11:01:42Z",
+  "generatedAt": "2026-05-20T11:31:56.295329+00:00",
   "regime": {
     "mode": "RISK_OFF",
-    "reason": "Dead strategy #160: equity=$0.00, DD=100.00%, MCP offline 27+ failures",
+    "reason": "dead-strategy override #139",
     "enforcedBy": "jido-emergency",
     "marketSignal": null
   },
@@ -24,7 +24,7 @@
       "actual": 0.0,
       "breached": false
     },
-    "maxConsecutiveStopOuts": {
+    "consecutiveStopOuts": {
       "threshold": 4,
       "actual": 0,
       "breached": false
@@ -32,7 +32,7 @@
   },
   "positions": [],
   "actions": [
-    "Dead-strategy heartbeat #160, override #138"
+    "dead-strategy run #161: no positions, no emergency actions"
   ],
   "strategy": {
     "name": "wolf-primary",
@@ -45,13 +45,29 @@
     "vpsStatus": "decommissioned",
     "vpsOfflineSince": "2026-03-23T23:57:15Z",
     "mcpStatus": "offline",
-    "mcpConsecutiveFailures": "27+"
+    "mcpConsecutiveFailures": "28+"
   },
   "warnings": [
-    "MCP offline \u2014 27+ consecutive failures, using cached state",
-    "VPS decommissioned since 2026-03-23 (57+ days offline)",
-    "DD 100.00% based on cached equity from previous run \u2014 actual DD may differ",
-    "Regime drift corrected: RISK_OFF enforced (override #138)"
+    {
+      "level": "CRITICAL",
+      "message": "MCP offline \u2014 28+ consecutive failures, using cached state",
+      "timestamp": "2026-05-20T11:31:56.295329+00:00"
+    },
+    {
+      "level": "CRITICAL",
+      "message": "VPS decommissioned 57+ days \u2014 treat as permanent",
+      "timestamp": "2026-05-20T11:31:56.295329+00:00"
+    },
+    {
+      "level": "INFO",
+      "message": "DD 100.0% based on cached equity from 2026-05-14 \u2014 actual confirmed $0 on last live check",
+      "timestamp": "2026-05-20T11:31:56.295329+00:00"
+    },
+    {
+      "level": "INFO",
+      "message": "Regime-classifier race: JIDO re-enforced RISK_OFF (override #139)",
+      "timestamp": "2026-05-20T11:31:56.295329+00:00"
+    }
   ],
   "alerts": [
     {
