@@ -1,16 +1,9 @@
 {
-  "generatedAt": "2026-05-21T11:05:55Z",
   "source": "live",
-  "strategy": {
-    "name": "wolf-primary",
-    "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
-    "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce",
-    "budget": 100,
-    "remaining": 0.0
-  },
+  "generatedAt": "2026-05-21T11:18:13Z",
   "regime": {
     "mode": "RISK_OFF",
-    "reason": "override #12 \u2014 RISK_OFF enforced by JIDO",
+    "reason": "Dead strategy equity=$0, override #13",
     "enforcedBy": "jido-emergency",
     "marketSignal": null
   },
@@ -21,28 +14,33 @@
     "dailyPnl": 0.0
   },
   "guardrails": {
-    "catastrophicDrawdownPct": {
+    "catastrophicDrawdown": {
       "threshold": 20,
       "actual": 100.0,
       "breached": true
+    },
+    "dailyLossLimit": {
+      "threshold": 10,
+      "actual": 0.0,
+      "breached": false
     },
     "maxConsecutiveStopOuts": {
       "threshold": 4,
       "actual": 0,
       "breached": false
-    },
-    "dailyLossLimitPct": {
-      "threshold": 10,
-      "actual": 0.0,
-      "breached": false
     }
   },
   "positions": [],
-  "market": {},
   "actions": [
-    "JIDO heartbeat #196 (dead-strategy)"
+    "dead-strategy heartbeat run #197, override #13"
   ],
-  "alerts": [],
+  "strategy": {
+    "name": "wolf-primary",
+    "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
+    "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce",
+    "budget": 100,
+    "remaining": 0.0
+  },
   "infrastructure": {
     "vpsStatus": "decommissioned",
     "vpsOfflineSince": "2026-03-23T23:57:15Z",
@@ -50,7 +48,27 @@
     "mcpConsecutiveFailures": "0"
   },
   "warnings": [
-    "VPS decommissioned 58+ days \u2014 treat as decommissioned",
-    "Dead-strategy run #196, equity=$0 since 2026-05-14"
+    {
+      "level": "critical",
+      "message": "Strategy dead: equity=$0 since 2026-05-14, 58+ days VPS offline",
+      "timestamp": "2026-05-21T11:18:13Z"
+    },
+    {
+      "level": "info",
+      "message": "MCP reconnected \u2014 live clearinghouse confirmed equity=$0, 0 positions",
+      "timestamp": "2026-05-21T11:18:13Z"
+    }
+  ],
+  "alerts": [
+    {
+      "type": "JIDO_HEARTBEAT",
+      "timestamp": "2026-05-21T11:18:13Z",
+      "regime": "RISK_OFF",
+      "accountValue": 0.0,
+      "drawdownPct": 100.0,
+      "openPositions": 0,
+      "openOrders": 0,
+      "message": "dead-strategy run #197, override #13, equity=$0, MCP online (confirmed live)"
+    }
   ]
 }
