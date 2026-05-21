@@ -1,8 +1,8 @@
 {
-  "riskMode": "RISK_OFF",
-  "updatedAt": "2026-05-21T08:47:57Z",
-  "updatedBy": "jido-emergency",
-  "reason": "override #7 \u2014 100% drawdown, equity=$0, dead-strategy run #191",
+  "riskMode": "BASELINE",
+  "updatedAt": "2026-05-21T09:01:01Z",
+  "updatedBy": "waifu-regime",
+  "reason": "Mixed signals (slope=0.3%, ATR=0.7%)",
   "regimes": {
     "RISK_ON": {
       "maxSlots": 3,
