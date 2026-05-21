@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-05-21T20:31:57Z",
+  "generatedAt": "2026-05-21T20:46:30Z",
   "source": "live",
   "strategy": {
-    "name": "wolf-primary",
+    "name": "WOLF-Primary",
     "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
     "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce",
     "budget": 100,
@@ -10,7 +10,7 @@
   },
   "regime": {
     "mode": "RISK_OFF",
-    "reason": "override #21 \u2014 dead-strategy equity=$0, run #227, RISK_OFF enforced",
+    "reason": "override #22 \u2014 dead-strategy equity=$0, run #228, RISK_OFF enforced",
     "enforcedBy": "jido-emergency",
     "marketSignal": null
   },
@@ -46,7 +46,7 @@
   "positions": [],
   "market": {},
   "actions": [
-    "JIDO dead-strategy heartbeat run #227, override #21"
+    "JIDO dead-strategy heartbeat run #228, override #22"
   ],
   "alerts": [
     "CATASTROPHIC DRAWDOWN: 100.0%"
@@ -58,8 +58,8 @@
     "mcpConsecutiveFailures": "0"
   },
   "warnings": [
-    "VPS decommissioned 58+ days \u2014 treat as decommissioned",
-    "Dead-strategy run #227, equity=$0 since 2026-05-14",
+    "VPS decommissioned 59+ days \u2014 treat as decommissioned",
+    "Dead-strategy run #228, equity=$0 since 2026-05-14",
     "MCP online \u2014 live data confirmed equity=$0, 0 positions, 0 withdrawable"
   ]
 }
