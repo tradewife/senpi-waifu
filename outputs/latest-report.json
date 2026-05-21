@@ -1,9 +1,9 @@
 {
   "source": "live",
-  "generatedAt": "2026-05-21T11:18:13Z",
+  "generatedAt": "2026-05-21T11:32:47Z",
   "regime": {
     "mode": "RISK_OFF",
-    "reason": "Dead strategy equity=$0, override #13",
+    "reason": "Dead strategy equity=$0, override #14",
     "enforcedBy": "jido-emergency",
     "marketSignal": null
   },
@@ -32,7 +32,7 @@
   },
   "positions": [],
   "actions": [
-    "dead-strategy heartbeat run #197, override #13"
+    "dead-strategy heartbeat run #198, override #14"
   ],
   "strategy": {
     "name": "wolf-primary",
@@ -51,24 +51,24 @@
     {
       "level": "critical",
       "message": "Strategy dead: equity=$0 since 2026-05-14, 58+ days VPS offline",
-      "timestamp": "2026-05-21T11:18:13Z"
+      "timestamp": "2026-05-21T11:32:47Z"
     },
     {
       "level": "info",
-      "message": "MCP reconnected \u2014 live clearinghouse confirmed equity=$0, 0 positions",
-      "timestamp": "2026-05-21T11:18:13Z"
+      "message": "MCP online \u2014 live clearinghouse confirmed equity=$0, 0 positions",
+      "timestamp": "2026-05-21T11:32:47Z"
     }
   ],
   "alerts": [
     {
       "type": "JIDO_HEARTBEAT",
-      "timestamp": "2026-05-21T11:18:13Z",
+      "timestamp": "2026-05-21T11:32:47Z",
       "regime": "RISK_OFF",
       "accountValue": 0.0,
       "drawdownPct": 100.0,
       "openPositions": 0,
       "openOrders": 0,
-      "message": "dead-strategy run #197, override #13, equity=$0, MCP online (confirmed live)"
+      "message": "dead-strategy run #198, override #14, equity=$0, MCP online (confirmed live)"
     }
   ]
 }
