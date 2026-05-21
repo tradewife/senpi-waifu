@@ -1,8 +1,8 @@
 {
-  "riskMode": "BASELINE",
-  "updatedBy": "waifu-regime",
-  "updatedAt": "2026-05-21T22:00:59Z",
-  "reason": "Mixed signals (slope=-0.1%, ATR=0.8%)",
+  "riskMode": "RISK_OFF",
+  "updatedBy": "jido-emergency",
+  "updatedAt": "2026-05-21T22:01:58Z",
+  "reason": "override #27 \u2014 dead-strategy equity=$0, run #233, RISK_OFF enforced",
   "parameters": {
     "maxSlots": 0,
     "maxLeverage": 0,

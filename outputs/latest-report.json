@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-21T21:46:17Z",
+  "generatedAt": "2026-05-21T22:01:58Z",
   "source": "live",
   "strategy": {
     "name": "WOLF-Primary",
@@ -10,7 +10,7 @@
   },
   "regime": {
     "mode": "RISK_OFF",
-    "reason": "override #26 \u2014 dead-strategy equity=$0, run #232, RISK_OFF enforced",
+    "reason": "override #27 \u2014 dead-strategy equity=$0, run #233, RISK_OFF enforced",
     "enforcedBy": "jido-emergency",
     "marketSignal": null
   },
@@ -46,7 +46,7 @@
   "positions": [],
   "market": {},
   "actions": [
-    "heartbeat-only: dead-strategy run #232, no positions to manage"
+    "heartbeat-only: dead-strategy run #233, no positions to manage"
   ],
   "alerts": [],
   "infrastructure": {
