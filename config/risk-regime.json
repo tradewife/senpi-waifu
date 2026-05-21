@@ -1,8 +1,8 @@
 {
   "riskMode": "RISK_OFF",
   "updatedBy": "jido-emergency",
-  "updatedAt": "2026-05-22T09:15:30Z",
-  "reason": "dead-strategy equity=$0, run #237, override #31",
+  "updatedAt": "2026-05-21T23:31:16Z",
+  "reason": "dead-strategy equity=$0, run #238, override #32",
   "parameters": {
     "maxSlots": 0,
     "maxLeverage": 0,
