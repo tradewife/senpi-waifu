@@ -1,53 +1,32 @@
 {
   "riskMode": "RISK_OFF",
-  "updatedAt": "2026-05-22T05:45:54Z",
-  "updatedBy": "jido-emergency",
-  "reason": "Dead-strategy run #223: equity=$0, override #17",
+  "updatedAt": "2026-05-21T20:01:56.357848+00:00",
+  "updatedBy": "hermes-regime",
+  "reason": "RISK_OFF override locked: equity=$0.00, DD=100.0% from catastrophic limit 20.0%. No market data fetch needed.",
   "regimes": {
     "RISK_ON": {
-      "maxSlots": 3,
-      "maxLeverageCrypto": 10,
-      "maxLeverageXYZ": 0,
-      "allocPctPerSlot": 35,
-      "newEntriesAllowed": true,
-      "autoEntryEnabled": true,
-      "dslPreset": "high_water",
-      "cooldownAfterProfitSec": 0,
-      "cooldownAfterLossSec": 0
+      "maxPositionMarginUsd": 50,
+      "maxLeverage": 5,
+      "maxOpenPositions": 3,
+      "requirePositiveFunding": false
     },
     "BASELINE": {
-      "maxSlots": 2,
-      "maxLeverageCrypto": 10,
-      "maxLeverageXYZ": 0,
-      "allocPctPerSlot": 30,
-      "newEntriesAllowed": false,
-      "autoEntryEnabled": false,
-      "dslPreset": "high_water",
-      "cooldownAfterProfitSec": 0,
-      "cooldownAfterLossSec": 60
+      "maxPositionMarginUsd": 30,
+      "maxLeverage": 3,
+      "maxOpenPositions": 2,
+      "requirePositiveFunding": false
     },
     "RISK_OFF": {
-      "maxSlots": 0,
-      "maxLeverageCrypto": 0,
-      "maxLeverageXYZ": 0,
-      "allocPctPerSlot": 0,
-      "newEntriesAllowed": false,
-      "autoEntryEnabled": false,
-      "dslPreset": "high_water",
-      "cooldownAfterProfitSec": 0,
-      "cooldownAfterLossSec": 0
+      "maxPositionMarginUsd": 0,
+      "maxLeverage": 1,
+      "maxOpenPositions": 0,
+      "requirePositiveFunding": true
     }
   },
   "globalGuardrails": {
-    "dailyLossLimitPct": 10,
-    "catastrophicDrawdownPct": 20,
-    "maxConsecutiveStopOuts": 4,
-    "directionalCapPct": 70,
-    "perTradeRiskPct": 1.0,
-    "minLeverage": 7,
-    "maxLeverage": 10,
-    "maxPositionsTotal": 3
-  },
-  "lastUpdated": "2026-05-22T05:45:54.000+00:00",
-  "timestamp": "2026-05-22T05:45:54.000+00:00"
+    "maxTotalMarginUsd": 100,
+    "stopLossPercentage": 15,
+    "takeProfitPercentage": 30,
+    "catastrophicDrawdownPct": 20
+  }
 }
