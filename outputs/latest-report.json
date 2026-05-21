@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-21T03:32:52Z",
+  "generatedAt": "2026-05-21T03:47:38Z",
   "source": "cached",
   "strategy": {
     "name": "WOLF-Primary",
@@ -10,7 +10,7 @@
   },
   "regime": {
     "mode": "RISK_OFF",
-    "reason": "Dead strategy run #182, override #6",
+    "reason": "Dead strategy run #183, override #6",
     "enforcedBy": "jido-emergency",
     "marketSignal": null
   },
@@ -50,7 +50,7 @@
   "positions": [],
   "market": {},
   "actions": [
-    "JIDO heartbeat #182"
+    "JIDO heartbeat #183"
   ],
   "alerts": [
     "CATASTROPHIC DRAWDOWN: 100.0%"
@@ -60,15 +60,15 @@
     "vpsStatus": "decommissioned",
     "vpsOfflineSince": "2026-03-23T00:00:00Z",
     "mcpStatus": "offline",
-    "mcpConsecutiveFailures": "49+"
+    "mcpConsecutiveFailures": "50+"
   },
   "warnings": [
-    "MCP server offline \u2014 49 consecutive failures",
+    "MCP server offline \u2014 50 consecutive failures",
     "VPS decommissioned since 2026-03-23",
-    "Dead-strategy run #182, override #6",
+    "Dead-strategy run #183, override #6",
     "All data from cached state files (source: cached)"
   ],
-  "timestamp": "2026-05-21T03:32:52Z",
+  "timestamp": "2026-05-21T03:47:38Z",
   "actionsTaken": [
     "heartbeat-only: no positions to manage"
   ]

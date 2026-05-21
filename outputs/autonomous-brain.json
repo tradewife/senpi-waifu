@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-05-21T03:32:52Z",
+  "generatedAt": "2026-05-21T03:47:38Z",
   "codebaseIndexAt": "2026-03-23T23:57:15Z",
   "riskMode": "RISK_OFF",
   "executionPolicy": {
-    "generatedAt": "2026-05-21T03:32:52Z",
+    "generatedAt": "2026-05-21T03:47:38Z",
     "mode": "ACTIVE",
     "blockNewEntries": true,
     "allowAutoEntry": false,
@@ -16,7 +16,7 @@
       }
     },
     "reasons": [
-      "Override #6 \u2014 dead strategy (equity=$0, MCP offline, run #182)"
+      "Override #6 \u2014 dead strategy (equity=$0, MCP offline, run #183)"
     ],
     "risk": {
       "drawdownPctFromPeak": 100.0,
@@ -51,14 +51,14 @@
       "peakEquity": 100.0,
       "dayStartEquity": 0.0,
       "consecutiveStopOuts": 0,
-      "lastSync": "2026-05-21T03:32:52Z",
-      "lastUpdated": "2026-05-21T03:32:52Z",
+      "lastSync": "2026-05-21T03:47:38Z",
+      "lastUpdated": "2026-05-21T03:47:38Z",
       "lastEquity": 0.0,
-      "lastJidoRun": "2026-05-21T03:32:52Z",
-      "deadStrategyRunCount": 182,
-      "lastChecked": "2026-05-21T03:32:52Z",
-      "lastCheck": "2026-05-21T03:32:52Z",
-      "lastJidoCheck": "2026-05-21T03:32:52Z"
+      "lastJidoRun": "2026-05-21T03:47:38Z",
+      "deadStrategyRunCount": 183,
+      "lastChecked": "2026-05-21T03:47:38Z",
+      "lastCheck": "2026-05-21T03:47:38Z",
+      "lastJidoCheck": "2026-05-21T03:47:38Z"
     }
   },
   "pending": {
