@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-05-21T15:17:04Z",
+  "generatedAt": "2026-05-21T15:46:53.654695Z",
   "codebaseIndexAt": "2026-03-23T23:57:15Z",
   "riskMode": "RISK_OFF",
   "executionPolicy": {
-    "generatedAt": "2026-05-21T15:17:04Z",
+    "generatedAt": "2026-05-21T15:46:53.654695Z",
     "mode": "ACTIVE",
     "blockNewEntries": true,
     "allowAutoEntry": false,
@@ -16,7 +16,7 @@
       }
     },
     "reasons": [
-      "override #3: dead-strategy equity=$0, run #209, RISK_OFF enforced"
+      "override #4: dead-strategy equity=$0, run #210, RISK_OFF enforced"
     ],
     "risk": {
       "drawdownPctFromPeak": 100.0,
@@ -54,13 +54,13 @@
       "lastSync": "2026-05-21T14:16:58Z",
       "lastUpdated": "2026-05-21T14:16:58Z",
       "lastEquity": 0.0,
-      "lastJidoRun": "2026-05-21T14:16:58Z",
-      "deadStrategyRunCount": 209,
+      "lastJidoRun": "2026-05-21T15:46:53.654695Z",
+      "deadStrategyRunCount": 210,
       "lastChecked": "2026-05-21T14:16:58Z",
       "lastCheck": "2026-05-21T14:16:58.053845+00:00",
       "lastJidoCheck": "2026-05-21T14:16:58Z",
       "lastSyncAt": "2026-05-21T14:16:58Z",
-      "overrideCount": 3,
+      "overrideCount": 4,
       "mcpConsecutiveFailures": 0,
       "mcpStatus": "online"
     }

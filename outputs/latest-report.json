@@ -1,35 +1,27 @@
 {
-  "generatedAt": "2026-05-21T15:17:04Z",
   "source": "live",
-  "strategy": {
-    "name": "wolf-primary",
-    "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
-    "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce",
-    "budget": 100,
-    "remaining": 0.0,
-    "status": "dead"
-  },
+  "generatedAt": "2026-05-21T15:46:53.654695Z",
   "regime": {
     "mode": "RISK_OFF",
-    "reason": "Dead-strategy equity=$0, run #209",
+    "reason": "dead-strategy equity=$0, run #210",
     "enforcedBy": "jido-emergency",
-    "marketSignal": "none"
+    "marketSignal": "dead-capital"
   },
   "portfolio": {
     "equity": {
-      "value": 0.0,
-      "source": "live"
+      "current": 0.0,
+      "peak": 100.0,
+      "dayStart": 0.0
     },
-    "withdrawable": {
-      "value": 0.0,
-      "source": "live"
+    "drawdown": {
+      "pctFromPeak": 100.0,
+      "isBreached": true
     },
-    "openPositions": 0,
-    "openOrders": 0
+    "dailyPnl": 0.0
   },
   "guardrails": {
-    "drawdown": {
-      "threshold": 20.0,
+    "catastrophicDrawdown": {
+      "threshold": 20,
       "actual": 100.0,
       "breached": true
     },
@@ -38,25 +30,36 @@
       "actual": 0,
       "breached": false
     },
-    "dailyLoss": {
-      "threshold": 10.0,
+    "dailyLossLimit": {
+      "threshold": 10,
       "actual": 0.0,
       "breached": false
     }
   },
   "positions": [],
-  "market": {},
   "actions": [
-    "heartbeat-only: dead-strategy confirmed via live MCP data, no positions to manage"
+    "RISK_OFF enforced (override #4)",
+    "Dead-strategy run #210, no positions to manage",
+    "MCP online confirmed \u2014 live clearinghouse data: equity=$0, 0 positions, 0 withdrawable"
   ],
-  "alerts": [],
+  "strategy": {
+    "name": "wolf-primary",
+    "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
+    "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce",
+    "budget": 100.0,
+    "remaining": 0.0,
+    "status": "dead"
+  },
   "infrastructure": {
     "vpsStatus": "decommissioned",
     "vpsOfflineSince": "2026-03-23T23:57:15Z",
+    "vpsOfflineDays": 58,
     "mcpStatus": "online",
     "mcpConsecutiveFailures": "0"
   },
   "warnings": [
-    "MCP reconnected after 0 consecutive failure baseline \u2014 live data confirmed equity=$0, 0 positions, 0 withdrawable."
+    "Strategy dead since 2026-05-14 \u2014 58 days since VPS decommission",
+    "Dead-strategy run #210, override #4",
+    "Regime-classifier may overwrite RISK_OFF to BASELINE hourly (pitfall #7)"
   ]
 }
