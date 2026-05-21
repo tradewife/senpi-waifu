@@ -1,11 +1,11 @@
 {
   "source": "live",
-  "generatedAt": "2026-05-21T15:46:53.654695Z",
+  "generatedAt": "2026-05-21T16:32:31.686490Z",
   "regime": {
     "mode": "RISK_OFF",
-    "reason": "dead-strategy equity=$0, run #210",
+    "reason": "Dead-strategy run #211: equity=$0, override #5",
     "enforcedBy": "jido-emergency",
-    "marketSignal": "dead-capital"
+    "marketSignal": "N/A"
   },
   "portfolio": {
     "equity": {
@@ -14,52 +14,54 @@
       "dayStart": 0.0
     },
     "drawdown": {
-      "pctFromPeak": 100.0,
-      "isBreached": true
+      "pct": 0.0,
+      "fromPeak": 0.0
     },
+    "openPositions": 0,
+    "openOrders": 0,
     "dailyPnl": 0.0
   },
   "guardrails": {
     "catastrophicDrawdown": {
       "threshold": 20,
-      "actual": 100.0,
-      "breached": true
-    },
-    "consecutiveStopOuts": {
-      "threshold": 4,
-      "actual": 0,
+      "actual": 0.0,
       "breached": false
     },
     "dailyLossLimit": {
       "threshold": 10,
       "actual": 0.0,
       "breached": false
+    },
+    "consecutiveStopOuts": {
+      "threshold": 4,
+      "actual": 0,
+      "breached": false
     }
   },
   "positions": [],
   "actions": [
-    "RISK_OFF enforced (override #4)",
-    "Dead-strategy run #210, no positions to manage",
-    "MCP online confirmed \u2014 live clearinghouse data: equity=$0, 0 positions, 0 withdrawable"
+    "No actions required — strategy remains dead with $0 equity."
   ],
   "strategy": {
-    "name": "wolf-primary",
+    "name": "WOLF-Primary",
     "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
     "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce",
-    "budget": 100.0,
+    "budget": 0,
     "remaining": 0.0,
     "status": "dead"
   },
   "infrastructure": {
     "vpsStatus": "decommissioned",
-    "vpsOfflineSince": "2026-03-23T23:57:15Z",
-    "vpsOfflineDays": 58,
+    "vpsOfflineSince": "2026-03-23T00:00:00Z",
     "mcpStatus": "online",
     "mcpConsecutiveFailures": "0"
   },
   "warnings": [
-    "Strategy dead since 2026-05-14 \u2014 58 days since VPS decommission",
-    "Dead-strategy run #210, override #4",
-    "Regime-classifier may overwrite RISK_OFF to BASELINE hourly (pitfall #7)"
-  ]
+    "Dead-strategy run #211, override #5. Equity=$0, 0 positions confirmed via live MCP data."
+  ],
+  "arbiter": {
+    "deadStrategyRunCount": 211,
+    "overrideCount": 5,
+    "lastEquity": 0.0
+  }
 }
