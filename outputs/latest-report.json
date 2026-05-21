@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-21T07:35:04.933902+00:00",
+  "generatedAt": "2026-05-21T08:05:46Z",
   "source": "cached",
   "strategy": {
     "name": "wolf-primary",
@@ -10,63 +10,50 @@
   },
   "regime": {
     "mode": "RISK_OFF",
-    "reason": "Dead strategy \u2014 equity=$0, run #187, override #3",
+    "reason": "override #4 \u2014 RISK_OFF enforced by JIDO",
     "enforcedBy": "jido-emergency",
-    "marketSignal": "dead-strategy"
+    "marketSignal": null
   },
   "portfolio": {
-    "equity": {
-      "current": 0.0,
-      "peak": 100.0,
-      "dayStart": 0.0
-    },
+    "equity": 0.0,
+    "peak": 100.0,
     "drawdownPct": 100.0,
-    "openPositions": 0,
-    "openOrders": 0,
     "dailyPnl": 0.0
   },
   "guardrails": {
-    "catastrophicDrawdown": {
+    "catastrophicDrawdownPct": {
       "threshold": 20,
       "actual": 100.0,
       "breached": true
     },
-    "dailyLossLimit": {
-      "threshold": 10,
-      "actual": 0.0,
-      "breached": false
-    },
-    "consecutiveStopOuts": {
+    "maxConsecutiveStopOuts": {
       "threshold": 4,
       "actual": 0,
+      "breached": false
+    },
+    "dailyLossLimitPct": {
+      "threshold": 10,
+      "actual": 0.0,
       "breached": false
     }
   },
   "positions": [],
   "market": {},
   "actions": [
-    "Dead-strategy heartbeat run #187",
-    "Override #3 maintained",
-    "No positions to evaluate"
+    "JIDO heartbeat #188 (dead-strategy fast-path, cached data)"
   ],
-  "alerts": [
-    "DEAD-STRATEGY: run #185, equity=$0, MCP offline (52 consecutive failures)"
-  ],
-  "deadWeight": [],
+  "alerts": [],
   "infrastructure": {
     "vpsStatus": "decommissioned",
-    "vpsOfflineSince": "2026-03-23T00:00:00Z",
+    "vpsOfflineSince": "2026-03-23T23:57:15Z",
     "mcpStatus": "offline",
-    "mcpConsecutiveFailures": "54+"
+    "mcpConsecutiveFailures": "55+"
   },
   "warnings": [
-    "Dead strategy: equity=$0 for 186+ consecutive runs",
-    "MCP server offline \u2014 all data from cached state",
-    "VPS decommissioned since 2026-03-23",
-    "Regime drift corrected: risk-regime.json enforced RISK_OFF by jido-emergency"
-  ],
-  "timestamp": "2026-05-21T06:31:59Z",
-  "actionsTaken": [
-    "heartbeat-only: no positions to manage"
+    "VPS decommissioned 58+ days \u2014 treat as decommissioned",
+    "Dead-strategy run #188, equity=$0 since 2026-05-14",
+    "MCP offline 55+ consecutive failures \u2014 all data is cached/stale",
+    "DD 100.0% based on cached equity \u2014 actual DD may be 100% (wallet depleted 2026-05-14)",
+    "Regime-classifier may overwrite RISK_OFF to BASELINE (pitfall #7) \u2014 JIDO corrects each run"
   ]
 }
