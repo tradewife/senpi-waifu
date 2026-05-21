@@ -1,7 +1,7 @@
 {
   "riskMode": "RISK_OFF",
-  "updatedAt": "2026-05-21T20:01:56.357848+00:00",
-  "updatedBy": "hermes-regime",
+  "updatedAt": "2026-05-21T20:02:43.263963+00:00",
+  "updatedBy": "jido-emergency",
   "reason": "RISK_OFF override locked: equity=$0.00, DD=100.0% from catastrophic limit 20.0%. No market data fetch needed.",
   "regimes": {
     "RISK_ON": {
