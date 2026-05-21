@@ -1,9 +1,9 @@
 {
   "source": "live",
-  "generatedAt": "2026-05-21T18:31:37.565176+00:00",
+  "generatedAt": "2026-05-21T18:47:10.227895+00:00",
   "regime": {
     "mode": "RISK_OFF",
-    "reason": "Dead-strategy run #218: equity=$0, override #12",
+    "reason": "Dead-strategy run #219: equity=$0, override #13",
     "enforcedBy": "jido-emergency",
     "marketSignal": "N/A"
   },
@@ -40,7 +40,7 @@
   },
   "positions": [],
   "actions": [
-    "No actions required \u2014 strategy remains dead with $0 equity. Run #218."
+    "No actions required \u2014 strategy remains dead with $0 equity. Run #219."
   ],
   "strategy": {
     "name": "WOLF-Primary",
@@ -57,11 +57,11 @@
     "mcpConsecutiveFailures": "0"
   },
   "warnings": [
-    "Dead-strategy run #218, override #12. Equity=$0, 0 positions confirmed via live MCP data."
+    "Dead-strategy run #219, override #13. Equity=$0, 0 positions confirmed via live MCP data."
   ],
   "arbiter": {
-    "deadStrategyRunCount": 218,
-    "overrideCount": 12,
+    "deadStrategyRunCount": 219,
+    "overrideCount": 13,
     "lastEquity": 0.0
   }
 }
