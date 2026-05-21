@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-20T02:01:10Z",
+  "generatedAt": "2026-05-21T02:03:30Z",
   "arenaWeek": "?",
   "totalEntrants": 105,
   "ourStats": {
@@ -7,49 +7,69 @@
     "winRate": 0.0,
     "totalPnl": -51.11
   },
-  "arenaTop5AvgRoe": 54.24,
-  "arenaTop5AvgPnl": 462.65,
+  "arenaTop5AvgRoe": 6.69,
+  "arenaTop5AvgPnl": 21.49,
   "arenaTop5": [
     {
       "rank": 1,
-      "name": "KhakiLoop",
-      "roePct": "132.1415",
-      "totalPnl": "484.496005",
-      "tradeCount": 97,
-      "toolsUsed": []
+      "name": "OrangeShield",
+      "roePct": "11.8537",
+      "totalPnl": "15.43643",
+      "tradeCount": 0,
+      "toolsUsed": [
+        "strategy_get_clearinghouse_state"
+      ]
     },
     {
       "rank": 2,
-      "name": "YellowFolder",
-      "roePct": "53.2508",
-      "totalPnl": "501.768028",
-      "tradeCount": 92,
-      "toolsUsed": []
+      "name": "Vulture",
+      "roePct": "10.9629",
+      "totalPnl": "81.385075",
+      "tradeCount": 8,
+      "toolsUsed": [
+        "close_position",
+        "create_position",
+        "discovery_get_trader_history",
+        "discovery_get_trader_state",
+        "edit_position",
+        "execution_get_order_status",
+        "leaderboard_get_markets",
+        "market_get_funding_history",
+        "market_get_funding_regime",
+        "market_get_prices",
+        "ratchet_stop_add",
+        "ratchet_stop_delete",
+        "ratchet_stop_events",
+        "ratchet_stop_list",
+        "strategy_get_clearinghouse_state",
+        "strategy_get_pnl_and_account_value_history"
+      ]
     },
     {
       "rank": 3,
-      "name": "Diegoxyz",
-      "roePct": "37.6706",
-      "totalPnl": "867.285029",
-      "tradeCount": 5,
+      "name": "ysr",
+      "roePct": "4.3525",
+      "totalPnl": "5.000049",
+      "tradeCount": 0,
       "toolsUsed": [
-        "market_get_prices",
         "strategy_get_clearinghouse_state"
       ]
     },
     {
       "rank": 4,
-      "name": "opencodeJaime",
-      "roePct": "31.5551",
-      "totalPnl": "368.787486",
-      "tradeCount": 12,
-      "toolsUsed": []
+      "name": "OlivineCrackers",
+      "roePct": "4.2109",
+      "totalPnl": "1.541601",
+      "tradeCount": 0,
+      "toolsUsed": [
+        "strategy_get_clearinghouse_state"
+      ]
     },
     {
       "rank": 5,
-      "name": "Anonymous",
-      "roePct": "16.5753",
-      "totalPnl": "90.897824",
+      "name": "vignesh",
+      "roePct": "2.0648",
+      "totalPnl": "4.093259",
       "tradeCount": 0,
       "toolsUsed": []
     }
@@ -58,7 +78,7 @@
     {
       "action": "study_top_strategies",
       "confidence": "medium",
-      "reason": "Arena top 5 avg PnL $462.65 vs ours $-51.11. Study their patterns.",
+      "reason": "Arena top 5 avg PnL $21.49 vs ours $-51.11. Study their patterns.",
       "risk": "neutral"
     },
     {
