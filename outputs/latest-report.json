@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-21T20:46:30Z",
+  "generatedAt": "2026-05-21T21:02:07Z",
   "source": "live",
   "strategy": {
     "name": "WOLF-Primary",
@@ -10,56 +10,53 @@
   },
   "regime": {
     "mode": "RISK_OFF",
-    "reason": "override #22 \u2014 dead-strategy equity=$0, run #228, RISK_OFF enforced",
+    "reason": "override #23 \u2014 dead-strategy equity=$0, run #229, RISK_OFF enforced",
     "enforcedBy": "jido-emergency",
     "marketSignal": null
   },
   "portfolio": {
     "equity": {
       "current": 0.0,
-      "peak": 100.0,
-      "dayStart": 0.0
+      "peak": 100.0
     },
     "drawdown": {
-      "pctFromPeak": 100.0,
-      "isBreached": true
+      "pct": 100.0,
+      "threshold": 20.0,
+      "breached": true
     },
-    "dailyPnl": 0.0
+    "positions": [],
+    "openOrders": 0
   },
   "guardrails": {
     "catastrophicDrawdown": {
-      "threshold": 20,
+      "threshold": 20.0,
       "actual": 100.0,
       "breached": true
+    },
+    "dailyLossLimit": {
+      "threshold": 10.0,
+      "actual": 0.0,
+      "breached": false
     },
     "consecutiveStopOuts": {
       "threshold": 4,
       "actual": 0,
       "breached": false
-    },
-    "dailyLossLimit": {
-      "threshold": 10,
-      "actual": 0.0,
-      "breached": false
     }
   },
-  "positions": [],
-  "market": {},
-  "actions": [
-    "JIDO dead-strategy heartbeat run #228, override #22"
-  ],
-  "alerts": [
-    "CATASTROPHIC DRAWDOWN: 100.0%"
-  ],
   "infrastructure": {
     "vpsStatus": "decommissioned",
-    "vpsOfflineSince": "2026-03-23T23:57:15Z",
+    "vpsOfflineSince": "2026-03-23T00:00:00Z",
     "mcpStatus": "online",
     "mcpConsecutiveFailures": "0"
   },
   "warnings": [
-    "VPS decommissioned 59+ days \u2014 treat as decommissioned",
-    "Dead-strategy run #228, equity=$0 since 2026-05-14",
-    "MCP online \u2014 live data confirmed equity=$0, 0 positions, 0 withdrawable"
+    "MCP reconnected after 0+ consecutive failures \u2014 live data confirmed equity=$0",
+    "Strategy has been dead since 2026-05-14 (equity=$0, 100% drawdown)",
+    "VPS decommissioned since 2026-03-23",
+    "Regime-classifier set BASELINE but corrected to RISK_OFF by jido-emergency"
+  ],
+  "actions": [
+    "heartbeat-only: dead-strategy, no positions to manage"
   ]
 }
