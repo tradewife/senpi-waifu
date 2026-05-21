@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-05-21T13:04:25Z",
+  "generatedAt": "2026-05-21T13:16:50.692533+00:00",
   "codebaseIndexAt": "2026-03-23T23:57:15Z",
   "riskMode": "RISK_OFF",
   "executionPolicy": {
-    "generatedAt": "2026-05-21T13:04:25Z",
+    "generatedAt": "2026-05-21T13:16:50.692533+00:00",
     "mode": "ACTIVE",
     "blockNewEntries": true,
     "allowAutoEntry": false,
@@ -16,7 +16,7 @@
       }
     },
     "reasons": [
-      "override #18: dead-strategy equity=$0, RISK_OFF enforced by jido dead-strategy fast-path"
+      "override #19: dead-strategy equity=$0, RISK_OFF enforced by jido dead-strategy fast-path"
     ],
     "risk": {
       "drawdownPctFromPeak": 100.0,
@@ -57,7 +57,7 @@
       "lastJidoRun": "2026-05-21T12:17:29Z",
       "deadStrategyRunCount": 200,
       "lastChecked": "2026-05-21T12:17:29Z",
-      "lastCheck": "2026-05-21T12:17:29Z",
+      "lastCheck": "2026-05-21T13:16:50.692533+00:00",
       "lastJidoCheck": "2026-05-21T12:17:29Z",
       "lastSyncAt": "2026-05-21T12:17:29Z"
     }
