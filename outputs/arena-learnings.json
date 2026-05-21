@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-21T18:01:00Z",
+  "generatedAt": "2026-05-21T22:01:06Z",
   "arenaWeek": "?",
   "totalEntrants": 105,
   "ourStats": {
@@ -7,14 +7,14 @@
     "winRate": 0.0,
     "totalPnl": -51.11
   },
-  "arenaTop5AvgRoe": 21.39,
-  "arenaTop5AvgPnl": 69.01,
+  "arenaTop5AvgRoe": 16.7,
+  "arenaTop5AvgPnl": 71.88,
   "arenaTop5": [
     {
       "rank": 1,
       "name": "OrangeShield",
-      "roePct": "44.9382",
-      "totalPnl": "54.761422",
+      "roePct": "42.9752",
+      "totalPnl": "46.322307",
       "tradeCount": 0,
       "toolsUsed": [
         "strategy_get_clearinghouse_state"
@@ -22,9 +22,9 @@
     },
     {
       "rank": 2,
-      "name": "OlivineCrackers",
-      "roePct": "20.7631",
-      "totalPnl": "10.215274",
+      "name": "ysr",
+      "roePct": "12.0432",
+      "totalPnl": "14.317389",
       "tradeCount": 0,
       "toolsUsed": [
         "strategy_get_clearinghouse_state"
@@ -32,36 +32,56 @@
     },
     {
       "rank": 3,
-      "name": "ysr",
-      "roePct": "19.7969",
-      "totalPnl": "30.139826",
-      "tradeCount": 0,
-      "toolsUsed": [
-        "strategy_get_clearinghouse_state"
-      ]
-    },
-    {
-      "rank": 4,
       "name": "KhakiLoop",
-      "roePct": "11.3838",
-      "totalPnl": "188.672992",
-      "tradeCount": 32,
+      "roePct": "11.5092",
+      "totalPnl": "172.614691",
+      "tradeCount": 37,
       "toolsUsed": [
         "account_get_historical_info",
         "account_get_portfolio",
+        "arena_pool",
+        "arena_prizes",
         "close_position",
         "create_position",
         "discovery_get_trader_history",
         "edit_position",
-        "strategy_get_clearinghouse_state"
+        "strategy_get_clearinghouse_state",
+        "strategy_list"
+      ]
+    },
+    {
+      "rank": 4,
+      "name": "Python",
+      "roePct": "9.5757",
+      "totalPnl": "71.153427",
+      "tradeCount": 13,
+      "toolsUsed": [
+        "close_position",
+        "discovery_get_trader_history",
+        "discovery_get_trader_state",
+        "edit_position",
+        "execution_get_order_status",
+        "leaderboard_get_markets",
+        "market_get_asset_data",
+        "market_get_prices",
+        "market_list_instruments",
+        "ratchet_stop_add",
+        "ratchet_stop_delete",
+        "ratchet_stop_events",
+        "ratchet_stop_list",
+        "strategy_get_asset_trading_limits",
+        "strategy_get_clearinghouse_state",
+        "strategy_get_open_orders",
+        "strategy_get_pnl_and_account_value_history",
+        "strategy_list"
       ]
     },
     {
       "rank": 5,
       "name": "Vulture",
-      "roePct": "10.0879",
-      "totalPnl": "61.281389",
-      "tradeCount": 19,
+      "roePct": "7.4096",
+      "totalPnl": "55.006643",
+      "tradeCount": 20,
       "toolsUsed": [
         "close_position",
         "create_position",
@@ -86,7 +106,7 @@
     {
       "action": "study_top_strategies",
       "confidence": "medium",
-      "reason": "Arena top 5 avg PnL $69.01 vs ours $-51.11. Study their patterns.",
+      "reason": "Arena top 5 avg PnL $71.88 vs ours $-51.11. Study their patterns.",
       "risk": "neutral"
     },
     {
