@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-21T14:01:00Z",
+  "generatedAt": "2026-05-21T14:16:58Z",
   "regime": "RISK_OFF",
   "equity": 0.0,
   "peakEquity": 100.0,
@@ -13,17 +13,57 @@
   ],
   "deadWeight": [],
   "guardrails": {
-    "dailyLossLimitPct": 10,
-    "catastrophicDrawdownPct": 20,
-    "maxConsecutiveStopOuts": 4,
-    "directionalCapPct": 70,
-    "minLeverage": 7,
-    "maxLeverage": 10,
-    "maxPositionsTotal": 3,
-    "perAssetCooldownMinutes": 120,
-    "bannedAssetPrefixes": [
-      "xyz:"
-    ],
-    "perTradeRiskPct": 1.0
-  }
+    "dailyLossLimitPct": {
+      "threshold": 10,
+      "actual": 0,
+      "breached": false
+    },
+    "catastrophicDrawdownPct": {
+      "threshold": 20,
+      "actual": 100.0,
+      "breached": true
+    },
+    "maxConsecutiveStopOuts": {
+      "threshold": 4,
+      "actual": 0,
+      "breached": false
+    },
+    "directionalCapPct": {
+      "threshold": 70,
+      "actual": 0,
+      "breached": false
+    },
+    "minLeverage": {
+      "threshold": 7,
+      "actual": 0,
+      "breached": false
+    },
+    "maxLeverage": {
+      "threshold": 10,
+      "actual": 0,
+      "breached": false
+    },
+    "maxPositionsTotal": {
+      "threshold": 3,
+      "actual": 0,
+      "breached": false
+    }
+  },
+  "source": "live",
+  "infrastructure": {
+    "vpsStatus": "decommissioned",
+    "vpsOfflineSince": "2026-03-23T00:00:00Z",
+    "mcpStatus": "online",
+    "mcpConsecutiveFailures": "0"
+  },
+  "strategy": {
+    "name": "WOLF-Primary",
+    "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
+    "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce",
+    "budget": 100,
+    "remaining": 0.0
+  },
+  "warnings": [
+    "MCP live data confirmed equity=$0, 0 positions, 0 withdrawable on both DEXes (run #206)"
+  ]
 }
