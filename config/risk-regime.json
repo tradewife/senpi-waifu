@@ -1,8 +1,8 @@
 {
   "riskMode": "RISK_OFF",
-  "updatedAt": "2026-05-21T14:47:20Z",
-  "updatedBy": "jido-emergency",
-  "reason": "Dead-strategy equity=$0, run #208",
+  "updatedAt": "2026-05-21T15:01:52Z",
+  "updatedBy": "hermes-regime",
+  "reason": "Dead-strategy equity=$0, run #208. Market data fetch skipped \u2014 RISK_OFF override active. (hermes-regime)",
   "regimes": {
     "RISK_ON": {
       "maxSlots": 3,
