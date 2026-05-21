@@ -3,20 +3,20 @@
   "generatedAt": "2026-05-21T13:32:38.306652+00:00",
   "regime": {
     "mode": "RISK_OFF",
-    "reason": "Dead-strategy equity=$0, override #20",
-    "enforcedBy": "jido-dead-strategy-fast-path",
-    "marketSignal": "none"
+    "reason": "Dead-strategy enforcement: equity=$0, override #21",
+    "enforcedBy": "jido-emergency",
+    "marketSignal": null
   },
   "portfolio": {
     "equity": {
-      "current": 0.0,
+      "usd": 0.0,
       "peak": 100.0,
-      "dayStart": 0.0
+      "drawdownPct": 100.0
     },
-    "drawdown": {
-      "pctFromPeak": 100.0,
-      "isBreached": true
-    }
+    "openPositions": 0,
+    "openOrders": 0,
+    "withdrawable": 0.0,
+    "dailyPnl": 0.0
   },
   "guardrails": {
     "catastrophicDrawdown": {
@@ -37,14 +37,16 @@
   },
   "positions": [],
   "actions": [
-    "dead-strategy-fast-path: no positions, equity=$0, RISK_OFF enforced"
+    "RISK_OFF enforced",
+    "Override #21 recorded"
   ],
   "strategy": {
     "name": "wolf-primary",
     "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
     "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce",
-    "budget": 0,
-    "remaining": 0.0
+    "budget": 100,
+    "remaining": 0.0,
+    "status": "DEAD"
   },
   "infrastructure": {
     "vpsStatus": "decommissioned",
@@ -53,8 +55,9 @@
     "mcpConsecutiveFailures": "0"
   },
   "warnings": [
-    "wolf-primary is a dead strategy: equity=$0, 100% drawdown since 2026-05-14",
-    "Dead-strategy run #204, override #20"
+    "MCP reconnected after 0 consecutive failures \u2014 live data confirmed equity=$0",
+    "Dead-strategy run #205, override #21",
+    "VPS decommissioned since 2026-03-23"
   ],
   "alerts": [
     {
@@ -68,10 +71,12 @@
       "message": "Dead-strategy run #201, equity=$0, no positions. MCP online (live confirmed). Override #17."
     }
   ],
-  "timestamp": "2026-05-21T13:04:25Z",
+  "timestamp": "2026-05-21T13:47:21Z",
   "actionsTaken": [
     "Dead-strategy fast-path run #201",
     "MCP online \u2014 live data confirmed equity=$0, 0 positions",
     "Override #17 enforced, RISK_OFF confirmed"
-  ]
+  ],
+  "deadStrategyRunCount": 205,
+  "overrideCount": 21
 }
