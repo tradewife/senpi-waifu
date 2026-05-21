@@ -1,67 +1,29 @@
 {
-  "source": "live",
-  "generatedAt": "2026-05-22T05:45:54.000+00:00",
-  "regime": {
-    "mode": "RISK_OFF",
-    "reason": "Dead-strategy run #223: equity=$0, override #17",
-    "enforcedBy": "jido-emergency",
-    "marketSignal": "N/A"
-  },
-  "portfolio": {
-    "equity": {
-      "current": 0.0,
-      "peak": 100.0,
-      "dayStart": 0.0
-    },
-    "drawdown": {
-      "pct": 0.0,
-      "fromPeak": 100.0
-    },
-    "openPositions": 0,
-    "openOrders": 0,
-    "dailyPnl": 0.0
-  },
+  "generatedAt": "2026-05-21T20:01:31Z",
+  "regime": "RISK_OFF",
+  "equity": 0.0,
+  "peakEquity": 100.0,
+  "drawdownPct": 100.0,
+  "dailyPnl": 0,
+  "dailyCloses": 0,
+  "dailyWinRate": 0,
+  "openPositions": 0,
+  "alerts": [
+    "CATASTROPHIC DRAWDOWN: 100.0%"
+  ],
+  "deadWeight": [],
   "guardrails": {
-    "catastrophicDrawdown": {
-      "threshold": 20,
-      "actual": 0.0,
-      "breached": false
-    },
-    "dailyLossLimit": {
-      "threshold": 10,
-      "actual": 0.0,
-      "breached": false
-    },
-    "consecutiveStopOuts": {
-      "threshold": 4,
-      "actual": 0,
-      "breached": false
-    }
-  },
-  "positions": [],
-  "actions": [
-    "No actions required \u2014 strategy remains dead with $0 equity. Run #223."
-  ],
-  "strategy": {
-    "name": "WOLF-Primary",
-    "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
-    "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce",
-    "budget": 100,
-    "remaining": 0.0,
-    "status": "dead"
-  },
-  "infrastructure": {
-    "vpsStatus": "decommissioned",
-    "vpsOfflineSince": "2026-03-23T00:00:00Z",
-    "mcpStatus": "online",
-    "mcpConsecutiveFailures": "0"
-  },
-  "warnings": [
-    "Dead-strategy run #223, override #17. Equity=$0, 0 positions confirmed via live MCP data."
-  ],
-  "arbiter": {
-    "deadStrategyRunCount": 223,
-    "overrideCount": 17,
-    "lastEquity": 0.0
+    "dailyLossLimitPct": 10,
+    "catastrophicDrawdownPct": 20,
+    "maxConsecutiveStopOuts": 4,
+    "directionalCapPct": 70,
+    "minLeverage": 7,
+    "maxLeverage": 10,
+    "maxPositionsTotal": 3,
+    "perAssetCooldownMinutes": 120,
+    "bannedAssetPrefixes": [
+      "xyz:"
+    ],
+    "perTradeRiskPct": 1.0
   }
 }
