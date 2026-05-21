@@ -1,32 +1,12 @@
 {
   "riskMode": "RISK_OFF",
-  "updatedAt": "2026-05-21T20:02:43.263963+00:00",
   "updatedBy": "jido-emergency",
-  "reason": "RISK_OFF override locked: equity=$0.00, DD=100.0% from catastrophic limit 20.0%. No market data fetch needed.",
-  "regimes": {
-    "RISK_ON": {
-      "maxPositionMarginUsd": 50,
-      "maxLeverage": 5,
-      "maxOpenPositions": 3,
-      "requirePositiveFunding": false
-    },
-    "BASELINE": {
-      "maxPositionMarginUsd": 30,
-      "maxLeverage": 3,
-      "maxOpenPositions": 2,
-      "requirePositiveFunding": false
-    },
-    "RISK_OFF": {
-      "maxPositionMarginUsd": 0,
-      "maxLeverage": 1,
-      "maxOpenPositions": 0,
-      "requirePositiveFunding": true
-    }
-  },
-  "globalGuardrails": {
-    "maxTotalMarginUsd": 100,
-    "stopLossPercentage": 15,
-    "takeProfitPercentage": 30,
-    "catastrophicDrawdownPct": 20
+  "updatedAt": "2026-05-21T20:02:58Z",
+  "reason": "Dead-strategy equity=$0, run #225, override #19. 100% drawdown.",
+  "parameters": {
+    "maxSlots": 0,
+    "maxLeverage": 0,
+    "allocPct": 0,
+    "autoEntry": false
   }
 }
