@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-21T08:47:57Z",
+  "generatedAt": "2026-05-21T09:49:12Z",
   "source": "live",
   "strategy": {
     "name": "wolf-primary",
@@ -10,7 +10,7 @@
   },
   "regime": {
     "mode": "RISK_OFF",
-    "reason": "override #7 \u2014 RISK_OFF enforced by JIDO",
+    "reason": "override #8 \u2014 RISK_OFF enforced by JIDO, equity=$0, dead-strategy run #192",
     "enforcedBy": "jido-emergency",
     "marketSignal": null
   },
@@ -38,9 +38,13 @@
     }
   },
   "positions": [],
-  "market": {},
+  "market": {
+    "BTC": 0.0,
+    "ETH": 0.0,
+    "SOL": 0.0
+  },
   "actions": [
-    "JIDO heartbeat #191"
+    "JIDO heartbeat #192 \u2014 dead-strategy fast-path, MCP online"
   ],
   "alerts": [],
   "infrastructure": {
@@ -51,7 +55,8 @@
   },
   "warnings": [
     "VPS decommissioned 58+ days \u2014 treat as decommissioned",
-    "Dead-strategy run #191, equity=$0 since 2026-05-14",
-    "MCP online \u2014 live data confirmed equity=$0, 0 positions"
+    "Dead-strategy run #192, equity=$0 since 2026-05-14",
+    "MCP online \u2014 live data confirmed equity=$0, 0 positions",
+    "Regime drift corrected: risk-regime.json was BASELINE (regime-classifier overwrote), forced back to RISK_OFF"
   ]
 }
