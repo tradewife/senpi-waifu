@@ -1,8 +1,8 @@
 {
   "riskMode": "RISK_OFF",
-  "updatedAt": "2026-05-21T10:17:34.567809+00:00",
+  "updatedAt": "2026-05-21T10:47:55Z",
   "updatedBy": "jido-emergency",
-  "reason": "override #10 \u2014 equity=$0, dead-strategy run #194, DD=100.0%",
+  "reason": "override #11 \u2014 RISK_OFF enforced by JIDO (dead-strategy, equity=$0, DD=100%, 58+d VPS offline)",
   "regimes": {
     "RISK_ON": {
       "maxSlots": 3,

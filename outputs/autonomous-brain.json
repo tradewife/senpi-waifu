@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-05-21T10:34:29.460362Z",
+  "generatedAt": "2026-05-21T10:47:55Z",
   "codebaseIndexAt": "2026-03-23T23:57:15Z",
   "riskMode": "RISK_OFF",
   "executionPolicy": {
-    "generatedAt": "2026-05-21T10:34:29.460362Z",
+    "generatedAt": "2026-05-21T10:47:55Z",
     "mode": "ACTIVE",
     "blockNewEntries": true,
     "allowAutoEntry": false,
@@ -16,7 +16,7 @@
       }
     },
     "reasons": [
-      "override #10 \u2014 RISK_OFF enforced by JIDO, equity=$0, dead-strategy run #194"
+      "override #11 \u2014 RISK_OFF enforced by JIDO (dead-strategy, equity=$0, DD=100%)"
     ],
     "risk": {
       "drawdownPctFromPeak": 100.0,
