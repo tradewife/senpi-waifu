@@ -1,82 +1,29 @@
 {
-  "source": "live",
-  "generatedAt": "2026-05-21T13:32:38.306652+00:00",
-  "regime": {
-    "mode": "RISK_OFF",
-    "reason": "Dead-strategy enforcement: equity=$0, override #21",
-    "enforcedBy": "jido-emergency",
-    "marketSignal": null
-  },
-  "portfolio": {
-    "equity": {
-      "usd": 0.0,
-      "peak": 100.0,
-      "drawdownPct": 100.0
-    },
-    "openPositions": 0,
-    "openOrders": 0,
-    "withdrawable": 0.0,
-    "dailyPnl": 0.0
-  },
-  "guardrails": {
-    "catastrophicDrawdown": {
-      "threshold": 20,
-      "actual": 100.0,
-      "breached": true
-    },
-    "dailyLossLimit": {
-      "threshold": 10,
-      "actual": 0.0,
-      "breached": false
-    },
-    "consecutiveStopOuts": {
-      "threshold": 4,
-      "actual": 0,
-      "breached": false
-    }
-  },
-  "positions": [],
-  "actions": [
-    "RISK_OFF enforced",
-    "Override #21 recorded"
-  ],
-  "strategy": {
-    "name": "wolf-primary",
-    "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
-    "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce",
-    "budget": 100,
-    "remaining": 0.0,
-    "status": "DEAD"
-  },
-  "infrastructure": {
-    "vpsStatus": "decommissioned",
-    "vpsOfflineSince": "2026-03-23T00:00:00Z",
-    "mcpStatus": "online",
-    "mcpConsecutiveFailures": "0"
-  },
-  "warnings": [
-    "MCP reconnected after 0 consecutive failures \u2014 live data confirmed equity=$0",
-    "Dead-strategy run #205, override #21",
-    "VPS decommissioned since 2026-03-23"
-  ],
+  "generatedAt": "2026-05-21T14:01:00Z",
+  "regime": "RISK_OFF",
+  "equity": 0.0,
+  "peakEquity": 100.0,
+  "drawdownPct": 100.0,
+  "dailyPnl": 0,
+  "dailyCloses": 0,
+  "dailyWinRate": 0,
+  "openPositions": 0,
   "alerts": [
-    {
-      "type": "JIDO_HEARTBEAT",
-      "timestamp": "2026-05-21T12:47:09.352443+00:00",
-      "regime": "RISK_OFF",
-      "accountValue": 0.0,
-      "drawdownPct": 0.0,
-      "openPositions": 0,
-      "openOrders": 0,
-      "message": "Dead-strategy run #201, equity=$0, no positions. MCP online (live confirmed). Override #17."
-    }
+    "CATASTROPHIC DRAWDOWN: 100.0%"
   ],
-  "timestamp": "2026-05-21T13:47:21Z",
-  "actionsTaken": [
-    "Dead-strategy fast-path run #201",
-    "MCP online \u2014 live data confirmed equity=$0, 0 positions",
-    "Override #17 enforced, RISK_OFF confirmed"
-  ],
-  "deadStrategyRunCount": 205,
-  "overrideCount": 21
+  "deadWeight": [],
+  "guardrails": {
+    "dailyLossLimitPct": 10,
+    "catastrophicDrawdownPct": 20,
+    "maxConsecutiveStopOuts": 4,
+    "directionalCapPct": 70,
+    "minLeverage": 7,
+    "maxLeverage": 10,
+    "maxPositionsTotal": 3,
+    "perAssetCooldownMinutes": 120,
+    "bannedAssetPrefixes": [
+      "xyz:"
+    ],
+    "perTradeRiskPct": 1.0
+  }
 }
