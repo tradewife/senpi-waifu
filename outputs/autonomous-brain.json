@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-05-21T06:31:59Z",
+  "generatedAt": "2026-05-21T06:48:08.185237Z",
   "codebaseIndexAt": "2026-03-23T23:57:15Z",
   "riskMode": "RISK_OFF",
   "executionPolicy": {
-    "generatedAt": "2026-05-21T06:31:59Z",
+    "generatedAt": "2026-05-21T06:48:08.185237Z",
     "mode": "ACTIVE",
     "blockNewEntries": true,
     "allowAutoEntry": false,
@@ -16,7 +16,7 @@
       }
     },
     "reasons": [
-      "override #1: RISK_OFF enforced \u2014 dead strategy (equity=$0, run #185)"
+      "override #2: RISK_OFF enforced \u2014 dead strategy (equity=$0, run #186)"
     ],
     "risk": {
       "drawdownPctFromPeak": 100.0,
