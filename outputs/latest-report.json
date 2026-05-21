@@ -1,59 +1,70 @@
 {
-  "generatedAt": "2026-05-21T08:05:46Z",
-  "source": "cached",
-  "strategy": {
-    "name": "wolf-primary",
-    "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
-    "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce",
-    "budget": 100,
-    "remaining": 0.0
-  },
+  "generatedAt": "2026-05-21T08:18:49Z",
   "regime": {
     "mode": "RISK_OFF",
-    "reason": "override #4 \u2014 RISK_OFF enforced by JIDO",
-    "enforcedBy": "jido-emergency",
-    "marketSignal": null
+    "reason": "Dead strategy run #189, equity=$0",
+    "enforcedBy": "jido-dead-strategy-fastpath",
+    "marketSignal": "N/A (MCP offline)"
   },
-  "portfolio": {
-    "equity": 0.0,
-    "peak": 100.0,
-    "drawdownPct": 100.0,
-    "dailyPnl": 0.0
-  },
+  "equity": 0.0,
+  "peakEquity": 100.0,
+  "drawdownPct": 100.0,
+  "dailyPnl": 0,
+  "dailyCloses": 0,
+  "dailyWinRate": 0,
+  "openPositions": [],
+  "alerts": [
+    "CATASTROPHIC DRAWDOWN: 100.0%"
+  ],
+  "deadWeight": [],
   "guardrails": {
-    "catastrophicDrawdownPct": {
+    "catastrophicDrawdown": {
       "threshold": 20,
       "actual": 100.0,
       "breached": true
     },
-    "maxConsecutiveStopOuts": {
-      "threshold": 4,
-      "actual": 0,
-      "breached": false
-    },
-    "dailyLossLimitPct": {
+    "dailyLossLimit": {
       "threshold": 10,
       "actual": 0.0,
       "breached": false
+    },
+    "consecutiveStopOuts": {
+      "threshold": 4,
+      "actual": 0,
+      "breached": false
     }
   },
-  "positions": [],
-  "market": {},
-  "actions": [
-    "JIDO heartbeat #188 (dead-strategy fast-path, cached data)"
-  ],
-  "alerts": [],
+  "source": "cached",
+  "portfolio": {
+    "equity": {
+      "value": 0.0,
+      "source": "cached"
+    },
+    "peakEquity": 100.0,
+    "drawdownPct": 100.0,
+    "dailyPnl": 0.0
+  },
+  "strategy": {
+    "name": "wolf-primary",
+    "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
+    "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce",
+    "budget": 0,
+    "remaining": 0.0
+  },
   "infrastructure": {
     "vpsStatus": "decommissioned",
-    "vpsOfflineSince": "2026-03-23T23:57:15Z",
+    "vpsOfflineSince": "2026-03-23T00:00:00Z",
     "mcpStatus": "offline",
-    "mcpConsecutiveFailures": "55+"
+    "mcpConsecutiveFailures": "56+"
   },
   "warnings": [
-    "VPS decommissioned 58+ days \u2014 treat as decommissioned",
-    "Dead-strategy run #188, equity=$0 since 2026-05-14",
-    "MCP offline 55+ consecutive failures \u2014 all data is cached/stale",
-    "DD 100.0% based on cached equity \u2014 actual DD may be 100% (wallet depleted 2026-05-14)",
-    "Regime-classifier may overwrite RISK_OFF to BASELINE (pitfall #7) \u2014 JIDO corrects each run"
-  ]
+    "MCP server offline \u2014 56 consecutive failures",
+    "VPS decommissioned since 2026-03-23",
+    "Dead strategy run #189, equity=$0",
+    "Regime drift corrected: BASELINE -> RISK_OFF (classifier overwrote)"
+  ],
+  "actions": [
+    "JIDO heartbeat #189, override #5"
+  ],
+  "openOrders": []
 }
