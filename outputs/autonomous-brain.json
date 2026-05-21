@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-05-21T02:17:57.972432+00:00",
+  "generatedAt": "2026-05-21T02:32:37.400190+00:00",
   "codebaseIndexAt": "2026-03-23T23:57:15Z",
   "riskMode": "RISK_OFF",
   "executionPolicy": {
-    "generatedAt": "2026-05-21T02:17:57.972432+00:00",
+    "generatedAt": "2026-05-21T02:32:37.400190+00:00",
     "mode": "ACTIVE",
     "blockNewEntries": true,
     "allowAutoEntry": false,
@@ -51,14 +51,14 @@
       "peakEquity": 100.0,
       "dayStartEquity": 0.0,
       "consecutiveStopOuts": 0,
-      "lastSync": "2026-05-21T02:17:57.972432+00:00",
-      "lastUpdated": "2026-05-21T02:17:57.972432+00:00",
+      "lastSync": "2026-05-21T02:32:37.400190+00:00",
+      "lastUpdated": "2026-05-21T02:32:37.400190+00:00",
       "lastEquity": 0.0,
-      "lastJidoRun": "2026-05-21T02:17:57.972432+00:00",
-      "deadStrategyRunCount": 178,
-      "lastChecked": "2026-05-21T02:17:57.972432+00:00",
-      "lastCheck": "2026-05-21T02:17:57.972432+00:00",
-      "lastJidoCheck": "2026-05-21T02:17:57.972432+00:00"
+      "lastJidoRun": "2026-05-21T02:32:37.400190+00:00",
+      "deadStrategyRunCount": 179,
+      "lastChecked": "2026-05-21T02:32:37.400190+00:00",
+      "lastCheck": "2026-05-21T02:32:37.400190+00:00",
+      "lastJidoCheck": "2026-05-21T02:32:37.400190+00:00"
     }
   },
   "pending": {

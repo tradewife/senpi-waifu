@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-21T02:17:57.972432+00:00",
+  "generatedAt": "2026-05-21T02:32:37.400190+00:00",
   "source": "cached",
   "strategy": {
     "name": "wolf-primary",
@@ -40,7 +40,7 @@
   "positions": [],
   "market": {},
   "actions": [
-    "JIDO heartbeat #178"
+    "JIDO heartbeat #179"
   ],
   "alerts": [
     "CATASTROPHIC DRAWDOWN: 100.0%"
@@ -50,12 +50,12 @@
     "vpsStatus": "decommissioned",
     "vpsOfflineSince": "2026-03-23T23:57:15Z",
     "mcpStatus": "offline",
-    "mcpConsecutiveFailures": "45+"
+    "mcpConsecutiveFailures": "46+"
   },
   "warnings": [
     "VPS decommissioned 58+ days \u2014 treat as decommissioned",
-    "Dead-strategy run #178, equity=$0 since 2026-05-14",
-    "MCP offline \u2014 using cached state",
-    "Regime drift corrected: BASELINE -> RISK_OFF (override #4)"
+    "Dead-strategy run #179, equity=$0 since 2026-05-14",
+    "MCP offline \u2014 using cached state (46+ consecutive failures)",
+    "Regime drift corrected: enforced RISK_OFF (override #4)"
   ]
 }
