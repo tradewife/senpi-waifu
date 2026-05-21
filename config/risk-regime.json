@@ -1,8 +1,8 @@
 {
   "riskMode": "RISK_OFF",
-  "updatedAt": "2026-05-21T06:01:10.323673+00:00",
-  "updatedBy": "hermes-regime",
-  "reason": "Market fetch skipped \u2014 RISK_OFF locked: equity=$0, DD 100.0% (deadStrategyRunCount=183). Catastrophic override active.",
+  "updatedAt": "2026-05-21T06:17:40Z",
+  "updatedBy": "jido-emergency",
+  "reason": "Dead strategy: equity=$0, run #184, MCP offline",
   "regimes": {
     "RISK_ON": {
       "maxSlots": 3,

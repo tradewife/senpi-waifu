@@ -5,9 +5,9 @@
   "dayStartDate": "2026-05-21",
   "drawdownPct": 100.0,
   "consecutiveStopOuts": 0,
-  "deadStrategyRunCount": 183,
-  "overrideCount": 6,
-  "mcpConsecutiveFailures": "50+",
+  "deadStrategyRunCount": 184,
+  "overrideCount": 0,
+  "mcpConsecutiveFailures": "51+",
   "lastJidoRun": "2026-05-21T03:47:38Z",
   "lastReviewRun": "2026-05-21T03:47:38Z",
   "lastRegimeRun": "2026-05-21T03:47:38Z",
@@ -15,13 +15,13 @@
   "alerts": [
     {
       "type": "JIDO_HEARTBEAT",
-      "timestamp": "2026-05-21T03:47:38Z",
+      "timestamp": "2026-05-21T06:17:40Z",
       "regime": "RISK_OFF",
       "accountValue": 0.0,
       "drawdownPct": 100.0,
       "openPositions": 0,
       "openOrders": 0,
-      "message": "Dead-strategy run #183, override #6. MCP offline (50 failures). Equity=$0. VPS decommissioned since 2026-03-23."
+      "message": "Dead-strategy run #184, MCP offline (consecutive failures: 51)"
     }
   ],
   "lastChecked": "2026-05-21T03:47:38Z",
@@ -30,7 +30,7 @@
   "updatedAt": "2026-05-21T03:47:38Z",
   "lastCheckedAt": "2026-05-21T03:47:38Z",
   "lastEquityCheckedAt": "2026-05-21T03:47:38Z",
-  "lastHeartbeatAt": "2026-05-21T03:47:38Z",
+  "lastHeartbeatAt": "2026-05-21T06:17:40Z",
   "lastRegimeCheckAt": "2026-05-21T03:47:38Z",
   "lastUpdated": "2026-05-21T03:47:38Z",
   "lastHeartbeat": "2026-05-21T03:47:38Z",
@@ -38,9 +38,10 @@
   "lastJidoFullCheck": "2026-05-21T03:47:38Z",
   "arbiterTimestamp": "2026-05-21T03:47:38Z",
   "lastAlertAt": "2026-05-21T03:47:38Z",
-  "lastCheckAt": "2026-05-21T03:47:38Z",
+  "lastCheckAt": "2026-05-21T06:17:40Z",
   "lastCheck": "2026-05-21T03:47:38Z",
   "lastRegimeCheck": "2026-05-21T03:47:38Z",
-  "lastOverrideAt": "2026-05-21T03:47:38Z",
-  "lastRiskOffAt": "2026-05-21T03:47:38Z"
+  "lastOverrideAt": "2026-05-21T06:17:40Z",
+  "lastRiskOffAt": "2026-05-21T06:17:40Z",
+  "lastUpdatedAt": "2026-05-21T06:17:40Z"
 }
