@@ -1,29 +1,18 @@
 {
   "source": "cached",
-  "generatedAt": "2026-05-20T17:47:31Z",
+  "generatedAt": "2026-05-21T01:47:57.251591+00:00",
   "regime": {
     "mode": "RISK_OFF",
-    "reason": "Dead strategy: equity=$0, run #176, MCP offline",
+    "reason": "dead-strategy equity=$0, override #3",
     "enforcedBy": "jido-emergency",
     "marketSignal": "N/A"
   },
   "portfolio": {
-    "equity": {
-      "current": 0.0,
-      "peak": 100.0,
-      "dayStart": 0.0
-    },
-    "drawdown": {
-      "pct": 100.0,
-      "breached": true,
-      "threshold": 20.0
-    },
-    "dailyPnl": {
-      "amount": 0.0,
-      "pct": 0.0
-    },
-    "openPositions": 0,
-    "openOrders": 0
+    "equity": 0.0,
+    "peak": 100.0,
+    "drawdownPct": 100.0,
+    "dayStartEquity": 0.0,
+    "dailyPnl": 0.0
   },
   "guardrails": {
     "catastrophicDrawdown": {
@@ -45,7 +34,11 @@
   "positions": [],
   "market": {},
   "actions": [
-    "No actions \u2014 dead strategy, no positions, MCP offline."
+    {
+      "type": "JIDO_HEARTBEAT",
+      "timestamp": "2026-05-21T01:47:57.251591+00:00",
+      "summary": "dead-strategy run #177, equity=$0, override #3, MCP offline 44+ failures, VPS offline 58d"
+    }
   ],
   "alerts": [
     {
@@ -61,21 +54,39 @@
   ],
   "infrastructure": {
     "vpsStatus": "decommissioned",
-    "vpsOfflineSince": "2026-03-23T00:00:00Z",
+    "vpsOfflineSince": "2026-03-23T23:57:15Z",
+    "vpsOfflineDays": 58,
     "mcpStatus": "offline",
-    "mcpConsecutiveFailures": "43+"
+    "mcpConsecutiveFailures": "44+"
   },
   "strategy": {
-    "name": "WOLF-Primary",
+    "name": "wolf-primary",
     "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
     "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce",
     "budget": 100,
     "remaining": 0.0
   },
   "warnings": [
-    "MCP offline (consecutive failures: 43). All data from local cache.",
-    "Dead strategy run #176. Equity=$0 since 2026-05-14.",
-    "Regime-drift correction applied (RISK_OFF enforced, regime-classifier may overwrite to BASELINE)."
+    {
+      "level": "CRITICAL",
+      "message": "Strategy dead since 2026-05-14, equity=$0, 177 consecutive dead-strategy runs",
+      "timestamp": "2026-05-21T01:47:57.251591+00:00"
+    },
+    {
+      "level": "CRITICAL",
+      "message": "VPS decommissioned since 2026-03-23 (58d ago)",
+      "timestamp": "2026-05-21T01:47:57.251591+00:00"
+    },
+    {
+      "level": "WARNING",
+      "message": "MCP offline \u2014 44+ consecutive failures, using cached state",
+      "timestamp": "2026-05-21T01:47:57.251591+00:00"
+    },
+    {
+      "level": "INFO",
+      "message": "DD 100.0% based on cached equity \u2014 actual DD may differ",
+      "timestamp": "2026-05-21T01:47:57.251591+00:00"
+    }
   ],
   "roiThreshold": 0.16,
   "autoExecute": true,
