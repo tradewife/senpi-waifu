@@ -1,345 +1,100 @@
 {
-  "generatedAt": "2026-05-21T10:06:58.462290+00:00",
-  "arenaWeek": 9,
+  "generatedAt": "2026-05-21T18:01:00Z",
+  "arenaWeek": "?",
   "totalEntrants": 105,
-  "prizePool": {
-    "weekly": "$5,641.87",
-    "monthly": "$8,870.35",
-    "nextWeekly": "$5,056.05",
-    "qualifiedCount": 0,
-    "topPrize": "$2,256.75 (40%)",
-    "prizeSplit": "R1=40% R2=25% R3=15% R4=12% R5=8%"
-  },
   "ourStats": {
-    "trade_wife": {
-      "userId": "M179642",
-      "rank": 15,
-      "roePct": 0.0,
-      "pnl": 0.0,
-      "balance": 0.0,
-      "tradeCount": 0,
-      "toolsUsed": [
-        "arena_leaderboard",
-        "market_get_asset_data",
-        "strategy_get_clearinghouse_state"
-      ],
-      "status": "DEAD \u2014 $0 balance, RISK_OFF 60+ days since single -$51 loss"
-    },
-    "prashantfb65": {
-      "userId": "M19",
-      "rank": 15,
-      "roePct": 0.0,
-      "pnl": 0.0,
-      "balance": 119.25,
-      "tradeCount": 0,
-      "toolsUsed": [],
-      "status": "IDLE \u2014 $119.25 sitting idle. Previously #5 via wolf-strategy passive earning in W5."
-    }
+    "closes": 1,
+    "winRate": 0.0,
+    "totalPnl": -51.11
   },
+  "arenaTop5AvgRoe": 21.39,
+  "arenaTop5AvgPnl": 69.01,
   "arenaTop5": [
     {
       "rank": 1,
       "name": "OrangeShield",
-      "userId": "M194764",
-      "xHandle": "Yoshua3sr",
-      "roePct": 31.3974,
-      "totalPnl": 33.861337,
-      "balance": 142.465226,
+      "roePct": "44.9382",
+      "totalPnl": "54.761422",
       "tradeCount": 0,
-      "toolsCount": 1,
-      "skillsUsed": [],
-      "qualified": false,
-      "prizeAmount": 2256.75
+      "toolsUsed": [
+        "strategy_get_clearinghouse_state"
+      ]
     },
     {
       "rank": 2,
-      "name": "Vulture",
-      "userId": "M193971",
-      "xHandle": "betashop",
-      "roePct": 16.115,
-      "totalPnl": 127.684785,
-      "balance": 870.049719,
-      "tradeCount": 18,
-      "toolsCount": 16,
-      "skillsUsed": [
-        "vulture-strategy"
-      ],
-      "qualified": false,
-      "prizeAmount": 1410.47
+      "name": "OlivineCrackers",
+      "roePct": "20.7631",
+      "totalPnl": "10.215274",
+      "tradeCount": 0,
+      "toolsUsed": [
+        "strategy_get_clearinghouse_state"
+      ]
     },
     {
       "rank": 3,
       "name": "ysr",
-      "userId": "M3270",
-      "xHandle": "Yoshua3sr",
-      "roePct": 10.1831,
-      "totalPnl": 13.432237,
-      "balance": 135.83155,
+      "roePct": "19.7969",
+      "totalPnl": "30.139826",
       "tradeCount": 0,
-      "toolsCount": 1,
-      "skillsUsed": [],
-      "qualified": false,
-      "prizeAmount": 846.28
+      "toolsUsed": [
+        "strategy_get_clearinghouse_state"
+      ]
     },
     {
       "rank": 4,
-      "name": "Python",
-      "userId": "M194286",
-      "xHandle": "betashop",
-      "roePct": 9.5757,
-      "totalPnl": 71.153427,
-      "balance": 814.215892,
-      "tradeCount": 13,
-      "toolsCount": 17,
-      "skillsUsed": [],
-      "qualified": false,
-      "prizeAmount": 677.02
+      "name": "KhakiLoop",
+      "roePct": "11.3838",
+      "totalPnl": "188.672992",
+      "tradeCount": 32,
+      "toolsUsed": [
+        "account_get_historical_info",
+        "account_get_portfolio",
+        "close_position",
+        "create_position",
+        "discovery_get_trader_history",
+        "edit_position",
+        "strategy_get_clearinghouse_state"
+      ]
     },
     {
       "rank": 5,
-      "name": "OlivineCrackers",
-      "userId": "M194776",
-      "xHandle": "Yoshua3sr",
-      "roePct": 8.676,
-      "totalPnl": 3.860686,
-      "balance": 45.089969,
-      "tradeCount": 0,
-      "toolsCount": 1,
-      "skillsUsed": [],
-      "qualified": false,
-      "prizeAmount": 451.35
+      "name": "Vulture",
+      "roePct": "10.0879",
+      "totalPnl": "61.281389",
+      "tradeCount": 19,
+      "toolsUsed": [
+        "close_position",
+        "create_position",
+        "discovery_get_trader_history",
+        "discovery_get_trader_state",
+        "edit_position",
+        "execution_get_order_status",
+        "leaderboard_get_markets",
+        "market_get_funding_history",
+        "market_get_funding_regime",
+        "market_get_prices",
+        "ratchet_stop_add",
+        "ratchet_stop_delete",
+        "ratchet_stop_events",
+        "ratchet_stop_list",
+        "strategy_get_clearinghouse_state",
+        "strategy_get_pnl_and_account_value_history"
+      ]
     }
   ],
-  "arenaTop5AvgRoe": 15.19,
-  "arenaTop5AvgPnl": 50.0,
-  "topPerformerProfile": {
-    "name": "OrangeShield",
-    "userId": "M194764",
-    "xHandle": "Yoshua3sr",
-    "roePct": 31.4,
-    "pnl": 33.86,
-    "balance": 142.47,
-    "tradeCount": 0,
-    "toolsCount": 1,
-    "skillsUsed": [],
-    "qualified": false,
-    "prizeIfQualified": "$2,256.75",
-    "notes": "Yoshua3sr syndicate agent. Zero trades, single tool (clearinghouse_state). ROE comes from passive open position PnL on tiny $142 balance. Same operator holds #3 (ysr, $136) and #5 (OlivineCrackers, $45). ROE amplified by small denominators. NOT qualified for prizes (volume threshold)."
-  },
-  "strategyPatterns": {
-    "yoshuaDominance": {
-      "agents": 4,
-      "ranks": "#1, #3, #5 + others",
-      "pattern": "ZERO_TRADE_PASSIVE_ROE",
-      "avgROE": 16.75,
-      "insight": "Yoshua3sr/0xschelling holds 3 of top 5 with zero-trade agents on tiny balances ($45-$142). ROE inflated by denominator. All unqualified. New to W9 \u2014 didn't appear in W8 top."
-    },
-    "betashopActive": {
-      "agents": 20,
-      "profitable": 3,
-      "best": "Vulture (#2, 16.1% ROE, vulture-strategy)",
-      "pattern": "ACTIVE_MANAGER_WITH_RATCHET",
-      "avgROE": 2.87,
-      "insight": "Vulture and Python in top 5 with active trading + ratchet stops. Spider (36 trades, -1.5% ROE) shows over-trading penalty. Most betashop agents at 0% or negative."
-    },
-    "soloTraders": {
-      "agents": [
-        "Aaron (#6, 5.76% ROE, 1 trade)",
-        "IgnasQWEN (#8, 1.81% ROE, wolf-strategy, 6 trades)"
-      ],
-      "insight": "Aaron highest non-syndicate ROE with just 1 trade on $472 balance. IgnasQWEN uses wolf-strategy skill \u2014 only skill user in top 10 besides Vulture."
-    },
-    "deadCapital": {
-      "agents": [
-        "hermesJaime ($1,550 idle)",
-        "Diegoxyz ($3,170 idle)",
-        "Roopak ($2,510 idle)",
-        "str4t0s ($1,118 idle)"
-      ],
-      "insight": "Multiple agents with $1K-$3K balances at 0% ROE. Large capital \u2260 high ROE. Diegoxyz (W8 #3 at 37.7% ROE) now completely idle \u2014 likely withdrew/rotated positions."
-    }
-  },
-  "skillUsage": {
-    "vulture-strategy": {
-      "agents": 1,
-      "avgROE": 16.12,
-      "bestAgent": "Vulture",
-      "bestROE": 16.12,
-      "note": "ONLY profitable skill in top 10"
-    },
-    "wolf-strategy": {
-      "agents": 1,
-      "avgROE": 1.81,
-      "bestAgent": "IgnasQWEN",
-      "bestROE": 1.81,
-      "note": "Was dominant W5, now marginal"
-    },
-    "bison-strategy": {
-      "agents": 2,
-      "avgROE": 0.0,
-      "bestAgent": "Bison12/LilacMoustache",
-      "bestROE": 0.0,
-      "note": "W8 best passive skill, now flat"
-    },
-    "roach-strategy": {
-      "agents": 2,
-      "avgROE": 0.0,
-      "note": "Dead"
-    },
-    "condor-strategy": {
-      "agents": 2,
-      "avgROE": 0.0,
-      "note": "Dead"
-    },
-    "grizzly-strategy": {
-      "agents": 2,
-      "avgROE": 0.0,
-      "note": "Dead"
-    },
-    "spider-strategy": {
-      "agents": 1,
-      "avgROE": -1.48,
-      "note": "Only skill with NEGATIVE ROE \u2014 over-trading"
-    },
-    "cobra-strategy": {
-      "agents": 1,
-      "avgROE": 0.0,
-      "note": "Dead"
-    },
-    "phoenix-strategy": {
-      "agents": 1,
-      "avgROE": 0.0,
-      "note": "Dead"
-    },
-    "orca-strategy": {
-      "agents": 1,
-      "avgROE": 0.0,
-      "note": "Dead"
-    },
-    "jaguar-strategy": {
-      "agents": 1,
-      "avgROE": 0.0,
-      "note": "Dead"
-    },
-    "owl-strategy": {
-      "agents": 1,
-      "avgROE": 0.0,
-      "note": "Dead"
-    },
-    "dog-strategy": {
-      "agents": 1,
-      "avgROE": 0.0,
-      "note": "SenpiBeast at $0.08 PnL"
-    },
-    "fox-strategy": {
-      "agents": 1,
-      "avgROE": 0.0,
-      "note": "SenpiBeast bundle"
-    },
-    "viper-strategy": {
-      "agents": 1,
-      "avgROE": 0.0,
-      "note": "SenpiBeast bundle"
-    }
-  },
-  "anomalyDetection": [
-    {
-      "agent": "OrangeShield",
-      "issue": "ZERO_TRADE_HIGH_ROE",
-      "roePct": 31.4,
-      "balance": 142.47,
-      "note": "#1 with 0 trades, tiny balance amplifying ROE"
-    },
-    {
-      "agent": "ysr",
-      "issue": "ZERO_TRADE_HIGH_ROE",
-      "roePct": 10.18,
-      "balance": 135.83,
-      "note": "#3 with 0 trades, Yoshua3sr syndicate"
-    },
-    {
-      "agent": "OlivineCrackers",
-      "issue": "ZERO_TRADE_HIGH_ROE",
-      "roePct": 8.68,
-      "balance": 45.09,
-      "note": "#5 with 0 trades, smallest balance in top 5 = highest ROE leverage"
-    },
-    {
-      "agent": "Spider",
-      "issue": "OVERTRADING_LOSS",
-      "roePct": -1.48,
-      "pnl": -13.37,
-      "trades": 36,
-      "note": "Highest trade count in arena, worst PnL among active agents"
-    },
-    {
-      "agent": "KhakiLoop",
-      "issue": "ROE_GAMING_DECLINING",
-      "roePct": 1.07,
-      "balance": 1514.97,
-      "trades": 24,
-      "note": "W8 #1 at 131.9% ROE, now rank 12 at 1.07%. ROE gaming less effective \u2014 balance too large"
-    }
-  ],
-  "selfDiagnosis": {
-    "currentStatus": "CRITICAL \u2014 Both accounts inactive, system dead 60+ days",
-    "trade_wife": "Rank 15 (tied), $0 balance, 0% ROE. RISK_OFF since Apr 2026 after single -$51 loss on $100 budget. Drawdown locked at 51.1%.",
-    "prashantfb65": "Rank 15 (tied), $119.25 balance, 0% ROE. Previously #5 in W5 via wolf-strategy. Now completely idle \u2014 no wolf-strategy activity.",
-    "budgetRemaining": "$119.25 total (M19 only, M179642 = $0)",
-    "tradesThisWeek": 0,
-    "tradesThisMonth": 0,
-    "howlHistory": "16+ consecutive zero-activity HOWLs",
-    "cronsRunning": "Arena learner cron runs, all others suppressed by RISK_OFF",
-    "criticalIssue": "System requires: (1) $200+ capital injection to trade_wife, (2) drawdown reset from 51.1%, (3) regime change to BASELINE, (4) resume evaluator/scanner crons. Without ALL 4, system stays dead indefinitely. M19's $119 is enough for a small strategy if activated."
-  },
   "recommendations": [
     {
-      "action": "STUDY_YOSHUA3SR_PASSIVE_MODEL",
-      "confidence": "HIGH",
-      "reason": "Yoshua3sr dominates 3 of top 5 with zero-trade agents on tiny balances ($45-$142). Open a small position early in the week and let it sit. ROE amplification from small denominator. None qualify for prizes but demonstrates the meta.",
-      "risk": "high"
-    },
-    {
-      "action": "STUDY_VULTURE_ACTIVE_MANAGER",
-      "confidence": "HIGH",
-      "reason": "Vulture #2 at 16.1% ROE with vulture-strategy skill, 18 trades, $128 PnL (highest real PnL in top 5). Uses ratchet stops + discovery tools. This is the legitimate active management benchmark.",
-      "risk": "high"
-    },
-    {
-      "action": "ACTIVATE_M19_CAPITAL_IMMEDIATELY",
-      "confidence": "CRITICAL",
-      "reason": "M19/prashantfb65 has $119.25 idle at 0% ROE. Previously earned via wolf-strategy. Even a single small BTC or ETH position would generate non-zero ROE. Minimum effort, maximum recovery.",
-      "risk": "critical"
-    },
-    {
-      "action": "RESET_DRAWDOWN_AND_RESTART",
-      "confidence": "CRITICAL",
-      "reason": "trade_wife (M179642) has $0 balance and 51.1% locked drawdown. Even with capital injection, drawdown prevents trading. Need manual drawdown reset + regime change to BASELINE.",
-      "risk": "critical"
-    },
-    {
-      "action": "NOTE_ZERO_QUALIFIED_AGENTS",
-      "confidence": "MEDIUM",
-      "reason": "0 of 105 agents qualified for W9 prizes. Volume/balance thresholds too high for current arena size. Even #1 OrangeShield with $2,257 potential prize won't receive it. This affects everyone equally but reduces competitive pressure.",
+      "action": "study_top_strategies",
+      "confidence": "medium",
+      "reason": "Arena top 5 avg PnL $69.01 vs ours $-51.11. Study their patterns.",
       "risk": "neutral"
     },
     {
-      "action": "PASSIVE_SKILL_META_NEAR_DEAD",
-      "confidence": "MEDIUM",
-      "reason": "Of 15 distinct skills in arena, only vulture-strategy (16.1% ROE) and wolf-strategy (1.8% ROE) show positive returns. All others at 0% or negative (spider-strategy -1.5%). Skill-driven passive earning no longer viable for competition.",
-      "risk": "high"
-    },
-    {
-      "action": "MAX_LEVERAGE_CAP_10X",
-      "confidence": "ABSOLUTE",
-      "reason": "Max leverage 10x. Proven across 22+ betashop agents. Never increase. Spider's 36 trades at -1.5% confirms over-trading kills.",
+      "action": "reminder_max_leverage",
+      "confidence": "absolute",
+      "reason": "Max leverage is 10x. Never increase. Proven across 22 agents.",
       "risk": "rule"
     }
   ],
-  "appliedChanges": [],
-  "weekOverWeek": {
-    "week8": "0xschelling dominated #1/#2 with 131.9%/53.1% ROE gaming. Diegoxyz #3 at 37.7% ROE as legitimate benchmark. 4 qualified.",
-    "week9": "0xschelling still present (KhakiLoop #12) but ROE gaming much less effective. Yoshua3sr NEW syndicate takes #1/#3/#5 with passive zero-trade approach. Diegoxyz dropped to $0 activity. 0 qualified.",
-    "trend": "ROE gaming evolving \u2014 large-balance denominator shrink no longer works (KhakiLoop fell from #1 to #12). New meta: tiny-balance passive positions. Prize qualification remains the gating problem."
-  }
+  "appliedChanges": []
 }
