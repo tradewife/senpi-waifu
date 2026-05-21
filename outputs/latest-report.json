@@ -1,51 +1,42 @@
 {
-  "generatedAt": "2026-05-21T06:48:08.185237Z",
+  "generatedAt": "2026-05-21T07:35:04.933902+00:00",
   "source": "cached",
   "strategy": {
     "name": "wolf-primary",
     "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
     "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce",
     "budget": 100,
-    "remaining": 0.0,
-    "status": "dead"
+    "remaining": 0.0
   },
   "regime": {
     "mode": "RISK_OFF",
-    "reason": "Dead strategy: equity=$0, run #186",
+    "reason": "Dead strategy \u2014 equity=$0, run #187, override #3",
     "enforcedBy": "jido-emergency",
-    "marketSignal": "N/A"
+    "marketSignal": "dead-strategy"
   },
   "portfolio": {
     "equity": {
-      "total": 0.0,
+      "current": 0.0,
       "peak": 100.0,
-      "withdrawable": 0.0
+      "dayStart": 0.0
     },
-    "drawdown": {
-      "pct": 100.0,
-      "abs": 100.0
-    },
-    "pnl": {
-      "daily": 0.0,
-      "total": -100.0,
-      "realized": -100.0,
-      "unrealized": 0.0
-    },
+    "drawdownPct": 100.0,
     "openPositions": 0,
-    "openOrders": 0
+    "openOrders": 0,
+    "dailyPnl": 0.0
   },
   "guardrails": {
-    "catastrophicDrawdownPct": {
+    "catastrophicDrawdown": {
       "threshold": 20,
       "actual": 100.0,
       "breached": true
     },
-    "dailyLossLimitPct": {
+    "dailyLossLimit": {
       "threshold": 10,
       "actual": 0.0,
       "breached": false
     },
-    "maxConsecutiveStopOuts": {
+    "consecutiveStopOuts": {
       "threshold": 4,
       "actual": 0,
       "breached": false
@@ -54,10 +45,9 @@
   "positions": [],
   "market": {},
   "actions": [
-    "Dead-strategy fast-path run #186",
-    "Override #2 applied",
-    "MCP consecutive failures: 53+",
-    "No emergency SL needed (no positions)"
+    "Dead-strategy heartbeat run #187",
+    "Override #3 maintained",
+    "No positions to evaluate"
   ],
   "alerts": [
     "DEAD-STRATEGY: run #185, equity=$0, MCP offline (52 consecutive failures)"
@@ -67,13 +57,13 @@
     "vpsStatus": "decommissioned",
     "vpsOfflineSince": "2026-03-23T00:00:00Z",
     "mcpStatus": "offline",
-    "mcpConsecutiveFailures": "53+"
+    "mcpConsecutiveFailures": "54+"
   },
   "warnings": [
-    "MCP server offline \u2014 all data from cached state files",
-    "Dead strategy: equity=$0 for 186 consecutive runs",
+    "Dead strategy: equity=$0 for 186+ consecutive runs",
+    "MCP server offline \u2014 all data from cached state",
     "VPS decommissioned since 2026-03-23",
-    "Regime-drift correction applied: risk-regime.json enforced to RISK_OFF"
+    "Regime drift corrected: risk-regime.json enforced RISK_OFF by jido-emergency"
   ],
   "timestamp": "2026-05-21T06:31:59Z",
   "actionsTaken": [
