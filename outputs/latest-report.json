@@ -1,69 +1,63 @@
 {
-  "generatedAt": "2026-05-21T14:16:58Z",
-  "regime": "RISK_OFF",
-  "equity": 0.0,
-  "peakEquity": 100.0,
-  "drawdownPct": 100.0,
-  "dailyPnl": 0,
-  "dailyCloses": 0,
-  "dailyWinRate": 0,
-  "openPositions": 0,
-  "alerts": [
-    "CATASTROPHIC DRAWDOWN: 100.0%"
-  ],
-  "deadWeight": [],
-  "guardrails": {
-    "dailyLossLimitPct": {
-      "threshold": 10,
-      "actual": 0,
-      "breached": false
-    },
-    "catastrophicDrawdownPct": {
-      "threshold": 20,
-      "actual": 100.0,
-      "breached": true
-    },
-    "maxConsecutiveStopOuts": {
-      "threshold": 4,
-      "actual": 0,
-      "breached": false
-    },
-    "directionalCapPct": {
-      "threshold": 70,
-      "actual": 0,
-      "breached": false
-    },
-    "minLeverage": {
-      "threshold": 7,
-      "actual": 0,
-      "breached": false
-    },
-    "maxLeverage": {
-      "threshold": 10,
-      "actual": 0,
-      "breached": false
-    },
-    "maxPositionsTotal": {
-      "threshold": 3,
-      "actual": 0,
-      "breached": false
-    }
-  },
+  "generatedAt": "2026-05-21T14:32:56Z",
   "source": "live",
-  "infrastructure": {
-    "vpsStatus": "decommissioned",
-    "vpsOfflineSince": "2026-03-23T00:00:00Z",
-    "mcpStatus": "online",
-    "mcpConsecutiveFailures": "0"
-  },
   "strategy": {
-    "name": "WOLF-Primary",
+    "name": "wolf-primary",
     "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
     "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce",
     "budget": 100,
     "remaining": 0.0
   },
+  "regime": {
+    "mode": "RISK_OFF",
+    "reason": "override #1 \u2014 RISK_OFF enforced by JIDO",
+    "enforcedBy": "jido-emergency",
+    "marketSignal": null
+  },
+  "portfolio": {
+    "equity": {
+      "current": 0.0,
+      "peak": 100.0,
+      "dayStart": 0.0
+    },
+    "drawdown": {
+      "pctFromPeak": 100.0,
+      "isBreached": true
+    },
+    "dailyPnl": 0.0
+  },
+  "guardrails": {
+    "catastrophicDrawdown": {
+      "threshold": 20,
+      "actual": 100.0,
+      "breached": true
+    },
+    "consecutiveStopOuts": {
+      "threshold": 4,
+      "actual": 0,
+      "breached": false
+    },
+    "dailyLossLimit": {
+      "threshold": 10,
+      "actual": 0.0,
+      "breached": false
+    }
+  },
+  "positions": [],
+  "market": {},
+  "actions": [
+    "JIDO dead-strategy heartbeat run #207"
+  ],
+  "alerts": [],
+  "infrastructure": {
+    "vpsStatus": "decommissioned",
+    "vpsOfflineSince": "2026-03-23T23:57:15Z",
+    "mcpStatus": "online",
+    "mcpConsecutiveFailures": "0"
+  },
   "warnings": [
-    "MCP live data confirmed equity=$0, 0 positions, 0 withdrawable on both DEXes (run #206)"
+    "VPS decommissioned 58+ days \u2014 treat as decommissioned",
+    "Dead-strategy run #207, equity=$0 since 2026-05-14",
+    "MCP live confirmed equity=$0, 0 positions, 0 withdrawable"
   ]
 }

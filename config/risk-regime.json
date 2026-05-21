@@ -1,8 +1,8 @@
 {
   "riskMode": "RISK_OFF",
-  "updatedAt": "2026-05-21T14:16:58.053845+00:00",
+  "updatedAt": "2026-05-21T14:32:56Z",
   "updatedBy": "jido-emergency",
-  "reason": "RISK_OFF override locked: DD 100.0% (equity=$0) exceeds catastrophic limit 20.0%. Market data fetch skipped.",
+  "reason": "override #1 \u2014 dead-strategy equity=$0, DD=100.0%",
   "regimes": {
     "RISK_ON": {
       "maxSlots": 3,
