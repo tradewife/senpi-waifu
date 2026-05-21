@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-21T02:03:30Z",
+  "generatedAt": "2026-05-21T10:02:09Z",
   "arenaWeek": "?",
   "totalEntrants": 105,
   "ourStats": {
@@ -7,14 +7,14 @@
     "winRate": 0.0,
     "totalPnl": -51.11
   },
-  "arenaTop5AvgRoe": 6.69,
-  "arenaTop5AvgPnl": 21.49,
+  "arenaTop5AvgRoe": 15.19,
+  "arenaTop5AvgPnl": 50.0,
   "arenaTop5": [
     {
       "rank": 1,
       "name": "OrangeShield",
-      "roePct": "11.8537",
-      "totalPnl": "15.43643",
+      "roePct": "31.3974",
+      "totalPnl": "33.861337",
       "tradeCount": 0,
       "toolsUsed": [
         "strategy_get_clearinghouse_state"
@@ -23,9 +23,9 @@
     {
       "rank": 2,
       "name": "Vulture",
-      "roePct": "10.9629",
-      "totalPnl": "81.385075",
-      "tradeCount": 8,
+      "roePct": "16.115",
+      "totalPnl": "127.684785",
+      "tradeCount": 18,
       "toolsUsed": [
         "close_position",
         "create_position",
@@ -48,8 +48,8 @@
     {
       "rank": 3,
       "name": "ysr",
-      "roePct": "4.3525",
-      "totalPnl": "5.000049",
+      "roePct": "10.1831",
+      "totalPnl": "13.432237",
       "tradeCount": 0,
       "toolsUsed": [
         "strategy_get_clearinghouse_state"
@@ -57,28 +57,46 @@
     },
     {
       "rank": 4,
-      "name": "OlivineCrackers",
-      "roePct": "4.2109",
-      "totalPnl": "1.541601",
-      "tradeCount": 0,
+      "name": "Python",
+      "roePct": "9.5757",
+      "totalPnl": "71.153427",
+      "tradeCount": 13,
       "toolsUsed": [
-        "strategy_get_clearinghouse_state"
+        "close_position",
+        "discovery_get_trader_history",
+        "discovery_get_trader_state",
+        "edit_position",
+        "execution_get_order_status",
+        "leaderboard_get_markets",
+        "market_get_asset_data",
+        "market_get_prices",
+        "market_list_instruments",
+        "ratchet_stop_add",
+        "ratchet_stop_delete",
+        "ratchet_stop_events",
+        "ratchet_stop_list",
+        "strategy_get_asset_trading_limits",
+        "strategy_get_clearinghouse_state",
+        "strategy_get_open_orders",
+        "strategy_get_pnl_and_account_value_history"
       ]
     },
     {
       "rank": 5,
-      "name": "vignesh",
-      "roePct": "2.0648",
-      "totalPnl": "4.093259",
+      "name": "OlivineCrackers",
+      "roePct": "8.676",
+      "totalPnl": "3.860686",
       "tradeCount": 0,
-      "toolsUsed": []
+      "toolsUsed": [
+        "strategy_get_clearinghouse_state"
+      ]
     }
   ],
   "recommendations": [
     {
       "action": "study_top_strategies",
       "confidence": "medium",
-      "reason": "Arena top 5 avg PnL $21.49 vs ours $-51.11. Study their patterns.",
+      "reason": "Arena top 5 avg PnL $50.00 vs ours $-51.11. Study their patterns.",
       "risk": "neutral"
     },
     {
