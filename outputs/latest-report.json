@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-22T02:16:54Z",
+  "generatedAt": "2026-05-22T02:33:01Z",
   "source": "live",
   "strategy": {
     "name": "wolf-primary",
@@ -10,7 +10,7 @@
   },
   "regime": {
     "mode": "RISK_OFF",
-    "reason": "override #36 \u2014 RISK_OFF enforced by JIDO",
+    "reason": "override #37 \u2014 RISK_OFF enforced by JIDO",
     "enforcedBy": "jido-emergency",
     "marketSignal": null
   },
@@ -46,7 +46,7 @@
   "positions": [],
   "market": {},
   "actions": [
-    "JIDO heartbeat #242"
+    "JIDO heartbeat #243"
   ],
   "alerts": [
     "CATASTROPHIC DRAWDOWN: 100.0%"
@@ -58,7 +58,7 @@
     "mcpConsecutiveFailures": "0"
   },
   "warnings": [
-    "VPS decommissioned 59+ days \u2014 treat as decommissioned",
-    "Dead-strategy run #242, equity=$0 since 2026-05-14"
+    "VPS decommissioned 60+ days \u2014 treat as decommissioned",
+    "Dead-strategy run #243, equity=$0 since 2026-05-14"
   ]
 }
