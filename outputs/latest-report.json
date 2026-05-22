@@ -1,64 +1,28 @@
 {
-  "generatedAt": "2026-05-22T01:47:41Z",
-  "source": "live",
-  "jidoRunType": "dead-strategy-fast-path",
-  "runNumber": 241,
-  "overrideNumber": 35,
-  "regime": {
-    "mode": "RISK_OFF",
-    "reason": "dead-strategy equity=$0, run #241",
-    "enforcedBy": "jido-emergency",
-    "marketSignal": null
-  },
-  "portfolio": {
-    "equity": {
-      "value": 0.0,
-      "currency": "USD"
-    },
-    "peakEquity": {
-      "value": 100.0,
-      "currency": "USD"
-    },
-    "drawdownPct": 100.0,
-    "withdrawable": 0.0,
-    "openPositions": 0,
-    "openOrders": 0,
-    "dailyPnl": 0.0
-  },
+  "generatedAt": "2026-05-22T02:01:07Z",
+  "regime": "RISK_OFF",
+  "equity": 0.0,
+  "peakEquity": 100.0,
+  "drawdownPct": 100.0,
+  "dailyPnl": 0,
+  "dailyCloses": 0,
+  "dailyWinRate": 0,
+  "openPositions": 0,
+  "alerts": [
+    "CATASTROPHIC DRAWDOWN: 100.0%"
+  ],
+  "deadWeight": [],
   "guardrails": {
-    "catastrophicDrawdown": {
-      "threshold": 20,
-      "actual": 100.0,
-      "breached": true
-    },
-    "consecutiveStopOuts": {
-      "threshold": 4,
-      "actual": 0,
-      "breached": false
-    },
-    "dailyLossLimit": {
-      "threshold": 10,
-      "actual": 0.0,
-      "breached": false
-    }
-  },
-  "strategy": {
-    "name": "WOLF-Primary",
-    "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
-    "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce",
-    "budget": 100,
-    "remaining": 0.0
-  },
-  "infrastructure": {
-    "vpsStatus": "decommissioned",
-    "vpsOfflineSince": "2026-03-23",
-    "mcpStatus": "online",
-    "mcpConsecutiveFailures": "0"
-  },
-  "actions": [],
-  "warnings": [
-    "Strategy equity=$0 since 2026-05-14 (VPS decommissioned 2026-03-23)",
-    "Dead-strategy run #241, override #35",
-    "MCP online \u2014 live data confirmed equity=$0, 0 positions on clearinghouse"
-  ]
+    "dailyLossLimitPct": 10,
+    "catastrophicDrawdownPct": 20,
+    "maxConsecutiveStopOuts": 4,
+    "directionalCapPct": 70,
+    "minLeverage": 7,
+    "maxLeverage": 10,
+    "maxPositionsTotal": 3,
+    "perAssetCooldownMinutes": 120,
+    "bannedAssetPrefixes": [
+      "xyz:"
+    ]
+  }
 }
