@@ -1,9 +1,9 @@
 {
   "source": "live",
-  "timestamp": "2026-05-22T02:46:18Z",
+  "timestamp": "2026-05-22T03:02:28Z",
   "regime": {
     "mode": "RISK_OFF",
-    "reason": "Dead-strategy run #244, equity=$0, DD 100.0%",
+    "reason": "Dead-strategy run #245, equity=$0, DD 100.0%",
     "enforcedBy": "jido-emergency",
     "marketSignal": null
   },
@@ -51,6 +51,6 @@
   },
   "warnings": [],
   "actions": [
-    "Dead-strategy fast-path run #244, RISK_OFF override #38 enforced"
+    "Dead-strategy fast-path run #245, RISK_OFF override #39 enforced"
   ]
 }
