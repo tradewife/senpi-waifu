@@ -1,30 +1,30 @@
 {
-  "generatedAt": "2026-05-22T02:33:01Z",
   "source": "live",
-  "strategy": {
-    "name": "wolf-primary",
-    "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
-    "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce",
-    "budget": 100,
-    "remaining": 0.0
-  },
+  "timestamp": "2026-05-22T02:46:18Z",
   "regime": {
     "mode": "RISK_OFF",
-    "reason": "override #37 \u2014 RISK_OFF enforced by JIDO",
+    "reason": "Dead-strategy run #244, equity=$0, DD 100.0%",
     "enforcedBy": "jido-emergency",
     "marketSignal": null
   },
   "portfolio": {
     "equity": {
       "current": 0.0,
-      "peak": 100.0,
-      "dayStart": 0.0
+      "peak": 100.0
     },
     "drawdown": {
-      "pctFromPeak": 100.0,
-      "isBreached": true
+      "pct": 100.0,
+      "abs": 100.0
     },
-    "dailyPnl": 0.0
+    "openPositions": 0,
+    "openOrders": 0
+  },
+  "strategy": {
+    "name": "wolf-primary",
+    "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
+    "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce",
+    "budget": 0.0,
+    "remaining": 0.0
   },
   "guardrails": {
     "catastrophicDrawdown": {
@@ -32,33 +32,25 @@
       "actual": 100.0,
       "breached": true
     },
-    "consecutiveStopOuts": {
-      "threshold": 4,
-      "actual": 0,
-      "breached": false
-    },
     "dailyLossLimit": {
       "threshold": 10,
       "actual": 0.0,
       "breached": false
+    },
+    "consecutiveStopOuts": {
+      "threshold": 4,
+      "actual": 0,
+      "breached": false
     }
   },
-  "positions": [],
-  "market": {},
-  "actions": [
-    "JIDO heartbeat #243"
-  ],
-  "alerts": [
-    "CATASTROPHIC DRAWDOWN: 100.0%"
-  ],
   "infrastructure": {
     "vpsStatus": "decommissioned",
-    "vpsOfflineSince": "2026-03-23T23:57:15Z",
+    "vpsOfflineSince": "2026-03-23T00:00:00Z",
     "mcpStatus": "online",
     "mcpConsecutiveFailures": "0"
   },
-  "warnings": [
-    "VPS decommissioned 60+ days \u2014 treat as decommissioned",
-    "Dead-strategy run #243, equity=$0 since 2026-05-14"
+  "warnings": [],
+  "actions": [
+    "Dead-strategy fast-path run #244, RISK_OFF override #38 enforced"
   ]
 }
