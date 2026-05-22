@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-05-21T23:46:44Z",
+  "generatedAt": "2026-05-22T01:32:46Z",
   "source": "live",
   "jidoRunType": "dead-strategy-fast-path",
-  "runNumber": 239,
-  "overrideNumber": 33,
+  "runNumber": 240,
+  "overrideNumber": 34,
   "regime": {
     "mode": "RISK_OFF",
-    "reason": "dead-strategy equity=$0, run #239",
+    "reason": "dead-strategy equity=$0, run #240",
     "enforcedBy": "jido-emergency",
     "marketSignal": null
   },
@@ -58,7 +58,7 @@
   "actions": [],
   "warnings": [
     "Strategy equity=$0 since 2026-05-14 (VPS decommissioned 2026-03-23)",
-    "Dead-strategy run #239, override #33",
+    "Dead-strategy run #240, override #34",
     "MCP online \u2014 live data confirmed equity=$0, 0 positions on clearinghouse"
   ]
 }
