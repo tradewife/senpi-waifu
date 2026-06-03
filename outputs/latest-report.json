@@ -1,29 +1,32 @@
 {
   "source": "live",
-  "timestamp": "2026-05-22T03:02:28Z",
+  "timestamp": "2026-06-03T22:21:32Z",
+  "generatedAt": "2026-06-03T22:21:32Z",
   "regime": {
     "mode": "RISK_OFF",
-    "reason": "Dead-strategy run #245, equity=$0, DD 100.0%",
+    "reason": "Dead-strategy run #246, equity=$0, DD 100.0% \u2014 RISK_OFF override #40",
     "enforcedBy": "jido-emergency",
     "marketSignal": null
   },
   "portfolio": {
     "equity": {
       "current": 0.0,
-      "peak": 100.0
+      "peak": 100.0,
+      "dayStart": 0.0
     },
     "drawdown": {
-      "pct": 100.0,
-      "abs": 100.0
+      "pctFromPeak": 100.0,
+      "isBreached": true
     },
     "openPositions": 0,
-    "openOrders": 0
+    "openOrders": 0,
+    "dailyPnl": 0.0
   },
   "strategy": {
     "name": "wolf-primary",
     "wallet": "0xb08029bf3d8472cfddbc1c5df4ad18e98ca24db1",
     "strategyId": "c070acba-bea9-457c-977e-b0ddb3dcc9ce",
-    "budget": 0.0,
+    "budget": 100.0,
     "remaining": 0.0
   },
   "guardrails": {
@@ -43,14 +46,35 @@
       "breached": false
     }
   },
+  "positions": [],
+  "market": {
+    "BTC": 0.0,
+    "ETH": 0.0,
+    "SOL": 0.0
+  },
+  "actions": [
+    "Dead-strategy fast-path run #246, RISK_OFF override #40 enforced"
+  ],
+  "alerts": [
+    {
+      "type": "JIDO_HEARTBEAT",
+      "timestamp": "2026-06-03T22:21:32Z",
+      "regime": "RISK_OFF",
+      "accountValue": 0.0,
+      "drawdownPct": 100.0,
+      "openPositions": 0,
+      "openOrders": 0,
+      "message": "Dead-strategy run #246, equity=$0, MCP online confirmed 0 positions \u2014 RISK_OFF override #40"
+    }
+  ],
   "infrastructure": {
     "vpsStatus": "decommissioned",
-    "vpsOfflineSince": "2026-03-23T00:00:00Z",
+    "vpsOfflineSince": "2026-03-23T23:57:15Z",
     "mcpStatus": "online",
     "mcpConsecutiveFailures": "0"
   },
-  "warnings": [],
-  "actions": [
-    "Dead-strategy fast-path run #245, RISK_OFF override #39 enforced"
+  "warnings": [
+    "VPS decommissioned 71+ days \u2014 treat as decommissioned",
+    "Dead-strategy run #246, equity=$0 since 2026-05-14"
   ]
 }
