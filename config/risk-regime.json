@@ -1,8 +1,8 @@
 {
-  "riskMode": "RISK_OFF",
-  "updatedBy": "jido-emergency",
-  "updatedAt": "2026-06-03T22:36:21Z",
-  "reason": "Dead-strategy run #247, equity=$0, DD 100.0% \u2014 RISK_OFF override #41",
+  "riskMode": "BASELINE",
+  "updatedBy": "waifu-regime",
+  "updatedAt": "2026-06-03T23:00:16Z",
+  "reason": "MCP error: {'code': 'UNAVAILABLE', 'message': 'Hyperliquid API error type=candleSnapshot status=502', 'details': {'service': 'hyperliquid', 'operation': 'candleSnapshot', 'method': 'POST', 'endpoint': '/info', 'status': 502, 'response': '', 'isNetworkError': False}}",
   "parameters": {
     "maxSlots": 0,
     "maxLeverage": 0,
