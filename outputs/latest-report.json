@@ -1,10 +1,10 @@
 {
   "source": "live",
-  "timestamp": "2026-06-03T22:21:32Z",
-  "generatedAt": "2026-06-03T22:21:32Z",
+  "timestamp": "2026-06-03T22:36:21Z",
+  "generatedAt": "2026-06-03T22:36:21Z",
   "regime": {
     "mode": "RISK_OFF",
-    "reason": "Dead-strategy run #246, equity=$0, DD 100.0% \u2014 RISK_OFF override #40",
+    "reason": "Dead-strategy run #247, equity=$0, DD 100.0% \u2014 RISK_OFF override #41",
     "enforcedBy": "jido-emergency",
     "marketSignal": null
   },
@@ -53,18 +53,18 @@
     "SOL": 0.0
   },
   "actions": [
-    "Dead-strategy fast-path run #246, RISK_OFF override #40 enforced"
+    "Dead-strategy fast-path run #247, RISK_OFF override #41 enforced"
   ],
   "alerts": [
     {
       "type": "JIDO_HEARTBEAT",
-      "timestamp": "2026-06-03T22:21:32Z",
+      "timestamp": "2026-06-03T22:36:21Z",
       "regime": "RISK_OFF",
       "accountValue": 0.0,
       "drawdownPct": 100.0,
       "openPositions": 0,
       "openOrders": 0,
-      "message": "Dead-strategy run #246, equity=$0, MCP online confirmed 0 positions \u2014 RISK_OFF override #40"
+      "message": "Dead-strategy run #247, equity=$0, MCP online confirmed 0 positions \u2014 RISK_OFF override #41"
     }
   ],
   "infrastructure": {
@@ -75,6 +75,6 @@
   },
   "warnings": [
     "VPS decommissioned 71+ days \u2014 treat as decommissioned",
-    "Dead-strategy run #246, equity=$0 since 2026-05-14"
+    "Dead-strategy run #247, equity=$0 since 2026-05-14"
   ]
 }
