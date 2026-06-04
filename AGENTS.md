@@ -284,7 +284,7 @@ $ waifu review
 $ waifu config show
 =======================================================
   WAIFU CONFIGURATION
-  Config file: /home/kt/senpi-waifu/.env
+  Config file: /home/kt/projects/senpi-waifu/.env
 =======================================================
 
 📋 Required:
@@ -294,7 +294,7 @@ $ waifu config show
       (.env)
 
 📦 Optional:
-   SENPI_WAIFU_DIR: /home/kt/senpi-waifu
+   SENPI_WAIFU_DIR: /home/kt/projects/senpi-waifu
    GITHUB_REPO: tradewife/senpi-waifu
    TELEGRAM_BOT_TOKEN: 8660********8Fbs
       (.env)
@@ -315,7 +315,7 @@ $ waifu config show
 ```
 $ waifu config set SENPI_AUTH_TOKEN "eyJhbG..."
 ✅ Set SENPI_AUTH_TOKEN=eyJh***...8llig
-   Written to /home/kt/senpi-waifu/.env
+   Written to /home/kt/projects/senpi-waifu/.env
 ```
 
 ---
@@ -603,7 +603,7 @@ waifu debug logs -n 100
 Ensure SENPI_WAIFU_DIR is set:
 
 ```bash
-export SENPI_WAIFU_DIR=/home/kt/senpi-waifu
+export SENPI_WAIFU_DIR=/home/kt/projects/senpi-waifu
 waifu status
 ```
 
