@@ -10,14 +10,16 @@ from datetime import datetime, timezone
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "lib"))
 
-from senpi_common import (
+from phaux_common import (
     acquire_lock,
     release_lock,
     log,
     now_iso,
     load_json,
     save_json,
-    mcporter_read,
+    hl_get_candles,
+    hl_get_funding_rates,
+    hl_get_all_mids,
     send_telegram,
     current_regime_params,
     get_enabled_strategies,
@@ -94,45 +96,13 @@ def calc_rsi(closes, period=14):
 
 
 def get_sm_direction(coin):
-    data = mcporter_read("leaderboard_get_markets", {})
-    if "error" in data:
-        return None, 0
-    markets = data.get("data", data)
-    if isinstance(markets, dict):
-        markets = markets.get("markets", [])
-    if not isinstance(markets, list):
-        return None, 0
-
-    for m in markets:
-        if isinstance(m, dict):
-            token = m.get("token", m.get("coin", m.get("asset", "")))
-            if token == coin:
-                direction = m.get("direction", m.get("side", "")).upper()
-                pct = float(m.get("longPct", 50))
-                if direction == "SHORT":
-                    pct = 100 - pct
-                return direction, pct
-    return "NEUTRAL", 50
+    """Scanner depowered — SM direction disabled. Only evaluator may call MCP."""
+    return None, 0
 
 
 def get_top_assets(n=10):
-    data = mcporter_read("market_list_instruments", {})
-    if "error" in data:
-        return []
-    instruments = data.get("data", [])
-    if not instruments:
-        return []
-
-    assets = []
-    for inst in instruments:
-        if not inst.get("is_delisted"):
-            coin = inst.get("name", "")
-            vol = float(inst.get("volume24h", 0))
-            if coin and vol > 0 and not coin.lower().startswith("xyz:"):
-                assets.append({"coin": coin, "volume": vol})
-
-    assets.sort(key=lambda x: x["volume"], reverse=True)
-    return [a["coin"] for a in assets[:n]]
+    """Scanner depowered — instrument listing disabled. Only evaluator may call MCP."""
+    return []
 
 
 # ─── Analysis ────────────────────────────────────────────────
@@ -140,17 +110,22 @@ def get_top_assets(n=10):
 
 def build_thesis(coin, config):
     entry_cfg = config.get("entry", {})
-    data = mcporter_read(
-        "market_get_asset_data",
-        {
-            "asset": coin,
-            "candle_intervals": ["15m", "1h", "4h"],
-            "include_funding": True,
-        },
-    )
-    if "error" in data:
-        return None
-    asset_data = data.get("data", data)
+    c15m = hl_get_candles(coin, "15m", 20)
+    c1h = hl_get_candles(coin, "1h", 20)
+    c4h = hl_get_candles(coin, "4h", 20)
+    fr = hl_get_funding_rates(coin)
+    funding = 0.0
+    if isinstance(fr, list) and fr:
+        funding = float(fr[-1].get("fundingRate", 0))
+    elif isinstance(fr, dict) and "error" not in fr:
+        funding = float(fr.get("fundingRate", 0))
+    mids = hl_get_all_mids()
+    price = float(mids.get(coin, 0)) if isinstance(mids, dict) else 0.0
+    asset_data = {
+        "candles": {"15m": c15m, "1h": c1h, "4h": c4h},
+        "funding": funding,
+        "markPrice": price,
+    }
 
     candles_15m = asset_data.get("candles", {}).get("15m", [])
     candles_1h = asset_data.get("candles", {}).get("1h", [])
@@ -235,13 +210,15 @@ def build_thesis(coin, config):
 
 
 def evaluate_held_position(coin, direction, entry_cfg):
-    data = mcporter_read(
-        "market_get_asset_data",
-        {"asset": coin, "candle_intervals": ["1h", "4h"], "include_funding": True},
-    )
-    if "error" in data:
-        return True, ["data_unavailable"]
-    asset_data = data.get("data", data)
+    c1h = hl_get_candles(coin, "1h", 20)
+    c4h = hl_get_candles(coin, "4h", 20)
+    fr = hl_get_funding_rates(coin)
+    funding = 0.0
+    if isinstance(fr, list) and fr:
+        funding = float(fr[-1].get("fundingRate", 0))
+    elif isinstance(fr, dict) and "error" not in fr:
+        funding = float(fr.get("fundingRate", 0))
+    asset_data = {"candles": {"1h": c1h, "4h": c4h}, "funding": funding}
 
     candles_1h = asset_data.get("candles", {}).get("1h", [])
     candles_4h = asset_data.get("candles", {}).get("4h", [])

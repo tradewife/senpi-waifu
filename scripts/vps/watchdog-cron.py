@@ -16,11 +16,12 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "lib"))
 
-from senpi_common import (
+from phaux_common import (
     acquire_lock, release_lock, log, now_iso,
     load_json, save_json,
     get_enabled_strategies, get_open_positions,
-    mcporter_call, send_telegram, record_trade, git_sync,
+    vulcan_paper_positions, vulcan_paper_close,
+    send_telegram, record_trade,
     record_heartbeat,
 )
 
@@ -31,17 +32,8 @@ ROE_WARN_PCT = -15       # Alert if ROE < -15%
 
 
 def get_portfolio_positions() -> list[dict]:
-    """Fetch live position data from broker via mcporter."""
-    result = mcporter_call("account_get_portfolio", {}, timeout=15)
-    if "error" in result:
-        log(f"Watchdog: portfolio fetch failed: {result['error']}")
-        return []
-
-    data = result.get("data", result)
-    positions = data.get("positions", data.get("openPositions", []))
-    if isinstance(positions, dict):
-        positions = positions.get("positions", [])
-    return positions if isinstance(positions, list) else []
+    """Fetch live paper position data via Vulcan."""
+    return vulcan_paper_positions()
 
 
 def find_live_position(live_positions: list[dict], asset: str) -> dict | None:
@@ -54,16 +46,12 @@ def find_live_position(live_positions: list[dict], asset: str) -> dict | None:
 
 
 def emergency_close(dsl_state: dict, reason: str):
-    """Emergency close a position."""
+    """Emergency close a position via Vulcan paper trading."""
     asset = dsl_state["asset"]
-    strategy_id = dsl_state.get("strategyId")
 
     log(f"WATCHDOG EMERGENCY CLOSE: {asset} reason={reason}")
 
-    mcporter_call("strategy_close_position", {
-        "strategyId": strategy_id,
-        "asset": asset,
-    }, timeout=15)
+    vulcan_paper_close(asset)
 
     dsl_state["active"] = False
     dsl_state["closedAt"] = now_iso()
@@ -160,9 +148,6 @@ def main():
                         f"⚠️ WATCHDOG: {asset} ROE {roe:.1f}%\n"
                         f"Below {ROE_WARN_PCT}% threshold. DSL should be managing this."
                     )
-
-        if had_emergency:
-            git_sync("auto: watchdog emergency close")
 
     finally:
         release_lock("watchdog")

@@ -23,11 +23,9 @@ from datetime import datetime, timezone, timedelta
 # Add lib to path
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "lib"))
 
-from senpi_common import (
+from phaux_common import (
     acquire_lock,
     release_lock,
-    git_pull,
-    git_sync,
     log,
     load_json,
     save_json,
@@ -42,7 +40,6 @@ from senpi_common import (
     add_pending_entry,
     record_trade,
     send_telegram,
-    mcporter_read,
     record_heartbeat,
 )
 
@@ -78,14 +75,7 @@ MIN_VOL_RATIO = 0.5
 
 
 def fetch_momentum_events() -> list[dict]:
-    """Fetch real-time momentum threshold crossing events."""
-    result = mcporter_read("leaderboard_get_momentum_events", {})
-    if "error" in result:
-        log(f"Momentum events fetch failed: {result['error']}")
-        return []
-    events = result.get("events", result.get("data", result))
-    if isinstance(events, list):
-        return events
+    """Scanner depowered — momentum events disabled. Only evaluator may call MCP."""
     return []
 
 
@@ -157,23 +147,7 @@ def filter_by_quality(events: list[dict]) -> list[dict]:
 
 
 def check_market_confirmation(asset: str) -> tuple[bool, int]:
-    """
-    Check aggregate SM concentration on the asset.
-    Returns (confirmed, trader_count).
-    """
-    result = mcporter_read("leaderboard_get_markets", {})
-    if "error" in result:
-        return False, 0
-
-    markets = result.get("markets", result.get("data", result))
-    if not isinstance(markets, list):
-        return False, 0
-
-    for market in markets:
-        if market.get("asset", "") == asset:
-            trader_count = int(market.get("traderCount", market.get("traders", 0)))
-            return trader_count >= MIN_MARKET_TRADERS, trader_count
-
+    """Scanner depowered — market confirmation disabled. Only evaluator may call MCP."""
     return False, 0
 
 
@@ -183,30 +157,8 @@ def check_market_confirmation(asset: str) -> tuple[bool, int]:
 
 
 def check_volume_confirmation(asset: str) -> tuple[bool, float]:
-    """
-    Check 1h volume vs 6h average.
-    Returns (confirmed, volume_ratio).
-    """
-    result = mcporter_read("market_get_asset_data", {"asset": asset})
-    if "error" in result:
-        return False, 0.0
-
-    data = result.get("data", result)
-    if not isinstance(data, dict):
-        data = result
-
-    vol_1h = float(data.get("volume1h", data.get("vol1h", 0)))
-    vol_6h = float(data.get("volume6h", data.get("vol6h", 0)))
-
-    if vol_6h <= 0:
-        return False, 0.0
-
-    avg_1h_from_6h = vol_6h / 6
-    if avg_1h_from_6h <= 0:
-        return False, 0.0
-
-    ratio = vol_1h / avg_1h_from_6h
-    return ratio >= MIN_VOL_RATIO, round(ratio, 2)
+    """Scanner depowered — volume confirmation disabled. Only evaluator may call MCP."""
+    return False, 0.0
 
 
 # ============================================================================
@@ -538,9 +490,7 @@ def main():
 
     try:
         record_heartbeat("komodo")
-        git_pull()
         scan()
-        git_sync("auto: KOMODO scan")
     finally:
         release_lock("komodo-scanner")
 

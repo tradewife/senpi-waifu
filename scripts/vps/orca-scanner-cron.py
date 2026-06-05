@@ -32,11 +32,9 @@ from datetime import datetime, timezone, timedelta
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "lib"))
 
-from senpi_common import (
+from phaux_common import (
     acquire_lock,
     release_lock,
-    git_pull,
-    git_sync,
     log,
     now_iso,
     load_json,
@@ -517,7 +515,6 @@ def main():
 
     try:
         record_heartbeat("orca")
-        git_pull()
 
         # v1.3: Check daily entry cap BEFORE fetching markets
         tc = load_trade_counter()
@@ -567,8 +564,6 @@ def main():
             )
             add_pending_entry({**sig, "autoEntered": False, "scanner": "orca"})
             increment_trade_counter()
-
-        git_sync("auto: ORCA scan")
 
     finally:
         release_lock("orca-scanner")

@@ -1,16 +1,16 @@
 {
   "evaluate": {
-    "minScore": 7,
+    "minScore": 5,
     "maxLeverage": 10,
     "maxPositions": 3,
-    "cooldownMinutes": 120,
-    "description": "Manual evaluation thresholds (TradeEvaluator)"
+    "cooldownMinutes": 30,
+    "description": "Paper mode — lowered thresholds for testing"
   },
   "jido": {
-    "roi_threshold_auto": 0.16,
-    "minScore": 6,
+    "roi_threshold_auto": 0.0,
+    "minScore": 5,
     "autoExecuteEnabled": true,
-    "description": "Autonomous execution thresholds (Jido)"
+    "description": "Paper mode — auto-execute all approved signals"
   },
   "fixed_tp_roe": {
     "enabled": false,

@@ -1,12 +1,44 @@
 {
-  "riskMode": "BASELINE",
-  "updatedBy": "waifu-regime",
-  "updatedAt": "2026-06-04T04:01:19Z",
-  "reason": "Mixed signals (slope=-1.5%, ATR=2.6%)",
-  "parameters": {
-    "maxSlots": 0,
-    "maxLeverage": 0,
-    "allocPct": 0,
-    "autoEntry": false
+  "riskMode": "RISK_ON",
+  "riskModeLocked": true,
+  "updatedAt": "2026-06-05T06:18:00Z",
+  "updatedBy": "phaux-manual",
+  "reason": "Paper mode — RISK_ON locked for maximum signal testing",
+  "regimes": {
+    "RISK_ON": {
+      "maxSlots": 3,
+      "maxLeverageCrypto": 10,
+      "allocPctPerSlot": 30,
+      "newEntriesAllowed": true,
+      "autoEntryEnabled": true
+    },
+    "BASELINE": {
+      "maxSlots": 2,
+      "maxLeverageCrypto": 10,
+      "allocPctPerSlot": 25,
+      "newEntriesAllowed": true,
+      "autoEntryEnabled": true
+    },
+    "RISK_OFF": {
+      "maxSlots": 0,
+      "maxLeverageCrypto": 7,
+      "allocPctPerSlot": 0,
+      "newEntriesAllowed": false,
+      "autoEntryEnabled": false
+    }
+  },
+  "globalGuardrails": {
+    "dailyLossLimitPct": 10,
+    "catastrophicDrawdownPct": 20,
+    "maxConsecutiveStopOuts": 4,
+    "directionalCapPct": 70,
+    "minLeverage": 7,
+    "maxLeverage": 10,
+    "maxPositionsTotal": 3,
+    "perAssetCooldownMinutes": 30,
+    "bannedAssetPrefixes": [
+      "xyz:"
+    ],
+    "singleTradeLossPct": 5
   }
 }

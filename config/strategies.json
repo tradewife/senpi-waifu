@@ -1,0 +1,16 @@
+{
+  "strategies": {
+    "primary": {
+      "enabled": true,
+      "name": "Primary",
+      "budget": 1000,
+      "maxSlots": 2,
+      "defaultLeverage": 8,
+      "dslPreset": "high_water"
+    }
+  },
+  "global": {
+    "workspace": "",
+    "stateDir": "state"
+  }
+}

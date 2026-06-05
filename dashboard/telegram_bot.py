@@ -1,5 +1,5 @@
 """
-Senpi Telegram Bot — pure remote for the waifu-cli strategic suite.
+Phaux Telegram Bot — pure remote for the phaux-cli strategic suite.
 
 Runs as an async background task inside the dashboard FastAPI app.
 On startup, registers the command menu with BotFather automatically.
@@ -8,9 +8,8 @@ On startup, registers the command menu with BotFather automatically.
    Railway runs the mechanical layer — scanners, DSL trailing stops,
    Risk Arbiter. No LLM, sub-2s execution.
 
-   This bot exposes 11 strategic commands that delegate to waifu-cli.
-   Free-text messages are dispatched to the Strategic Brain (Hermes Apollo)
-   via the `hermes chat` subcommand.
+   This bot exposes 11 strategic commands that delegate to phaux-cli.
+   Free-text messages return a no-op response (LLM brain disabled in phaux mode).
 """
 
 import asyncio
@@ -40,7 +39,7 @@ from telegram.ext import (
 # Config
 # ---------------------------------------------------------------------------
 
-STATE_DIR = Path(os.environ.get("SENPI_WAIFU_DIR", "/app"))
+STATE_DIR = Path(os.environ.get("PHAUX_DIR", Path(__file__).parent.parent))
 CONFIG_DIR = STATE_DIR / "config"
 POSITION_STATE_DIR = STATE_DIR / "state"
 MEMORY_DIR = STATE_DIR / "memory"
@@ -50,7 +49,7 @@ USER_RULES_FILE = CONFIG_DIR / "user-rules.json"
 TELEGRAM_BOT_TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN", "")
 TELEGRAM_CHAT_ID = os.environ.get("TELEGRAM_CHAT_ID", "")
 
-CHILD_ENV = {**os.environ, "SENPI_WAIFU_DIR": str(STATE_DIR)}
+CHILD_ENV = {**os.environ, "PHAUX_DIR": str(STATE_DIR)}
 
 # Command descriptions — registered with BotFather and shown in /help.
 # Each tuple: (command, short_desc_for_menu, detailed_desc_for_help)
@@ -416,13 +415,13 @@ async def cmd_start(update: Update, context: ContextTypes.DEFAULT_TYPE):
 # ---------------------------------------------------------------------------
 
 
-async def _waifu_cli(update: Update, cmd: str, timeout: int = 90) -> None:
-    """Run a waifu-cli command and reply with the output."""
+async def _phaux_cli(update: Update, cmd: str, timeout: int = 90) -> None:
+    """Run a phaux-cli command and reply with the output."""
     if not update.message:
         return
     waifu_bin = shutil.which("waifu")
     if not waifu_bin:
-        await _safe_reply(update, "❌ waifu-cli not found in PATH.")
+        await _safe_reply(update, "❌ phaux-cli not found in PATH.")
         return
     output = await run_script_async([waifu_bin, cmd], timeout=timeout)
     if len(output) > 4000:
@@ -945,7 +944,7 @@ async def _handle_rules_set(update: Update, key: str, value: str):
             "python3",
             "-c",
             "import sys; sys.path.insert(0,'scripts/lib'); "
-            "import senpi_common as sc; "
+            "import phaux_common as sc; "
             "sc.git_sync('strat: rule update via telegram')",
             stdout=asyncio.subprocess.PIPE,
             stderr=asyncio.subprocess.PIPE,
@@ -1087,7 +1086,7 @@ def _get_current_gates() -> dict:
     import sys
 
     sys.path.insert(0, str(Path(__file__).parent.parent / "scripts" / "lib"))
-    from senpi_common import load_global_guardrails, load_user_min_scores
+    from phaux_common import load_global_guardrails, load_user_min_scores
 
     guardrails = load_global_guardrails()
     base_scores = dict(DEFAULT_MIN_SCORES)
@@ -1284,7 +1283,7 @@ async def _handle_gates_set(update: Update, key: str, value_str: str):
             "python3",
             "-c",
             "import sys; sys.path.insert(0,'scripts/lib'); "
-            "import senpi_common as sc; "
+            "import phaux_common as sc; "
             "sc.git_sync('strat: gate update via telegram')",
             stdout=asyncio.subprocess.PIPE,
             stderr=asyncio.subprocess.PIPE,
@@ -1397,7 +1396,7 @@ async def cmd_gates_reset(update: Update, context: ContextTypes.DEFAULT_TYPE):
             "python3",
             "-c",
             "import sys; sys.path.insert(0,'scripts/lib'); "
-            "import senpi_common as sc; "
+            "import phaux_common as sc; "
             "sc.git_sync('strat: gates reset via telegram')",
             stdout=asyncio.subprocess.PIPE,
             stderr=asyncio.subprocess.PIPE,
@@ -1636,7 +1635,7 @@ def _build_set_help_text() -> str:
 
 
 # ---------------------------------------------------------------------------
-# Free text → Strategic Brain (Hermes Apollo)
+# Free text → no-op in phaux mode
 # ---------------------------------------------------------------------------
 
 
@@ -1696,105 +1695,32 @@ def _strip_tui_artifacts(text: str) -> str:
 
 
 async def _call_hermes(message: str, timeout: int = 120) -> str:
-    """Call hermes binary and return the response text."""
-    hermes_bin = os.environ.get("HERMES_BIN_PATH", "/usr/local/bin/hermes")
-    if not os.path.isfile(hermes_bin):
-        hermes_bin = shutil.which("hermes") or ""
-    if not hermes_bin:
-        return "⚠️ Hermes binary not found."
-
-    hermes_home = os.environ.get("HERMES_HOME", "/root/.hermes")
-    hermes_model = os.environ.get("HERMES_MODEL", "").strip()
-    hermes_provider = os.environ.get("HERMES_INFERENCE_PROVIDER", "zai").strip()
-
-    glm_key = (
-        os.environ.get("GLM_API_KEY") or os.environ.get("OPENAI_API_KEY", "")
-    ).strip()
-    glm_base = (
-        os.environ.get("GLM_BASE_URL") or os.environ.get("OPENAI_BASE_URL", "")
-    ).strip()
-
-    env = {
-        **CHILD_ENV,
-        "HERMES_HOME": hermes_home,
-        "HERMES_INFERENCE_PROVIDER": hermes_provider,
-        "HERMES_MODEL": hermes_model,
-        "NO_COLOR": "1",
-        "TERM": "dumb",
-    }
-    if glm_key:
-        env["GLM_API_KEY"] = glm_key
-    if glm_base:
-        env["GLM_BASE_URL"] = glm_base
-
-    soul_path = CONFIG_DIR / "hermes-soul.md"
-    if soul_path.exists():
-        env["HERMES_EPHEMERAL_SYSTEM_PROMPT"] = soul_path.read_text()
-
-    cmd_args = [hermes_bin, "chat", "-Q", "-q", message]
-    if hermes_model:
-        cmd_args += ["-m", hermes_model]
-    if hermes_provider:
-        cmd_args += ["--provider", hermes_provider]
-
-    try:
-        proc = await asyncio.create_subprocess_exec(
-            *cmd_args,
-            stdout=asyncio.subprocess.PIPE,
-            stderr=asyncio.subprocess.PIPE,
-            env=env,
-            cwd=str(STATE_DIR),
-        )
-        stdout_raw, stderr_raw = await asyncio.wait_for(
-            proc.communicate(), timeout=timeout
-        )
-        stdout_text = stdout_raw.decode().strip()
-        stderr_text = stderr_raw.decode().strip()
-
-        if proc.returncode != 0:
-            return f"❌ Hermes error (rc={proc.returncode}): {stderr_text[:200]}"
-
-        return stdout_text or stderr_text
-    except asyncio.TimeoutError:
-        return "⏱ Hermes timed out."
-    except Exception as e:
-        return f"❌ Hermes exception: {e}"
+    """LLM brain disabled in phaux mode."""
+    return "Phaux mode: LLM brain is disabled. Use /commands to control the system."
 
 
 @authorized
 async def handle_free_text(update: Update, context: ContextTypes.DEFAULT_TYPE):
     if not update.message:
-        logger.warning("handle_free_text: update.message is None")
         return
-
     message = update.message.text.strip()
     if not message:
         return
+    await _safe_reply(
+        update,
+        "⚠️ *Phaux Mode*\n\n"
+        "LLM brain is disabled. Use /commands to control the system.\n"
+        "Type /start for the control panel.",
+        parse_mode="Markdown",
+    )
 
-    hermes_bin = os.environ.get("HERMES_BIN_PATH", "/usr/local/bin/hermes")
-    if not os.path.isfile(hermes_bin):
-        hermes_bin = shutil.which("hermes") or ""
 
-    if not hermes_bin:
-        await _safe_reply(
-            update,
-            "⚠️ *Brain not available*\n\n"
-            "Hermes binary not found.\n"
-            "Set `OPENAI\\_API\\_KEY` and `OPENAI\\_BASE\\_URL` for Hermes.",
-            parse_mode="Markdown",
-        )
-        return
+# ---------------------------------------------------------------------------
+# Callback query handler — central router for all inline buttons
+# ---------------------------------------------------------------------------
 
-    logger.info("brain dispatch: hermes=%s query=%r", hermes_bin, message[:80])
-    progress_msg = await _progress_reply(update, "🤖 Thinking...")
 
-    hermes_home = os.environ.get("HERMES_HOME", "/root/.hermes")
-    hermes_model = os.environ.get("HERMES_MODEL", "").strip()
-    hermes_provider = os.environ.get("HERMES_INFERENCE_PROVIDER", "zai").strip()
-
-    hermes_env_path = Path(hermes_home) / ".env"
-    try:
-        hermes_env_path.parent.mkdir(parents=True, exist_ok=True)
+async def _run_waifu_and_edit(query, cmd: str, timeout: int = 120) -> None:
         env_lines = []
         if hermes_env_path.exists():
             for raw_line in hermes_env_path.read_text().splitlines():
@@ -2232,7 +2158,7 @@ async def _handle_action_callback(query, action: str) -> None:
 
         await _safe_edit(query, "🧠 Waifu deciding...")
         output = await run_script_async(
-            ["python3", "-m", "waifu_cli", "regime"],
+            ["python3", "-m", "phaux_cli", "regime"],
             timeout=30,
         )
         regime = load_json(CONFIG_DIR / "risk-regime.json", default={})
@@ -2963,9 +2889,8 @@ async def _handle_action_callback(query, action: str) -> None:
             strategy_id = pos.get("strategyId", "")
             close_script = (
                 "import sys; sys.path.insert(0,'scripts/lib'); "
-                "import senpi_common as sc; "
-                f"r = sc.mcporter_call('strategy_close_position', "
-                f"{{'strategyId': '{strategy_id}', 'asset': '{asset}'}}, timeout=15); "
+                "import phaux_common as sc; "
+                f"r = sc.vulcan_paper_close('{asset}'); "
                 "print('OK' if 'error' not in r else f\"FAIL:{r.get('error')}\")"
             )
             try:
@@ -3023,9 +2948,8 @@ async def _handle_action_callback(query, action: str) -> None:
         strategy_id = target.get("strategyId", "")
         close_script = (
             "import sys; sys.path.insert(0,'scripts/lib'); "
-            "import senpi_common as sc; "
-            f"r = sc.mcporter_call('strategy_close_position', "
-            f"{{'strategyId': '{strategy_id}', 'asset': '{asset}'}}, timeout=15); "
+            "import phaux_common as sc; "
+            f"r = sc.vulcan_paper_close('{asset}'); "
             "print('OK' if 'error' not in r else f\"FAIL:{r.get('error')}\")"
         )
         try:

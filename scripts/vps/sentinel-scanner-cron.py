@@ -17,19 +17,17 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "lib"))
 
-from senpi_common import (
+from phaux_common import (
     CONFIG_DIR,
     acquire_lock,
     add_pending_entry,
     current_regime_params,
     get_enabled_strategies,
-    git_sync,
     is_entries_allowed,
     is_rotation_cooled_down,
     load_json,
     load_trade_journal,
     log,
-    mcporter_read,
     now_iso,
     record_heartbeat,
     release_lock,
@@ -98,152 +96,18 @@ def _safe_int(value, default=0) -> int:
 
 
 def find_rising_assets() -> list[dict]:
-    result = mcporter_read("leaderboard_get_markets", {})
-    if "error" in result:
-        log(f"SENTINEL: leaderboard_get_markets failed: {result.get('error')}")
-        return []
-
-    candidates = []
-    for idx, market in enumerate(_as_market_list(result)):
-        if not isinstance(market, dict):
-            continue
-
-        token = market.get("token", market.get("asset", ""))
-        dex = market.get("dex", "")
-        rank = idx + 1
-        direction = market.get("direction", market.get("side", "")).upper()
-        contribution = _safe_float(
-            market.get("pct_of_top_traders_gain", market.get("contribution", 0))
-        )
-        contrib_change = _safe_float(
-            market.get(
-                "contribution_pct_change_4h", market.get("contributionPctChange4h", 0)
-            )
-        )
-        price_change = _safe_float(
-            market.get("token_price_change_pct_4h", market.get("priceChange4hPct", 0))
-        )
-        trader_count = _safe_int(
-            market.get("trader_count", market.get("traderCount", 0))
-        )
-        max_leverage = _safe_int(
-            market.get("max_leverage", market.get("maxLeverage", 0))
-        )
-
-        if not token or token.lower().startswith("xyz:") or dex.lower() == "xyz":
-            continue
-        if rank < MIN_RANK or rank > MAX_RANK:
-            continue
-        if contribution < MIN_CONTRIBUTION_PCT:
-            continue
-        if contrib_change < MIN_CONTRIB_CHANGE_4H:
-            continue
-        if trader_count < MIN_TRADER_COUNT:
-            continue
-        if max_leverage < 5:
-            continue
-        if direction == "LONG" and price_change < 0:
-            continue
-        if direction == "SHORT" and price_change > 0:
-            continue
-
-        candidates.append(
-            {
-                "token": token,
-                "dex": dex,
-                "rank": rank,
-                "direction": direction,
-                "contribution": contribution,
-                "contrib_change_4h": contrib_change,
-                "price_chg_4h": price_change,
-                "trader_count": trader_count,
-                "max_leverage": max_leverage,
-            }
-        )
-
-    candidates.sort(key=lambda item: item["contrib_change_4h"], reverse=True)
-    return candidates[:10]
+    """Scanner depowered — leaderboard fetch disabled. Only evaluator may call MCP."""
+    return []
 
 
 def check_quality_traders(asset: str) -> list[dict]:
-    now = datetime.now(timezone.utc)
-    from_time = (now - timedelta(minutes=MOMENTUM_LOOKBACK_MINUTES)).isoformat()
-    confirmations = []
-    seen_traders = set()
-
-    for tier in (2, 1):
-        result = mcporter_read(
-            "leaderboard_get_momentum_events",
-            {
-                "tier": tier,
-                "limit": 50,
-                "from": from_time,
-                "to": now.isoformat(),
-            },
-        )
-        if "error" in result:
-            continue
-
-        for event in _as_event_list(result):
-            if not isinstance(event, dict):
-                continue
-            trader_id = event.get("trader_id", event.get("traderId", ""))
-            if not trader_id or trader_id in seen_traders:
-                continue
-
-            positions = event.get("top_positions", event.get("topPositions", []))
-            asset_match = None
-            if isinstance(positions, list):
-                for pos in positions:
-                    market = pos.get("market", pos.get("asset", pos.get("token", "")))
-                    if market == asset:
-                        asset_match = pos
-                        break
-            if not asset_match:
-                continue
-
-            tags = event.get("trader_tags", event.get("traderTags", {}))
-            if not isinstance(tags, dict):
-                continue
-
-            tcs = str(tags.get("tcs", "")).strip().lower()
-            trp = str(tags.get("trp", "")).strip().lower()
-            concentration = _safe_float(event.get("concentration", 0))
-
-            if (
-                tcs in QUALITY_TCS
-                and trp in QUALITY_TRP
-                and concentration >= MIN_CONCENTRATION
-            ):
-                confirmations.append(
-                    {
-                        "trader_id": trader_id,
-                        "tier": tier,
-                        "tcs": tags.get("tcs", ""),
-                        "tas": tags.get("tas", ""),
-                        "trp": tags.get("trp", ""),
-                        "concentration": concentration,
-                        "delta_pnl": _safe_float(
-                            event.get("delta_pnl", event.get("deltaPnl", 0))
-                        ),
-                        "position_direction": asset_match.get(
-                            "direction", asset_match.get("side", "")
-                        ).upper(),
-                        "position_leverage": _safe_float(
-                            asset_match.get("leverage", 0)
-                        ),
-                    }
-                )
-                seen_traders.add(trader_id)
-
-    return confirmations
+    """Scanner depowered — momentum events disabled. Only evaluator may call MCP."""
+    return []
 
 
 def fetch_top_traders() -> list[dict]:
-    result = mcporter_read("leaderboard_get_top", {"limit": TOP_TRADERS_LIMIT})
-    if "error" in result:
-        return []
-    return _as_top_trader_list(result)
+    """Scanner depowered — top traders fetch disabled. Only evaluator may call MCP."""
+    return []
 
 
 def check_top_trader_presence(asset: str, top_traders: list[dict]) -> list[dict]:
@@ -517,8 +381,7 @@ def main():
         return
     try:
         record_heartbeat("sentinel")
-        if scan():
-            git_sync("auto: SENTINEL scan")
+        scan()
     finally:
         release_lock("sentinel-scanner")
 

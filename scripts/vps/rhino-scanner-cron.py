@@ -15,7 +15,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "lib"))
 
-from senpi_common import (
+from phaux_common import (
     CONFIG_DIR,
     POSITION_STATE_DIR,
     acquire_lock,
@@ -24,13 +24,14 @@ from senpi_common import (
     current_regime_params,
     get_enabled_strategies,
     get_open_positions,
-    git_sync,
     is_entries_allowed,
     is_rotation_cooled_down,
     load_json,
     load_trade_journal,
     log,
-    mcporter_read,
+    hl_get_candles,
+    hl_get_funding_rates,
+    hl_get_all_mids,
     now_iso,
     record_heartbeat,
     release_lock,
@@ -122,72 +123,32 @@ def calc_rsi(closes: list[float], period: int = 14) -> float:
 
 
 def get_top_assets(n: int = 10) -> list[dict]:
-    result = mcporter_read("market_list_instruments", {})
-    if "error" in result:
-        return []
-    instruments = result.get("data", result)
-    if isinstance(instruments, dict):
-        instruments = instruments.get("instruments", instruments.get("universe", []))
-    if not isinstance(instruments, list):
-        return []
-
-    assets = []
-    for inst in instruments:
-        if not isinstance(inst, dict):
-            continue
-        coin = inst.get("coin") or inst.get("name", inst.get("token", ""))
-        ctx = inst.get("context", inst)
-        oi = _safe_float(ctx.get("openInterest", ctx.get("oi", 0)))
-        mark_px = _safe_float(ctx.get("markPx", ctx.get("midPx", ctx.get("price", 0))))
-        vol = _safe_float(ctx.get("dayNtlVlm", ctx.get("volume24h", 0)))
-        if not coin or coin.startswith("xyz:"):
-            continue
-        oi_usd = oi * mark_px if mark_px > 0 else 0
-        if oi_usd > 5_000_000 and vol > 0:
-            assets.append(
-                {"coin": coin, "oi_usd": oi_usd, "volume": vol, "price": mark_px}
-            )
-    assets.sort(key=lambda item: item["oi_usd"] + item["volume"], reverse=True)
-    return assets[:n]
+    """Scanner depowered — instrument listing disabled. Only evaluator may call MCP."""
+    return []
 
 
 def get_sm_direction(coin: str) -> tuple[str | None, float]:
-    result = mcporter_read("leaderboard_get_markets", {})
-    if "error" in result:
-        return None, 0.0
-    markets = result.get("data", result)
-    if isinstance(markets, dict):
-        markets = markets.get("markets", markets.get("leaderboard", []))
-    if not isinstance(markets, list):
-        return None, 0.0
-
-    for market in markets:
-        asset = market.get("coin", market.get("asset", market.get("token", "")))
-        if asset != coin:
-            continue
-        long_pct = _safe_float(market.get("longPct", market.get("pctOfGainsLong", 50)))
-        if long_pct > 58:
-            return "LONG", long_pct
-        if long_pct < 42:
-            return "SHORT", 100 - long_pct
-        return "NEUTRAL", 50.0
+    """Scanner depowered — SM direction disabled. Only evaluator may call MCP."""
     return None, 0.0
 
 
 def get_asset_data(coin: str, intervals: list[str]) -> dict | None:
-    result = mcporter_read(
-        "market_get_asset_data",
-        {
-            "asset": coin,
-            "candle_intervals": intervals,
-            "include_funding": True,
-            "include_order_book": False,
-        },
-    )
-    if "error" in result:
-        return None
-    data = result.get("data", result)
-    return data if isinstance(data, dict) else None
+    candles = {}
+    for interval in intervals:
+        candles[interval] = hl_get_candles(coin, interval, 20)
+    fr = hl_get_funding_rates(coin)
+    funding = 0.0
+    if isinstance(fr, list) and fr:
+        funding = float(fr[-1].get("fundingRate", 0))
+    elif isinstance(fr, dict) and "error" not in fr:
+        funding = float(fr.get("fundingRate", 0))
+    mids = hl_get_all_mids()
+    price = float(mids.get(coin, 0)) if isinstance(mids, dict) else 0.0
+    return {
+        "candles": candles,
+        "funding": funding,
+        "markPrice": price,
+    }
 
 
 def build_thesis(coin: str, entry_cfg: dict) -> dict | None:
@@ -445,7 +406,6 @@ def scan() -> bool:
                 pyramid_state["lastAddedAt"] = now_iso()
                 state["pyramids"] = pyramids
                 save_state(state)
-                git_sync("auto: RHINO pyramid add signal")
                 return True
 
     # Priority 2: scout new positions
@@ -537,7 +497,6 @@ def scan() -> bool:
         f"Reasons: {', '.join(best['reasons'][:4])}"
     )
 
-    git_sync("auto: RHINO scan")
     return True
 
 

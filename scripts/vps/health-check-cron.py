@@ -18,16 +18,14 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "lib"))
 
-from senpi_common import (
+from phaux_common import (
     acquire_lock,
     release_lock,
     log,
     now_iso,
     load_json,
     save_json,
-    git_pull,
-    git_sync,
-    mcporter_call,
+    vulcan_paper_status,
     send_telegram,
     check_stale_heartbeats,
     CONFIG_DIR,
@@ -47,10 +45,10 @@ FOX_CONFIG_FILE = CONFIG_DIR / "fox-config.json"
 
 
 def check_mcporter() -> bool:
-    """Verify mcporter can reach Senpi."""
-    result = mcporter_call("account_get_portfolio", {}, timeout=15)
-    if "error" in result:
-        log(f"Health: mcporter check failed: {result['error']}")
+    """Verify Vulcan paper trading connectivity."""
+    result = vulcan_paper_status()
+    if isinstance(result, dict) and result.get("error"):
+        log(f"Health: vulcan check failed: {result['error']}")
         return False
     return True
 
@@ -107,9 +105,8 @@ def main():
             "reconcileRan": False,
         }
 
-        # 1. Git pull — get config changes from Oz agents
-        git_pull()
-        log("Health: git pull complete")
+        # 1. Reconcile closes (no git pull in phaux)
+        log("Health: starting health check")
 
         # 2. Reconcile closes
         run_reconcile()
@@ -120,7 +117,7 @@ def main():
         health["mcporterOk"] = check_mcporter()
         if not health["mcporterOk"]:
             send_telegram(
-                "⚠️ HEALTH: mcporter cannot reach Senpi API. Check SENPI_AUTH_TOKEN."
+                "⚠️ HEALTH: Vulcan paper trading API unreachable. Check PHAUX_DIR config."
             )
 
         # 4. Validate config files
@@ -147,9 +144,6 @@ def main():
             f"Health: mcporter={'OK' if health['mcporterOk'] else 'FAIL'} "
             f"config_issues={len(health['configIssues'])}"
         )
-
-        # 6. Git sync any state changes
-        git_sync("auto: health check")
 
     finally:
         release_lock("health-check")

@@ -1,0 +1,8 @@
+{
+  "blockedScanners": [],
+  "preferredScanners": [],
+  "maxSlotsCap": null,
+  "maxLeverageCap": null,
+  "allocPctCap": null,
+  "blockNewEntries": false
+}

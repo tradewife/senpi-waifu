@@ -10,7 +10,7 @@ across all strategies and enforces the high-water stop logic:
   Stagnation TP: Take profit if ROE > threshold but HW stale
   HL SL Sync: Sets real stop-loss orders on Hyperliquid via edit_position
 
-No LLM. Pure mechanical stop management. Uses senpi_common.py exclusively.
+No LLM. Pure mechanical stop management. Uses phaux_common.py exclusively.
 """
 
 import sys
@@ -20,29 +20,22 @@ from datetime import datetime, timezone, timedelta
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "lib"))
 
-from senpi_common import (
+from phaux_common import (
     acquire_lock, release_lock, log, now_iso,
     load_json, save_json,
     get_enabled_strategies, get_strategy_state_dir, get_open_positions,
-    mcporter_call, mcporter_call_retry, send_telegram, record_trade, git_sync,
+    send_telegram, record_trade,
     record_heartbeat,
+    vulcan_get_ticker, vulcan_paper_set_tpsl, vulcan_paper_close,
 )
 
 
 def get_current_price(asset: str, dex: str = "") -> float | None:
-    """Fetch current price for an asset via mcporter."""
-    asset_name = f"{dex}:{asset}" if dex else asset
-    result = mcporter_call_retry("market_get_asset_data", {"asset": asset_name}, timeout=15)
-    if "error" in result:
+    """Fetch current mark price for an asset via Vulcan ticker."""
+    result = vulcan_get_ticker(asset)
+    if isinstance(result, dict) and result.get("error"):
         return None
-    data = result.get("data", result)
-    # Try common response shapes
-    price = data.get("markPrice", data.get("price", data.get("lastPrice")))
-    if price is not None:
-        return float(price)
-    # Try nested under market
-    market = data.get("market", {})
-    price = market.get("markPrice", market.get("price"))
+    price = result.get("mark_price", result.get("mid_price"))
     if price is not None:
         return float(price)
     return None
@@ -76,23 +69,17 @@ def compute_floor_price(entry_price: float, floor_roe: float, direction: str, le
 
 
 def sync_hl_stop_loss(dsl_state: dict, floor_price: float, phase: int):
-    """Set a real stop-loss order on Hyperliquid via edit_position.
+    """Set a real stop-loss order on Hyperliquid via Vulcan paper set-tpsl.
 
     Per DSL v5.3.1: Phase 1 uses MARKET SL (fast exit on loss),
     Phase 2 uses LIMIT SL (fee-optimized exit on profit).
     """
     asset = dsl_state.get("asset", "")
-    strategy_id = dsl_state.get("strategyId", "")
     sl_type = "MARKET" if phase == 1 else "LIMIT"
 
-    result = mcporter_call_retry("edit_position", {
-        "strategyId": strategy_id,
-        "asset": asset,
-        "stopLossPrice": round(floor_price, 6),
-        "slOrderType": sl_type,
-    }, timeout=15)
+    result = vulcan_paper_set_tpsl(asset, sl=str(round(floor_price, 6)))
 
-    if "error" in result:
+    if isinstance(result, dict) and result.get("error"):
         log(f"DSL HL SL sync failed for {asset}: {result['error']}")
     else:
         dsl_state["lastSlPrice"] = round(floor_price, 6)
@@ -103,15 +90,11 @@ def sync_hl_stop_loss(dsl_state: dict, floor_price: float, phase: int):
 def close_position(dsl_state: dict, reason: str, current_price: float, roe: float):
     """Close position via mcporter and deactivate DSL state."""
     asset = dsl_state["asset"]
-    strategy_id = dsl_state.get("strategyId")
 
     log(f"DSL CLOSE: {asset} reason={reason} roe={roe:.1f}% price={current_price:.4f}")
 
-    # Call mcporter to close
-    mcporter_call_retry("strategy_close_position", {
-        "strategyId": strategy_id,
-        "asset": asset,
-    }, timeout=15)
+    # Call Vulcan to close
+    vulcan_paper_close(asset)
 
     # Update DSL state
     dsl_state["active"] = False
@@ -433,7 +416,7 @@ def main():
                     log(f"DSL error on {pos.get('asset', '?')}: {e}")
 
         if position_count > 0:
-            git_sync("auto: DSL runner")
+            pass  # no git_sync in phaux mode
 
     finally:
         release_lock("dsl-runner")

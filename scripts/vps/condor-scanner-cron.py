@@ -16,14 +16,16 @@ from datetime import datetime, timezone
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "lib"))
 
-from senpi_common import (
+from phaux_common import (
     acquire_lock,
     release_lock,
     log,
     now_iso,
     load_json,
     save_json,
-    mcporter_read,
+    hl_get_candles,
+    hl_get_funding_rates,
+    hl_get_all_mids,
     send_telegram,
     current_regime_params,
     count_open_slots,
@@ -97,17 +99,23 @@ def trend_structure(candles, lookbacks=12):
 
 
 def get_asset_data(asset):
-    result = mcporter_read(
-        "market_get_asset_data",
-        {
-            "asset": asset,
-            "candle_intervals": ["5m", "15m", "1h", "4h"],
-            "include_funding": True,
-        },
-    )
-    if "error" in result:
-        return None
-    return result.get("data", result)
+    c5m = hl_get_candles(asset, "5m", 20)
+    c15m = hl_get_candles(asset, "15m", 20)
+    c1h = hl_get_candles(asset, "1h", 20)
+    c4h = hl_get_candles(asset, "4h", 20)
+    fr = hl_get_funding_rates(asset)
+    funding = 0.0
+    if isinstance(fr, list) and fr:
+        funding = float(fr[-1].get("fundingRate", 0))
+    elif isinstance(fr, dict) and "error" not in fr:
+        funding = float(fr.get("fundingRate", 0))
+    mids = hl_get_all_mids()
+    price = float(mids.get(asset, 0)) if isinstance(mids, dict) else 0.0
+    return {
+        "candles": {"5m": c5m, "15m": c15m, "1h": c1h, "4h": c4h},
+        "funding": funding,
+        "markPrice": price,
+    }
 
 
 def get_correlation_data(asset, corr_map):
@@ -123,26 +131,8 @@ def get_correlation_data(asset, corr_map):
 
 
 def get_sm_direction(asset):
-    result = mcporter_read("leaderboard_get_markets", {})
-    if "error" in result:
-        return None, 0, 0
-
-    markets = result.get("data", result)
-    if isinstance(markets, dict):
-        markets = markets.get("markets", [])
-    if not isinstance(markets, list):
-        return None, 0, 0
-
-    for m in markets:
-        if isinstance(m, dict) and m.get("token", m.get("asset", "")) == asset:
-            direction = m.get("direction", m.get("side", "")).upper()
-            pct = float(m.get("longPct", 50))
-            if direction == "SHORT":
-                pct = 100 - pct
-            traders = int(m.get("traderCount", m.get("traders", 0)))
-            return direction, pct, traders
-
-    return "NEUTRAL", 50, 0
+    """Scanner depowered — SM direction disabled. Only evaluator may call MCP."""
+    return None, 0, 0
 
 
 # ─── Thesis Builder ──────────────────────────────────────────

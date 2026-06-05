@@ -14,7 +14,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "lib"))
 
-from senpi_common import (
+from phaux_common import (
     acquire_lock,
     release_lock,
     log,
@@ -24,10 +24,10 @@ from senpi_common import (
     load_pending_entries,
     get_enabled_strategies,
     get_open_positions,
-    mcporter_call,
+    vulcan_paper_close,
+    hl_get_all_mids,
     send_telegram,
     record_trade,
-    git_sync,
     record_heartbeat,
     compute_roe_pct,
 )
@@ -37,48 +37,16 @@ MIN_POSITION_AGE_MIN = 10
 
 
 def fetch_leaderboard_snapshot() -> dict[str, dict]:
-    """Return per-asset smart-money direction and conviction stats."""
-    result = mcporter_call("leaderboard_get_markets", {})
-    if "error" in result:
-        log(f"Supervisor: leaderboard fetch failed: {result['error']}")
-        return {}
-
-    data = result.get("data", result)
-    markets = data.get("markets", data)
-    if isinstance(markets, dict):
-        markets = markets.get("markets", [])
-    if not isinstance(markets, list):
-        return {}
-
-    snapshot = {}
-    for market in markets:
-        if not isinstance(market, dict):
-            continue
-        asset = market.get("token", market.get("asset", ""))
-        if not asset:
-            continue
-        snapshot[asset] = {
-            "direction": str(market.get("direction", market.get("side", ""))).upper(),
-            "conviction": float(market.get("conviction", 0) or 0),
-            "traders": int(market.get("traderCount", market.get("traders", 0)) or 0),
-            "concentration": float(
-                market.get("contribution", market.get("pct_of_top_traders_gain", market.get("pctOfTotal", 0))) or 0
-            ),
-        }
-    return snapshot
+    """Scanner depowered — leaderboard fetch disabled. Only evaluator may call MCP."""
+    return {}
 
 
 def get_current_price(asset: str) -> float | None:
-    data = mcporter_call("market_get_asset_data", {"asset": asset}, timeout=15)
-    if "error" in data:
-        return None
-    payload = data.get("data", data)
-    price = payload.get("markPrice", payload.get("price", payload.get("lastPrice")))
-    if price is not None:
-        return float(price)
-    market = payload.get("market", {})
-    price = market.get("markPrice", market.get("price"))
-    return float(price) if price is not None else None
+    mids = hl_get_all_mids()
+    if isinstance(mids, dict):
+        price = float(mids.get(asset, 0))
+        return price if price > 0 else None
+    return None
 
 
 def position_age_minutes(dsl_state: dict) -> float:
@@ -107,10 +75,9 @@ def highest_pending_priority() -> tuple[int, int]:
 def close_position(dsl_state: dict, reason: str, detail: str):
     """Close an active position and record the supervisor reason."""
     asset = dsl_state["asset"]
-    strategy_id = dsl_state.get("strategyId")
 
     log(f"SUPERVISOR CLOSE: {asset} reason={reason} detail={detail}")
-    mcporter_call("strategy_close_position", {"strategyId": strategy_id, "asset": asset}, timeout=15)
+    vulcan_paper_close(asset)
 
     dsl_state["active"] = False
     dsl_state["closedAt"] = now_iso()
@@ -279,8 +246,6 @@ def main():
                     close_position(pos, "dead_weight_rotation", detail)
                     changed = True
 
-        if changed:
-            git_sync("auto: position supervisor close")
     finally:
         release_lock("sm-flip")
 

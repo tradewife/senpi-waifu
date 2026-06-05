@@ -12,7 +12,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "lib"))
 
-from senpi_common import (
+from phaux_common import (
     log, load_json, POSITION_STATE_DIR, MEMORY_DIR,
     load_trade_journal, record_trade,
     get_enabled_strategies, get_strategy_state_dir,

@@ -22,14 +22,16 @@ from datetime import datetime, timezone
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "lib"))
 
-from senpi_common import (
+from phaux_common import (
     acquire_lock,
     release_lock,
     log,
     now_iso,
     load_json,
     save_json,
-    mcporter_read,
+    hl_get_candles,
+    hl_get_funding_rates,
+    hl_get_all_mids,
     send_telegram,
     current_regime_params,
     count_open_slots,
@@ -121,80 +123,36 @@ def calc_rsi(closes, period=14):
 
 
 def get_eth_full_picture():
-    result = mcporter_read(
-        "market_get_asset_data",
-        {
-            "asset": "ETH",
-            "candle_intervals": ["5m", "15m", "1h", "4h"],
-            "include_funding": True,
-        },
-    )
-    if "error" in result:
-        return None
-    return result.get("data", result)
+    c5m = hl_get_candles("ETH", "5m", 20)
+    c15m = hl_get_candles("ETH", "15m", 20)
+    c1h = hl_get_candles("ETH", "1h", 20)
+    c4h = hl_get_candles("ETH", "4h", 20)
+    fr = hl_get_funding_rates("ETH")
+    funding = 0.0
+    if isinstance(fr, list) and fr:
+        funding = float(fr[-1].get("fundingRate", 0))
+    elif isinstance(fr, dict) and "error" not in fr:
+        funding = float(fr.get("fundingRate", 0))
+    mids = hl_get_all_mids()
+    price = float(mids.get("ETH", 0)) if isinstance(mids, dict) else 0.0
+    return {
+        "candles": {"5m": c5m, "15m": c15m, "1h": c1h, "4h": c4h},
+        "funding": funding,
+        "markPrice": price,
+    }
 
 
 def get_btc_correlation():
-    result = mcporter_read(
-        "market_get_asset_data",
-        {"asset": "BTC", "candle_intervals": ["15m", "1h"], "include_funding": False},
-    )
-    if "error" in result:
-        return None, None
-    data = result.get("data", result)
-    candles_15m = data.get("candles", {}).get("15m", [])
-    candles_1h = data.get("candles", {}).get("1h", [])
-    mom_15m = price_momentum(candles_15m, 1) if len(candles_15m) >= 2 else None
-    mom_1h = price_momentum(candles_1h, 1) if len(candles_1h) >= 2 else None
+    c15m = hl_get_candles("BTC", "15m", 20)
+    c1h = hl_get_candles("BTC", "1h", 20)
+    mom_15m = price_momentum(c15m, 1) if len(c15m) >= 2 else None
+    mom_1h = price_momentum(c1h, 1) if len(c1h) >= 2 else None
     return mom_15m, mom_1h
 
 
 def get_eth_sm_direction():
-    result = mcporter_read("leaderboard_get_markets", {})
-    if "error" in result:
-        return None, 0, 0
-
-    markets = result.get("data", result)
-    if isinstance(markets, dict):
-        markets = markets.get("markets", [])
-    if not isinstance(markets, list):
-        return None, 0, 0
-
-    asset_long_pct = 0
-    asset_short_pct = 0
-    asset_traders = 0
-    found = False
-
-    for m in markets:
-        if not isinstance(m, dict):
-            continue
-        token = m.get("token", m.get("coin", m.get("asset", "")))
-        if token != "ETH":
-            continue
-        found = True
-        direction = m.get("direction", m.get("side", "")).lower()
-        pct = float(m.get("pct_of_top_traders_gain", m.get("longPct", 50)))
-        traders = int(m.get("trader_count", m.get("traderCount", m.get("traders", 0))))
-        if direction == "long":
-            asset_long_pct = pct
-            asset_traders += traders
-        elif direction == "short":
-            asset_short_pct = pct
-            asset_traders += traders
-
-    if not found:
-        return None, 0, 0
-
-    total = asset_long_pct + asset_short_pct
-    if total == 0:
-        return "NEUTRAL", 50, asset_traders
-
-    long_ratio = (asset_long_pct / total) * 100 if total > 0 else 50
-    if long_ratio > 58:
-        return "LONG", long_ratio, asset_traders
-    elif long_ratio < 42:
-        return "SHORT", 100 - long_ratio, asset_traders
-    return "NEUTRAL", 50, asset_traders
+    """Scanner depowered — SM direction disabled. Only evaluator may call MCP."""
+    return None, 0, 0
 
 
 # ─── Thesis Builder ──────────────────────────────────────────

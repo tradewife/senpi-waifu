@@ -12,14 +12,17 @@ from datetime import datetime, timezone
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "lib"))
 
-from senpi_common import (
+from phaux_common import (
     acquire_lock,
     release_lock,
     log,
     now_iso,
     load_json,
     save_json,
-    mcporter_read,
+    hl_get_candles,
+    hl_get_funding_rates,
+    hl_get_all_mids,
+    hl_api,
     send_telegram,
     current_regime_params,
     get_enabled_strategies,
@@ -75,27 +78,8 @@ def rsi(candles, period=14):
 
 
 def get_sm_data():
-    result = mcporter_read("leaderboard_get_markets", {})
-    if "error" in result:
-        return {}
-
-    markets = result.get("data", result)
-    if isinstance(markets, dict):
-        markets = markets.get("markets", [])
-    if not isinstance(markets, list):
-        return {}
-
-    sm = {}
-    for m in markets:
-        if isinstance(m, dict):
-            asset = m.get("token", m.get("asset", ""))
-            direction = m.get("direction", m.get("side", "")).upper()
-            pct = float(m.get("longPct", 50))
-            if direction == "SHORT":
-                pct = 100 - pct
-            traders = int(m.get("traderCount", m.get("traders", 0)))
-            sm[asset] = {"direction": direction, "pct": pct, "traders": traders}
-    return sm
+    """Scanner depowered — SM data disabled. Only evaluator may call MCP."""
+    return {}
 
 
 # ─── Funding History ──────────────────────────────────────────
@@ -171,14 +155,7 @@ def analyze_opportunity(asset, ctx, history, sm_data, config):
         return None
 
     # Gate 3: 4H Trend
-    data = mcporter_read(
-        "market_get_asset_data", {"asset": asset, "candle_intervals": ["1h", "4h"]}
-    )
-    if "error" in data:
-        return None
-    candle_data = data.get("data", data)
-
-    candles_4h = candle_data.get("candles", {}).get("4h", [])
+    candles_4h = hl_get_candles(asset, "4h", 25)
     if len(candles_4h) < 25:
         return None
 
@@ -261,10 +238,16 @@ def scan():
         return
 
     # Need all instruments to track funding history globally
-    result = mcporter_read("market_get_all_instruments", {})
-    if "error" in result:
-        return
-    instruments = result.get("data", [])
+    result = hl_api({"type": "metaAndAssetCtxs"})
+    instruments = []
+    if isinstance(result, list) and len(result) >= 1:
+        universe = result[0] if isinstance(result[0], list) else []
+        for entry in universe:
+            if isinstance(entry, dict):
+                ctx = entry.get("context", {})
+                instruments.append({"name": entry.get("name", ""), "context": ctx})
+    elif isinstance(result, dict) and "error" not in result:
+        instruments = result.get("universe", [])
 
     history = update_funding_history(instruments, config)
     sm_data = get_sm_data()

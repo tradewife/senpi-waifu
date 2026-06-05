@@ -28,11 +28,15 @@ from zoneinfo import ZoneInfo
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "lib"))
 
-from senpi_common import (
+from phaux_common import (
     load_json,
     save_json,
-    mcporter_call,
-    mcporter_call_retry,
+    hl_api,
+    hl_get_candles,
+    hl_get_funding_rates,
+    hl_get_all_mids,
+    vulcan_paper_positions,
+    vulcan_paper_close,
     send_telegram,
     log,
     now_iso,
@@ -45,7 +49,6 @@ from senpi_common import (
     release_lock,
     record_heartbeat,
     record_trade,
-    git_sync,
     OUTPUTS_DIR,
     MEMORY_DIR,
     STATE_DIR,
@@ -228,27 +231,8 @@ def count_open_slots() -> int:
 
 
 def fetch_sm_markets() -> dict:
-    sm_raw = mcporter_call("leaderboard_get_markets", {})
-    sm_markets = {}
-    raw_markets = sm_raw.get("data", sm_raw)
-    if isinstance(raw_markets, dict):
-        raw_markets = raw_markets.get("markets", [])
-    if not isinstance(raw_markets, list):
-        raw_markets = []
-    for m in raw_markets:
-        if not isinstance(m, dict):
-            continue
-        asset = m.get("token", m.get("asset", ""))
-        if asset:
-            sm_markets[asset] = {
-                "direction": str(m.get("direction", "")).upper(),
-                "conviction": float(m.get("conviction", 0) or 0),
-                "traders": int(m.get("traderCount", m.get("traders", 0)) or 0),
-                "concentration": float(
-                    m.get("contribution", m.get("pctOfTotal", 0)) or 0
-                ),
-            }
-    return sm_markets
+    """Scanner depowered — SM markets fetch disabled. Only evaluator may call MCP."""
+    return {}
 
 
 def build_scanner_bias(pending_entries: list) -> dict:
@@ -343,13 +327,15 @@ def compute_gss(
     score["OI_delta"] = 0.5
 
     try:
-        od = mcporter_call("market_get_asset_data", {"asset": asset}, timeout=15)
-        data = od.get("data", od)
-        mark = float(data.get("markPrice", data.get("mark", 0)) or 0)
-        idx = float(data.get("indexPrice", data.get("index", 0)) or 0)
-        if idx > 0:
-            basis_bp = (mark - idx) / idx * 10000
-            score["basis"] = min(abs(basis_bp) / 20, 1.0)
+        mids = hl_get_all_mids()
+        mark = float(mids.get(asset, 0)) if isinstance(mids, dict) else 0.0
+        # Use funding rates as a proxy for basis
+        fr = hl_get_funding_rates(asset)
+        basis_bp = 0.0
+        if isinstance(fr, list) and fr:
+            rate = float(fr[-1].get("fundingRate", 0))
+            basis_bp = abs(rate) * 10000
+        score["basis"] = min(basis_bp / 20, 1.0)
     except Exception:
         pass
 
@@ -400,46 +386,39 @@ def build_trade(candidate: dict, account_equity: float, kg_triples: list) -> dic
     direction = candidate["direction"]
     gss = candidate["gss"]
 
-    # Fetch candles + context via market_get_asset_data (single call)
-    ad = mcporter_call("market_get_asset_data", {
-        "asset": asset,
-        "candle_intervals": ["1h", "4h"],
-        "include_order_book": True,
-        "include_funding": False,
-    }, timeout=20)
-    ad_data = ad.get("data", ad)
+    # Fetch candles via HL API
+    c1h = hl_get_candles(asset, "1h", 14)
+    c4h = hl_get_candles(asset, "4h", 5)
+    ad_data = {"candles": {"1h": c1h, "4h": c4h}}
 
     # Parse candles
     candles_map = ad_data.get("candles", {})
-    c1h = candles_map.get("1h", [])
-    if not c1h or len(c1h) < 10:
+    c1h_raw = candles_map.get("1h", [])
+    if not c1h_raw or len(c1h_raw) < 10:
         return None
 
+    c1h = c1h_raw
     closes = [float(c.get("c", c.get("close", 0))) for c in c1h[-14:] if float(c.get("c", c.get("close", 0))) > 0]
     tr = [abs(closes[i] - closes[i - 1]) / closes[i - 1] for i in range(1, len(closes))]
     atr = sum(tr) / len(tr) * closes[-1] if tr else closes[-1] * 0.01
 
     # 4h slope
-    c4h = candles_map.get("4h", [])
-    if c4h and len(c4h) >= 5:
-        closes_4h = [float(c.get("c", c.get("close", 0))) for c in c4h]
+    c4h_raw = candles_map.get("4h", [])
+    if c4h_raw and len(c4h_raw) >= 5:
+        closes_4h = [float(c.get("c", c.get("close", 0))) for c in c4h_raw]
         slope = (closes_4h[-1] - closes_4h[0]) / closes_4h[0] * 100 if closes_4h[0] > 0 else 0
         if direction == "LONG" and slope < -1.5:
             return None
         if direction == "SHORT" and slope > 1.5:
             return None
 
-    # Mark price from asset context
-    ctx = ad_data.get("asset_context", ad_data)
-    mark = float(ctx.get("markPx", ctx.get("markPrice", closes[-1] if closes else 1)) or 1)
+    # Mark price from mid prices
+    mids = hl_get_all_mids()
+    mark = float(mids.get(asset, closes[-1])) if isinstance(mids, dict) and closes else (closes[-1] if closes else 1)
 
-    # Order book from asset data (may be empty)
-    ob = ad_data.get("order_book", {})
-    levels = ob.get("levels", {})
-    bids = levels.get("bids", []) if isinstance(levels, dict) else []
-    asks = levels.get("asks", []) if isinstance(levels, dict) else []
-    best_bid = float(bids[0][0]) if bids else mark * 0.9999
-    best_ask = float(asks[0][0]) if asks else mark * 1.0001
+    # No order book data in phaux — use mark ± spread estimate
+    best_bid = mark * 0.9999
+    best_ask = mark * 1.0001
 
     # Tick/lot from instruments data (cached in candidate if available)
     tick = 0.01
@@ -624,13 +603,8 @@ def check_stale_elite_orders():
             except (ValueError, TypeError):
                 age_min = 0
 
-            px_data = mcporter_call(
-                "market_get_asset_data", {"asset": asset}, timeout=10
-            )
-            px = px_data.get("data", px_data)
-            current_px = float(
-                px.get("markPrice", px.get("mark", entry_price)) or entry_price
-            )
+            mids = hl_get_all_mids()
+            current_px = float(mids.get(asset, entry_price)) if isinstance(mids, dict) else entry_price
             drift = abs(current_px - entry_price)
             stop_dist = abs(stop_price - entry_price)
 
@@ -650,14 +624,7 @@ def check_stale_elite_orders():
                     pass
 
             if reason:
-                mcporter_call(
-                    "strategy_close_position",
-                    {
-                        "strategyId": dsl.get("strategyId"),
-                        "asset": asset,
-                    },
-                    timeout=15,
-                )
+                vulcan_paper_close(asset)
                 dsl["active"] = False
                 dsl["closedAt"] = now_iso()
                 dsl["closeReason"] = f"elite_stale:{reason}"
@@ -677,10 +644,9 @@ def get_account_equity(strategy_key: str) -> float:
     strategies = get_enabled_strategies()
     for strat in strategies:
         if strat.get("_key") == strategy_key:
-            portfolio = mcporter_call("account_get_portfolio", {}, timeout=15)
-            if "error" not in portfolio:
-                data = portfolio.get("data", portfolio)
-                return float(data.get("equity", data.get("totalEquity", 100)) or 100)
+            status = vulcan_paper_status()
+            if isinstance(status, dict) and not status.get("error"):
+                return float(status.get("equity", status.get("totalEquity", 100)) or 100)
     return 100.0
 
 
@@ -719,13 +685,16 @@ def main():
         sm_markets = fetch_sm_markets()
         scanner_bias = build_scanner_bias(pending_entries)
 
-        # Use market_list_instruments for volume/OI/funding (not just prices)
-        all_mkts_raw = mcporter_call("market_list_instruments", {})
-        all_mkts = all_mkts_raw.get("data", all_mkts_raw)
-        if isinstance(all_mkts, dict):
-            all_mkts = all_mkts.get("instruments", all_mkts.get("assets", list(all_mkts.values())))
-        if not isinstance(all_mkts, list):
-            all_mkts = []
+        # Use HL meta for universe scan
+        all_mkts_raw = hl_api({"type": "metaAndAssetCtxs"})
+        all_mkts = []
+        if isinstance(all_mkts_raw, list) and len(all_mkts_raw) >= 2:
+            universe_data = all_mkts_raw[0] if isinstance(all_mkts_raw[0], list) else []
+            for entry in universe_data:
+                if isinstance(entry, dict):
+                    all_mkts.append(entry)
+        elif isinstance(all_mkts_raw, dict) and "error" not in all_mkts_raw:
+            all_mkts = all_mkts_raw.get("universe", [])
 
         universe = discover_universe(all_mkts, sm_markets, scanner_bias)
 
@@ -785,8 +754,6 @@ def main():
         log(
             f"ELITE-TRADER: {len(trades)} trades | GSS top={top3[0]['gss'] if top3 else 1:.2f}"
         )
-
-        git_sync("auto: elite-trader run")
 
     finally:
         release_lock("elite-trader")

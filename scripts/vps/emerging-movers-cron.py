@@ -18,37 +18,25 @@ from pathlib import Path
 # Add lib to path
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "lib"))
 
-from senpi_common import (
+from phaux_common import (
     acquire_lock,
     release_lock,
-    git_pull,
-    git_sync,
     log,
     load_json,
     save_json,
     now_iso,
-    SCAN_HISTORY_FILE,
     POSITION_STATE_DIR,
-    SCANNER_CONFIG_FILE,
-    load_regime,
     add_pending_entry,
     send_telegram,
-    mcporter_read,
 )
 
 MAX_SCAN_HISTORY = 60  # Keep last 60 scans (~1 hour at 60s)
 
+SCAN_HISTORY_FILE = POSITION_STATE_DIR / "scan-history.json"
+
 
 def fetch_leaderboard() -> list[dict]:
-    """Single API call to get SM profit concentration leaderboard."""
-    result = mcporter_read("leaderboard_get_markets", {})
-    if "error" in result:
-        log(f"Leaderboard fetch failed: {result['error']}")
-        return []
-    # Normalize: result may be nested under various keys depending on mcporter version
-    markets = result.get("markets", result.get("data", result))
-    if isinstance(markets, list):
-        return markets
+    """Scanner depowered — leaderboard fetch disabled. Only evaluator may call MCP."""
     return []
 
 
@@ -171,8 +159,6 @@ def main():
         return  # Previous run still active
 
     try:
-        git_pull()
-
         # Fetch leaderboard
         markets = fetch_leaderboard()
         if not markets:
@@ -212,8 +198,6 @@ def main():
             add_pending_entry(
                 {**sig, "autoEntered": False, "source": "emerging-movers"}
             )
-
-        git_sync("auto: EM scan")
 
     finally:
         release_lock("emerging-movers")

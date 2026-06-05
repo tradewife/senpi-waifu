@@ -1,0 +1,346 @@
+#!/usr/bin/env python3
+"""
+jido.py — Autonomous trade executor with tiered governance (phaux paper-trading version).
+
+For every APPROVED signal:
+  - If scanner ROI > threshold: execute trade immediately via vulcan paper engine
+  - If scanner ROI < threshold: send Telegram for manual approval
+
+Strategic Sovereignty: user-rules.json overrides (TP/SL, partial exits)
+are injected into the trade execution AFTER the 10-gate safety pipeline
+approves the signal. These trade-level rules cannot bypass account-level
+safety (max 3 positions, XYZ ban, 7-10x leverage).
+"""
+
+from __future__ import annotations
+
+import sys
+from pathlib import Path
+from typing import List, Optional
+
+import click
+
+sys.path.insert(0, str(Path(__file__).parent.parent.parent / "scripts" / "lib"))
+
+import phaux_common as sc
+from phaux_cli.runtime import acquire_command_lock, release_command_lock
+from phaux_cli.commands.evaluate import (
+    TradeEvaluator,
+    DecisionObject,
+    Recommendation,
+    build_strategic_overrides,
+    build_dsl_state,
+    _compute_tp_sl_prices,
+)
+from phaux_cli.safety import GateResult
+
+
+ARENA_LEARNINGS_FILE = sc.OUTPUTS_DIR / "arena-learnings.json"
+USER_RULES_FILE = sc.CONFIG_DIR / "user-rules.json"
+DEFAULT_ROI_THRESHOLD = 0.15
+
+
+def _load_user_rules() -> dict:
+    """Hot-reload user rules from config/user-rules.json."""
+    try:
+        return sc.load_json(USER_RULES_FILE, default={})
+    except Exception:
+        return {}
+
+
+def _get_roi_threshold() -> float:
+    """Get Jido ROI threshold from user rules, with fallback to default."""
+    rules = _load_user_rules()
+    jido_rules = rules.get("jido", {})
+    return float(jido_rules.get("roi_threshold_auto", DEFAULT_ROI_THRESHOLD))
+
+
+def _get_jido_auto_execute_enabled() -> bool:
+    """Check if Jido auto-execute is enabled from user rules."""
+    rules = _load_user_rules()
+    jido_rules = rules.get("jido", {})
+    return bool(jido_rules.get("autoExecuteEnabled", True))
+
+
+@click.command()
+@click.option(
+    "--dry-run", is_flag=True, help="Process signals without executing trades."
+)
+def jido(dry_run: bool):
+    """Autonomous trade executor with tiered governance."""
+    if not acquire_command_lock("jido"):
+        click.echo("[jido] Another instance running — skipping")
+        return
+
+    try:
+        _run(dry_run)
+    finally:
+        release_command_lock("jido")
+
+
+def _run(dry_run: bool):
+    click.echo(f"[jido] {sc.now_iso()} starting{' (dry-run)' if dry_run else ''}")
+
+    user_rules = _load_user_rules()
+    roi_threshold = float(
+        user_rules.get("jido", {}).get("roi_threshold_auto", DEFAULT_ROI_THRESHOLD)
+    )
+    auto_execute_enabled = bool(
+        user_rules.get("jido", {}).get("autoExecuteEnabled", True)
+    )
+    strategic = build_strategic_overrides(user_rules)
+
+    click.echo(
+        f"[jido] rules: roi_threshold={roi_threshold:.2f}, auto_execute={auto_execute_enabled}"
+    )
+    active_overrides = list(strategic.keys()) if strategic else []
+    if active_overrides:
+        click.echo(f"[jido] strategic overrides: {', '.join(active_overrides)}")
+
+    regime = sc.load_regime()
+    mode = regime.get("riskMode", "BASELINE")
+    click.echo(f"[jido] regime: {mode}")
+
+    if mode == "RISK_OFF":
+        click.echo("[jido] RISK_OFF — skipping all entries")
+        return
+
+    if not auto_execute_enabled:
+        click.echo(
+            "[jido] Auto-execute disabled by user rules — all signals require manual approval"
+        )
+
+    evaluator = TradeEvaluator(dry_run=dry_run)
+    decisions = evaluator.process_queue()
+
+    if not decisions:
+        click.echo("[jido] No pending entries")
+        return
+
+    click.echo(f"[jido] {len(decisions)} decisions to process")
+
+    arena_learnings = sc.load_json(ARENA_LEARNINGS_FILE, default={})
+
+    approved_count = 0
+    manual_review_count = 0
+    rejected_count = 0
+
+    for decision in decisions:
+        signal = decision.signal
+        gate_result = decision.gate_result
+        scanner = str(
+            signal.get(
+                "scanner", signal.get("source", signal.get("entryMode", "unknown"))
+            )
+        ).lower()
+
+        if decision.recommendation == Recommendation.APPROVE:
+            scanner_roi = _get_scanner_roi(scanner, arena_learnings)
+
+            if auto_execute_enabled and scanner_roi and scanner_roi >= roi_threshold:
+                click.echo(
+                    f"  AUTO-EXECUTE {signal.get('asset', signal.get('symbol', ''))} "
+                    f"{signal.get('direction', signal.get('side', ''))} @ {gate_result.clamped_leverage}x "
+                    f"(scanner={scanner}, ROI={scanner_roi:.1%})"
+                )
+
+                if dry_run:
+                    click.echo("    DRY-RUN: would execute trade")
+                else:
+                    _execute_approved_trade(signal, gate_result, scanner, strategic)
+                approved_count += 1
+
+            else:
+                reason = (
+                    "auto-execute disabled"
+                    if not auto_execute_enabled
+                    else f"ROI {scanner_roi:.1%} < {roi_threshold:.0%}" if scanner_roi else "No ROI data"
+                )
+                click.echo(
+                    f"  MANUAL_REVIEW {signal.get('asset', signal.get('symbol', ''))} "
+                    f"(scanner={scanner}, {reason})"
+                )
+                _request_manual_approval(signal, gate_result, scanner)
+                manual_review_count += 1
+
+        elif decision.recommendation == Recommendation.REJECT:
+            reasons = "; ".join(gate_result.reasons)
+            click.echo(
+                f"  REJECT {signal.get('asset', signal.get('symbol', ''))}: {reasons}"
+            )
+            rejected_count += 1
+
+        elif decision.recommendation == Recommendation.MANUAL_REVIEW:
+            click.echo(
+                f"  MANUAL_REVIEW {signal.get('asset', signal.get('symbol', ''))} "
+                f"(scanner={scanner}) — requires human decision"
+            )
+            _request_manual_approval(signal, gate_result, scanner)
+            manual_review_count += 1
+
+    remaining = evaluator.remaining
+    sc.save_json(sc.PENDING_ENTRIES_FILE, remaining)
+
+    click.echo(
+        f"[jido] Summary: {approved_count} auto-executed, {manual_review_count} manual review, "
+        f"{rejected_count} rejected, {len(remaining)} remaining"
+    )
+
+    click.echo(f"[jido] {sc.now_iso()} done")
+
+
+def _get_scanner_roi(scanner: str, arena_learnings: dict) -> Optional[float]:
+    """Get scanner ROI from arena-learnings.json arenaTop5 rankings."""
+    scanner_name_map = {
+        "orca": "Orca",
+        "mantis": "Mantis",
+        "fox": "Fox",
+        "polar": "Polar",
+        "komodo": "Komodo",
+        "condor": "Condor",
+        "sentinel": "Sentinel",
+        "rhino": "Rhino",
+        "shark": "Shark",
+    }
+    name_match = scanner_name_map.get(scanner, scanner.capitalize())
+    arena_top5 = arena_learnings.get("arenaTop5", [])
+    for entry in arena_top5:
+        strategy_name = entry.get("strategy", "")
+        if name_match.lower() in strategy_name.lower():
+            return entry.get("roi", 0) / 100.0
+    return None
+
+
+def _execute_approved_trade(
+    signal: dict, gate_result: GateResult, scanner: str, strategic: dict
+) -> None:
+    """Execute trade via vulcan paper engine with trade lock acquired.
+
+    Strategic overrides (TP/SL, partial exits) are injected into the
+    position params. These trade-level rules sit above the DSL defaults
+    but below the account-level safety floor enforced by the 10-gate pipeline.
+    """
+    strategies = sc.get_enabled_strategies()
+    if not strategies:
+        click.echo("[jido] No enabled strategies")
+        return
+
+    strategy = strategies[0]
+    strat_key = strategy.get("_key", "")
+
+    asset = signal.get("asset", signal.get("symbol", ""))
+    direction = str(
+        signal.get("direction", signal.get("side", ""))
+    ).upper()
+    leverage = gate_result.clamped_leverage
+    margin = gate_result.effective_margin
+    score = float(signal.get("score", signal.get("totalScore", 0)))
+
+    if strategic:
+        parts = []
+        if "strategicSlRoe" in strategic:
+            parts.append(f"SL={strategic['strategicSlRoe']}%")
+        if "strategicTpRoe" in strategic:
+            parts.append(f"TP={strategic['strategicTpRoe']}%")
+        if "partialTp" in strategic:
+            parts.append("partialTP")
+        if "partialSl" in strategic:
+            parts.append("partialSL")
+        if parts:
+            click.echo(f"    strategic: {', '.join(parts)}")
+
+    notional = margin * leverage
+
+    with sc.acquire_trade_lock():
+        if direction == "LONG":
+            resp = sc.vulcan_paper_buy(
+                asset,
+                notional_usdc=str(notional),
+            )
+        else:
+            resp = sc.vulcan_paper_sell(
+                asset,
+                notional_usdc=str(notional),
+            )
+
+    if isinstance(resp, dict) and resp.get("ok"):
+        data = resp.get("data", resp)
+        entry_price = float(
+            data.get("fill_price", data.get("entry_price", 0))
+        )
+        click.echo(f"    OPENED: {asset} {direction}")
+
+        # Set TP/SL if strategic overrides exist
+        if "strategicTpRoe" in strategic or "strategicSlRoe" in strategic:
+            tp_price, sl_price = _compute_tp_sl_prices(
+                entry_price, direction, strategic
+            )
+            if tp_price or sl_price:
+                sc.vulcan_paper_set_tpsl(
+                    asset, tp=tp_price, sl=sl_price
+                )
+                if tp_price:
+                    click.echo(f"    TP set: {tp_price}")
+                if sl_price:
+                    click.echo(f"    SL set: {sl_price}")
+
+        sc.record_trade(
+            {
+                "action": "OPEN",
+                "asset": asset,
+                "direction": direction,
+                "leverage": leverage,
+                "marginUsd": margin,
+                "entrySource": f"jido-{scanner}",
+                "strategyKey": strat_key,
+                "score": score,
+                "realizedPnl": 0,
+            }
+        )
+
+        # Save DSL state with strategic overrides (DSL v1.1.1 pattern)
+        wallet = strategy.get("wallet", "")
+        dsl = build_dsl_state(
+            asset,
+            direction,
+            entry_price,
+            leverage,
+            margin,
+            strat_key,
+            scanner,
+            score,
+            strategic,
+            wallet=wallet,
+        )
+        state_dir = sc.get_strategy_state_dir(strat_key)
+        sc.save_json(state_dir / f"dsl-{asset}.json", dsl)
+
+        sc.send_telegram(
+            f"🟢 JIDO AUTO-EXECUTE: {direction} {asset}\n"
+            f"Scanner: {scanner} | Score: {score}\n"
+            f"Leverage: {leverage}x | Margin: ${margin:.0f}\n"
+            f"Strategy: {strategy.get('name', strat_key)}"
+        )
+    else:
+        error_msg = resp.get("error", resp.get("message", "unknown")) if isinstance(resp, dict) else str(resp)
+        click.echo(f"    FAILED: {error_msg}")
+
+
+def _request_manual_approval(
+    signal: dict, gate_result: GateResult, scanner: str
+) -> None:
+    """Send Telegram notification for manual approval."""
+    asset = signal.get("asset", signal.get("symbol", ""))
+    direction = signal.get("direction", signal.get("side", ""))
+    score = float(signal.get("score", signal.get("totalScore", 0)))
+    leverage = gate_result.clamped_leverage
+    margin = gate_result.effective_margin
+
+    sc.send_telegram(
+        f"🔔 JIDO MANUAL APPROVAL REQUEST\n"
+        f"Asset: {direction} {asset}\n"
+        f"Scanner: {scanner} | Score: {score}\n"
+        f"Leverage: {leverage}x | Margin: ${margin:.0f}\n"
+        f"Reasons: {', '.join(gate_result.reasons[:4])}\n"
+        f"Reply 'approve' to execute or 'reject' to skip."
+    )

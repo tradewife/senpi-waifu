@@ -19,7 +19,7 @@ from datetime import datetime, timezone, timedelta
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "lib"))
 
-from senpi_common import (
+from phaux_common import (
     acquire_lock,
     release_lock,
     log,
@@ -28,7 +28,6 @@ from senpi_common import (
     save_json,
     record_heartbeat,
     add_pending_entry,
-    git_sync,
     POSITION_STATE_DIR,
     CONFIG_DIR,
 )
