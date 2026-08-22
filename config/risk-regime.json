@@ -1,9 +1,9 @@
 {
   "riskMode": "RISK_ON",
   "riskModeLocked": true,
-  "updatedAt": "2026-06-05T06:18:00Z",
+  "updatedAt": "2026-08-22T09:01:16Z",
   "updatedBy": "phaux-manual",
-  "reason": "Paper mode — RISK_ON locked for maximum signal testing",
+  "reason": "Paper mode - RISK_ON locked for maximum signal testing",
   "regimes": {
     "RISK_ON": {
       "maxSlots": 3,
