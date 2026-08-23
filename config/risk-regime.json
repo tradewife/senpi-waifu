@@ -1,7 +1,7 @@
 {
   "riskMode": "RISK_ON",
   "riskModeLocked": true,
-  "updatedAt": "2026-08-23T21:46:01Z",
+  "updatedAt": "2026-08-23T22:17:09Z",
   "updatedBy": "phaux-manual",
   "reason": "Paper mode - RISK_ON locked for maximum signal testing",
   "regimes": {
