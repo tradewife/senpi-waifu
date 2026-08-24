@@ -1,8 +1,8 @@
 {
   "riskMode": "RISK_ON",
   "riskModeLocked": true,
-  "updatedAt": "2026-08-24T07:16:59Z",
-  "updatedBy": "phaux-manual",
+  "updatedAt": "2026-08-24T07:32:00Z",
+  "updatedBy": "jido-heartbeat",
   "reason": "Paper mode - RISK_ON locked for maximum signal testing",
   "regimes": {
     "RISK_ON": {
