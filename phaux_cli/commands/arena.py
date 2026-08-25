@@ -5,6 +5,7 @@ Studies Hyperliquid leaderboard for actionable intelligence.
 Ported from scripts/waifu-arena-learner.sh.
 """
 
+import os
 import sys
 from pathlib import Path
 
@@ -30,16 +31,73 @@ def arena(dry_run):
         release_command_lock("arena")
 
 
+def _arena_rpc_leaderboard(limit: int = 50):
+    """Fetch live arena leaderboard via Senpi agent-tracker RPC.
+
+    HL /info has no 'leaderboard' request type (always 422), and HL's real
+    /leaderboard endpoint requires wallet-signed auth. The arena-monitor
+    Supabase edge function returns live ranking data without MCP auth.
+    Returns (entries, error_str); entries is a list of dicts or [].
+    """
+    import json as _json
+    import urllib.request
+
+    url = os.environ.get(
+        "ARENA_API_URL",
+        "https://ypofdvbavcdgseguddey.supabase.co/functions/v1/mcp-server",
+    )
+    payload = _json.dumps({
+        "jsonrpc": "2.0",
+        "id": 1,
+        "method": "tools/call",
+        "params": {"name": "get_leaderboard", "arguments": {"sort_by": "roi", "limit": limit}},
+    }).encode()
+    try:
+        req = urllib.request.Request(url, data=payload, headers={"Content-Type": "application/json"})
+        with urllib.request.urlopen(req, timeout=30) as resp:
+            body = _json.loads(resp.read().decode() or "{}")
+        text = body["result"]["content"][0]["text"]
+        data = _json.loads(text)
+    except Exception as e:
+        return [], f"arena RPC failed: {e}"
+
+    lb = data.get("leaderboard") if isinstance(data, dict) else None
+    if not isinstance(lb, list):
+        return [], f"arena RPC unexpected shape: {str(data)[:120]}"
+
+    # Normalize RPC fields to the shape the analysis below expects.
+    normalized = []
+    for e in lb:
+        if not isinstance(e, dict):
+            continue
+        roi = e.get("roi", e.get("roe", e.get("roePct", 0)))
+        if isinstance(roi, str):
+            roi = roi.rstrip("%")
+        normalized.append({
+            "displayName": e.get("name", e.get("displayName", e.get("ethAddress", ""))),
+            "ethAddress": e.get("ethAddress", e.get("slug", "")),
+            "roePct": roi,
+            "roe": roi,
+            "totalPnl": e.get("totalPnl", e.get("pnl", 0)),
+            "pnl": e.get("totalPnl", e.get("pnl", 0)),
+            "tradeCount": e.get("totalTrades", e.get("tradeCount", 0)),
+        })
+    return normalized, None
+
+
 def _run(dry_run: bool):
     click.echo(f"[arena] {sc.now_iso()} starting{' (dry-run)' if dry_run else ''}")
 
-    # Fetch HL leaderboard via ranking endpoint
-    leaderboard = sc.hl_api({"type": "leaderboard", "limit": 50})
-
-    # Check for API errors
-    if isinstance(leaderboard, dict) and leaderboard.get("error"):
-        click.echo(f"  Leaderboard API error: {leaderboard.get('error', 'Unknown error')}")
-        return
+    # Fetch live leaderboard from arena RPC (HL /info has no leaderboard type).
+    leaderboard, rpc_err = _arena_rpc_leaderboard(50)
+    if rpc_err:
+        # Keep the legacy HL call as a last-resort path (will 422, then it's a no-op).
+        leaderboard = sc.hl_api({"type": "leaderboard", "limit": 50})
+        if isinstance(leaderboard, dict) and leaderboard.get("error"):
+            click.echo(f"  Leaderboard API error: {leaderboard.get('error', 'Unknown error')} ({rpc_err})")
+            return
+        if isinstance(leaderboard, dict):
+            leaderboard = leaderboard.get("leaderboard", leaderboard.get("entries", leaderboard.get("data", [])))
 
     # Our stats
     journal = sc.load_trade_journal()
