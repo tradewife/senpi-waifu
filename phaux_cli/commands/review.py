@@ -35,7 +35,14 @@ def _run(dry_run: bool):
 
     # Get paper trading status from Vulcan
     paper_status = sc.vulcan_paper_status()
-    equity = paper_status.get("equity", 0)
+    # Physical equity = balance + sum(per-position uPnL).
+    # KNOWN BUG: vulcan `paper status` aggregate equity/unrealized_pnl is wrong
+    # for phantom pre-fork positions (reports -$9.7k uPnL vs actual ~+$0.5).
+    # JIDO heartbeat uses this physical formula — review must match it.
+    positions = sc.vulcan_paper_positions()
+    net_upnl = sum(float(p.get("unrealized_pnl", 0) or 0) for p in positions)
+    balance = float(paper_status.get("balance", 0) or 0)
+    equity = balance + net_upnl
 
     # Load state
     regime = sc.load_regime()
