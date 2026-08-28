@@ -1,7 +1,7 @@
 {
   "riskMode": "RISK_ON",
   "riskModeLocked": true,
-  "updatedAt": "2026-08-28T00:47:00Z",
+  "updatedAt": "2026-08-28T01:16:52Z",
   "updatedBy": "jido-heartbeat",
   "reason": "Paper mode - RISK_ON locked for maximum signal testing",
   "regimes": {
